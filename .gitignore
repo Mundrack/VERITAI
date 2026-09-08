@@ -1,0 +1,63 @@
+# ─────────────────────────────────────────────────────────────
+# SECRETOS — nunca deben entrar al repositorio
+# Regla del proyecto: START-HERE §23 "Secretos"
+# ─────────────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+**/credentials.json
+**/service-account*.json
+
+# ─────────────────────────────────────────────────────────────
+# Python
+# ─────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+htmlcov/
+.coverage
+.coverage.*
+
+# ─────────────────────────────────────────────────────────────
+# Node / Vite
+# ─────────────────────────────────────────────────────────────
+node_modules/
+dist/
+.vite/
+*.tsbuildinfo
+npm-debug.log*
+
+# ─────────────────────────────────────────────────────────────
+# Docker / datos locales
+# ─────────────────────────────────────────────────────────────
+.docker-data/
+*.dump
+*.sql.gz
+
+# ─────────────────────────────────────────────────────────────
+# Artefactos de investigación descargados (evidencia cruda)
+# Se versiona el registro, no el binario descargado.
+# ─────────────────────────────────────────────────────────────
+research/raw/
+research/**/*.tmp
+
+# ─────────────────────────────────────────────────────────────
+# Sistema operativo / editores
+# ─────────────────────────────────────────────────────────────
+Thumbs.db
+desktop.ini
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+~$*
