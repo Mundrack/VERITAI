@@ -1,0 +1,21 @@
+{
+  "app.titulo": "VERITAI",
+  "app.subtitulo": "Local development environment",
+  "app.aviso_puerta": "Gate 1: no domain endpoints before PILOT_GO. This page only checks that the environment comes up.",
+
+  "estado.titulo": "Service status",
+  "estado.api": "API",
+  "estado.base_de_datos": "Database",
+  "estado.entorno": "Environment",
+  "estado.version": "Version",
+  "estado.comprobando": "checking...",
+  "estado.sin_respuesta": "no response",
+  "estado.conectada": "connected",
+  "estado.no_disponible": "unavailable",
+
+  "acciones.recomprobar": "Check again",
+  "acciones.idioma": "Language",
+
+  "plantilla.consultado_en": "Checked at {hora}",
+  "plantilla.servicios_activos": "{activos} of {total} services up"
+}

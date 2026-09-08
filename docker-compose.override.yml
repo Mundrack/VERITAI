@@ -1,0 +1,53 @@
+# =============================================================================
+# Sobrescrituras de DESARROLLO.
+# Docker Compose lo carga automaticamente junto a docker-compose.yml.
+# Anade recarga en caliente montando el codigo fuente dentro del contenedor.
+#
+# Para levantar SIN estas sobrescrituras (mas parecido a produccion):
+#     docker compose -f docker-compose.yml up -d
+# =============================================================================
+services:
+
+  api:
+    command:
+      - uvicorn
+      - veritai.main:app
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8000"
+      - --reload
+      - --reload-dir
+      - /app/veritai
+    volumes:
+      # Solo lectura: el contenedor no debe poder modificar tu codigo fuente.
+      - ./apps/api/veritai:/app/veritai:ro
+      - ./apps/api/tests:/app/tests:ro
+
+  web:
+    volumes:
+      - ./apps/web/src:/app/src:ro
+      - ./apps/web/index.html:/app/index.html:ro
+      - ./apps/web/vite.config.ts:/app/vite.config.ts:ro
+      # Volumen anonimo: evita que el node_modules del host (si existe) pise
+      # el que se instalo dentro de la imagen.
+      - /app/node_modules
+
+  # Cliente web de PostgreSQL. No arranca con "docker compose up -d".
+  # Para usarlo:  docker compose --profile herramientas up -d adminer
+  adminer:
+    image: adminer:5
+    container_name: veritai-adminer
+    restart: unless-stopped
+    profiles: ["herramientas"]
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      ADMINER_DEFAULT_SERVER: db
+    ports:
+      - "127.0.0.1:${ADMINER_PORT:-8080}:8080"
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - veritai

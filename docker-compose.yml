@@ -1,0 +1,143 @@
+# =============================================================================
+# VERITAI - entorno de desarrollo local completo
+#
+#     docker compose up -d
+#
+# Servicios: db (PostgreSQL) -> migrate (one-shot) -> api (FastAPI) -> web (Vite)
+#
+# Decisiones de seguridad aplicadas aqui (START-HERE 23 y 25):
+#   - todos los puertos publicados se ligan a 127.0.0.1, nunca a 0.0.0.0
+#   - contenedores sin escalada de privilegios (no-new-privileges)
+#   - imagenes con version fija; prohibido el tag "latest"
+#   - la API se conecta con un usuario de DB sin permisos de DDL
+#   - ningun secreto vive en este archivo: todo viene de .env
+# =============================================================================
+name: veritai
+
+services:
+
+  # ---------------------------------------------------------------------------
+  # Base de datos.
+  # Imagen pgvector: trae la extension ya compilada para no rehacer la imagen
+  # cuando llegue la fase de embeddings. La extension NO se activa todavia.
+  # ---------------------------------------------------------------------------
+  db:
+    image: pgvector/pgvector:pg17
+    container_name: veritai-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:?falta POSTGRES_DB en .env}
+      POSTGRES_USER: ${POSTGRES_USER:?falta POSTGRES_USER en .env}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?falta POSTGRES_PASSWORD en .env}
+      POSTGRES_INITDB_ARGS: "--auth-host=scram-sha-256"
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      # Solo accesible desde esta maquina. Nunca expuesto a la red.
+      - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB} -q"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+      start_period: 15s
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - veritai
+
+  # ---------------------------------------------------------------------------
+  # Migraciones. Servicio de un solo uso: corre, aplica lo pendiente y termina.
+  # La API no arranca hasta que este contenedor sale con codigo 0.
+  # Es el unico que usa el usuario con permisos de DDL.
+  # ---------------------------------------------------------------------------
+  migrate:
+    build:
+      context: ./apps/api
+      target: runtime
+    image: veritai/api:local
+    container_name: veritai-migrate
+    restart: "no"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL_MIGRATOR: ${DATABASE_URL_MIGRATOR:?falta DATABASE_URL_MIGRATOR en .env}
+      VERITAI_APP_DB_USER: ${VERITAI_APP_DB_USER:?falta VERITAI_APP_DB_USER en .env}
+      VERITAI_APP_DB_PASSWORD: ${VERITAI_APP_DB_PASSWORD:?falta VERITAI_APP_DB_PASSWORD en .env}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+    volumes:
+      - ./db/migrations:/migrations:ro
+      - ./scripts:/scripts:ro
+    command: ["python", "/scripts/migrate.py", "--dir", "/migrations"]
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - veritai
+
+  # ---------------------------------------------------------------------------
+  # API - FastAPI
+  # ---------------------------------------------------------------------------
+  api:
+    build:
+      context: ./apps/api
+      target: runtime
+    image: veritai/api:local
+    container_name: veritai-api
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+    environment:
+      VERITAI_ENV: ${VERITAI_ENV:-local}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      DATABASE_URL: ${DATABASE_URL:?falta DATABASE_URL en .env}
+      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-http://localhost:5173}
+      DB_POOL_SIZE: ${DB_POOL_SIZE:-5}
+      DB_POOL_MAX_OVERFLOW: ${DB_POOL_MAX_OVERFLOW:-5}
+      DB_USE_POOL: ${DB_USE_POOL:-true}
+    ports:
+      - "127.0.0.1:${API_PORT:-8000}:8000"
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - veritai
+
+  # ---------------------------------------------------------------------------
+  # Web - panel de UI (Vite + TypeScript, sin framework)
+  # El mismo codigo se empaqueta despues como extension MV3: una extension no
+  # se ejecuta en un contenedor, solo se construye en el.
+  # ---------------------------------------------------------------------------
+  web:
+    build:
+      context: ./apps/web
+      target: dev
+    image: veritai/web:local
+    container_name: veritai-web
+    restart: unless-stopped
+    depends_on:
+      api:
+        condition: service_started
+    environment:
+      VITE_API_BASE_URL: ${VITE_API_BASE_URL:-http://localhost:8000}
+      VITE_DEFAULT_LOCALE: ${VITE_DEFAULT_LOCALE:-es}
+    ports:
+      - "127.0.0.1:${WEB_PORT:-5173}:5173"
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - veritai
+
+volumes:
+  # Volumen nombrado: los datos sobreviven a "docker compose down".
+  # Solo se pierden con "docker compose down -v", que hay que pedir a proposito.
+  pgdata:
+    name: veritai_pgdata
+
+networks:
+  veritai:
+    name: veritai_net
+    driver: bridge

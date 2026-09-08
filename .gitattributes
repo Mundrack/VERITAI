@@ -1,0 +1,12 @@
+# Normalizacion de fin de linea.
+# Critico: los scripts .sh y los Dockerfile se ejecutan DENTRO de contenedores
+# Linux. Si git los entrega con CRLF, el interprete falla con "bad interpreter".
+* text=auto eol=lf
+
+*.ps1   text eol=crlf
+*.bat   text eol=crlf
+*.cmd   text eol=crlf
+
+*.xlsx  binary
+*.png   binary
+*.pdf   binary

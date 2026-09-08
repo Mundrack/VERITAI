@@ -1,0 +1,38 @@
+# =============================================================================
+# Plantilla de configuracion del CLI de Supabase.
+#
+# NO se usa todavia. Se copia a supabase/config.toml el dia que se enlace el
+# proyecto, y ese archivo NO se versiona si llega a contener el project_id.
+#
+#   supabase link --project-ref <ref>
+#   supabase db push
+# =============================================================================
+
+# Referencia del proyecto. Se rellena al enlazar; no se sube al repositorio.
+project_id = "RELLENAR_AL_ENLAZAR"
+
+[db]
+# Debe coincidir con la version de la imagen local: pgvector/pgvector:pg17
+major_version = 17
+
+[db.migrations]
+# Las migraciones canonicas viven en la raiz del repositorio, no dentro de
+# supabase/. Un solo origen de verdad para los dos entornos.
+schema_paths = ["../db/migrations"]
+
+[api]
+# Solo se expone el esquema de la aplicacion. public queda fuera.
+schemas = ["veritai"]
+extra_search_path = ["veritai"]
+max_rows = 1000
+
+[auth]
+# Sin usuarios en el alcance de tesis. Se activa solo si algun dia hacen falta,
+# y detras de un puerto propio (ver 00-ESTRATEGIA-MIGRACION.md, regla 1).
+enabled = false
+
+[storage]
+enabled = false
+
+[realtime]
+enabled = false
