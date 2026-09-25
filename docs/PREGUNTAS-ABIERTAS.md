@@ -81,6 +81,14 @@ El dato real: **3 de 18 en alcance** tienen una clase fuera de la tesis, y de
 esos, solo 2 son clase 7. P17 es un tipo nuevo. Con esto se compara el lote
 crudo cuando exista.
 
+`RESULTADO TAREA 2 (2026-09-25)` En el lote crudo, `other_observed` es la
+clase primaria de **5 de 12** divergencias (C03, C05, C08, C10, C13). Tres de
+ellas llevan una clase de la tesis como secundaria (C03 → baseline, C08 →
+ranking). El patrón que más se repite fuera de la taxonomía es **la revisión
+de la base de comparación** (C18, C29: el emisor revisa la serie y la prensa
+compara contra la edición publicada). Está en
+`research/COLECCION-LOTE-CRUDO.md` §4. La decisión sigue siendo de Mateo.
+
 ### P-15 · La clase canónica aparece 1 vez en 20
 
 **Estado:** abierto · **Bloquea:** el objeto de estudio · **Decide:** Mateo, tras la TAREA 2
@@ -112,6 +120,14 @@ C   Se mantiene el objeto y se acepta que el corpus sera pequeno para
 
 Que quede escrito ahora: si la TAREA 2 devuelve 0 o 1 casos de la clase
 canónica, no es un detalle del corpus, es una pregunta sobre la tesis.
+
+`RESULTADO TAREA 2 (2026-09-25)` **1 en 12.** De las 12 divergencias del lote
+crudo (31 trabajados), `1_ranking_vs_value` es la clase primaria de **una**
+(C07, el FMI: del puesto 12 al 14 con el PIB en dólares +9,84%) y secundaria de
+otra (C08). El resto: `other_observed` 5, `2_baseline_selection` 3,
+`3_absolute_vs_relative` 2, `4_denominator` 1. Dos lotes independientes dicen lo
+mismo. Muestreo neutral, sin cuota por clase, así que el dato no está
+dirigido. Las opciones A, B y C siguen sobre la mesa; ahora con datos.
 
 ### P-05 · Segundo anotador
 
@@ -157,6 +173,9 @@ No bloquea nada. Evita rehacer.
 | P-11 | ¿Separar en `clase` el control negativo del "falso sin divergencia"? | **No.** `truth` y `context` son ejes independientes; con ambos poblados el FPR es medible. P15 corregido a `no_divergence_detected`. Ver DEC-016 | 2026-09-25 |
 | P-13 | ¿Cómo se corrigen los errores del Excel? | **El CSV es la fuente de verdad.** El Excel queda congelado con sus 4 errores: son un hallazgo. Ver DEC-017 | 2026-09-25 |
 | P-14 | ¿Qué hace VERITAI con los publicadores que bloquean fetchers? | **No se evaden protecciones anti-bot. Nunca.** API → dataset → HTML → bloqueado = no recuperable. Ver DEC-018 | 2026-09-25 |
+| P-16 | ¿Qué denominador gobierna la puerta? | **La tasa natural sobre todos los admitidos** (31), "la que menos manipulación tiene". La del lote por cubetas se reporta al lado. La TAREA 3 la desagrega por tipo de publicador y vía de descubrimiento. Ver DEC-020 | 2026-09-25 |
+| P-17 | ¿Probar `curl` tras un fallo del fetcher es evasión? | **Un 403/406/418 al primer cliente cierra el caso** aunque otro cliente pase. C30 y C31 pasan a bloqueados; decide la conservadora **23/31 = 74,2%**, la leniente (80,6%) se reporta. Ver DEC-021 | 2026-09-25 |
+| P-18 | Formato hostil 0 de 2 | **Se acepta el déficit como hallazgo**: buscando sin sesgo no aparecieron PDFs sin texto. Sin segunda pasada dirigida. Ver DEC-022 | 2026-09-25 |
 | — | Geografía del lote nuevo (D2 de la adenda) | **Opción A**: español en general, sin cuota geográfica. Cerrada en `00b` | antes del 2026-09-08 |
 | — | ¿Framework en el panel web? | **No.** TypeScript vanilla, por coherencia con el stack cerrado en R02 §5. Ver DEC-008 | 2026-09-08 |
 | — | ¿Alembic o runner propio? | **Runner propio**, por portabilidad a `supabase db push`. Ver DEC-006 | 2026-09-08 |

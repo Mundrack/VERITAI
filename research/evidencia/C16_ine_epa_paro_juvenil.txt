@@ -1,0 +1,23 @@
+# C16 - Paro juvenil (menores de 25), EPA 2T2026. INE API JSON (tip=A)
+# consultado 2026-09-25T15:39:36+00:00
+# https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65334?nult=3&tip=A  (tasas por grupo de edad, sexo y CCAA)
+# https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65218?nult=3&tip=A  (parados por sexo y grupo de edad, miles)
+# la tabla 4247 (base anterior) termina en 2023-T4; la EPA cambio de tablas con la nueva base
+
+TASA  EPA452436 | Tasa de paro de la población. Ambos sexos. Total Nacional. Menores de 25 años.
+      2025-T4  23.01%
+      2026-T1  24.54%
+      2026-T2  23.77%
+
+PARADOS (tabla 65218, 78 series). Series nacionales, ambos sexos, jovenes:
+  EPA387809 | Total Nacional. Ambos sexos. De 16 a 19 años. Parados. Valor absoluto.
+      2025-T4  76.7 (miles)
+      2026-T1  111.9 (miles)
+      2026-T2  145.7 (miles)
+  EPA387815 | Total Nacional. Ambos sexos. De 20 a 24 años. Parados. Valor absoluto.
+      2025-T4  331.2 (miles)
+      2026-T1  328.5 (miles)
+      2026-T2  314.3 (miles)
+  suma 16-19 + 20-24 en 2025-T4: 407.9 miles
+  suma 16-19 + 20-24 en 2026-T1: 440.4 miles
+  suma 16-19 + 20-24 en 2026-T2: 460.0 miles

@@ -277,3 +277,122 @@ tipo nuevo.
 - `CLAUDE.md` vive en la rama de Docker: cuando se fusione, hay que llevarle
   DEC-017 (CSV fuente de verdad) y DEC-018 (anti-bot) a las reglas permanentes
 - TAREA 2, plan mode primero
+
+---
+
+## 2026-09-25 — TAREA 2: el lote crudo, recolectado y cronometrado
+
+### Qué se hizo
+
+**Pool de 38 candidatos** por búsqueda web (prensa y comunicación oficial en
+español, 2026), repartidos por nivel de emisor y con temas rotados. **Criba con
+la regla dura** (dos búsquedas negativas por candidato): 7 rechazados (18,4%),
+31 admitidos. Los 31 se trabajaron **en serie y cronometrados** con
+`research/scripts/cronometro.py` (hitos t0/t1/t2 en `research/cronometro.log`).
+
+**Cubetas cerradas:** control negativo 7/7, divergencia real 6/6, primaria no
+localizable 3/3, edición anterior no localizable 2/2. **Formato hostil 0/2: el
+pool se agotó sin un solo PDF escaneado** — todos los PDF encontrados tenían
+texto extraíble. Dos cubetas sin objetivo, añadidas al validar porque el plan no
+las contemplaba: `bloqueado_por_publicador` (C09) y `claim_falso` (C17, C28).
+Lote = 21 casos; 10 excedentes registrados.
+
+**Las dos métricas, medidas por primera vez** (recomputadas por
+`validar_lote_crudo.py`, exit 0):
+
+```
+                                  sobre los 31 trabajados   sobre el lote (21)
+edicion anterior localizada           25/31   80,6%            15/21   71,4%
+recuperable-por-agente                25/31   80,6%            15/21   71,4%   <- DECIDE
+alcanzable_por_humano (si|probable)   29/31   93,5%            19/21   90,5%
+```
+
+Los seis no recuperados: C09 (bloqueado), C10 y C25 (edición anterior), C22,
+C24 y C27 (primaria). Ningún caso tocó el tope de tiempo: 1,7 min de media
+para localizar, 5,2 máximo.
+
+**Entregables:** `research/COLECCION-LOTE-CRUDO.md`,
+`research/pilot-crudo-screening.csv` (38), `research/pilot-crudo-20.csv` (lote),
+`research/pilot-crudo-trabajados.csv` (31), `research/cronometro.log`,
+`research/evidencia/`, y los tres scripts.
+
+### Qué se encontró
+
+- **La cuota por cubetas fija la métrica del lote por construcción**: 7+6
+  recuperables y 3+2 no recuperables dan ~71% antes de mirar un solo caso. La
+  tasa natural sobre los 31 admitidos (80,6%) es la que informa. → **P-16**.
+- **P-15 sigue abierta:** `1_ranking_vs_value` aparece **1 vez en 12
+  divergencias** (C07), más una secundaria (C08). `other_observed` 5,
+  `2_baseline_selection` 3.
+- **Las revisiones de base son el patrón dominante entre las divergencias
+  nuevas**: el Balance de Criminalidad compara contra una base 2025 revisada
+  (C18); el Índice de Paz Global publica "sube 4" contra el rank revisado
+  mientras la prensa resta "cae 2" contra el publicado (C29); Moncloa compara
+  España 2025 con la UE 2024 (C21).
+- **El fallo de nivel 5 no es "PDF hostil", es "no hay documento"**: informes
+  corporativos que solo existen como nota de prensa (C24), encuestadoras que
+  entregan por WhatsApp (C27), un valor atribuido al INE que el INE no publica
+  (C22).
+- **Zona gris de DEC-018, declarada:** tras un fallo del fetcher se probó
+  `curl` con su UA por defecto (sin falsificar). Cuatro dominios volvieron a
+  bloquear (registrados); dos respondieron 200 (gob.pe tras un 418, el
+  ministerio de Educación tras `socket hang up`). → **P-17**.
+
+### Predicciones vs realidad
+
+De las 9 predicciones escritas antes de ejecutar: 3 confirmadas (4, 8, 9), 1
+parcial (5), 5 falladas (1, 2, 3, 6, 7). La mayor: se predijo 30–50% y salió
+80,6%. Detalle en `COLECCION-LOTE-CRUDO.md` §5.
+
+### Qué quedó pendiente
+
+- **Mateo:** los 5 casos manuales (C04, C05, C11, C14, C22; semilla
+  `20260925`), sin ver los resultados del agente
+- Decidir P-16, P-17, P-18 (déficit de formato hostil: ampliar pool o aceptar)
+- Commit de `feat/lote-crudo-20` tras revisar el diff; fusionar a `main`
+- `feat/entorno-docker-local` sigue sin fusionar
+- TAREA 3 cuando estén los 5 de Mateo
+
+---
+
+## 2026-09-25 — Tres decisiones sobre el lote crudo (DEC-020 a DEC-022)
+
+### Qué se hizo
+
+**Commit de la TAREA 2** en `feat/lote-crudo-20` (`cf2946d`), aprobada por
+Mateo tal cual. Después, **tres decisiones aplicadas**:
+
+| | Decisión | Qué cambió |
+|---|---|---|
+| P-16 | Decide la **tasa natural sobre los 31 admitidos**, "la que menos manipulación tiene". La del lote se reporta al lado | `validar_lote_crudo.py` imprime primero la métrica sobre los trabajados; `ESTADO.md`, `GLOSARIO.md`, `research/README.md` reescriben el denominador |
+| P-17 | **Un 403/406/418 al primer cliente cierra el caso**, aunque `curl` pase después. "Si el publicador señala que no quiere agentes, se respeta" | C30 y C31 → `bloqueado_por_publicador`; cifra que decide **23/31 = 74,2%** (conservadora), 80,6% se reporta. Regla en `GLOSARIO.md` |
+| P-18 | **Formato hostil 0/2 es un hallazgo**: buscando sin sesgo no aparecieron PDFs sin texto. Sin segunda pasada | Nota en la composición del lote (`research/README.md`); lote de 23 |
+
+### Lo que Mateo señaló y queda como obligación para la TAREA 3
+
+*"Predijiste 30–50% y salió 80,6% [...] la herramienta de búsqueda te entregó
+los casos fáciles."* Es el sesgo del lote anterior con otra cara. La TAREA 3
+lleva una **sección de amenazas a la validez** con la distribución de los 31
+por tipo de publicador y por vía de descubrimiento, y la recuperabilidad
+desagregada. Adelantado en `COLECCION-LOTE-CRUDO.md` §3: nivel 1 **84,2%**
+(16/19), resto **58,3%** (7/12); prensa 20/28, comunicación oficial 3/3; Perú
+0/2. *"No cambies el número. Decláralo con su límite."* Hueco detectado: la
+vía de descubrimiento no se registró por candidato; hay que reconstruirla del
+transcript antes de la TAREA 3.
+
+**P-15 sigue abierta y sube de rango**: 1 de 12 aquí, 1 de 20 en el piloto.
+"Dos lotes independientes dicen lo mismo. Eso ya no es ruido, es señal."
+
+### Qué se verificó
+
+- `validar_lote_crudo.py` sale 0 con C30/C31 como bloqueados: lote 23,
+  excedentes 8, conservadora 23/31, leniente 25/31
+- La selección de los 5 casos de Mateo no cambia: la misma semilla sobre los
+  23 ids devuelve C04, C05, C11, C14, C22
+
+### Qué quedó pendiente
+
+- Mateo: sus 5 casos, sin que el agente mire ese CSV
+- Reconstruir la vía de descubrimiento por candidato
+- Fusionar `feat/lote-crudo-20` y `feat/entorno-docker-local` a `main`
+- TAREA 3

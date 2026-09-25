@@ -1,0 +1,74 @@
+# C07 - Ranking por PIB nominal, FMI DataMapper API
+# consultado 2026-09-25T15:22:52+00:00
+# https://www.imf.org/external/datamapper/api/v1/NGDPD?periods=2024,2025,2026
+# https://www.imf.org/external/datamapper/api/v1/countries  (para excluir agregados)
+# indicador: GDP, current prices | unidad: Billions of U.S. dollars | fuente: World Economic Outlook (April 2026)
+# 2026 es proyeccion del WEO. Se excluyen agregados regionales; 197 paises con dato.
+
+2024
+   1. USA    29298.0
+   2. CHN    18945.1
+   3. DEU     4684.2
+   4. JPN     4190.0
+   5. IND     3760.8
+   6. GBR     3695.4
+   7. FRA     3161.0
+   8. ITA     2382.7
+   9. CAN     2270.1
+  10. RUS     2185.8
+  11. BRA     2185.8
+  12. KOR     1875.4
+  13. MEX     1830.5   <--
+  14. AUS     1799.4   <--
+  15. ESP     1725.2   <--
+  16. IDN     1396.3
+  17. TUR     1358.3
+  18. SAU     1254.1
+  19. NLD     1214.6
+  20. CHE      970.2
+
+2025
+   1. USA    30767.1
+   2. CHN    19626.2
+   3. DEU     5048.1
+   4. JPN     4435.2
+   5. GBR     4003.0
+   6. IND     3916.3
+   7. FRA     3368.9
+   8. RUS     2587.9
+   9. ITA     2550.1
+  10. CAN     2319.9
+  11. BRA     2279.9
+  12. ESP     1903.8   <--
+  13. KOR     1872.4
+  14. AUS     1840.0   <--
+  15. MEX     1832.6   <--
+  16. TUR     1597.3
+  17. IDN     1445.6
+  18. NLD     1332.2
+  19. SAU     1276.9
+  20. CHE     1043.5
+
+2026
+   1. USA    32383.9
+   2. CHN    20851.6
+   3. DEU     5452.9
+   4. JPN     4379.3
+   5. GBR     4264.8
+   6. IND     4153.2
+   7. FRA     3596.1
+   8. ITA     2738.2
+   9. RUS     2656.5
+  10. BRA     2635.9
+  11. CAN     2507.3
+  12. AUS     2124.0   <--
+  13. MEX     2120.9   <--
+  14. ESP     2091.2   <--
+  15. KOR     1931.0
+  16. TUR     1640.2
+  17. IDN     1539.9
+  18. NLD     1449.7
+  19. SAU     1388.7
+  20. CHE     1146.9
+
+ESP 2025 -> 2026: 1903.8 -> 2091.2  (+9.84% en USD)

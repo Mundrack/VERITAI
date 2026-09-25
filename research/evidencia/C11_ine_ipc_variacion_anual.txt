@@ -1,0 +1,68 @@
+# C11 - IPC general, variacion anual. INE API JSON (tabla 50913, tip=A)
+# consultado 2026-09-25T15:28:58+00:00
+# https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50913?nult=48&tip=A&tv=3:74&tv=762:304092
+# series devueltas: 20 ->  ['Nacional', 'Andalucía', 'Aragón', 'Asturias, Principado de', 'Balears, Illes', 'Canarias', 'Cantabria', 'Castilla y León', 'Castilla - La Mancha', 'Cataluña', 'Comunitat Valenciana', 'Extremadura', 'Galicia', 'Madrid, Comunidad de', 'Murcia, Región de', 'Navarra, Comunidad Foral de', 'País Vasco', 'Rioja, La', 'Ceuta', 'Melilla']
+# serie IPC251856 | Nacional. Índice general. Variación anual. 
+  2022-01    6.1%
+  2022-02    7.6%
+  2022-03    9.8%
+  2022-04    8.3%
+  2022-05    8.7%
+  2022-06   10.2%
+  2022-07   10.8%
+  2022-08   10.5%
+  2022-09    8.9%
+  2022-10    7.3%
+  2022-11    6.8%
+  2022-12    5.7%
+  2023-01    5.9%
+  2023-02    6.0%
+  2023-03    3.3%
+  2023-04    4.1%
+  2023-05    3.2%
+  2023-06    1.9%
+  2023-07    2.3%
+  2023-08    2.6%
+  2023-09    3.5%
+  2023-10    3.5%
+  2023-11    3.2%
+  2023-12    3.1%
+  2024-01    3.4%
+  2024-02    2.8%
+  2024-03    3.2%
+  2024-04    3.3%
+  2024-05    3.6%
+  2024-06    3.4%
+  2024-07    2.8%
+  2024-08    2.3%
+  2024-09    1.5%
+  2024-10    1.8%
+  2024-11    2.4%
+  2024-12    2.8%
+  2025-01    2.9%
+  2025-02    3.0%
+  2025-03    2.3%
+  2025-04    2.2%
+  2025-05    2.0%
+  2025-06    2.3%
+  2025-07    2.7%
+  2025-08    2.7%
+  2025-09    3.0%
+  2025-10    3.1%
+  2025-11    3.0%
+  2025-12    2.9%
+
+# agosto 2026 = ?% | febrero 2023 = 6.0%
+
+# --- 2026: base 2025, reconstruido desde las notas de prensa del INE (spans literales) ---
+#   la tabla 50913 (base 2021) termina en 2025-12; "El INE publica hoy, por primera vez, el IPC
+#   e IPCA definitivos en la nueva base 2025" (nota IPC0126, enero 2026)
+  2026-01    2.3%   IPC0126: 'se situo en el 2,3%, seis decimas por debajo de la registrada en diciembre'
+  2026-02    2.3%   IPC0226: 'se situo en el 2,3%, la misma que la registrada en enero'
+  2026-03    3.4%   IPC0326: 'se situo en el 3,4%, mas de un punto por encima de la registrada en febrero'
+  2026-04    3.2%   IPC0426: 'se situo en el 3,2%, dos decimas por debajo de la registrada en marzo'
+  2026-05    3.2%   IPC0526: 'se situo en el 3,2%, la misma que la registrada en abril'
+  2026-06    3.2%   derivado de IPC0726: julio 'cuatro decimas por encima de la registrada en junio'
+  2026-07    3.6%   IPC0726: 'se situo en el 3,6%, cuatro decimas por encima de la registrada en junio'
+  2026-08    4.3%   IPC0826: 'se situo en el 4,3%, siete decimas por encima de la registrada en julio' | 'Es la mas alta desde febrero de 2023.'
+# VEREDICTO: 4,3 > max(mar-2023..jul-2026) = 4,1 (abr-2023); feb-2023 = 6,0 >= 4,3. El claim es cierto.

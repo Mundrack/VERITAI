@@ -479,3 +479,77 @@ un 403 que no es un 404).
 
 **Alternativa descartada.** Una sola métrica. Cualquiera de las dos sola
 cuenta la mitad de la historia.
+
+---
+
+## DEC-020 · La puerta se mide sobre todos los admitidos: la tasa natural
+
+**Fecha:** 2026-09-25 · **Estado:** vigente · **Decide:** Mateo · **Cierra:** P-16
+
+**Contexto.** El lote crudo se compone por cubetas con cuota (7 negativos + 6
+divergencias, todos con edición anterior; 3 + 2 sin ella). Esa cuota fija la
+métrica del lote antes de trabajar un solo caso: ~71% por construcción.
+
+**Decisión.** La Puerta 1 se decide con la **tasa natural sobre todos los
+candidatos admitidos y trabajados** (`pilot-crudo-trabajados.csv`, 31 casos),
+*"la que menos manipulación tiene"*. La del lote por cubetas se reporta al lado
+en la tesis; no decide.
+
+**Consecuencia.** El denominador de la métrica pasa de "el lote crudo (20)" a
+"los admitidos por la regla dura". `ESTADO.md`, `GLOSARIO.md` y
+`research/README.md` reescriben la frase. Y la **TAREA 3 incluye una sección de
+amenazas a la validez** que cuantifica el sesgo del pool: distribución de los
+31 por tipo de publicador y por vía de descubrimiento, con la recuperabilidad
+desagregada por esos grupos. *"Si nivel 1 sale 95% y el resto 40%, el 80,6% es
+un promedio engañoso. No cambies el número. Decláralo con su límite."*
+
+**Alternativa descartada.** Medir sobre el lote de 20/21. Es circular: la
+cuota decide el número.
+
+---
+
+## DEC-021 · Un rechazo explícito al primer cliente cierra el caso
+
+**Fecha:** 2026-09-25 · **Estado:** vigente · **Decide:** Mateo · **Cierra:** P-17
+
+**Contexto.** Durante la TAREA 2, tras un fallo del fetcher, se probó una vez
+con `curl` y su user-agent por defecto, sin falsificar nada. En `gob.pe` el
+fetcher recibió un **418** explícito y `curl` un 200 (C30, C31).
+
+**Decisión.** *"Si el publicador señala que no quiere agentes, se respeta."*
+Un **403, 406, 418 o desafío** al primer cliente cierra el caso como
+**no recuperable-por-agente**, aunque otro cliente honesto pase después. Un
+error de red (`ECONNREFUSED`, `socket hang up`, timeout) no es una señal del
+publicador y admite un reintento.
+
+**Consecuencia.** C30 y C31 pasan a `bloqueado_por_publicador`. La cifra que
+decide es la **conservadora, 23/31 = 74,2%**; la leniente (25/31 = 80,6%) se
+reporta al lado. Sigue en verde. Los valores leídos por la vía descartada se
+conservan en el registro, marcados, pero no suman. La regla va a `GLOSARIO.md`
+y a `CLAUDE.md` cuando se fusione.
+
+**Alternativa descartada.** "Un segundo cliente honesto no es evasión; lo que
+se prohíbe es mentir." Da 80,6%. Se descarta porque convierte la intención
+declarada del publicador en una cuestión de qué cliente se probó primero.
+
+---
+
+## DEC-022 · Formato hostil 0 de 2 es un hallazgo, no un fallo
+
+**Fecha:** 2026-09-25 · **Estado:** vigente · **Decide:** Mateo · **Cierra:** P-18
+
+**Contexto.** El pool de 38 candidatos, muestreado sin sesgo por desenlace, se
+agotó sin un solo PDF escaneado o sin texto. Los 16 casos con vía `pdf` se
+extrajeron sin OCR, incluidos los de emisores de nivel 5.
+
+**Decisión.** Se **acepta el déficit** y se registra como resultado: *"buscando
+sin sesgo no aparecieron PDFs sin texto"*. **No** se hace una segunda pasada
+dirigida a emisores donde vive el formato hostil.
+
+**Consecuencia.** El lote queda con 18 casos en cubetas con objetivo más los
+sin objetivo (bloqueados y claims falsos). La tabla de "composición
+obligatoria" en `research/README.md` lleva la nota. El fallo real de nivel 5
+—"no hay documento" (C22, C24, C27)— es el hallazgo que sustituye al previsto.
+
+**Alternativa descartada.** Segunda pasada dirigida. Llenaría la cubeta a
+costa de declarar que esa parte del lote no es muestreo neutral.
