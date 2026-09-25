@@ -167,3 +167,69 @@ Se diagnosticó un error de hidratación de React que resultó ser de otro proye
 de Mateo (`OjoDelAmo`, Next.js), no de VERITAI. No se tocó ningún archivo de ese
 repositorio. Se deja anotado solo para que la bitácora refleje en qué se gastó
 tiempo de la sesión.
+
+---
+
+## 2026-09-24 (tarde) — TAREA 1: auditoría de los 20 casos
+
+### Qué se hizo
+
+Plan aprobado en plan mode, con 8 predicciones escritas antes de ejecutar.
+Rama `feat/auditoria-piloto-20` desde `main`.
+
+**Fase A, sin red.** `scripts/auditar_aritmetica.py` recomputa 36 cálculos
+desde `Dato A` / `Dato B`: 26 exactos, 4 dentro de redondeo, **1 discrepancia
+(P03: +5,03% debe ser +5,30%)**, 5 no verificables.
+`scripts/normalizar_a_enums.py` lleva los 20 casos a enums cerrados con
+justificación por fila: `truth` pasa de 12 valores a 3.
+
+**Fase B, con red.** 40 URLs (36 únicas) en paralelo, 20:59–21:06, más 8
+seguimientos: extracción local de 2 PDFs con `pypdf`, 2 consultas a las APIs
+JSON del mismo publicador (INE `wstempus`, Eurostat diseminación), 1 reconsulta
+a okdiario, 3 `curl -I` para caracterizar bloqueos.
+
+**Entregados:** `research/AUDIT-PILOT-20.md`, `research/pilot-20-normalizado.csv`
+(20 filas, 25 columnas) y los dos scripts.
+
+### Resultado
+
+```
+verificado        3    P15 P16 P20
+parcial           3    P06 P14 P17
+NEEDS_REVIEW     12
+fuera_de_alcance  2    P08 P09 (DEC-013)
+```
+
+### Qué se verificó
+
+- Los dos scripts corren y validan: cero valores fuera de enum; todo
+  `verificado` tiene `raw_value_span` de la primaria; todo `NEEDS_REVIEW` tiene
+  motivo escrito
+- Los 3 verificados tienen el número literal de la primaria: P15 por API de
+  Eurostat, P16 por API del INE, P20 en el HTML del INEC
+- Los conteos del informe (18 de 20, 12 → 3, 5 `other_observed`, 4
+  `METRIC_AMBIGUOUS`) salen del script, no de memoria
+
+### Hallazgos que no estaban previstos
+
+- **Predicción 2 (link rot) fallida.** Cero enlaces muertos. Los PDFs de 2019 y
+  2020 están vivos.
+- **Bloqueo de bots:** Newtral 8 de 8 (403 al fetcher, 200 a un navegador),
+  Interior con desafío de Cloudflare. Vivo para humanos, cerrado para agentes.
+- **Tres errores más de transcripción:** P11 (8.830 es S.L., el total es 8.908),
+  P12 (las cifras del Excel no están en la primaria citada; ésta da 22.414 y
+  12.432), P13 (Dato B sin fuente).
+- **La primaria de P12 tiene en una nota al pie la advertencia metodológica que
+  explica el caso** (`¥ datos de prevalencia`). Argumento concreto a favor del
+  slot `methodology_items` del EvidenceBundle.
+- **P13 estaba etiquetado al revés:** es un control de comparabilidad y tenía
+  `divergence_detected`. Corregido a `no_divergence_detected`.
+- **`other_observed` (clases 6 y 7) es la categoría más frecuente: 5 de 20.**
+  `1_ranking_vs_value`, la canónica, aparece una vez.
+- **`METRIC_AMBIGUOUS` en 4 de 20**, no en 2 como se predijo.
+
+### Qué quedó pendiente
+
+- Cinco preguntas nuevas para Mateo, P-10 a P-14 en `PREGUNTAS-ABIERTAS.md`
+- Rama sin commitear hasta revisar el diff
+- TAREA 2 sin empezar

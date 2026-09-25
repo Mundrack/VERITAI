@@ -58,6 +58,77 @@ no hace falta rotarla. Pero solo es segura si hay RLS: sin políticas, esa clave
 equivale a un `SELECT *` sobre cada tabla expuesta. Es exactamente el motivo de
 DEC-004.
 
+### P-10 · ¿Extender el enum de abstención con `METRIC_AMBIGUOUS`?
+
+**Estado:** abierto · **Bloquea:** el esquema del lote crudo (TAREA 2) · **Origen:** AUDIT-PILOT-20 §6
+
+Cuatro de veinte casos (P02, P14, P15, P19) abstienen por la misma razón: el
+claim no dice qué métrica usa —*¿valor o volumen?, ¿euros o % PIB?, ¿tasa o
+número?, ¿"líder" en qué?*— y el veredicto cambia según cuál se elija. Hoy se
+mapea a `SOURCE_VERSION_AMBIGUOUS`, que significa otra cosa.
+
+R02 §11 dice que los motivos reales de abstención se descubren en el piloto.
+Este se ha descubierto. Uno de cada cinco casos.
+
+Otros tres candidatos con un caso cada uno: `SCOPE_NOT_RESOLVABLE` (P07),
+`GROUPS_NOT_HOMOGENEOUS` (P17), `SAMPLE_NOT_REPRESENTATIVE` (P18). Con n=1 no
+justifican entrar todavía.
+
+### P-11 · ¿Separar en `clase` el control negativo del "falso sin divergencia"?
+
+**Estado:** abierto · **Bloquea:** el esquema del lote crudo · **Origen:** AUDIT-PILOT-20 §7
+
+`clase = none` hoy significa dos cosas: "el claim está bien enmarcado" (P20,
+control negativo) y "el claim es falso por aritmética, no hay divergencia
+contextual que evaluar" (P15, P16). Para medir la tasa de falsos positivos hay
+que poder contarlas por separado.
+
+### P-12 · ¿Reabrir las clases 6 y 7?
+
+**Estado:** abierto · **Bloquea:** la selección de clases tras el piloto · **Origen:** AUDIT-PILOT-20 §6
+
+La adenda (D4) dejó las clases 6 (correlación/causalidad) y 7 (cifra real,
+marco falso) fuera de la tesis, registrándolas como `other_observed`, y dijo
+que *"la frecuencia con que aparezcan decidirá si vale la pena reabrir esa
+decisión"*. En el lote auditado, `other_observed` es **la categoría más
+frecuente: 5 de 20**. Y `1_ranking_vs_value`, la canónica, aparece una vez.
+
+No es una recomendación de reabrir. Es el dato que la adenda pidió. La decisión
+se toma con el lote crudo delante, no antes.
+
+### P-13 · ¿Cómo se corrigen los errores del Excel?
+
+**Estado:** abierto · **Bloquea:** los tests de regresión sobre los 20 · **Origen:** AUDIT-PILOT-20 §4
+
+Cuatro errores de transcripción confirmados: P03 (+5,03% → +5,30%), P11 (8.830
+es S.L., el total es 8.908), P12 (las cifras no están en la primaria citada) y
+P13 (Dato B sin fuente). El Excel es el dato de partida y esta auditoría no lo
+toca. Opciones:
+
+```
+A   Una v2 del Excel con las correcciones, conservando la v1.
+B   El CSV normalizado pasa a ser la fuente de verdad y el Excel
+    queda como registro histórico.
+```
+
+B es más limpio para los tests, porque el CSV ya tiene enums cerrados. A
+conserva el formato que Mateo conoce.
+
+### P-14 · ¿Qué hace VERITAI con los publicadores que bloquean fetchers?
+
+**Estado:** abierto · **Bloquea:** el diseño del primer conector · **Origen:** AUDIT-PILOT-20 §5.1
+
+Newtral (8 de 8), `interior.gob.es` (Cloudflare), NEJM y ScienceDirect
+devuelven 403 a un agente y 200 a un navegador. R02 §6.3 ya pedía respetar
+`robots.txt` y los términos de uso. Hay que decidir la política antes de
+escribir el primer conector: ¿se registra como `PRIMARY_SOURCE_NOT_FOUND` con
+un subtipo, se intenta con un User-Agent identificable de VERITAI, o se
+descarta el emisor como candidato?
+
+Y para el lote crudo, registrar por separado `alcanzable_por_humano` y
+`alcanzable_por_agente`: son la razón concreta de que las dos recuperabilidades
+de DEC-014 sean números distintos.
+
 ### P-05 · Segundo anotador
 
 **Estado:** abierto desde el paquete · **Bloquea:** cerrar el corpus (Puerta 3)

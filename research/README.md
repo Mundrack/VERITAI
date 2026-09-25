@@ -35,7 +35,9 @@ conocerlo antes de escribir el sistema, no después.
 
 | Archivo | Tarea | Estado |
 |---|---|---|
-| `AUDIT-PILOT-20.md` | TAREA 1 — auditar los 20 existentes | **pendiente** |
+| [`AUDIT-PILOT-20.md`](AUDIT-PILOT-20.md) | TAREA 1 — auditar los 20 existentes | **entregado** 2026-09-24 |
+| [`pilot-20-normalizado.csv`](pilot-20-normalizado.csv) | TAREA 1 — los 20 con enums cerrados | **entregado** 2026-09-24 |
+| `scripts/auditar_aritmetica.py`, `scripts/normalizar_a_enums.py` | TAREA 1 — reproducibilidad | **entregado** |
 | `PILOT-40.xlsx` o `.csv` | TAREA 2 — 20 crudos + los 20 auditados | **pendiente** |
 | `PILOT-FINDINGS.md` | TAREA 3 | **pendiente** |
 | `PILOT-FAILURES.md` | TAREA 3 | **pendiente** |

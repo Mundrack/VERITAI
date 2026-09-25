@@ -113,7 +113,9 @@ main                          paquete + este registro vivo (fusionado --no-ff)
 │
 ├─ docs/registro-vivo         FUSIONADO a main
 │
-└─ feat/entorno-docker-local  entorno Docker completo   <- SIN FUSIONAR
+├─ feat/auditoria-piloto-20   TAREA 1: auditoria + CSV + scripts   <- rama actual, SIN FUSIONAR
+│
+└─ feat/entorno-docker-local  entorno Docker completo              <- SIN FUSIONAR
 ```
 
 `ATENCIÓN` Como `docs/` se fusionó antes que el entorno, **`main` contiene
@@ -134,14 +136,18 @@ Nada se ha subido a ningún servidor.
 
 En orden, y sin saltarse pasos:
 
-1. **Resolver P-01 y P-02** de `PREGUNTAS-ABIERTAS.md` (remoto de git, aprobación
-   de `CLAUDE.md`). Son de Mateo, no se pueden asumir.
-2. **TAREA 1 — auditar los 20 casos existentes** → `research/AUDIT-PILOT-20.md`.
-   La pre-auditoría ya está hecha y documentada en
-   [`../research/README.md`](../research/README.md); falta verificar URLs y
-   normalizar etiquetas a los enums cerrados.
+1. ~~TAREA 1 — auditar los 20 casos existentes~~ **Hecha el 2026-09-24.**
+   [`../research/AUDIT-PILOT-20.md`](../research/AUDIT-PILOT-20.md): 3
+   verificados, 3 parciales, 12 NEEDS_REVIEW, 2 fuera de alcance. Cuatro
+   errores de transcripción en el Excel. Pendiente de revisar y fusionar.
+2. **Resolver las preguntas P-10 a P-14** que abrió la auditoría, sobre todo
+   P-10 (`METRIC_AMBIGUOUS`) y P-11 (`clase = none`), porque **cambian el
+   esquema del lote crudo** y hay que fijarlo antes de recolectar.
 3. **TAREA 2 — recolectar 20 casos crudos.** Es el trabajo caro y el que no se
-   puede falsear. Sin él no hay métrica.
+   puede falsear. Sin él no hay métrica. Con dos reglas nuevas que salen de la
+   auditoría: la URL primaria tiene que ser un dataset o tabla concreta, no una
+   portada; y se registra por separado `alcanzable_por_humano` y
+   `alcanzable_por_agente`.
 4. **TAREA 3 — decidir** → `research/PILOT-DECISION.md` con `PILOT_GO` o
    `PILOT_PIVOT`.
 
