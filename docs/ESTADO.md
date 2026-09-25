@@ -10,12 +10,13 @@
 ## Dónde estamos
 
 ```
-PUERTA 1   research/PILOT-DECISION.md con PILOT_GO        <-- AQUI, sin superar
-           sin esto no se escribe codigo de producto
-           TAREA 1 hecha · TAREA 2 hecha (sin commit) · TAREA 3 pendiente
+PUERTA 1   research/PILOT-DECISION.md con PILOT_GO        SUPERADA 2026-09-25
+           TAREA 1 · TAREA 2 · TAREA 3 hechas                  (DEC-023, alcance nivel 1
+                                                               por DEC-024)
 
-PUERTA 2   prototipo end-to-end, UNA clase y UN emisor,
-           10 casos con trazabilidad completa
+PUERTA 2   prototipo end-to-end, UNA clase y UN emisor,      <-- AQUI, sin arrancar:
+           10 casos con trazabilidad completa                 BLOQUEADA hasta que Mateo
+                                                               cierre P-15 (la clase)
 
 PUERTA 3   corpus completo anotado + arnes de evaluacion
 
@@ -108,7 +109,7 @@ $ curl http://127.0.0.1:8000/health
 | La extensión MV3 | El panel web es el mismo código; se empaqueta más tarde |
 | pgvector activado | La imagen lo trae; la extensión no hace falta hasta *embeddings* |
 | El aparato completo de `/docs` y los ADR formales | Adenda D6: después de `PILOT_GO` |
-| `PILOT-40`, `PILOT-FINDINGS`, `PILOT-FAILURES`, `PILOT-DECISION` | TAREA 3; necesita los 5 casos manuales de Mateo |
+| Ratificación de `PILOT-DECISION.md` | Es de Mateo; y FINDINGS §7 (humano vs agente) espera sus 5 casos |
 
 ---
 
@@ -140,7 +141,12 @@ main                          paquete + registro vivo + TAREA 1 + TAREA 2 + ento
 ├─ feat/lote-crudo-20         FUSIONADO (84303a8)
 ├─ feat/entorno-docker-local  FUSIONADO (26d42da)
 │
-└─ feat/via-descubrimiento    reconstruccion de la via de descubrimiento (DEC-020)   <- rama actual
+├─ feat/via-descubrimiento    FUSIONADO (e6768e4)
+│
+└─ feat/tarea-3-decision      FUSIONADA: TAREA 3 + DEC-023, DEC-024
+
+Sin rama de trabajo abierta: la siguiente (Puerta 2) se crea cuando Mateo
+cierre P-15.
 ```
 
 Con el entorno Docker en `main`, los enlaces a
@@ -178,13 +184,27 @@ En orden, y sin saltarse pasos:
    nombran un organismo → 92,3%; ranking/encuesta/tema → 50%; y **6 de 31
    casos salieron de la búsqueda negativa de otro candidato** (no son
    independientes). Ver `COLECCION-LOTE-CRUDO.md` §3.
-6. **TAREA 3 — decidir** → `research/PILOT-DECISION.md` con `PILOT_GO` o
-   `PILOT_PIVOT`, sobre la conservadora del agente, con los 5 de Mateo al
-   lado. **Obligatorio (DEC-020):** una sección de **amenazas a la validez**
-   con la distribución de los 31 por tipo de publicador y por vía de
-   descubrimiento, y la recuperabilidad desagregada por esos grupos. Y
-   **P-15 de frente**: la clase canónica sale 1 en 12 aquí y 1 en 20 en el
-   piloto; dos lotes independientes dicen lo mismo, eso ya es señal.
+6. ~~TAREA 3 — decidir~~ **Hecha el 2026-09-25** en `feat/tarea-3-decision`:
+   [`../research/PILOT-DECISION.md`](../research/PILOT-DECISION.md) dice
+   **`PILOT_GO` con alcance declarado a nivel 1** (conservadora 23/31 =
+   74,2%; nivel 1 84,2%, resto 58,3%; sin hermanos 18/25 = 72,0%).
+   [`PILOT-FINDINGS.md`](../research/PILOT-FINDINGS.md) lleva la sección de
+   amenazas a la validez, el alcance honesto (P-19), P-15 con cinco opciones y
+   recomendación (E objeto / B primera clase / A ilustrativa), y Perú/bloqueo
+   ("no alcanza"). [`PILOT-FAILURES.md`](../research/PILOT-FAILURES.md), el
+   catálogo de fallos.
+7. ~~Ratificar `PILOT_GO`; decidir P-19~~ **Hecho el 2026-09-25**: GO
+   ratificado (DEC-023); alcance de nivel 1 con INE, FMI e Interior (DEC-024).
+8. **Mateo cierra P-15.** Va con la recomendación (E objeto, B primera clase,
+   A ilustrativa, C subtipo de B) y pidió ver antes qué implica para el
+   título y la hipótesis: la redacción propuesta está en
+   [`PREGUNTAS-ABIERTAS.md`](PREGUNTAS-ABIERTAS.md), P-15. **Hasta que la
+   apruebe o corrija, no se toca nada de la Puerta 2.**
+9. **P-20:** los 5 casos manuales de Mateo, en tabla, cierran FINDINGS §7. Si
+   contradicen la lectura del agente, la decisión se reabre.
+10. **Puerta 2, después de 8:** prototipo de START-HERE §18 con INE como
+    primer conector, la clase que salga de P-15, 10 casos de `PILOT-40.csv`,
+    sin LLM.
 7. ~~Fusionar `feat/entorno-docker-local`~~ **Hecho (26d42da).** Las reglas de
    DEC-017, DEC-018, DEC-020 y DEC-021 están en `CLAUDE.md` §3, como parte de
    la propuesta que Mateo revisa (P-02).

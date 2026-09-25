@@ -67,10 +67,10 @@ conocerlo antes de escribir el sistema, no después.
 | [`cronometro.log`](cronometro.log), `evidencia/` | TAREA 2 — hitos por caso y respuestas crudas de API | **entregado** 2026-09-25 |
 | [`pilot-crudo-descubrimiento.csv`](pilot-crudo-descubrimiento.csv), `scripts/reconstruir_descubrimiento.py` | DEC-020 — qué consulta sacó cada candidato, reconstruido del transcript; base de la sección de amenazas a la validez | **entregado** 2026-09-25 |
 | `scripts/lote_crudo.py`, `scripts/validar_lote_crudo.py`, `scripts/cronometro.py` | TAREA 2 — fuente de los CSV, validación, cronómetro | **entregado** 2026-09-25 |
-| `PILOT-40.csv` | TAREA 3 — fusión de los 20 auditados y el lote crudo | **pendiente** |
-| `PILOT-FINDINGS.md` | TAREA 3 | **pendiente** |
-| `PILOT-FAILURES.md` | TAREA 3 | **pendiente** |
-| `PILOT-DECISION.md` | TAREA 3 — `PILOT_GO` o `PILOT_PIVOT` | **pendiente** |
+| [`PILOT-40.csv`](PILOT-40.csv), `scripts/pilot40.py` | TAREA 3 — los 20 auditados y los 31 crudos en un esquema común (**51 filas**; el nombre es el del paquete). El script imprime todos los conteos de los tres informes | **entregado** 2026-09-25 |
+| [`PILOT-FINDINGS.md`](PILOT-FINDINGS.md) | TAREA 3 — las cinco métricas de R02 §7, comparación con el lote sesgado, **amenazas a la validez**, alcance honesto, P-15 con cinco opciones, Perú/bloqueo, humano vs agente (**pendiente**) | **entregado** 2026-09-25 |
+| [`PILOT-FAILURES.md`](PILOT-FAILURES.md) | TAREA 3 — catálogo de fallos con casos y lo que piden del prototipo | **entregado** 2026-09-25 |
+| [`PILOT-DECISION.md`](PILOT-DECISION.md) | TAREA 3 — **`PILOT_GO` con alcance declarado a nivel 1**. **Ratificado por Mateo** (DEC-023); alcance y emisores aprobados (DEC-024). Humano/agente pendiente (P-20) | **entregado y ratificado** 2026-09-25 |
 
 ---
 

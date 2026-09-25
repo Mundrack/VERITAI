@@ -129,6 +129,114 @@ otra (C08). El resto: `other_observed` 5, `2_baseline_selection` 3,
 mismo. Muestreo neutral, sin cuota por clase, así que el dato no está
 dirigido. Las opciones A, B y C siguen sobre la mesa; ahora con datos.
 
+`TAREA 3 (2026-09-25)` Mateo pidió opciones concretas de reencuadre, con
+pros y contras, incluida "revisión de base" como canónica. Están en
+`research/PILOT-FINDINGS.md` §5, con los casos que sostienen cada una. En
+resumen, sobre las **28 divergencias de los dos lotes** (`1_ranking_vs_value`
+2, `2_baseline_selection` 7, `3_absolute_vs_relative` 5, `4_denominator` 3,
+`5_methodology_change` 1, `other_observed` 10):
+
+```
+A   mantener ranking_vs_value como canonica        2 casos en 48; tesis sobre algo raro
+B   familia "comparacion de base" (2 + 5 + revision) 8 + 2 revisiones; es lo que mide la
+                                                    recuperabilidad; heterogenea
+C   revision de base sola (opcion de Mateo)         novedosa y computable; 2 de 12, tan
+                                                    marginal como ranking; exige historial
+D   magnitud mal leida (3 + 4)                      8 de 28; se acerca al fact-checking
+E   objeto = "comparabilidad de ediciones",         usa las 28; el prototipo arranca por
+    las clases son tests                            la mas frecuente; alcance mas ancho
+```
+
+**Recomendación del agente:** E como objeto, B como primera clase del
+prototipo, A como ilustrativa, C como subtipo de B. **Decide Mateo.**
+
+`DECISIÓN PROVISIONAL DE MATEO (2026-09-25)` *"Voy con tu recomendación: E
+como objeto, B como primera clase, A ilustrativa, C subtipo de B. Pero antes
+de cerrarla, dame en media página qué implica ese cambio para el título de la
+tesis y para la hipótesis."* La media página es la que sigue. **P-15 se cierra
+cuando Mateo apruebe o corrija esta redacción.**
+
+#### Qué implica E/B/A/C para el título y la hipótesis — redacción propuesta
+
+**El título actual** ("Detección automática de afirmaciones estadísticas
+engañosas en publicaciones de redes sociales en español: diseño,
+implementación y evaluación de un asistente de verificación contextual")
+tiene dos cosas que el piloto ya no sostiene. *"Redes sociales"*: el lote
+crudo se recolectó de prensa y comunicación oficial; las redes quedaron fuera
+por inalcanzables sin evadir protecciones (DEC-018), y así lo declara el
+método. Y *"engañosas"* sin más: lo que el piloto encontró no son mentiras
+(3 de 31 `contradicted`) sino comparaciones que no se sostienen (21 de las
+28 divergencias tienen `truth` supported o mixed).
+
+**Título propuesto:**
+
+> **Divergencia contextual computable en afirmaciones estadísticas en
+> español: detección automática de comparaciones no comparables entre
+> ediciones de estadísticas oficiales en prensa y comunicación pública**
+
+"Divergencia contextual computable" es el objeto (E). "Comparaciones no
+comparables entre ediciones" es la familia que arranca el prototipo (B) y
+nombra la capacidad central: recuperar la edición anterior. "Estadísticas
+oficiales" es el alcance de nivel 1 (P-19). "Prensa y comunicación pública"
+es la fuente real del corpus.
+
+**Hipótesis** (la tesis no tenía una explícita; el piloto permite escribir
+tres, cada una con su número):
+
+```
+H1  Objeto.  Una parte sustancial de las afirmaciones estadisticas enganosas
+    en espanol no es falsa: es una comparacion entre ediciones no comparables
+    de una estadistica oficial (periodo o base elegida, base revisada, cambio
+    de metodo, magnitud mal leida). Piloto: 28 divergencias en 48 casos;
+    21 de 28 con el dato verdadero.
+
+H2  Computabilidad.  Para publicadores de nivel 1, esa divergencia se detecta
+    sin LLM recuperando la edicion actual y la anterior de la primaria y
+    aplicando tests aritmeticos cerrados. Condicion: recuperabilidad de la
+    edicion anterior. Piloto: 84,2% en nivel 1 (74,2% global, conservadora).
+
+H3  Falsos positivos.  Sobre afirmaciones correctamente enmarcadas, el sistema
+    no dispara. Piloto: 15 controles negativos reales sobre 31, medibles por
+    primera vez.
+```
+
+**El caso que define el proyecto** deja de ser "España cae 16 puestos" (clase
+1, 2 de 28) y pasa a uno de la familia B. Dos candidatos del lote crudo, con
+primaria y edición anterior en mano: **C29** (el Índice de Paz Global publica
+"España sube 4 puestos" contra su rank revisado; la prensa titula "cae 2"
+contra el publicado: mantiene el sabor del ranking y es una revisión de base)
+o **C21** (Moncloa: "se reduce a 3,4 puntos la distancia con la UE"
+comparando España 2025 con la UE 2024; con años emparejados la brecha creció).
+El caso del ranking queda como ilustración de que la familia tiene más de un
+test (A).
+
+**La taxonomía** no se reescribe, se reordena: la clase 2 pasa a ser la
+familia "comparación de base" con tres subtipos —2a periodo o base elegida
+(la actual), **2b base revisada (nueva; C18, C29)**, 2c cambio de método (la
+clase 5 actual)—; las clases 1, 3 y 4 siguen como tests; la 7 ("cifra real,
+marco falso") es `other_observed`, 10 de 28, y la decide P-12.
+
+**Los objetivos**: O1 pasa de "300–500 publicaciones en español
+latinoamericano" a "en español, prensa y comunicación oficial, con España y
+Latinoamérica", porque el pool real salió 21/31 de España y hay que
+declararlo, no prometer lo contrario; O3 ("motor de recuperación que localice
+la fuente primaria") añade "**y su edición anterior**", que es lo que la
+métrica de la Puerta 1 midió. O2, O4, O5 y O6 no cambian.
+
+**Lo que no cambia:** el problema en una frase ("no es la mentira, es el dato
+verdadero fuera de contexto") sigue siendo exacto; el piloto lo confirma con
+21 de 28.
+
+### P-20 · Cierre humano/agente
+
+**Estado:** abierto, esperando datos · **Bloquea:** la ratificación de PILOT-DECISION · **Decide:** los datos, y Mateo
+
+Los 5 casos manuales de Mateo (C04, C05, C11, C14, C22; DEC-014) llenan
+FINDINGS §7. Al llegar: acuerdo por caso en `previous_edition_found`, razón
+de tiempos humano/agente, y si C22 (el único no recuperado por el agente) lo
+encuentra una persona. Si contradicen la lectura del agente, `PILOT-DECISION`
+se reabre y queda constancia. El agente no mira ese CSV antes.
+
 ### P-05 · Segundo anotador
 
 **Estado:** abierto desde el paquete · **Bloquea:** cerrar el corpus (Puerta 3)
@@ -176,6 +284,8 @@ No bloquea nada. Evita rehacer.
 | P-16 | ¿Qué denominador gobierna la puerta? | **La tasa natural sobre todos los admitidos** (31), "la que menos manipulación tiene". La del lote por cubetas se reporta al lado. La TAREA 3 la desagrega por tipo de publicador y vía de descubrimiento. Ver DEC-020 | 2026-09-25 |
 | P-17 | ¿Probar `curl` tras un fallo del fetcher es evasión? | **Un 403/406/418 al primer cliente cierra el caso** aunque otro cliente pase. C30 y C31 pasan a bloqueados; decide la conservadora **23/31 = 74,2%**, la leniente (80,6%) se reporta. Ver DEC-021 | 2026-09-25 |
 | P-18 | Formato hostil 0 de 2 | **Se acepta el déficit como hallazgo**: buscando sin sesgo no aparecieron PDFs sin texto. Sin segunda pasada dirigida. Ver DEC-022 | 2026-09-25 |
+| P-19 | ¿Se declara el alcance del sistema en publicadores de nivel 1? | **Sí.** Alcance declarado a nivel 1; niveles 3–5 como limitación escrita con su 58,3%. Emisores: INE, FMI, Interior. Ver DEC-024 | 2026-09-25 |
+| — | ¿`PILOT_GO`? | **Ratificado por Mateo.** Puerta 1 cerrada; la Puerta 2 no arranca hasta cerrar P-15. Ver DEC-023 | 2026-09-25 |
 | — | Geografía del lote nuevo (D2 de la adenda) | **Opción A**: español en general, sin cuota geográfica. Cerrada en `00b` | antes del 2026-09-08 |
 | — | ¿Framework en el panel web? | **No.** TypeScript vanilla, por coherencia con el stack cerrado en R02 §5. Ver DEC-008 | 2026-09-08 |
 | — | ¿Alembic o runner propio? | **Runner propio**, por portabilidad a `supabase db push`. Ver DEC-006 | 2026-09-08 |
