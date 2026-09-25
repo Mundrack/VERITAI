@@ -71,6 +71,25 @@ La métrica que decide es una sola:
   `NEEDS_REVIEW`. Nunca se rellena con algo plausible.
 - **Contradicciones y decisiones que solo puede tomar Mateo: se preguntan.**
 
+### Reglas fijadas por decisiones del piloto
+
+Vienen de `docs/DECISIONES.md`; aquí solo la regla, sin el contexto.
+
+- **El CSV es la fuente de verdad del piloto** (`research/pilot-20-normalizado.csv`,
+  `research/pilot-crudo-*.csv`). El Excel original está congelado con sus
+  errores, que son un hallazgo. *(DEC-017)*
+- **No se evaden protecciones anti-bot.** Orden de recuperación: API oficial →
+  dataset descargable → HTML → si bloquea, **ese es el resultado**. Ni
+  user-agents falsos, ni desafíos de Cloudflare saltados, ni scraping contra
+  quien bloquea. *(DEC-018)*
+- **El primer rechazo cierra el caso.** Un 403, 406, 418 o desafío al primer
+  cliente cierra el caso como no recuperable-por-agente, aunque otro cliente
+  honesto obtenga 200 después. Solo un error de red (`ECONNREFUSED`, `socket
+  hang up`, timeout) admite un reintento. *(DEC-021)*
+- **La métrica de la Puerta 1 se mide sobre todos los candidatos admitidos por
+  la regla dura**, no sobre el lote por cubetas, y se reporta desagregada por
+  nivel de emisor y vía de descubrimiento. *(DEC-020)*
+
 ---
 
 ## 4. Estructura
