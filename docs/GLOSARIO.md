@@ -50,6 +50,20 @@ si hay tesis.** Los emisores publican la edición vigente de forma prominente y
 archivan, renombran o eliminan las anteriores — pero toda la tesis depende de
 comparar dos períodos.
 
+**Recuperable-por-humano / recuperable-por-agente** *(DEC-019, 2026-09-25)*
+La métrica de la Puerta 1 se parte en dos y **se reportan ambas**:
+
+```
+recuperable-por-humano   una persona con navegador localiza la edicion anterior
+recuperable-por-agente   el sistema la localiza sin evadir ninguna proteccion
+```
+
+**La segunda es la que decide**, porque VERITAI es un agente. La primera es
+contexto y validez externa. No son el mismo número: la auditoría del piloto
+encontró páginas vivas para un navegador y cerradas para un fetcher (403 de
+Newtral en 8 de 8, desafío de Cloudflare en Interior, tablas que solo cargan
+por JS). Medir solo la humana es lo que el Excel hacía, y por eso salió 20 de 20.
+
 **EvidenceBundle**
 El conjunto de artefactos del mismo publicador necesarios para resolver un claim:
 edición actual, ediciones históricas y notas metodológicas. Tiene
@@ -147,7 +161,22 @@ METHODOLOGY_NOT_COMPARABLE
 SOURCE_VERSION_AMBIGUOUS
 CONFLICTING_PRIMARY_VALUES
 EXTRACTION_FAILED
+METRIC_AMBIGUOUS                # anadido 2026-09-25 (DEC-015): el claim no dice
+                                # que metrica usa y el veredicto cambia segun cual
+                                # se elija. 4 de 20 en el piloto: "valor o volumen",
+                                # "euros o % PIB", "tasa o numero", "lider en que"
 ```
+
+`NOTA` R02 §11: los motivos reales de abstención se descubren en el piloto, no se
+inventan después. `METRIC_AMBIGUOUS` es el primero descubierto. Otros tres
+candidatos con un solo caso cada uno (`SCOPE_NOT_RESOLVABLE`,
+`GROUPS_NOT_HOMOGENEOUS`, `SAMPLE_NOT_REPRESENTATIVE`) **no** entran con n=1.
+
+`NOTA` **Bloqueo anti-bot** *(DEC-018)*: cuando un publicador bloquea al agente
+—403, desafío de Cloudflare, `robots.txt`— **no se evade**. Se registra
+`PRIMARY_SOURCE_NOT_FOUND` con el subtipo `bloqueado_por_publicador`, y ese es el
+resultado. Ni user-agents falsos, ni saltarse desafíos, ni scraping contra quien
+bloquea explícitamente.
 
 ### `recuperabilidad`
 
@@ -182,7 +211,16 @@ current_edition_found
 previous_edition_found      # <- la que decide
 historical_series_found
 methodology_found
+alcanzable_por_humano       # anadidos 2026-09-25 (DEC-019). Se rellenan los dos.
+alcanzable_por_agente       # <- este es el que entra en la metrica de la puerta
 ```
+
+`NOTA` **`clase = none` no es un tercer estado** *(DEC-016)*. `truth` y `context`
+son ejes independientes (R02 §10) y van poblados en las 20 filas. Un claim
+correcto y bien enmarcado (P20) y un claim falso sin divergencia contextual (P15,
+P16) comparten `context = no_divergence_detected`; lo que los distingue es
+`truth`. Con los dos ejes poblados, la tasa de falsos positivos se mide sin
+añadir clases.
 
 ---
 

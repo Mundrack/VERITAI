@@ -6,7 +6,7 @@ Lo que está sin resolver, quién lo decide, y qué bloquea.
 > con la decisión y la fecha. Saber qué se descartó vale tanto como saber qué se
 > eligió.
 
-**Última actualización:** 2026-09-24
+**Última actualización:** 2026-09-25
 
 ---
 
@@ -58,6 +58,61 @@ no hace falta rotarla. Pero solo es segura si hay RLS: sin políticas, esa clave
 equivale a un `SELECT *` sobre cada tabla expuesta. Es exactamente el motivo de
 DEC-004.
 
+### P-12 · ¿Reabrir las clases 6 y 7?
+
+**Estado:** abierto, **decisión aplazada al lote crudo** · **Origen:** AUDIT-PILOT-20 §6
+
+`DECISIÓN DE MATEO (2026-09-25)` No se reabre todavía. La decisión se toma
+sobre el lote **crudo**, no sobre este, que está sesgado: reabrir clases con
+datos contaminados repite el error D1.
+
+**Desglose de los 5 `other_observed`**, que Mateo pidió antes de decidir nada.
+La cifra "5 de 20" mezclaba dos cosas:
+
+| Caso | Por qué es `other_observed` | En alcance |
+|---|---|---|
+| P08 | **DEC-013** (paper en inglés). Su clase real es `4_denominator` | no |
+| P09 | **DEC-013**. Su clase real es `3_absolute_vs_relative` + clase 6 | no |
+| P05 | Clase 7: cifra real atribuida al año equivocado | sí |
+| P07 | Clase 7: numerador y denominador de ámbitos geográficos distintos | sí |
+| P17 | **Ni 6 ni 7.** Agregación que oculta subgrupos en sentido contrario. El Excel ya lo marcaba como "futura ampliación de la taxonomía" | sí |
+
+El dato real: **3 de 18 en alcance** tienen una clase fuera de la tesis, y de
+esos, solo 2 son clase 7. P17 es un tipo nuevo. Con esto se compara el lote
+crudo cuando exista.
+
+### P-15 · La clase canónica aparece 1 vez en 20
+
+**Estado:** abierto · **Bloquea:** el objeto de estudio · **Decide:** Mateo, tras la TAREA 2
+
+**Registrado antes de la TAREA 2, a propósito.**
+
+`1_ranking_vs_value` es la clase que da nombre al proyecto: *"España cae 16
+puestos"* con la puntuación intacta. Toda la tesis descansa en ella. En el lote
+auditado aparece **una vez** (P01), y ese único caso está en `NEEDS_REVIEW`
+porque el claim cubre cuatro índices y el corpus documenta uno.
+
+```
+2_baseline_selection     4
+3_absolute_vs_relative   3
+1_ranking_vs_value       1     <- la canonica
+```
+
+**Si en el lote crudo sigue siendo marginal, hay que replantear el objeto de
+estudio.** Opciones que se abrirían entonces, sin decidir ninguna ahora:
+
+```
+A   La tesis se reencuadra sobre la clase mas frecuente (baseline o
+    absoluto/relativo) y ranking_vs_value pasa a ser un caso ilustrativo.
+B   El lote crudo se recolecta con cuota minima de ranking_vs_value,
+    declarando el sesgo de muestreo.
+C   Se mantiene el objeto y se acepta que el corpus sera pequeno para
+    la clase principal, con la limitacion escrita.
+```
+
+Que quede escrito ahora: si la TAREA 2 devuelve 0 o 1 casos de la clase
+canónica, no es un detalle del corpus, es una pregunta sobre la tesis.
+
 ### P-05 · Segundo anotador
 
 **Estado:** abierto desde el paquete · **Bloquea:** cerrar el corpus (Puerta 3)
@@ -98,6 +153,10 @@ No bloquea nada. Evita rehacer.
 | P-01 | Remoto de git y pull requests | **En pausa.** Se trabaja en local con ramas. Nada se sube a ningún servidor | 2026-09-24 |
 | P-03 | ¿Entran P08 y P09 en el alcance de tesis? | **Salen del corpus.** Se registran como `other_observed` y pasan a trabajo futuro. Ver DEC-013 | 2026-09-24 |
 | P-04 | ¿Quién cronometra `minutes_to_locate`? | **Claude**, declarado como recuperabilidad-por-agente. Mateo cronometra 5 casos a mano como contraste humano. Ver DEC-014 | 2026-09-24 |
+| P-10 | ¿`METRIC_AMBIGUOUS` entra en el enum de abstención? | **Sí.** 1 de cada 5 casos. El enum describe la realidad observada. Ver DEC-015 | 2026-09-25 |
+| P-11 | ¿Separar en `clase` el control negativo del "falso sin divergencia"? | **No.** `truth` y `context` son ejes independientes; con ambos poblados el FPR es medible. P15 corregido a `no_divergence_detected`. Ver DEC-016 | 2026-09-25 |
+| P-13 | ¿Cómo se corrigen los errores del Excel? | **El CSV es la fuente de verdad.** El Excel queda congelado con sus 4 errores: son un hallazgo. Ver DEC-017 | 2026-09-25 |
+| P-14 | ¿Qué hace VERITAI con los publicadores que bloquean fetchers? | **No se evaden protecciones anti-bot. Nunca.** API → dataset → HTML → bloqueado = no recuperable. Ver DEC-018 | 2026-09-25 |
 | — | Geografía del lote nuevo (D2 de la adenda) | **Opción A**: español en general, sin cuota geográfica. Cerrada en `00b` | antes del 2026-09-08 |
 | — | ¿Framework en el panel web? | **No.** TypeScript vanilla, por coherencia con el stack cerrado en R02 §5. Ver DEC-008 | 2026-09-08 |
 | — | ¿Alembic o runner propio? | **Runner propio**, por portabilidad a `supabase db push`. Ver DEC-006 | 2026-09-08 |

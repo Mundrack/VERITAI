@@ -10,13 +10,23 @@ Puerta 1.** Sin `PILOT-DECISION.md` no se escribe código de producto.
 ## La métrica que decide
 
 > Porcentaje de casos del lote **crudo** donde se localiza la **edición anterior**
-> del dato.
+> del dato — medido **dos veces** (DEC-019):
+
+```
+recuperable-por-humano   una persona con navegador la localiza
+recuperable-por-agente   el sistema la localiza SIN evadir ninguna
+                         proteccion (DEC-018)                       <- DECIDE
+```
 
 ```
 > 60%     verde   ->  PILOT_GO
 30-60%    ambar   ->  decidir con alcance reducido
 < 30%     rojo    ->  PILOT_PIVOT
 ```
+
+Los umbrales se aplican a la del **agente**. La humana se reporta al lado, como
+contexto y como limitación de validez externa. Las dos juntas cuantifican la
+brecha entre lo que existe y lo que un sistema puede usar.
 
 **Valor actual: sin medir.** El lote crudo no existe todavía.
 
@@ -35,7 +45,9 @@ conocerlo antes de escribir el sistema, no después.
 
 | Archivo | Tarea | Estado |
 |---|---|---|
-| `AUDIT-PILOT-20.md` | TAREA 1 — auditar los 20 existentes | **pendiente** |
+| [`AUDIT-PILOT-20.md`](AUDIT-PILOT-20.md) | TAREA 1 — auditar los 20 existentes | **entregado** 2026-09-24 |
+| [`pilot-20-normalizado.csv`](pilot-20-normalizado.csv) | TAREA 1 — los 20 con enums cerrados. **Fuente de verdad** (DEC-017) | **entregado** 2026-09-24 |
+| `scripts/auditar_aritmetica.py`, `scripts/normalizar_a_enums.py` | TAREA 1 — reproducibilidad | **entregado** |
 | `PILOT-40.xlsx` o `.csv` | TAREA 2 — 20 crudos + los 20 auditados | **pendiente** |
 | `PILOT-FINDINGS.md` | TAREA 3 | **pendiente** |
 | `PILOT-FAILURES.md` | TAREA 3 | **pendiente** |
@@ -164,6 +176,8 @@ publicaciones de redes, titulares de prensa con cifras, declaraciones públicas.
 ```
 fuente primaria encontrada       (si/no)
 edicion anterior encontrada      (si/no)   <- la metrica que decide
+alcanzable_por_humano            (si/no)   DEC-019
+alcanzable_por_agente            (si/no)   DEC-019  <- este entra en la puerta
 serie historica encontrada       (si/no)
 metodologia encontrada           (si/no)
 formato                          api | dataset | html | pdf | scan | none
@@ -171,9 +185,30 @@ recuperabilidad                  A | B | C | D
 minutes_to_locate
 minutes_to_extract
 cronometrado_por                 agente | humano       <- obligatorio
-truth, context, clase            enums cerrados
-abstain_reason                   cuando no se pueda resolver
-raw_value_span                   de cada numero usado
+truth, context                   enums cerrados, AMBOS poblados (DEC-016)
+clase                            enum cerrado
+abstain_reason                   cuando no se pueda resolver; incluye METRIC_AMBIGUOUS (DEC-015)
+raw_value_span                   de cada numero usado, de la PRIMARIA
+```
+
+### Reglas fijadas por la auditoría de los 20 (DEC-015 a DEC-019)
+
+```
+URL PRIMARIA      un dataset, tabla o documento concreto. Una portada
+                  institucional NO cuenta como fuente localizada.
+
+RECUPERACION      1. API oficial  2. dataset descargable  3. HTML
+                  4. si bloquea -> NO recuperable-por-agente. Y punto.
+
+ANTI-BOT          NO se evade nada. Ni user-agents falsos, ni desafios
+                  de Cloudflare, ni scraping contra quien bloquea.
+                  Un 403 al agente identificado ES la respuesta.
+
+TIEMPOS           en serie, no en paralelo, para que el cronometro
+                  por caso signifique algo.
+
+FUENTE DE VERDAD  el CSV normalizado. El Excel de los 20 queda
+                  congelado con sus errores: son un hallazgo (DEC-017).
 ```
 
 ### Quién cronometra
