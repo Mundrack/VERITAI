@@ -3,7 +3,7 @@
 Esta carpeta contiene el piloto de viabilidad. **Es lo único que puede abrir la
 Puerta 1.** Sin `PILOT-DECISION.md` no se escribe código de producto.
 
-**Última actualización:** 2026-09-24
+**Última actualización:** 2026-09-25
 
 ---
 
@@ -28,7 +28,10 @@ Los umbrales se aplican a la del **agente**. La humana se reporta al lado, como
 contexto y como limitación de validez externa. Las dos juntas cuantifican la
 brecha entre lo que existe y lo que un sistema puede usar.
 
-**Valor actual: sin medir.** El lote crudo no existe todavía.
+**Valor medido el 2026-09-25** ([`COLECCION-LOTE-CRUDO.md`](COLECCION-LOTE-CRUDO.md) §3):
+recuperable-por-agente **25/31 = 80,6%** sobre los admitidos, 15/21 = 71,4%
+sobre el lote por cubetas. La humana real llega con los 5 casos de Mateo. La
+decisión es de la TAREA 3, no de este número.
 
 No es la fuente primaria actual. No es la búsqueda. Es la **edición anterior**,
 porque toda la tesis depende de comparar dos períodos — y los emisores publican
@@ -48,7 +51,13 @@ conocerlo antes de escribir el sistema, no después.
 | [`AUDIT-PILOT-20.md`](AUDIT-PILOT-20.md) | TAREA 1 — auditar los 20 existentes | **entregado** 2026-09-24 |
 | [`pilot-20-normalizado.csv`](pilot-20-normalizado.csv) | TAREA 1 — los 20 con enums cerrados. **Fuente de verdad** (DEC-017) | **entregado** 2026-09-24 |
 | `scripts/auditar_aritmetica.py`, `scripts/normalizar_a_enums.py` | TAREA 1 — reproducibilidad | **entregado** |
-| `PILOT-40.xlsx` o `.csv` | TAREA 2 — 20 crudos + los 20 auditados | **pendiente** |
+| [`COLECCION-LOTE-CRUDO.md`](COLECCION-LOTE-CRUDO.md) | TAREA 2 — método aplicado, cubetas, las dos métricas, predicciones vs realidad, bloqueos, los 5 casos de Mateo | **entregado** 2026-09-25 |
+| [`pilot-crudo-screening.csv`](pilot-crudo-screening.csv) | TAREA 2 — los 38 candidatos con resultado de criba | **entregado** 2026-09-25 |
+| [`pilot-crudo-20.csv`](pilot-crudo-20.csv) | TAREA 2 — el lote (21: 18 en cubetas + 3 sin objetivo) | **entregado** 2026-09-25 |
+| [`pilot-crudo-trabajados.csv`](pilot-crudo-trabajados.csv) | TAREA 2 — los 31 admitidos y trabajados, excedentes incluidos | **entregado** 2026-09-25 |
+| [`cronometro.log`](cronometro.log), `evidencia/` | TAREA 2 — hitos por caso y respuestas crudas de API | **entregado** 2026-09-25 |
+| `scripts/lote_crudo.py`, `scripts/validar_lote_crudo.py`, `scripts/cronometro.py` | TAREA 2 — fuente de los CSV, validación, cronómetro | **entregado** 2026-09-25 |
+| `PILOT-40.csv` | TAREA 3 — fusión de los 20 auditados y el lote crudo | **pendiente** |
 | `PILOT-FINDINGS.md` | TAREA 3 | **pendiente** |
 | `PILOT-FAILURES.md` | TAREA 3 | **pendiente** |
 | `PILOT-DECISION.md` | TAREA 3 — `PILOT_GO` o `PILOT_PIVOT` | **pendiente** |

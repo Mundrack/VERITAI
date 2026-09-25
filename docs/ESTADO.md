@@ -3,7 +3,7 @@
 > **Este documento se sobrescribe entero en cada actualización.** Es una foto,
 > no un historial. El historial está en [`BITACORA.md`](BITACORA.md).
 
-**Última actualización:** 2026-09-24
+**Última actualización:** 2026-09-25 (tarde)
 
 ---
 
@@ -12,6 +12,7 @@
 ```
 PUERTA 1   research/PILOT-DECISION.md con PILOT_GO        <-- AQUI, sin superar
            sin esto no se escribe codigo de producto
+           TAREA 1 hecha · TAREA 2 hecha (sin commit) · TAREA 3 pendiente
 
 PUERTA 2   prototipo end-to-end, UNA clase y UN emisor,
            10 casos con trazabilidad completa
@@ -24,8 +25,8 @@ PUERTA 4   evaluacion completa: metricas, ablacion,
 
 **La métrica que decide, en dos partes** *(DEC-019, 2026-09-25)*:
 
-> Porcentaje de casos del lote **crudo** (20 nuevos, sin artículo de verificación
-> previo) donde se localiza la **edición anterior** del dato, medido dos veces:
+> Porcentaje de casos del lote **crudo** (sin artículo de verificación previo)
+> donde se localiza la **edición anterior** del dato, medido dos veces:
 >
 > ```
 > recuperable-por-humano   una persona con navegador la localiza
@@ -35,19 +36,25 @@ PUERTA 4   evaluacion completa: metricas, ablacion,
 > `>60%` verde → PILOT_GO · `30–60%` ámbar → alcance reducido · `<30%` rojo → PILOT_PIVOT
 > — aplicado a la del **agente**. La humana se reporta como contexto.
 
-**Valor actual: sin medir.** El lote crudo no existe todavía.
+**Valor medido el 2026-09-25** (`research/COLECCION-LOTE-CRUDO.md` §3):
 
-Por qué dos: la auditoría del piloto encontró fuentes vivas para un navegador y
-cerradas para un agente. Medir solo la humana es lo que el Excel hacía, y por
-eso salió 20 de 20. Y no se evaden protecciones anti-bot: un bloqueo **es** el
-resultado (DEC-018).
+```
+                                      31 admitidos           lote (21)
+recuperable-por-agente                25/31   80,6%          15/21   71,4%
+alcanzable_por_humano (si|probable)   29/31   93,5%          19/21   90,5%
+```
+
+Dos denominadores porque la cuota por cubetas fija el del lote por
+construcción (P-16). La humana real llega con los 5 casos manuales de Mateo.
+**Esto no es la decisión**: la decisión es la TAREA 3.
 
 ---
 
 ## Qué funciona hoy
 
-Entorno de desarrollo local completo en Docker. Se levanta con un comando y no
-requiere nada instalado en la máquina aparte de Docker.
+Entorno de desarrollo local completo en Docker (rama `feat/entorno-docker-local`,
+sin fusionar). Se levanta con un comando y no requiere nada instalado en la
+máquina aparte de Docker.
 
 ```bash
 docker compose up -d
@@ -82,6 +89,8 @@ $ curl http://127.0.0.1:8000/health
 | `ruff check` | ✅ sin avisos | 2026-09-08 |
 | `tsc --noEmit` | ✅ sin errores | 2026-09-08 |
 | Ninguna contraseña real en el repositorio | ✅ `git grep` vacío | 2026-09-08 |
+| `normalizar_a_enums.py` sale 0 (TAREA 1) | ✅ | 2026-09-25 |
+| `validar_lote_crudo.py` sale 0: 38 candidatos, cero fuera de enum, cubetas dentro de objetivo, 3 hitos por caso | ✅ | 2026-09-25 |
 
 ---
 
@@ -96,6 +105,7 @@ $ curl http://127.0.0.1:8000/health
 | La extensión MV3 | El panel web es el mismo código; se empaqueta más tarde |
 | pgvector activado | La imagen lo trae; la extensión no hace falta hasta *embeddings* |
 | El aparato completo de `/docs` y los ADR formales | Adenda D6: después de `PILOT_GO` |
+| `PILOT-40`, `PILOT-FINDINGS`, `PILOT-FAILURES`, `PILOT-DECISION` | TAREA 3; necesita los 5 casos manuales de Mateo |
 
 ---
 
@@ -120,26 +130,23 @@ La arquitectura está preparada para migrar cambiando `DATABASE_URL`: ver
 ## Estado de git
 
 ```
-main                          paquete + este registro vivo (fusionado --no-ff)
+main                          paquete + registro vivo + TAREA 1 (fusionados --no-ff)
 │
-├─ docs/registro-vivo         FUSIONADO a main
+├─ docs/registro-vivo         FUSIONADO
+├─ feat/auditoria-piloto-20   FUSIONADO (a946ff9)
 │
-├─ feat/auditoria-piloto-20   TAREA 1: auditoria + CSV + scripts   <- rama actual, SIN FUSIONAR
+├─ feat/lote-crudo-20         TAREA 2: 31 casos, CSVs, informe, scripts   <- rama actual, SIN COMMIT
 │
-└─ feat/entorno-docker-local  entorno Docker completo              <- SIN FUSIONAR
+└─ feat/entorno-docker-local  entorno Docker completo (cf104f3)          <- SIN FUSIONAR
 ```
 
-`ATENCIÓN` Como `docs/` se fusionó antes que el entorno, **`main` contiene
-documentos que describen archivos que todavía no están en `main`**: los enlaces a
-`../migracion-supabase-base-de-datos/` no resuelven, y `CLAUDE.md` tampoco está.
-Se arregla fusionando `feat/entorno-docker-local`, que ya está revisado y
-verificado.
+`ATENCIÓN` `main` contiene documentos que describen archivos que solo están en
+`feat/entorno-docker-local` (`migracion-supabase-base-de-datos/`, `CLAUDE.md`).
+Se arregla fusionando esa rama, que ya está revisada y verificada.
 
-`ATENCIÓN` No hay remoto configurado y `gh` no está instalado, así que las ramas
-existen pero **no hay pull requests**. Ver
-[`PREGUNTAS-ABIERTAS.md`](PREGUNTAS-ABIERTAS.md), P-01.
-
-Nada se ha subido a ningún servidor.
+`ATENCIÓN` No hay remoto configurado y `gh` no está instalado: las ramas
+existen pero **no hay pull requests** (P-01). Nada se ha subido a ningún
+servidor.
 
 ---
 
@@ -147,22 +154,21 @@ Nada se ha subido a ningún servidor.
 
 En orden, y sin saltarse pasos:
 
-1. ~~TAREA 1 — auditar los 20 casos existentes~~ **Hecha el 2026-09-24,
-   revisada y aprobada el 2026-09-25.**
-   [`../research/AUDIT-PILOT-20.md`](../research/AUDIT-PILOT-20.md): 3
-   verificados, 3 parciales, 12 NEEDS_REVIEW, 2 fuera de alcance. Cuatro
-   errores de transcripción en el Excel, documentados como hallazgo. Commiteada
-   en `feat/auditoria-piloto-20`, **pendiente de fusionar**.
-2. ~~Resolver P-10 a P-14~~ **Resueltas el 2026-09-25** (DEC-015 a DEC-019).
-   Queda abierta P-12 (clases 6 y 7), aplazada al lote crudo, y se abre
-   **P-15: la clase canónica aparece 1 vez en 20.** Si en el lote crudo sigue
-   siendo marginal, hay que replantear el objeto de estudio.
-3. **TAREA 2 — recolectar 20 casos crudos.** Plan mode primero. Es el trabajo
-   caro y el que no se puede falsear. Sin él no hay métrica. Reglas fijadas por
-   la auditoría: URL primaria = dataset o tabla concreta, nunca una portada;
-   `alcanzable_por_humano` y `alcanzable_por_agente` por separado; orden API →
-   dataset → HTML → bloqueado = no recuperable; y sin evadir nada.
-4. **TAREA 3 — decidir** → `research/PILOT-DECISION.md` con `PILOT_GO` o
-   `PILOT_PIVOT`, sobre la métrica del **agente**.
+1. ~~TAREA 1~~ **Hecha y fusionada** (2026-09-24/25).
+2. ~~TAREA 2 — recolectar el lote crudo~~ **Hecha el 2026-09-25**, en
+   `feat/lote-crudo-20`, **sin commitear** hasta que Mateo revise el diff.
+   Entregables en [`../research/COLECCION-LOTE-CRUDO.md`](../research/COLECCION-LOTE-CRUDO.md):
+   38 candidatos, 31 trabajados, cubetas 7/7 · 6/6 · 3/3 · 2/2 · **0/2 formato
+   hostil** (déficit declarado), lote de 21, 10 excedentes.
+3. **Mateo:** los 5 casos manuales — **C04, C05, C11, C14, C22** (semilla
+   `20260925`), solo con claim y URL, sin ver los resultados del agente. Están
+   en `COLECCION-LOTE-CRUDO.md` §8.
+4. **Mateo decide** P-16 (qué denominador gobierna la puerta), P-17 (si probar
+   `curl` tras un fallo del fetcher es evasión), P-18 (déficit de formato
+   hostil: ampliar pool o aceptar). Y revisa P-15 con el dato nuevo: la clase
+   canónica sale 1 en 12.
+5. **TAREA 3 — decidir** → `research/PILOT-DECISION.md` con `PILOT_GO` o
+   `PILOT_PIVOT`, sobre la métrica del **agente**, con los 5 de Mateo al lado.
+6. Fusionar `feat/entorno-docker-local` y llevar DEC-017/DEC-018 a `CLAUDE.md`.
 
 No se avanza a la Puerta 2 hasta entregar `PILOT-DECISION.md`.

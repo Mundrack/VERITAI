@@ -1,0 +1,95 @@
+2026-09-25T15:07:59+00:00	C01	t0	SEPE paro agosto 2026: localizar serie y edicion anterior
+2026-09-25T15:08:34+00:00	C01	t1	primaria=SEPE (el claim es la nota oficial); edicion anterior = nota julio 2026 localizada por busqueda
+2026-09-25T15:09:47+00:00	C01	t2	spans literales de agosto y julio capturados; dataset XLS mensual localizado; sin enlace a metodologia
+2026-09-25T15:09:47+00:00	C02	t0	afiliacion Seguridad Social agosto 2026: localizar nota oficial y edicion anterior
+2026-09-25T15:10:35+00:00	C02	t1	primaria = nota Ministerio Inclusion 2026-09-02 (afiliacion media -162.840); anterior = nota julio 2026-08-04; informes de afiliacion en seg-social.es
+2026-09-25T15:12:01+00:00	C02	t2	spans de agosto (Moncloa) y julio (Moncloa) capturados; inclusion.gob.es devolvio 403; informes PDF mensuales en seg-social.es
+2026-09-25T15:12:01+00:00	C03	t0	okdiario 'peor agosto en 7 anos': misma primaria SEPE; localizar serie de agostos 2019-2025
+2026-09-25T15:14:59+00:00	C03	t1	serie de agostos 2019-2026 localizada en 8 notas oficiales SEPE/Moncloa; sin fichero de serie legible
+2026-09-25T15:14:59+00:00	C03	t2	extraccion concurrente con la localizacion: cada nota es una frase; spans literales 2019, 2025 y 2026
+2026-09-25T15:14:59+00:00	C04	t0	inflacion Ecuador agosto 2026 'mas baja de Sudamerica': localizar boletin IPC INEC y edicion de julio
+2026-09-25T15:16:28+00:00	C04	t1	boletin agosto 2026 localizado por patron de URL (PDF 17 pp); boletin julio enlazado desde nota INEC; pagina IPC en mantenimiento
+2026-09-25T15:17:32+00:00	C04	t2	spans literales agosto (1,12 / 0,04 / 1,34 / julio 1,39 / ago-25 0,81) y boletin julio confirmado; serie mensual en tabla; cambio de base documentado
+2026-09-25T15:17:32+00:00	C05	t0	nota Ministerio Desarrollo Economico 'mas baja de la region': misma primaria INEC ya localizada; localizar la nota y sus fuentes para los otros paises
+2026-09-25T15:18:32+00:00	C05	t1	nota ministerial localizada; comparador regional en imagen sin fuente; primaria INEC ya en mano desde C04
+2026-09-25T15:18:32+00:00	C05	t2	sin extraccion nueva: spans INEC de C04 + literal de la nota ministerial
+2026-09-25T15:18:32+00:00	C06	t0	RSF Clasificacion Mundial Libertad de Prensa 2026: localizar puesto y puntuacion de Espana 2026 y 2025 en rsf.org
+2026-09-25T15:19:33+00:00	C06	t1	primaria = ficha de Espana en rsf.org (puesto y score 2026 y 2025 en la misma pagina); metodologia localizada por busqueda; discrepancia Infobae 77,93 vs RSF 77,35 en el score 2025
+2026-09-25T15:20:40+00:00	C06	t2	spans literales ficha RSF (29/180, 75,42; 2025: 23/180, 77,35); CSV 2025 localizado; metodologia 2022 localizada; Infobae 77,93 es error de la secundaria
+2026-09-25T15:20:40+00:00	C07	t0	FMI ranking PIB nominal puesto 14: API DataMapper NGDPD, rankear ESP/AUS/MEX 2025-2026
+2026-09-25T15:22:52+00:00	C07	t1	API DataMapper NGDPD (WEO abril 2026) + lista de paises; ranking calculado localmente; pagina WEO oct-2025 devolvio 403
+2026-09-25T15:22:52+00:00	C07	t2	extraccion = el mismo JSON: ESP 2025 puesto 12 / 2026 puesto 14, PIB +9,84% USD
+2026-09-25T15:22:52+00:00	C08	t0	Libertad Digital 'Sanchez hunde la economia al puesto 14': misma primaria FMI; localizar el articulo
+2026-09-25T15:23:45+00:00	C08	t1	articulo localizado; primaria FMI ya en mano (C07)
+2026-09-25T15:23:46+00:00	C08	t2	sin extraccion nueva; literal del titular y cifras del cuerpo cotejadas con la API
+2026-09-25T15:23:46+00:00	C09	t0	Saily Internet Connectivity Index 2026, Espana 5->17: localizar el informe del emisor y la edicion 2025
+2026-09-25T15:25:26+00:00	C09	t1	primaria localizada (saily.com/internet-connectivity-index) pero 403 al fetcher y a curl con UA honesto; DEC-018: no se reintenta
+2026-09-25T15:25:26+00:00	C09	t2	sin extraccion posible; cifras solo en secundarias
+2026-09-25T15:25:26+00:00	C10	t0	Global Citizen Solutions ranking fiscal 2026, Espana 44/48: localizar el informe del emisor y si existe edicion anterior
+2026-09-25T15:27:24+00:00	C10	t1	primaria localizada por busqueda (briefing GCS 2026-09-16, 48 jurisdicciones); elboletin 403; sin edicion 2025 de este indice en el sitio del emisor
+2026-09-25T15:27:24+00:00	C10	t2	tabla extraida por WebFetch (curl 403): Spain 36.9 puesto 44; Malta 74.4; Cyprus 73.4; 11 indicadores 3 pilares
+2026-09-25T15:27:24+00:00	C11	t0	IPC agosto 2026 4,3% 'mas alta en mas de tres anos': notas INE agosto y julio; API para la serie
+2026-09-25T15:28:27+00:00	C11	t1	notas INE agosto (2026-09-15) y julio (2026-08-13) con spans literales; anexo XLSX y metodologia base 2025 enlazados; API tabla 50913 identificada
+2026-09-25T15:30:16+00:00	C11	t2	serie 2023-2025 por API (tabla 50913, base 2021) + 2026 por 8 notas mensuales (base 2025); 4,3 es la mas alta desde feb-2023 (6,0); max intermedio 4,1
+2026-09-25T15:30:17+00:00	C12	t0	DANE GEIH julio 2026 desempleo 8,1%: localizar boletin tecnico y anexos, y la edicion de junio
+2026-09-25T15:31:31+00:00	C12	t1	boletines julio y junio localizados por patron de URL y descargados; anexos XLSX + metodologia enlazados en la pagina del DANE
+2026-09-25T15:32:03+00:00	C12	t2	spans literales julio (8,1 / 8,8 / 0,7 pp) y junio (8,0 / 8,6) via pypdf; Portafolio dice junio 8,2 y '0,7%': errores de la secundaria
+2026-09-25T15:32:03+00:00	C13	t0	informalidad 54,5% julio 2026 DANE: localizar la publicacion de informalidad y la edicion anterior
+2026-09-25T15:34:03+00:00	C13	t1	presentacion GEIH jul-2026 (serie de julios de informalidad), boletin GEIHEISS may-jul 2026 y abr-jun 2026 descargados; anexos XLSX y dos docs de metodologia; Radio Santa Fe ECONNREFUSED
+2026-09-25T15:34:04+00:00	C13	t2	spans: presentacion (54,5 jul-26; 54,8 jul-25), pagina y boletin GEIHEISS (54,6 vs 55,0), boletin abr-jun via pypdf
+2026-09-25T15:34:04+00:00	C14	t0	INEGI INPC agosto 2026 3,26%: localizar comunicado de prensa y edicion de julio
+2026-09-25T15:34:28+00:00	C14	t1	boletines INEGI INPC localizados por busqueda: 481/26 (inpc_2q2026_08.pdf, agosto) y 417/26 (inpc_2q2026_07.pdf, julio)
+2026-09-25T15:35:23+00:00	C14	t2	boletines agosto y julio extraidos con pypdf (ver notas); la extraccion es la que mande el output anterior
+2026-09-25T15:35:23+00:00	C15	t0	Enfoque 'baja a 3.26%': misma primaria INEGI en mano; localizar el articulo y la comparacion interanual
+2026-09-25T15:36:16+00:00	C14	t2	CORRECCION: _08 era julio; agosto es inpc_2q2026_09.pdf (586/26). Extraido con pypdf; ver output
+2026-09-25T15:36:16+00:00	C15	t1	Enfoque 403; primaria INEGI agosto (586/26) y agosto 2025 en mano desde C14
+2026-09-25T15:36:16+00:00	C15	t2	sin extraccion nueva; comparacion interanual desde los mismos boletines
+2026-09-25T15:36:16+00:00	C16	t0	paro juvenil 2T2026 23,77%: notas EPA 2T26 y 1T26 del INE
+2026-09-25T15:39:35+00:00	C16	t1	primaria = INE EPA por API: tasa en tabla 65334 (serie EPA452436, menores de 25); parados en tabla 65218; la tabla antigua 4247 termina en 2023-T4
+2026-09-25T15:39:37+00:00	C16	t2	tasa 23,77 (2T) y 24,54 (1T) por API; parados menores de 25 por tabla 65218 (ver evidencia)
+2026-09-25T15:40:05+00:00	C17	t0	pressdigital 'escala hasta el 24,5% en el 2T': misma primaria INE EPA en mano (2T = 23,77; 1T = 24,54); localizar el articulo
+2026-09-25T15:41:01+00:00	C17	t1	articulo localizado (200); primaria INE en mano (C16)
+2026-09-25T15:41:01+00:00	C17	t2	sin extraccion nueva: el cuerpo del propio articulo contradice su titular (23,77 en 2T, 'bajo')
+2026-09-25T15:41:01+00:00	C18	t0	Balance de Criminalidad 2T2026 Interior: PDF en interior.gob.es (Cloudflare en la auditoria) y portal estadistico ses.mir.es; edicion 1T2026
+2026-09-25T15:41:45+00:00	C18	t1	interior.gob.es PDF 403 (no se reintenta); primaria = Portal Estadistico de Criminalidad del mismo ministerio: balances JAXI 2T2026 (/DatosBalanceAnt/20262/) y 2T2025; metodologia.html
+2026-09-25T15:43:41+00:00	C18	t2	Balances 2T2026 y 2T2025 descargados del portal del ministerio (PDF con texto, pypdf); tablas PC-Axis 09004-09006 localizadas; ver output
+2026-09-25T15:43:41+00:00	C19	t0	zigzag 'crece seis veces mas en Madrid': misma primaria (Balance 2T2026) en mano; localizar el articulo y la fila de Madrid
+2026-09-25T15:44:40+00:00	C19	t1	articulo zigzag (200); primaria en mano: Balance 2T2026, tabla de la Comunidad de Madrid
+2026-09-25T15:44:47+00:00	C19	t2	fila de Madrid extraida del Balance 2T2026 (ver output); ratio de tasas y cuota absoluta calculadas
+2026-09-25T15:44:47+00:00	C20	t0	que.madrid 'sube un 2,9%: 203.953': misma primaria y misma fila; localizar el articulo
+2026-09-25T15:48:37+00:00	C20	t1	articulo que.madrid (200); misma primaria que C18/C19 ya en mano (Balance 2T2026, p.418 tabla Comunidad de Madrid)
+2026-09-25T15:48:37+00:00	C20	t2	fila TOTAL 198.127 203.953 2,9 y fila libertad sexual 1.578 1.724 9,3 extraidas; pagina marcada 'Datos pendientes de consolidar'
+2026-09-25T15:48:37+00:00	C21	t0	Moncloa: abandono educativo temprano 12,8% minimo historico; buscar tabla INE/Educacion (EPA variables educativas)
+2026-09-25T15:50:34+00:00	C21	t1	Eurostat API edat_lfse_14 (200): ES 2025=12,8 2024=13,0, M 15,9 F 9,5, serie desde 2015; falta la tabla del ministerio (EPA variables educativas); la pagina EPA del ministerio dio 'socket hang up' (error de red, no bloqueo)
+2026-09-25T15:51:54+00:00	C21	t2	ministerio: CSV aban_1_06 (200) 2025=12,80 2024=12,98; nota-resu.pdf (200, edicion 2026 con datos 2025) frases literales; Eurostat coincide. Hallazgo en el cuerpo: distancia UE calculada con anos distintos
+2026-09-25T15:51:54+00:00	C22	t0	El Confidencial Digital: brecha territorial abandono La Rioja 18,6% Navarra 6,1% (2026-04-30); en la nota-resu 2025 La Rioja=15,5 y Navarra=7,8: ver que dato usa el articulo
+2026-09-25T15:57:07+00:00	C22	t1	NO localizada la primaria del valor: 'tasa de abandono 1T2026 por CCAA (INE/EPA)' no existe como tabla publicada. INE: 69786 (ICV, anual 2004-2024), 71120/12543 (anual); EPA 1T2026 (op 293, 1039 tablas) sin tabla de abandono; ministerio: anual (aban_1_01). Tope 20 min casi agotado
+2026-09-25T15:57:07+00:00	C22	t2	sin extraccion posible: el valor 18,6/6,1/13,04 solo es derivable de microdatos EPA; no se persigue (plan: no buscar donde se movio la fuente)
+2026-09-25T15:57:07+00:00	C23	t0	Deia: verano 2026 el mas caluroso en 157 anos (AEMET); localizar balance estacional AEMET
+# correccion 2026-09-25: la nota de C22 t1 dice "tope 20 min casi agotado"; es falso, t1-t0 = 5,2 min. Error de percepcion del agente, no del reloj.
+2026-09-25T15:59:13+00:00	C23	t1	deia.eus 406 WAF Forbidden (fetcher y curl, no se reintenta); primaria AEMET nota 21/09/2026 (200) + PDF avance_climatico_nacional_verano_2026.pdf; buscar edicion anterior (verano 2025)
+2026-09-25T15:59:45+00:00	C23	t2	PDF avance verano 2026 (200) y verano 2025 (200, mismo patron de URL) extraidos: 24,5/+2,4 vs 24,2/+2,1; 157 anos = reconstruccion 1869 (Chazarra, Lorenzo y Nunez 2025); serie oficial 1961
+2026-09-25T15:59:45+00:00	C24	t0	Pressdigital: 60% de los espanoles priorizan turismo nacional y gastronomia local (2026-09-23); identificar el estudio/encuesta de origen
+2026-09-25T16:01:34+00:00	C24	t1	NO localizada: 'Informe de Tendencias de Viaje 2026' (Booking.com, Dia Mundial del Turismo) no esta en news.booking.com/es (indice, p.2, busqueda 'tendencias'); la nota 'Predicciones de Viaje 2026' (2025-12-04) no contiene 59/46/89/88/91; texto identico en Forbes, The Objective, Capital, elnoticierodigital sin enlace ni metodologia
+2026-09-25T16:01:34+00:00	C24	t2	sin extraccion posible; titular 60% vs cuerpo 59% anotado
+2026-09-25T16:01:34+00:00	C25	t0	Navarra Informacion: 55% de los espanoles elegira Espana como destino en 2026 (2026-05-11); identificar encuesta de origen
+2026-09-25T16:03:56+00:00	C25	t1	primaria: Europ Assistance Espana, Barometro de Vacaciones 2026 (PDF hubfs 200 pp, sha256 identico al Drive del articulo) + blog edicion 25 (2026-04-30); buscar el 55% en el PDF y la edicion 24 (2025)
+2026-09-25T16:05:35+00:00	C25	t2	55 = NEWQ2 'destino ideal 2026: viajar por mi propio pais' (base todos, pregunta NUEVA en 2026); P21BIS 'a donde planeas ir' Spain 69% (+3 vs 2025, base con destino); edicion 24 (2025) PDF no localizada: blog sin enlace, hubfs 404 x2, buscador sin PDF
+2026-09-25T16:05:35+00:00	C26	t0	Gaceta del Turismo: mas del 59% de los espanoles preve viajar en 2026 segun Avoris Travel Insights (2026-04); localizar el informe
+2026-09-25T16:07:00+00:00	C26	t1	primaria: avoristravel.com/informes (200, sin formulario) -> PDF #5 (AVORIS_5) en cloudfront; edicion anterior = #4 Brujula 2026 (dic 2025) en la misma pagina
+2026-09-25T16:07:25+00:00	C26	t2	PDF #5 (abril 2026, 58 pp, texto) p.10: 'SEGURO QUE SI viajare en 2026' 59,2% marzo 2026 vs 45,7% diciembre 2025; PDF #4 (enero 2026, 60 pp) p.10: 51,5/45,7/2,8. Sin ficha tecnica (muestra/campo) en ninguno
+2026-09-25T16:07:25+00:00	C27	t0	Radio Pichincha: 79% de los ecuatorianos califica negativa la gestion de Noboa segun CIEES (2026-09); localizar la encuesta y su ficha tecnica
+2026-09-25T16:09:41+00:00	C27	t1	NO LOCALIZADA la primaria: ciees.com.ec (200) no publica encuestas; 'Resultados Encuestas' es un enlace de WhatsApp; boletines/publicaciones/medios sin la medicion de julio 2026; redes (X/IG/TikTok) excluidas. radiopichincha.com 403 Cloudflare a fetcher y curl (DEC-018, sin reintento)
+2026-09-25T16:09:41+00:00	C27	t2	sin extraccion; ficha tecnica (820 casos, Quito y Guayaquil, +-4%, 25-26 jul) solo via prensa (expreso, eldiario)
+2026-09-25T16:09:41+00:00	C28	t0	GK: por primera vez Ecuador tiene cifras de la poblacion LGBTIQ+ (INEC, 2026-07-30); localizar tabulados ECV
+2026-09-25T16:11:38+00:00	C28	t1	gk.city 403 Cloudflare (fetcher y curl; DEC-018). Primaria: INEC ecuadorencifras.gob.ec/lgbti/ (200) con presentacion, boletin tecnico, tabulados, BDD CSV, metodologia RDS; antecedentes: censo 2022 (2,4%) y estudio de caso INEC 2013
+2026-09-25T16:12:07+00:00	C28	t2	boletin tecnico N-01-2026 (200): 6147 entrevistas, RDS, oct-nov 2025, y afirma que en 2023 el INEC difundio por primera vez el 2,4% del Censo 2022; estudio de caso INEC 2013 (2.805, nov 2012-ene 2013) localizado. Titular 'por primera vez' contradicho por la propia primaria
+2026-09-25T16:12:07+00:00	C29	t0	EsTenerife: Espana en el puesto 27 del Indice de Paz Global 2026 (IEP); localizar informe GPI 2026 y 2025
+2026-09-25T16:13:15+00:00	C29	t1	primaria: IEP/Vision of Humanity, GPI 2026 Report + A3 poster (ranking) y GPI 2025 Report, patron de URL wp-content/uploads/<ano>/06/ (ver codigos HTTP en el log de trabajo)
+2026-09-25T16:15:00+00:00	C29	t2	GPI 2026 (PDF 125 pp, 200): '27 Spain 1.654 UP 4' (mejora 4 puestos vs rank 2025 REVISADO, cambio de score +0,002); GPI 2025 (122 pp, 200): '25 Spain 1.578 =' publicado. La prensa resta 25->27 = 'cae 2' contra la edicion publicada; el IEP dice sube 4 contra la revisada
+2026-09-25T16:15:00+00:00	C30	t0	El Comercio: INEI empleo +4,7% Lima Metropolitana 1T2026 (2026-04-15); localizar informe tecnico INEI trimestre movil ene-feb-mar 2026
+2026-09-25T16:16:02+00:00	C30	t1	primaria candidata: INEI boletin 4906.pdf 'Situacion del Mercado Laboral en Lima Metropolitana' (ver codigo http en el trabajo) + nota gob.pe 1379039; coleccion 'Informe de Empleo' en gob.pe para la edicion anterior
+2026-09-25T16:17:23+00:00	C30	t2	Informe de Empleo N4 ene-feb-mar 2026 (PDF 79 pp via gob.pe/cdn, 200): ocupados 5.702.500 +4,7% (253.200); desocupados 418.900 (6,8% PEA) +9,6%; N4 ene-feb-mar 2025 (80 pp): ocupados 5.449.300. gob.pe devolvio 418 al fetcher y 200 a curl (UA por defecto)
+2026-09-25T16:17:23+00:00	C31	t0	Altavoz: 'Desempleo en Lima Metropolitana sube en 6,8%' (2026-04-15); misma primaria que C30 ya en mano; leer el articulo
+2026-09-25T16:17:43+00:00	C31	t1	articulo altavoz (200): 'la tasa de desempleo en Lima Metropolitana se incremento en 6,8%'; primaria ya en mano (Informe de Empleo N4 ene-feb-mar 2026 y 2025)
+2026-09-25T16:17:43+00:00	C31	t2	INEI p.19: tasa 6,8% (2025: 6,6%, +0,2 pp); desempleados 418.900, +9,6% (36.600). El 6,8% es el NIVEL de la tasa, no una subida
