@@ -1,0 +1,16 @@
+# Solo configuracion de herramientas. Las dependencias viven en requirements*.txt
+# para que la instalacion dentro del contenedor sea explicita y cacheable.
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "S", "N"]
+# S101: pytest usa assert por diseno.
+per-file-ignores = { "tests/*" = ["S101"] }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q -p no:cacheprovider"

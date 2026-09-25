@@ -1,0 +1,21 @@
+{
+  "app.titulo": "VERITAI",
+  "app.subtitulo": "Entorno de desarrollo local",
+  "app.aviso_puerta": "Puerta 1: sin PILOT_GO no hay endpoints de dominio. Solo se comprueba que el entorno levanta.",
+
+  "estado.titulo": "Estado de los servicios",
+  "estado.api": "API",
+  "estado.base_de_datos": "Base de datos",
+  "estado.entorno": "Entorno",
+  "estado.version": "Version",
+  "estado.comprobando": "comprobando...",
+  "estado.sin_respuesta": "sin respuesta",
+  "estado.conectada": "conectada",
+  "estado.no_disponible": "no disponible",
+
+  "acciones.recomprobar": "Volver a comprobar",
+  "acciones.idioma": "Idioma",
+
+  "plantilla.consultado_en": "Consultado a las {hora}",
+  "plantilla.servicios_activos": "{activos} de {total} servicios activos"
+}
