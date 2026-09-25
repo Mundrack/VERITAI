@@ -65,6 +65,7 @@ conocerlo antes de escribir el sistema, no después.
 | [`pilot-crudo-20.csv`](pilot-crudo-20.csv) | TAREA 2 — el lote (21: 18 en cubetas + 3 sin objetivo) | **entregado** 2026-09-25 |
 | [`pilot-crudo-trabajados.csv`](pilot-crudo-trabajados.csv) | TAREA 2 — los 31 admitidos y trabajados, excedentes incluidos | **entregado** 2026-09-25 |
 | [`cronometro.log`](cronometro.log), `evidencia/` | TAREA 2 — hitos por caso y respuestas crudas de API | **entregado** 2026-09-25 |
+| [`pilot-crudo-descubrimiento.csv`](pilot-crudo-descubrimiento.csv), `scripts/reconstruir_descubrimiento.py` | DEC-020 — qué consulta sacó cada candidato, reconstruido del transcript; base de la sección de amenazas a la validez | **entregado** 2026-09-25 |
 | `scripts/lote_crudo.py`, `scripts/validar_lote_crudo.py`, `scripts/cronometro.py` | TAREA 2 — fuente de los CSV, validación, cronómetro | **entregado** 2026-09-25 |
 | `PILOT-40.csv` | TAREA 3 — fusión de los 20 auditados y el lote crudo | **pendiente** |
 | `PILOT-FINDINGS.md` | TAREA 3 | **pendiente** |

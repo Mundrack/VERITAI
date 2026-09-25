@@ -396,3 +396,67 @@ transcript antes de la TAREA 3.
 - Reconstruir la vía de descubrimiento por candidato
 - Fusionar `feat/lote-crudo-20` y `feat/entorno-docker-local` a `main`
 - TAREA 3
+
+---
+
+## 2026-09-25 — Dos merges y la vía de descubrimiento reconstruida
+
+### Qué se hizo
+
+**Merges a `main` con `--no-ff`**, por orden de Mateo: `feat/lote-crudo-20`
+(84303a8) y `feat/entorno-docker-local` (26d42da). Sin conflictos. `main`
+tiene ahora el paquete, el registro vivo, las dos tareas del piloto y el
+entorno Docker. `CLAUDE.md` entra como propuesta (P-02).
+
+**Vía de descubrimiento reconstruida del transcript** (DEC-020), en
+`feat/via-descubrimiento`. `scripts/reconstruir_descubrimiento.py` lee el
+`.jsonl` de la sesión, ordena las 261 llamadas web y busca, para cada uno de
+los 38 candidatos, la primera cuyo resultado contiene su `post_url`. **38 de
+38 localizados**: 35 por la URL exacta y 3 por una pista del claim (cifra o
+nombre propio) en la consulta anterior a su propia criba; 23 consultas
+distintas. Las consultas se clasifican en cinco vías con reglas declaradas en
+el script; el resultado va a `pilot-crudo-descubrimiento.csv` y a dos
+columnas nuevas del screening y del lote.
+
+### Qué se encontró
+
+```
+via                      trabajados   conservadora
+busqueda_a_organismo         13        12/13   92,3%
+criba_negativa                6         5/6    83,3%
+busqueda_de_rankings          5         3/5    60,0%
+busqueda_de_encuestas         5         2/5    40,0%
+busqueda_por_tema             2         1/2    50,0%
+```
+
+- **Lo que Mateo sospechaba, con número:** las consultas que ya nombraban a
+  un organismo estadístico dieron 13 casos y 92,3%; las que no (ranking,
+  encuesta, tema) dieron 12 casos y 50%. El 74,2% es el promedio de esa
+  mezcla, y la mezcla la eligió el barrido y el buscador.
+- **Hallazgo que no se veía:** 6 de los 31 trabajados aparecieron en la
+  **búsqueda negativa de la criba de otro candidato**. Son cobertura hermana
+  del mismo dato (C03 de C02, C05 de C04, C08 de C07, C13 de C12, C17 de
+  C16, C31 de C30): no son sorteos independientes, heredan la primaria del
+  hermano, y el tamaño muestral efectivo es menor que 31. Entra en la
+  sección de amenazas a la validez de la TAREA 3.
+- **Un artefacto del método, corregido en el script:** para tres candidatos
+  originales (C16, C26, C27) la URL exacta aparece por primera vez en su
+  propia criba, porque el barrido los mostró en otro medio o solo en texto.
+  Se rastrean a esa consulta anterior por una pista del claim, y el `match`
+  lo deja escrito.
+
+### Qué se verificó
+
+- `validar_lote_crudo.py` sale 0 con las columnas nuevas; `lote_crudo.py`
+  compila con los 38 campos insertados
+- `reconstruir_descubrimiento.py --aplicar` es idempotente
+
+### Qué quedó pendiente
+
+- Commit de `feat/via-descubrimiento` tras revisar el diff; merge a `main`
+- Mateo: sus 5 casos
+- TAREA 3, plan mode primero, con las tres cuestiones que fijó Mateo:
+  alcance honesto (¿nivel 1 con el resto como limitación?), reencuadre del
+  objeto de estudio ante P-15 (incluida la opción "revisión de base" como
+  clase canónica), y si Perú 0/2 y el bloqueo son señal o muestra
+  insuficiente. Termina en `PILOT-DECISION.md` con GO o PIVOT

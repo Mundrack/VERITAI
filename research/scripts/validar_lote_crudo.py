@@ -76,7 +76,9 @@ CAMPOS_CRIBA = [
     "cid", "claim_text", "claim_date", "post_url", "post_url_tipo",
     "emisor", "emisor_tipo", "emisor_nivel", "pais", "tema",
     "criba_query_a", "criba_query_b", "criba_resultado", "criba_motivo",
-    "criba_url_verificacion", "case_id",
+    "criba_url_verificacion",
+    # via de descubrimiento, reconstruida del transcript (DEC-020, reconstruir_descubrimiento.py)
+    "descubrimiento_via", "descubrimiento_query", "case_id",
 ]
 
 CAMPOS_TRABAJO = [
@@ -95,7 +97,8 @@ CAMPOS_LOTE = (
     ["case_id", "cid", "collected_at", "claim_date", "claim_text",
      "emisor", "emisor_tipo", "emisor_nivel", "pais", "tema",
      "post_url", "post_url_tipo", "sin_verificacion_confirmada",
-     "criba_query_a", "criba_query_b"]
+     "criba_query_a", "criba_query_b",
+     "descubrimiento_via", "descubrimiento_query"]  # DEC-020: para desagregar por via
     + CAMPOS_TRABAJO
     + ["minutes_to_locate", "minutes_to_extract", "cronometrado_por", "etiquetado_por"]
 )

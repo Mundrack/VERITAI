@@ -82,6 +82,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="paro registrado agosto 2026 44.419 mas bajo desde 2007",
         criba_query_b="paro agosto 2026 44.419 bulo OR verificacion OR fact-check",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_a_organismo", descubrimiento_query="España paro registrado agosto 2026 cifras Ministerio de Trabajo",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K02", case_id="C02",
@@ -136,6 +137,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="paro registrado agosto 2026 44.419 mas bajo desde 2007",
         criba_query_b="paro agosto 2026 44.419 bulo OR verificacion OR fact-check",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_a_organismo", descubrimiento_query="España paro registrado agosto 2026 cifras Ministerio de Trabajo",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K35", case_id="C03",
@@ -196,6 +198,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="paro registrado agosto 2026 44.419 mas bajo desde 2007",
         criba_query_b="paro agosto 2026 44.419 bulo OR verificacion OR fact-check",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="criba_negativa", descubrimiento_query="paro agosto 2026 44.419 bulo OR verificación OR fact-check",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K03", case_id="C04",
@@ -250,6 +253,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="inflacion Ecuador agosto 2026 mas baja de la region",
         criba_query_b="inflacion Ecuador 1,12% agosto 2026 \"mas baja\" region verificacion OR bulo OR falso",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_a_organismo", descubrimiento_query="Ecuador inflación agosto 2026 INEC datos",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K36", case_id="C05",
@@ -298,6 +302,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="inflacion Ecuador agosto 2026 mas baja de la region",
         criba_query_b="inflacion Ecuador 1,12% agosto 2026 \"mas baja\" region verificacion OR bulo OR falso",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="criba_negativa", descubrimiento_query="inflación Ecuador 1,12% agosto 2026 \"más baja\" región verificación OR bulo OR falso",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K04", case_id="C06",
@@ -348,6 +353,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="Espana cae seis puestos libertad de prensa 2026 RSF",
         criba_query_b="Espana cae seis puestos clasificacion libertad de prensa 2026 verificacion OR bulo OR fact-check",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_de_rankings", descubrimiento_query="site:x.com España \"cae puestos\" ranking 2026",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K05", case_id="C07",
@@ -402,6 +408,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="Espana ranking FMI puesto 14 2026 Australia Mexico",
         criba_query_b="Espana cae ranking FMI puesto 14 potencias economicas verificacion OR bulo OR fact-check",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_de_rankings", descubrimiento_query="site:x.com España \"cae puestos\" ranking 2026",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K37", case_id="C08",
@@ -445,6 +452,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="Espana ranking FMI puesto 14 2026 Australia Mexico",
         criba_query_b="Espana cae ranking FMI puesto 14 potencias economicas verificacion OR bulo OR fact-check",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="criba_negativa", descubrimiento_query="España cae ranking FMI puesto 14 potencias económicas verificación OR bulo OR fact-check",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K06", case_id="C09",
@@ -492,6 +500,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="Espana cae 12 puestos ranking Internet conectividad 2026",
         criba_query_b="Espana cae 12 puestos ranking Internet lideres 2026 verificacion OR bulo",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_de_rankings", descubrimiento_query="site:x.com España \"cae puestos\" ranking 2026",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K07", case_id="C10",
@@ -541,6 +550,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="Espana puesto 44 ranking fiscal mudarse extranjero Malta Chipre",
         criba_query_b="Espana puesto 44 ranking fiscal expatriados Malta Chipre verificacion OR bulo",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_de_rankings", descubrimiento_query="site:x.com España \"cae puestos\" ranking 2026",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K09", case_id="C11",
@@ -600,6 +610,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="IPC agosto 2026 4,3% tasa mas alta tres anos",
         criba_query_b="IPC agosto 2026 4,3% inflacion Espana bulo OR verificacion OR fact-check",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_a_organismo", descubrimiento_query="IPC agosto 2026 INE inflación España dato definitivo",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K12", case_id="C12",
@@ -654,6 +665,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="desempleo Colombia julio 2026 8,1% DANE",
         criba_query_b="desempleo Colombia 8,1% julio 2026 verificacion OR bulo OR fact-check OR falso",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_a_organismo", descubrimiento_query="DANE Colombia tasa de desempleo julio 2026",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K38", case_id="C13",
@@ -711,6 +723,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="desempleo Colombia julio 2026 8,1% DANE",
         criba_query_b="desempleo Colombia 8,1% julio 2026 verificacion OR bulo OR fact-check OR falso",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="criba_negativa", descubrimiento_query="desempleo Colombia 8,1% julio 2026 verificación OR bulo OR fact-check OR falso",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K13a", case_id="C14",
@@ -762,6 +775,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="inflacion Mexico agosto 2026 3.26% Inegi",
         criba_query_b="inflacion Mexico agosto 2026 3.26 \"baja\" OR \"sube\" verificacion OR bulo OR falso",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_a_organismo", descubrimiento_query="INEGI inflación agosto 2026 México anual",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K13b", case_id="C15",
@@ -806,6 +820,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="inflacion Mexico agosto 2026 3.26% Inegi",
         criba_query_b="inflacion Mexico agosto 2026 3.26 \"baja\" OR \"sube\" verificacion OR bulo OR falso",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_a_organismo", descubrimiento_query="INEGI inflación agosto 2026 México anual",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K15", case_id="C16",
@@ -860,6 +875,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="paro juvenil 23,77% segundo trimestre 2026 Espana",
         criba_query_b="paro juvenil Espana 23,77% 2T 2026 verificacion OR bulo OR fact-check",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_a_organismo", descubrimiento_query="Eurostat desempleo juvenil España julio 2026",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K39", case_id="C17",
@@ -903,6 +919,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="paro juvenil 23,77% segundo trimestre 2026 Espana",
         criba_query_b="paro juvenil Espana 23,77% 2T 2026 verificacion OR bulo OR fact-check",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="criba_negativa", descubrimiento_query="paro juvenil España 23,77% 2T 2026 verificación OR bulo OR fact-check",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K16", case_id="C18",
@@ -957,6 +974,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="criminalidad Espana aumento 0,5% primer semestre 2026 delitos sexuales",
         criba_query_b="criminalidad sube 0,5% hasta junio 2026 Espana verificacion OR bulo OR fact-check",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_a_organismo", descubrimiento_query="balance de criminalidad primer semestre 2026 Ministerio del Interior España",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K17", case_id="C19",
@@ -1008,6 +1026,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="criminalidad Espana aumento 0,5% primer semestre 2026 delitos sexuales",
         criba_query_b="criminalidad sube 0,5% hasta junio 2026 Espana verificacion OR bulo OR fact-check",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_a_organismo", descubrimiento_query="balance de criminalidad primer semestre 2026 Ministerio del Interior España",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K40", case_id="C20",
@@ -1052,6 +1071,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="criminalidad Espana aumento 0,5% primer semestre 2026 delitos sexuales",
         criba_query_b="criminalidad sube 0,5% hasta junio 2026 Espana verificacion OR bulo OR fact-check",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_a_organismo", descubrimiento_query="balance de criminalidad primer semestre 2026 Ministerio del Interior España",  # reconstruido del transcript (DEC-020)
     ),
     # ---- rechazados de la tanda 1 ------------------------------------------------
     dict(
@@ -1066,6 +1086,7 @@ CANDIDATOS: list[dict] = [
         criba_resultado="rechazado",
         criba_motivo="verificacion_directa: Verificat explica que Espana no retrocedio 20 posiciones, cambio la metodologia del indice WPS entre 2017 y 2025",
         criba_url_verificacion="https://www.verificat.cat/es/que-dice-realmente-el-indice-de-seguridad-de-las-mujeres-espana-no-ha-retrocedido-20-posiciones-ha-cambiado-la-metodologia/",
+        descubrimiento_via="busqueda_de_rankings", descubrimiento_query="site:x.com España \"cae puestos\" ranking 2026",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K10",
@@ -1079,6 +1100,7 @@ CANDIDATOS: list[dict] = [
         criba_resultado="rechazado",
         criba_motivo="cobertura_explainer: Ecuador Chequea cubrio la publicacion ENEMDU de mayo 2026 ('El empleo adecuado se estanca pese a leve baja del desempleo'). Sin veredicto, pero el trabajo de ir a la primaria ya esta hecho por un verificador",
         criba_url_verificacion="https://ecuadorchequea.com/el-empleo-adecuado-se-estanca-en-ecuador-pese-a-leve-baja-del-desempleo/",
+        descubrimiento_via="busqueda_a_organismo", descubrimiento_query="INEC Ecuador desempleo segundo trimestre 2026 ENEMDU junio",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K14",
@@ -1092,6 +1114,7 @@ CANDIDATOS: list[dict] = [
         criba_resultado="rechazado",
         criba_motivo="verificacion_directa: Newtral 2025-10-30 verifica exactamente 'Espana lidera la tasa de paro juvenil de la UE' y la da por falsa (cuarto puesto en agosto de 2025)",
         criba_url_verificacion="https://www.newtral.es/paro-juvenil-ue-factcheck/20251030/",
+        descubrimiento_via="busqueda_a_organismo", descubrimiento_query="Eurostat desempleo juvenil España julio 2026",  # reconstruido del transcript (DEC-020)
     ),
     # ---- tanda 2: descubrimiento 2026-09-25, criba 2026-09-25 -------------------
     dict(
@@ -1149,6 +1172,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="abandono educativo temprano 12,8% minimo historico 2025",
         criba_query_b="abandono escolar 12,8% minimo historico 2026 verificacion OR bulo OR fact-check",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_por_tema", descubrimiento_query="abandono escolar temprano España 2026 dato",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K21", case_id="C22",
@@ -1201,6 +1225,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="abandono escolar brecha territorial La Rioja 18,6% Navarra 6,1%",
         criba_query_b="brecha territorial abandono escolar se agranda La Rioja Navarra 2026 verificacion OR bulo",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_por_tema", descubrimiento_query="abandono escolar temprano España 2026 dato",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K22", case_id="C23",
@@ -1259,6 +1284,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="verano 2026 mas calido 157 anos AEMET",
         criba_query_b="verano 2026 mas caluroso en 157 anos AEMET verificacion OR bulo OR fact-check",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_a_organismo", descubrimiento_query="AEMET balance verano 2026 temperatura más cálido desde",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K24", case_id="C24",
@@ -1306,6 +1332,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="60% espanoles priorizan turismo nacional gastronomia local 2026",
         criba_query_b="\"60% de los espanoles\" priorizan turismo nacional 2026 estudio verificacion OR bulo",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_de_encuestas", descubrimiento_query="\"según un estudio\" 2026 \"de los españoles\" por ciento",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K25", case_id="C25",
@@ -1362,6 +1389,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="55% de los espanoles elegira Espana destino vacaciones 2026",
         criba_query_b="\"55% de los espanoles\" elegira Espana destino vacaciones 2026 verificacion OR bulo",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_de_encuestas", descubrimiento_query="\"según un estudio\" 2026 \"de los españoles\" por ciento",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K26", case_id="C26",
@@ -1414,6 +1442,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="59% de los espanoles preve viajar 2026 Avoris Travel Insights",
         criba_query_b="Avoris Travel Insights 59% espanoles viajar 2026 46% diciembre verificacion OR bulo",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_de_encuestas", descubrimiento_query="\"según un estudio\" 2026 \"de los españoles\" por ciento",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K27", case_id="C27",
@@ -1460,6 +1489,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="79% ecuatorianos pesimismo CIEES agosto 2026",
         criba_query_b="encuesta CIEES 79% pesimismo Ecuador Quito Guayaquil 2026 verificacion OR bulo",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_de_encuestas", descubrimiento_query="encuesta 2026 revela ecuatorianos por ciento",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K28", case_id="C28",
@@ -1517,6 +1547,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="Ecuador cifras poblacion LGBTIQ 2,4% INEC primera vez",
         criba_query_b="INEC 2,4% poblacion LGBTIQ Ecuador encuesta condiciones de vida 2026 verificacion OR bulo",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_de_encuestas", descubrimiento_query="encuesta 2026 revela ecuatorianos por ciento",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K29", case_id="C29",
@@ -1569,6 +1600,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="Espana puesto 27 Indice de Paz Global 2026",
         criba_query_b="Espana puesto 27 Indice Paz Global 2026 dos posiciones verificacion OR bulo",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_de_rankings", descubrimiento_query="informe 2026 \"España ocupa el puesto\" ranking",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K32", case_id="C30",
@@ -1628,6 +1660,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="INEI empleo Lima Metropolitana 4,7% primer trimestre 2026",
         criba_query_b="empleo Lima Metropolitana crecio 4,7% primer trimestre 2026 INEI verificacion OR bulo",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_a_organismo", descubrimiento_query="INEI Perú empleo Lima Metropolitana trimestre 2026",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K41", case_id="C31",
@@ -1677,6 +1710,7 @@ CANDIDATOS: list[dict] = [
         criba_query_a="INEI empleo Lima Metropolitana 4,7% primer trimestre 2026",
         criba_query_b="empleo Lima Metropolitana crecio 4,7% primer trimestre 2026 INEI verificacion OR bulo",
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="criba_negativa", descubrimiento_query="empleo Lima Metropolitana creció 4,7% primer trimestre 2026 INEI verificación OR bulo",  # reconstruido del transcript (DEC-020)
     ),
     # ---- rechazados de la tanda 2 ------------------------------------------------
     dict(
@@ -1691,6 +1725,7 @@ CANDIDATOS: list[dict] = [
         criba_resultado="rechazado",
         criba_motivo="cobertura_explainer: Newtral (Saiz 2026-07-02, Sanchez 2026-09-04) y Verificat han verificado repetidamente la caida de llegadas a Canarias en 2026 contra los balances quincenales de Interior. La misma serie, con cortes anteriores",
         criba_url_verificacion="https://www.newtral.es/llegadas-irregulares-elma-saiz-factcheck/20260702/",
+        descubrimiento_via="busqueda_a_organismo", descubrimiento_query="llegadas irregulares Canarias 2026 agosto datos Ministerio del Interior",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K19",
@@ -1704,6 +1739,7 @@ CANDIDATOS: list[dict] = [
         criba_resultado="rechazado",
         criba_motivo="cobertura_explainer: Newtral (2026-07-31, +129% desde enero) y las recopilaciones de Maldita de bulos sobre Ceuta (2026-07-31 a 2026-09-18) cubren la misma serie de entradas por tierra de Interior",
         criba_url_verificacion="https://www.newtral.es/ceuta-regularizacion-migrantes/20260731/",
+        descubrimiento_via="busqueda_a_organismo", descubrimiento_query="llegadas irregulares Canarias 2026 agosto datos Ministerio del Interior",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K31",
@@ -1717,6 +1753,7 @@ CANDIDATOS: list[dict] = [
         criba_resultado="rechazado",
         criba_motivo="cobertura_explainer: Chequeado publico el mismo dia su explainer sobre la misma nota del INDEC, con los mismos numeros y la misma extrapolacion a poblacion total (15 millones)",
         criba_url_verificacion="https://chequeado.com/el-explicador/la-pobreza-aumento-al-323-en-el-primer-semestre-de-2026-y-alcanza-a-15-millones-de-personas-en-todo-el-pais/",
+        descubrimiento_via="busqueda_a_organismo", descubrimiento_query="INDEC Argentina pobreza primer semestre 2026",  # reconstruido del transcript (DEC-020)
     ),
     dict(
         cid="K23",
@@ -1730,5 +1767,6 @@ CANDIDATOS: list[dict] = [
         criba_resultado="rechazado",
         criba_motivo="duplicado: misma afirmacion, misma fecha y misma fuente primaria que K22. No es la regla dura; se excluye de la tasa de rechazo por verificacion",
         criba_url_verificacion="",
+        descubrimiento_via="busqueda_a_organismo", descubrimiento_query="AEMET balance verano 2026 temperatura más cálido desde",  # reconstruido del transcript (DEC-020)
     ),
 ]

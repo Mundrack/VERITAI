@@ -117,11 +117,40 @@ ES 16/21   EC 3/4   CO 2/2   MX 2/2   PE 0/2 (los dos, bloqueados por gob.pe)
 ```
 
 El 74,2% es un promedio de un 84% y un 58%. **El número no cambia; se declara
-con su límite.** La TAREA 3 lleva una sección de amenazas a la validez con
-esta desagregación y una más que hoy **no está registrada por candidato**: la
-vía de descubrimiento (qué consulta y qué barrido por nivel de emisor sacó cada
-uno). Hay que reconstruirla del transcript de la sesión antes de la TAREA 3;
-es un hueco del método, no un dato perdido.
+con su límite.**
+
+**Por vía de descubrimiento**, reconstruida del transcript de la sesión con
+`scripts/reconstruir_descubrimiento.py` (38 de 38 candidatos localizados: 35
+por la URL exacta en un resultado de búsqueda y 3 por una pista del claim
+—cifra o nombre propio— en la consulta anterior a su propia criba; 23
+consultas distintas; `pilot-crudo-descubrimiento.csv`):
+
+```
+via (que consulta saco al candidato)          38   trabajados   conservadora
+busqueda_a_organismo    nombra INE, INEC,     19       13        12/13   92,3%
+                        INEGI, DANE, INEI,
+                        Interior, AEMET...
+criba_negativa          aparecio en la         6        6         5/6    83,3%
+                        busqueda negativa
+                        de OTRO candidato
+busqueda_de_rankings    "cae puestos",         6        5         3/5    60,0%
+                        "ocupa el puesto"
+busqueda_de_encuestas   "segun un estudio",    5        5         2/5    40,0%
+                        "encuesta ... revela"
+busqueda_por_tema       sin nombrar emisor     2        2         1/2    50,0%
+```
+
+Dos cosas que esto demuestra y que la TAREA 3 tiene que escribir tal cual:
+
+1. **La mezcla la eligió el barrido y el buscador, no un muestreo.** Trece de
+   los 31 salieron de consultas que ya nombraban a un organismo estadístico;
+   ahí la recuperabilidad es 92,3%. Las consultas por ranking, encuesta o tema
+   —las que no llevan el emisor en la pregunta— dieron 12 casos y 50%.
+2. **Seis de los 31 no son sorteos independientes**: aparecieron en la
+   búsqueda negativa de la criba de otro candidato, es decir, son cobertura
+   hermana del mismo dato (C03 de C02, C05 de C04, C08 de C07, C13 de C12,
+   C17 de C16, C31 de C30). Cinco de los seis se recuperan, porque heredan la
+   primaria del hermano. El tamaño muestral efectivo es menor que 31.
 
 ### Los ocho no recuperados (conservadora)
 

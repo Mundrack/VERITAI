@@ -133,19 +133,20 @@ La arquitectura está preparada para migrar cambiando `DATABASE_URL`: ver
 ## Estado de git
 
 ```
-main                          paquete + registro vivo + TAREA 1 (fusionados --no-ff)
-│
+main                          paquete + registro vivo + TAREA 1 + TAREA 2 + entorno Docker
+│                             (todo fusionado con --no-ff; ultimo merge 26d42da)
 ├─ docs/registro-vivo         FUSIONADO
 ├─ feat/auditoria-piloto-20   FUSIONADO (a946ff9)
+├─ feat/lote-crudo-20         FUSIONADO (84303a8)
+├─ feat/entorno-docker-local  FUSIONADO (26d42da)
 │
-├─ feat/lote-crudo-20         TAREA 2 (cf2946d) + DEC-020..022            <- rama actual, SIN FUSIONAR
-│
-└─ feat/entorno-docker-local  entorno Docker completo (cf104f3)          <- SIN FUSIONAR
+└─ feat/via-descubrimiento    reconstruccion de la via de descubrimiento (DEC-020)   <- rama actual
 ```
 
-`ATENCIÓN` `main` contiene documentos que describen archivos que solo están en
-`feat/entorno-docker-local` (`migracion-supabase-base-de-datos/`, `CLAUDE.md`).
-Se arregla fusionando esa rama, que ya está revisada y verificada.
+Con el entorno Docker en `main`, los enlaces a
+`migracion-supabase-base-de-datos/` y a `CLAUDE.md` ya resuelven. `CLAUDE.md`
+sigue siendo **propuesta** (P-02); lleva las reglas de DEC-017, DEC-018,
+DEC-020 y DEC-021 añadidas como propuesta también.
 
 `ATENCIÓN` No hay remoto configurado y `gh` no está instalado: las ramas
 existen pero **no hay pull requests** (P-01). Nada se ha subido a ningún
@@ -170,9 +171,13 @@ En orden, y sin saltarse pasos:
 4. **Mateo:** los 5 casos manuales — **C04, C05, C11, C14, C22** (semilla
    `20260925`), solo con claim y URL, sin ver los resultados del agente. Están
    en `COLECCION-LOTE-CRUDO.md` §8. El agente no toca ese CSV.
-5. **Antes de la TAREA 3:** reconstruir la **vía de descubrimiento** de cada
-   candidato (qué consulta y qué barrido lo sacó) a partir del transcript de
-   la sesión; hoy no está registrada por candidato.
+5. ~~Reconstruir la vía de descubrimiento~~ **Hecha el 2026-09-25**: 38 de 38
+   candidatos localizados en el transcript (35 por URL exacta, 3 por pista;
+   23 consultas). `research/pilot-crudo-descubrimiento.csv` y columnas
+   `descubrimiento_via/query` en screening y lote. Resultado: consultas que
+   nombran un organismo → 92,3%; ranking/encuesta/tema → 50%; y **6 de 31
+   casos salieron de la búsqueda negativa de otro candidato** (no son
+   independientes). Ver `COLECCION-LOTE-CRUDO.md` §3.
 6. **TAREA 3 — decidir** → `research/PILOT-DECISION.md` con `PILOT_GO` o
    `PILOT_PIVOT`, sobre la conservadora del agente, con los 5 de Mateo al
    lado. **Obligatorio (DEC-020):** una sección de **amenazas a la validez**
@@ -180,7 +185,8 @@ En orden, y sin saltarse pasos:
    descubrimiento, y la recuperabilidad desagregada por esos grupos. Y
    **P-15 de frente**: la clase canónica sale 1 en 12 aquí y 1 en 20 en el
    piloto; dos lotes independientes dicen lo mismo, eso ya es señal.
-7. Fusionar `feat/entorno-docker-local` y llevar DEC-017, DEC-018 y DEC-021 a
-   `CLAUDE.md`.
+7. ~~Fusionar `feat/entorno-docker-local`~~ **Hecho (26d42da).** Las reglas de
+   DEC-017, DEC-018, DEC-020 y DEC-021 están en `CLAUDE.md` §3, como parte de
+   la propuesta que Mateo revisa (P-02).
 
 No se avanza a la Puerta 2 hasta entregar `PILOT-DECISION.md`.
