@@ -6,7 +6,7 @@ Lo que está sin resolver, quién lo decide, y qué bloquea.
 > con la decisión y la fecha. Saber qué se descartó vale tanto como saber qué se
 > eligió.
 
-**Última actualización:** 2026-09-24
+**Última actualización:** 2026-09-25
 
 ---
 
@@ -58,76 +58,60 @@ no hace falta rotarla. Pero solo es segura si hay RLS: sin políticas, esa clave
 equivale a un `SELECT *` sobre cada tabla expuesta. Es exactamente el motivo de
 DEC-004.
 
-### P-10 · ¿Extender el enum de abstención con `METRIC_AMBIGUOUS`?
-
-**Estado:** abierto · **Bloquea:** el esquema del lote crudo (TAREA 2) · **Origen:** AUDIT-PILOT-20 §6
-
-Cuatro de veinte casos (P02, P14, P15, P19) abstienen por la misma razón: el
-claim no dice qué métrica usa —*¿valor o volumen?, ¿euros o % PIB?, ¿tasa o
-número?, ¿"líder" en qué?*— y el veredicto cambia según cuál se elija. Hoy se
-mapea a `SOURCE_VERSION_AMBIGUOUS`, que significa otra cosa.
-
-R02 §11 dice que los motivos reales de abstención se descubren en el piloto.
-Este se ha descubierto. Uno de cada cinco casos.
-
-Otros tres candidatos con un caso cada uno: `SCOPE_NOT_RESOLVABLE` (P07),
-`GROUPS_NOT_HOMOGENEOUS` (P17), `SAMPLE_NOT_REPRESENTATIVE` (P18). Con n=1 no
-justifican entrar todavía.
-
-### P-11 · ¿Separar en `clase` el control negativo del "falso sin divergencia"?
-
-**Estado:** abierto · **Bloquea:** el esquema del lote crudo · **Origen:** AUDIT-PILOT-20 §7
-
-`clase = none` hoy significa dos cosas: "el claim está bien enmarcado" (P20,
-control negativo) y "el claim es falso por aritmética, no hay divergencia
-contextual que evaluar" (P15, P16). Para medir la tasa de falsos positivos hay
-que poder contarlas por separado.
-
 ### P-12 · ¿Reabrir las clases 6 y 7?
 
-**Estado:** abierto · **Bloquea:** la selección de clases tras el piloto · **Origen:** AUDIT-PILOT-20 §6
+**Estado:** abierto, **decisión aplazada al lote crudo** · **Origen:** AUDIT-PILOT-20 §6
 
-La adenda (D4) dejó las clases 6 (correlación/causalidad) y 7 (cifra real,
-marco falso) fuera de la tesis, registrándolas como `other_observed`, y dijo
-que *"la frecuencia con que aparezcan decidirá si vale la pena reabrir esa
-decisión"*. En el lote auditado, `other_observed` es **la categoría más
-frecuente: 5 de 20**. Y `1_ranking_vs_value`, la canónica, aparece una vez.
+`DECISIÓN DE MATEO (2026-09-25)` No se reabre todavía. La decisión se toma
+sobre el lote **crudo**, no sobre este, que está sesgado: reabrir clases con
+datos contaminados repite el error D1.
 
-No es una recomendación de reabrir. Es el dato que la adenda pidió. La decisión
-se toma con el lote crudo delante, no antes.
+**Desglose de los 5 `other_observed`**, que Mateo pidió antes de decidir nada.
+La cifra "5 de 20" mezclaba dos cosas:
 
-### P-13 · ¿Cómo se corrigen los errores del Excel?
+| Caso | Por qué es `other_observed` | En alcance |
+|---|---|---|
+| P08 | **DEC-013** (paper en inglés). Su clase real es `4_denominator` | no |
+| P09 | **DEC-013**. Su clase real es `3_absolute_vs_relative` + clase 6 | no |
+| P05 | Clase 7: cifra real atribuida al año equivocado | sí |
+| P07 | Clase 7: numerador y denominador de ámbitos geográficos distintos | sí |
+| P17 | **Ni 6 ni 7.** Agregación que oculta subgrupos en sentido contrario. El Excel ya lo marcaba como "futura ampliación de la taxonomía" | sí |
 
-**Estado:** abierto · **Bloquea:** los tests de regresión sobre los 20 · **Origen:** AUDIT-PILOT-20 §4
+El dato real: **3 de 18 en alcance** tienen una clase fuera de la tesis, y de
+esos, solo 2 son clase 7. P17 es un tipo nuevo. Con esto se compara el lote
+crudo cuando exista.
 
-Cuatro errores de transcripción confirmados: P03 (+5,03% → +5,30%), P11 (8.830
-es S.L., el total es 8.908), P12 (las cifras no están en la primaria citada) y
-P13 (Dato B sin fuente). El Excel es el dato de partida y esta auditoría no lo
-toca. Opciones:
+### P-15 · La clase canónica aparece 1 vez en 20
+
+**Estado:** abierto · **Bloquea:** el objeto de estudio · **Decide:** Mateo, tras la TAREA 2
+
+**Registrado antes de la TAREA 2, a propósito.**
+
+`1_ranking_vs_value` es la clase que da nombre al proyecto: *"España cae 16
+puestos"* con la puntuación intacta. Toda la tesis descansa en ella. En el lote
+auditado aparece **una vez** (P01), y ese único caso está en `NEEDS_REVIEW`
+porque el claim cubre cuatro índices y el corpus documenta uno.
 
 ```
-A   Una v2 del Excel con las correcciones, conservando la v1.
-B   El CSV normalizado pasa a ser la fuente de verdad y el Excel
-    queda como registro histórico.
+2_baseline_selection     4
+3_absolute_vs_relative   3
+1_ranking_vs_value       1     <- la canonica
 ```
 
-B es más limpio para los tests, porque el CSV ya tiene enums cerrados. A
-conserva el formato que Mateo conoce.
+**Si en el lote crudo sigue siendo marginal, hay que replantear el objeto de
+estudio.** Opciones que se abrirían entonces, sin decidir ninguna ahora:
 
-### P-14 · ¿Qué hace VERITAI con los publicadores que bloquean fetchers?
+```
+A   La tesis se reencuadra sobre la clase mas frecuente (baseline o
+    absoluto/relativo) y ranking_vs_value pasa a ser un caso ilustrativo.
+B   El lote crudo se recolecta con cuota minima de ranking_vs_value,
+    declarando el sesgo de muestreo.
+C   Se mantiene el objeto y se acepta que el corpus sera pequeno para
+    la clase principal, con la limitacion escrita.
+```
 
-**Estado:** abierto · **Bloquea:** el diseño del primer conector · **Origen:** AUDIT-PILOT-20 §5.1
-
-Newtral (8 de 8), `interior.gob.es` (Cloudflare), NEJM y ScienceDirect
-devuelven 403 a un agente y 200 a un navegador. R02 §6.3 ya pedía respetar
-`robots.txt` y los términos de uso. Hay que decidir la política antes de
-escribir el primer conector: ¿se registra como `PRIMARY_SOURCE_NOT_FOUND` con
-un subtipo, se intenta con un User-Agent identificable de VERITAI, o se
-descarta el emisor como candidato?
-
-Y para el lote crudo, registrar por separado `alcanzable_por_humano` y
-`alcanzable_por_agente`: son la razón concreta de que las dos recuperabilidades
-de DEC-014 sean números distintos.
+Que quede escrito ahora: si la TAREA 2 devuelve 0 o 1 casos de la clase
+canónica, no es un detalle del corpus, es una pregunta sobre la tesis.
 
 ### P-05 · Segundo anotador
 
@@ -169,6 +153,10 @@ No bloquea nada. Evita rehacer.
 | P-01 | Remoto de git y pull requests | **En pausa.** Se trabaja en local con ramas. Nada se sube a ningún servidor | 2026-09-24 |
 | P-03 | ¿Entran P08 y P09 en el alcance de tesis? | **Salen del corpus.** Se registran como `other_observed` y pasan a trabajo futuro. Ver DEC-013 | 2026-09-24 |
 | P-04 | ¿Quién cronometra `minutes_to_locate`? | **Claude**, declarado como recuperabilidad-por-agente. Mateo cronometra 5 casos a mano como contraste humano. Ver DEC-014 | 2026-09-24 |
+| P-10 | ¿`METRIC_AMBIGUOUS` entra en el enum de abstención? | **Sí.** 1 de cada 5 casos. El enum describe la realidad observada. Ver DEC-015 | 2026-09-25 |
+| P-11 | ¿Separar en `clase` el control negativo del "falso sin divergencia"? | **No.** `truth` y `context` son ejes independientes; con ambos poblados el FPR es medible. P15 corregido a `no_divergence_detected`. Ver DEC-016 | 2026-09-25 |
+| P-13 | ¿Cómo se corrigen los errores del Excel? | **El CSV es la fuente de verdad.** El Excel queda congelado con sus 4 errores: son un hallazgo. Ver DEC-017 | 2026-09-25 |
+| P-14 | ¿Qué hace VERITAI con los publicadores que bloquean fetchers? | **No se evaden protecciones anti-bot. Nunca.** API → dataset → HTML → bloqueado = no recuperable. Ver DEC-018 | 2026-09-25 |
 | — | Geografía del lote nuevo (D2 de la adenda) | **Opción A**: español en general, sin cuota geográfica. Cerrada en `00b` | antes del 2026-09-08 |
 | — | ¿Framework en el panel web? | **No.** TypeScript vanilla, por coherencia con el stack cerrado en R02 §5. Ver DEC-008 | 2026-09-08 |
 | — | ¿Alembic o runner propio? | **Runner propio**, por portabilidad a `supabase db push`. Ver DEC-006 | 2026-09-08 |

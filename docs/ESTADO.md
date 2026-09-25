@@ -22,14 +22,25 @@ PUERTA 4   evaluacion completa: metricas, ablacion,
            sondas contrafactuales
 ```
 
-**La métrica que decide, y es una sola:**
+**La métrica que decide, en dos partes** *(DEC-019, 2026-09-25)*:
 
 > Porcentaje de casos del lote **crudo** (20 nuevos, sin artículo de verificación
-> previo) donde se localiza la **edición anterior** del dato.
+> previo) donde se localiza la **edición anterior** del dato, medido dos veces:
+>
+> ```
+> recuperable-por-humano   una persona con navegador la localiza
+> recuperable-por-agente   el sistema la localiza SIN evadir nada   <- DECIDE
+> ```
 >
 > `>60%` verde → PILOT_GO · `30–60%` ámbar → alcance reducido · `<30%` rojo → PILOT_PIVOT
+> — aplicado a la del **agente**. La humana se reporta como contexto.
 
-**Valor actual de esa métrica: sin medir.** El lote crudo no existe todavía.
+**Valor actual: sin medir.** El lote crudo no existe todavía.
+
+Por qué dos: la auditoría del piloto encontró fuentes vivas para un navegador y
+cerradas para un agente. Medir solo la humana es lo que el Excel hacía, y por
+eso salió 20 de 20. Y no se evaden protecciones anti-bot: un bloqueo **es** el
+resultado (DEC-018).
 
 ---
 
@@ -136,19 +147,22 @@ Nada se ha subido a ningún servidor.
 
 En orden, y sin saltarse pasos:
 
-1. ~~TAREA 1 — auditar los 20 casos existentes~~ **Hecha el 2026-09-24.**
+1. ~~TAREA 1 — auditar los 20 casos existentes~~ **Hecha el 2026-09-24,
+   revisada y aprobada el 2026-09-25.**
    [`../research/AUDIT-PILOT-20.md`](../research/AUDIT-PILOT-20.md): 3
    verificados, 3 parciales, 12 NEEDS_REVIEW, 2 fuera de alcance. Cuatro
-   errores de transcripción en el Excel. Pendiente de revisar y fusionar.
-2. **Resolver las preguntas P-10 a P-14** que abrió la auditoría, sobre todo
-   P-10 (`METRIC_AMBIGUOUS`) y P-11 (`clase = none`), porque **cambian el
-   esquema del lote crudo** y hay que fijarlo antes de recolectar.
-3. **TAREA 2 — recolectar 20 casos crudos.** Es el trabajo caro y el que no se
-   puede falsear. Sin él no hay métrica. Con dos reglas nuevas que salen de la
-   auditoría: la URL primaria tiene que ser un dataset o tabla concreta, no una
-   portada; y se registra por separado `alcanzable_por_humano` y
-   `alcanzable_por_agente`.
+   errores de transcripción en el Excel, documentados como hallazgo. Commiteada
+   en `feat/auditoria-piloto-20`, **pendiente de fusionar**.
+2. ~~Resolver P-10 a P-14~~ **Resueltas el 2026-09-25** (DEC-015 a DEC-019).
+   Queda abierta P-12 (clases 6 y 7), aplazada al lote crudo, y se abre
+   **P-15: la clase canónica aparece 1 vez en 20.** Si en el lote crudo sigue
+   siendo marginal, hay que replantear el objeto de estudio.
+3. **TAREA 2 — recolectar 20 casos crudos.** Plan mode primero. Es el trabajo
+   caro y el que no se puede falsear. Sin él no hay métrica. Reglas fijadas por
+   la auditoría: URL primaria = dataset o tabla concreta, nunca una portada;
+   `alcanzable_por_humano` y `alcanzable_por_agente` por separado; orden API →
+   dataset → HTML → bloqueado = no recuperable; y sin evadir nada.
 4. **TAREA 3 — decidir** → `research/PILOT-DECISION.md` con `PILOT_GO` o
-   `PILOT_PIVOT`.
+   `PILOT_PIVOT`, sobre la métrica del **agente**.
 
 No se avanza a la Puerta 2 hasta entregar `PILOT-DECISION.md`.

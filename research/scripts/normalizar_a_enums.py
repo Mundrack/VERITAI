@@ -59,6 +59,9 @@ ABSTAIN = {
     "SOURCE_VERSION_AMBIGUOUS",
     "CONFLICTING_PRIMARY_VALUES",
     "EXTRACTION_FAILED",
+    "METRIC_AMBIGUOUS",   # DEC-015 (2026-09-25): el claim no dice que metrica usa.
+                          # 4 de 20 en el piloto. El enum describe la realidad
+                          # observada, no al reves.
     "",          # null explicito: no hay motivo de abstencion
 }
 
@@ -167,7 +170,7 @@ CASOS: list[Caso] = [
         "P02", True,
         truth="supported", context="divergence_detected",
         clase_primaria="2_baseline_selection", clases_secundarias="3_absolute_vs_relative",
-        recuperabilidad="A", formato="dataset", abstain_reason="SOURCE_VERSION_AMBIGUOUS",
+        recuperabilidad="A", formato="dataset", abstain_reason="METRIC_AMBIGUOUS",
         truth_original="supported (si se refiere a valor)",
         context_original="divergence_detected",
         clase_original="2 + 3 - baseline_selection / absolute_vs_relative",
@@ -177,17 +180,15 @@ CASOS: list[Caso] = [
             "truth: el parentesis '(si se refiere a valor)' sale de la etiqueta y va a notas. "
             "El valor monetario sube 8.948%, compatible con el 9.000% del claim. supported. | "
             "clase: primaria baseline (2025 fue base anormalmente baja), secundaria "
-            "absoluto/relativo. | abstain: la ambiguedad valor-vs-volumen no encaja en el enum; "
-            "se mapea al mas cercano y se registra como candidato."
+            "absoluto/relativo. | abstain: METRIC_AMBIGUOUS, valor-vs-volumen. Entro en el "
+            "enum por DEC-015 tras verse en 4 de 20 casos."
         ),
         audit_status="verificado",
         audit_notas=(
             "Recomputado: valor +8.948% (~8.945% en el Excel, entradas aproximadas). "
             "Volumen +6.711%, no 9.000%: el claim solo se sostiene si 'compra' significa "
             "euros. El Excel no da cifra para el volumen."
-        ),
-        abstain_candidato="METRIC_AMBIGUOUS",
-    ),
+        ),    ),
     Caso(
         "P03", True,
         truth="supported", context="divergence_detected",
@@ -448,7 +449,7 @@ CASOS: list[Caso] = [
         "P14", True,
         truth="mixed", context="divergence_detected",
         clase_primaria="3_absolute_vs_relative", clases_secundarias="1_ranking_vs_value",
-        recuperabilidad="A", formato="dataset", abstain_reason="SOURCE_VERSION_AMBIGUOUS",
+        recuperabilidad="A", formato="dataset", abstain_reason="METRIC_AMBIGUOUS",
         truth_original="supported approximately",
         context_original="divergence_detected",
         clase_original="1 + 3 - ranking_vs_value / absolute_vs_relative",
@@ -464,34 +465,32 @@ CASOS: list[Caso] = [
         audit_notas=(
             "Recomputado: euros x2,76 (4.282 -> 11.823 M EUR), % PIB x2,37 (7,5% -> 17,8%). "
             "Ambos coinciden con el Excel."
-        ),
-        abstain_candidato="METRIC_AMBIGUOUS",
-    ),
+        ),    ),
     Caso(
         "P15", True,
-        truth="contradicted", context="not_applicable",
+        truth="contradicted", context="no_divergence_detected",
         clase_primaria="none", clases_secundarias="1_ranking_vs_value",
-        recuperabilidad="A", formato="dataset", abstain_reason="SOURCE_VERSION_AMBIGUOUS",
+        recuperabilidad="A", formato="dataset", abstain_reason="METRIC_AMBIGUOUS",
         truth_original="contradicted",
         context_original="not_applicable / simple ranking contradiction",
         clase_original="1/3 - ranking/metric ambiguity",
         recuperabilidad_original="A",
         abstain_reason_original="METRIC_AMBIGUOUS si 'lider' no especifica porcentaje o volumen",
         justificacion=(
-            "context: el valor doble se resuelve a not_applicable. El claim es falso sin "
-            "necesidad de un test contextual, asi que no hay divergencia que evaluar. | "
-            "clase: si no hay divergencia contextual, no hay clase de divergencia. Se pone "
-            "'none' y se deja 1_ranking_vs_value en secundarias como la clase que se habria "
-            "aplicado. ATENCION: esto expone un hueco del enum, ver abstain_candidato."
+            "context: no_divergence_detected, corregido por DEC-016. La primera version de "
+            "esta auditoria puso not_applicable; Mateo lo revoco: los tests corren y no "
+            "encuentran divergencia contextual, el claim es simplemente falso. truth y "
+            "context son ejes independientes (R02 10): P15 = contradicted + no_divergence, "
+            "P20 = supported + no_divergence. Misma context, distinta truth, y con eso el "
+            "FPR es medible. | clase: 'none' porque no hay clase de divergencia; "
+            "1_ranking_vs_value en secundarias como la que se habria aplicado."
         ),
         audit_status="verificado",
         audit_notas=(
             "Recomputado: Espania 2,6% frente a 4,1% de la UE, 1,5 pp por debajo. Coherencia "
             "interna verificada: 565.400 personas al 2,6% implican 21,7 M de ocupados, que es "
             "el orden correcto para Espania. No lidera ni por tasa ni por volumen."
-        ),
-        abstain_candidato="METRIC_AMBIGUOUS",
-    ),
+        ),    ),
     Caso(
         "P16", True,
         truth="contradicted", context="no_divergence_detected",
@@ -568,7 +567,7 @@ CASOS: list[Caso] = [
         "P19", True,
         truth="mixed", context="divergence_detected",
         clase_primaria="3_absolute_vs_relative", clases_secundarias="",
-        recuperabilidad="B", formato="html", abstain_reason="SOURCE_VERSION_AMBIGUOUS",
+        recuperabilidad="B", formato="html", abstain_reason="METRIC_AMBIGUOUS",
         truth_original="supported under one metric",
         context_original="divergence_detected",
         clase_original="3 - absolute_vs_relative",
@@ -584,9 +583,7 @@ CASOS: list[Caso] = [
             "Recomputado: la tasa actual (24,5%) esta 7,6 pp por encima del minimo historico "
             "(16,9% en 3T2006). Por numero absoluto el claim puede ser cierto (407.900 "
             "jovenes parados, minimo en absoluto). Cierto o falso segun la metrica."
-        ),
-        abstain_candidato="METRIC_AMBIGUOUS",
-    ),
+        ),    ),
     Caso(
         "P20", True,
         truth="supported", context="no_divergence_detected",
@@ -981,6 +978,10 @@ def validar() -> list[str]:
             errores.append(f"{c.case_id}: abstain_reason '{c.abstain_reason}' fuera de enum")
         if c.audit_status not in AUDIT_STATUS:
             errores.append(f"{c.case_id}: audit_status '{c.audit_status}' fuera de enum")
+        # DEC-016: truth y context son ejes independientes y AMBOS van poblados en
+        # todas las filas. Sin los dos, la tasa de falsos positivos no se puede medir.
+        if not c.truth.strip() or not c.context.strip():
+            errores.append(f"{c.case_id}: truth o context vacio; son dos ejes obligatorios")
         if c.post_url_estado not in POST_URL_ESTADO:
             errores.append(f"{c.case_id}: post_url_estado '{c.post_url_estado}' fuera de enum")
         if c.primaria_url_estado not in PRIMARIA_URL_ESTADO:
@@ -1039,6 +1040,16 @@ def resumen() -> None:
     originales_truth = {c.truth_original for c in CASOS}
     print(f"\n  valores distintos de truth: {len(originales_truth)} antes -> "
           f"{len(cuenta('truth'))} despues")
+
+    # DEC-016: la tabla cruzada de los dos ejes. Es lo que hace medible el FPR:
+    # la fila context = no_divergence_detected contiene los casos donde el
+    # sistema NO debe alertar, y truth dice por que (claim correcto o claim falso).
+    print("\n--- truth x context (DEC-016) ---")
+    cruce: dict[tuple[str, str], list[str]] = {}
+    for c in CASOS:
+        cruce.setdefault((c.truth, c.context), []).append(c.case_id)
+    for (t, x), ids in sorted(cruce.items()):
+        print(f"  {t:13} x {x:24} {len(ids):2}   {' '.join(ids)}")
 
     candidatos: dict[str, list[str]] = {}
     for c in CASOS:

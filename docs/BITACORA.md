@@ -233,3 +233,47 @@ fuera_de_alcance  2    P08 P09 (DEC-013)
 - Cinco preguntas nuevas para Mateo, P-10 a P-14 en `PREGUNTAS-ABIERTAS.md`
 - Rama sin commitear hasta revisar el diff
 - TAREA 2 sin empezar
+
+---
+
+## 2026-09-25 — Revisión de la TAREA 1 y cinco decisiones
+
+### Qué se hizo
+
+**Commit de la auditoría** en `feat/auditoria-piloto-20`, aprobada por Mateo
+tal cual: *"El trabajo está bien hecho"*.
+
+**Cinco decisiones de Mateo aplicadas**, DEC-015 a DEC-019:
+
+| | Decisión | Dónde cambió |
+|---|---|---|
+| P-10 | `METRIC_AMBIGUOUS` entra en el enum | `GLOSARIO.md`, script, CSV (4 filas) |
+| P-11 | Sin clase nueva: `truth` y `context` son ejes | **P15 corregido** a `no_divergence_detected`; validación y tabla cruzada en el script |
+| P-12 | Aplazada al lote crudo; desglose entregado | `PREGUNTAS-ABIERTAS.md` |
+| P-13 | El CSV es la fuente de verdad; el Excel, congelado | `research/README.md` |
+| P-14 | No se evaden protecciones anti-bot | `GLOSARIO.md`, `research/README.md` |
+| — | Métrica de puerta en dos; decide la del agente | `ESTADO.md`, `GLOSARIO.md`, `research/README.md` |
+| — | **P-15 abierta**: `1_ranking_vs_value` aparece 1 vez en 20 | `PREGUNTAS-ABIERTAS.md` |
+
+Addendum en `AUDIT-PILOT-20.md` con la tabla cruzada `truth × context`.
+
+### Corrección de encuadre
+
+El informe decía "5 de 20 son `other_observed`". Dos de esos (P08, P09) lo son
+por DEC-013, no por su clase. El dato en alcance es **3 de 18**, y uno (P17)
+no es ni clase 6 ni 7: es agregación con subgrupos en sentido contrario, un
+tipo nuevo.
+
+### Qué se verificó
+
+- El script de normalización vuelve a salir 0 con el enum ampliado, la
+  corrección de P15 y la validación nueva de los dos ejes
+- Los conteos del addendum salen de la tabla cruzada que imprime el script
+
+### Qué quedó pendiente
+
+- Fusionar `feat/auditoria-piloto-20` a `main` (con `--no-ff`, como la anterior)
+- `feat/entorno-docker-local` sigue sin fusionar
+- `CLAUDE.md` vive en la rama de Docker: cuando se fusione, hay que llevarle
+  DEC-017 (CSV fuente de verdad) y DEC-018 (anti-bot) a las reglas permanentes
+- TAREA 2, plan mode primero

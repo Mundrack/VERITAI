@@ -315,22 +315,24 @@ entrada del sistema no es reproducible.
 ```
 Controles negativos            1 de 20   (P20)
 divergence_detected           16 de 20
-no_divergence_detected         3 de 20   (P13, P16, P20)
+no_divergence_detected         4 de 20   (P13, P15, P16, P20)
 Recuperabilidad D              0 de 20
 Abstención real                0 de 20
 ```
 
 Con un negativo, la tasa de falsos positivos no se puede medir. Un matiz: tras
-normalizar, **P13 pasa a `no_divergence_detected`** (§7), así que hay tres
-casos donde el sistema no debe alertar, aunque solo P20 es un control negativo
-puro.
+normalizar, **P13 pasa a `no_divergence_detected`** (§7) y P15 también (DEC-016,
+ver addendum), así que hay cuatro casos donde el sistema no debe alertar. Solo
+P20 es un control negativo puro (`truth = supported`); los otros tres son claims
+falsos sin divergencia contextual (`truth = contradicted`). La distinción vive en
+el eje `truth`, no en una clase nueva.
 
 ### D4 — Vocabulario
 
 | Columna | Antes | Después |
 |---|---|---|
 | `truth` | **12** valores distintos | 3: `contradicted` 9, `supported` 6, `mixed` 5 |
-| `context` | valores dobles (`not_applicable / simple ranking contradiction`) | 3: `divergence_detected` 16, `no_divergence_detected` 3, `not_applicable` 1 |
+| `context` | valores dobles (`not_applicable / simple ranking contradiction`) | 2: `divergence_detected` 16, `no_divergence_detected` 4 |
 | `clase` | compuestos: `2 + 3`, `4/7`, `1/3`, `CONTROL NEGATIVO` | primaria + secundarias separadas |
 | `recuperabilidad` | 8 filas `A/B`, 1 `B/C` | `B` 11, `A` 8, `C` 1 |
 
@@ -440,7 +442,7 @@ dos fases, está en el CSV.
 | P12 | sí | supported | divergence | 4_denominator | B | **PDF, cifras ≠** | NEEDS_REVIEW | Primaria da 22.414 / 12.432; nota `¥` explica el caso |
 | P13 | sí | contradicted | **no_divergence** | 5_methodology | A | soporte parcial | NEEDS_REVIEW | Etiqueta corregida; Dato B sin fuente |
 | P14 | sí | mixed | divergence | 3_abs_vs_rel | A | tablas + CSV | parcial | Cifras en la descarga |
-| P15 | sí | contradicted | not_applicable | none | A | **API verificada** | **verificado** | ES 2,6 / EU 4,1 |
+| P15 | sí | contradicted | no_divergence | none | A | **API verificada** | **verificado** | ES 2,6 / EU 4,1 |
 | P16 | sí | contradicted | no_divergence | none | A | **API verificada** | **verificado** | 2.645,2 / 1.192,7 |
 | P17 | sí | mixed | divergence | other_observed | B | mapa + dataset | parcial | Cifras en el fichero mensual |
 | P18 | sí | contradicted | divergence | 4_denominator | B | Cloudflare | NEEDS_REVIEW | Desafío JS |
@@ -500,3 +502,35 @@ python research/scripts/normalizar_a_enums.py      # regenera el CSV, sale 1 si 
 Requiere `openpyxl` (lectura del Excel) y `pypdf` (los dos PDFs de la Fase B).
 Los PDFs descargados no se versionan: son artefactos de organismos públicos y
 se recuperan con las URLs del CSV.
+
+---
+
+## Addendum 2026-09-25 — Revisión de Mateo
+
+El informe de arriba es lo que la auditoría encontró el 2026-09-24. Esto es lo
+que Mateo decidió al revisarlo, y lo que cambió en el CSV como consecuencia.
+Las decisiones completas están en [`../docs/DECISIONES.md`](../docs/DECISIONES.md).
+
+| Pregunta | Decisión | Efecto en el CSV |
+|---|---|---|
+| P-10 | **`METRIC_AMBIGUOUS` entra en el enum** (DEC-015) | P02, P14, P15, P19: `abstain_reason` pasa de `SOURCE_VERSION_AMBIGUOUS` a `METRIC_AMBIGUOUS`. Dejan de ser "candidatos" en §6 |
+| P-11 | **No se añade clase.** `truth` y `context` son ejes independientes (DEC-016) | **P15: `context` corregido de `not_applicable` a `no_divergence_detected`.** La propuesta de §7 de "separar" queda revocada: la separación ya existe en `truth` |
+| P-12 | **Aplazada al lote crudo.** Desglose de los 5 `other_observed` en P-12 | Sin cambio. Nota: "5 de 20" mezclaba DEC-013 con taxonomía; el dato en alcance es 3 de 18 |
+| P-13 | **El CSV es la fuente de verdad; el Excel queda congelado** con sus 4 errores (DEC-017) | Sin cambio. Los errores de §4 se quedan como hallazgo |
+| P-14 | **No se evaden protecciones anti-bot. Nunca** (DEC-018) | Sin cambio en datos. El `curl -I` con user-agent de Chrome de §5.1 fue diagnóstico y no se repite: un 403 al agente identificado ya es la respuesta |
+| — | **La métrica de la puerta se parte en dos**; decide la del agente (DEC-019) | Sin cambio aquí. Aplica al lote crudo |
+| — | **P-15 abierta:** la clase canónica aparece 1 vez en 20 | Registrado antes de la TAREA 2 |
+
+Tabla cruzada `truth × context` tras la corrección, que es lo que hace medible
+la tasa de falsos positivos:
+
+```
+contradicted  x  divergence_detected        6    P04 P05 P06 P07 P08 P18
+contradicted  x  no_divergence_detected     3    P13 P15 P16
+supported     x  divergence_detected        5    P02 P03 P10 P11 P12     <- "verdadero pero"
+supported     x  no_divergence_detected     1    P20                     <- control negativo
+mixed         x  divergence_detected        5    P01 P09 P14 P17 P19
+```
+
+La fila `no_divergence_detected` (4 casos) es donde el sistema no debe alertar.
+`truth` dice por qué en cada uno.

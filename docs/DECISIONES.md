@@ -315,3 +315,167 @@ sobre casos concretos.
 
 **Lo que sigue estando prohibido:** medir el tiempo sin decir quién midió. Cada
 fila del piloto lleva marcado quién cronometró.
+
+---
+
+## DEC-015 · `METRIC_AMBIGUOUS` entra en el enum de abstención
+
+**Fecha:** 2026-09-25 · **Estado:** vigente · **Decide:** Mateo (cierra P-10)
+
+**Contexto.** La auditoría de los 20 casos encontró que cuatro (P02, P14, P15,
+P19) abstienen por la misma razón: el claim no dice qué métrica usa —*¿valor o
+volumen?, ¿euros o % PIB?, ¿tasa o número?, ¿"líder" en qué?*— y el veredicto
+cambia según cuál se elija. Se estaba mapeando a `SOURCE_VERSION_AMBIGUOUS`, que
+significa otra cosa.
+
+**Decisión.** `METRIC_AMBIGUOUS` entra en el enum de `abstain_reason`.
+
+**Por qué.** Uno de cada cinco casos. R02 §11 dice que los motivos reales de
+abstención se descubren en el piloto, no se inventan después. *El enum describe
+la realidad observada, no al revés.*
+
+**Alternativa descartada.** Seguir mapeando al valor más cercano. Pierde el
+significado y, peor, esconde un motivo de abstención frecuente bajo uno raro.
+
+**Lo que no entra.** `SCOPE_NOT_RESOLVABLE` (P07), `GROUPS_NOT_HOMOGENEOUS`
+(P17) y `SAMPLE_NOT_REPRESENTATIVE` (P18) tienen un caso cada uno. Con n=1 no
+se extiende un enum.
+
+---
+
+## DEC-016 · No se añade una clase: `truth` y `context` son dos ejes
+
+**Fecha:** 2026-09-25 · **Estado:** vigente · **Decide:** Mateo (cierra P-11)
+
+**Contexto.** La auditoría propuso separar en `clase` el control negativo (P20)
+del "claim falso sin divergencia contextual" (P15, P16), porque ambos caían en
+`none`.
+
+**Decisión.** No se añade ninguna clase. El problema era otro: `truth` y
+`context` no se estaban tratando como ejes independientes, que es lo que manda
+R02 §10.
+
+```
+P15  truth: contradicted   context: no_divergence_detected
+P16  truth: contradicted   context: no_divergence_detected
+P20  truth: supported      context: no_divergence_detected
+```
+
+Misma etiqueta de `context`, distinta de `truth`. Con los dos ejes poblados en
+todas las filas, la tasa de falsos positivos ya es medible: la fila
+`no_divergence_detected` son los casos donde el sistema no debe alertar, y
+`truth` dice por qué.
+
+**Corrección aplicada.** P15 tenía `context = not_applicable`. Pasa a
+`no_divergence_detected`: los tests corren y no encuentran divergencia; el
+claim es simplemente falso. `not_applicable` queda para claims sin componente
+estadística.
+
+**Alternativa descartada.** Una clase `false_no_divergence`. Duplicaba en un
+eje información que ya vive en otro.
+
+**Consecuencia.** El script de normalización valida que ninguna fila tenga
+`truth` o `context` vacíos, e imprime la tabla cruzada.
+
+---
+
+## DEC-017 · El CSV es la fuente de verdad; el Excel queda congelado
+
+**Fecha:** 2026-09-25 · **Estado:** vigente · **Decide:** Mateo (cierra P-13)
+
+**Contexto.** La auditoría confirmó cuatro errores de transcripción en el Excel:
+P03 (+5,03% → +5,30%), P11 (8.830 es S.L., el total es 8.908), P12 (cifras que
+no están en la primaria citada) y P13 (Dato B sin fuente).
+
+**Decisión.** `research/pilot-20-normalizado.csv` es la fuente de verdad para
+los 20 casos. `05-VERITAI-PILOTO-20-CASOS.xlsx` **queda congelado tal cual, con
+sus cuatro errores intactos**.
+
+**Por qué.** El Excel es el dato de partida del piloto. Corregirlo borra el
+registro de dónde salimos: los cuatro errores **son un hallazgo**, y un hallazgo
+se documenta, no se limpia. Están en `AUDIT-PILOT-20.md` §4.
+
+**Alternativa descartada.** Una v2 del Excel. Conservaba el formato conocido
+pero abría la puerta a "arreglar" el punto de partida cada vez que se
+encontrara algo.
+
+**Consecuencia.** Los tests de regresión sobre los 20 leen el CSV. Cualquier
+corrección futura es una fila nueva en el CSV con su justificación, nunca una
+edición del Excel.
+
+---
+
+## DEC-018 · No se evaden protecciones anti-bot. Nunca.
+
+**Fecha:** 2026-09-25 · **Estado:** vigente · **Decide:** Mateo (cierra P-14)
+
+**Contexto.** La Fase B encontró publicadores vivos para un navegador y cerrados
+para un agente: Newtral (403 en 8 de 8), `interior.gob.es` (desafío de
+Cloudflare), NEJM y ScienceDirect (403).
+
+**Decisión.** Regla dura:
+
+```
+NO user-agents falsos
+NO saltarse Cloudflare ni desafios JS
+NO scraping contra quien bloquea explicitamente
+
+Orden de recuperacion:
+  1. API oficial
+  2. dataset descargable
+  3. HTML
+  4. si bloquea  ->  se marca NO recuperable. Y punto.
+```
+
+**Por qué.** *Eso es el resultado, no un problema a rodear.* Un publicador que
+bloquea agentes está diciendo algo, y VERITAI no negocia con eso. Coincide con
+R02 §6.3: respetar `robots.txt` y los términos de uso, identificar el agente.
+VERITAI se presenta con su propio user-agent identificable; si con ese le
+cierran la puerta, la puerta está cerrada.
+
+**Incluye el diagnóstico.** En la Fase B se hizo un `curl -I` con user-agent de
+Chrome para caracterizar los 403 de Newtral. No se descargó contenido con él,
+pero bajo esta regla ni eso se repite: un 403 al agente identificado ya es la
+respuesta.
+
+**Alternativa descartada.** Reintentar con un user-agent genérico "de
+navegador". Es exactamente el user-agent falso que la regla prohíbe.
+
+**Consecuencia.** En el enum de abstención, `PRIMARY_SOURCE_NOT_FOUND` lleva el
+subtipo `bloqueado_por_publicador`. En el lote crudo, un bloqueo cuenta como
+**no recuperable-por-agente**, y ese dato entra en la métrica de la puerta.
+
+---
+
+## DEC-019 · La métrica de la puerta se parte en dos; decide la del agente
+
+**Fecha:** 2026-09-25 · **Estado:** vigente · **Decide:** Mateo
+
+**Contexto.** La métrica de la Puerta 1 era una: porcentaje del lote crudo donde
+se localiza la edición anterior. La auditoría mostró que "localizable" tiene dos
+significados que dan números distintos: una persona con navegador pasa por
+donde un agente no (bloqueos, desafíos JS, tablas que solo cargan por script).
+
+**Decisión.** Se miden y **se reportan ambas**:
+
+```
+recuperable-por-humano   una persona localiza la edicion anterior
+recuperable-por-agente   el sistema la localiza sin evadir nada (DEC-018)
+```
+
+**La segunda es la que decide** la Puerta 1, con los mismos umbrales
+(`>60%` GO · `30–60%` ámbar · `<30%` PIVOT). La primera es contexto y
+limitación de validez externa.
+
+**Por qué.** El sistema es un agente. Medir solo la recuperabilidad humana
+sobreestima lo que VERITAI puede hacer — es lo que el Excel medía, y por eso
+salió 20 de 20. Y las dos juntas son un resultado en sí mismo: cuantifican la
+brecha entre lo que existe y lo que un sistema puede usar.
+
+**Cómo se mide la humana.** Los 5 casos que Mateo cronometra a mano (DEC-014)
+son la referencia; el resto del lote se marca `alcanzable_por_humano` cuando el
+agente ve que la página existe aunque no pueda leerla (200 a un navegador, o
+un 403 que no es un 404).
+
+**Alternativa descartada.** Una sola métrica. Cualquiera de las dos sola
+cuenta la mitad de la historia.
