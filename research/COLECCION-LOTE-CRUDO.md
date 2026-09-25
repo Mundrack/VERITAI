@@ -222,13 +222,14 @@ anotador debería mirar primero.
 
 ```
 other_observed           5    C03 C05 C08 C10 C13
-2_baseline_selection     3    C02 C15 C29
+2_baseline_selection     2    C02 C15                (2a)
+2b_base_revisada         1    C29                    (2b; hasta DEC-026 iba como 2_baseline + 5_methodology)
 3_absolute_vs_relative   2    C19 C31
-1_ranking_vs_value       1    C07                    <- la canonica
+1_ranking_vs_value       1    C07                    <- la que daba nombre al proyecto; ilustrativa desde DEC-026
 4_denominator            1    C25
 
 secundarias: C03 -> 2_baseline · C08 -> 1_ranking · C19 -> 4_denominator
-             C29 -> 5_methodology_change
+             C29 -> 2_baseline_selection
 ```
 
 **La clase canónica aparece 1 vez en 12** (más una secundaria). En el piloto

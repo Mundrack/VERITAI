@@ -176,17 +176,23 @@ La clase canónica es marginal en dos lotes independientes. Ya no es ruido.
 ```
 clase primaria en las 28 divergencias (16 auditado + 12 crudo)
   other_observed            10   35,7%     (5 + 5)
-  2_baseline_selection       7   25,0%     (4 + 3)
+  2_baseline_selection       6   21,4%     (4 + 2)    2a, tras DEC-026
   3_absolute_vs_relative     5   17,9%     (3 + 2)
   4_denominator              3   10,7%     (2 + 1)
-  1_ranking_vs_value         2    7,1%     (1 + 1)    <- la canonica
-  5_methodology_change       1    3,6%     (1 + 0)
+  1_ranking_vs_value         2    7,1%     (1 + 1)    <- la que daba nombre al proyecto
+  5_methodology_change       1    3,6%     (1 + 0)    2c
+  2b_base_revisada           1    3,6%     (0 + 1)    C29, codigo nuevo (DEC-026)
 
 familias
-  comparacion de base   (2 + 5)              8
+  comparacion de base   (2a + 2b + 2c)       8
   magnitud mal leida    (3 + 4)              8
-  + revisiones de base dentro de other/baseline: C18, C29
+  + revision de base latente en la primaria de C18 (control negativo)
 ```
+
+`NOTA` La tabla original de este documento contaba C29 como
+`2_baseline_selection` con `5_methodology_change` secundaria; DEC-026 le da su
+código propio, `2b_base_revisada`. Es el único caso reetiquetado y la familia
+no cambia de tamaño.
 
 Cinco opciones de reencuadre. Ninguna se decide aquí.
 
@@ -204,6 +210,17 @@ que a la vez es frecuente y depende de la edición anterior, que es lo que el
 piloto acaba de demostrar que se puede recuperar. C es la opción más
 interesante intelectualmente, y por eso mismo conviene tenerla como subtipo
 de B y no como apuesta única con dos casos.
+
+`CERRADA (DEC-026, 2026-09-25)` Mateo aprobó E / B / A, con C como subtipo
+2b, tras una pasada de coherencia con nueve ajustes. **El cotejo de caso
+canónico** —cinco requisitos idénticos sobre C29, C21 y C18: primaria
+trazable, edición actual, edición anterior, revisión de base demostrable,
+reproducible— no lo pasó ninguno con un claim divergente: C29 tiene la
+divergencia en el claim pero la revisión se infiere del indicador CHANGE del
+IEP, que no imprime los valores 2025 revisados; C18 demuestra la revisión con
+dos cifras literales del mismo emisor pero su claim relaya bien; C21 es 2a. No
+se declara canónico: la tesis presenta el **par C18 + C29** y el canónico sale
+de la Puerta 2. Encuadre completo en `docs/TESIS-ENCUADRE.md`.
 
 ---
 

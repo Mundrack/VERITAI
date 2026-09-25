@@ -14,9 +14,11 @@ PUERTA 1   research/PILOT-DECISION.md con PILOT_GO        SUPERADA 2026-09-25
            TAREA 1 · TAREA 2 · TAREA 3 hechas                  (DEC-023, alcance nivel 1
                                                                por DEC-024)
 
-PUERTA 2   prototipo end-to-end, UNA clase y UN emisor,      <-- AQUI, sin arrancar:
-           10 casos con trazabilidad completa                 BLOQUEADA hasta que Mateo
-           regla ya fijada: nada del piloto entra en el       cierre P-15 (la clase)
+PUERTA 2   prototipo end-to-end, UNA familia y UN emisor,    <-- AQUI, sin arrancar:
+           10 casos con trazabilidad completa                 Mateo revisa P-12
+           familia: comparacion de base (DEC-026)             (other_observed, 10 de 28)
+           emisor: INE (DEC-024)                              antes de abrirla
+           regla ya fijada: nada del piloto entra en el
            conjunto de evaluacion (DEC-025)
 
 PUERTA 3   corpus completo anotado + arnes de evaluacion
@@ -144,10 +146,11 @@ main                          paquete + registro vivo + TAREA 1 + TAREA 2 + ento
 │
 ├─ feat/via-descubrimiento    FUSIONADO (e6768e4)
 │
-└─ feat/tarea-3-decision      FUSIONADA: TAREA 3 + DEC-023, DEC-024
+├─ feat/tarea-3-decision      FUSIONADA: TAREA 3 + DEC-023, DEC-024
+│
+└─ docs/p15-encuadre          DEC-025, DEC-026, TESIS-ENCUADRE.md, taxonomia 2b   <- rama actual
 
-Sin rama de trabajo abierta: la siguiente (Puerta 2) se crea cuando Mateo
-cierre P-15.
+La rama de la Puerta 2 se crea cuando Mateo termine de revisar P-12.
 ```
 
 Con el entorno Docker en `main`, los enlaces a
@@ -196,16 +199,21 @@ En orden, y sin saltarse pasos:
    catálogo de fallos.
 7. ~~Ratificar `PILOT_GO`; decidir P-19~~ **Hecho el 2026-09-25**: GO
    ratificado (DEC-023); alcance de nivel 1 con INE, FMI e Interior (DEC-024).
-8. **Mateo cierra P-15.** Va con la recomendación (E objeto, B primera clase,
-   A ilustrativa, C subtipo de B) y pidió ver antes qué implica para el
-   título y la hipótesis: la redacción propuesta está en
-   [`PREGUNTAS-ABIERTAS.md`](PREGUNTAS-ABIERTAS.md), P-15. **Hasta que la
-   apruebe o corrija, no se toca nada de la Puerta 2.**
-9. **P-20:** los 5 casos manuales de Mateo, en tabla, cierran FINDINGS §7. Si
-   contradicen la lectura del agente, la decisión se reabre.
-10. **Puerta 2, después de 8:** prototipo de START-HERE §18 con INE como
-    primer conector, la clase que salga de P-15, 10 casos de `PILOT-40.csv`,
-    sin LLM.
+8. ~~Mateo cierra P-15~~ **Cerrada el 2026-09-25 (DEC-026)**: E objeto, B
+   primera familia, A ilustrativa, C = subtipo 2b. Título, pregunta, H1–H3,
+   objetivos, definición operacional, alcance y taxonomía en
+   [`TESIS-ENCUADRE.md`](TESIS-ENCUADRE.md). Sin caso canónico: par C18 + C29;
+   el canónico sale de la Puerta 2 con los cinco requisitos.
+9. **Mateo revisa P-12** antes de abrir la Puerta 2: `other_observed` es el
+   grupo más grande (10 de 28) y no se sabe qué hay dentro. Cuando lo pida:
+   desglose de los 10, uno por uno.
+10. **P-20:** los 5 casos manuales de Mateo, en tabla, cierran FINDINGS §7. Si
+    contradicen la lectura del agente, la decisión se reabre.
+11. **Puerta 2, después de 9:** prototipo de START-HERE §18 con INE como
+    primer conector, la familia "comparación de base", 10 casos de desarrollo
+    tomados de `PILOT-40.csv` (nunca de evaluación, DEC-025), decisión
+    determinística sobre la evidencia; el LLM en interpretación, extracción y
+    explicación.
 7. ~~Fusionar `feat/entorno-docker-local`~~ **Hecho (26d42da).** Las reglas de
    DEC-017, DEC-018, DEC-020 y DEC-021 están en `CLAUDE.md` §3, como parte de
    la propuesta que Mateo revisa (P-02).

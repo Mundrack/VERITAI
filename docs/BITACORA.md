@@ -552,3 +552,54 @@ de Puerta 2 hasta que cierre P-15.
 - P-20: los 5 casos en tabla → FINDINGS §7 y, si toca, reabrir la decisión
 - P-05 (segundo anotador), P-12 (`other_observed`, 10 de 28), P-02
   (`CLAUDE.md`), P-09 (rotar credenciales antes de datos reales)
+
+---
+
+## 2026-09-25 — P-15 cerrada: el encuadre de la tesis tras el piloto (DEC-025, DEC-026)
+
+### Qué se hizo
+
+Mateo aprobó la dirección E/B/A/C y pidió una **pasada de coherencia sobre
+todo el repositorio** con nueve ajustes antes de cerrar. La pasada encontró:
+
+- **Ningún caso pasa los cinco requisitos de canónico con un claim
+  divergente.** C29 tiene la divergencia en el claim pero la revisión de base
+  se *infiere* del indicador CHANGE del IEP (el PDF no imprime los valores
+  revisados ni declara política de revisión); C18 tiene la revisión demostrada
+  con dos cifras literales del mismo emisor pero su claim relaya bien; C21 es
+  periodo desparejado (2a), no revisión. **Decisión: no se declara canónico**;
+  la tesis presenta el par C18 + C29 y el canónico sale de la Puerta 2.
+- La URL del Balance 2T2025 (edición anterior de C18) no estaba registrada:
+  recuperada del transcript y anotada.
+- "Engañoso" en título, problema, hueco, objetivo general y glosario; "sin
+  LLM" ambiguo en ESTADO, PILOT-DECISION y el borrador de H2; el `02`
+  excluía "redes distintas de X" dando X por entrada, cuando el piloto no
+  pudo recolectar de X; O1 decía "español latinoamericano" contra la Opción A.
+
+**Aplicado con DEC-026** (Mateo aprobó título, par C18 + C29 y
+`TESIS-ENCUADRE.md` sin tocar el `02`):
+
+| Dónde | Qué |
+|---|---|
+| `docs/TESIS-ENCUADRE.md` (nuevo) | Título, pregunta de investigación, H1–H3 como proposiciones + evidencia preliminar separada, objetivo general, O1–O6 (cambian O1, O3, O6), definición operacional, alcance, taxonomía, "no hay canónico", qué afirma y qué no |
+| `02-1-VeritAI-TESIS.md` | Solo una nota de remisión visible al inicio; el resto intacto |
+| `docs/GLOSARIO.md` | Definición de divergencia contextual computable; "caso ilustrativo" y "caso canónico: no hay todavía"; fila "fake news / engañoso" sin intención; enum `clase` con `2b_base_revisada` y las familias |
+| `normalizar_a_enums.py`, `lote_crudo.py`, CSVs, `pilot40.py` | Código nuevo `2b_base_revisada`; **solo C29** reetiquetado (2b, secundaria 2a); familia "comparación de base" = 2a + 2b + 2c |
+| `README.md`, `CLAUDE.md` §1, `docs/README.md` | El ranking pasa a ilustrativo; definición operacional; enlace al encuadre |
+| `PILOT-DECISION.md`, `PILOT-FINDINGS.md` §5, `COLECCION-LOTE-CRUDO.md` §4 | Cierre de P-15, corrección de "sin LLM", C29 |
+| `docs/DECISIONES.md` | DEC-025 (sin contaminación entre conjuntos) y DEC-026 |
+| `docs/ESTADO.md`, `PREGUNTAS-ABIERTAS.md` | P-15 a Cerradas; la Puerta 2 espera a que Mateo revise P-12 |
+
+### Qué se verificó
+
+- `normalizar_a_enums.py`, `validar_lote_crudo.py` y `pilot40.py` salen 0
+  con el enum ampliado; las cifras de FINDINGS §5 coinciden con la salida
+  nueva (2a 6, 2b 1, 2c 1: familia 8, sin cambio)
+- Enlaces internos resuelven; el `02` solo cambia en la nota; Excel intacto
+
+### Qué quedó pendiente
+
+- **Mateo revisa P-12** (`other_observed`, 10 de 28) antes de la Puerta 2
+- **P-20**: los 5 casos manuales
+- Fusionar `docs/p15-encuadre` a `main`
+- Puerta 2: sin abrir, por orden de Mateo

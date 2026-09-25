@@ -14,6 +14,7 @@ Esto es otra cosa: el sitio donde no se pierde lo que ya se sabe.
 | Documento | Qué guarda | Cuándo se actualiza |
 |---|---|---|
 | [`ESTADO.md`](ESTADO.md) | Foto del proyecto **hoy**: puerta activa, qué funciona, qué falta | Se **sobrescribe** al final de cada sesión |
+| [`TESIS-ENCUADRE.md`](TESIS-ENCUADRE.md) | Encuadre **vigente** de la tesis tras el piloto: título, pregunta, hipótesis, objetivos, definición operacional, alcance, taxonomía. Manda sobre el `02` | Solo por decisión de Mateo (DEC-026 y siguientes) |
 | [`BITACORA.md`](BITACORA.md) | Qué se hizo cada día, con sus verificaciones | Se **añade** una entrada por sesión. Nunca se borra nada |
 | [`DECISIONES.md`](DECISIONES.md) | Cada decisión técnica, con la alternativa que se descartó y por qué | Se **añade** una entrada por decisión. Nunca se edita una pasada |
 | [`ARQUITECTURA.md`](ARQUITECTURA.md) | Qué existe hoy y cómo encaja | Cuando cambia la estructura real, no cuando se planea |

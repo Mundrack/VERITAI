@@ -8,6 +8,14 @@ de contexto.
 > El dato es correcto. La puntuación de España no cambió: 16 países mejoraron la
 > suya. Un verificador clásico responde "verdadero" y esa respuesta es inútil.
 
+Ese es el caso **ilustrativo**. El piloto mostró que la forma más frecuente es
+otra: comparar dos ediciones de una estadística oficial que no son comparables
+—periodo o base elegida, **base revisada** por el emisor, cambio de método—.
+El encuadre vigente de la tesis (título, hipótesis, objetivos, alcance a
+publicadores de nivel 1, taxonomía) está en
+[`docs/TESIS-ENCUADRE.md`](docs/TESIS-ENCUADRE.md). El sistema demuestra
+divergencia, no intención.
+
 Este repositorio contiene el paquete de documentación del proyecto, la
 investigación del piloto y el entorno de desarrollo local.
 

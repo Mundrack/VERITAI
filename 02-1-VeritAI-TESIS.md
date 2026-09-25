@@ -1,6 +1,16 @@
 > **VeritAI — Documento 1 de 2**
 > Este es el **alcance de tesis**. El producto completo está en el documento 2.
 
+> ⚠️ **ENCUADRE VIGENTE (2026-09-25, DEC-026):** el título, el problema, los
+> objetivos y la taxonomía de este documento son la **propuesta original**.
+> Tras el piloto, el encuadre que manda está en
+> [`docs/TESIS-ENCUADRE.md`](docs/TESIS-ENCUADRE.md): título nuevo, pregunta
+> de investigación, hipótesis H1–H3, objetivos O1–O6 revisados, definición
+> operacional de "divergencia contextual computable", alcance declarado a
+> publicadores de nivel 1 y taxonomía reorganizada. Este archivo **no se
+> edita**: se conserva como está para dejar constancia de qué cambió y por
+> qué (`docs/DECISIONES.md`, DEC-023 a DEC-026).
+
 # TESIS — Propuesta concreta
 
 ## 📌 Título propuesto

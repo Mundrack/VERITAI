@@ -638,3 +638,61 @@ las hipótesis, **no prueba confirmatoria**.
 
 **Alternativa descartada.** Evaluar sobre los 51: sería medir al sistema con
 los datos con los que se diseñó.
+
+---
+
+## DEC-026 · Objeto de estudio, título, hipótesis y taxonomía tras el piloto
+
+**Fecha:** 2026-09-25 · **Estado:** vigente · **Decide:** Mateo · **Cierra:** P-15
+
+**Contexto.** La clase que daba nombre al proyecto, `1_ranking_vs_value`, es
+2 de 28 divergencias en dos lotes independientes. `PILOT-FINDINGS.md` §5 dio
+cinco opciones de reencuadre; Mateo pidió una pasada de coherencia sobre todo
+el repositorio con nueve ajustes, y aprobó el resultado.
+
+**Decisión.**
+
+- **E** es el objeto general: *divergencia contextual computable*. **B**, la
+  familia "comparación de base" (2a periodo o base elegida, **2b base
+  revisada**, 2c cambio de método), es la primera familia que se implementa y
+  evalúa. **A**, `1_ranking_vs_value`, queda como caso ilustrativo. **C**,
+  base revisada, es el subtipo 2b de B, no una apuesta única.
+- **Título:** *Detección automática de divergencia contextual computable en
+  afirmaciones estadísticas en español a partir de evidencia oficial y
+  comparación entre ediciones.*
+- Pregunta de investigación, H1–H3, objetivo general, O1–O6, definición
+  operacional y alcance: en [`TESIS-ENCUADRE.md`](TESIS-ENCUADRE.md), que
+  manda sobre `02-1-VeritAI-TESIS.md` en lo que contradiga; el `02` no se
+  edita (lleva una nota de remisión al inicio).
+- **Sin intención:** el sistema demuestra divergencia o comparación
+  problemática; no demuestra que el autor quiso engañar. "Engañoso" sale del
+  título, del objetivo general y del glosario, o queda operacionalmente
+  definido.
+- **Los números del piloto son evidencia preliminar**, no confirmación: las
+  hipótesis se ponen a prueba en la Puerta 2 con datos distintos (DEC-025).
+- **La decisión es determinística** sobre la evidencia recuperada; el modelo
+  de lenguaje puede intervenir en interpretación, extracción y explicación.
+  "Sin LLM" se reserva para N0 (R02) y para el origen de los números, no para
+  todo el sistema.
+- **Geografía:** corpus en español con fuentes de España y Latinoamérica, sin
+  afirmar representatividad; desequilibrio declarado.
+- **Caso canónico: no se declara.** C29, C21 y C18 se cotejaron contra cinco
+  requisitos idénticos y ninguno los cumple todos con un claim divergente. La
+  tesis presenta el **par C18 + C29** (mecanismo demostrado + efecto sobre un
+  claim). **El canónico de la familia B sale de la Puerta 2**, cumpliendo los
+  cinco requisitos sobre datos no usados en el piloto.
+- **Taxonomía:** un solo código nuevo, `2b_base_revisada`; 2a y 2c son
+  nombres sobre `2_baseline_selection` y `5_methodology_change`, que se
+  conservan; solo C29 se reetiqueta (su nota ya describía la revisión);
+  `other_observed` (10 de 28) sigue en P-12, que Mateo revisa antes de la
+  Puerta 2.
+
+**Consecuencia.** Se modifican: `GLOSARIO.md` (caso canónico, fila "fake
+news", enum `clase`), `normalizar_a_enums.py` (enum), `lote_crudo.py` y los
+CSV (C29), `pilot40.py`, `README.md` raíz, `CLAUDE.md` §1, `ESTADO.md`,
+`BITACORA.md`, `PREGUNTAS-ABIERTAS.md` (P-15 cerrada), `PILOT-DECISION.md`,
+`PILOT-FINDINGS.md` §5, `COLECCION-LOTE-CRUDO.md` §4.
+
+**Alternativa descartada.** Forzar un caso canónico ahora (C29 con la
+revisión inferida, o C18 sin claim divergente). Contaría una historia mejor
+con evidencia peor.
