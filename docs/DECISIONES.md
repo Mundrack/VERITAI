@@ -601,3 +601,40 @@ P-15.
 
 **Alternativa descartada.** Alcance general con el 58,3% dentro del rango.
 Promete lo que el pool no midió.
+
+---
+
+## DEC-025 · Sin contaminación entre conjuntos: lo del piloto no evalúa la Puerta 2
+
+**Fecha:** 2026-09-25 · **Estado:** vigente · **Decide:** Mateo
+
+**Contexto.** *"Cuando diseñemos Puerta 2, debe quedar registrado qué casos y
+datos pertenecieron al piloto y por tanto quedan EXCLUIDOS del conjunto de
+evaluación. Sin contaminación entre conjuntos."* Se anota ahora, aunque la
+Puerta 2 no empiece.
+
+**Decisión.** Todo lo que pertenece al piloto queda **fuera del conjunto de
+evaluación** de la Puerta 2 y de cualquier evaluación posterior:
+
+```
+P01-P20   los 20 auditados (lote sesgado)                  pilot-20-normalizado.csv
+C01-C31   los 31 crudos trabajados, excedentes incluidos    pilot-crudo-trabajados.csv
+K08 K10 K14 K18 K19 K23 K31   los 7 candidatos rechazados   pilot-crudo-screening.csv
+los 5 casos manuales de Mateo (subconjunto de C01-C31)      P-20
+las primarias y ediciones ya extraidas para ellos, como valores de referencia
+```
+
+Pueden usarse para **desarrollo, regresión y demostración**: los "10 casos
+end-to-end" de START-HERE §18 son desarrollo, no evaluación. El conjunto de
+evaluación se recolecta después, con el mismo método de la TAREA 2 (regla
+dura, cronómetro, vía de descubrimiento registrada desde el principio), sobre
+contenido posterior al 2026-09-25 o de emisores y periodos no usados aquí.
+
+**Consecuencia.** `PILOT-40.csv` ya lleva la marca (`lote ∈ {auditado_20,
+crudo_31}`). `GLOSARIO.md` definirá *conjunto de desarrollo* y *conjunto de
+evaluación* cuando se diseñe la Puerta 2, y `ARQUITECTURA.md` registrará la
+separación. Los porcentajes del piloto son descubrimiento y refinamiento de
+las hipótesis, **no prueba confirmatoria**.
+
+**Alternativa descartada.** Evaluar sobre los 51: sería medir al sistema con
+los datos con los que se diseñó.

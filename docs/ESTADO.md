@@ -16,7 +16,8 @@ PUERTA 1   research/PILOT-DECISION.md con PILOT_GO        SUPERADA 2026-09-25
 
 PUERTA 2   prototipo end-to-end, UNA clase y UN emisor,      <-- AQUI, sin arrancar:
            10 casos con trazabilidad completa                 BLOQUEADA hasta que Mateo
-                                                               cierre P-15 (la clase)
+           regla ya fijada: nada del piloto entra en el       cierre P-15 (la clase)
+           conjunto de evaluacion (DEC-025)
 
 PUERTA 3   corpus completo anotado + arnes de evaluacion
 

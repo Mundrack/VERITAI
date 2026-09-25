@@ -969,7 +969,9 @@ CANDIDATOS: list[dict] = [
             "reintento; el Portal Estadistico de Criminalidad del MISMO ministerio publica el mismo PDF y "
             "tablas PC-Axis por trimestre (09004 CCAA, 09005 provincias, 09006 municipios): es la via "
             "dataset del mismo emisor, no un rodeo. Las paginas JAXI son solo JS; el indice pcaxis si "
-            "lista los .px. Metodologia: PDFs por indicador en /metodologia.html."
+            "lista los .px. Metodologia: PDFs por indicador en /metodologia.html. || URL de la edicion "
+            "anterior (Balance 2T2025), recuperada del transcript el 2026-09-25 para reproducibilidad: "
+            "https://estadisticasdecriminalidad.ses.mir.es/publico/portalestadistico/dam/jcr:c1180e96-7fc4-4a27-9fd8-c3217c9faf60/Balance%20de%20Criminalidad%20Segundo%20Trimestre%202025.pdf"
         ),
         criba_query_a="criminalidad Espana aumento 0,5% primer semestre 2026 delitos sexuales",
         criba_query_b="criminalidad sube 0,5% hasta junio 2026 Espana verificacion OR bulo OR fact-check",
