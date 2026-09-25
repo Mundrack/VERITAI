@@ -460,3 +460,69 @@ busqueda_por_tema             2         1/2    50,0%
   objeto de estudio ante P-15 (incluida la opción "revisión de base" como
   clase canónica), y si Perú 0/2 y el bloqueo son señal o muestra
   insuficiente. Termina en `PILOT-DECISION.md` con GO o PIVOT
+
+---
+
+## 2026-09-25 — TAREA 3: la decisión de la Puerta 1
+
+### Qué se hizo
+
+Plan aprobado en plan mode; ejecutado en `feat/tarea-3-decision`.
+
+- **`scripts/pilot40.py` → `PILOT-40.csv`**: los 20 auditados (etiquetas del
+  CSV + claim, fecha, emisor y URLs del Excel congelado, solo lectura, sha256
+  sin cambios) y los 31 crudos en un esquema común. 51 filas; el nombre es
+  el del paquete. El script imprime todos los conteos de los tres informes:
+  ningún número tecleado.
+- **`PILOT-FINDINGS.md`**: las cinco métricas de R02 §7 (todas verde, con la
+  conservadora), la comparación con el lote sesgado, la **sección de amenazas
+  a la validez** que pidió Mateo, el alcance honesto, P-15 con cinco
+  opciones, Perú/bloqueo, y el hueco humano/agente.
+- **`PILOT-FAILURES.md`**: catálogo de fallos con casos y lo que piden del
+  prototipo (`base_version`, subtipos de abstención, código HTTP del primer
+  contacto, tests de identidad de edición).
+- **`PILOT-DECISION.md`**: **`PILOT_GO` con alcance declarado a nivel 1**,
+  con el bloque YAML de START-HERE §20.
+
+### Las tres cuestiones de Mateo, resueltas y no rodeadas
+
+1. **Alcance honesto.** "El 74,2% es el promedio de 84,2% (nivel 1, 19
+   casos) y 58,3% (resto, 12), con una mezcla que eligió el barrido y el
+   buscador." Está escrito así en FINDINGS §3.1. Propuesta: el sistema se
+   declara para publicadores de nivel 1; el resto como limitación escrita.
+   Tres emisores con criterio explícito: INE, FMI, Interior. → **P-19**.
+2. **P-15.** Sobre las 28 divergencias de los dos lotes, `1_ranking_vs_value`
+   es 2 (7,1%). Cinco opciones con pros, contras y casos (FINDINGS §5),
+   incluida "revisión de base" como canónica (C: novedosa y computable, pero
+   2 de 12, tan marginal como ranking). Recomendación: E como objeto
+   ("comparabilidad de ediciones"), B como primera clase ("comparación de
+   base", 8 + 2 revisiones), A ilustrativa. Decide Mateo.
+3. **Perú 0/2.** No alcanza: es un solo dominio (`gob.pe`) y un solo 418. Lo
+   que sí se observa, como hipótesis: 3 de los 4 primarios que rechazaron al
+   agente son portales gubernamentales centralizados, no institutos de
+   estadística en su dominio.
+
+### Hallazgos nuevos del cruce de lotes
+
+- El sesgo D1 escondía la D: 0 de 20 en el Excel, 6 de 31 en crudo.
+- Verificado con `raw_value_span` de primaria: 3/20 en la auditoría, 31/31
+  (actual) y 25/31 (anterior) en el crudo: 56 spans que cumplen "ningún
+  número puede tener como único origen el LLM".
+- Sin los seis hermanos por criba: 18/25 = 72,0%. Sigue en verde.
+- `other_observed` es 10 de 28: P-12 se decide con este dato.
+
+### Qué se verificó
+
+- `pilot40.py` sale 0: 51 filas, cero valores fuera de enum (enums
+  importados de `normalizar_a_enums.py`); las cifras de FINDINGS y DECISION
+  están en su salida; `validar_lote_crudo.py` y `normalizar_a_enums.py`
+  siguen en 0; enlaces internos resuelven; Excel intacto.
+
+### Qué quedó pendiente
+
+- **Mateo ratifica o no `PILOT_GO`**, y decide P-15 y P-19
+- **P-20**: los 5 casos manuales de Mateo llenan FINDINGS §7; si contradicen,
+  la decisión se reabre
+- Commit tras revisar el diff; merge a `main` con `--no-ff`
+- Puerta 2 solo después de la ratificación: prototipo de START-HERE §18 con
+  INE como primer conector, sin LLM

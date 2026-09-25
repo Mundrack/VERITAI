@@ -129,6 +129,61 @@ otra (C08). El resto: `other_observed` 5, `2_baseline_selection` 3,
 mismo. Muestreo neutral, sin cuota por clase, así que el dato no está
 dirigido. Las opciones A, B y C siguen sobre la mesa; ahora con datos.
 
+`TAREA 3 (2026-09-25)` Mateo pidió opciones concretas de reencuadre, con
+pros y contras, incluida "revisión de base" como canónica. Están en
+`research/PILOT-FINDINGS.md` §5, con los casos que sostienen cada una. En
+resumen, sobre las **28 divergencias de los dos lotes** (`1_ranking_vs_value`
+2, `2_baseline_selection` 7, `3_absolute_vs_relative` 5, `4_denominator` 3,
+`5_methodology_change` 1, `other_observed` 10):
+
+```
+A   mantener ranking_vs_value como canonica        2 casos en 48; tesis sobre algo raro
+B   familia "comparacion de base" (2 + 5 + revision) 8 + 2 revisiones; es lo que mide la
+                                                    recuperabilidad; heterogenea
+C   revision de base sola (opcion de Mateo)         novedosa y computable; 2 de 12, tan
+                                                    marginal como ranking; exige historial
+D   magnitud mal leida (3 + 4)                      8 de 28; se acerca al fact-checking
+E   objeto = "comparabilidad de ediciones",         usa las 28; el prototipo arranca por
+    las clases son tests                            la mas frecuente; alcance mas ancho
+```
+
+**Recomendación del agente:** E como objeto, B como primera clase del
+prototipo, A como ilustrativa, C como subtipo de B. **Decide Mateo.**
+
+### P-19 · ¿Se declara el alcance del sistema en publicadores de nivel 1?
+
+**Estado:** abierto · **Bloquea:** la redacción de la tesis y la Puerta 2 · **Decide:** Mateo · **Origen:** PILOT-FINDINGS §4, PILOT-DECISION
+
+El 74,2% es el promedio de 84,2% (nivel 1, 19 casos) y 58,3% (niveles 3–5,
+12 casos), con una mezcla que eligió el buscador. `PILOT-DECISION.md` dice
+`PILOT_GO` **con alcance declarado a nivel 1**: organismos estadísticos y
+ministerios con API, dataset o boletín en URL estable; el resto como
+limitación escrita. R02 §7 lo admite ("verde solo en 3 emisores es un
+resultado válido").
+
+```
+A   Si: el sistema se declara para nivel 1; niveles 3-5 como limitacion
+    y trabajo futuro, con su 58,3% en la tesis.                    <- recomendada
+B   No: alcance general, y el 58,3% se reporta como parte del rango.
+C   Nivel 1 + una segunda pasada dirigida a niveles 3-5 para medir mejor
+    ese 58,3% antes de decidir (contradice DEC-022 en espiritu).
+```
+
+Emisores propuestos para el prototipo con criterio explícito: INE, FMI,
+Interior (Portal Estadístico). Ver FINDINGS §4.
+
+### P-20 · Cierre humano/agente
+
+**Estado:** abierto, esperando datos · **Bloquea:** la ratificación de PILOT-DECISION · **Decide:** los datos, y Mateo
+
+Los 5 casos manuales de Mateo (C04, C05, C11, C14, C22; DEC-014) llenan
+FINDINGS §7. Al llegar: acuerdo por caso en `previous_edition_found`, razón
+de tiempos humano/agente, y si C22 (el único no recuperado por el agente) lo
+encuentra una persona. Si contradicen la lectura del agente, `PILOT-DECISION`
+se reabre y queda constancia. El agente no mira ese CSV antes.
+
+### P-05 · Segundo anotador
+
 ### P-05 · Segundo anotador
 
 **Estado:** abierto desde el paquete · **Bloquea:** cerrar el corpus (Puerta 3)
