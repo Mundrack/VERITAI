@@ -3,6 +3,11 @@
 **Fecha:** 2026-09-25 · **Decide:** el agente propone; Mateo ratifica ·
 **Datos:** `PILOT-40.csv` (51 filas), `PILOT-FINDINGS.md`, `PILOT-FAILURES.md`
 
+> **Ratificado por Mateo el 2026-09-25** (DEC-023). Alcance de nivel 1 y
+> emisores INE, FMI e Interior aprobados (DEC-024). La Puerta 2 no arranca
+> hasta cerrar P-15. La comparación humano/agente (P-20) sigue pendiente; si
+> contradice la lectura del agente, este documento se reabre.
+
 ---
 
 ## La regla, escrita antes de mirar el número

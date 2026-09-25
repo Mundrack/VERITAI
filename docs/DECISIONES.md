@@ -553,3 +553,51 @@ obligatoria" en `research/README.md` lleva la nota. El fallo real de nivel 5
 
 **Alternativa descartada.** Segunda pasada dirigida. Llenaría la cubeta a
 costa de declarar que esa parte del lote no es muestreo neutral.
+
+---
+
+## DEC-023 · Puerta 1: `PILOT_GO` ratificado
+
+**Fecha:** 2026-09-25 · **Estado:** vigente · **Decide:** Mateo
+
+**Contexto.** `research/PILOT-DECISION.md` propuso `PILOT_GO` con alcance
+declarado a nivel 1: edición anterior localizada por el agente, conservadora,
+23/31 = 74,2% (> 60%); 18/25 = 72,0% sin los casos no independientes; las
+otras cuatro métricas de R02 §7 en verde.
+
+**Decisión.** *"Ratifico el GO."* La Puerta 1 queda cerrada con `PILOT_GO`.
+
+**Consecuencia.** Se puede diseñar el prototipo de START-HERE §18. **Pero la
+Puerta 2 no arranca hasta que Mateo cierre P-15** (el objeto de estudio y la
+primera clase), porque el prototipo es de una clase y un emisor y la clase
+sale de ahí. La comparación humano/agente (P-20) sigue pendiente; si
+contradice la del agente, este documento y `PILOT-DECISION.md` se reabren.
+
+**Alternativa descartada.** Ámbar ("decidir con alcance reducido"): el
+número está 14 puntos por encima del umbral; el alcance reducido se declara
+igualmente, pero por honestidad sobre el pool, no por el semáforo.
+
+---
+
+## DEC-024 · El sistema se declara para publicadores de nivel 1
+
+**Fecha:** 2026-09-25 · **Estado:** vigente · **Decide:** Mateo · **Cierra:** P-19
+
+**Contexto.** El 74,2% es el promedio de 84,2% (nivel 1, 19 casos) y 58,3%
+(niveles 3–5, 12 casos), con una mezcla que eligió el buscador
+(PILOT-FINDINGS §3.1).
+
+**Decisión.** *"Alcance declarado a nivel 1, niveles 3–5 como limitación
+escrita con su 58,3%. INE, FMI e Interior como emisores."*
+
+**Consecuencia.** La tesis se escribe para organismos estadísticos y
+ministerios con API, dataset o boletín en URL estable; el 58,3% del resto va
+en el cuerpo de la tesis como limitación, no en una nota al pie. Los tres
+emisores del prototipo: **INE** (API Tempus), **FMI** (DataMapper API),
+**Ministerio del Interior** vía Portal Estadístico de Criminalidad (PC-Axis +
+PDF). Eurostat y AEMET quedan de reserva; INEI vía `gob.pe` excluido
+(DEC-021). Afecta al título y a O1 de la tesis: ver la redacción propuesta en
+P-15.
+
+**Alternativa descartada.** Alcance general con el 58,3% dentro del rango.
+Promete lo que el pool no midió.

@@ -70,7 +70,7 @@ conocerlo antes de escribir el sistema, no después.
 | [`PILOT-40.csv`](PILOT-40.csv), `scripts/pilot40.py` | TAREA 3 — los 20 auditados y los 31 crudos en un esquema común (**51 filas**; el nombre es el del paquete). El script imprime todos los conteos de los tres informes | **entregado** 2026-09-25 |
 | [`PILOT-FINDINGS.md`](PILOT-FINDINGS.md) | TAREA 3 — las cinco métricas de R02 §7, comparación con el lote sesgado, **amenazas a la validez**, alcance honesto, P-15 con cinco opciones, Perú/bloqueo, humano vs agente (**pendiente**) | **entregado** 2026-09-25 |
 | [`PILOT-FAILURES.md`](PILOT-FAILURES.md) | TAREA 3 — catálogo de fallos con casos y lo que piden del prototipo | **entregado** 2026-09-25 |
-| [`PILOT-DECISION.md`](PILOT-DECISION.md) | TAREA 3 — **`PILOT_GO` con alcance declarado a nivel 1**; pendiente de ratificar por Mateo y de los 5 casos manuales | **entregado** 2026-09-25 |
+| [`PILOT-DECISION.md`](PILOT-DECISION.md) | TAREA 3 — **`PILOT_GO` con alcance declarado a nivel 1**. **Ratificado por Mateo** (DEC-023); alcance y emisores aprobados (DEC-024). Humano/agente pendiente (P-20) | **entregado y ratificado** 2026-09-25 |
 
 ---
 

@@ -10,13 +10,13 @@
 ## Dónde estamos
 
 ```
-PUERTA 1   research/PILOT-DECISION.md con PILOT_GO        <-- AQUI: entregado con
-           sin esto no se escribe codigo de producto           PILOT_GO (alcance nivel 1),
-           TAREA 1 · TAREA 2 · TAREA 3 hechas                  PENDIENTE de ratificar
-                                                               (Mateo, P-19, P-20)
+PUERTA 1   research/PILOT-DECISION.md con PILOT_GO        SUPERADA 2026-09-25
+           TAREA 1 · TAREA 2 · TAREA 3 hechas                  (DEC-023, alcance nivel 1
+                                                               por DEC-024)
 
-PUERTA 2   prototipo end-to-end, UNA clase y UN emisor,
-           10 casos con trazabilidad completa
+PUERTA 2   prototipo end-to-end, UNA clase y UN emisor,      <-- AQUI, sin arrancar:
+           10 casos con trazabilidad completa                 BLOQUEADA hasta que Mateo
+                                                               cierre P-15 (la clase)
 
 PUERTA 3   corpus completo anotado + arnes de evaluacion
 
@@ -143,7 +143,10 @@ main                          paquete + registro vivo + TAREA 1 + TAREA 2 + ento
 │
 ├─ feat/via-descubrimiento    FUSIONADO (e6768e4)
 │
-└─ feat/tarea-3-decision      TAREA 3: PILOT-40, FINDINGS, FAILURES, DECISION      <- rama actual
+└─ feat/tarea-3-decision      FUSIONADA: TAREA 3 + DEC-023, DEC-024
+
+Sin rama de trabajo abierta: la siguiente (Puerta 2) se crea cuando Mateo
+cierre P-15.
 ```
 
 Con el entorno Docker en `main`, los enlaces a
@@ -190,12 +193,18 @@ En orden, y sin saltarse pasos:
    recomendación (E objeto / B primera clase / A ilustrativa), y Perú/bloqueo
    ("no alcanza"). [`PILOT-FAILURES.md`](../research/PILOT-FAILURES.md), el
    catálogo de fallos.
-7. **Mateo:** ratificar o no `PILOT_GO`; decidir **P-15** y **P-19**; entregar
-   los 5 casos (**P-20**) para cerrar FINDINGS §7. Si contradicen, la decisión
-   se reabre.
-8. **Puerta 2, solo tras la ratificación:** prototipo de START-HERE §18 con
-   INE como primer conector, una clase (la que salga de P-15), 10 casos de
-   `PILOT-40.csv`, sin LLM.
+7. ~~Ratificar `PILOT_GO`; decidir P-19~~ **Hecho el 2026-09-25**: GO
+   ratificado (DEC-023); alcance de nivel 1 con INE, FMI e Interior (DEC-024).
+8. **Mateo cierra P-15.** Va con la recomendación (E objeto, B primera clase,
+   A ilustrativa, C subtipo de B) y pidió ver antes qué implica para el
+   título y la hipótesis: la redacción propuesta está en
+   [`PREGUNTAS-ABIERTAS.md`](PREGUNTAS-ABIERTAS.md), P-15. **Hasta que la
+   apruebe o corrija, no se toca nada de la Puerta 2.**
+9. **P-20:** los 5 casos manuales de Mateo, en tabla, cierran FINDINGS §7. Si
+   contradicen la lectura del agente, la decisión se reabre.
+10. **Puerta 2, después de 8:** prototipo de START-HERE §18 con INE como
+    primer conector, la clase que salga de P-15, 10 casos de `PILOT-40.csv`,
+    sin LLM.
 7. ~~Fusionar `feat/entorno-docker-local`~~ **Hecho (26d42da).** Las reglas de
    DEC-017, DEC-018, DEC-020 y DEC-021 están en `CLAUDE.md` §3, como parte de
    la propuesta que Mateo revisa (P-02).

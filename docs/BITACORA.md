@@ -526,3 +526,29 @@ Plan aprobado en plan mode; ejecutado en `feat/tarea-3-decision`.
 - Commit tras revisar el diff; merge a `main` con `--no-ff`
 - Puerta 2 solo después de la ratificación: prototipo de START-HERE §18 con
   INE como primer conector, sin LLM
+
+---
+
+## 2026-09-25 — Puerta 1 superada: GO ratificado, alcance nivel 1, P-15 casi
+
+### Qué se hizo
+
+Commit de la TAREA 3 (`f1e3c2e`) y, encima, las decisiones de Mateo:
+
+| | Decisión | Dónde |
+|---|---|---|
+| `PILOT_GO` | **Ratificado.** Puerta 1 cerrada. La Puerta 2 **no arranca** hasta cerrar P-15 | DEC-023; `PILOT-DECISION.md` lleva la ratificación |
+| P-19 | Alcance declarado a nivel 1; niveles 3–5 como limitación escrita con su 58,3%; INE, FMI e Interior | DEC-024; P-19 a Cerradas |
+| P-15 | Va con la recomendación (E / B / A, C subtipo de B), **pero quiere ver antes** qué implica para el título y la hipótesis | Redacción propuesta en `PREGUNTAS-ABIERTAS.md`, P-15: título nuevo, tres hipótesis con su número, caso definitorio (C29 o C21), taxonomía reordenada (2a/2b/2c), O1 y O3 retocados |
+| P-20 | Mateo hace sus 5 casos y los pasa en tabla | Sigue abierta |
+
+Fusionado a `main` con `--no-ff`. **Se para aquí**, por orden de Mateo: nada
+de Puerta 2 hasta que cierre P-15.
+
+### Qué quedó pendiente
+
+- Mateo aprueba o corrige la redacción de P-15 → entonces se cierra con su
+  DEC y se abre la rama de la Puerta 2
+- P-20: los 5 casos en tabla → FINDINGS §7 y, si toca, reabrir la decisión
+- P-05 (segundo anotador), P-12 (`other_observed`, 10 de 28), P-02
+  (`CLAUDE.md`), P-09 (rotar credenciales antes de datos reales)
