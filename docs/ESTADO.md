@@ -3,7 +3,7 @@
 > **Este documento se sobrescribe entero en cada actualización.** Es una foto,
 > no un historial. El historial está en [`BITACORA.md`](BITACORA.md).
 
-**Última actualización:** 2026-09-11
+**Última actualización:** 2026-09-24
 
 ---
 
@@ -109,10 +109,18 @@ La arquitectura está preparada para migrar cambiando `DATABASE_URL`: ver
 ## Estado de git
 
 ```
-main                            paquete de documentacion
-└─ feat/entorno-docker-local    entorno Docker completo        <- sin fusionar
-   └─ docs/registro-vivo-del-proyecto   este registro          <- rama actual
+main                          paquete + este registro vivo (fusionado --no-ff)
+│
+├─ docs/registro-vivo         FUSIONADO a main
+│
+└─ feat/entorno-docker-local  entorno Docker completo   <- SIN FUSIONAR
 ```
+
+`ATENCIÓN` Como `docs/` se fusionó antes que el entorno, **`main` contiene
+documentos que describen archivos que todavía no están en `main`**: los enlaces a
+`../migracion-supabase-base-de-datos/` no resuelven, y `CLAUDE.md` tampoco está.
+Se arregla fusionando `feat/entorno-docker-local`, que ya está revisado y
+verificado.
 
 `ATENCIÓN` No hay remoto configurado y `gh` no está instalado, así que las ramas
 existen pero **no hay pull requests**. Ver

@@ -169,9 +169,19 @@ completa con la contraseña de la base de datos**.
 **Impacto.** La contraseña da acceso total al proyecto y queda en el historial de
 la conversación.
 
-**Acción inmediata.** Rotar la contraseña en *Project Settings → Database → Reset
-database password*. Registrado como P-09 en
-[`PREGUNTAS-ABIERTAS.md`](PREGUNTAS-ABIERTAS.md). **Abierto.**
+**Decisión de Mateo (2026-09-24).** Se mantienen las credenciales actuales por
+ahora. La rotación queda **pendiente y explícitamente abierta**, con este umbral:
+
+> **Rotar antes de cargar datos reales o de conectar a Supabase en serio.**
+
+Registrado como P-09 en [`PREGUNTAS-ABIERTAS.md`](PREGUNTAS-ABIERTAS.md).
+**Abierto a propósito, no olvidado.**
+
+**Riesgo residual mientras no se rote.** El proyecto Supabase está vacío —sin
+esquema, sin datos, y nada de VERITAI conectado— así que hoy no hay información que
+perder. Lo que sí puede hacer quien tenga la cadena: crear objetos, consumir cuota
+del plan y dejar contenido dentro. Y el umbral hay que respetarlo al pie de la
+letra: el primer dato del corpus que entre es trabajo manual irrecuperable.
 
 **Contención aplicada.** Ninguna credencial se escribió en ningún archivo del
 repositorio, ni siquiera el `project-ref`. Los documentos de migración siguen con

@@ -113,3 +113,57 @@ adenda desaconseja es el andamiaje prematuro, no llevar registro.
 ### Qué quedó pendiente
 
 Lo mismo que el 2026-09-08. Ninguna pregunta abierta se ha cerrado.
+
+---
+
+## 2026-09-24 — Cierre de `docs/` y tres decisiones de Mateo
+
+### Qué se hizo
+
+**La rama de documentación se rehízo desde `main`.** Estaba mal basada, sobre
+`feat/entorno-docker-local`. Son cambios distintos y deben poder revisarse aparte,
+así que se borró `docs/registro-vivo-del-proyecto` y se creó `docs/registro-vivo`
+desde `main`.
+
+`NOTA` Al cambiar de rama, git se llevó del working tree los 56 archivos del
+entorno Docker, que viven en la otra rama. No se perdió nada. El `.env` sobrevivió
+porque no está rastreado.
+
+**Se escribieron los 3 documentos que faltaban:** `docs/PREGUNTAS-ABIERTAS.md`,
+`docs/SEGURIDAD.md` y `research/README.md`. Con eso `docs/` queda cerrado: 9
+archivos, 1520 líneas.
+
+**Tres preguntas abiertas resueltas por Mateo:**
+
+| # | Decisión | Dónde |
+|---|---|---|
+| P-03 | P08 y P09 **salen** del corpus de tesis. Se registran como `other_observed` y pasan a trabajo futuro | DEC-013 |
+| P-04 | **Claude cronometra**, declarado como recuperabilidad-por-agente. Mateo cronometra 5 casos a mano como contraste | DEC-014 |
+| P-09 | **Se mantiene abierta a propósito.** Credenciales actuales se conservan; rotar antes de cargar datos reales o de conectar a Supabase en serio | P-09 |
+
+**Merge a `main` con `--no-ff`**, para que el merge quede como un punto explícito
+en el historial y no se pierda entre los commits.
+
+### Qué se verificó
+
+- Escaneo de secretos sobre lo commiteado: **limpio**. Ninguna credencial de
+  Supabase, ningún `project-ref`, ninguna clave JWT, ni la contraseña del `.env`
+  local. Única coincidencia: el prefijo `sb_publishable_...` escrito con puntos
+  suspensivos como ejemplo en prosa
+- `.env` sigue sin estar rastreado
+- 15 de 17 enlaces internos entre documentos resuelven. Los 2 que no apuntan a
+  `../migracion-supabase-base-de-datos/`, que está en la rama de Docker
+
+### Qué quedó pendiente
+
+- **Rotar la contraseña de Supabase** (P-09), antes de cargar datos reales
+- `CLAUDE.md` sigue como propuesta, sin aprobar. Vive en la rama de Docker
+- `feat/entorno-docker-local` **sigue sin fusionar** a `main`
+- PR en pausa: no hay remoto ni `gh` instalado
+
+### Nota fuera de alcance
+
+Se diagnosticó un error de hidratación de React que resultó ser de otro proyecto
+de Mateo (`OjoDelAmo`, Next.js), no de VERITAI. No se tocó ningún archivo de ese
+repositorio. Se deja anotado solo para que la bitácora refleje en qué se gastó
+tiempo de la sesión.

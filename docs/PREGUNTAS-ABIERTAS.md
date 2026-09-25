@@ -29,14 +29,26 @@ Los dos puntos que conviene mirar con atención:
 
 ### P-09 · Rotar la contraseña de la base de datos de Supabase
 
-**Estado:** abierto · **Bloquea:** la migración a Supabase · **Prioridad: alta**
+**Estado:** abierto **a propósito** · **Bloquea:** cargar datos reales en Supabase
 
 El 2026-09-24 las credenciales del proyecto Supabase se pegaron en texto plano en
 una conversación. Eso incluye la **contraseña de la base de datos**, que da acceso
 total al proyecto.
 
-`ACCIÓN` Rotarla en *Project Settings → Database → Reset database password*.
-Mientras no se rote, la cadena de conexión filtrada sigue siendo válida.
+`DECISIÓN DE MATEO (2026-09-24)` Se mantienen las credenciales actuales por ahora.
+La pregunta **no se cierra**.
+
+`ACCIÓN` **Rotar antes de cargar datos reales o de conectar a Supabase en serio.**
+En *Project Settings → Database → Reset database password*.
+
+**Por qué es aceptable esperar.** El proyecto Supabase está vacío: no hay esquema,
+no hay datos y nada de VERITAI se conecta a él. Lo único expuesto hoy es una base
+de datos sin contenido. El riesgo pasa a ser real en el momento en que entre el
+primer dato del corpus, que es trabajo manual irrecuperable.
+
+**Por qué sigue abierta.** Quien tenga esa cadena puede crear objetos en el
+proyecto, consumir cuota y dejar cosas dentro. Mientras no se rote, esto no es
+"pendiente": es una puerta abierta que alguien conoce.
 
 No se ha escrito ninguna credencial en ningún archivo del repositorio, ni el
 `project-ref`. Cuando llegue el momento van al `.env`, que está en `.gitignore`.
@@ -45,50 +57,6 @@ No se ha escrito ninguna credencial en ningún archivo del repositorio, ni el
 no hace falta rotarla. Pero solo es segura si hay RLS: sin políticas, esa clave
 equivale a un `SELECT *` sobre cada tabla expuesta. Es exactamente el motivo de
 DEC-004.
-
-### P-03 · ¿Entran P08 y P09 en el alcance de tesis?
-
-**Estado:** abierto · **Bloquea:** la auditoría de los 20 (TAREA 1)
-
-P08 (*"el 82% de embarazadas vacunadas sufrió un aborto espontáneo"*) y P09
-(*"estudio de 99 millones de vacunados, +610% en miocarditis"*) no son
-afirmaciones de un emisor estadístico hispano: son bulos virales sobre artículos
-científicos en inglés — NEJM y *Vaccine*.
-
-Encajan en la taxonomía (denominador incorrecto, absoluto vs. relativo), pero su
-fuente primaria es literatura científica, no un organismo que publique series con
-ediciones sucesivas. **Eso cambia el perfil de conector necesario**, y cambia qué
-significa "edición anterior" para esos casos.
-
-```
-OPCION A   Se quedan, marcados como clase aparte. El corpus gana
-           dos casos reales y la taxonomia se sostiene igual.
-
-OPCION B   Salen del corpus de tesis y pasan a trabajo futuro.
-           El alcance queda mas limpio: un emisor estadistico
-           publica ediciones; un paper no.
-```
-
-Sin recomendación fuerte: depende de si el alcance se define por *tipo de
-distorsión* o por *tipo de emisor*. Es una decisión de encuadre, no técnica.
-
-### P-04 · ¿Quién cronometra `minutes_to_locate`?
-
-**Estado:** abierto · **Bloquea:** la recolección del lote crudo (TAREA 2)
-
-El defecto D5 de la adenda exige cronometrar cada caso. La pregunta es quién.
-
-```
-Si lo cronometra Claude    -> mide recuperabilidad-por-agente
-Si lo cronometra Mateo     -> mide recuperabilidad-por-humano
-```
-
-**No son el mismo número.** Para la tesis el primero puede ser incluso *mejor*,
-porque el sistema es quien va a recuperar. Pero hay que declararlo explícitamente
-en el método, o un tribunal lo va a señalar: *"¿estos veinte minutos son los de
-una persona o los de una máquina?"*.
-
-Lo que **no** es defendible es medirlo sin decir quién midió.
 
 ### P-05 · Segundo anotador
 
@@ -128,6 +96,8 @@ No bloquea nada. Evita rehacer.
 | # | Pregunta | Decisión | Fecha |
 |---|---|---|---|
 | P-01 | Remoto de git y pull requests | **En pausa.** Se trabaja en local con ramas. Nada se sube a ningún servidor | 2026-09-24 |
+| P-03 | ¿Entran P08 y P09 en el alcance de tesis? | **Salen del corpus.** Se registran como `other_observed` y pasan a trabajo futuro. Ver DEC-013 | 2026-09-24 |
+| P-04 | ¿Quién cronometra `minutes_to_locate`? | **Claude**, declarado como recuperabilidad-por-agente. Mateo cronometra 5 casos a mano como contraste humano. Ver DEC-014 | 2026-09-24 |
 | — | Geografía del lote nuevo (D2 de la adenda) | **Opción A**: español en general, sin cuota geográfica. Cerrada en `00b` | antes del 2026-09-08 |
 | — | ¿Framework en el panel web? | **No.** TypeScript vanilla, por coherencia con el stack cerrado en R02 §5. Ver DEC-008 | 2026-09-08 |
 | — | ¿Alembic o runner propio? | **Runner propio**, por portabilidad a `supabase db push`. Ver DEC-006 | 2026-09-08 |

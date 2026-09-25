@@ -121,16 +121,20 @@ Con un solo negativo, la **tasa de falsos positivos** —la métrica crítica de
 el proyecto— es literalmente inmedible. Un sistema evaluado solo sobre casos
 distorsionados parece perfecto y en producción marca todo.
 
-### Dos casos que no encajan en el perfil
+### Dos casos que salen del alcance — resuelto
 
 P08 (*82% de embarazadas, 104 de 127*) y P09 (*99 millones de vacunados, +610%*)
 son bulos virales sobre artículos científicos en inglés: NEJM y *Vaccine*.
 Encajan en la taxonomía, pero su fuente primaria es literatura científica, no un
 organismo que publique ediciones sucesivas — así que "edición anterior" no
-significa lo mismo para ellos.
+significa lo mismo para ellos, y necesitarían otra familia de conectores.
 
-Pendiente de decisión: P-03 en
-[`../docs/PREGUNTAS-ABIERTAS.md`](../docs/PREGUNTAS-ABIERTAS.md).
+`DECISIÓN (2026-09-24)` **Salen del corpus de tesis.** Se registran como
+`other_observed` y pasan a trabajo futuro. Ver DEC-013.
+
+**Consecuencia para la TAREA 1:** el lote auditado son **18 casos en el alcance**
+más 2 registrados como observados. No afecta a la métrica que decide, porque estos
+20 nunca contaron para recuperabilidad.
 
 ---
 
@@ -166,10 +170,21 @@ formato                          api | dataset | html | pdf | scan | none
 recuperabilidad                  A | B | C | D
 minutes_to_locate
 minutes_to_extract
+cronometrado_por                 agente | humano       <- obligatorio
 truth, context, clase            enums cerrados
 abstain_reason                   cuando no se pueda resolver
 raw_value_span                   de cada numero usado
 ```
+
+### Quién cronometra
+
+`DECISIÓN (2026-09-24)` Los 20 casos del lote crudo los cronometra **Claude**, y
+el número se declara explícitamente en el método como
+**recuperabilidad-por-agente**. Mateo cronometra **5 casos a mano, aparte**, como
+referencia humana de contraste. Ver DEC-014.
+
+Por eso `cronometrado_por` es un campo obligatorio: medir el tiempo sin decir quién
+midió no es defendible.
 
 ---
 

@@ -248,3 +248,70 @@ nueve del §26 habrían sido trabajo perdido.
 
 **Regla de actualización.** `BITACORA.md` y `DECISIONES.md` son append-only.
 `ESTADO.md` se sobrescribe entero.
+
+---
+
+## DEC-013 · P08 y P09 salen del corpus de tesis
+
+**Fecha:** 2026-09-24 · **Estado:** vigente · **Decide:** Mateo (cierra P-03)
+
+**Contexto.** P08 (*"el 82% de embarazadas vacunadas sufrió un aborto
+espontáneo"*, 104 de 127) y P09 (*"estudio de 99 millones de vacunados, +610% en
+miocarditis"*) son bulos virales sobre artículos científicos en inglés: NEJM y
+*Vaccine*.
+
+**Decisión.** Salen del corpus de tesis. Se registran como `other_observed` para
+no perder la información y pasan a **trabajo futuro**.
+
+**Por qué.** Tres razones, y las tres son de encuadre, no de calidad del caso:
+
+1. Son artículos científicos en inglés, no afirmaciones de un emisor estadístico
+   hispano.
+2. Necesitan **otra familia de conectores** — DOI, repositorios, PubMed — que no
+   tiene nada que ver con un portal de datos abiertos.
+3. **"Edición anterior" no significa lo mismo.** Un organismo estadístico publica
+   ediciones sucesivas del mismo índice; un paper tiene correcciones y erratas,
+   que son otra cosa. Medir la métrica que decide sobre ellos contaminaría el
+   número.
+
+**Alternativa descartada.** Dejarlos como clase aparte dentro del corpus. Sumaba
+dos casos reales, pero mezclaba dos perfiles de recuperación en una sola métrica y
+obligaba a explicar la excepción en la defensa.
+
+**Consecuencia inmediata.** El lote auditado de la TAREA 1 baja de 20 a **18 casos
+en el alcance**, más 2 registrados como observados. No afecta a la métrica que
+decide, porque esos 20 nunca contaron para recuperabilidad.
+
+---
+
+## DEC-014 · Claude cronometra, y se declara como recuperabilidad-por-agente
+
+**Fecha:** 2026-09-24 · **Estado:** vigente · **Decide:** Mateo (cierra P-04)
+
+**Contexto.** El defecto D5 de la adenda exige cronometrar `minutes_to_locate` y
+`minutes_to_extract` en cada caso. Quién sostiene el cronómetro cambia lo que mide
+el número.
+
+**Decisión.**
+
+```
+Claude cronometra los 20 casos del lote crudo
+  -> se declara EXPLICITAMENTE en el metodo como
+     "recuperabilidad-por-agente"
+
+Mateo cronometra 5 casos a mano, aparte
+  -> referencia humana de contraste
+```
+
+**Por qué es la opción correcta y no un atajo.** El sistema es quien va a
+recuperar en producción, así que el tiempo del agente es el que predice el coste
+real de automatizar. El tiempo humano es el que sitúa ese número en contexto.
+Tener los dos convierte una debilidad metodológica en una comparación medible.
+
+**Por qué los 5 casos de contraste importan.** Sin ellos, un tribunal puede
+preguntar *"¿estos veinte minutos son los de una persona o los de una máquina?"* y
+la respuesta honesta sería incómoda. Con ellos hay un factor de conversión medido
+sobre casos concretos.
+
+**Lo que sigue estando prohibido:** medir el tiempo sin decir quién midió. Cada
+fila del piloto lleva marcado quién cronometró.
