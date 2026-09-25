@@ -17,9 +17,13 @@ Todos los conteos de este documento los imprime `scripts/validar_lote_crudo.py`
    ├─ 7 rechazados   regla dura: existe verificacion (2), el tema ya tiene
    │                 explainer de verificador (4), duplicado (1)       18,4%
    └─ 31 admitidos   trabajados en serie, los 31, cronometrados
-        ├─ 21 en el lote        18 en cubetas con objetivo + 3 sin objetivo
-        └─ 10 excedentes        cayeron en cubetas ya llenas
+        ├─ 23 en el lote        18 en cubetas con objetivo + 5 sin objetivo
+        └─ 8 excedentes         cayeron en cubetas ya llenas
 ```
+
+`2026-09-25, tarde` Mateo decidió P-16, P-17 y P-18 (DEC-020 a DEC-022) sobre
+la primera versión de este informe. Los números de abajo ya las aplican; donde
+cambió algo, se dice.
 
 Por cada admitido, el ciclo del plan: `t0` claim → LOCALIZAR (API → dataset →
 HTML → PDF; si bloquea, parar) → `t1` → EXTRAER (`raw_value_span` de la edición
@@ -53,24 +57,24 @@ excluidas por inalcanzables sin evadir protecciones*.
 | Primaria no localizable | 3 | **3** | C22 C24 C27 |
 | Edición anterior no localizable | 2 | **2** | C10 C25 |
 | Formato hostil | 2 | **0** | — |
-| *Bloqueado por publicador* | sin objetivo | 1 | C09 |
+| *Bloqueado por publicador* | sin objetivo | 3 | C09 · C30 C31 (por DEC-021) |
 | *Claim falso* | sin objetivo | 2 | C17 C28 |
-| **Lote** | 20 | **21** | |
+| **Lote** | 20 | **23** | |
 
-**Excedentes (10):** control negativo C18 C20 C21 C23 C26 C30 · divergencia C15
-C19 C29 C31. Están en `pilot-crudo-trabajados.csv` con todos sus campos.
+**Excedentes (8):** control negativo C18 C20 C21 C23 C26 · divergencia C15 C19
+C29. Están en `pilot-crudo-trabajados.csv` con todos sus campos.
 
 **Déficit declarado: formato hostil 0 de 2.** El pool se agotó sin encontrar un
 solo PDF escaneado o sin texto: los 16 casos con vía `pdf` se extrajeron con
 `pypdf` sin OCR, incluidos los de emisores de nivel 5 (Ávoris, Europ
 Assistance). El fallo de los emisores de nivel 5 tomó otra forma: **no hay
-documento** (§4). Ampliar el pool buscando específicamente PDFs hostiles
-rompería el muestreo neutral; se deja a Mateo (P-18).
+documento** (§4). `DEC-022` Se acepta como hallazgo: *buscando sin sesgo no
+aparecieron PDFs sin texto*. Sin segunda pasada dirigida.
 
-**Dos cubetas que el plan no tenía**, añadidas al validar y pendientes de
-ratificar: `bloqueado_por_publicador` (la primaria existe y se sabe dónde está,
-pero devuelve 403 al agente: no es "no localizable") y `claim_falso` (el claim
-lo contradice la primaria sin que dispare ningún test de contexto).
+**Dos cubetas que el plan no tenía**, añadidas al validar y ratificadas con
+DEC-021: `bloqueado_por_publicador` (la primaria existe y se sabe dónde está,
+pero el publicador rechaza al agente: no es "no localizable") y `claim_falso`
+(el claim lo contradice la primaria sin que dispare ningún test de contexto).
 
 ---
 
@@ -78,27 +82,53 @@ lo contradice la primaria sin que dispare ningún test de contexto).
 
 Medidas sobre dos denominadores, porque la cuota por cubetas **fija el resultado
 del lote por construcción**: 7 + 6 casos recuperables y 3 + 2 no recuperables
-dan ~71% antes de trabajar un solo caso. La tasa **natural**, sobre todos los
-admitidos, es la que informa de lo que encuentra un sistema partiendo de
-contenido crudo. Cuál de las dos gobierna la puerta se pregunta en P-16.
+dan ~71% antes de trabajar un solo caso. `DEC-020` **Decide la tasa natural
+sobre los 31 admitidos**, "la que menos manipulación tiene"; la del lote se
+reporta al lado. Y en dos lecturas: `DEC-021` la **conservadora** (un 403, 406
+o 418 al primer cliente cierra el caso aunque `curl` pase después: C30 y C31
+salen) es la que decide; la **leniente** (edición anterior localizada, sin
+mirar cómo) se reporta.
 
 ```
-                                      31 trabajados          lote (21)
-edicion anterior localizada           25/31   80,6%          15/21   71,4%
-recuperable-por-agente                25/31   80,6%          15/21   71,4%   <- DECIDE (DEC-019)
-alcanzable_por_agente                 27/31   87,1%          17/21   81,0%
-alcanzable_por_humano (si|probable)   29/31   93,5%          19/21   90,5%
+                                          31 admitidos           lote (23)
+recuperable-por-agente, conservadora      23/31   74,2%          15/23   65,2%   <- DECIDE
+recuperable-por-agente, leniente          25/31   80,6%          17/23   73,9%      se reporta
+alcanzable_por_agente                     25/31   80,6%          17/23   73,9%
+alcanzable_por_humano (si|probable)       29/31   93,5%          21/23   91,3%
 ```
 
-Con cualquiera de los dos denominadores el valor cae en la banda verde
-(`>60%`). **No es una decisión**: es el dato que la TAREA 3 tiene que confrontar
-con los 5 casos de Mateo y con la limitación de §7.
+Verde con las cuatro cifras (`>60%`). **No es la decisión**: es el dato que la
+TAREA 3 tiene que confrontar con los 5 casos de Mateo y con el límite de abajo.
 
-### Los seis no recuperados
+### El límite declarado (DEC-020)
+
+Se predijo 30–50% y salió 74–81%. Parte de la explicación es el pool: **19 de
+31 casos son estadística oficial de nivel 1**, que es lo que el buscador
+devuelve con más facilidad. Es el sesgo del lote anterior con otra cara: la
+herramienta de búsqueda entrega los casos fáciles. Desagregado (conservadora):
+
+```
+nivel 1 (INE, INEC, INEGI, DANE, INEI, Eurostat, FMI, ministerios)   16/19   84,2%
+resto  (niveles 3, 4 y 5)                                             7/12   58,3%
+   nivel 3   4/4      nivel 4   2/2      nivel 5   1/6
+
+comunicacion oficial (nota_oficial)   3/3           prensa digital   20/28   71,4%
+ES 16/21   EC 3/4   CO 2/2   MX 2/2   PE 0/2 (los dos, bloqueados por gob.pe)
+```
+
+El 74,2% es un promedio de un 84% y un 58%. **El número no cambia; se declara
+con su límite.** La TAREA 3 lleva una sección de amenazas a la validez con
+esta desagregación y una más que hoy **no está registrada por candidato**: la
+vía de descubrimiento (qué consulta y qué barrido por nivel de emisor sacó cada
+uno). Hay que reconstruirla del transcript de la sesión antes de la TAREA 3;
+es un hueco del método, no un dato perdido.
+
+### Los ocho no recuperados (conservadora)
 
 | Caso | Cubeta | Qué pasó |
 |---|---|---|
 | C09 | bloqueado | Saily (ranking eSIM): 403 al fetcher y a curl. Primaria identificada, ilegible para el agente |
+| C30, C31 | bloqueado | INEI vía `gob.pe`: **418** al fetcher, 200 a `curl`. Por DEC-021 el 418 cierra el caso; los valores leídos quedan en el registro, marcados, sin sumar |
 | C10 | edición anterior | Ranking fiscal comercial: edición vigente sí, la anterior no está publicada |
 | C22 | primaria | La prensa atribuye al INE una tasa trimestral de abandono por CCAA (1T2026) que el INE **no publica**: 112 operaciones, 1.039 tablas de la EPA, tablas anuales 69786/71120/12543 revisadas. Solo derivable de microdatos |
 | C24 | primaria | "Informe de Tendencias de Viaje 2026" de Booking.com: cinco medios, mismo texto, sin enlace, sin muestra; no está en el newsroom del emisor |
@@ -107,12 +137,12 @@ con los 5 casos de Mateo y con la limitación de §7.
 
 ### Por nivel de emisor (31)
 
-| Nivel | Casos | Edición anterior | Localizar (media) | Máximo |
-|---|---|---|---|---|
-| 1 · organismo con API/dataset | 19 | 18/19 | 1,6 min | 5,2 (C22) |
-| 3 · portal HTML | 4 | 4/4 | 1,9 min | 3,8 |
-| 4 · PDF con tabla | 2 | 2/2 | 1,1 min | 1,1 |
-| 5 · sin datos abiertos | 6 | **1/6** | 1,9 min | 2,4 |
+| Nivel | Casos | Edición anterior (leniente) | Recuperable (conservadora) | Localizar (media) | Máximo |
+|---|---|---|---|---|---|
+| 1 · organismo con API/dataset | 19 | 18/19 | 16/19 | 1,6 min | 5,2 (C22) |
+| 3 · portal HTML | 4 | 4/4 | 4/4 | 1,9 min | 3,8 |
+| 4 · PDF con tabla | 2 | 2/2 | 2/2 | 1,1 min | 1,1 |
+| 5 · sin datos abiertos | 6 | **1/6** | **1/6** | 1,9 min | 2,4 |
 
 Nivel 2 no tuvo casos: la búsqueda devolvió emisores de nivel 1 directamente
 (INE, INEC, INEGI, DANE, INEI, Eurostat, FMI). El pool está sesgado hacia
@@ -250,14 +280,16 @@ Ningún bloqueo se rodeó. Cada uno se anotó y se paró.
 | gob.pe | **418** al fetcher, 200 a curl | primaria de C30–C31 | ver zona gris |
 | educacionfpydeportes.gob.es | `socket hang up` ×2 al fetcher, 200 a curl | primaria de C21 | error de red, no bloqueo |
 
-**Zona gris que hay que decidir (P-17).** Tras un fallo del fetcher se probó
-`curl` con su *user-agent por defecto*, sin falsificar nada. No es lo que
-DEC-018 prohíbe (otro UA, saltar Cloudflare), pero **sí es cambiar de cliente**
-tras una negativa. En cuatro dominios el resultado fue el mismo bloqueo; en dos
+**Zona gris, decidida (DEC-021).** Tras un fallo del fetcher se probó `curl`
+con su *user-agent por defecto*, sin falsificar nada. No es lo que DEC-018
+prohíbe (otro UA, saltar Cloudflare), pero **sí es cambiar de cliente** tras
+una negativa. En cuatro dominios el resultado fue el mismo bloqueo; en dos
 (gob.pe tras un 418 explícito; el ministerio de Educación tras un error de red)
-curl obtuvo 200 y el caso siguió. Si Mateo decide que un 418 al primer cliente
-cierra el caso, C30 y C31 pasan a `bloqueado_por_publicador` y la tasa natural
-baja a 23/31 (74,2%). Se deja calculado para que la decisión sea barata.
+curl obtuvo 200 y el caso siguió. Mateo decidió: *"si el publicador señala que
+no quiere agentes, se respeta"*. Un 403, 406 o 418 al primer cliente cierra el
+caso; un error de red admite un reintento. C30 y C31 pasan a
+`bloqueado_por_publicador`; C21 (error de red) se queda. La cifra que decide es
+la conservadora, 23/31 = 74,2%.
 
 Sobre el user-agent del fetcher: no lo controlo y no puedo afirmar que se
 presente como VERITAI. Es una limitación declarada del plan y sigue en pie.
@@ -267,7 +299,10 @@ presente como VERITAI. Es una limitación declarada del plan y sigue en pie.
 ## 7. Limitaciones y riesgos
 
 - **La cuota por cubetas hace que la métrica del lote no informe** (§3). Se
-  reportan las dos; la puerta necesita saber cuál usa (P-16).
+  reportan las dos; decide la natural (DEC-020).
+- **El pool está sesgado hacia lo fácil**: 19 de 31 de nivel 1, 84% frente a
+  58% en el resto (§3, "El límite declarado"). Y la vía de descubrimiento no
+  quedó registrada por candidato: reconstruir antes de la TAREA 3.
 - **Un solo buscador**, con su sesgo: el pool es "lo que este buscador
   devuelve", y devolvió sobre todo estadística oficial de España (21 de 31 casos
   ES). La cobertura latinoamericana es fina: EC 4, CO 2, MX 2, PE 2.
@@ -283,8 +318,8 @@ presente como VERITAI. Es una limitación declarada del plan y sigue en pie.
 - **Tiempos del agente**, no humanos. El tope de 20/15 min nunca actuó, así que
   no afecta a la métrica; pero la comparación con los tiempos de Mateo es la
   que dirá si "rápido para el agente" significa algo.
-- **Lote de 21, no de 20**, por los tres casos sin objetivo. Y el CSV del lote
-  incluye a los 3.
+- **Lote de 23, no de 20**: 18 en cubetas con objetivo más 5 sin objetivo (3
+  bloqueados, 2 claims falsos). El CSV del lote los incluye.
 - **Una nota errónea en el log**: en `C22 t1` escribí "tope casi agotado"
   cuando t1−t0 eran 5,2 min. El log es append-only; la corrección está como
   comentario al final y en `notas` del caso.
@@ -294,11 +329,17 @@ presente como VERITAI. Es una limitación declarada del plan y sigue en pie.
 ## 8. Los cinco casos de Mateo (DEC-014)
 
 Selección: `random.Random(20260925).sample(sorted(case_ids_del_lote), 5)` sobre
-los 21 `case_id` con `excedente = no`, ordenados alfabéticamente. Resultado:
+los **21** `case_id` que tenía el lote antes de DEC-021 (sin C30 ni C31),
+ordenados alfabéticamente. Resultado:
 
 ```
 C04  C05  C11  C14  C22
 ```
+
+`NOTA` DEC-021 metió a C30 y C31 en el lote después de la selección. **No se
+redibuja**: Mateo ya tiene los cinco. Comprobado de todas formas: la misma
+semilla sobre los 23 ids devuelve, por casualidad, los mismos cinco. Queda
+dicho para que nadie lo "corrija".
 
 **Solo el texto del claim y la URL del contenido.** Ninguno de los resultados
 del agente. Mateo trabaja cada uno con navegador y anota sus propios
@@ -329,3 +370,7 @@ CSV, manda el CSV: `pilot-crudo-20.csv`, columna `post_url`.
 | 5 | Seguir trabajando los 31 admitidos aunque las cubetas se llenaran, registrando excedentes | Parar en 20: habría perdido C29 (revisión de rank) y C31 (nivel como variación) |
 | 6 | Etiquetar por el **titular** cuando el cuerpo lo matiza (C21, C24, C28) | Etiquetar por el cuerpo: cambiaría C28 a `mixed` |
 | 7 | `claim_date` aproximada en C27 por la fecha de la medición | Dejarla en blanco |
+
+`2026-09-25, tarde` Mateo ratificó 1, 2, 3 y 5 con DEC-020 a DEC-022. **La 4
+se revoca** (DEC-021): C30 y C31 pasan a `bloqueado_por_publicador`. 6 y 7
+quedan como están, sin objeción.

@@ -1581,11 +1581,11 @@ CANDIDATOS: list[dict] = [
         fuente_primaria="INEI - Informe de Empleo N 4, 'Situacion del Mercado Laboral en Lima Metropolitana', trimestre movil enero-febrero-marzo 2026 (EPEN), PDF 79 pp via gob.pe; nota de prensa gob.pe 1379039 (2026-04-15); edicion anterior: Informe de Empleo N 4, ene-feb-mar 2025",
         primaria_url="https://cdn.www.gob.pe/uploads/document/file/9807769/8016127-informe-de-empleo-n-4-trimestre-ene-feb-mar-2026.pdf",
         primaria_url_tipo="pdf_informe (texto extraible) enlazado desde gob.pe/institucion/inei/informes-publicaciones/8016127-...; coleccion completa por trimestre movil en gob.pe/institucion/inei/colecciones/6041-informe-de-empleo; 2025: cdn.www.gob.pe/uploads/document/file/7927021/6670682-...-2025.pdf",
-        via_de_acceso="pdf", access_requires_login="no",
+        via_de_acceso="bloqueado", access_requires_login="no",
         current_edition_found="si", previous_edition_found="si",
         historical_series_found="si", methodology_found="si",
-        alcanzable_por_agente="si", alcanzable_por_humano="si",
-        recuperabilidad="B", formato="pdf",
+        alcanzable_por_agente="no", alcanzable_por_humano="si",
+        recuperabilidad="D", formato="pdf",
         dato_actual="Ene-feb-mar 2026, Lima Metropolitana: poblacion ocupada 5.702.500, +4,7% (253.200) vs ene-feb-mar 2025; desocupados 418.900 (6,8% de la PEA), +9,6% (36.600); tasa de desempleo 6,8%, +0,2 pp (2025: 6,6%)",
         dato_anterior="Ene-feb-mar 2025: poblacion ocupada 5.449.300, +1,7% (89.600) vs 2024; desempleados 382.300; tasa de desempleo 6,6% (-1,1 pp vs 7,7% en 2024)",
         raw_value_span_actual=(
@@ -1611,8 +1611,9 @@ CANDIDATOS: list[dict] = [
         ),
         truth="supported", context="no_divergence_detected",
         clase_primaria="none", clases_secundarias="", abstain_reason="",
-        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="si",
+        abandonado_por_tiempo="", bucket_resultado="bloqueado_por_publicador", excedente="no",
         notas=(
+            "DEC-021 (2026-09-25, Mateo): gob.pe devolvio 418 al fetcher; el 200 posterior de curl NO cuenta. El caso se cierra como no recuperable-por-agente y cubeta bloqueado_por_publicador. Los valores extraidos se conservan como registro (sirven para comparar con los 5 casos manuales), pero no suman en la metrica que decide. Etiquetas truth/context: las que dio la lectura, marcadas como obtenidas por via descartada. || "
             "Relay fiel del informe (cifras, periodo 'trimestre movil', comparacion interanual y tasa "
             "'se ubico en 6,8%'). Control negativo; EXCEDENTE (cubeta llena). Par con C31 (Altavoz), que "
             "convierte la misma tasa en una subida. Ruta: el buscador devolvio un PDF de INEI (boletines/"
@@ -1639,11 +1640,11 @@ CANDIDATOS: list[dict] = [
         fuente_primaria="INEI - Informe de Empleo N 4, 'Situacion del Mercado Laboral en Lima Metropolitana', ene-feb-mar 2026 (misma primaria que C30); edicion anterior: ene-feb-mar 2025",
         primaria_url="https://cdn.www.gob.pe/uploads/document/file/9807769/8016127-informe-de-empleo-n-4-trimestre-ene-feb-mar-2026.pdf",
         primaria_url_tipo="pdf_informe (texto extraible) via gob.pe (misma ruta que C30)",
-        via_de_acceso="pdf", access_requires_login="no",
+        via_de_acceso="bloqueado", access_requires_login="no",
         current_edition_found="si", previous_edition_found="si",
         historical_series_found="si", methodology_found="si",
-        alcanzable_por_agente="si", alcanzable_por_humano="si",
-        recuperabilidad="B", formato="pdf",
+        alcanzable_por_agente="no", alcanzable_por_humano="si",
+        recuperabilidad="D", formato="pdf",
         dato_actual="Tasa de desempleo ene-feb-mar 2026: 6,8% (NIVEL), +0,2 puntos porcentuales vs 6,6%; desocupados 418.900, +9,6% (36.600) interanual",
         dato_anterior="Tasa de desempleo ene-feb-mar 2025: 6,6%; desempleados 382.300",
         raw_value_span_actual=(
@@ -1661,8 +1662,9 @@ CANDIDATOS: list[dict] = [
         ),
         truth="contradicted", context="divergence_detected",
         clase_primaria="3_absolute_vs_relative", clases_secundarias="", abstain_reason="",
-        abandonado_por_tiempo="", bucket_resultado="divergencia_real", excedente="si",
+        abandonado_por_tiempo="", bucket_resultado="bloqueado_por_publicador", excedente="no",
         notas=(
+            "DEC-021 (2026-09-25, Mateo): misma primaria que C30, mismo 418 de gob.pe al fetcher; el 200 de curl no cuenta. Cubeta bloqueado_por_publicador, no recuperable-por-agente; valores y etiquetas se conservan como registro obtenido por via descartada. || "
             "El 6,8% es el nivel de la tasa de desempleo, no su variacion: la tasa subio 0,2 puntos "
             "(6,6 -> 6,8) y el numero de desempleados subio 9,6%. 'Sube en 6,8%' no corresponde a ninguna "
             "magnitud del informe: contradicted. Test de contexto: nivel presentado como variacion relativa "

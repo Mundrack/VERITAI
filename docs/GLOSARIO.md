@@ -178,6 +178,19 @@ candidatos con un solo caso cada uno (`SCOPE_NOT_RESOLVABLE`,
 resultado. Ni user-agents falsos, ni saltarse desafíos, ni scraping contra quien
 bloquea explícitamente.
 
+`NOTA` **El primer rechazo cierra el caso** *(DEC-021)*: un 403, 406, 418 o
+desafío al primer cliente con el que el agente se presenta cierra el caso como
+**no recuperable-por-agente**, aunque otro cliente honesto —por ejemplo `curl`
+con su user-agent por defecto— obtenga 200 después. Solo un error de red
+(`ECONNREFUSED`, `socket hang up`, timeout) admite un reintento, porque no es
+una señal del publicador. Lo que se hubiera leído por la vía descartada se
+conserva como registro, marcado, pero no suma en la métrica.
+
+`NOTA` **Denominador de la métrica** *(DEC-020)*: la tasa que decide la Puerta 1
+se calcula sobre **todos los candidatos admitidos y trabajados**
+(`pilot-crudo-trabajados.csv`), no sobre el lote por cubetas, cuya cuota fija
+el número por construcción. La del lote se reporta al lado.
+
 ### `recuperabilidad`
 
 ```

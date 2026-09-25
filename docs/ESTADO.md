@@ -25,8 +25,9 @@ PUERTA 4   evaluacion completa: metricas, ablacion,
 
 **La métrica que decide, en dos partes** *(DEC-019, 2026-09-25)*:
 
-> Porcentaje de casos del lote **crudo** (sin artículo de verificación previo)
-> donde se localiza la **edición anterior** del dato, medido dos veces:
+> Porcentaje de los candidatos **admitidos por la regla dura** (sin artículo de
+> verificación previo) —todos los trabajados, no solo el lote por cubetas
+> (DEC-020)— donde se localiza la **edición anterior** del dato, medido dos veces:
 >
 > ```
 > recuperable-por-humano   una persona con navegador la localiza
@@ -36,17 +37,19 @@ PUERTA 4   evaluacion completa: metricas, ablacion,
 > `>60%` verde → PILOT_GO · `30–60%` ámbar → alcance reducido · `<30%` rojo → PILOT_PIVOT
 > — aplicado a la del **agente**. La humana se reporta como contexto.
 
-**Valor medido el 2026-09-25** (`research/COLECCION-LOTE-CRUDO.md` §3):
+**Valor medido el 2026-09-25** (`research/COLECCION-LOTE-CRUDO.md` §3), sobre
+los 31 admitidos y trabajados:
 
 ```
-                                      31 admitidos           lote (21)
-recuperable-por-agente                25/31   80,6%          15/21   71,4%
-alcanzable_por_humano (si|probable)   29/31   93,5%          19/21   90,5%
+recuperable-por-agente, conservadora   23/31   74,2%   <- DECIDE  (DEC-021: un 403/406/418 cierra)
+recuperable-por-agente, leniente       25/31   80,6%      se reporta al lado
+alcanzable_por_humano (si|probable)    29/31   93,5%
 ```
 
-Dos denominadores porque la cuota por cubetas fija el del lote por
-construcción (P-16). La humana real llega con los 5 casos manuales de Mateo.
-**Esto no es la decisión**: la decisión es la TAREA 3.
+**Con su límite (DEC-020):** 19 de 31 son estadística oficial de nivel 1 —lo
+que el buscador entrega con más facilidad— y ahí sale 84,2%; en el resto,
+58,3%. El número no cambia; se declara. La humana real llega con los 5 casos
+manuales de Mateo. **Esto no es la decisión**: la decisión es la TAREA 3.
 
 ---
 
@@ -135,7 +138,7 @@ main                          paquete + registro vivo + TAREA 1 (fusionados --no
 ├─ docs/registro-vivo         FUSIONADO
 ├─ feat/auditoria-piloto-20   FUSIONADO (a946ff9)
 │
-├─ feat/lote-crudo-20         TAREA 2: 31 casos, CSVs, informe, scripts   <- rama actual, SIN COMMIT
+├─ feat/lote-crudo-20         TAREA 2 (cf2946d) + DEC-020..022            <- rama actual, SIN FUSIONAR
 │
 └─ feat/entorno-docker-local  entorno Docker completo (cf104f3)          <- SIN FUSIONAR
 ```
@@ -155,20 +158,29 @@ servidor.
 En orden, y sin saltarse pasos:
 
 1. ~~TAREA 1~~ **Hecha y fusionada** (2026-09-24/25).
-2. ~~TAREA 2 — recolectar el lote crudo~~ **Hecha el 2026-09-25**, en
-   `feat/lote-crudo-20`, **sin commitear** hasta que Mateo revise el diff.
-   Entregables en [`../research/COLECCION-LOTE-CRUDO.md`](../research/COLECCION-LOTE-CRUDO.md):
+2. ~~TAREA 2 — recolectar el lote crudo~~ **Hecha y commiteada el 2026-09-25**
+   en `feat/lote-crudo-20` (pendiente de fusionar a `main`). Entregables en
+   [`../research/COLECCION-LOTE-CRUDO.md`](../research/COLECCION-LOTE-CRUDO.md):
    38 candidatos, 31 trabajados, cubetas 7/7 · 6/6 · 3/3 · 2/2 · **0/2 formato
-   hostil** (déficit declarado), lote de 21, 10 excedentes.
-3. **Mateo:** los 5 casos manuales — **C04, C05, C11, C14, C22** (semilla
+   hostil** (aceptado como hallazgo, DEC-022), lote de 23, 8 excedentes.
+3. ~~P-16, P-17, P-18~~ **Decididas el 2026-09-25** (DEC-020 a DEC-022):
+   decide la tasa natural sobre los 31; un 403/406/418 al primer cliente cierra
+   el caso (C30 y C31 pasan a bloqueados, 74,2% conservadora); el déficit de
+   formato hostil se acepta.
+4. **Mateo:** los 5 casos manuales — **C04, C05, C11, C14, C22** (semilla
    `20260925`), solo con claim y URL, sin ver los resultados del agente. Están
-   en `COLECCION-LOTE-CRUDO.md` §8.
-4. **Mateo decide** P-16 (qué denominador gobierna la puerta), P-17 (si probar
-   `curl` tras un fallo del fetcher es evasión), P-18 (déficit de formato
-   hostil: ampliar pool o aceptar). Y revisa P-15 con el dato nuevo: la clase
-   canónica sale 1 en 12.
-5. **TAREA 3 — decidir** → `research/PILOT-DECISION.md` con `PILOT_GO` o
-   `PILOT_PIVOT`, sobre la métrica del **agente**, con los 5 de Mateo al lado.
-6. Fusionar `feat/entorno-docker-local` y llevar DEC-017/DEC-018 a `CLAUDE.md`.
+   en `COLECCION-LOTE-CRUDO.md` §8. El agente no toca ese CSV.
+5. **Antes de la TAREA 3:** reconstruir la **vía de descubrimiento** de cada
+   candidato (qué consulta y qué barrido lo sacó) a partir del transcript de
+   la sesión; hoy no está registrada por candidato.
+6. **TAREA 3 — decidir** → `research/PILOT-DECISION.md` con `PILOT_GO` o
+   `PILOT_PIVOT`, sobre la conservadora del agente, con los 5 de Mateo al
+   lado. **Obligatorio (DEC-020):** una sección de **amenazas a la validez**
+   con la distribución de los 31 por tipo de publicador y por vía de
+   descubrimiento, y la recuperabilidad desagregada por esos grupos. Y
+   **P-15 de frente**: la clase canónica sale 1 en 12 aquí y 1 en 20 en el
+   piloto; dos lotes independientes dicen lo mismo, eso ya es señal.
+7. Fusionar `feat/entorno-docker-local` y llevar DEC-017, DEC-018 y DEC-021 a
+   `CLAUDE.md`.
 
 No se avanza a la Puerta 2 hasta entregar `PILOT-DECISION.md`.

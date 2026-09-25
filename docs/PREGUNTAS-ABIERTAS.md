@@ -129,68 +129,6 @@ otra (C08). El resto: `other_observed` 5, `2_baseline_selection` 3,
 mismo. Muestreo neutral, sin cuota por clase, así que el dato no está
 dirigido. Las opciones A, B y C siguen sobre la mesa; ahora con datos.
 
-### P-16 · Qué denominador gobierna la puerta
-
-**Estado:** abierto · **Bloquea:** la TAREA 3 · **Decide:** Mateo · **Origen:** COLECCION-LOTE-CRUDO §3
-
-La composición del lote por cubetas (7 negativos + 6 divergencias, todos con
-edición anterior; 3 + 2 sin ella) **fija la métrica del lote antes de trabajar
-un solo caso**: ~71% por construcción. La tasa natural sobre los 31 admitidos
-(80,6%) es la que dice cuánto encuentra un sistema partiendo de contenido
-crudo. Las dos están calculadas; ninguna se ha usado para decidir.
-
-```
-A   La puerta se mide sobre TODOS los admitidos (tasa natural). Las cubetas
-    quedan para la composicion del corpus, no para la metrica.        <- recomendada
-B   La puerta se mide sobre el lote de 20/21, aceptando que la cuota
-    condiciona el numero, y se declara.
-C   Las dos, con la natural como principal y la del lote como sensibilidad.
-```
-
-Si se elige A o C, hay que reescribir la frase de la métrica en `ESTADO.md`,
-`GLOSARIO.md` y `research/README.md`, que hoy dicen "del lote crudo (20)".
-
-### P-17 · ¿Probar `curl` tras un fallo del fetcher es evasión?
-
-**Estado:** abierto · **Bloquea:** el valor exacto de la métrica · **Decide:** Mateo · **Origen:** COLECCION-LOTE-CRUDO §6
-
-DEC-018 prohíbe falsificar user-agent, saltar Cloudflare y raspar a quien
-bloquea. Durante la TAREA 2, tras un fallo del fetcher, se probó una vez con
-`curl` y su UA por defecto — sin falsificar nada, pero **cambiando de cliente**
-tras una negativa. Cuatro dominios volvieron a bloquear. Dos respondieron 200:
-`gob.pe` tras un **418** explícito al fetcher (C30, C31) y el ministerio de
-Educación tras un `socket hang up` (C21, error de red).
-
-```
-A   Un rechazo explicito (403/406/418) al primer cliente cierra el caso.
-    Un error de red (ECONNREFUSED, hang up) permite un reintento.
-    -> C30 y C31 pasan a bloqueado_por_publicador; tasa natural 23/31 = 74,2%
-B   Un segundo cliente honesto no es evasion; lo que se prohibe es mentir.
-    -> se queda como esta: 25/31 = 80,6%
-```
-
-Las dos cifras están en el informe. La regla que salga va a `GLOSARIO.md` y a
-`CLAUDE.md` cuando se fusione.
-
-### P-18 · Formato hostil: 0 de 2
-
-**Estado:** abierto · **Decide:** Mateo · **Origen:** COLECCION-LOTE-CRUDO §2
-
-El pool de 38 se agotó sin un solo PDF escaneado o sin texto. Los 16 casos con
-vía `pdf` se extrajeron sin OCR, incluidos los de nivel 5. El fallo de nivel 5
-tomó otra forma: **no hay documento** (C22, C24, C27).
-
-```
-A   Aceptar el deficit y declararlo: en este pool el formato hostil no
-    aparecio, y eso es un dato.                                      <- recomendada
-B   Segunda pasada de busqueda dirigida a emisores donde vive el formato
-    hostil (ayuntamientos, gobiernos provinciales, organismos pequenos),
-    declarando que esa parte del lote NO es muestreo neutral.
-```
-
-B cuesta una sesión y toca `lote_crudo.py`; no cambia la métrica del agente
-salvo que aparezcan casos sin edición anterior.
-
 ### P-05 · Segundo anotador
 
 **Estado:** abierto desde el paquete · **Bloquea:** cerrar el corpus (Puerta 3)
@@ -235,6 +173,9 @@ No bloquea nada. Evita rehacer.
 | P-11 | ¿Separar en `clase` el control negativo del "falso sin divergencia"? | **No.** `truth` y `context` son ejes independientes; con ambos poblados el FPR es medible. P15 corregido a `no_divergence_detected`. Ver DEC-016 | 2026-09-25 |
 | P-13 | ¿Cómo se corrigen los errores del Excel? | **El CSV es la fuente de verdad.** El Excel queda congelado con sus 4 errores: son un hallazgo. Ver DEC-017 | 2026-09-25 |
 | P-14 | ¿Qué hace VERITAI con los publicadores que bloquean fetchers? | **No se evaden protecciones anti-bot. Nunca.** API → dataset → HTML → bloqueado = no recuperable. Ver DEC-018 | 2026-09-25 |
+| P-16 | ¿Qué denominador gobierna la puerta? | **La tasa natural sobre todos los admitidos** (31), "la que menos manipulación tiene". La del lote por cubetas se reporta al lado. La TAREA 3 la desagrega por tipo de publicador y vía de descubrimiento. Ver DEC-020 | 2026-09-25 |
+| P-17 | ¿Probar `curl` tras un fallo del fetcher es evasión? | **Un 403/406/418 al primer cliente cierra el caso** aunque otro cliente pase. C30 y C31 pasan a bloqueados; decide la conservadora **23/31 = 74,2%**, la leniente (80,6%) se reporta. Ver DEC-021 | 2026-09-25 |
+| P-18 | Formato hostil 0 de 2 | **Se acepta el déficit como hallazgo**: buscando sin sesgo no aparecieron PDFs sin texto. Sin segunda pasada dirigida. Ver DEC-022 | 2026-09-25 |
 | — | Geografía del lote nuevo (D2 de la adenda) | **Opción A**: español en general, sin cuota geográfica. Cerrada en `00b` | antes del 2026-09-08 |
 | — | ¿Framework en el panel web? | **No.** TypeScript vanilla, por coherencia con el stack cerrado en R02 §5. Ver DEC-008 | 2026-09-08 |
 | — | ¿Alembic o runner propio? | **Runner propio**, por portabilidad a `supabase db push`. Ver DEC-006 | 2026-09-08 |

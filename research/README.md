@@ -28,10 +28,19 @@ Los umbrales se aplican a la del **agente**. La humana se reporta al lado, como
 contexto y como limitación de validez externa. Las dos juntas cuantifican la
 brecha entre lo que existe y lo que un sistema puede usar.
 
-**Valor medido el 2026-09-25** ([`COLECCION-LOTE-CRUDO.md`](COLECCION-LOTE-CRUDO.md) §3):
-recuperable-por-agente **25/31 = 80,6%** sobre los admitidos, 15/21 = 71,4%
-sobre el lote por cubetas. La humana real llega con los 5 casos de Mateo. La
-decisión es de la TAREA 3, no de este número.
+**Valor medido el 2026-09-25** ([`COLECCION-LOTE-CRUDO.md`](COLECCION-LOTE-CRUDO.md) §3),
+sobre los **31 admitidos y trabajados** (DEC-020):
+
+```
+recuperable-por-agente, conservadora   23/31   74,2%   <- DECIDE (DEC-021: un 418 cierra)
+recuperable-por-agente, leniente       25/31   80,6%      se reporta al lado
+```
+
+Verde con las dos. **Con su límite**: 19 de 31 casos son estadística oficial
+de nivel 1, que es lo que el buscador devuelve con más facilidad; la TAREA 3
+desagrega la tasa por tipo de publicador y vía de descubrimiento (DEC-020). La
+humana real llega con los 5 casos de Mateo. La decisión es de la TAREA 3, no
+de este número.
 
 No es la fuente primaria actual. No es la búsqueda. Es la **edición anterior**,
 porque toda la tesis depende de comparar dos períodos — y los emisores publican
@@ -172,6 +181,12 @@ Sin cuota geográfica: español en general, emisores elegidos por recuperabilida
 | Edición anterior **no localizable** | 2 |
 | Formato hostil (PDF escaneado, sin datos abiertos) | 2 |
 
+`RESULTADO 2026-09-25` Formato hostil salió **0 de 2** y se acepta como
+hallazgo (DEC-022): buscando sin sesgo no aparecieron PDFs sin texto. El lote
+real quedó en 23: 18 en las cuatro cubetas llenas + 5 sin objetivo (3
+bloqueados por el publicador, 2 claims falsos). Ver
+[`COLECCION-LOTE-CRUDO.md`](COLECCION-LOTE-CRUDO.md) §2.
+
 **Regla dura, sin excepciones:** el caso **no entra** si existe un artículo de
 verificación sobre esa afirmación — Maldita, Newtral, AFP Factual, Ecuador
 Chequea, Chequeado o cualquier otro. Hay que buscar contenido crudo:
@@ -212,6 +227,9 @@ RECUPERACION      1. API oficial  2. dataset descargable  3. HTML
 ANTI-BOT          NO se evade nada. Ni user-agents falsos, ni desafios
                   de Cloudflare, ni scraping contra quien bloquea.
                   Un 403 al agente identificado ES la respuesta.
+                  Y un 406 o un 418 tambien: el primer rechazo cierra
+                  el caso aunque otro cliente honesto pase despues.
+                  Solo un error de red admite reintento (DEC-021).
 
 TIEMPOS           en serie, no en paralelo, para que el cronometro
                   por caso signifique algo.

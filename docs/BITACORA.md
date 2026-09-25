@@ -352,3 +352,47 @@ parcial (5), 5 falladas (1, 2, 3, 6, 7). La mayor: se predijo 30–50% y salió
 - Commit de `feat/lote-crudo-20` tras revisar el diff; fusionar a `main`
 - `feat/entorno-docker-local` sigue sin fusionar
 - TAREA 3 cuando estén los 5 de Mateo
+
+---
+
+## 2026-09-25 — Tres decisiones sobre el lote crudo (DEC-020 a DEC-022)
+
+### Qué se hizo
+
+**Commit de la TAREA 2** en `feat/lote-crudo-20` (`cf2946d`), aprobada por
+Mateo tal cual. Después, **tres decisiones aplicadas**:
+
+| | Decisión | Qué cambió |
+|---|---|---|
+| P-16 | Decide la **tasa natural sobre los 31 admitidos**, "la que menos manipulación tiene". La del lote se reporta al lado | `validar_lote_crudo.py` imprime primero la métrica sobre los trabajados; `ESTADO.md`, `GLOSARIO.md`, `research/README.md` reescriben el denominador |
+| P-17 | **Un 403/406/418 al primer cliente cierra el caso**, aunque `curl` pase después. "Si el publicador señala que no quiere agentes, se respeta" | C30 y C31 → `bloqueado_por_publicador`; cifra que decide **23/31 = 74,2%** (conservadora), 80,6% se reporta. Regla en `GLOSARIO.md` |
+| P-18 | **Formato hostil 0/2 es un hallazgo**: buscando sin sesgo no aparecieron PDFs sin texto. Sin segunda pasada | Nota en la composición del lote (`research/README.md`); lote de 23 |
+
+### Lo que Mateo señaló y queda como obligación para la TAREA 3
+
+*"Predijiste 30–50% y salió 80,6% [...] la herramienta de búsqueda te entregó
+los casos fáciles."* Es el sesgo del lote anterior con otra cara. La TAREA 3
+lleva una **sección de amenazas a la validez** con la distribución de los 31
+por tipo de publicador y por vía de descubrimiento, y la recuperabilidad
+desagregada. Adelantado en `COLECCION-LOTE-CRUDO.md` §3: nivel 1 **84,2%**
+(16/19), resto **58,3%** (7/12); prensa 20/28, comunicación oficial 3/3; Perú
+0/2. *"No cambies el número. Decláralo con su límite."* Hueco detectado: la
+vía de descubrimiento no se registró por candidato; hay que reconstruirla del
+transcript antes de la TAREA 3.
+
+**P-15 sigue abierta y sube de rango**: 1 de 12 aquí, 1 de 20 en el piloto.
+"Dos lotes independientes dicen lo mismo. Eso ya no es ruido, es señal."
+
+### Qué se verificó
+
+- `validar_lote_crudo.py` sale 0 con C30/C31 como bloqueados: lote 23,
+  excedentes 8, conservadora 23/31, leniente 25/31
+- La selección de los 5 casos de Mateo no cambia: la misma semilla sobre los
+  23 ids devuelve C04, C05, C11, C14, C22
+
+### Qué quedó pendiente
+
+- Mateo: sus 5 casos, sin que el agente mire ese CSV
+- Reconstruir la vía de descubrimiento por candidato
+- Fusionar `feat/lote-crudo-20` y `feat/entorno-docker-local` a `main`
+- TAREA 3

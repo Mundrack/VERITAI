@@ -283,15 +283,35 @@ def resumen() -> None:
     if exc:
         print("  excedentes:", dict(exc))
 
+    # --- la metrica que decide: sobre TODOS los trabajados (DEC-020), en dos lecturas -----
+    # conservadora: edicion anterior localizada Y alcanzable por agente. Un rechazo
+    # explicito al primer cliente cierra el caso aunque otro cliente pase (DEC-021).
+    # leniente: edicion anterior localizada, sin mirar como. Se reporta al lado.
+    if trabajados:
+        n = len(trabajados)
+        print(f"\n--- LA METRICA QUE DECIDE: sobre los {n} admitidos y trabajados (DEC-020) ---")
+        lin = sum(1 for c in trabajados if c["previous_edition_found"] == "si")
+        con = sum(1 for c in trabajados
+                  if c["previous_edition_found"] == "si" and c["alcanzable_por_agente"] == "si")
+        hu = sum(1 for c in trabajados if c["alcanzable_por_humano"] in ("si", "probable"))
+        print(f"  recuperable-por-agente, conservadora   {con:2}/{n}  {pct(con, n)}   <- DECIDE (DEC-021)")
+        print(f"  recuperable-por-agente, leniente       {lin:2}/{n}  {pct(lin, n)}      se reporta al lado")
+        print(f"  alcanzable_por_humano (si|probable)    {hu:2}/{n}  {pct(hu, n)}")
+        print("  desagregada por nivel de emisor (amenaza a la validez, DEC-020):")
+        for nivel in sorted({c["emisor_nivel"] for c in trabajados}):
+            sub = [c for c in trabajados if c["emisor_nivel"] == nivel]
+            k = sum(1 for c in sub if c["previous_edition_found"] == "si" and c["alcanzable_por_agente"] == "si")
+            print(f"    nivel {nivel}: {k:2}/{len(sub):2}  {pct(k, len(sub))}")
+
     if lote:
         n = len(lote)
-        print(f"\n--- LAS DOS METRICAS (sobre {n} en lote) ---")
+        print(f"\n--- sobre el lote por cubetas ({n}): se reporta al lado, NO decide ---")
         prev = sum(1 for c in lote if c["previous_edition_found"] == "si")
         print(f"  edicion anterior localizada           {prev:2}/{n}  {pct(prev, n)}")
         ag = sum(1 for c in lote if c["alcanzable_por_agente"] == "si")
         hu = sum(1 for c in lote if c["alcanzable_por_humano"] in ("si", "probable"))
         prev_ag = sum(1 for c in lote if c["previous_edition_found"] == "si" and c["alcanzable_por_agente"] == "si")
-        print(f"  recuperable-por-agente (anterior+alc.) {prev_ag:2}/{n}  {pct(prev_ag, n)}   <- DECIDE")
+        print(f"  recuperable-por-agente (anterior+alc.) {prev_ag:2}/{n}  {pct(prev_ag, n)}")
         print(f"  alcanzable_por_agente                  {ag:2}/{n}  {pct(ag, n)}")
         print(f"  alcanzable_por_humano (si|probable)    {hu:2}/{n}  {pct(hu, n)}")
 
