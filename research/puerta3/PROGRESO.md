@@ -32,7 +32,11 @@ Resultado: 17 casos trabajados (E027–E043) y 21 candidatos nuevos (Q032–Q052
 | O other_observed | 0 | 1 | — |
 
 **Regla DEC-033 (diseño §3b): B = 0 → no se gasta la jornada 3 y se abre una
-DEC de replanteo.** Pendiente de Mateo.
+DEC de replanteo.** Resuelto por **DEC-034**: la cubeta B pasa a ser 2b (base
+revisada) y 2a queda como clase secundaria con su 0/43. Con eso, E031, E042 y
+E043 pasan de C a B: **B = 3, C = 1** (la tabla de arriba es la foto al cerrar
+la jornada, antes de la DEC). La condición bloqueante (edición anterior del INE
+recuperable fuera de Tempus) está cumplida: `RECUPERABILIDAD-2B.md`.
 
 Vetas barridas y qué dieron:
 
@@ -67,8 +71,9 @@ Vetas barridas y qué dieron:
    `DatosBalanceAct` (09001 CCAA, 09002 provincias, 09003 municipios).
 
 Conclusión de la medición: bajo DEC-029 (solo cambio de signo o valor de otro
-periodo confirma 2a), **B no aparece en la prensa española sobre INE, SEPE,
-BdE y Portal**: los medios copian la comparación del emisor. Los B del lote
+periodo confirma 2a), **2a no apareció en 43 casos recolectados con este
+método** (dos vías, cuatro emisores). El hallazgo es sobre la muestra y el
+método, no sobre la prensa (corrección de redacción de Mateo). Los B del lote
 crudo venían de emisores institucionales (SEPE/Moncloa, CIS, Interior) y de
 LatAm (DANE, INEGI): fuera del alcance actual o en ediciones vetadas. El
 mecanismo dominante de la vía divergencia es **2b** (edición provisional

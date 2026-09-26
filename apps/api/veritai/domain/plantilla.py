@@ -12,7 +12,7 @@ from veritai.domain.enums import AbstainReason, Context, Truth
 from veritai.domain.evidencia import EvidenceBundle, EvidenceItem
 from veritai.domain.tests.resultado import ResultadoTest
 from veritai.domain.verdad import ResultadoVerdad
-from veritai.domain.veredicto import NumeroUsado
+from veritai.domain.veredicto import EvidenciaEdicion, NumeroUsado
 
 SALIDA = {
     (Truth.SUPPORTED, Context.DIVERGENCE_DETECTED): "Verdadero pero descontextualizado",
@@ -120,3 +120,37 @@ def explicar(
         lineas.append("Evidencia incompleta: faltan " + ", ".join(bundle.missing_slots) + ".")
     lineas.append(f"Evidencia: {len(bundle.items)} items, bundle {bundle.bundle_hash[:12]}.")
     return "\n".join(lineas), usados
+
+
+def lineas_ediciones(
+    al_publicar: EvidenciaEdicion | None, vigente: EvidenciaEdicion | None
+) -> tuple[list[str], list[NumeroUsado]]:
+    """Las dos evidencias del veredicto de 2b, cada una con su fecha (DEC-034).
+
+    Texto fijo, sin LLM: cada numero que se imprime entra en `numeros_usados`
+    con el `raw_value_span` de su edicion.
+    """
+    lineas: list[str] = []
+    usados: list[NumeroUsado] = []
+    if al_publicar is not None:
+        lineas.append(
+            f"Evidencia al publicar ({al_publicar.edicion}, publicada el "
+            f"{al_publicar.fecha}): {al_publicar.valor}."
+        )
+        usados.append(
+            NumeroUsado(
+                al_publicar.valor,
+                al_publicar.raw_value_span,
+                al_publicar.item_id,
+                "evidencia_al_publicar",
+            )
+        )
+    if vigente is not None:
+        lineas.append(
+            f"Evidencia vigente ({vigente.edicion}, consultada el {vigente.fecha}): "
+            f"{vigente.valor}."
+        )
+        usados.append(
+            NumeroUsado(vigente.valor, vigente.raw_value_span, vigente.item_id, "evidencia_vigente")
+        )
+    return lineas, usados

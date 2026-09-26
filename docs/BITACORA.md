@@ -960,3 +960,28 @@ agotarse las vetas dirigidas, no el reloj (detalle y tabla en
 - Q034 admitido sin trabajar; pasada de `methodology_found`; P-23 (P11);
   P-20 (los 5 casos de Mateo).
 - Fusionar `feat/puerta-3-recoleccion` cuando Mateo lo diga.
+
+## 2026-09-26 (15:00Z) — DEC-034: B pasa a 2b; condición bloqueante cumplida
+
+- Mateo abre el replanteo: **la cubeta B es 2b (base revisada)**; 2a queda
+  como clase secundaria con su 0/43. Último reencuadre del objeto. Q048 sigue
+  vetado.
+- **Condición bloqueante** (tres casos de edición anterior del INE
+  recuperables fuera de Tempus): cumplida con cinco ediciones de cuatro
+  operaciones (CTH0725, ETDP0725, H0625, SM0725, CTH0825): nota HTML, nota
+  PDF y anexo XLSX responden 200 al agente identificado con la URL derivada
+  del código de la nota; el valor publicado difiere del vigente en las cinco
+  (de +4 sociedades a −24.181 pernoctaciones). Herramienta
+  `research/puerta3/edicion_anterior.py`; resúmenes con sha256 en
+  `research/evidencia/D2B_*.json`; informe `research/puerta3/RECUPERABILIDAD-2B.md`.
+  Límite anotado: INEbase no lista notas anteriores; el patrón de código no
+  está documentado por el INE (`NEEDS_REVIEW` para códigos irregulares).
+- Validador: B exige `2b_base_revisada`, C admite 2a. Lote: E031, E042 y
+  E043 pasan de C a **B = 3**; C = 1. Cada uno lleva ya
+  `evidencia_al_publicar` y `evidencia_vigente` con su fecha.
+- Dominio: `EvidenciaEdicion` y los dos campos en `Veredicto.a_dict()`
+  (null si no hay 2b) y `lineas_ediciones()` en la plantilla, con test
+  `tests/test_veredicto_2b.py`. El test 2b y su conector se proponen aparte.
+- Corrección de redacción de Mateo aplicada en PROGRESO: el hallazgo de la
+  jornada 2 es "2a no apareció en 43 casos recolectados con este método", no
+  una afirmación sobre la prensa.

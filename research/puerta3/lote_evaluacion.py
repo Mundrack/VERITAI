@@ -1819,7 +1819,7 @@ CANDIDATOS: list[dict] = [
             "Hermano potencial: madridactual.es 2026-09-22 (mismo teletipo, no registrado). Segundo caso de la "
             "edicion CTH0826 (E019 A, E020 D). methodology_found=no (NEEDS_REVIEW)."
         ),
-        cubeta="C", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0826",
+        cubeta="B", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0826",  # C -> B por DEC-034
         conjunto="evaluacion", etiquetado_por="agente",
         estructura=dict(
             tipo="cambio_entre_periodos",
@@ -1829,6 +1829,18 @@ CANDIDATOS: list[dict] = [
                          descripcion="EOH, pernoctaciones en establecimientos hoteleros, Comunidad de Madrid, mensual"),
             periodo_objetivo="2026-M08", periodo_base="2025-M08",
             valor_objetivo=2165029, cambio_afirmado=2.36, unidad_cambio="pct", direccion_afirmada="sube",
+            # DEC-034: las dos evidencias del veredicto 2b, cada una con su fecha.
+            evidencia_al_publicar=dict(
+                valor=2115059, edicion="INE CTH0825 (agosto 2025, datos provisionales)", fecha="2025-09-23",
+                url="https://www.ine.es/prensa/anexo_tablas/es/CTH0825.xlsx",
+                raw_value_span="[CTH0825.xlsx, hoja EOH_Hoja3, fila 61] 'Madrid, Comunidad de', 1025795, 436770, 589025, 2115059, 785462, 1329597, 2.06",
+                verificacion="research/evidencia/D2B_CTH0825.json (HTTP 200, sha256)",
+            ),
+            evidencia_vigente=dict(
+                valor=2090878, edicion="API Tempus, tabla 2074, edicion vigente", fecha="2026-09-26",
+                url="https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/2074",
+                raw_value_span="[INE API tabla 2074] EOT1766 2025-M08: 2090878",
+            ),
             notas="Base interanual correcta en periodo, pero tomada de la edicion provisional (2.115.059) y no de la vigente (2.090.878): 2b. Sin cambio de signo.",
         ),
     ),
@@ -2389,7 +2401,7 @@ CANDIDATOS: list[dict] = [
             "edicion y otro medio: no es hermano. Mismo signo: el test 2a no disparia. Segundo caso de CTH0726 "
             "(E035 A). methodology_found=no (NEEDS_REVIEW)."
         ),
-        cubeta="C", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0726",
+        cubeta="B", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0726",  # C -> B por DEC-034
         conjunto="evaluacion", etiquetado_por="agente",
         estructura=dict(
             tipo="cambio_entre_periodos",
@@ -2399,6 +2411,18 @@ CANDIDATOS: list[dict] = [
                          descripcion="EOH, pernoctaciones en establecimientos hoteleros, Comunidad de Madrid, mensual"),
             periodo_objetivo="2026-M07", periodo_base="2025-M07",
             valor_objetivo=2297978, cambio_afirmado=-1.43, unidad_cambio="pct", direccion_afirmada="baja",
+            # DEC-034: las dos evidencias del veredicto 2b, cada una con su fecha.
+            evidencia_al_publicar=dict(
+                valor=2330843, edicion="INE CTH0725 (julio 2025, datos provisionales)", fecha="2025-08-22",
+                url="https://www.ine.es/prensa/anexo_tablas/es/CTH0725.xlsx",
+                raw_value_span="[CTH0725.xlsx, hoja EOH_Hoja3, fila 61] 'Madrid, Comunidad de', 1179239, 527894, 651345, 2330843, 903133, 1427710, 1.98",
+                verificacion="research/evidencia/D2B_CTH0725.json (HTTP 200, sha256)",
+            ),
+            evidencia_vigente=dict(
+                valor=2322289, edicion="API Tempus, tabla 2074, edicion vigente", fecha="2026-09-26",
+                url="https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/2074",
+                raw_value_span="[INE API tabla 2074] EOT1766 2025-M07: 2322289",
+            ),
             notas="Base interanual correcta en periodo, tomada de la edicion provisional (2.330.843) y no de la vigente (2.322.289): 2b. Sin cambio de signo.",
         ),
     ),
@@ -2451,7 +2475,7 @@ CANDIDATOS: list[dict] = [
             "del prototipo, DEC-029). Tercer caso de CTH0726 (E035 A, E042 C); tercer 2b del conjunto (E031, "
             "E042). methodology_found=no (NEEDS_REVIEW)."
         ),
-        cubeta="C", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0726",
+        cubeta="B", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0726",  # C -> B por DEC-034
         conjunto="evaluacion", etiquetado_por="agente",
         estructura=dict(
             tipo="cambio_entre_periodos",
@@ -2461,6 +2485,18 @@ CANDIDATOS: list[dict] = [
                          descripcion="EOH, pernoctaciones de residentes en Espana, Illes Balears, mensual"),
             periodo_objetivo="2026-M07", periodo_base="2025-M07",
             valor_objetivo=768195, cambio_afirmado=3.8, unidad_cambio="pct", direccion_afirmada="sube",
+            # DEC-034: las dos evidencias del veredicto 2b, cada una con su fecha.
+            evidencia_al_publicar=dict(
+                valor=740149, edicion="INE CTH0725 (julio 2025, datos provisionales)", fecha="2025-08-22",
+                url="https://www.ine.es/prensa/anexo_tablas/es/CTH0725.xlsx",
+                raw_value_span="[CTH0725.xlsx, hoja EOH_Hoja3, fila 23] 'Balears, Illes', 2036446, 193208, 1843238, 10987630, 740149, 10247481, 5.4",
+                verificacion="research/evidencia/D2B_CTH0725.json (HTTP 200, sha256)",
+            ),
+            evidencia_vigente=dict(
+                valor=786273, edicion="API Tempus, tabla 2074, edicion vigente", fecha="2026-09-26",
+                url="https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/2074",
+                raw_value_span="[INE API tabla 2074] EOT22193 2025-M07: 786273",
+            ),
             notas="Base interanual correcta en periodo, tomada de la edicion provisional (740.149) y no de la vigente (786.273): 2b con cambio de signo (+3,8% frente a -2,3%).",
         ),
     ),

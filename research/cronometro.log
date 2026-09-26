@@ -242,3 +242,15 @@
 2026-09-26T14:30:15+00:00	P3-J2	t2	Cierre de la jornada 2 (via divergencia dirigida, medicion DEC-033): B = 0. Vetas agotadas: signo mensual/interanual, desestacionalizado, base larga (2018/2019/2023), institucional (Moncloa, Delegaciones, Juntas, ayuntamientos), rankings, extremos, teletipos regionales EP. Unico patron B (Delegacion Madrid, base 2023) en edicion vetada (2T2026)
 2026-09-26T14:30:15+00:00	P3-PAUSA3	t0	Pausa a la espera de la decision de Mateo tras la jornada 2 (DEC-033, salida B=0)
 2026-09-26T14:30:49+00:00	E043	t2	CORRECCION: el articulo compara con la edicion PROVISIONAL de julio 2025 (residentes 'de 740.149 a 768.195' = +3,8%; extranjeros -2,2% hasta 10.015.343 contra 10.247.481): 740.149 y 10.247.481 son las cifras del anexo CTH0725, no las vigentes. 2b, cubeta C (no A)
+2026-09-26T14:52:06+00:00	D2B-CTH	t0	Demostracion DEC-034: derivar y descargar la edicion anterior CTH0725 fuera de Tempus (research/puerta3/edicion_anterior.py)
+2026-09-26T14:52:06+00:00	D2B-CTH	t1	URLs derivadas del codigo CTH0725: nota HTML, nota PDF y anexo XLSX, HTTP 200 al agente identificado (sha256 en research/evidencia/D2B_CTH0725.json)
+2026-09-26T14:52:06+00:00	D2B-CTH	t2	EOH julio 2025: HTML/PDF/XLSX 200; Balears pernoctaciones publicadas 10.987.630 (22/08/2025) vs vigentes 10.974.122
+2026-09-26T14:52:07+00:00	D2B-ETDP	t0	Demostracion DEC-034: derivar y descargar la edicion anterior ETDP0725 fuera de Tempus (research/puerta3/edicion_anterior.py)
+2026-09-26T14:52:07+00:00	D2B-ETDP	t1	URLs derivadas del codigo ETDP0725: nota HTML, nota PDF y anexo XLSX, HTTP 200 al agente identificado (sha256 en research/evidencia/D2B_ETDP0725.json)
+2026-09-26T14:52:07+00:00	D2B-ETDP	t2	ETDP julio 2025: HTML/PDF/XLSX 200; compraventas viviendas publicadas 64.730 (25/09/2025) vs vigentes 64.722
+2026-09-26T14:52:07+00:00	D2B-H	t0	Demostracion DEC-034: derivar y descargar la edicion anterior H0625 fuera de Tempus (research/puerta3/edicion_anterior.py)
+2026-09-26T14:52:07+00:00	D2B-H	t1	URLs derivadas del codigo H0625: nota HTML, nota PDF y anexo XLSX, HTTP 200 al agente identificado (sha256 en research/evidencia/D2B_H0625.json)
+2026-09-26T14:52:07+00:00	D2B-H	t2	Hipotecas junio 2025: HTML/PDF/XLSX 200; viviendas publicadas (H.9 TOTAL viviendas 41.834, 27/08/2025) vs vigentes 41.422
+2026-09-26T14:52:07+00:00	D2B-SM	t0	Demostracion DEC-034: derivar y descargar la edicion anterior SM0725 fuera de Tempus (research/puerta3/edicion_anterior.py)
+2026-09-26T14:52:07+00:00	D2B-SM	t1	URLs derivadas del codigo SM0725: nota HTML, nota PDF y anexo XLSX, HTTP 200 al agente identificado (sha256 en research/evidencia/D2B_SM0725.json)
+2026-09-26T14:52:07+00:00	D2B-SM	t2	Sociedades julio 2025: HTML/PDF/XLSX 200; publicadas 10.902 (11/09/2025) vs vigentes 10.906

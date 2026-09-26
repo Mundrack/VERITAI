@@ -19,5 +19,20 @@
   "cambio_afirmado": 2.36,
   "unidad_cambio": "pct",
   "direccion_afirmada": "sube",
+  "evidencia_al_publicar": {
+    "valor": 2115059,
+    "edicion": "INE CTH0825 (agosto 2025, datos provisionales)",
+    "fecha": "2025-09-23",
+    "url": "https://www.ine.es/prensa/anexo_tablas/es/CTH0825.xlsx",
+    "raw_value_span": "[CTH0825.xlsx, hoja EOH_Hoja3, fila 61] 'Madrid, Comunidad de', 1025795, 436770, 589025, 2115059, 785462, 1329597, 2.06",
+    "verificacion": "research/evidencia/D2B_CTH0825.json (HTTP 200, sha256)"
+  },
+  "evidencia_vigente": {
+    "valor": 2090878,
+    "edicion": "API Tempus, tabla 2074, edicion vigente",
+    "fecha": "2026-09-26",
+    "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/2074",
+    "raw_value_span": "[INE API tabla 2074] EOT1766 2025-M08: 2090878"
+  },
   "notas": "Base interanual correcta en periodo, pero tomada de la edicion provisional (2.115.059) y no de la vigente (2.090.878): 2b. Sin cambio de signo."
 }

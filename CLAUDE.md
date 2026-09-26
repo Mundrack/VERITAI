@@ -49,8 +49,8 @@ El proyecto avanza por puertas, no por calendario (`00b-DECISIONES-MATEO`).
 PUERTA 1  research/PILOT-DECISION.md con PILOT_GO   SUPERADA (DEC-023, alcance nivel 1)
 PUERTA 2  prototipo end-to-end, UNA clase, UN emisor  CERRADA (DEC-030; P11 en NEEDS_REVIEW
                                                        como condicion anotada, P-23)
-PUERTA 3  corpus anotado + arnes de evaluacion        <- siguiente: diseno del conjunto
-                                                       pendiente de aprobar; no se recolecta
+PUERTA 3  corpus anotado + arnes de evaluacion        EN CURSO (DEC-031 diseno aprobado; DEC-034:
+                                                       la cubeta B es 2b, base revisada; 43 casos)
 PUERTA 4  evaluacion completa
 ```
 
@@ -106,6 +106,11 @@ Vienen de `docs/DECISIONES.md`; aquí solo la regla, sin el contexto.
 - **Sin test aplicable, `undetermined`.** Un sistema que no evaluó nada no
   afirma ausencia de divergencia; `no_divergence_detected` exige un test
   aplicable que no disparó. *(DEC-029)*
+- **La clase principal (cubeta B) es 2b, base revisada; 2a es secundaria con
+  su 0/43.** Último reencuadre del objeto. El veredicto de 2b lleva
+  `evidencia_al_publicar` y `evidencia_vigente`, cada una con su fecha; la
+  edición anterior se recupera fuera de Tempus por el código de la nota
+  (`research/puerta3/edicion_anterior.py`). Q048 sigue vetado. *(DEC-034)*
 - **La métrica de la Puerta 1 se mide sobre todos los candidatos admitidos por
   la regla dura**, no sobre el lote por cubetas, y se reporta desagregada por
   nivel de emisor y vía de descubrimiento. *(DEC-020)*

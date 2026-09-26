@@ -1,0 +1,66 @@
+{
+ "codigo": "CTH0725",
+ "consultado": "2026-09-26T14:49:19+00:00",
+ "agente": "VERITAI-prototipo/0.1 (tesis UDLA; agente identificado, DEC-018)",
+ "descargas": {
+  "html": {
+   "url": "https://www.ine.es/dyngs/Prensa/CTH0725.htm",
+   "http": 200,
+   "content_type": "text/html;charset=UTF-8",
+   "bytes": 37733,
+   "sha256": "b42d0d6061d24da70ed987f4c26ccdfeb41b99e1b4e83cb4bad545f17777c99b",
+   "guardado_en": "research\\evidencia\\D2B_CTH0725.htm",
+   "fecha_publicacion": "22 de agosto de 2025",
+   "titular": "Las pernoctaciones en establecimientos hoteleros aumentaron un 1,8% en julio respecto al mismo mes de 2024."
+  },
+  "pdf": {
+   "url": "https://www.ine.es/dyngs/Prensa/CTH0725.pdf",
+   "http": 200,
+   "content_type": "application/pdf",
+   "bytes": 230385,
+   "sha256": "737e3bb1ef8904dc9f3b799e2c614ac13a2062df678a8f58d49e40983ab16fa8",
+   "guardado_en": "research\\evidencia\\D2B_CTH0725.pdf"
+  },
+  "xlsx": {
+   "url": "https://www.ine.es/prensa/anexo_tablas/es/CTH0725.xlsx",
+   "http": 200,
+   "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+   "bytes": 122508,
+   "sha256": "35dd3d4c4d5e0db2a7b215ed0e188db60e2417cae920bb42fcb43d9b903eee7e",
+   "guardado_en": "research\\evidencia\\D2B_CTH0725.xlsx",
+   "filas": [
+    {
+     "hoja": "EOH_Hoja3",
+     "fila_idx": 23,
+     "cabecera": [
+      "4. Viajeros, pernoctaciones y estancia media",
+      "Datos por comunidades y ciudades autónomas y provincias",
+      "Número de viajeros | Número de pernoctaciones | Estancia",
+      "Total | Residentes | Residentes en | Total | Residentes | Residentes en | media",
+      "en España | el extranjero | en España | el extranjero",
+      "TOTAL | 13044764 | 5842459 | 7202305 | 44691923 | 14895856 | 29796067 | 3.43",
+      "Andalucía | 2118987 | 1221977 | 897011 | 6857986 | 3636198 | 3221788 | 3.24",
+      "Almería | 238971 | 194704 | 44268 | 934056 | 741323 | 192732 | 3.91"
+     ],
+     "valores": [
+      "Balears, Illes",
+      2036446,
+      193208,
+      1843238,
+      10987630,
+      740149,
+      10247481,
+      5.4
+     ]
+    }
+   ]
+  }
+ },
+ "vigente": {
+  "serie": "EOT22194",
+  "nombre": "Balears, Illes. Pernoctaciones. Total categorías. Total. Dato. ",
+  "periodo": "2025-M07",
+  "valor": 10974122.0,
+  "consultado": "2026-09-26T14:49:24+00:00"
+ }
+}

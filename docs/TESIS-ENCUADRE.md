@@ -117,7 +117,9 @@ Puerta 2  -> evaluacion sobre datos distintos          (DEC-025: sin contaminaci
 ```
 Familia 2 · Comparacion de base           primera familia operacional (B)
    2a  periodo o base elegida             codigo 2_baseline_selection      C02 C15 (C21, cuerpo) · P05 P10 P11 P14
+                                          SECUNDARIA desde DEC-034: 0/43 en la Puerta 3
    2b  base revisada                      codigo 2b_base_revisada          C29; latente en la primaria de C18
+                                          PRINCIPAL desde DEC-034: E031 E042 E043 (Puerta 3)
    2c  cambio de metodo                   codigo 5_methodology_change      P13 (auditado)
 Test 1 · ranking vs valor                 1_ranking_vs_value, ilustrativo (A)    C07 · P01
 Test 3 · absoluto vs relativo             3_absolute_vs_relative           C19 C31 · P04 P19
@@ -141,6 +143,18 @@ hace falta la nota de prensa o el PDF de la edición anterior. Por eso 2b quedó
 conector, no de la clase. Y una regla que salió de esa puerta: en 2a **solo el
 cambio de signo confirma** la divergencia; la magnitud ≥ 2× en una base de
 horizonte largo es una *señal*, registrada y explicada, que no cuenta.
+
+**2b es la clase principal desde DEC-034.** La jornada 2 de la Puerta 3 cerró
+con 2a en 0 de 43 casos recolectados con ese método, y 2b apareció sola en tres
+lotes independientes (C18, C29, E031/E042/E043). La condición para el cambio se
+cumplió: la edición anterior del INE es recuperable por el agente fuera de
+Tempus, por derivación del código de la nota (nota HTML, PDF y anexo XLSX;
+`research/puerta3/RECUPERABILIDAD-2B.md`). El veredicto de 2b lleva dos campos
+separados, `evidencia_al_publicar` y `evidencia_vigente`, cada uno con su
+fecha. Es el último reencuadre del objeto: si 2b no funciona, se declara el
+alcance con lo que haya y la tesis se escribe con el resultado negativo
+documentado. 2a queda como clase secundaria con su 0/43, hallazgo publicable
+sobre la muestra y el método.
 
 ## Caso canónico: no hay todavía
 

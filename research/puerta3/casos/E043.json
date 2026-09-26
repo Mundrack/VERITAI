@@ -19,5 +19,20 @@
   "cambio_afirmado": 3.8,
   "unidad_cambio": "pct",
   "direccion_afirmada": "sube",
+  "evidencia_al_publicar": {
+    "valor": 740149,
+    "edicion": "INE CTH0725 (julio 2025, datos provisionales)",
+    "fecha": "2025-08-22",
+    "url": "https://www.ine.es/prensa/anexo_tablas/es/CTH0725.xlsx",
+    "raw_value_span": "[CTH0725.xlsx, hoja EOH_Hoja3, fila 23] 'Balears, Illes', 2036446, 193208, 1843238, 10987630, 740149, 10247481, 5.4",
+    "verificacion": "research/evidencia/D2B_CTH0725.json (HTTP 200, sha256)"
+  },
+  "evidencia_vigente": {
+    "valor": 786273,
+    "edicion": "API Tempus, tabla 2074, edicion vigente",
+    "fecha": "2026-09-26",
+    "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/2074",
+    "raw_value_span": "[INE API tabla 2074] EOT22193 2025-M07: 786273"
+  },
   "notas": "Base interanual correcta en periodo, tomada de la edicion provisional (740.149) y no de la vigente (786.273): 2b con cambio de signo (+3,8% frente a -2,3%)."
 }

@@ -149,12 +149,13 @@ def validar(marcas: dict) -> list[str]:
         if cub == "A" and not (t == "supported" and ctx == "no_divergence_detected" and cl == "none"
                                and est and est.get("tipo") == "cambio_entre_periodos" and est.get("periodo_base")):
             _err(errores, e, "cubeta A exige supported + no_divergence + none + cambio_entre_periodos con base")
-        if cub == "B" and not (ctx == "divergence_detected" and cl == "2_baseline_selection"):
-            _err(errores, e, "cubeta B exige divergence_detected + 2_baseline_selection")
+        # DEC-034: la clase principal (cubeta B) es 2b, base revisada; 2a pasa a C como clase secundaria.
+        if cub == "B" and not (ctx == "divergence_detected" and cl == "2b_base_revisada"):
+            _err(errores, e, "cubeta B exige divergence_detected + 2b_base_revisada (DEC-034)")
         if cub == "C" and not (ctx == "divergence_detected" and cl in
                                {"3_absolute_vs_relative", "4_denominator", "5_methodology_change",
-                                "2b_base_revisada", "1_ranking_vs_value"}):
-            _err(errores, e, "cubeta C exige divergence_detected con clase 3, 4, 2b, 2c o 1")
+                                "2_baseline_selection", "1_ranking_vs_value"}):
+            _err(errores, e, "cubeta C exige divergence_detected con clase 3, 4, 2a, 2c o 1 (DEC-034)")
         if cub == "O" and not (ctx == "divergence_detected" and cl == "other_observed" and c["mecanismo_candidato"]):
             _err(errores, e, "cubeta O exige divergence_detected + other_observed + mecanismo_candidato")
         if cub == "D" and not (ctx == "undetermined" and est and est.get("tipo") != "cambio_entre_periodos"):

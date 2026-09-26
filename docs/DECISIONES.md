@@ -1006,3 +1006,55 @@ número de B, no antes.
 **Alternativa descartada.** Dejar el 3 sin asignar y decidirlo al verlo:
 convertiría el umbral en posterior. Contar la señal de horizonte como B para
 subir el número: contradice DEC-029.
+
+## DEC-034 · Replanteo tras la jornada 2: la clase principal (cubeta B) pasa a ser 2b, base revisada; 2a queda como clase secundaria con su 0/43
+
+**Fecha:** 2026-09-26 · **Estado:** vigente · **Decide:** Mateo · **Aplica:** encuadre (`TESIS-ENCUADRE`), diseño de la Puerta 3 (§1, §1b, §3b), validador del lote, prototipo (test 2b)
+
+**Contexto.** La jornada 2 (DEC-033) cerró con B = 0: **2a no apareció en 43
+casos recolectados con este método**, por dos vías y con cuatro emisores. El
+hallazgo es sobre la muestra y el método, no sobre la prensa. 2b (base
+revisada) apareció sola, sin buscarla, en tres lotes independientes: C18
+(latente en la primaria) y C29 en el lote crudo, y en la jornada 2 tres
+teletipos regionales sobre la EOH que calculan la tasa contra la edición
+provisional del año anterior (E031, E042, E043), uno con cambio de signo
+(Baleares, residentes: +3,8 % publicado frente a −2,3 % con la edición
+vigente).
+
+**Decisión.**
+
+1. La cubeta B del conjunto de evaluación es **`2b_base_revisada`**. 2a
+   (`2_baseline_selection`) no desaparece: pasa a la cubeta C como clase
+   secundaria y conserva su resultado de **0/43**, que es un hallazgo
+   publicable por sí mismo.
+2. **Condición bloqueante, cumplida antes de recolectar nada más:** demostrar
+   con tres casos que la edición anterior de una estadística del INE es
+   recuperable por el agente fuera de Tempus. Resultado: cinco ediciones de
+   cuatro operaciones (EOH julio y agosto 2025, ETDP julio 2025, Hipotecas
+   junio 2025, Sociedades julio 2025); nota HTML, nota PDF y anexo XLSX
+   responden 200 al agente identificado con la URL derivada del código de la
+   nota, y en las cinco el valor publicado difiere del vigente. Detalle,
+   límites y herramienta: `research/puerta3/RECUPERABILIDAD-2B.md`.
+3. **Q048** (Delegación del Gobierno en Madrid) sigue vetado por DEC-025. No
+   se rescata.
+4. El veredicto de 2b lleva **dos campos separados**, `evidencia_al_publicar`
+   y `evidencia_vigente`, cada uno con su fecha (la de publicación de la
+   edición y la de consulta de la vigente). La distinción existía en el
+   diseño y no en la salida.
+5. **Este es el último reencuadre del objeto.** Si 2b no funciona, se declara
+   el alcance con lo que haya y la tesis se escribe con el resultado negativo
+   documentado.
+6. Se ajusta el prototipo: test 2b sobre dos ediciones, con un conector de
+   edición anterior fuera de Tempus. Se propone antes de implementarlo.
+
+**Consecuencias inmediatas.** Validador: B exige `divergence_detected` +
+`2b_base_revisada`; C admite 2a. Lote: E031, E042 y E043 pasan de C a B
+(B = 3 de 15; C = 1). Diseño §1/§1b/§3b, encuadre y `CLAUDE.md` actualizados.
+La regla de DEC-033 (B por jornada) se reevalúa con B = 2b en la siguiente
+jornada, con la tasa observada en la jornada 2 (3 de 17 casos de prensa).
+
+**Alternativas descartadas.** Bajar el mínimo de B a 10 manteniendo 2a: con
+0/43 no hay tasa que proyectar. Ampliar el tope con 2a: gastar jornadas en
+una clase que no aparece con este método. Redefinir el alcance hacia emisores
+institucionales para salvar 2a: cambia el objeto más que la clase, y Q048
+muestra que las ediciones admisibles no llegan hasta diciembre.

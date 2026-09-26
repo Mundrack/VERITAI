@@ -24,6 +24,35 @@ class NumeroUsado:
     etiqueta: str
 
 
+@dataclass(frozen=True)
+class EvidenciaEdicion:
+    """Un valor con su edicion y su fecha (DEC-034).
+
+    El veredicto de 2b (base revisada) lleva dos de estas, separadas: la
+    evidencia **al publicar** (la edicion con la que se calculo el claim, con
+    su fecha de publicacion) y la evidencia **vigente** (la edicion que sirve
+    hoy el emisor, con su fecha de consulta). La distincion existia en el
+    diseno y no en la salida.
+    """
+
+    valor: float
+    raw_value_span: str
+    edicion: str  # p. ej. "INE CTH0725 (julio 2025, datos provisionales)"
+    fecha: str  # ISO YYYY-MM-DD: publicacion (al publicar) o consulta (vigente)
+    url: str = ""
+    item_id: str = ""
+
+    def a_dict(self) -> dict:
+        return {
+            "valor": self.valor,
+            "raw_value_span": self.raw_value_span,
+            "edicion": self.edicion,
+            "fecha": self.fecha,
+            "url": self.url,
+            "item_id": self.item_id,
+        }
+
+
 @dataclass
 class Veredicto:
     claim_id: str
@@ -35,6 +64,9 @@ class Veredicto:
     comparaciones: list[Comparacion] = field(default_factory=list)
     numeros_usados: list[NumeroUsado] = field(default_factory=list)
     explicacion: str = ""
+    # DEC-034: solo los rellena el test 2b; en el resto van a null.
+    evidencia_al_publicar: EvidenciaEdicion | None = None
+    evidencia_vigente: EvidenciaEdicion | None = None
     bundle_hash: str = ""
     generado_en: datetime = field(default_factory=lambda: datetime.now(UTC))
 
@@ -81,6 +113,12 @@ class Veredicto:
                 for n in self.numeros_usados
             ],
             "explicacion": self.explicacion,
+            "evidencia_al_publicar": (
+                self.evidencia_al_publicar.a_dict() if self.evidencia_al_publicar else None
+            ),
+            "evidencia_vigente": (
+                self.evidencia_vigente.a_dict() if self.evidencia_vigente else None
+            ),
             "bundle_hash": self.bundle_hash,
             "generado_en": self.generado_en.isoformat(),
         }

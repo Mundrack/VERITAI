@@ -60,8 +60,8 @@ el sistema no falla nunca. **40 es el mínimo** que tolera un falso positivo;
 | Cubeta | Qué es | Objetivo (mín.) | Para qué |
 |---|---|---|---|
 | **A · Controles con test aplicable** | cambio entre periodos correctamente enmarcado: base = referencia del emisor, `truth` supported, `context` no_divergence | **50 (40)** | **FPR, H3** |
-| B · 2a esperada | cambio de signo o valor atribuido a otro periodo | 20 (15) — 18/20 detectados da 90 % [69,9; 97,2] | H1, H2 |
-| C · Otras clases | 3 absoluto/relativo, 4 denominador, 2c método; 1 ilustrativa | 15 (10) | el 2a no debe disparar; H1 |
+| B · **2b esperada** (DEC-034; antes 2a) | base revisada: la tasa del claim usa la edición **al publicar** del periodo base y la edición **vigente** la contradice, con o sin cambio de signo | 20 (15) — 18/20 detectados da 90 % [69,9; 97,2] | H1, H2 |
+| C · Otras clases | 2a periodo o base elegida (secundaria desde DEC-034, 0/43), 3 absoluto/relativo, 4 denominador, 2c método; 1 ilustrativa | 15 (10) | el test principal no debe disparar; H1 |
 | D · Sin test aplicable | niveles, extremos, umbrales, compuestos, correctos | 10 (5) | `undetermined` y abstención correctos |
 | E · Fallo de recuperación | primaria o edición anterior no localizable; bloqueado | 10 (5) | las cinco de R02 §7, sin maquillar |
 | F · Claims falsos | `contradicted` sin divergencia | 5 (3) | resuelve la discrepancia C17 |
@@ -180,3 +180,25 @@ cuenta como B en ningún escenario.** La asignación es completa y previa:
 Lo que no cambia en ningún escenario: la regla dura, DEC-021, DEC-025,
 DEC-029, los hermanos cuentan una vez, y los casos de la vía divergencia que
 resulten controles se anotan como A y cuentan para el FPR.
+
+## 4. Replanteo tras la jornada 2 (DEC-034): la cubeta B es 2b
+
+La jornada 2 cerró con **B = 0**: 2a no apareció en 43 casos recolectados con
+este método (`puerta3/PROGRESO.md`). Por DEC-034 la cubeta B pasa a ser
+**`2b_base_revisada`**: la tasa del claim se calculó con la edición **al
+publicar** del periodo base y la edición **vigente** la contradice, con o sin
+cambio de signo. 2a pasa a la cubeta C como clase secundaria y conserva su
+0/43. Los objetivos numéricos de §1 no cambian (B 20, mínimo 15: los
+intervalos valen para cualquier clase).
+
+Condición bloqueante, cumplida antes de recolectar nada más: la edición
+anterior del INE es recuperable por el agente fuera de Tempus
+([`puerta3/RECUPERABILIDAD-2B.md`](puerta3/RECUPERABILIDAD-2B.md): cinco
+ediciones de cuatro operaciones, nota HTML, nota PDF y anexo XLSX con 200, y el
+valor publicado difiere del vigente en las cinco).
+
+Anotación de un caso B: `estructura.evidencia_al_publicar` y
+`estructura.evidencia_vigente`, cada una con valor, edición, **fecha**
+(publicación / consulta), URL y `raw_value_span` (E031, E042, E043). Tasa
+observada de 2b en la jornada 2: 3 de 17 casos de prensa; con ella la regla de
+§3b se reevalúa en la jornada 3. Q048 sigue vetado por DEC-025.
