@@ -58,7 +58,7 @@ no hace falta rotarla. Pero solo es segura si hay RLS: sin políticas, esa clave
 equivale a un `SELECT *` sobre cada tabla expuesta. Es exactamente el motivo de
 DEC-004.
 
-### P-12 · ¿Reabrir las clases 6 y 7?
+### P-12 · ¿Reabrir las clases 6 y 7? — CERRADA (DEC-027)
 
 **Estado:** abierto, **decisión aplazada al lote crudo** · **Origen:** AUDIT-PILOT-20 §6
 
@@ -193,6 +193,15 @@ queda en 5 de 26 (P17, C03, C05, C08, C10); C08 es discutible. Ninguna
 reetiqueta se hace hasta que lo decida: sería ajustar el corpus a la
 hipótesis.
 
+`DECISIÓN DE MATEO (2026-09-25, DEC-027)` Acepta los tres encajes limpios
+(P05 → 2a, P07 → 4, C13 → 2a). C08 no se reetiqueta. C03 sale de
+`other_observed` a `no_divergence_detected` con la lectura alternativa
+registrada; C05 a abstención con los dos motivos. **P17 y C10 quedan como
+candidatas: no se crean clases con n=1**; se deciden solo si reaparecen en
+el conjunto de evaluación, con el criterio escrito en DEC-027 antes de ver
+esos datos. Las clases 6 y 7 no se reabren: lo que quedaba dentro era, o
+una clase existente mal nombrada, o abstención, o una candidata con n=1.
+
 ### P-20 · Cierre humano/agente
 
 **Estado:** abierto, esperando datos · **Bloquea:** la ratificación de PILOT-DECISION · **Decide:** los datos, y Mateo
@@ -253,6 +262,7 @@ No bloquea nada. Evita rehacer.
 | P-19 | ¿Se declara el alcance del sistema en publicadores de nivel 1? | **Sí.** Alcance declarado a nivel 1; niveles 3–5 como limitación escrita con su 58,3%. Emisores: INE, FMI, Interior. Ver DEC-024 | 2026-09-25 |
 | — | ¿`PILOT_GO`? | **Ratificado por Mateo.** Puerta 1 cerrada; la Puerta 2 no arranca hasta cerrar P-15. Ver DEC-023 | 2026-09-25 |
 | P-15 | La clase canónica aparece 1 vez en 20 (y 1 en 12) | **Reencuadre E / B / A, C subtipo 2b.** Objeto general: divergencia contextual computable; primera familia: comparación de base (2a, 2b, 2c); ranking ilustrativo. Título, hipótesis, objetivos y alcance en `TESIS-ENCUADRE.md`. Sin caso canónico: par C18 + C29. Ver DEC-026 | 2026-09-25 |
+| P-12 | ¿Reabrir las clases 6 y 7? | **No.** Tras el desglose: P05 → 2a, P07 → 4, C13 → 2a; C03 → sin divergencia (lectura alternativa); C05 → abstención con dos motivos; C08 se queda; P17 y C10 candidatas con criterio de reaparición, sin clase con n=1. Ver DEC-027 | 2026-09-25 |
 | — | Geografía del lote nuevo (D2 de la adenda) | **Opción A**: español en general, sin cuota geográfica. Cerrada en `00b` | antes del 2026-09-08 |
 | — | ¿Framework en el panel web? | **No.** TypeScript vanilla, por coherencia con el stack cerrado en R02 §5. Ver DEC-008 | 2026-09-08 |
 | — | ¿Alembic o runner propio? | **Runner propio**, por portabilidad a `supabase db push`. Ver DEC-006 | 2026-09-08 |

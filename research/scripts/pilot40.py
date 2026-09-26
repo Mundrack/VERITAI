@@ -135,8 +135,9 @@ def validar(filas: list[dict]) -> list[str]:
         for campo, permitido in enums.items():
             if f[campo] not in permitido:
                 errores.append(f"{f['case_id']}: {campo}='{f[campo]}' fuera de enum")
-        if f["abstain_reason"] and f["abstain_reason"] not in ABSTAIN:
-            errores.append(f"{f['case_id']}: abstain_reason='{f['abstain_reason']}' fuera de enum")
+        for motivo in filter(None, str(f["abstain_reason"]).split("|")):  # varios motivos con '|' (DEC-027)
+            if motivo not in ABSTAIN:
+                errores.append(f"{f['case_id']}: abstain_reason='{motivo}' fuera de enum")
         for campo in ("claim_text", "post_url", "truth", "context"):
             if not f[campo]:
                 errores.append(f"{f['case_id']}: {campo} vacio")

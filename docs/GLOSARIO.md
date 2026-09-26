@@ -34,8 +34,8 @@ recuperados. Independiente de `truth`; **no afirma intención**.
 *"España cae 16 puestos en el ranking de países más seguros para mujeres."* El
 dato es correcto: la puntuación de España no cambió, 16 países mejoraron la suya.
 `truth: supported` + `context: divergence_detected`. Es `1_ranking_vs_value`,
-**2 de 26 divergencias en alcance** en el piloto: ilustra el fenómeno, no lo
-representa.
+**2 de 24 divergencias en alcance** en el piloto (tras DEC-027): ilustra el
+fenómeno, no lo representa.
 
 **Caso canónico**
 No hay todavía (DEC-026). Se cotejaron C29, C21 y C18 contra cinco requisitos
@@ -156,13 +156,25 @@ not_applicable
 4_denominator             test 4 · denominador
 5_methodology_change      familia 2 · 2c cambio de metodo
 none                      control negativo
-other_observed            lo que no encaje, con nota libre (8 de 26 en alcance -> P-12)
+other_observed            lo que no encaje, con nota libre (3 de 24 en alcance tras DEC-027: P17 C08 C10)
 ```
 
 `NOTA` **Familia 2, "comparación de base"** *(DEC-026)*: 2a, 2b y 2c son la
 primera familia que se implementa y evalúa. Los códigos `2_baseline_selection`
 y `5_methodology_change` se conservan con su nombre; `2b_base_revisada` es el
 único código nuevo. Solo C29 cambió de etiqueta.
+
+`NOTA` **Candidatas a clase, sin código** *(DEC-027)*: "agregación con
+subgrupos en sentido contrario" (P17) y subtipo 2d "cambio afirmado sin
+edición anterior" (C10). **No se crean con n = 1.** Criterio de reaparición,
+fijado antes de ver los datos: ≥ 3 casos independientes (no hermanos, ≥ 2
+emisores) en el conjunto de evaluación, con primaria y edición anterior
+localizadas (A o B) y test computable sin juicio humano. Se decide una sola
+vez, al cerrar la anotación de ese conjunto.
+
+`NOTA` **Varios motivos de abstención** se separan con `|`
+(`REQUIRED_SLOT_MISSING|UNSUPPORTED_CLAIM_TYPE`, C05), igual que las clases
+secundarias.
 
 `NOTA` Las clases 6 (correlación/causalidad) y 7 (cifra real, marco falso) se
 acordó dejarlas fuera de la tesis, pero aparecen en varios casos. Se registran

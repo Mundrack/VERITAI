@@ -62,6 +62,11 @@ BUCKET = {
     # es incorrecto, no el marco). Es la celda que DEC-016 dijo que hace medible
     # el FPR por el eje truth. Sin objetivo de composicion; se cuenta aparte.
     "claim_falso",
+    # Anadida el 2026-09-25 con DEC-027 (P-12): el sistema ABSTIENE aunque la
+    # primaria y la edicion anterior esten localizadas, porque falta un slot del
+    # claim o su tipo no esta soportado (C05: superlativo regional sin fuente +
+    # atribucion causal). No es fallo de recuperacion. Sin objetivo.
+    "abstencion",
 }
 OBJETIVO_BUCKET = {
     "control_negativo": 7,
@@ -180,8 +185,10 @@ def validar() -> list[str]:
         for sec in filter(None, str(c["clases_secundarias"]).split("|")):
             if sec not in CLASE:
                 _err(errores, case_id, f"clase secundaria '{sec}' fuera de enum")
-        if c["abstain_reason"] not in ABSTAIN:
-            _err(errores, case_id, f"abstain_reason '{c['abstain_reason']}' fuera de enum")
+        # Varios motivos se separan con '|', como las clases secundarias (DEC-027: C05).
+        for motivo in filter(None, str(c["abstain_reason"]).split("|")):
+            if motivo not in ABSTAIN:
+                _err(errores, case_id, f"abstain_reason '{motivo}' fuera de enum")
         if c["abandonado_por_tiempo"] not in ABANDONO:
             _err(errores, case_id, f"abandonado_por_tiempo '{c['abandonado_por_tiempo']}' fuera de enum")
         if c["bucket_resultado"] not in BUCKET:
@@ -215,9 +222,14 @@ def validar() -> list[str]:
                  and "bucket_resultado" in c]
     en_lote = [c for c in admitidos if c.get("excedente") == "no"]
     por_bucket = Counter(c["bucket_resultado"] for c in en_lote)
+    # Los objetivos fueron la regla de PARADA de la recoleccion (2026-09-25), no una
+    # restriccion posterior: la pertenencia al lote (excedente) se congelo entonces.
+    # Un reetiquetado posterior (DEC-027: C03 pasa a control_negativo, el 8o en lote)
+    # puede dejar una cubeta por encima del objetivo; se avisa, no se falla.
     for b, objetivo in OBJETIVO_BUCKET.items():
         if por_bucket.get(b, 0) > objetivo:
-            _err(errores, b, f"{por_bucket[b]} en lote supera el objetivo {objetivo}; sobrantes deben ir a excedente")
+            print(f"  AVISO: {b} tiene {por_bucket[b]} en lote sobre un objetivo de formacion de {objetivo} "
+                  f"(reetiquetado posterior a la recoleccion; la pertenencia al lote no se recompone)")
 
     return errores
 

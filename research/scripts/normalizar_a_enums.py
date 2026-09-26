@@ -239,7 +239,7 @@ CASOS: list[Caso] = [
     Caso(
         "P05", True,
         truth="contradicted", context="divergence_detected",
-        clase_primaria="other_observed", clases_secundarias="",
+        clase_primaria="2_baseline_selection", clases_secundarias="",  # DEC-027: antes other_observed
         recuperabilidad="B", formato="pdf", abstain_reason="METHODOLOGY_NOT_COMPARABLE",
         truth_original="contradicted in temporal attribution",
         context_original="divergence_detected",
@@ -250,6 +250,9 @@ CASOS: list[Caso] = [
             "truth: 'in temporal attribution' es un matiz, no una etiqueta. Va a notas. | "
             "clase: la 7 quedo fuera de la tesis, asi que se registra como other_observed "
             "con el detalle en notas, para no perder la frecuencia observada."
+            "| DEC-027 (P-12, 2026-09-25): reetiquetado a 2_baseline_selection (2a). Mecanismo: valor "
+            "real atribuido al periodo equivocado: la base declarada (2018) no lleva el valor usado (el "
+            "~66,7% es de 2019-2023); test: valor(primaria, ano declarado) == valor del claim."
         ),
         audit_status="verificado",
         audit_notas=(
@@ -283,7 +286,7 @@ CASOS: list[Caso] = [
     Caso(
         "P07", True,
         truth="contradicted", context="divergence_detected",
-        clase_primaria="other_observed", clases_secundarias="4_denominator",
+        clase_primaria="4_denominator", clases_secundarias="",  # DEC-027: antes other_observed / 4_denominator
         recuperabilidad="B", formato="pdf", abstain_reason="REQUIRED_SLOT_MISSING",
         truth_original="contradicted",
         context_original="divergence_detected",
@@ -294,6 +297,9 @@ CASOS: list[Caso] = [
             "clase: 'scope/geography mismatch' no es una de las cinco candidatas. Se registra "
             "como other_observed, con 4_denominator como secundaria porque el fallo es que "
             "numerador y denominador pertenecen a ambitos distintos."
+            "| DEC-027 (P-12, 2026-09-25): reetiquetado a 4_denominator como primaria (antes secundaria). "
+            "Mecanismo: ambito del numerador (Cataluna, 53,0%) distinto del ambito de la afirmacion "
+            "(Espana, 32,7%); denominador = poblacion de referencia."
         ),
         audit_status="verificado",
         audit_notas=(
@@ -531,6 +537,9 @@ CASOS: list[Caso] = [
             "en una ruta (-67,4% en Canarias), pero el universal ('todas las rutas') es falso "
             "porque el Mediterraneo Occidental sube. | clase: subgroup masking no es una de "
             "las cinco; other_observed. | recuperabilidad: A/B resuelto a B."
+            "| DEC-027 (P-12, 2026-09-25): sigue other_observed. CANDIDATA a clase nueva "
+            "agregacion con subgrupos en sentido contrario (cuantificador universal sobre un "
+            "agregado). No se crea con n=1: criterio de reaparicion de DEC-027."
         ),
         audit_status="verificado",
         audit_notas=(

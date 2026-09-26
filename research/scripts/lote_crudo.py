@@ -175,10 +175,11 @@ CANDIDATOS: list[dict] = [
             "54.371 personas en relacion con el mes anterior.' | 'la cifra total de parados registrados "
             "es de 3.065.804'"
         ),
-        truth="supported", context="divergence_detected",
-        clase_primaria="other_observed", clases_secundarias="2_baseline_selection", abstain_reason="",
-        abandonado_por_tiempo="", bucket_resultado="divergencia_real", excedente="no",
+        truth="supported", context="no_divergence_detected",  # DEC-027
+        clase_primaria="none", clases_secundarias="", abstain_reason="",  # DEC-027: antes other_observed / 2_baseline
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",  # DEC-027: antes divergencia_real
         notas=(
+            "DEC-027 (P-12, 2026-09-25): reetiquetado a context=no_divergence_detected, clase none. LECTURA ALTERNATIVA registrada: el mismo dato admite peor agosto en 7 anos (flujo mensual) y nivel mas bajo en agosto desde 2007 (stock, titular del propio SEPE); no es comparacion incorrecta sino lectura parcial, y eso es contexto que el sistema muestra, no divergencia. Cubeta control_negativo (8o en el lote: el objetivo de 7 era regla de formacion, no restriccion posterior). || "
             "El claim es CIERTO: +44.419 es la mayor subida de agosto desde 2019, en absoluto y tambien "
             "en porcentaje (1,92% sobre 2,31 M frente a 1,80% sobre 3,01 M en 2019). La divergencia es "
             "de encuadre: el mismo dato admite dos lecturas verdaderas que apuntan en direcciones "
@@ -284,10 +285,11 @@ CANDIDATOS: list[dict] = [
             "[INEC, Boletin Tecnico N 07-2026-IPC, julio 2026, p.3] 'La variacion anual de precios de "
             "julio 2026, respecto a julio 2025, alcanzo 1,39%; como referencia, en julio 2025 fue de 0,72%.'"
         ),
-        truth="mixed", context="divergence_detected",
-        clase_primaria="other_observed", clases_secundarias="", abstain_reason="REQUIRED_SLOT_MISSING",
-        abandonado_por_tiempo="", bucket_resultado="divergencia_real", excedente="no",
+        truth="insufficient_evidence", context="undetermined",  # DEC-027
+        clase_primaria="none", clases_secundarias="", abstain_reason="REQUIRED_SLOT_MISSING|UNSUPPORTED_CLAIM_TYPE",  # DEC-027
+        abandonado_por_tiempo="", bucket_resultado="abstencion", excedente="no",  # DEC-027: antes divergencia_real
         notas=(
+            "DEC-027 (P-12, 2026-09-25): pasa a ABSTENCION con dos motivos: REQUIRED_SLOT_MISSING (el superlativo regional se sostiene en una imagen sin cifras ni fuentes) y UNSUPPORTED_CLAIM_TYPE (atribucion causal Gobierno protege el bolsillo, clase 6, fuera de tesis). truth insufficient_evidence, context undetermined, cubeta abstencion (sin objetivo). El 1,12% sigue verificado (INEC) y la edicion anterior localizada: la abstencion NO es fallo de recuperacion. || "
             "Tres capas en un claim: (1) '1,12%' es literal del INEC: supported. (2) 'la mas baja de "
             "Sudamerica', sin la cobertura de C04: el comparador esta en un grafico-imagen de la propia "
             "nota, sin cifras en texto y sin citar de donde salen las de los demas paises; Guyana y "
@@ -533,6 +535,7 @@ CANDIDATOS: list[dict] = [
         clase_primaria="other_observed", clases_secundarias="", abstain_reason="PREVIOUS_EDITION_NOT_FOUND",
         abandonado_por_tiempo="", bucket_resultado="edicion_anterior_no_localizable", excedente="no",
         notas=(
+            "DEC-027 (P-12, 2026-09-25): sigue other_observed. CANDIDATA a subtipo 2d cambio afirmado sin edicion anterior (familia comparacion de base). No se crea con n=1: se decide por el criterio de reaparicion de DEC-027 sobre el conjunto de evaluacion. || "
             "El puesto (44 de 48) y las puntuaciones son literales de la tabla del emisor. Pero el "
             "indice es de PRIMERA EDICION (publicado 2026-09-16; el sitio de GCS no tiene una version "
             "2025 de este briefing, aunque si de otros informes) y el titular dice 'cae al puesto 44': "
@@ -703,9 +706,10 @@ CANDIDATOS: list[dict] = [
             "el 51,5%' (la frase del total nacional no se capturo con el patron de busqueda)"
         ),
         truth="mixed", context="divergence_detected",
-        clase_primaria="other_observed", clases_secundarias="", abstain_reason="",
+        clase_primaria="2_baseline_selection", clases_secundarias="", abstain_reason="",  # DEC-027: antes other_observed
         abandonado_por_tiempo="", bucket_resultado="divergencia_real", excedente="no",
         notas=(
+            "DEC-027 (P-12, 2026-09-25): reetiquetado a 2_baseline_selection (2a). Mecanismo: direccion implicita contraria a la edicion anterior (llego a sugiere subida; la serie del DANE baja seis julios seguidos, 54,8 -> 54,5); test: direccion implicita vs signo(actual - anterior). || "
             "54,5% es literal (julio 2026, total nacional). Dos problemas de encuadre: (1) 'pero la "
             "informalidad LLEGO a 54,5%' presenta el dato como contrapunto negativo al descenso del paro, "
             "sugiriendo subida, cuando la serie del propio DANE muestra que BAJA por sexto julio "

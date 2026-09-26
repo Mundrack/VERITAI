@@ -64,6 +64,12 @@ excluidas por inalcanzables sin evadir protecciones*.
 **Excedentes (8):** control negativo C18 C20 C21 C23 C26 · divergencia C15 C19
 C29. Están en `pilot-crudo-trabajados.csv` con todos sus campos.
 
+`TRAS DEC-027 (P-12, 2026-09-25)` La tabla de arriba es la de la recolección.
+Después, C03 pasó a control negativo (lectura alternativa) y C05 a abstención:
+en el lote quedan divergencia real 4, control negativo 8 (sobre un objetivo de
+formación de 7; el validador avisa, no falla) y una cubeta `abstencion` sin
+objetivo. La pertenencia al lote no se recompone. Ver §4.
+
 **Déficit declarado: formato hostil 0 de 2.** El pool se agotó sin encontrar un
 solo PDF escaneado o sin texto: los 16 casos con vía `pdf` se extrajeron con
 `pypdf` sin OCR, incluidos los de emisores de nivel 5 (Ávoris, Europ
@@ -231,6 +237,14 @@ other_observed           5    C03 C05 C08 C10 C13
 secundarias: C03 -> 2_baseline · C08 -> 1_ranking · C19 -> 4_denominator
              C29 -> 2_baseline_selection
 ```
+
+`TRAS DEC-027 (P-12, 2026-09-25)` Este bloque es el registro de la
+recolección. Después, Mateo reetiquetó: **C13 → 2_baseline_selection**, **C03
+→ sin divergencia** (control negativo, lectura alternativa registrada) y
+**C05 → abstención** (`REQUIRED_SLOT_MISSING|UNSUPPORTED_CLAIM_TYPE`, cubeta
+`abstencion`). En el lote quedan 10 divergencias, no 12; la cubeta de control
+negativo tiene 8 sobre un objetivo de formación de 7 y el validador avisa sin
+fallar. Estado vigente en `pilot-crudo-trabajados.csv` y `PILOT-FINDINGS.md` §5.
 
 **La clase canónica aparece 1 vez en 12** (más una secundaria). En el piloto
 auditado era 1 en 20. P-15 no se cierra sola: sigue siendo una pregunta sobre

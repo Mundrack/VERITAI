@@ -66,7 +66,7 @@ reasons:
   - "Edicion anterior localizada por el agente, conservadora: 23/31 = 74,2% (> 60%). Leniente 25/31 = 80,6%."
   - "Sin los seis casos no independientes (hermanos por criba): 18/25 = 72,0%. Sigue en verde."
   - "Fuente primaria localizada 25/31 = 80,6% (> 70%); extraccion sin intervencion extrema 25/31 = 80,6% (> 60%); 4 clases de divergencia observadas (>= 3); 2,3 min por caso para el agente (< 20)."
-  - "El lote crudo tiene 15 controles negativos reales y 6 casos de recuperabilidad D: el sesgo D1 del piloto original esta corregido y la tasa de falsos positivos pasa a ser medible."
+  - "El lote crudo tiene 16 controles negativos reales (tras DEC-027) y 6 casos de recuperabilidad D: el sesgo D1 del piloto original esta corregido y la tasa de falsos positivos pasa a ser medible."
   - "LIMITE: 19 de 31 casos son de nivel 1 y 21 de 31 de Espana; la mezcla la eligio el barrido y el buscador. Nivel 1 = 84,2%, resto = 58,3%. El GO vale para nivel 1."
   - "PENDIENTE: la recuperabilidad humana (5 casos de Mateo, DEC-014). La decision se revisa si contradice la del agente."
 
@@ -74,7 +74,7 @@ recommended_thesis_classes:
   - "P-15 CERRADA (DEC-026, 2026-09-25): objeto general = divergencia contextual computable (E); primera familia que se implementa y evalua = comparacion de base: 2a periodo o base elegida (2_baseline_selection), 2b base revisada (2b_base_revisada, codigo nuevo), 2c cambio de metodo (5_methodology_change) (B, 8 de 28); 1_ranking_vs_value como caso ilustrativo (A, 2 de 28); base revisada como subtipo 2b, no como apuesta unica (C)."
   - "Sin caso canonico: C29, C21 y C18 no cumplen los cinco requisitos con un claim divergente. La tesis presenta el par C18 + C29; el canonico sale de la Puerta 2 sobre datos no usados en el piloto."
   - "Encuadre completo (titulo, pregunta, H1-H3, objetivos, definicion operacional, alcance) en docs/TESIS-ENCUADRE.md. El sistema demuestra divergencia, no intencion."
-  - "other_observed es 8 de 26 divergencias en alcance (10 de 28 si se cuentan P08 y P09, fuera por DEC-013) y 4 de 21 sin hermanos por criba: P-12 sigue abierta y Mateo la revisa antes de la Puerta 2. Desglose en PREGUNTAS-ABIERTAS.md."
+  - "P-12 CERRADA (DEC-027): other_observed queda en 3 de 24 divergencias en alcance (P17, C08, C10) tras P05 -> 2a, P07 -> 4, C13 -> 2a, C03 -> sin divergencia (lectura alternativa) y C05 -> abstencion con dos motivos. P17 y C10 son candidatas sin codigo: solo pasan a clase si reaparecen en el conjunto de evaluacion (>=3 casos independientes, >=2 emisores, A|B, test computable). Las clases 6 y 7 no se reabren."
 
 recommended_publishers:
   - "INE (API Tempus): recuperabilidad A, sin rechazo; casos C11, C16, C17 en el crudo y P04, P11, P16, P19 en el auditado (tres con divergencia: baseline y absoluto/relativo). Primer conector."

@@ -697,3 +697,52 @@ CSV (C29), `pilot40.py`, `README.md` raíz, `CLAUDE.md` §1, `ESTADO.md`,
 **Alternativa descartada.** Forzar un caso canónico ahora (C29 con la
 revisión inferida, o C18 sin claim divergente). Contaría una historia mejor
 con evidencia peor.
+
+---
+
+## DEC-027 · `other_observed` desglosado: tres encajes, dos salidas, dos candidatas
+
+**Fecha:** 2026-09-25 · **Estado:** vigente · **Decide:** Mateo · **Cierra:** P-12
+
+**Contexto.** `other_observed` era el grupo más grande: 8 de 26 divergencias
+en alcance (10 de 28 contando P08 y P09, fuera por DEC-013), y 4 de esos 8
+eran hermanos por criba. Mateo pidió el desglose caso a caso
+(`PREGUNTAS-ABIERTAS.md`, P-12) y decidió sobre él.
+
+**Decisión.**
+
+| Caso | Antes | Ahora | Mecanismo registrado |
+|---|---|---|---|
+| P05 | `other_observed` | **`2_baseline_selection` (2a)** | valor real atribuido al periodo equivocado: la base declarada (2018) no lleva el valor usado |
+| P07 | `other_observed` + `4_denominator` sec. | **`4_denominator`** | ámbito del numerador (Cataluña) ≠ ámbito de la afirmación (España); denominador = población de referencia |
+| C13 | `other_observed` | **`2_baseline_selection` (2a)** | dirección implícita contraria a la edición anterior ("llegó a" cuando la serie baja) |
+| C08 | `other_observed` + `1_ranking` sec. | **se queda** | reetiquetarlo subiría la clase ilustrativa por decisión de etiquetado, no por dato nuevo |
+| C03 | `other_observed`, divergencia | **`no_divergence_detected`, clase `none`**, cubeta `control_negativo` | lectura parcial (flujo vs stock), no comparación incorrecta; lectura alternativa registrada en `notas` |
+| C05 | `other_observed`, divergencia | **abstención**: `REQUIRED_SLOT_MISSING\|UNSUPPORTED_CLAIM_TYPE`; `truth insufficient_evidence`, `context undetermined`, cubeta `abstencion` | superlativo regional sin fuente + atribución causal (clase 6) |
+| P17 | `other_observed` | **candidata** a clase nueva: agregación con subgrupos en sentido contrario | cuantificador universal sobre un agregado |
+| C10 | `other_observed` | **candidata** a subtipo 2d: cambio afirmado sin edición anterior | verbo de cambio sobre una primera edición |
+
+**Las clases 6 y 7 no se reabren.** Lo que había dentro era una clase
+existente mal nombrada, una abstención, o una candidata con n = 1.
+
+**Criterio de reaparición, escrito antes de ver los datos.** Una candidata
+pasa a clase o subtipo **solo si**, en el conjunto de evaluación de la Puerta 2
+(datos no usados en el piloto, DEC-025), aparece en **≥ 3 casos
+independientes** —no hermanos por criba, de **≥ 2 emisores distintos**—,
+cada uno con primaria y edición anterior localizadas (recuperabilidad A o B)
+y con un **test computable sin juicio humano**. Con 1–2 apariciones sigue como
+`other_observed` anotada; con 0, se archiva. La decisión se toma **una sola
+vez**, al cerrar la anotación del conjunto de evaluación, no caso a caso, y
+queda como DEC.
+
+**Consecuencia.** Dos motivos de abstención se separan con `|`, como las
+clases secundarias; los validadores lo aceptan. Cubeta nueva sin objetivo:
+`abstencion`. Los objetivos de cubeta fueron la regla de parada de la
+recolección, no una restricción posterior: C03 deja `control_negativo` en 8
+sobre 7 en el lote y el validador avisa, no falla; la pertenencia al lote no
+se recompone. Tras esto, `other_observed` queda en **3 de 24 divergencias en
+alcance** (P17, C08, C10). Se corrigen `PILOT-FINDINGS.md` §5,
+`TESIS-ENCUADRE.md`, `GLOSARIO.md`, `PILOT-DECISION.md`, `ESTADO.md`.
+
+**Alternativa descartada.** Crear las clases 2d y "agregación" ya. Con un
+caso cada una serían clases por hipótesis, no por datos.
