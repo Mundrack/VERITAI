@@ -1,0 +1,29 @@
+{
+  "claim_id": "C16",
+  "texto": "La tasa de paro juvenil cae al 23,77% pese a sumar 19.600 desempleados",
+  "fuente_url": "https://www.infobae.com/espana/agencias/2026/07/28/la-tasa-de-paro-juvenil-cae-al-2377-pese-a-sumar-19600-desempleados/",
+  "conjunto": "desarrollo",
+  "origen_case_id": "C16",
+  "etiquetas_corpus": {
+    "truth": "supported",
+    "context": "no_divergence_detected",
+    "clase_primaria": "none",
+    "lote": "crudo_31"
+  },
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "65334",
+    "serie_nombre": "Tasa de paro de la población. Ambos sexos. Total Nacional. Menores de 25 años. ",
+    "unidad": "pct",
+    "referencia_principal": "anterior",
+    "descripcion": "EPA, tasa de paro de menores de 25 años, ambos sexos, total nacional"
+  },
+  "periodo_objetivo": "2026-T2",
+  "periodo_base": "2026-T1",
+  "valor_objetivo": 23.77,
+  "cambio_afirmado": -0.77,
+  "unidad_cambio": "pp",
+  "direccion_afirmada": "baja",
+  "notas": "Control negativo del piloto: cae 0,77 pp del 1T al 2T; la base es la referencia del emisor."
+}

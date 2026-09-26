@@ -1,0 +1,266 @@
+{
+  "http": 200,
+  "caso": {
+    "claim_id": "N03",
+    "texto": "Uno de cada seis empleados públicos logró su puesto durante los gobiernos de Sánchez",
+    "fuente_url": "https://theobjective.com/economia/2026-06-08/empleados-publicos-sanchez-545000-record-2026/",
+    "conjunto": "desarrollo",
+    "origen_case_id": "",
+    "etiquetas_corpus": {},
+    "tipo": "cambio_entre_periodos",
+    "metrica": {
+      "emisor": "INE",
+      "tabla": "65183",
+      "serie_nombre": "Ocupados. Total Nacional. Ambos sexos. Asalariado sector público. Valor absoluto. ",
+      "unidad": "miles_personas",
+      "referencia_principal": "interanual",
+      "descripcion": "EPA, asalariados del sector público, ambos sexos, total nacional, miles de personas"
+    },
+    "periodo_objetivo": "2026-T1",
+    "periodo_base": "2018-T2",
+    "valor_objetivo": 3662.5,
+    "valor_base": 3117.8,
+    "cambio_afirmado": 17.5,
+    "unidad_cambio": "pct",
+    "direccion_afirmada": "sube",
+    "notas": "Claim crudo nuevo (INE, mecanismo 2a: base elegida 2T2018, llegada del Gobierno; la referencia de la EPA es interanual o trimestral). El cuerpo da las cifras exactas: 3.662.500 (1T2026) frente a 3.117.800 (2T2018), 544.700 mas, +17,5%. 'Uno de cada seis' es 544,7/3.662,5 = 14,9%, no 16,7%: redondeo del titular, se registra. El articulo tambien cita el Boletin Estadistico del Personal (Registro Central) como fuente secundaria; el claim se ancla en la EPA, que es la que da las cifras.",
+    "_recoleccion": {
+      "fecha_publicacion": "2026-06-08",
+      "medio": "The Objective",
+      "via_descubrimiento": "busqueda_a_organismo",
+      "query": "EPA sector publico 'desde 2018' OR 'desde que Sanchez' 2026 titular",
+      "criba": "ningun verificador cubre las cifras; Maldita 2022 ('uno de cada seis ocupados es sector publico') es un claim de nivel de otro anio; Newtral 2021/2023 sobre empleo publico son otros claims",
+      "cronometro": "N03 t0..t2 en research/cronometro.log"
+    }
+  },
+  "respuesta": {
+    "veredicto": {
+      "claim_id": "N03",
+      "truth": "supported",
+      "context": "divergence_detected",
+      "clase_primaria": "2_baseline_selection",
+      "abstain_reasons": [],
+      "tests": [
+        {
+          "nombre": "2a_periodo_o_base_elegida",
+          "aplicable": true,
+          "disparo": true,
+          "subtipo": "base_no_es_referencia",
+          "motivo": "el claim compara contra 2T 2018 (+17.47 pct); contra la referencia del emisor, interanual (1T 2025), el cambio es +4.67 pct: difiere 3.7x en magnitud",
+          "calculos": {
+            "unidad": "pct",
+            "periodo_base_claim": "2018-T2",
+            "valor_base_claim": 3117.8,
+            "periodo_objetivo": "2026-T1",
+            "valor_objetivo": 3662.5,
+            "cambio_recomputado_con_base_del_claim": 17.471,
+            "cambio_afirmado": 17.5,
+            "referencia_emisor": "interanual (2025-T1)",
+            "valor_referencia_emisor": 3499.1,
+            "cambio_recomputado_con_referencia_emisor": 4.67,
+            "ratio_magnitudes": 3.741,
+            "umbral_ratio": 2.0
+          }
+        }
+      ],
+      "comparaciones": [
+        {
+          "que": "valor en 1T 2026",
+          "afirmado": 3662.5,
+          "evidencia": 3662.5,
+          "tolerancia": 18.3125,
+          "cuadra": true
+        },
+        {
+          "que": "valor en 2T 2018",
+          "afirmado": 3117.8,
+          "evidencia": 3117.8,
+          "tolerancia": 15.589,
+          "cuadra": true
+        },
+        {
+          "que": "cambio (pct)",
+          "afirmado": 17.5,
+          "evidencia": 17.471,
+          "tolerancia": 0.15,
+          "cuadra": true
+        },
+        {
+          "que": "direccion",
+          "afirmado": "sube",
+          "evidencia": "sube",
+          "tolerancia": null,
+          "cuadra": true
+        }
+      ],
+      "numeros_usados": [
+        {
+          "valor": 3662.5,
+          "raw_value_span": "{\"Fecha\":\"2026-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T1\", \"Anyo\":2026, \"Valor\":3662.5}",
+          "item_id": "INE:EPA399407:2026-T1",
+          "etiqueta": "objetivo"
+        },
+        {
+          "valor": 3117.8,
+          "raw_value_span": "{\"Fecha\":\"2018-04-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T2\", \"Anyo\":2018, \"Valor\":3117.8}",
+          "item_id": "INE:EPA399407:2018-T2",
+          "etiqueta": "base_claim"
+        },
+        {
+          "valor": 3641.4,
+          "raw_value_span": "{\"Fecha\":\"2025-10-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T4\", \"Anyo\":2025, \"Valor\":3641.4}",
+          "item_id": "INE:EPA399407:2025-T4",
+          "etiqueta": "ref:anterior"
+        },
+        {
+          "valor": 3499.1,
+          "raw_value_span": "{\"Fecha\":\"2025-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T1\", \"Anyo\":2025, \"Valor\":3499.1}",
+          "item_id": "INE:EPA399407:2025-T1",
+          "etiqueta": "ref:interanual"
+        }
+      ],
+      "explicacion": "Verdadero pero descontextualizado.\nAfirmacion: \"Uno de cada seis empleados públicos logró su puesto durante los gobiernos de Sánchez\"\nFuente (INE, serie EPA399407, \"Ocupados. Total Nacional. Ambos sexos. Asalariado sector público. Valor absoluto.\"): 1T 2026 = 3662.5.\nBase que usa el claim: 2T 2018 = 3117.8.\nReferencia del emisor (anterior): 4T 2025 = 3641.4.\nReferencia del emisor (interanual): 1T 2025 = 3499.1.\nVerdad: valor en 1T 2026: cuadra (claim 3662.5, fuente 3662.5); valor en 2T 2018: cuadra (claim 3117.8, fuente 3117.8); cambio (pct): cuadra (claim 17.5, fuente 17.471); direccion: cuadra (claim sube, fuente sube).\nTest 2a_periodo_o_base_elegida: DISPARA. el claim compara contra 2T 2018 (+17.47 pct); contra la referencia del emisor, interanual (1T 2025), el cambio es +4.67 pct: difiere 3.7x en magnitud.\nEvidencia: 13 items, bundle 44751a725ff7.",
+      "bundle_hash": "44751a725ff716ad0e0a0c10cbfb413b673a6f7bb01a6dc590f92ab6a394b78a",
+      "generado_en": "2026-09-26T01:14:02.568852+00:00"
+    },
+    "evidencia": {
+      "bundle_hash": "44751a725ff716ad0e0a0c10cbfb413b673a6f7bb01a6dc590f92ab6a394b78a",
+      "completeness": "complete",
+      "missing_slots": [],
+      "items": [
+        {
+          "etiqueta": "objetivo",
+          "rol": "primary",
+          "serie": "EPA399407",
+          "periodo": "2026-T1",
+          "valor": 3662.5,
+          "raw_value_span": "{\"Fecha\":\"2026-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T1\", \"Anyo\":2026, \"Valor\":3662.5}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65183?nult=37&tip=A",
+          "version": "tabla 65183"
+        },
+        {
+          "etiqueta": "base_claim",
+          "rol": "historical",
+          "serie": "EPA399407",
+          "periodo": "2018-T2",
+          "valor": 3117.8,
+          "raw_value_span": "{\"Fecha\":\"2018-04-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T2\", \"Anyo\":2018, \"Valor\":3117.8}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65183?nult=37&tip=A",
+          "version": "tabla 65183"
+        },
+        {
+          "etiqueta": "ref:anterior",
+          "rol": "historical",
+          "serie": "EPA399407",
+          "periodo": "2025-T4",
+          "valor": 3641.4,
+          "raw_value_span": "{\"Fecha\":\"2025-10-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T4\", \"Anyo\":2025, \"Valor\":3641.4}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65183?nult=37&tip=A",
+          "version": "tabla 65183"
+        },
+        {
+          "etiqueta": "ref:interanual",
+          "rol": "historical",
+          "serie": "EPA399407",
+          "periodo": "2025-T1",
+          "valor": 3499.1,
+          "raw_value_span": "{\"Fecha\":\"2025-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T1\", \"Anyo\":2025, \"Valor\":3499.1}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65183?nult=37&tip=A",
+          "version": "tabla 65183"
+        },
+        {
+          "etiqueta": "ventana:2025-T4",
+          "rol": "historical",
+          "serie": "EPA399407",
+          "periodo": "2025-T4",
+          "valor": 3641.4,
+          "raw_value_span": "{\"Fecha\":\"2025-10-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T4\", \"Anyo\":2025, \"Valor\":3641.4}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65183?nult=37&tip=A",
+          "version": "tabla 65183"
+        },
+        {
+          "etiqueta": "ventana:2025-T3",
+          "rol": "historical",
+          "serie": "EPA399407",
+          "periodo": "2025-T3",
+          "valor": 3532.7,
+          "raw_value_span": "{\"Fecha\":\"2025-07-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T3\", \"Anyo\":2025, \"Valor\":3532.7}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65183?nult=37&tip=A",
+          "version": "tabla 65183"
+        },
+        {
+          "etiqueta": "ventana:2025-T2",
+          "rol": "historical",
+          "serie": "EPA399407",
+          "periodo": "2025-T2",
+          "valor": 3521.9,
+          "raw_value_span": "{\"Fecha\":\"2025-04-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T2\", \"Anyo\":2025, \"Valor\":3521.9}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65183?nult=37&tip=A",
+          "version": "tabla 65183"
+        },
+        {
+          "etiqueta": "ventana:2025-T1",
+          "rol": "historical",
+          "serie": "EPA399407",
+          "periodo": "2025-T1",
+          "valor": 3499.1,
+          "raw_value_span": "{\"Fecha\":\"2025-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T1\", \"Anyo\":2025, \"Valor\":3499.1}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65183?nult=37&tip=A",
+          "version": "tabla 65183"
+        },
+        {
+          "etiqueta": "ventana:2024-T4",
+          "rol": "historical",
+          "serie": "EPA399407",
+          "periodo": "2024-T4",
+          "valor": 3591.2,
+          "raw_value_span": "{\"Fecha\":\"2024-10-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T4\", \"Anyo\":2024, \"Valor\":3591.2}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65183?nult=37&tip=A",
+          "version": "tabla 65183"
+        },
+        {
+          "etiqueta": "ventana:2024-T3",
+          "rol": "historical",
+          "serie": "EPA399407",
+          "periodo": "2024-T3",
+          "valor": 3540.8,
+          "raw_value_span": "{\"Fecha\":\"2024-07-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T3\", \"Anyo\":2024, \"Valor\":3540.8}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65183?nult=37&tip=A",
+          "version": "tabla 65183"
+        },
+        {
+          "etiqueta": "ventana:2024-T2",
+          "rol": "historical",
+          "serie": "EPA399407",
+          "periodo": "2024-T2",
+          "valor": 3557.9,
+          "raw_value_span": "{\"Fecha\":\"2024-04-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T2\", \"Anyo\":2024, \"Valor\":3557.9}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65183?nult=37&tip=A",
+          "version": "tabla 65183"
+        },
+        {
+          "etiqueta": "ventana:2024-T1",
+          "rol": "historical",
+          "serie": "EPA399407",
+          "periodo": "2024-T1",
+          "valor": 3551.0,
+          "raw_value_span": "{\"Fecha\":\"2024-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T1\", \"Anyo\":2024, \"Valor\":3551.0}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65183?nult=37&tip=A",
+          "version": "tabla 65183"
+        },
+        {
+          "etiqueta": "metodologia",
+          "rol": "methodology",
+          "serie": "EPA399407",
+          "periodo": "1900",
+          "valor": null,
+          "raw_value_span": "\"COD\":\"EPA399407\", \"Nombre\":\"Ocupados. Total Nacional. Ambos sexos. Asalariado sector público. Valor absoluto. \"",
+          "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=65183",
+          "version": "tabla 65183"
+        }
+      ]
+    },
+    "persistido": true,
+    "duracion_ms": 867
+  }
+}

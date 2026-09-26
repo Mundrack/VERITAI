@@ -1,0 +1,24 @@
+{
+  "claim_id": "P16",
+  "texto": "«Más de la mitad de las horas extra que hacen las mujeres en España no se pagan»",
+  "fuente_url": "https://www.newtral.es/yolanda-diaz-horas-extra/20260326/",
+  "conjunto": "desarrollo",
+  "origen_case_id": "P16",
+  "etiquetas_corpus": {
+    "truth": "contradicted",
+    "context": "no_divergence_detected",
+    "clase_primaria": "none",
+    "lote": "auditado_20"
+  },
+  "tipo": "umbral",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "65217",
+    "serie_nombre": "Asalariados : Total. Total Nacional. Mujeres. Total. Horas extra no pagadas. Horas totales. ",
+    "unidad": "miles_horas",
+    "referencia_principal": "anterior",
+    "descripcion": "EPA, horas extra no pagadas de mujeres asalariadas, total"
+  },
+  "periodo_objetivo": "2025-T4",
+  "notas": "'Mas de la mitad' exige dividir dos series (no pagadas / totales): umbral con denominador. Fuera de lo que este prototipo evalua (UNSUPPORTED_CLAIM_TYPE)."
+}

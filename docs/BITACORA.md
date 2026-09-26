@@ -682,3 +682,78 @@ COLECCION (notas "tras DEC-027"), ESTADO.
   trazabilidad completa), a aprobar antes de ejecutar
 - Fusionar `docs/p12-cierre`
 - P-20: los 5 casos manuales
+
+---
+
+## 2026-09-25 (noche) — Puerta 2 ejecutada: prototipo 2a sobre el INE, 10 casos
+
+### Qué se hizo
+
+Merge de `docs/p12-cierre` a `main` (`11b9a00`). Plan de una página aprobado
+por Mateo; rama `feat/puerta-2-ine-2a`. Se construyó la cadena completa de
+START-HERE §18 restringida a una clase y un emisor, **sin LLM**:
+
+| Pieza | Dónde |
+|---|---|
+| Dominio: periodos, claim estructurado, bundle con `raw_value_span` y `bundle_hash`, hard gates, **test 2a**, verdad con tolerancias, veredicto, plantilla | `apps/api/veritai/domain/` |
+| Caso de uso `AnalizarClaim` | `application/analizar_claim.py` |
+| Cliente Tempus (allowlist, UA, timeout, tamaño, 401/403/406/418/429 = rechazo), extractor con spans, `ProveedorINE` | `infrastructure/ine/` |
+| Repositorio Postgres (una transacción) y en memoria | `infrastructure/repositorio.py` |
+| `POST /analisis` | `api/routes/analisis.py` |
+| Migración 003: `claims`, `evidence_bundles`, `evidence_items`, `verdicts`, `audit_log`, RLS forzada | `db/migrations/003_puerta2.sql` |
+| 10 casos JSON, ejecutor, resultados | `research/puerta2/` |
+| Informe | `research/PUERTA-2-CASOS.md` |
+
+Los 7 casos del piloto con primaria INE se generan desde `PILOT-40.csv` con la
+estructura a mano versionada (`generar_casos_piloto.py`). Los 3 nuevos (N01
+vivienda +64 % desde 2019; N03 empleo público +17,5 % desde 2T2018; N04
+alimentos +37 % 2020–2024) se recolectaron con el método de la TAREA 2 —criba,
+cronómetro, vía— en unos 15 minutos; N02 (nacimientos) rechazado por
+`cobertura_explainer`.
+
+### Números después
+
+```
+10/10 por POST /analisis (HTTP 200)        test 2a: dispara 5 · no dispara 1 (C16) · no aplica 4
+truth   supported 4 · mixed 2 · contradicted 1 · insufficient_evidence 3
+context divergence 5 · no_divergence 1 · undetermined 4
+acuerdo con el corpus (7 del piloto)   truth 4/7 · context 2/7   (dentro del alcance: 4/4 · 2/4)
+Postgres  claims 10 · bundles 10 · items 96 (0 sin span) · verdicts 17 (dos corridas) · audit 17
+latencia  mediana ~2,1 s · máx 23,5 s (IPC 25333) · 30 ms con caché
+```
+
+### Qué se verificó
+
+- `pytest`: **45 passed** en la corrida final (`-p no:warnings`)
+- `ruff check .` limpio
+- `docker compose up -d --build api`: migración 003 aplicada (`listo: 1
+  migraciones aplicadas`), API healthy, `/health` con base conectada
+- RLS activada y forzada en las 5 tablas; `veritai_app` sin DDL
+- Cada número del veredicto con `raw_value_span` (test automático + conteo en
+  Postgres)
+- Valores del INE de C16/C17 (24,54 en 2025-T2 y en 2026-T1) comprobados a
+  mano contra la API: coincidencia real, no bug
+- `git grep` de secretos vacío
+
+### Qué se aprendió (detalle en `PUERTA-2-CASOS.md` §6)
+
+- P04 encontró un bug real: `T3_Periodo: "A"` en tablas anuales. Corregido con test.
+- El criterio de magnitud del 2a dispara con toda base declarada de horizonte
+  largo (N01, N03, N04) → **P-21**, a decidir antes de la evaluación.
+- `undetermined` sin test aplicable (C11) → **P-22**.
+- C17: el prototipo lo lee como "valor atribuido a otro periodo" (mecanismo de
+  P05); el corpus lo tiene como claim falso. Decide Mateo.
+- Tempus sirve solo la edición vigente: 2b no es computable con la API sola.
+- P11: el 8.830 de la API coincide con la cifra de S.L. del PDF de 2019 —
+  `NEEDS_REVIEW` contra `research/evidencia/`.
+- N01 reaparece el mecanismo candidato P17 (subgrupo presentado como total).
+
+### Qué quedó pendiente
+
+- Mateo lee `PUERTA-2-CASOS.md`; decide P-21, P-22 y C17; ratifica o no el
+  cierre de la Puerta 2
+- Commit en `feat/puerta-2-ine-2a` cuando lo diga; merge `--no-ff` cuando lo diga
+- P-20: los 5 casos manuales
+- Un archivo `AGENTS.md` apareció sin seguimiento en la raíz (copia de las
+  reglas de `CLAUDE.md`, no lo creó el agente): queda sin tocar y sin commitear
+  hasta que Mateo diga qué es

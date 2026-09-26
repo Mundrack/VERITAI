@@ -212,6 +212,41 @@ de tiempos humano/agente, y si C22 (el único no recuperado por el agente) lo
 encuentra una persona. Si contradicen la lectura del agente, `PILOT-DECISION`
 se reabre y queda constancia. El agente no mira ese CSV antes.
 
+### P-21 · El test 2a y las bases declaradas de horizonte largo
+
+**Estado:** abierto desde la Puerta 2 (2026-09-25) · **Bloquea:** la anotación del conjunto de evaluación · **Decide:** Mateo, **antes** de ver ese conjunto
+
+El criterio de magnitud (recomputar contra la referencia del emisor difiere
+≥ 2×) dispara en los tres casos nuevos —"desde 2019", "desde 2018", "entre
+2020 y 2024"— y dispararía en **cualquier** comparación de años contra una
+referencia interanual. Solo P11 dispara por cambio de **signo**, que es la
+lectura sin ambigüedad. Opciones, con lo que implica cada una:
+
+- **(a) Mantener la definición a priori** y reportar el FPR que salga. Es la
+  opción más honesta con el método; el riesgo es una clase de falsos
+  positivos sobre claims de horizonte largo legítimos.
+- **(b) Subtipo:** seguir marcando divergencia, pero distinguir
+  `base_declarada_horizonte_largo` de `cambio_de_signo` y de
+  `valor_atribuido_a_otro_periodo`, y evaluar cada subtipo por separado.
+- **(c) Endurecer:** disparar solo por signo, o solo cuando la base no está
+  declarada en el texto. Reduce falsos positivos y pierde N01/N03/N04.
+
+Regla: se decide **una vez**, por escrito, antes de anotar la evaluación; no
+se ajusta el umbral mirando resultados (DEC-028, alternativa c).
+
+### P-22 · `undetermined` o `no_divergence_detected` cuando ningún test aplica
+
+**Estado:** abierto desde la Puerta 2 (2026-09-25) · **Bloquea:** cómo se cuenta el FPR · **Decide:** Mateo
+
+C11 es un claim de **nivel** correcto: el prototipo no tiene test que aplicar
+y devuelve `undetermined`; el corpus dice `no_divergence_detected`. DEC-016
+fija que "ningún test disparó" es `no_divergence_detected`, pero "ningún test
+aplicó" es otra cosa: el sistema no miró. Si se cuenta como `no_divergence`,
+el FPR se calcula sobre claims que nadie evaluó; si se cuenta como
+`undetermined`, los niveles correctos salen de la métrica. Propuesta del
+agente: `undetermined`, y que el FPR se mida solo sobre claims con test
+aplicable, declarándolo.
+
 ### P-05 · Segundo anotador
 
 **Estado:** abierto desde el paquete · **Bloquea:** cerrar el corpus (Puerta 3)

@@ -1,0 +1,24 @@
+{
+  "claim_id": "P19",
+  "texto": "«Tenemos el menor paro juvenil de la historia de España»",
+  "fuente_url": "https://www.newtral.es/paro-juvenil-espana-diana-morant-factcheck/20260612/",
+  "conjunto": "desarrollo",
+  "origen_case_id": "P19",
+  "etiquetas_corpus": {
+    "truth": "mixed",
+    "context": "divergence_detected",
+    "clase_primaria": "3_absolute_vs_relative",
+    "lote": "auditado_20"
+  },
+  "tipo": "extremo_historico",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "65334",
+    "serie_nombre": "Tasa de paro de la población. Ambos sexos. Total Nacional. Menores de 25 años. ",
+    "unidad": "pct",
+    "referencia_principal": "anterior",
+    "descripcion": "EPA, tasa de paro de menores de 25 años, ambos sexos, total nacional"
+  },
+  "periodo_objetivo": "2026-T1",
+  "notas": "'El menor paro juvenil de la historia' es un extremo historico y ademas ambiguo entre tasa y numero absoluto (METRIC_AMBIGUOUS en el corpus). Fuera del prototipo."
+}

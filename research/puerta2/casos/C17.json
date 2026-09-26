@@ -1,0 +1,27 @@
+{
+  "claim_id": "C17",
+  "texto": "La tasa de paro juvenil escala hasta el 24,5% en el segundo trimestre",
+  "fuente_url": "https://www.pressdigital.es/articulo/economia/2026-07-28/5967467-tasa-paro-juvenil-escala-hasta-245-segundo-trimestre",
+  "conjunto": "desarrollo",
+  "origen_case_id": "C17",
+  "etiquetas_corpus": {
+    "truth": "contradicted",
+    "context": "no_divergence_detected",
+    "clase_primaria": "none",
+    "lote": "crudo_31"
+  },
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "65334",
+    "serie_nombre": "Tasa de paro de la población. Ambos sexos. Total Nacional. Menores de 25 años. ",
+    "unidad": "pct",
+    "referencia_principal": "anterior",
+    "descripcion": "EPA, tasa de paro de menores de 25 años, ambos sexos, total nacional"
+  },
+  "periodo_objetivo": "2026-T2",
+  "periodo_base": "2026-T1",
+  "valor_objetivo": 24.5,
+  "direccion_afirmada": "sube",
+  "notas": "Claim falso del piloto: 24,5% es el valor del 1T; en el 2T la serie da 23,77 y baja. El corpus lo etiqueta contradicted / no_divergence (claim_falso); el test 2a puede disparar por 'valor atribuido a otro periodo': se compara y se reporta."
+}

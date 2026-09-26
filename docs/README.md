@@ -21,7 +21,7 @@ Esto es otra cosa: el sitio donde no se pierde lo que ya se sabe.
 | [`GLOSARIO.md`](GLOSARIO.md) | Vocabulario del proyecto y **enums cerrados** | Cuando aparece un término nuevo o se cierra un enum |
 | [`PREGUNTAS-ABIERTAS.md`](PREGUNTAS-ABIERTAS.md) | Lo que está sin resolver y quién lo decide | Al abrir o cerrar una pregunta |
 | [`SEGURIDAD.md`](SEGURIDAD.md) | Controles de seguridad **ya implementados**, no los planeados | Cuando se implementa o se rompe un control |
-| [`../research/README.md`](../research/README.md) | Estado del piloto y qué falta para la Puerta 1 | Cuando avanza el piloto |
+| [`../research/README.md`](../research/README.md) | Estado del piloto (Puerta 1) y material de la Puerta 2: casos, ejecutor, informe | Cuando avanza el piloto o una puerta |
 
 ---
 

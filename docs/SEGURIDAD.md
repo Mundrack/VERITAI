@@ -6,16 +6,18 @@
 > Las reglas completas están en `CLAUDE.md` §8 y en el START-HERE §23–25. Esto es
 > el registro de qué está hecho de verdad.
 
-**Última actualización:** 2026-09-24
+**Última actualización:** 2026-09-25 (Puerta 2)
 
 ---
 
 ## Estado en una línea
 
-**Nada del sistema toca internet todavía.** Eso significa que los controles de
-contenido no confiable — SSRF, prompt injection, parsing de archivos — **no
-están implementados**, y no deben darse por hechos. Lo que sí está implementado
-es todo el perímetro del entorno: red, privilegios, secretos y base de datos.
+**Un solo componente toca internet: el cliente del INE** (`infrastructure/ine/tempus.py`),
+y solo a `https://servicios.ine.es`, por allowlist. No hay parsing de HTML ni
+de PDF, no hay LLM, y `POST /analisis` no acepta URLs: el claim llega ya
+estructurado. Por eso los controles de SSRF general, prompt injection y
+archivos **siguen sin implementar** y no deben darse por hechos; lo que sí
+está hecho es el perímetro del entorno y el perímetro de ese único conector.
 
 ---
 
@@ -34,6 +36,19 @@ es todo el perímetro del entorno: red, privilegios, secretos y base de datos.
 (`8000:8000`) liga a `0.0.0.0`: el servicio queda accesible desde cualquier
 equipo de la red local, incluida una wifi pública.
 
+### Contenido externo: el conector INE (Puerta 2)
+
+| Control | Dónde | Verificado |
+|---|---|---|
+| Allowlist de host: solo `servicios.ine.es`, solo HTTPS; el id de tabla es un entero y `nult` está acotado | `tempus.py` | ✅ `test_cliente_valida_tabla_y_allowlist` |
+| **No se siguen redirecciones** (`follow_redirects=False`) | `tempus.py` | ✅ |
+| Timeout por petición y tope de bytes leído en streaming: una respuesta lenta o enorme no tumba la API | `tempus.py`, `config.py` (`HTTP_TIMEOUT_S`, `HTTP_MAX_BYTES`) | ✅ `test_cliente_corta_respuestas_demasiado_grandes` |
+| Agente identificado en cada petición (`VERITAI-prototipo/0.1 …`) | `tempus.py` | ✅ `test_cliente_devuelve_texto_crudo_e_identifica_al_agente` |
+| Un 401/403/406/418/429 cierra el caso: **no se evade nada** (DEC-018, DEC-021) | `tempus.py` | ✅ `test_cliente_respeta_el_rechazo_del_publicador` |
+| El JSON del INE se trata como **dato**, nunca como instrucción: se parsea con `json.loads`, se casa la serie por nombre exacto y cada número conserva su span literal; nada de `eval`, nada de `shell` | `extractor.py`, `proveedor.py` | ✅ `test_extractor_falla_ante_json_roto_o_spans_que_no_cuadran` |
+| Entrada de `POST /analisis` acotada por pydantic: texto ≤ 2000, notas ≤ 2000, `claim_id` con patrón, emisor `Literal["INE"]`, periodos parseados, etiquetas ≤ 10 × 80 | `api/routes/analisis.py` | ✅ `test_rechaza_emisores_fuera_de_alcance_y_periodos_malos` |
+| Excepción no prevista → 500 con solo el nombre del tipo; la traza va al log, nunca al cliente. El rechazo del publicador no es un error HTTP: el caso de uso lo convierte en abstención (`PRIMARY_SOURCE_NOT_FOUND`) y queda en el veredicto | `api/routes/analisis.py`, `application/analizar_claim.py` | ✅ `test_abstiene_si_la_serie_no_existe` |
+
 ### Privilegios
 
 | Control | Dónde | Verificado |
@@ -50,6 +65,8 @@ equipo de la red local, incluida una wifi pública.
 | `revoke all ... from public` sobre el esquema | `001_schema_veritai.sql` | ✅ |
 | `alter default privileges ... revoke all from public` | `001_schema_veritai.sql` | ✅ |
 | RLS como convención obligatoria + vista de cumplimiento | `002_rls_baseline.sql` | ✅ 0 filas sin RLS |
+| RLS activada **y forzada** en las 5 tablas de dominio; `veritai_app` solo DML; `audit_log` solo `insert`/`select` (no se puede editar ni borrar auditoría) | `003_puerta2.sql` | ✅ `relrowsecurity` y `relforcerowsecurity` = `t` en las 5 (2026-09-25) |
+| Escritura en una sola transacción con parámetros ligados; nada concatenado en SQL | `infrastructure/repositorio.py` | ✅ |
 | Identificadores y literales citados por psycopg, nunca concatenados | `scripts/migrate.py` | ✅ `sql.Identifier` / `sql.Literal` |
 | Nombre de rol validado contra un patrón antes de usarse | `scripts/migrate.py` | ✅ defensa en profundidad |
 | Migraciones inmutables: `sha256` verificado en cada pasada | `scripts/migrate.py` | ✅ |
@@ -103,37 +120,37 @@ que toque internet** (adenda, D6).
 
 ```
 RED
-  bloqueo de localhost y rangos privados en fetches externos (SSRF)
-  bloqueo de servicios de metadata
-  limite de redirects, validados
-  limite de descarga y timeout en el backend
-  rate limiting
-  user-agent identificable, robots.txt
+  [hecho, solo INE]  allowlist de un host: sustituye al bloqueo de rangos privados
+                     mientras el unico destino sea servicios.ine.es
+  [pendiente]        bloqueo de localhost, rangos privados y metadata para
+                     cualquier fetch generico (HTML, PDF): no existe ese fetch
+  [hecho]            redirecciones: no se siguen
+  [hecho]            limite de descarga y timeout en el backend
+  [pendiente]        rate limiting hacia el INE y hacia la API
+  [hecho / pendiente] user-agent identificable si; robots.txt no se consulta
+                     (la API Tempus es un servicio, no una pagina)
 
 ENTRADA
-  limites de tamano de cuerpo en la API
-  limites de tiempo por peticion
-  validacion de URLs normalizadas
-  desconfianza de extension y MIME declarados
+  [parcial]          limites por campo en POST /analisis (pydantic); falta un
+                     tope global de cuerpo en el servidor
+  [pendiente]        limite de tiempo por peticion en la API (el del cliente INE si)
+  [n/a hoy]          validacion de URLs: la API no acepta URLs
+  [n/a hoy]          extension y MIME: no se descargan archivos
 
-ARCHIVOS
-  parsers de PDF con minimo privilegio
-  prevencion de zip-slip y zip bombs
-  almacenamiento temporal aislado, nombres generados internamente
+ARCHIVOS             [n/a hoy] no hay parsers de PDF ni ZIP
 
-IA
-  separacion estricta de SYSTEM / TOOLS / USER / UNTRUSTED CONTENT
-  etiquetado del contenido recuperado como no confiable
-  validadores deterministas antes de que algo afecte al veredicto
+IA                   [n/a hoy] no hay LLM. Cuando lo haya: SYSTEM / TOOLS / USER /
+                     UNTRUSTED separados; contenido recuperado etiquetado como no
+                     confiable; validadores deterministas antes del veredicto
+                     (el test 2a y los hard gates ya son esos validadores)
 
 TESTS DE SEGURIDAD
-  contra entradas maliciosas
-  de SSRF y de path traversal
-  de prompt injection
+  [hecho]            allowlist, rechazo del publicador, tope de bytes, JSON roto
+  [pendiente]        SSRF generico, path traversal, prompt injection
 ```
 
-Ninguno de estos hace falta hoy, porque no hay ni un componente que salga a la
-red. **Todos hacen falta antes del primer conector.**
+Lo marcado `n/a hoy` deja de serlo con el primer fetch genérico, el primer
+parser de archivos o el primer LLM. **Se implementa antes, no después.**
 
 ---
 

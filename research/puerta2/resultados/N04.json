@@ -1,0 +1,234 @@
+{
+  "http": 200,
+  "caso": {
+    "claim_id": "N04",
+    "texto": "Hacer la compra cuesta un 37% más: los alimentos se han encarecido en torno a un 37% entre 2020 y 2024",
+    "fuente_url": "https://economia3.com/hacer-la-compra-cuesta-un-37-mas-los-alimentos-que-mas-se-han-encarecido/",
+    "conjunto": "desarrollo",
+    "origen_case_id": "",
+    "etiquetas_corpus": {},
+    "tipo": "cambio_entre_periodos",
+    "metrica": {
+      "emisor": "INE",
+      "tabla": "50934",
+      "serie_nombre": "Nacional. Alimentos y bebidas no alcohólicas. Media anual. ",
+      "unidad": "indice",
+      "referencia_principal": "anterior",
+      "descripcion": "IPC, grupo ECOICOP 01 alimentos y bebidas no alcohólicas, media anual, nacional (base 2021)"
+    },
+    "periodo_objetivo": "2024",
+    "periodo_base": "2020",
+    "cambio_afirmado": 37,
+    "unidad_cambio": "pct",
+    "direccion_afirmada": "sube",
+    "notas": "Claim crudo nuevo (INE, mecanismo 2a: base elegida 2020, ano previo al episodio inflacionario; la referencia del IPC es la variacion anual). El articulo atribuye la cifra a 'series de precios de alimentacion elaboradas a partir del IPC' del INE y usa anos completos: se estructura sobre la media anual del grupo 01. 'En torno a' se toma como 37 con la tolerancia del ultimo decimal. El 37% coincide con el informe Idra citado por Infobae (2025-10-22): productos mas baratos +37% 2021-2024; posible atribucion cruzada de una fuente privada al INE, se registra como observacion, no se corrige el claim.",
+    "_recoleccion": {
+      "fecha_publicacion": "2026-05-26",
+      "medio": "economia3",
+      "via_descubrimiento": "busqueda_a_organismo",
+      "query": "2026 'segun el INE' alimentos 'desde 2020' OR 'desde 2021' titular",
+      "criba": "Newtral 2026-09-22 (Feijoo, alimentos frescos agosto 2026) no cubre la cifra; sin explainer con 37% 2020-2024 en Newtral/Maldita/EFE Verifica/Verificat",
+      "cronometro": "N04 t0..t2 en research/cronometro.log"
+    }
+  },
+  "respuesta": {
+    "veredicto": {
+      "claim_id": "N04",
+      "truth": "mixed",
+      "context": "divergence_detected",
+      "clase_primaria": "2_baseline_selection",
+      "abstain_reasons": [],
+      "tests": [
+        {
+          "nombre": "2a_periodo_o_base_elegida",
+          "aplicable": true,
+          "disparo": true,
+          "subtipo": "base_no_es_referencia",
+          "motivo": "el claim compara contra 2020 (+31.49 pct); contra la referencia del emisor, anterior (2023), el cambio es +3.57 pct: difiere 8.8x en magnitud",
+          "calculos": {
+            "unidad": "pct",
+            "periodo_base_claim": "2020",
+            "valor_base_claim": 98.187,
+            "periodo_objetivo": "2024",
+            "valor_objetivo": 129.105,
+            "cambio_recomputado_con_base_del_claim": 31.489,
+            "cambio_afirmado": 37.0,
+            "referencia_emisor": "anterior (2023)",
+            "valor_referencia_emisor": 124.659,
+            "cambio_recomputado_con_referencia_emisor": 3.567,
+            "ratio_magnitudes": 8.829,
+            "umbral_ratio": 2.0
+          }
+        }
+      ],
+      "comparaciones": [
+        {
+          "que": "cambio (pct)",
+          "afirmado": 37.0,
+          "evidencia": 31.489,
+          "tolerancia": 0.5,
+          "cuadra": false
+        },
+        {
+          "que": "direccion",
+          "afirmado": "sube",
+          "evidencia": "sube",
+          "tolerancia": null,
+          "cuadra": true
+        }
+      ],
+      "numeros_usados": [
+        {
+          "valor": 129.105,
+          "raw_value_span": "{\"Fecha\":\"2024-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"A\", \"Anyo\":2024, \"Valor\":129.105}",
+          "item_id": "INE:IPC278286:2024",
+          "etiqueta": "objetivo"
+        },
+        {
+          "valor": 98.187,
+          "raw_value_span": "{\"Fecha\":\"2020-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"A\", \"Anyo\":2020, \"Valor\":98.187}",
+          "item_id": "INE:IPC278286:2020",
+          "etiqueta": "base_claim"
+        },
+        {
+          "valor": 124.659,
+          "raw_value_span": "{\"Fecha\":\"2023-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"A\", \"Anyo\":2023, \"Valor\":124.659}",
+          "item_id": "INE:IPC278286:2023",
+          "etiqueta": "ref:anterior"
+        }
+      ],
+      "explicacion": "Parcialmente respaldado y descontextualizado.\nAfirmacion: \"Hacer la compra cuesta un 37% más: los alimentos se han encarecido en torno a un 37% entre 2020 y 2024\"\nFuente (INE, serie IPC278286, \"Nacional. Alimentos y bebidas no alcohólicas. Media anual.\"): 2024 = 129.105.\nBase que usa el claim: 2020 = 98.187.\nReferencia del emisor (anterior): 2023 = 124.659.\nVerdad: cambio (pct): NO cuadra (claim 37.0, fuente 31.489); direccion: cuadra (claim sube, fuente sube).\nTest 2a_periodo_o_base_elegida: DISPARA. el claim compara contra 2020 (+31.49 pct); contra la referencia del emisor, anterior (2023), el cambio es +3.57 pct: difiere 8.8x en magnitud.\nEvidencia: 12 items, bundle f9ccb64021ee.",
+      "bundle_hash": "f9ccb64021ee1047d5293e953ce38fc9d91f84456445f830816ef94f7a279255",
+      "generado_en": "2026-09-26T01:14:03.253736+00:00"
+    },
+    "evidencia": {
+      "bundle_hash": "f9ccb64021ee1047d5293e953ce38fc9d91f84456445f830816ef94f7a279255",
+      "completeness": "complete",
+      "missing_slots": [],
+      "items": [
+        {
+          "etiqueta": "objetivo",
+          "rol": "primary",
+          "serie": "IPC278286",
+          "periodo": "2024",
+          "valor": 129.105,
+          "raw_value_span": "{\"Fecha\":\"2024-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"A\", \"Anyo\":2024, \"Valor\":129.105}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50934?nult=24&tip=A",
+          "version": "tabla 50934"
+        },
+        {
+          "etiqueta": "base_claim",
+          "rol": "historical",
+          "serie": "IPC278286",
+          "periodo": "2020",
+          "valor": 98.187,
+          "raw_value_span": "{\"Fecha\":\"2020-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"A\", \"Anyo\":2020, \"Valor\":98.187}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50934?nult=24&tip=A",
+          "version": "tabla 50934"
+        },
+        {
+          "etiqueta": "ref:anterior",
+          "rol": "historical",
+          "serie": "IPC278286",
+          "periodo": "2023",
+          "valor": 124.659,
+          "raw_value_span": "{\"Fecha\":\"2023-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"A\", \"Anyo\":2023, \"Valor\":124.659}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50934?nult=24&tip=A",
+          "version": "tabla 50934"
+        },
+        {
+          "etiqueta": "ventana:2023",
+          "rol": "historical",
+          "serie": "IPC278286",
+          "periodo": "2023",
+          "valor": 124.659,
+          "raw_value_span": "{\"Fecha\":\"2023-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"A\", \"Anyo\":2023, \"Valor\":124.659}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50934?nult=24&tip=A",
+          "version": "tabla 50934"
+        },
+        {
+          "etiqueta": "ventana:2022",
+          "rol": "historical",
+          "serie": "IPC278286",
+          "periodo": "2022",
+          "valor": 111.639,
+          "raw_value_span": "{\"Fecha\":\"2022-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"A\", \"Anyo\":2022, \"Valor\":111.639}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50934?nult=24&tip=A",
+          "version": "tabla 50934"
+        },
+        {
+          "etiqueta": "ventana:2021",
+          "rol": "historical",
+          "serie": "IPC278286",
+          "periodo": "2021",
+          "valor": 100.0,
+          "raw_value_span": "{\"Fecha\":\"2021-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"A\", \"Anyo\":2021, \"Valor\":100.0}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50934?nult=24&tip=A",
+          "version": "tabla 50934"
+        },
+        {
+          "etiqueta": "ventana:2020",
+          "rol": "historical",
+          "serie": "IPC278286",
+          "periodo": "2020",
+          "valor": 98.187,
+          "raw_value_span": "{\"Fecha\":\"2020-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"A\", \"Anyo\":2020, \"Valor\":98.187}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50934?nult=24&tip=A",
+          "version": "tabla 50934"
+        },
+        {
+          "etiqueta": "ventana:2019",
+          "rol": "historical",
+          "serie": "IPC278286",
+          "periodo": "2019",
+          "valor": 95.928,
+          "raw_value_span": "{\"Fecha\":\"2019-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"A\", \"Anyo\":2019, \"Valor\":95.928}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50934?nult=24&tip=A",
+          "version": "tabla 50934"
+        },
+        {
+          "etiqueta": "ventana:2018",
+          "rol": "historical",
+          "serie": "IPC278286",
+          "periodo": "2018",
+          "valor": 94.946,
+          "raw_value_span": "{\"Fecha\":\"2018-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"A\", \"Anyo\":2018, \"Valor\":94.946}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50934?nult=24&tip=A",
+          "version": "tabla 50934"
+        },
+        {
+          "etiqueta": "ventana:2017",
+          "rol": "historical",
+          "serie": "IPC278286",
+          "periodo": "2017",
+          "valor": 93.407,
+          "raw_value_span": "{\"Fecha\":\"2017-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"A\", \"Anyo\":2017, \"Valor\":93.407}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50934?nult=24&tip=A",
+          "version": "tabla 50934"
+        },
+        {
+          "etiqueta": "ventana:2016",
+          "rol": "historical",
+          "serie": "IPC278286",
+          "periodo": "2016",
+          "valor": 92.272,
+          "raw_value_span": "{\"Fecha\":\"2016-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"A\", \"Anyo\":2016, \"Valor\":92.272}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50934?nult=24&tip=A",
+          "version": "tabla 50934"
+        },
+        {
+          "etiqueta": "metodologia",
+          "rol": "methodology",
+          "serie": "IPC278286",
+          "periodo": "1900",
+          "valor": null,
+          "raw_value_span": "\"COD\":\"IPC278286\", \"Nombre\":\"Nacional. Alimentos y bebidas no alcohólicas. Media anual. \"",
+          "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=50934",
+          "version": "tabla 50934"
+        }
+      ]
+    },
+    "persistido": true,
+    "duracion_ms": 668
+  }
+}

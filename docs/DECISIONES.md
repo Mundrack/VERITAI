@@ -746,3 +746,63 @@ alcance** (P17, C08, C10). Se corrigen `PILOT-FINDINGS.md` §5,
 
 **Alternativa descartada.** Crear las clases 2d y "agregación" ya. Con un
 caso cada una serían clases por hipótesis, no por datos.
+
+---
+
+## DEC-028 · Puerta 2: prototipo de una clase (2a) y un emisor (INE) sobre 10 casos de desarrollo
+
+**Fecha:** 2026-09-25 · **Estado:** vigente en lo que aprobó el plan; **el cierre de la Puerta 2 lo ratifica Mateo** al leer `research/PUERTA-2-CASOS.md` · **Decide:** Mateo (plan de una página aprobado) · **Aplica:** DEC-024, DEC-025, DEC-026, DEC-027
+
+**Contexto.** START-HERE §18 pide un prototipo end-to-end antes del sistema.
+Con el encuadre cerrado (2a como primera clase, INE como emisor de nivel 1) y
+la regla de no contaminación (DEC-025), el plan fijó qué se construye, con qué
+casos y qué test, antes de programar.
+
+**Decisión.**
+
+1. **Composición: 7 + 3, todos de desarrollo.** Los 7 casos del piloto con
+   primaria INE (C11, C16, C17, P04, P11, P16, P19: un 2a, dos controles, un
+   claim falso, tres fuera del alcance del prototipo) más **3 claims crudos
+   nuevos** con mecanismo 2a (N01, N03, N04), recolectados con el método de la
+   TAREA 2 y marcados `conjunto: desarrollo`. Ninguno de los 10 evalúa nada.
+   Un cuarto candidato (N02) se rechazó por `cobertura_explainer`.
+2. **El test 2a se definió antes de correr un solo caso.** (B) valor
+   atribuido a otro periodo dentro de una ventana de 8; (A) base que no es
+   referencia del emisor **y** recomputación contra la referencia principal
+   que cambia de signo o difiere en magnitud por un factor ≥ 2. Tolerancias:
+   media unidad del último decimal del claim (mínimo 0,5 % relativo en
+   valores; 0,15 en cambios). Los resultados no retocan el test: lo que se
+   aprendió va a P-21, a decidir antes del conjunto de evaluación.
+3. **Regla de contexto:** test aplicable que no dispara y sin abstención →
+   `no_divergence_detected` (DEC-016); ningún test aplicable → `undetermined`
+   (provisional, P-22); motivo bloqueante → `insufficient_evidence` /
+   `undetermined`.
+4. **Sin LLM en ningún paso.** El claim se estructura a mano y queda
+   versionado en JSON; la explicación es plantilla numérica. Lo que el
+   prototipo demuestra es que **la decisión no depende de un modelo**.
+5. **Trazabilidad como requisito, no como opción:** cada número del veredicto
+   lleva `raw_value_span` literal de la primaria, el bundle tiene `bundle_hash`,
+   y un test automático falla si algún número no tiene span. Cinco tablas con
+   RLS forzada; `veritai_app` solo DML.
+6. **Publicadores:** el cliente INE lleva allowlist (`servicios.ine.es`), UA
+   identificado, timeout y tamaño máximo; un 401/403/406/418/429 cierra el
+   caso (DEC-018, DEC-021). Sin `shell`, sin `eval`.
+
+**Resultado (no es la decisión, es lo que salió):** 10 de 10 corren por
+`POST /analisis`; 2a dispara en 5 (1 por signo, 3 por magnitud, 1 por valor
+atribuido a otro periodo), no dispara en el control (C16), no aplica en 4;
+acuerdo con el corpus 4/4 en verdad y 2/4 en contexto dentro del alcance; las
+tres abstenciones son por diseño. P04 encontró un bug real (periodo anual `A`).
+Detalle en `research/PUERTA-2-CASOS.md`.
+
+**Consecuencia.** Se abren P-21 (magnitud en horizontes largos declarados) y
+P-22 (`undetermined` sin test aplicable). C17 queda como desacuerdo con el
+corpus a decidir por Mateo. El caso canónico de la familia B sigue sin existir;
+P11 es el canónico de 2a. Los conectores de FMI e Interior, N0, el LLM y el
+conjunto de evaluación quedan fuera de esta puerta.
+
+**Alternativas descartadas.** (a) Diez casos 2a sobre siete emisores: viola
+"un solo emisor" y exige siete conectores. (b) Estructurar el claim con un LLM
+ya: mezclaría dos fuentes de error antes de saber si el test funciona. (c)
+Ajustar el umbral ×2 al ver que N01/N03/N04 disparan: sería maquillar; se
+decide en P-21 con criterio escrito, no con estos resultados.

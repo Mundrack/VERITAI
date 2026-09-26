@@ -121,7 +121,40 @@ nunca"; las puertas son la mitigación.
 **Control negativo**
 Afirmación estadística **correctamente enmarcada**. Sin controles negativos no se
 puede medir la tasa de falsos positivos, que es la métrica crítica del proyecto.
-El piloto actual tiene 1 de 20.
+El lote sesgado tenía 1 de 20; el lote crudo, 16 de 31 (tras DEC-027). En la
+Puerta 2, C16 es el control con test aplicable; C11 es un nivel correcto sin
+test que aplicar (P-22).
+
+**Conjunto de desarrollo / conjunto de evaluación**
+Dos conjuntos de claims que **no se mezclan** (DEC-025). El de **desarrollo**
+sirve para construir, depurar y hacer regresión: todo lo que pasó por el
+piloto (P01–P20, C01–C31, candidatos rechazados, los 5 manuales) y los casos
+nuevos de la Puerta 2 (N01, N03, N04). El de **evaluación** es el que mide: se
+recolecta después, con el mismo método, y **nada** que haya servido para
+diseñar un test entra en él. Cada JSON de claim lleva `conjunto: desarrollo |
+evaluacion`.
+
+**Claim estructurado**
+Lo que el sistema recibe: tipo (`cambio_entre_periodos`, `nivel`, `umbral`,
+`extremo_historico`, `crecimiento_compuesto`, `otro`), métrica del emisor
+(tabla y nombre exacto de serie), periodo objetivo, periodo base, valores y
+cambio afirmados, dirección. En la Puerta 2 se escribe **a mano** y queda
+versionado en `research/puerta2/casos/`; el LLM no participa.
+
+**`raw_value_span` / `bundle_hash`**
+El span es el fragmento **literal** de la primaria del que salió cada número
+(en el INE, el objeto JSON del dato con `Fecha`, `T3_TipoDato`, `T3_Periodo`,
+`Anyo`, `Valor`). El hash es sha256 sobre publicador, URL, serie, periodo, span
+y versión de todos los items del bundle: si cambia lo extraído, cambia el hash
+(P04 lo demostró al corregir el periodo anual). Un test automático falla si un
+número del veredicto no tiene span.
+
+**Test 2a (periodo o base elegida)**
+Determinístico, definido antes de correr casos (DEC-028). Dispara por **(B)**
+valor atribuido a otro periodo de la ventana, o por **(A)** base que no es
+referencia del emisor y cuya recomputación contra esa referencia cambia de
+signo o difiere ≥ 2× en magnitud. Lo que dispara por magnitud en horizontes
+largos declarados está en discusión (P-21).
 
 ---
 
