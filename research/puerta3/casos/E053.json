@@ -1,0 +1,38 @@
+{
+  "claim_id": "E053",
+  "texto": "Las pernoctaciones en establecimientos hoteleros en Galicia alcanzaron los 1,3 millones en julio, lo que representa un aumento del 0,68%. En concreto, han sido 1.334.577 frente a los 1.325.548 del año anterior",
+  "fuente_url": "https://www.galiciapress.es/articulo/economia/2026-08-21/5989983-pernoctaciones-hoteleras-aumentan-julio-galicia-068",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "2074",
+    "serie_nombre": "Galicia. Pernoctaciones. Total.",
+    "unidad": "pernoctaciones",
+    "referencia_principal": "interanual",
+    "descripcion": "EOH, pernoctaciones en establecimientos hoteleros, Galicia, mensual"
+  },
+  "periodo_objetivo": "2026-M07",
+  "periodo_base": "2025-M07",
+  "valor_objetivo": 1334577,
+  "cambio_afirmado": 0.68,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "evidencia_al_publicar": {
+    "valor": 1325548,
+    "edicion": "INE CTH0725 (julio 2025, datos provisionales)",
+    "fecha": "2025-08-22",
+    "url": "https://www.ine.es/prensa/anexo_tablas/es/CTH0725.xlsx",
+    "raw_value_span": "[CTH0725.xlsx, hoja EOH_Hoja3, fila 56] 'Galicia', 635559, 460844, 174716, 1325548, 1018143, 307405, 2.09",
+    "verificacion": "research/evidencia/D2B_CTH0725.json (HTTP 200, sha256)"
+  },
+  "evidencia_vigente": {
+    "valor": 1339309,
+    "edicion": "API Tempus, tabla 2074, edicion vigente",
+    "fecha": "2026-09-26",
+    "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/2074",
+    "raw_value_span": "[INE API tabla 2074] EOT1736 2025-M07: 1339309"
+  },
+  "notas": "Base interanual correcta en periodo, tomada de la edicion provisional (1.325.548, impresa en el claim) y no de la vigente (1.339.309): 2b con cambio de signo (+0,68% frente a -0,35%)."
+}

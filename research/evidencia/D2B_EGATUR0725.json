@@ -1,0 +1,460 @@
+{
+ "codigo": "EGATUR0725",
+ "consultado": "2026-09-26T15:03:08+00:00",
+ "agente": "VERITAI-prototipo/0.1 (tesis UDLA; agente identificado, DEC-018)",
+ "descargas": {
+  "html": {
+   "url": "https://www.ine.es/dyngs/Prensa/EGATUR0725.htm",
+   "http": 200,
+   "content_type": "text/html;charset=UTF-8",
+   "bytes": 46089,
+   "sha256": "a79ef1d61cba08defb2864fe48f47f4d1e3724c6dde34ba31c7b86c0433a5356",
+   "guardado_en": "C:\\Users\\mateo\\AppData\\Local\\Temp\\claude\\C--Users-mateo-WORK-SPACE-VERITAI\\0ab7628b-d5c1-41fd-a522-c3be90344cd4\\scratchpad\\d2b_binarios\\D2B_EGATUR0725.htm",
+   "fecha_publicacion": "1 de septiembre de 2025",
+   "titular": "El gasto total de los turistas internacionales que visitaron España en julio aumentó un 6,1% y alcanzó los 16."
+  },
+  "pdf": {
+   "url": "https://www.ine.es/dyngs/Prensa/EGATUR0725.pdf",
+   "http": 200,
+   "content_type": "application/pdf",
+   "bytes": 209815,
+   "sha256": "f4ac122371991f70886ca6014e6f46c095011b17c4063f8c379ab4f188663049",
+   "guardado_en": "C:\\Users\\mateo\\AppData\\Local\\Temp\\claude\\C--Users-mateo-WORK-SPACE-VERITAI\\0ab7628b-d5c1-41fd-a522-c3be90344cd4\\scratchpad\\d2b_binarios\\D2B_EGATUR0725.pdf"
+  },
+  "xlsx": {
+   "url": "https://www.ine.es/prensa/anexo_tablas/es/EGATUR0725.xlsx",
+   "http": 200,
+   "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+   "bytes": 280133,
+   "sha256": "2043e132cf68737545e3628ebb14d84477eebe2c8e7ad43017b202207b673aee",
+   "guardado_en": "C:\\Users\\mateo\\AppData\\Local\\Temp\\claude\\C--Users-mateo-WORK-SPACE-VERITAI\\0ab7628b-d5c1-41fd-a522-c3be90344cd4\\scratchpad\\d2b_binarios\\D2B_EGATUR0725.xlsx",
+   "filas": [
+    {
+     "hoja": "Jul - 25",
+     "fila_idx": 8,
+     "cabecera": [
+      "Encuesta de Gasto Turístico (EGATUR)",
+      "Julio 2025",
+      "Datos provisionales",
+      "1. Gasto de los turistas internacionales según país de residencia",
+      "Datos mensuales",
+      "Gasto | Variación | Gasto | Variación | Gasto | Variación | Duración | Variación",
+      "total | anual (%) | medio por | anual (%) | medio | anual (%) | media del | anual (%)"
+     ],
+     "valores": [
+      "total",
+      "anual (%)",
+      "medio por",
+      "anual (%)",
+      "medio",
+      "anual (%)",
+      "media del",
+      "anual (%)"
+     ]
+    },
+    {
+     "hoja": "Jul - 25",
+     "fila_idx": 10,
+     "cabecera": [
+      "Encuesta de Gasto Turístico (EGATUR)",
+      "Julio 2025",
+      "Datos provisionales",
+      "1. Gasto de los turistas internacionales según país de residencia",
+      "Datos mensuales",
+      "Gasto | Variación | Gasto | Variación | Gasto | Variación | Duración | Variación",
+      "total | anual (%) | medio por | anual (%) | medio | anual (%) | media del | anual (%)",
+      "(millones de €)  | turista (euros) | diario (euros) | viaje (días)"
+     ],
+     "valores": [
+      "TOTAL",
+      16452,
+      6.05,
+      1493,
+      4.41,
+      210,
+      6.94,
+      7.1,
+      -2.37
+     ]
+    },
+    {
+     "hoja": "Jul - 25",
+     "fila_idx": 23,
+     "cabecera": [
+      "Encuesta de Gasto Turístico (EGATUR)",
+      "Julio 2025",
+      "Datos provisionales",
+      "1. Gasto de los turistas internacionales según país de residencia",
+      "Datos mensuales",
+      "Gasto | Variación | Gasto | Variación | Gasto | Variación | Duración | Variación",
+      "total | anual (%) | medio por | anual (%) | medio | anual (%) | media del | anual (%)",
+      "(millones de €)  | turista (euros) | diario (euros) | viaje (días)"
+     ],
+     "valores": [
+      "total",
+      "anual (%)",
+      "medio por",
+      "anual (%)",
+      "medio",
+      "anual (%)",
+      "media del",
+      "anual (%)"
+     ]
+    },
+    {
+     "hoja": "Jul - 25",
+     "fila_idx": 25,
+     "cabecera": [
+      "Encuesta de Gasto Turístico (EGATUR)",
+      "Julio 2025",
+      "Datos provisionales",
+      "1. Gasto de los turistas internacionales según país de residencia",
+      "Datos mensuales",
+      "Gasto | Variación | Gasto | Variación | Gasto | Variación | Duración | Variación",
+      "total | anual (%) | medio por | anual (%) | medio | anual (%) | media del | anual (%)",
+      "(millones de €)  | turista (euros) | diario (euros) | viaje (días)"
+     ],
+     "valores": [
+      "TOTAL",
+      16452,
+      6.05,
+      1493,
+      4.41,
+      210,
+      6.94,
+      7.1,
+      -2.37
+     ]
+    },
+    {
+     "hoja": "Jul - 25",
+     "fila_idx": 38,
+     "cabecera": [
+      "Encuesta de Gasto Turístico (EGATUR)",
+      "Julio 2025",
+      "Datos provisionales",
+      "1. Gasto de los turistas internacionales según país de residencia",
+      "Datos mensuales",
+      "Gasto | Variación | Gasto | Variación | Gasto | Variación | Duración | Variación",
+      "total | anual (%) | medio por | anual (%) | medio | anual (%) | media del | anual (%)",
+      "(millones de €)  | turista (euros) | diario (euros) | viaje (días)"
+     ],
+     "valores": [
+      "total",
+      "anual (%)",
+      "medio por",
+      "anual (%)",
+      "medio",
+      "anual (%)",
+      "media del",
+      "anual (%)"
+     ]
+    },
+    {
+     "hoja": "Jul - 25",
+     "fila_idx": 40,
+     "cabecera": [
+      "Encuesta de Gasto Turístico (EGATUR)",
+      "Julio 2025",
+      "Datos provisionales",
+      "1. Gasto de los turistas internacionales según país de residencia",
+      "Datos mensuales",
+      "Gasto | Variación | Gasto | Variación | Gasto | Variación | Duración | Variación",
+      "total | anual (%) | medio por | anual (%) | medio | anual (%) | media del | anual (%)",
+      "(millones de €)  | turista (euros) | diario (euros) | viaje (días)"
+     ],
+     "valores": [
+      "TOTAL",
+      16452,
+      6.05,
+      1493,
+      4.41,
+      210,
+      6.94,
+      7.1,
+      -2.37
+     ]
+    },
+    {
+     "hoja": "Jul - 25",
+     "fila_idx": 50,
+     "cabecera": [
+      "Encuesta de Gasto Turístico (EGATUR)",
+      "Julio 2025",
+      "Datos provisionales",
+      "1. Gasto de los turistas internacionales según país de residencia",
+      "Datos mensuales",
+      "Gasto | Variación | Gasto | Variación | Gasto | Variación | Duración | Variación",
+      "total | anual (%) | medio por | anual (%) | medio | anual (%) | media del | anual (%)",
+      "(millones de €)  | turista (euros) | diario (euros) | viaje (días)"
+     ],
+     "valores": [
+      "total",
+      "anual (%)",
+      "medio por",
+      "anual (%)",
+      "medio",
+      "anual (%)",
+      "media del",
+      "anual (%)"
+     ]
+    },
+    {
+     "hoja": "Jul - 25",
+     "fila_idx": 52,
+     "cabecera": [
+      "Encuesta de Gasto Turístico (EGATUR)",
+      "Julio 2025",
+      "Datos provisionales",
+      "1. Gasto de los turistas internacionales según país de residencia",
+      "Datos mensuales",
+      "Gasto | Variación | Gasto | Variación | Gasto | Variación | Duración | Variación",
+      "total | anual (%) | medio por | anual (%) | medio | anual (%) | media del | anual (%)",
+      "(millones de €)  | turista (euros) | diario (euros) | viaje (días)"
+     ],
+     "valores": [
+      "TOTAL",
+      16452,
+      6.05,
+      1493,
+      4.41,
+      210,
+      6.94,
+      7.1,
+      -2.37
+     ]
+    },
+    {
+     "hoja": "Datos acumulados",
+     "fila_idx": 8,
+     "cabecera": [
+      "Encuesta de Gasto Turístico (EGATUR)",
+      "Julio 2025",
+      "Datos acumulados provisionales",
+      "5. Gasto de los turistas internacionales según país de residencia",
+      "Datos acumulados",
+      "Gasto | Variación | Gasto | Variación | Gasto | Variación | Duración | Variación",
+      "total | anual (%) | medio por | anual (%) | medio | anual (%) | media del | anual (%)"
+     ],
+     "valores": [
+      "total",
+      "anual (%)",
+      "medio por",
+      "anual (%)",
+      "medio",
+      "anual (%)",
+      "media del",
+      "anual (%)"
+     ]
+    },
+    {
+     "hoja": "Datos acumulados",
+     "fila_idx": 10,
+     "cabecera": [
+      "Encuesta de Gasto Turístico (EGATUR)",
+      "Julio 2025",
+      "Datos acumulados provisionales",
+      "5. Gasto de los turistas internacionales según país de residencia",
+      "Datos acumulados",
+      "Gasto | Variación | Gasto | Variación | Gasto | Variación | Duración | Variación",
+      "total | anual (%) | medio por | anual (%) | medio | anual (%) | media del | anual (%)",
+      "(millones de €)  | turista (euros) | diario (euros) | viaje (días)"
+     ],
+     "valores": [
+      "TOTAL",
+      76074,
+      7.19,
+      1370,
+      2.97,
+      196,
+      4.36,
+      7,
+      -1.3
+     ]
+    },
+    {
+     "hoja": "Datos acumulados",
+     "fila_idx": 23,
+     "cabecera": [
+      "Encuesta de Gasto Turístico (EGATUR)",
+      "Julio 2025",
+      "Datos acumulados provisionales",
+      "5. Gasto de los turistas internacionales según país de residencia",
+      "Datos acumulados",
+      "Gasto | Variación | Gasto | Variación | Gasto | Variación | Duración | Variación",
+      "total | anual (%) | medio por | anual (%) | medio | anual (%) | media del | anual (%)",
+      "(millones de €)  | turista (euros) | diario (euros) | viaje (días)"
+     ],
+     "valores": [
+      "total",
+      "anual (%)",
+      "medio por",
+      "anual (%)",
+      "medio",
+      "anual (%)",
+      "media del",
+      "anual (%)"
+     ]
+    },
+    {
+     "hoja": "Datos acumulados",
+     "fila_idx": 25,
+     "cabecera": [
+      "Encuesta de Gasto Turístico (EGATUR)",
+      "Julio 2025",
+      "Datos acumulados provisionales",
+      "5. Gasto de los turistas internacionales según país de residencia",
+      "Datos acumulados",
+      "Gasto | Variación | Gasto | Variación | Gasto | Variación | Duración | Variación",
+      "total | anual (%) | medio por | anual (%) | medio | anual (%) | media del | anual (%)",
+      "(millones de €)  | turista (euros) | diario (euros) | viaje (días)"
+     ],
+     "valores": [
+      "TOTAL",
+      76074,
+      7.19,
+      1370,
+      2.97,
+      196,
+      4.36,
+      7,
+      -1.3
+     ]
+    },
+    {
+     "hoja": "Datos acumulados",
+     "fila_idx": 38,
+     "cabecera": [
+      "Encuesta de Gasto Turístico (EGATUR)",
+      "Julio 2025",
+      "Datos acumulados provisionales",
+      "5. Gasto de los turistas internacionales según país de residencia",
+      "Datos acumulados",
+      "Gasto | Variación | Gasto | Variación | Gasto | Variación | Duración | Variación",
+      "total | anual (%) | medio por | anual (%) | medio | anual (%) | media del | anual (%)",
+      "(millones de €)  | turista (euros) | diario (euros) | viaje (días)"
+     ],
+     "valores": [
+      "total",
+      "anual (%)",
+      "medio por",
+      "anual (%)",
+      "medio",
+      "anual (%)",
+      "media del",
+      "anual (%)"
+     ]
+    },
+    {
+     "hoja": "Datos acumulados",
+     "fila_idx": 40,
+     "cabecera": [
+      "Encuesta de Gasto Turístico (EGATUR)",
+      "Julio 2025",
+      "Datos acumulados provisionales",
+      "5. Gasto de los turistas internacionales según país de residencia",
+      "Datos acumulados",
+      "Gasto | Variación | Gasto | Variación | Gasto | Variación | Duración | Variación",
+      "total | anual (%) | medio por | anual (%) | medio | anual (%) | media del | anual (%)",
+      "(millones de €)  | turista (euros) | diario (euros) | viaje (días)"
+     ],
+     "valores": [
+      "TOTAL",
+      76074,
+      7.19,
+      1370,
+      2.97,
+      196,
+      4.36,
+      7,
+      -1.3
+     ]
+    },
+    {
+     "hoja": "Datos acumulados",
+     "fila_idx": 50,
+     "cabecera": [
+      "Encuesta de Gasto Turístico (EGATUR)",
+      "Julio 2025",
+      "Datos acumulados provisionales",
+      "5. Gasto de los turistas internacionales según país de residencia",
+      "Datos acumulados",
+      "Gasto | Variación | Gasto | Variación | Gasto | Variación | Duración | Variación",
+      "total | anual (%) | medio por | anual (%) | medio | anual (%) | media del | anual (%)",
+      "(millones de €)  | turista (euros) | diario (euros) | viaje (días)"
+     ],
+     "valores": [
+      "total",
+      "anual (%)",
+      "medio por",
+      "anual (%)",
+      "medio",
+      "anual (%)",
+      "media del",
+      "anual (%)"
+     ]
+    },
+    {
+     "hoja": "Datos acumulados",
+     "fila_idx": 52,
+     "cabecera": [
+      "Encuesta de Gasto Turístico (EGATUR)",
+      "Julio 2025",
+      "Datos acumulados provisionales",
+      "5. Gasto de los turistas internacionales según país de residencia",
+      "Datos acumulados",
+      "Gasto | Variación | Gasto | Variación | Gasto | Variación | Duración | Variación",
+      "total | anual (%) | medio por | anual (%) | medio | anual (%) | media del | anual (%)",
+      "(millones de €)  | turista (euros) | diario (euros) | viaje (días)"
+     ],
+     "valores": [
+      "TOTAL",
+      76074,
+      7.19,
+      1370,
+      2.97,
+      196,
+      4.36,
+      7,
+      -1.3
+     ]
+    },
+    {
+     "hoja": "Gasto partidas",
+     "fila_idx": 7,
+     "cabecera": [
+      "Encuesta de Gasto Turístico (EGATUR)",
+      "Julio 2025",
+      "Datos provisionales",
+      "9. Gasto de los turistas internacionales según partidas de gasto",
+      "Gasto | Variación",
+      "total | anual (%)"
+     ],
+     "valores": [
+      "total",
+      "anual (%)"
+     ]
+    },
+    {
+     "hoja": "Gasto partidas",
+     "fila_idx": 9,
+     "cabecera": [
+      "Encuesta de Gasto Turístico (EGATUR)",
+      "Julio 2025",
+      "Datos provisionales",
+      "9. Gasto de los turistas internacionales según partidas de gasto",
+      "Gasto | Variación",
+      "total | anual (%)",
+      "(millones de €) ",
+      "TOTAL | 16452 | 6.05"
+     ],
+     "valores": [
+      "TOTAL",
+      16452,
+      6.05
+     ]
+    }
+   ]
+  }
+ }
+}

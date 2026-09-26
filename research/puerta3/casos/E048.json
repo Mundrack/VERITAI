@@ -1,0 +1,23 @@
+{
+  "claim_id": "E048",
+  "texto": "Las pernoctaciones internacionales en hoteles de Málaga suben un 15,57% en julio",
+  "fuente_url": "https://www.andaluciainformacion.es/articulo/malaga/andalucia-malaga-turismo-pernoctaciones-hoteleras-internacionales-crecen-1557-malaga-mes-julio/202608281353043463067.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "2078",
+    "serie_nombre": "Nacional. Pernoctaciones. Málaga. Residentes en el extranjero.",
+    "unidad": "pernoctaciones",
+    "referencia_principal": "interanual",
+    "descripcion": "EOH, pernoctaciones de residentes en el extranjero, punto turistico Malaga, mensual"
+  },
+  "periodo_objetivo": "2026-M07",
+  "periodo_base": "2025-M07",
+  "valor_objetivo": 283634,
+  "cambio_afirmado": 15.57,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Control de punto turistico: base interanual (edicion vigente) = referencia del emisor."
+}

@@ -1,0 +1,23 @@
+{
+  "claim_id": "E051",
+  "texto": "Crecen un 2,5% las pernoctaciones hoteleras este agosto en Canarias",
+  "fuente_url": "https://www.libertaddigital.com/canarias/2026-09-22/crecen-un-2-5-por-ciento-las-pernoctaciones-hoteleras-este-agosto-en-canarias-7463875/",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "2074",
+    "serie_nombre": "Canarias. Pernoctaciones. Total.",
+    "unidad": "pernoctaciones",
+    "referencia_principal": "interanual",
+    "descripcion": "EOH, pernoctaciones en establecimientos hoteleros, Canarias, mensual"
+  },
+  "periodo_objetivo": "2026-M08",
+  "periodo_base": "2025-M08",
+  "valor_objetivo": 7216680,
+  "cambio_afirmado": 2.5,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Control regional: base interanual (edicion vigente) = referencia del emisor."
+}

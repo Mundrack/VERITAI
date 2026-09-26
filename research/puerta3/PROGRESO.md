@@ -9,6 +9,60 @@ Emisores del conjunto: **INE, Interior vía Portal Estadístico de Criminalidad,
 SEPE y Banco de España** (DEC-032; FMI e interior.gob.es quedan como hallazgo
 de bloqueo, cubeta E).
 
+## JORNADA 3 (vía divergencia, B = 2b, medición): CERRADA con **B = 4 → sigue**
+
+Regla previa, fijada por Mateo (diseño §4b): **B por jornada ≥ 4 → sigue;
+B ≤ 3 → se para y se replantea el mínimo con intervalo declarado.** Reloj
+`P3-J3`: 15:06:00Z → 15:34:40Z = **0,48 h**. Se cerró al alcanzar el umbral y
+antes de las 4 h para que Mateo decida sobre la concentración por edición
+(abajo) antes de seguir; la pausa `P3-PAUSA4` queda abierta.
+
+Resultado: 14 casos trabajados (E044–E057), 14 candidatos (Q053–Q066), 0
+rechazados.
+
+| cubeta | jornada 3 | acumulado | objetivo (mín.) |
+|---|---|---|---|
+| A controles con test | 8 | 25 | 50 (40) |
+| **B 2b esperada** | **4** | **7** | 20 (15) |
+| C otras clases (2a, 3, 4, 2c, 1) | 0 | 1 | 15 (10) |
+| D sin test | 1 | 9 | 10 (5) |
+| E fallo de recuperación | 0 | 11 | 10 (5) |
+| F claim falso | 1 | 3 | 5 (3) |
+| O other_observed | 0 | 1 | — |
+
+Los cuatro B de la jornada: E047 (EFE/Última Hora, Baleares agosto), E053
+(EP/Galicia Press, Galicia julio, **con cambio de signo**: +0,68 % publicado
+frente a −0,35 % vigente), E055 (El Debate/EP, Castilla y León agosto) y E056
+(MurciaEconomía y teletipo regional, Murcia julio). Todos con
+`evidencia_al_publicar` y `evidencia_vigente`, cada una con su fecha.
+
+**Método que funcionó.** Recomputar, para cada CCAA y provincia, la tasa
+interanual con la base **provisional** (anexo del año anterior, descargado con
+`edicion_anterior.py`) y con la **vigente** (API), y buscar en prensa las
+cifras que solo salen con la provisional. Cuatro B en 0,48 h de reloj; los
+barridos genéricos ("pernoctaciones + CCAA + mes") dieron sobre todo
+controles.
+
+**Hallazgo sobre el mecanismo.** En la misma edición y la misma mañana unos
+redactores calculan con la provisional y otros con la vigente (CTH0726: Galicia
+Press y MurciaEconomía provisional; Lanza, Andalucía Información y EP Canarias
+vigente. CTH0826: EP Madrid, EFE Palma y El Debate CyL provisional; LD
+Canarias, EP Andalucía, EP Valencia, Galicia Press y los teletipos provinciales
+de CyL vigente). El mecanismo es del redactor, no de la edición, y el INE no
+publica la tasa por CCAA en el anexo de la EOH: cada agencia la calcula.
+
+**Concentración, para que Mateo decida antes de la jornada 4.** Los 7 B del
+conjunto salen de **dos ediciones de la misma operación** (EOH: CTH0726 con
+E042, E043, E053, E056; CTH0826 con E031, E047, E055), siete redacciones
+distintas. En ETDP, Hipotecas, Sociedades, IPI, FRONTUR y EGATUR el anexo trae
+la tasa por CCAA y el mecanismo no aparece (E029, E040 usan la del INE); en
+EOAT, EP usó la vigente en los dos casos trabajados (E049, E054). Propuesta:
+un tope de B por edición (3, como el de controles) y buscar 2b en las ediciones
+de la EOH de septiembre (sale el 23-10) y en meses anteriores (mayo, abril),
+más el Banco de España (avance mensual revisado cada mes) como segunda
+operación con revisión. Sin tope, la jornada 4 puede llenar B con la EOH y H1
+quedaría evaluada sobre una sola operación.
+
 ## JORNADA 2 (vía divergencia dirigida, medición DEC-033): CERRADA con **B = 0**
 
 Reloj: `P3-J2 t0` 13:34:56Z → `P3-J2 t2` 14:30:15Z = **0,92 h de las 4 h
@@ -185,7 +239,21 @@ Estado del lote al parar (salida de `validar_evaluacion.py`, ver bitácora):
 | E040 | Q049 | D | INE ETDP0726 | Navarra, donde más sube | supported / undetermined |
 | E041 | Q050 | C | Interior Portal 1T26 | ciber = "más del 70 %" del aumento (42 %) | mixed / div, 4 |
 | E042 | Q051 | C | INE CTH0726 | Madrid −1,43 % julio (base provisional) | mixed / div, 2b |
-| E043 | Q052 | C | INE CTH0726 | Baleares residentes +3,8 % (vigente −2,3 %) | mixed / div, 2b |
+| E043 | Q052 | C→B (DEC-034) | INE CTH0726 | Baleares residentes +3,8 % (vigente −2,3 %) | mixed / div, 2b |
+| E044 | Q053 | A | INE CTH0626 | Madrid +1,2 % junio (EFE) | supported / no_div |
+| E045 | Q054 | A | INE CTH0626 | Cataluña −2,1 % junio | supported / no_div |
+| E046 | Q055 | A | INE CTH0526 | Madrid +0,7 % mayo | supported / no_div |
+| E047 | Q056 | B | INE CTH0826 | Baleares agosto: clientes +3,8 %, noches −0,2 % (EFE, base provisional) | mixed / div, 2b |
+| E048 | Q057 | A | INE CTH0726 | Málaga ciudad, extranjeros +15,57 % julio | supported / no_div |
+| E049 | Q058 | A | INE EOAT0726 | Andalucía extrahoteleras +11,6 % julio (suma de 4 encuestas) | supported / no_div |
+| E050 | Q059 | F | INE EOAT0626 | Madrid extrahoteleras +15,9 % junio "desde 460.550" (base inexistente) | contradicted / no_div |
+| E051 | Q060 | A | INE CTH0826 | Canarias +2,5 % agosto | supported / no_div |
+| E052 | Q061 | D | INE CTH0826 | Andalucía, mejor agosto desde 1999 | supported / undetermined |
+| E053 | Q062 | B | INE CTH0726 | Galicia +0,68 % julio "frente a 1.325.548" (vigente −0,35 %) | mixed / div, 2b |
+| E054 | Q063 | A | INE EOAT0626 | Galicia extrahoteleras +9,33 % junio | supported / no_div |
+| E055 | Q064 | B | INE CTH0826 | Castilla y León −4,5 % agosto (vigente −3,2 %) | mixed / div, 2b |
+| E056 | Q065 | B | INE CTH0726 | Murcia +4,09 % julio (vigente +3,32 %) | mixed / div, 2b |
+| E057 | Q066 | A | INE CTH0726 | Castilla-La Mancha −6,7 % julio | supported / no_div |
 
 Rechazados en la jornada 2: Q035 (Asnef, fuera de alcance), Q038
 (Registradores, fuera de alcance), Q048 (Delegación del Gobierno en Madrid,

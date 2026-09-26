@@ -1,0 +1,19 @@
+{
+  "claim_id": "E052",
+  "texto": "Andalucía alcanza en agosto \"el mejor registro de pernoctaciones hoteleras\" desde 1999 con 7,72 millones",
+  "fuente_url": "https://www.ultimahora.es/noticias/comunidades/2026/09/22/2713681/andalucia-alcanza-agosto-mejor-registro-pernoctaciones-hoteleras-desde-1999-millones.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "extremo_historico",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "2074",
+    "serie_nombre": "Andalucía. Pernoctaciones. Total.",
+    "unidad": "pernoctaciones",
+    "referencia_principal": "interanual",
+    "descripcion": "EOH, pernoctaciones en establecimientos hoteleros, Andalucia, mensual"
+  },
+  "periodo_objetivo": "2026-M08",
+  "valor_objetivo": 7717597,
+  "notas": "Extremo: maximo de los agostos desde 1999. Sin test aplicable."
+}

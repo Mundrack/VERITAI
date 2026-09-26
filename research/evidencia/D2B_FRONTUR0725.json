@@ -1,0 +1,201 @@
+{
+ "codigo": "FRONTUR0725",
+ "consultado": "2026-09-26T15:03:03+00:00",
+ "agente": "VERITAI-prototipo/0.1 (tesis UDLA; agente identificado, DEC-018)",
+ "descargas": {
+  "html": {
+   "url": "https://www.ine.es/dyngs/Prensa/FRONTUR0725.htm",
+   "http": 200,
+   "content_type": "text/html;charset=UTF-8",
+   "bytes": 41228,
+   "sha256": "151145307191c8ba4d52f2ac1eb9978f99f4eaa4156c7b3682eebd90a83e52b4",
+   "guardado_en": "C:\\Users\\mateo\\AppData\\Local\\Temp\\claude\\C--Users-mateo-WORK-SPACE-VERITAI\\0ab7628b-d5c1-41fd-a522-c3be90344cd4\\scratchpad\\d2b_binarios\\D2B_FRONTUR0725.htm",
+   "fecha_publicacion": "1 de septiembre de 2025",
+   "titular": "España recibió 11,0 millones de turistas internacionales en julio, un 1,6% más que en el mismo mes de 2024."
+  },
+  "pdf": {
+   "url": "https://www.ine.es/dyngs/Prensa/FRONTUR0725.pdf",
+   "http": 200,
+   "content_type": "application/pdf",
+   "bytes": 198008,
+   "sha256": "023319d4fc70600a5cf798b55b427e18fed303e176bebb5f5cc812348e63ef38",
+   "guardado_en": "C:\\Users\\mateo\\AppData\\Local\\Temp\\claude\\C--Users-mateo-WORK-SPACE-VERITAI\\0ab7628b-d5c1-41fd-a522-c3be90344cd4\\scratchpad\\d2b_binarios\\D2B_FRONTUR0725.pdf"
+  },
+  "xlsx": {
+   "url": "https://www.ine.es/prensa/anexo_tablas/es/FRONTUR0725.xlsx",
+   "http": 200,
+   "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+   "bytes": 206779,
+   "sha256": "3d79ee8b261f3ef8d6ae0b52d7a9117f80245f11500749221e915480ab27916c",
+   "guardado_en": "C:\\Users\\mateo\\AppData\\Local\\Temp\\claude\\C--Users-mateo-WORK-SPACE-VERITAI\\0ab7628b-d5c1-41fd-a522-c3be90344cd4\\scratchpad\\d2b_binarios\\D2B_FRONTUR0725.xlsx",
+   "filas": [
+    {
+     "hoja": "Hoja1",
+     "fila_idx": 9,
+     "cabecera": [
+      "Estadística de Movimientos Turísticos en Fronteras (FRONTUR)",
+      "Julio 2025",
+      "Datos provisionales",
+      "1. Llegadas de visitantes internacionales por tipo de visitante",
+      "Datos mensuales | Datos acumulados",
+      "Valor | Variación | Valor | Variación",
+      "absoluto | anual (%) | absoluto | anual (%)",
+      "TOTAL | 16250218 | 1.83 | 81703512 | 6.17"
+     ],
+     "valores": [
+      "TOTAL",
+      16250218,
+      1.83,
+      81703512,
+      6.17
+     ]
+    },
+    {
+     "hoja": "Hoja1",
+     "fila_idx": 18,
+     "cabecera": [
+      "Estadística de Movimientos Turísticos en Fronteras (FRONTUR)",
+      "Julio 2025",
+      "Datos provisionales",
+      "1. Llegadas de visitantes internacionales por tipo de visitante",
+      "Datos mensuales | Datos acumulados",
+      "Valor | Variación | Valor | Variación",
+      "absoluto | anual (%) | absoluto | anual (%)",
+      "TOTAL | 16250218 | 1.83 | 81703512 | 6.17"
+     ],
+     "valores": [
+      "TOTAL",
+      11023252,
+      1.57,
+      55519231,
+      4.1
+     ]
+    },
+    {
+     "hoja": "Hoja1",
+     "fila_idx": 41,
+     "cabecera": [
+      "Estadística de Movimientos Turísticos en Fronteras (FRONTUR)",
+      "Julio 2025",
+      "Datos provisionales",
+      "1. Llegadas de visitantes internacionales por tipo de visitante",
+      "Datos mensuales | Datos acumulados",
+      "Valor | Variación | Valor | Variación",
+      "absoluto | anual (%) | absoluto | anual (%)",
+      "TOTAL | 16250218 | 1.83 | 81703512 | 6.17"
+     ],
+     "valores": [
+      "TOTAL",
+      11023252,
+      1.57,
+      55519231,
+      4.1
+     ]
+    },
+    {
+     "hoja": "Hoja2",
+     "fila_idx": 6,
+     "cabecera": [
+      "4. Llegadas de turistas internacionales ",
+      "según vía de acceso a España",
+      "Datos mensuales | Datos acumulados",
+      "Valor | Variación | Valor | Variación",
+      "absoluto | anual (%) | absoluto | anual (%)",
+      "TOTAL | 11023252 | 1.57 | 55519231 | 4.1"
+     ],
+     "valores": [
+      "TOTAL",
+      11023252,
+      1.57,
+      55519231,
+      4.1
+     ]
+    },
+    {
+     "hoja": "Hoja2",
+     "fila_idx": 18,
+     "cabecera": [
+      "4. Llegadas de turistas internacionales ",
+      "según vía de acceso a España",
+      "Datos mensuales | Datos acumulados",
+      "Valor | Variación | Valor | Variación",
+      "absoluto | anual (%) | absoluto | anual (%)",
+      "TOTAL | 11023252 | 1.57 | 55519231 | 4.1",
+      "Aeropuerto | 8795037 | 3.2 | 46724555 | 4.93",
+      "Carreteras | 1995087 | 0.58 | 7768787 | 1.82"
+     ],
+     "valores": [
+      "TOTAL",
+      11023252,
+      1.57,
+      55519231,
+      4.1
+     ]
+    },
+    {
+     "hoja": "Hoja2",
+     "fila_idx": 33,
+     "cabecera": [
+      "4. Llegadas de turistas internacionales ",
+      "según vía de acceso a España",
+      "Datos mensuales | Datos acumulados",
+      "Valor | Variación | Valor | Variación",
+      "absoluto | anual (%) | absoluto | anual (%)",
+      "TOTAL | 11023252 | 1.57 | 55519231 | 4.1",
+      "Aeropuerto | 8795037 | 3.2 | 46724555 | 4.93",
+      "Carreteras | 1995087 | 0.58 | 7768787 | 1.82"
+     ],
+     "valores": [
+      "TOTAL",
+      11023252,
+      1.57,
+      55519231,
+      4.1
+     ]
+    },
+    {
+     "hoja": "Hoja2",
+     "fila_idx": 43,
+     "cabecera": [
+      "4. Llegadas de turistas internacionales ",
+      "según vía de acceso a España",
+      "Datos mensuales | Datos acumulados",
+      "Valor | Variación | Valor | Variación",
+      "absoluto | anual (%) | absoluto | anual (%)",
+      "TOTAL | 11023252 | 1.57 | 55519231 | 4.1",
+      "Aeropuerto | 8795037 | 3.2 | 46724555 | 4.93",
+      "Carreteras | 1995087 | 0.58 | 7768787 | 1.82"
+     ],
+     "valores": [
+      "TOTAL",
+      11023252,
+      1.57,
+      55519231,
+      4.1
+     ]
+    },
+    {
+     "hoja": "Hoja2",
+     "fila_idx": 53,
+     "cabecera": [
+      "4. Llegadas de turistas internacionales ",
+      "según vía de acceso a España",
+      "Datos mensuales | Datos acumulados",
+      "Valor | Variación | Valor | Variación",
+      "absoluto | anual (%) | absoluto | anual (%)",
+      "TOTAL | 11023252 | 1.57 | 55519231 | 4.1",
+      "Aeropuerto | 8795037 | 3.2 | 46724555 | 4.93",
+      "Carreteras | 1995087 | 0.58 | 7768787 | 1.82"
+     ],
+     "valores": [
+      "TOTAL",
+      16250218,
+      1.83,
+      81703512,
+      6.17
+     ]
+    }
+   ]
+  }
+ }
+}

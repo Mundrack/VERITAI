@@ -61,13 +61,20 @@ total): se vuelven a descargar y se comprueban por sha256.
 - **Las revisiones son reales y de tamaño variable:** desde +4 sociedades hasta
   −24.181 pernoctaciones; en Baleares (residentes, E043) la revisión cambia el
   signo de la tasa interanual.
-- **Límite:** INEbase enlaza solo la última nota de cada operación; no hay un
-  listado oficial de notas anteriores que el agente pueda recorrer (la ruta
-  `notasPrensaAnteriores` devuelve 404). La recuperabilidad depende del patrón
-  de código, que es estable en las cinco operaciones probadas pero no está
-  documentado por el INE: `NEEDS_REVIEW` para operaciones con códigos
-  irregulares (p. ej. `IPV1T26`, `CNTR2T26`, `EPA` trimestrales) antes de
-  darlo por general.
+- **AMENAZA A LA VALIDEZ (no una nota al pie):** INEbase enlaza solo la
+  última nota de cada operación y no hay un listado oficial de notas
+  anteriores que el agente pueda recorrer (la ruta `notasPrensaAnteriores`
+  devuelve 404). La recuperabilidad depende del **patrón de código de las
+  notas, que el INE no documenta**. Es estable en las operaciones probadas,
+  pero es una convención observada, no un contrato: **si el INE cambia el
+  patrón, el conector de edición anterior se rompe y 2b deja de ser
+  computable por el agente.** La mitigación no evita la rotura, la hace
+  visible: el conector abstiene con `PREVIOUS_EDITION_NOT_FOUND` (nunca un
+  valor inventado), las ediciones ya descargadas se conservan con su sha256,
+  y la amenaza se declara en la tesis como límite de validez externa del
+  conector, no de la clase. `NEEDS_REVIEW` para operaciones con códigos
+  irregulares (p. ej. `IPV1T26`, `CNTR2T26`, EPA trimestrales) antes de darlo
+  por general.
 - **Límite:** el anexo cambia de hoja y de etiqueta entre operaciones
   (`EOH_Hoja3`, `Hoja9`, `Hoja 1`); el conector de 2b necesitará un mapa
   fila/hoja por operación, no una extracción genérica.

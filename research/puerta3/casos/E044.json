@@ -1,0 +1,23 @@
+{
+  "claim_id": "E044",
+  "texto": "El turismo hotelero en Madrid crece un 1,2% en junio",
+  "fuente_url": "https://www.madridactual.es/noticias-regionales/turismo-madrid/pernoctaciones-hoteleras-region-crecen-1-2-junio-2-4-millones-20260724-8112720.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "2074",
+    "serie_nombre": "Madrid (Comunidad de). Pernoctaciones. Total.",
+    "unidad": "pernoctaciones",
+    "referencia_principal": "interanual",
+    "descripcion": "EOH, pernoctaciones en establecimientos hoteleros, Comunidad de Madrid, mensual"
+  },
+  "periodo_objetivo": "2026-M06",
+  "periodo_base": "2025-M06",
+  "valor_objetivo": 2421276,
+  "cambio_afirmado": 1.2,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Control regional: base interanual (edicion vigente) = referencia del emisor."
+}

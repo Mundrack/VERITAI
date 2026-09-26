@@ -1,0 +1,38 @@
+{
+  "claim_id": "E056",
+  "texto": "Los establecimientos de la Comunidad registraron 410.706 pernoctaciones, un 4,09% más que en el mismo mes de 2025, según los últimos datos publicados por el Instituto Nacional de Estadística (INE)",
+  "fuente_url": "https://murciaeconomia.com/art/108300/los-hoteles-de-la-region-de-murcia-superan-las-410000-pernoctaciones-en-julio-y-crecen-un-4",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "2074",
+    "serie_nombre": "Murcia (Región de). Pernoctaciones. Total.",
+    "unidad": "pernoctaciones",
+    "referencia_principal": "interanual",
+    "descripcion": "EOH, pernoctaciones en establecimientos hoteleros, Region de Murcia, mensual"
+  },
+  "periodo_objetivo": "2026-M07",
+  "periodo_base": "2025-M07",
+  "valor_objetivo": 410706,
+  "cambio_afirmado": 4.09,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "evidencia_al_publicar": {
+    "valor": 394572,
+    "edicion": "INE CTH0725 (julio 2025, datos provisionales)",
+    "fecha": "2025-08-22",
+    "url": "https://www.ine.es/prensa/anexo_tablas/es/CTH0725.xlsx",
+    "raw_value_span": "[CTH0725.xlsx, hoja EOH_Hoja3, fila 62] 'Murcia, Región de', 162708, 115570, 47139, 394572, 284106, 110467, 2.43",
+    "verificacion": "research/evidencia/D2B_CTH0725.json (HTTP 200, sha256)"
+  },
+  "evidencia_vigente": {
+    "valor": 397508,
+    "edicion": "API Tempus, tabla 2074, edicion vigente",
+    "fecha": "2026-09-26",
+    "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/2074",
+    "raw_value_span": "[INE API tabla 2074] 'Murcia (Región de). Pernoctaciones. Total.' 2025-M07: 397508"
+  },
+  "notas": "Base interanual correcta en periodo, tomada de la edicion provisional (394.572) y no de la vigente (397.508): 2b sin cambio de signo (+4,09% frente a +3,32%)."
+}

@@ -1,0 +1,23 @@
+{
+  "claim_id": "E050",
+  "texto": "Las pernoctaciones en alojamientos extrahoteleros en la Comunidad de Madrid (apartamentos, campings, alojamientos de turismo rural y albergues) han sumado las 533.954 de estancias en junio, un 15,9% más respecto al mismo mes de 2025, cuando se registraron 460.550 pernoctas",
+  "fuente_url": "https://www.ultimahora.es/noticias/comunidades/2026/07/31/2680839/pernoctaciones-extrahoteleras-region-disparan-junio-impulsadas-por-bad-bunny-leon-xiv.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "1993 + 2016 + 61766 (suma de cuatro series)",
+    "serie_nombre": "Madrid (Comunidad de). Pernoctaciones extrahoteleras (EOAP + EOAC + EOTR + EOAL)",
+    "unidad": "pernoctaciones",
+    "referencia_principal": "interanual",
+    "descripcion": "Suma de pernoctaciones en apartamentos, campings, turismo rural y albergues, Comunidad de Madrid, mensual"
+  },
+  "periodo_objetivo": "2026-M06",
+  "periodo_base": "2025-M06",
+  "valor_objetivo": 533954,
+  "cambio_afirmado": 15.9,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "La base afirmada (460.550) no se reproduce con ninguna edicion; con la vigente la variacion es -0,55%."
+}

@@ -200,5 +200,25 @@ valor publicado difiere del vigente en las cinco).
 Anotación de un caso B: `estructura.evidencia_al_publicar` y
 `estructura.evidencia_vigente`, cada una con valor, edición, **fecha**
 (publicación / consulta), URL y `raw_value_span` (E031, E042, E043). Tasa
-observada de 2b en la jornada 2: 3 de 17 casos de prensa; con ella la regla de
-§3b se reevalúa en la jornada 3. Q048 sigue vetado por DEC-025.
+observada de 2b en la jornada 2: 3 de 17 casos de prensa, pero salió de un lote
+que buscaba otra cosa. Q048 sigue vetado por DEC-025.
+
+**Amenaza a la validez de 2b (no una nota al pie).** La edición anterior se
+recupera por el patrón de código de las notas del INE, que el INE no
+documenta; INEbase no enlaza notas anteriores. **Si el INE cambia el patrón,
+el conector se rompe y 2b deja de ser computable por el agente.** Mitigación
+solo para que la rotura sea visible: abstención `PREVIOUS_EDITION_NOT_FOUND`,
+nunca un valor inventado, y ediciones ya descargadas conservadas con sha256.
+Se declara en la tesis como límite de validez externa del conector. El
+conector cubre un mapa cerrado de 8 operaciones del INE
+(`docs/PROPUESTA-2B.md` §4).
+
+### 4b. Regla de la jornada 3, fijada por Mateo antes de recolectarla
+
+La jornada 3 se hace por la vía divergencia con **B = 2b** y se trata también
+como **medición**, porque los 3 de 17 de la jornada 2 vienen de un lote que
+buscaba otra cosa. Regla previa: **B por jornada ≥ 4 → la proyección sostiene
+los 15 y se sigue; B ≤ 3 → se para y se replantea el mínimo con intervalo
+declarado.** Cuentan los casos anotados en B (2b) con criba hecha y
+trabajados; los hermanos por criba una sola vez. Se avisa al cerrar la
+jornada con el número de B.

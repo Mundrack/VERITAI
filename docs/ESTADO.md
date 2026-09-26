@@ -21,15 +21,15 @@ PUERTA 2   prototipo end-to-end, UNA clase y UN emisor,      CERRADA 2026-09-25 
            sin LLM en ningun paso (DEC-028)                    P11 en NEEDS_REVIEW (P-23),
            nada del piloto evalua (DEC-025)                    no se cita hasta cotejarlo
 
-PUERTA 3   corpus completo anotado + arnes de evaluacion     <-- AQUI. Tras DEC-034 la cubeta B
-           diseno APROBADO (DEC-031): research/PUERTA-3-DISENO.md   es 2b (base revisada); 2a queda
-           arnes: research/arnes/ (fusionado)                   secundaria con 0/43. 43 casos
-           recoleccion: research/puerta3/ (rama                (A 17 de 50, B 3 de 20, C 1, D 8,
-           feat/puerta-3-recoleccion, sin fusionar)             E 11, F 2, O 1) en 1,6 h de 16.
-           emisores tras DEC-032: INE, Portal Criminalidad,     Condicion bloqueante cumplida:
-           SEPE, BdE (FMI e interior.gob.es: 403, cubeta E)     edicion anterior del INE recuperable
-           2b: research/puerta3/RECUPERABILIDAD-2B.md           fuera de Tempus. Siguiente: proponer
-                                                               el test 2b y su conector; jornada 3
+PUERTA 3   corpus completo anotado + arnes de evaluacion     <-- AQUI. B = 2b desde DEC-034; 2a
+           diseno APROBADO (DEC-031): research/PUERTA-3-DISENO.md   secundaria con 0/43. 57 casos
+           arnes: research/arnes/ (fusionado)                   (A 25 de 50, B 7 de 20, C 1, D 9,
+           recoleccion: research/puerta3/ (rama                E 11, F 3, O 1) en 2,1 h de 16.
+           feat/puerta-3-recoleccion, sin fusionar)             Jornada 3 cerrada con B = 4 (regla
+           emisores tras DEC-032: INE, Portal Criminalidad,     4b: sigue). Pendiente de Mateo: tope
+           SEPE, BdE (FMI e interior.gob.es: 403, cubeta E)     de B por edicion (los 7 B salen de
+           2b: research/puerta3/RECUPERABILIDAD-2B.md           dos ediciones de la EOH) y el
+           propuesta: docs/PROPUESTA-2B.md (8 operaciones)     "ejecuta" del test 2b y su conector
 
 PUERTA 4   evaluacion completa: metricas, ablacion,
            sondas contrafactuales

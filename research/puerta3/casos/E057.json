@@ -1,0 +1,23 @@
+{
+  "claim_id": "E057",
+  "texto": "C-LM registra en julio 340.617 pernoctaciones hoteleras, un 6,7% menos que hace un año",
+  "fuente_url": "https://www.lanzadigital.com/castilla-la-mancha/pernoctaciones-hotelera/",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "2074",
+    "serie_nombre": "Castilla - La Mancha. Pernoctaciones. Total.",
+    "unidad": "pernoctaciones",
+    "referencia_principal": "interanual",
+    "descripcion": "EOH, pernoctaciones en establecimientos hoteleros, Castilla-La Mancha, mensual"
+  },
+  "periodo_objetivo": "2026-M07",
+  "periodo_base": "2025-M07",
+  "valor_objetivo": 340617,
+  "cambio_afirmado": -6.7,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "baja",
+  "notas": "Control regional: base interanual (edicion vigente) = referencia del emisor."
+}

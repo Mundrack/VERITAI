@@ -1,0 +1,23 @@
+{
+  "claim_id": "E054",
+  "texto": "Las pernoctaciones en alojamientos turísticos extrahoteleros gallegos se situaron en 473.188 en junio, lo que representa un incremento del 9,33%",
+  "fuente_url": "https://www.galiciapress.es/articulo/economia/2026-07-31/5971575-pernoctaciones-extrahoteleras-crecen-93-junio-galicia-frente-descenso-media",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "1993 + 2016 + 61766 (suma de cuatro series)",
+    "serie_nombre": "Galicia. Pernoctaciones extrahoteleras (EOAP + EOAC + EOTR + EOAL)",
+    "unidad": "pernoctaciones",
+    "referencia_principal": "interanual",
+    "descripcion": "Suma de pernoctaciones en apartamentos, campings, turismo rural y albergues, Galicia, mensual"
+  },
+  "periodo_objetivo": "2026-M06",
+  "periodo_base": "2025-M06",
+  "valor_objetivo": 473188,
+  "cambio_afirmado": 9.33,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Control con metrica compuesta (suma de cuatro series): base interanual vigente."
+}

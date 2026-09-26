@@ -985,3 +985,34 @@ agotarse las vetas dirigidas, no el reloj (detalle y tabla en
 - Corrección de redacción de Mateo aplicada en PROGRESO: el hallazgo de la
   jornada 2 es "2a no apareció en 43 casos recolectados con este método", no
   una afirmación sobre la prensa.
+
+## 2026-09-26 (15:35Z) — Propuesta 2b, amenaza a la validez y jornada 3: B = 4 → sigue
+
+Orden de Mateo ejecutado en su orden:
+
+1. **Propuesta del test 2b y su conector** (`docs/PROPUESTA-2B.md`, sin
+   implementar hasta el "ejecuta"): el mapa cubre **8 operaciones del INE**
+   (CTH, EOAT, ETDP, H, SM, IPI, FRONTUR, EGATUR; patrón de código verificado
+   en las 8, anexo XLSX 200 en las 8) y **se cierra en 8**. Añadir una cuesta
+   alrededor de una hora y una entrada declarativa de diez líneas; no se
+   añade ninguna durante la evaluación. Fuera: IPRI (sin anexo, 404), las
+   trimestrales y lo que no es INE. Resúmenes con sha256 en
+   `research/evidencia/D2B_*.json` (IPI0725, IPRI0825, FRONTUR0725,
+   EGATUR0725 añadidos).
+2. **Jornada 3** (vía divergencia, B = 2b, medición; regla previa en diseño
+   §4b): reloj 0,48 h, 14 casos (E044–E057), **B = 4 → sigue**. Acumulado:
+   A 25, B 7, C 1, D 9, E 11, F 3, O 1 (57 casos). Método: recomputar por
+   CCAA la tasa con la base provisional y con la vigente y buscar en prensa
+   las cifras que solo salen con la provisional. Los 7 B vienen de dos
+   ediciones de la EOH: concentración anotada en `PROGRESO.md` con propuesta
+   de tope por edición para que Mateo decida antes de la jornada 4.
+3. **Amenaza a la validez** escrita como tal (no como nota al pie) en el
+   diseño §4, el encuadre, `RECUPERABILIDAD-2B.md` y la propuesta §5: si el
+   INE cambia el patrón de código de las notas, el conector se rompe.
+
+Otros hallazgos de la jornada: un claim falso (E050, EP Madrid: base
+"460.550" que no existe en ninguna edición del INE, con cambio de signo
+implícito); dos controles con métrica compuesta (E049, E054: suma de cuatro
+encuestas, fuera del prototipo, declarados); en la misma edición y la misma
+mañana unas redacciones calculan con la provisional y otras con la vigente
+(el mecanismo es del redactor, no de la edición).

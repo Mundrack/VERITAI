@@ -1,0 +1,23 @@
+{
+  "claim_id": "E046",
+  "texto": "Los hoteles de la Comunidad de Madrid registraron casi 2,6 millones de pernoctaciones en mayo, un 0,7% más que el año anterior",
+  "fuente_url": "https://lavozmadrid.es/madrid-capital/general/hoteles-de-madrid-rozan-26-millones-de-pernoctaciones-en-mayo",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "2074",
+    "serie_nombre": "Madrid (Comunidad de). Pernoctaciones. Total.",
+    "unidad": "pernoctaciones",
+    "referencia_principal": "interanual",
+    "descripcion": "EOH, pernoctaciones en establecimientos hoteleros, Comunidad de Madrid, mensual"
+  },
+  "periodo_objetivo": "2026-M05",
+  "periodo_base": "2025-M05",
+  "valor_objetivo": 2560746,
+  "cambio_afirmado": 0.7,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Control regional: base interanual (edicion vigente) = referencia del emisor."
+}

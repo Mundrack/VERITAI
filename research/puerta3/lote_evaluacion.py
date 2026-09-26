@@ -2500,6 +2500,879 @@ CANDIDATOS: list[dict] = [
             notas="Base interanual correcta en periodo, tomada de la edicion provisional (740.149) y no de la vigente (786.273): 2b con cambio de signo (+3,8% frente a -2,3%).",
         ),
     ),
+    # ------------------------------------------------------------------ jornada 3 (via divergencia, B = 2b)
+    dict(
+        cid="Q053",
+        claim_text="El turismo hotelero en Madrid crece un 1,2% en junio",
+        claim_date="2026-07-24",
+        post_url="https://www.madridactual.es/noticias-regionales/turismo-madrid/pernoctaciones-hoteleras-region-crecen-1-2-junio-2-4-millones-20260724-8112720.html",
+        post_url_tipo="prensa", emisor="Madrid Actual (teletipo de EFE)", emisor_tipo="prensa_digital",
+        emisor_nivel=2, pais="ES", tema="turismo",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com pernoctaciones hoteleras Madrid junio 2026 1,2% 2.421.276",
+        criba_query_b="pernoctaciones hoteleras Madrid junio 2026 '1,2%' OR '2.421.276' OR '2,4 millones' verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="'pernoctaciones hoteleras' junio 2026 'Comunidad de Madrid' OR Andalucía OR Cataluña OR 'Comunitat Valenciana' OR Canarias OR Baleares OR Galicia aumentan OR caen OR suben OR bajan '%' julio 2026 Europa Press -agosto",
+        collected_at="2026-09-26", case_id="E044",
+        # --- trabajo 2026-09-26 (E044 t0/t1/t2 15:1xZ) ---
+        fuente_primaria="INE - CTH junio 2026 (CTH0626): API Tempus tabla 2074 (EOT1763-EOT1768, nult=16); edicion anterior: API (junio 2025 vigente) y anexo CTH0625.xlsx (provisional, publicado 23/07/2025)",
+        primaria_url="https://www.ine.es/dyngs/Prensa/CTH0626.htm",
+        primaria_url_tipo="nota_de_prensa_html + API JSON wstempus DATOS_TABLA/2074 + anexo xlsx de la edicion anterior (CTH0625, HTTP 200 al agente)",
+        via_de_acceso="api", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="api",
+        dato_actual="Comunidad de Madrid, junio 2026: pernoctaciones 2.421.276 (residentes 988.985; extranjeros 1.432.291); viajeros 1.199.893 (578.040 / 621.852)",
+        dato_anterior="junio 2025. Vigente (API): pernoctaciones 2.393.431; viajeros 1.183.266 (554.663 / 628.602). Provisional (anexo CTH0625): pernoctaciones 2.412.755; viajeros 1.202.428 (565.728 / 636.700)",
+        raw_value_span_actual=(
+            "[INE API tabla 2074] EOT1766 2026-M06: 2421276 | EOT1763 2026-M06: 1199893 | EOT1764 2026-M06: 578040 "
+            "| EOT1765 2026-M06: 621852 || [Madrid Actual/EFE 2026-07-24, el claim] 'Las pernoctaciones registradas "
+            "en la region sumaron 2.421.276 en junio'; 'aumentaron un 1,2% en junio'; 'se alojaron un 1,41% mas de "
+            "turistas'; 'totalizando 1.199.893 viajeros'; 'Los viajeros residentes en Espana crecieron un 4,2% "
+            "interanual, mientras que los extranjeros se redujeron un 1,1%'"
+        ),
+        raw_value_span_anterior=(
+            "[INE API tabla 2074] EOT1766 2025-M06: 2393431 | EOT1763 2025-M06: 1183266 | EOT1764 2025-M06: 554663 "
+            "| EOT1765 2025-M06: 628602 || [CTH0625.xlsx, hoja EOH_Hoja3, fila 61, datos provisionales junio 2025] "
+            "'Madrid, Comunidad de', 1202428, 565728, 636700, 2412755, 976673, 1436083, 2.01"
+        ),
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta A regional, via divergencia (jornada 3, veta 2b). Las cuatro tasas del teletipo (+1,16, +1,41, "
+            "+4,21, -1,07) se reproducen con la edicion VIGENTE de junio 2025; contra la provisional habrian sido "
+            "+0,35, -0,21, +2,18 y -2,33. EFE uso la base revisada: no es 2b. Primer caso de CTH0626. "
+            "methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0626",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="2074",
+                         serie_nombre="Madrid (Comunidad de). Pernoctaciones. Total.",
+                         unidad="pernoctaciones", referencia_principal="interanual",
+                         descripcion="EOH, pernoctaciones en establecimientos hoteleros, Comunidad de Madrid, mensual"),
+            periodo_objetivo="2026-M06", periodo_base="2025-M06",
+            valor_objetivo=2421276, cambio_afirmado=1.2, unidad_cambio="pct", direccion_afirmada="sube",
+            notas="Control regional: base interanual (edicion vigente) = referencia del emisor.",
+        ),
+    ),
+    dict(
+        cid="Q054",
+        claim_text="Catalunya registra 6,73 millones de pernoctaciones hoteleras en junio, un 2,1% menos",
+        claim_date="2026-07-24",
+        post_url="https://www.catalunyapress.es/articulo/economia/2026-07-24/5964000-catalunya-registra-673-millones-pernoctaciones-hoteleras-junio-21-menos",
+        post_url_tipo="prensa", emisor="CatalunyaPress (Felipe Martínez)", emisor_tipo="prensa_digital",
+        emisor_nivel=2, pais="ES", tema="turismo",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com Catalunya pernoctaciones hoteleras junio 2026 6,73 millones 2,1%",
+        criba_query_b="Catalunya pernoctaciones hoteleras junio 2026 '6,73 millones' OR '2,1% menos' verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="'pernoctaciones hoteleras' junio 2026 'Comunidad de Madrid' OR Andalucía OR Cataluña OR 'Comunitat Valenciana' OR Canarias OR Baleares OR Galicia aumentan OR caen OR suben OR bajan '%' julio 2026 Europa Press -agosto",
+        collected_at="2026-09-26", case_id="E045",
+        # --- trabajo 2026-09-26 (E045 t0/t1/t2 15:1xZ) ---
+        fuente_primaria="INE - CTH junio 2026 (CTH0626): API Tempus tabla 2074 (EOT1661-EOT1666, nult=16); edicion anterior: API (junio 2025 vigente) y anexo CTH0625.xlsx (provisional, publicado 23/07/2025)",
+        primaria_url="https://www.ine.es/dyngs/Prensa/CTH0626.htm",
+        primaria_url_tipo="nota_de_prensa_html + API JSON wstempus DATOS_TABLA/2074 + anexo xlsx de la edicion anterior (CTH0625, HTTP 200 al agente)",
+        via_de_acceso="api", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="api",
+        dato_actual="Cataluna, junio 2026: pernoctaciones 6.729.507 (residentes 1.903.239; extranjeros 4.826.268); viajeros 2.454.534 (908.260 / 1.546.274)",
+        dato_anterior="junio 2025. Vigente (API): pernoctaciones 6.873.856; viajeros 2.461.312 (903.687 / 1.557.625). Provisional (anexo CTH0625): pernoctaciones 6.890.423 (1.869.312 / 5.021.111); viajeros 2.455.692 (894.453 / 1.561.240)",
+        raw_value_span_actual=(
+            "[INE API tabla 2074] EOT1664 2026-M06: 6729507 | EOT1661 2026-M06: 2454534 | EOT1662 2026-M06: 908260 "
+            "| EOT1663 2026-M06: 1546274 || [CatalunyaPress 2026-07-24, el claim] 'Los establecimientos hoteleros "
+            "de Catalunya contabilizan durante junio un total de 6.729.507 pernoctaciones ... un descenso del 2,1% "
+            "respecto al mismo mes del ano anterior'; 'Durante junio se alojan en los hoteles catalanes 2.454.534 "
+            "viajeros, un 0,28% menos que en el mismo periodo de 2025'"
+        ),
+        raw_value_span_anterior=(
+            "[INE API tabla 2074] EOT1664 2025-M06: 6873856 | EOT1661 2025-M06: 2461312 || [CTH0625.xlsx, hoja "
+            "EOH_Hoja3, fila Cataluna, datos provisionales junio 2025] 'Cataluña', 2455692, 894453, 1561240, 6890423, "
+            "1869312, 5021111, 2.81"
+        ),
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta A regional, via divergencia (jornada 3, veta 2b). -2,10% y -0,28% se reproducen con la base "
+            "VIGENTE de junio 2025; contra la provisional habrian sido -2,34% y -0,05%. Idescat publica la misma "
+            "tasa. Segundo caso de CTH0626 (E044). methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0626",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="2074",
+                         serie_nombre="Cataluña. Pernoctaciones. Total.",
+                         unidad="pernoctaciones", referencia_principal="interanual",
+                         descripcion="EOH, pernoctaciones en establecimientos hoteleros, Cataluna, mensual"),
+            periodo_objetivo="2026-M06", periodo_base="2025-M06",
+            valor_objetivo=6729507, cambio_afirmado=-2.1, unidad_cambio="pct", direccion_afirmada="baja",
+            notas="Control regional: base interanual (edicion vigente) = referencia del emisor.",
+        ),
+    ),
+    dict(
+        cid="Q055",
+        claim_text="Los hoteles de la Comunidad de Madrid registraron casi 2,6 millones de pernoctaciones en mayo, un 0,7% más que el año anterior",
+        claim_date="2026-06-23",
+        post_url="https://lavozmadrid.es/madrid-capital/general/hoteles-de-madrid-rozan-26-millones-de-pernoctaciones-en-mayo",
+        post_url_tipo="prensa", emisor="La Voz de Madrid (Alberto Delgado Sanz)", emisor_tipo="prensa_digital",
+        emisor_nivel=3, pais="ES", tema="turismo",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com hoteles Madrid mayo 2026 pernoctaciones 2.560.746 0,7%",
+        criba_query_b="hoteles Madrid mayo 2026 '2.560.746' OR '696.113' OR '0,7% más' pernoctaciones verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="'pernoctaciones hoteleras' mayo 2026 'Comunidad de Madrid' OR Baleares OR Canarias OR Andalucía OR Cataluña OR Galicia OR Asturias aumentan OR caen OR suben OR bajan '%' junio 2026 Europa Press -junio -julio",
+        collected_at="2026-09-26", case_id="E046",
+        # --- trabajo 2026-09-26 (E046 t0/t1/t2 15:2xZ) ---
+        fuente_primaria="INE - CTH mayo 2026 (CTH0526): API Tempus tabla 2074 (nult=16); edicion anterior: API (mayo 2025 vigente) y anexo CTH0525.xlsx (provisional, publicado 23/06/2025)",
+        primaria_url="https://www.ine.es/dyngs/Prensa/CTH0526.htm",
+        primaria_url_tipo="nota_de_prensa_html + API JSON wstempus DATOS_TABLA/2074 + anexo xlsx de la edicion anterior (CTH0525, HTTP 200 al agente)",
+        via_de_acceso="api", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="api",
+        dato_actual="Comunidad de Madrid, mayo 2026: pernoctaciones 2.560.746; viajeros 1.232.338 (residentes 536.225; extranjeros 696.113)",
+        dato_anterior="mayo 2025. Vigente (API): pernoctaciones 2.543.911; viajeros 1.199.658 (535.558 / 664.100). Provisional (anexo CTH0525): pernoctaciones 2.560.824; viajeros 1.213.258 (545.311 / 667.947)",
+        raw_value_span_actual=(
+            "[INE API tabla 2074] EOT1766 2026-M05: 2560746 | EOT1763 2026-M05: 1232338 | EOT1765 2026-M05: 696113 "
+            "|| [La Voz de Madrid 2026-06-23, el claim] 'Los hoteles de la Comunidad de Madrid registraron casi 2,6 "
+            "millones de pernoctaciones en mayo, un 0,7% mas que el ano anterior'; 'un total de 2.560.746 "
+            "estancias'; 'La entrada de huespedes extranjeros crecio un 4,8%, sumando 696.113 visitas'; 'el mercado "
+            "domestico mostro una ligera subida del 0,1%, con 536.225 residentes espanoles alojados'"
+        ),
+        raw_value_span_anterior=(
+            "[INE API tabla 2074] EOT1766 2025-M05: 2543911 | EOT1763 2025-M05: 1199658 | EOT1765 2025-M05: 664100 "
+            "(residentes = 1199658 - 664100 = 535558) || [CTH0525.xlsx, hoja EOH_Hoja3, fila 61, datos provisionales "
+            "mayo 2025] 'Madrid, Comunidad de', 1213258, 545311, 667947, 2560824, 976824, 1584001, 2.11"
+        ),
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta A regional, via divergencia (jornada 3, veta 2b). +0,66%, +4,82% y +0,12% se reproducen con la "
+            "base VIGENTE de mayo 2025; contra la provisional habrian sido 0,00%, +4,22% y -1,67%. Primer caso de "
+            "CTH0526. La provisional de mayo 2025 (2.560.824) se reviso a 2.543.911 (-16.913). "
+            "methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0526",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="2074",
+                         serie_nombre="Madrid (Comunidad de). Pernoctaciones. Total.",
+                         unidad="pernoctaciones", referencia_principal="interanual",
+                         descripcion="EOH, pernoctaciones en establecimientos hoteleros, Comunidad de Madrid, mensual"),
+            periodo_objetivo="2026-M05", periodo_base="2025-M05",
+            valor_objetivo=2560746, cambio_afirmado=0.7, unidad_cambio="pct", direccion_afirmada="sube",
+            notas="Control regional: base interanual (edicion vigente) = referencia del emisor.",
+        ),
+    ),
+    dict(
+        cid="Q056",
+        claim_text="Los hoteles de Baleares atendieron en agosto a 2,1 millones de huéspedes que realizaron 11,3 millones de pernoctaciones, cifras que representaron un incremento interanual de los clientes del 3,8%, pero una caída de las noches contratadas de casi el 0,2%",
+        claim_date="2026-09-22",
+        post_url="https://www.ultimahora.es/noticias/local/2026/09/22/2713709/clientes-hoteles-aumentan-agosto-pernoctaciones-caen.html",
+        post_url_tipo="prensa", emisor="Última Hora (teletipo de EFE, Palma)", emisor_tipo="prensa_digital",
+        emisor_nivel=1, pais="ES", tema="turismo",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com Baleares hoteles agosto 2026 clientes 3,8% pernoctaciones 0,2%",
+        criba_query_b="Baleares hoteles agosto 2026 '3,8 %' OR '3,8%' clientes pernoctaciones '0,2' caen verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="economiademallorca.com hoteles Baleares pernoctaciones agosto 2026 OR junio 2026 '%' viajeros INE islas",
+        collected_at="2026-09-26", case_id="E047",
+        # --- trabajo 2026-09-26 (E047 t0 15:2xZ, t1/t2 15:3xZ) ---
+        fuente_primaria="INE - CTH agosto 2026 (CTH0826): anexo CTH0826.xlsx (EOH_Hoja3, fila 'Balears, Illes') + API Tempus tabla 2074 (EOT22194, EOT22197); edicion anterior: API (agosto 2025 vigente) y anexo CTH0825.xlsx (provisional, publicado 23/09/2025)",
+        primaria_url="https://www.ine.es/dyngs/Prensa/CTH0826.htm",
+        primaria_url_tipo="nota_de_prensa_html + anexo xlsx /prensa/anexo_tablas/es/CTH0826.xlsx + API JSON wstempus DATOS_TABLA/2074",
+        via_de_acceso="dataset", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="dataset",
+        dato_actual="Balears, agosto 2026 (provisional): viajeros 2.137.472; pernoctaciones 11.367.443 (residentes 895.649; extranjeros 10.471.794)",
+        dato_anterior="agosto 2025. Vigente (API): viajeros 2.064.436; pernoctaciones 11.418.035. Provisional (anexo CTH0825): viajeros 2.058.841; pernoctaciones 11.388.816 (856.252 / 10.532.565)",
+        raw_value_span_actual=(
+            "[CTH0826.xlsx, hoja EOH_Hoja3, fila 23] 'Balears, Illes', 2137472, 223438, 1914034, 11367443, 895649, "
+            "10471794, 5.32 || [INE API tabla 2074] EOT22197 2026-M08: 2137472 | EOT22194 2026-M08: 11367443 || "
+            "[Ultima Hora/EFE 2026-09-22, el claim] 'Los hoteles de Baleares atendieron en agosto a 2,1 millones de "
+            "huespedes que realizaron 11,3 millones de pernoctaciones, cifras que representaron un incremento "
+            "interanual de los clientes del 3,8%, pero una caida de las noches contratadas de casi el 0,2%'"
+        ),
+        raw_value_span_anterior=(
+            "[INE API tabla 2074] EOT22197 2025-M08: 2064436 | EOT22194 2025-M08: 11418035 || [CTH0825.xlsx, hoja "
+            "EOH_Hoja3, fila 23, datos provisionales agosto 2025] 'Balears, Illes', 2058841, 203250, 1855591, "
+            "11388816, 856252, 10532565, 5.53"
+        ),
+        truth="mixed", context="divergence_detected",
+        clase_primaria="2b_base_revisada", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="divergencia_real", excedente="no",
+        notas=(
+            "Cubeta B (2b), via divergencia (jornada 3). Contra la edicion vigente: clientes +3,54%, pernoctaciones "
+            "-0,44%. Contra la provisional de agosto 2025: +3,82% y -0,19%, que son el 3,8% y el 'casi 0,2%' del "
+            "teletipo: EFE calculo con la base provisional. Mismo signo en ambas bases: subtipo magnitud. Misma "
+            "edicion (CTH0826) y mecanismo que E031 (EP, Madrid): claim, agencia y region distintos, no es hermano "
+            "por criba; se declara la concentracion por edicion. Cuarto 2b del conjunto. methodology_found=no "
+            "(NEEDS_REVIEW)."
+        ),
+        cubeta="B", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0826",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="2074",
+                         serie_nombre="Balears, Illes. Pernoctaciones. Total categorías. Total. Dato. ",
+                         unidad="pernoctaciones", referencia_principal="interanual",
+                         descripcion="EOH, pernoctaciones en establecimientos hoteleros, Illes Balears, mensual"),
+            periodo_objetivo="2026-M08", periodo_base="2025-M08",
+            valor_objetivo=11367443, cambio_afirmado=-0.2, unidad_cambio="pct", direccion_afirmada="baja",
+            evidencia_al_publicar=dict(
+                valor=11388816, edicion="INE CTH0825 (agosto 2025, datos provisionales)", fecha="2025-09-23",
+                url="https://www.ine.es/prensa/anexo_tablas/es/CTH0825.xlsx",
+                raw_value_span="[CTH0825.xlsx, hoja EOH_Hoja3, fila 23] 'Balears, Illes', 2058841, 203250, 1855591, 11388816, 856252, 10532565, 5.53",
+                verificacion="research/evidencia/D2B_CTH0825.json (HTTP 200, sha256)",
+            ),
+            evidencia_vigente=dict(
+                valor=11418035, edicion="API Tempus, tabla 2074, edicion vigente", fecha="2026-09-26",
+                url="https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/2074",
+                raw_value_span="[INE API tabla 2074] EOT22194 2025-M08: 11418035",
+            ),
+            notas="Base interanual correcta en periodo, tomada de la edicion provisional (11.388.816) y no de la vigente (11.418.035): 2b sin cambio de signo (-0,19% frente a -0,44%). Los clientes: +3,82% frente a +3,54%.",
+        ),
+    ),
+    dict(
+        cid="Q057",
+        claim_text="Las pernoctaciones internacionales en hoteles de Málaga suben un 15,57% en julio",
+        claim_date="2026-08-28",
+        post_url="https://www.andaluciainformacion.es/articulo/malaga/andalucia-malaga-turismo-pernoctaciones-hoteleras-internacionales-crecen-1557-malaga-mes-julio/202608281353043463067.html",
+        post_url_tipo="prensa", emisor="Andalucía Información (Redacción)", emisor_tipo="prensa_digital",
+        emisor_nivel=2, pais="ES", tema="turismo",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com Málaga pernoctaciones hoteleras julio 2026 15,57% internacionales",
+        criba_query_b="Málaga pernoctaciones hoteleras julio 2026 '15,57%' OR '374.405' OR '283.634' verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="pernoctaciones hoteleras agosto 2026 'ciudad de Madrid' OR Barcelona OR Sevilla OR Málaga OR Valencia OR 'Palma' '%' hoteles septiembre 2026 INE noticia -'Comunidad de Madrid'",
+        collected_at="2026-09-26", case_id="E048",
+        # --- trabajo 2026-09-26 (E048 t0/t1/t2 15:3xZ) ---
+        fuente_primaria="INE - CTH julio 2026 (CTH0726): API Tempus tabla 2078 (puntos turisticos; EOT2755-EOT2758, Malaga); edicion anterior: API (julio 2025 vigente). El anexo CTH0725 no lista Malaga ciudad entre los puntos con mas pernoctaciones: la edicion al publicar de esta serie no es recuperable del anexo",
+        primaria_url="https://www.ine.es/dyngs/Prensa/CTH0726.htm",
+        primaria_url_tipo="nota_de_prensa_html + API JSON wstempus DATOS_TABLA/2078",
+        via_de_acceso="api", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="api",
+        dato_actual="Malaga (punto turistico), julio 2026: pernoctaciones 374.405 (residentes 90.771; extranjeros 283.634); viajeros extranjeros 119.163, residentes 47.092",
+        dato_anterior="julio 2025 vigente (API): pernoctaciones 359.309 (113.897 / 245.412); viajeros 60.646 / 110.208",
+        raw_value_span_actual=(
+            "[INE API tabla 2078] EOT2758 'Nacional. Pernoctaciones. Málaga. Residentes en el extranjero.' 2026-M07: "
+            "283634 | EOT2757 2026-M07: 90771 | EOT2756 2026-M07: 119163 || [Andalucia Informacion 2026-08-28, el "
+            "claim] 'Malaga recibio en julio a 166.255 viajeros hoteleros, con un total de 374.405 pernoctaciones'; "
+            "'un aumento del 4,20% en las noches de hotel respecto a julio de 2025'; 'las pernoctaciones "
+            "internacionales, que subieron un 15,57%'; 'Los hoteles recibieron 119.163 viajeros extranjeros, un "
+            "8,13% mas que el ano anterior'"
+        ),
+        raw_value_span_anterior="[INE API tabla 2078] EOT2758 2025-M07: 245412 | EOT2757 2025-M07: 113897 | EOT2756 2025-M07: 110208 | EOT2755 2025-M07: 60646",
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta A (punto turistico), via divergencia (jornada 3). 283634/245412 - 1 = +15,57%; 374405/359309 - 1 "
+            "= +4,20%; 119163/110208 - 1 = +8,13%: todas con la base vigente. Serie de punto turistico: fuera del "
+            "mapa de 2b (el anexo solo lista los puntos con mas pernoctaciones y Malaga ciudad no aparece en "
+            "CTH0725). Segundo A de CTH0726 (E035). methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0726",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="2078",
+                         serie_nombre="Nacional. Pernoctaciones. Málaga. Residentes en el extranjero.",
+                         unidad="pernoctaciones", referencia_principal="interanual",
+                         descripcion="EOH, pernoctaciones de residentes en el extranjero, punto turistico Malaga, mensual"),
+            periodo_objetivo="2026-M07", periodo_base="2025-M07",
+            valor_objetivo=283634, cambio_afirmado=15.57, unidad_cambio="pct", direccion_afirmada="sube",
+            notas="Control de punto turistico: base interanual (edicion vigente) = referencia del emisor.",
+        ),
+    ),
+    dict(
+        cid="Q058",
+        claim_text="Las pernoctaciones extrahoteleras crecen en Andalucía un 11,6% en julio y superan los tres millones",
+        claim_date="2026-08-31",
+        post_url="https://www.teleprensa.com/articulo/sevilla/pernoctaciones-extrahoteleras-crecen-andalucia-116-julio-superan-tres-millones/202608310832252496769.html",
+        post_url_tipo="prensa", emisor="Teleprensa (teletipo de Europa Press)", emisor_tipo="prensa_digital",
+        emisor_nivel=2, pais="ES", tema="turismo",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com Andalucía pernoctaciones extrahoteleras julio 2026 11,6% tres millones",
+        criba_query_b="Andalucía pernoctaciones extrahoteleras julio 2026 '3.034.656' OR '11,6%' verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="'extrahoteleras' OR 'apartamentos turísticos' 'Comunidad de Madrid' OR Baleares OR Canarias OR Andalucía julio 2026 pernoctaciones '%' 'respecto al mismo mes' Europa Press agosto 2026 -junio",
+        collected_at="2026-09-26", case_id="E049",
+        # --- trabajo 2026-09-26 (E049 t0/t1/t2 15:3xZ) ---
+        fuente_primaria="INE - EOAT julio 2026 (EOAT0726): anexo EOAT0726.xlsx (filas Andalucia en EOAP_Hoja1, EOAC_Hoja1, EOTR_Hoja1, EOAL_Hoja2) + API Tempus tablas 1993 (EOAP), 2016 (EOAC) y 61766 (EOTR, EOAL) por CCAA; edicion anterior: API (julio 2025 vigente) y anexo EOAT0725.xlsx (provisional, publicado 29/08/2025)",
+        primaria_url="https://www.ine.es/dyngs/Prensa/EOAT0726.htm",
+        primaria_url_tipo="nota_de_prensa_html + anexo xlsx /prensa/anexo_tablas/es/EOAT0726.xlsx + API JSON (tres tablas)",
+        via_de_acceso="dataset", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="dataset",
+        dato_actual="Andalucia, julio 2026, pernoctaciones extrahoteleras: apartamentos 1.686.628 + campings 1.002.789 + turismo rural 223.947 + albergues 121.292 = 3.034.656",
+        dato_anterior="julio 2025. Vigente (API): 1.399.886 + 985.631 + 227.550 + 105.137 = 2.718.204. Provisional (anexo EOAT0725): 1.382.026 + 915.262 + 228.564 + 105.573 = 2.631.425",
+        raw_value_span_actual=(
+            "[EOAT0726.xlsx] EOAP_Hoja1 fila 12 'Andalucía', 420095, 216472, 203623, 1686628, 806098, 880530, 4.01 | "
+            "EOAC_Hoja1 fila 36 'Andalucía', 254454, 224465, 29989, 1002789, 888690, 114100, 3.94 | EOTR_Hoja1 fila "
+            "13 'Andalucía', 48036, 30069, 17968, 223947, 108702, 115245, 4.66 | EOAL_Hoja2 fila 8 'Andalucía', "
+            "36784, 19976, 16808, 121292, 79709, 41583, 3.3 || [INE API] EOT1042 2026-M07: 1686628 | EOT738 "
+            "2026-M07: 1002789 | EOT1151 2026-M07: 223947 | EOT44317 2026-M07: 121292 || [Teleprensa/EP "
+            "2026-08-31, el claim] titular; el cuerpo no lo sirvio la herramienta de lectura (403); la cifra "
+            "3.034.656 aparece en la cobertura (HORECA Cadiz, El Conciso) y coincide con la suma"
+        ),
+        raw_value_span_anterior=(
+            "[INE API] EOT1042 2025-M07: 1399886 | EOT738 2025-M07: 985631 | EOT1151 2025-M07: 227550 | EOT44317 "
+            "2025-M07: 105137 || [EOAT0725.xlsx, provisional julio 2025] EOAP_Hoja1 'Andalucía' ... 1382026 | "
+            "EOAC_Hoja1 ... 915262 | EOTR_Hoja1 ... 228564 | EOAL_Hoja2 ... 105573"
+        ),
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta A regional (EOAT, primera operacion extrahotelera del conjunto), via divergencia (jornada 3). "
+            "La suma de las cuatro encuestas cuadra (3.034.656) y +11,64% sale con la base VIGENTE (2.718.204); "
+            "con la provisional habria sido +15,32%: EP uso la revisada. El emisor no publica el agregado por CCAA, "
+            "lo calcula la agencia sumando cuatro tablas: metrica compuesta, fuera de lo que el prototipo evalua "
+            "hoy (contaria como abstencion UNSUPPORTED_CLAIM_TYPE, no como falso positivo; se declara). Revision "
+            "de julio 2025: +86.779 (+3,3%). methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="INE EOAT0726",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="1993 + 2016 + 61766 (suma de cuatro series)",
+                         serie_nombre="Andalucía. Pernoctaciones extrahoteleras (EOAP + EOAC + EOTR + EOAL)",
+                         unidad="pernoctaciones", referencia_principal="interanual",
+                         descripcion="Suma de pernoctaciones en apartamentos, campings, turismo rural y albergues, Andalucia, mensual"),
+            periodo_objetivo="2026-M07", periodo_base="2025-M07",
+            valor_objetivo=3034656, cambio_afirmado=11.6, unidad_cambio="pct", direccion_afirmada="sube",
+            notas="Control con metrica compuesta (suma de cuatro series): base interanual vigente.",
+        ),
+    ),
+    dict(
+        cid="Q059",
+        claim_text="Las pernoctaciones en alojamientos extrahoteleros en la Comunidad de Madrid (apartamentos, campings, alojamientos de turismo rural y albergues) han sumado las 533.954 de estancias en junio, un 15,9% más respecto al mismo mes de 2025, cuando se registraron 460.550 pernoctas",
+        claim_date="2026-07-31",
+        post_url="https://www.ultimahora.es/noticias/comunidades/2026/07/31/2680839/pernoctaciones-extrahoteleras-region-disparan-junio-impulsadas-por-bad-bunny-leon-xiv.html",
+        post_url_tipo="prensa", emisor="Última Hora (teletipo de Europa Press, Madrid)", emisor_tipo="prensa_digital",
+        emisor_nivel=1, pais="ES", tema="turismo",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com pernoctaciones extrahoteleras junio 2026 15,9% Bad Bunny León XIV",
+        criba_query_b="pernoctaciones extrahoteleras junio 2026 '15,9%' Madrid apartamentos 'Bad Bunny' verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="'pernoctaciones hoteleras' junio 2026 'Comunidad de Madrid' OR Andalucía OR Cataluña OR 'Comunitat Valenciana' OR Canarias OR Baleares OR Galicia aumentan OR caen OR suben OR bajan '%' julio 2026 Europa Press -agosto",
+        collected_at="2026-09-26", case_id="E050",
+        # --- trabajo 2026-09-26 (E050 t0/t1/t2 15:4xZ) ---
+        fuente_primaria="INE - EOAT junio 2026 (EOAT0626): anexo EOAT0626.xlsx (filas Madrid en EOAP_Hoja1, EOAC_Hoja1, EOTR_Hoja1, EOAL_Hoja2) + API Tempus tablas 1993, 2016 y 61766; edicion anterior: API (junio 2025 vigente), anexo EOAT0625.xlsx (provisional, 31/07/2025) y mayo 2025 vigente, para descartar un valor de otro periodo",
+        primaria_url="https://www.ine.es/dyngs/Prensa/EOAT0626.htm",
+        primaria_url_tipo="nota_de_prensa_html + anexo xlsx + API JSON (tres tablas)",
+        via_de_acceso="dataset", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="dataset",
+        dato_actual="Madrid, junio 2026: apartamentos 265.965 + campings 140.905 + turismo rural 26.202 + albergues 100.882 = 533.954 (cuadra con el claim); apartamentos: 107.779 viajeros, 265.965 pernoctaciones (100.025 / 165.940)",
+        dato_anterior="junio 2025 vigente (API): 279.166 + 131.422 + 28.440 + 97.891 = 536.919 (-0,55%). Provisional (EOAT0625): 280.516 + 132.622 + 26.972 + 97.891 = 538.001 (-0,75%). Mayo 2025 vigente: 254.374 + 95.015 + 26.251 + 100.404 = 476.044. Ninguna edicion ni periodo da 460.550. Apartamentos junio 2025: 279.166 vigente / 280.516 provisional (-4,7% / -5,2%, no +4,2%)",
+        raw_value_span_actual=(
+            "[EOAT0626.xlsx] EOAP_Hoja1 fila 24 'Madrid, Comunidad de', 107779, 44550, 63229, 265965, 100025, 165940, "
+            "2.47 | EOAC_Hoja1 fila 48 'Madrid, Comunidad de', 43716, 37341, 6374, 140905, 125213, 15692, 3.22 | "
+            "EOTR_Hoja1 fila 25 'Madrid, Comunidad de', 15013, 13510, 1503, 26202, 23188, 3014, 1.75 | EOAL_Hoja2 "
+            "fila 20 'Madrid, Comunidad de', 56230, 18361, 37869, 100882, 31301, 69582, 1.79 || [Ultima Hora/EP "
+            "2026-07-31, el claim] 'han sumado las 533.954 de estancias en junio, un 15,9% mas respecto al mismo mes "
+            "de 2025, cuando se registraron 460.550 pernoctas'; 'Las pernoctaciones en apartamentos turisticos ... "
+            "han sumado 265.965, un 4,2% mas que el mismo mes de 2025'"
+        ),
+        raw_value_span_anterior=(
+            "[INE API] EOT1114 2025-M06: 279166 | EOT810 2025-M06: 131422 | EOT1223 2025-M06: 28440 | EOT44281 "
+            "2025-M06: 97891 | (mayo 2025) EOT1114 254374, EOT810 95015, EOT1223 26251, EOT44281 100404 || "
+            "[EOAT0625.xlsx, provisional junio 2025] EOAP_Hoja1 fila 24 'Madrid, Comunidad de', 81994, 32643, 49351, "
+            "280516, 104080, 176435, 3.42 | EOAC_Hoja1 ... 132622 | EOTR_Hoja1 ... 26972 | EOAL_Hoja2 ... 97891"
+        ),
+        truth="contradicted", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="claim_falso", excedente="no",
+        notas=(
+            "Cubeta F (claim falso), via divergencia (jornada 3). Los niveles de junio 2026 cuadran (533.954; "
+            "apartamentos 265.965 = 100.025 + 165.940), pero la base '460.550 en junio 2025' no existe en ninguna "
+            "edicion recuperable (vigente 536.919; provisional 538.001; mayo 2025 476.044): la variacion real es "
+            "-0,55% con la vigente, no +15,9%, con cambio de signo. Tampoco cuadran el +4,2% de apartamentos "
+            "(-4,7% / -5,2%) ni el +54,76% de viajeros (+28% vigente). Se busco 2b y 'valor de otro periodo' y no se "
+            "reproducen: contradicted. NEEDS_REVIEW para la muestra a ciegas: si Mateo localiza la base, pasa a 2a "
+            "o 2b. Tercer F del conjunto. methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="F", hermano_de="", mecanismo_candidato="", primaria_edicion="INE EOAT0626",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="1993 + 2016 + 61766 (suma de cuatro series)",
+                         serie_nombre="Madrid (Comunidad de). Pernoctaciones extrahoteleras (EOAP + EOAC + EOTR + EOAL)",
+                         unidad="pernoctaciones", referencia_principal="interanual",
+                         descripcion="Suma de pernoctaciones en apartamentos, campings, turismo rural y albergues, Comunidad de Madrid, mensual"),
+            periodo_objetivo="2026-M06", periodo_base="2025-M06",
+            valor_objetivo=533954, cambio_afirmado=15.9, unidad_cambio="pct", direccion_afirmada="sube",
+            notas="La base afirmada (460.550) no se reproduce con ninguna edicion; con la vigente la variacion es -0,55%.",
+        ),
+    ),
+    dict(
+        cid="Q060",
+        claim_text="Crecen un 2,5% las pernoctaciones hoteleras este agosto en Canarias",
+        claim_date="2026-09-22",
+        post_url="https://www.libertaddigital.com/canarias/2026-09-22/crecen-un-2-5-por-ciento-las-pernoctaciones-hoteleras-este-agosto-en-canarias-7463875/",
+        post_url_tipo="prensa", emisor="Libertad Digital Canarias (Redacción)", emisor_tipo="prensa_digital",
+        emisor_nivel=2, pais="ES", tema="turismo",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com Canarias pernoctaciones hoteleras agosto 2026 2,5% 7.216.680",
+        criba_query_b="Canarias pernoctaciones hoteleras agosto 2026 '7.216.680' OR '2,5%' OR '1.112.371' verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="'pernoctaciones hoteleras' agosto 2026 Canarias OR Andalucía OR Cataluña OR 'Comunitat Valenciana' OR Galicia OR 'Castilla y León' OR Asturias aumentan OR caen OR suben OR bajan '%' 'mismo mes' septiembre 2026 EFE OR 'Europa Press' -Madrid -Baleares",
+        collected_at="2026-09-26", case_id="E051",
+        # --- trabajo 2026-09-26 (E051 t0/t1/t2 15:5xZ) ---
+        fuente_primaria="INE - CTH agosto 2026 (CTH0826): anexo CTH0826.xlsx (EOH_Hoja3, fila Canarias) + API Tempus tabla 2074 (EOT1541-EOT1544); edicion anterior: API (agosto 2025 vigente) y anexo CTH0825.xlsx (provisional, 23/09/2025)",
+        primaria_url="https://www.ine.es/dyngs/Prensa/CTH0826.htm",
+        primaria_url_tipo="nota_de_prensa_html + anexo xlsx + API JSON wstempus DATOS_TABLA/2074",
+        via_de_acceso="api", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="api",
+        dato_actual="Canarias, agosto 2026: pernoctaciones 7.216.680 (residentes 1.427.401; extranjeros 5.789.279); viajeros 1.112.371 (336.433 / 775.939)",
+        dato_anterior="agosto 2025. Vigente (API): pernoctaciones 7.043.879; viajeros 1.059.785 (326.635 / 733.150). Provisional (CTH0825): pernoctaciones 7.076.919 (1.481.718 / 5.595.201); viajeros 1.056.497 (327.337 / 729.160)",
+        raw_value_span_actual=(
+            "[CTH0826.xlsx, hoja EOH_Hoja3, fila Canarias] 'Canarias', 1112371, 336433, 775939, 7216680, 1427401, "
+            "5789279, 6.49 || [INE API tabla 2074] EOT1544 2026-M08: 7216680 | EOT1541 2026-M08: 1112371 || [LD "
+            "Canarias 2026-09-22, el claim] 'Las pernoctaciones en establecimientos hoteleros en Canarias han "
+            "aumentado un 2,5% en agosto'; 'hasta sumar un total de 7.216.680 pernoctaciones'; 'se alojaron un 4,96% "
+            "mas de turistas ... alcanzando los 1.112.371 viajeros'; 'los viajeros residentes en Espana crecieron un "
+            "3% y los extranjeros aumentaron un 5,8%'"
+        ),
+        raw_value_span_anterior=(
+            "[INE API tabla 2074] EOT1544 2025-M08: 7043879 | EOT1541 2025-M08: 1059785 | EOT1542 2025-M08: 326635 | "
+            "EOT1543 2025-M08: 733150 || [CTH0825.xlsx, hoja EOH_Hoja3, provisional agosto 2025] 'Canarias', 1056497, "
+            "327337, 729160, 7076919, 1481718, 5595201, 6.7"
+        ),
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta A regional, via divergencia (jornada 3, veta 2b). +2,45%, +4,96%, +3,0% y +5,84% se reproducen "
+            "con la base VIGENTE de agosto 2025; con la provisional habrian sido +1,97, +5,29, +2,78 y +6,42. Misma "
+            "edicion CTH0826 en la que EP (Madrid, E031) y EFE (Baleares, E047) usaron la provisional: el mecanismo "
+            "es del redactor, no de la edicion. methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0826",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="2074",
+                         serie_nombre="Canarias. Pernoctaciones. Total.",
+                         unidad="pernoctaciones", referencia_principal="interanual",
+                         descripcion="EOH, pernoctaciones en establecimientos hoteleros, Canarias, mensual"),
+            periodo_objetivo="2026-M08", periodo_base="2025-M08",
+            valor_objetivo=7216680, cambio_afirmado=2.5, unidad_cambio="pct", direccion_afirmada="sube",
+            notas="Control regional: base interanual (edicion vigente) = referencia del emisor.",
+        ),
+    ),
+    dict(
+        cid="Q061",
+        claim_text="Andalucía alcanza en agosto \"el mejor registro de pernoctaciones hoteleras\" desde 1999 con 7,72 millones",
+        claim_date="2026-09-22",
+        post_url="https://www.ultimahora.es/noticias/comunidades/2026/09/22/2713681/andalucia-alcanza-agosto-mejor-registro-pernoctaciones-hoteleras-desde-1999-millones.html",
+        post_url_tipo="prensa", emisor="Última Hora (teletipo de Europa Press, Sevilla)", emisor_tipo="prensa_digital",
+        emisor_nivel=1, pais="ES", tema="turismo",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com Andalucía agosto 2026 mejor registro pernoctaciones hoteleras desde 1999 7,72 millones",
+        criba_query_b="Andalucía agosto 2026 'mejor registro de pernoctaciones hoteleras' OR '7,72 millones' desde 1999 verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="'pernoctaciones hoteleras' Andalucía agosto 2026 '%' 'mismo mes' OR interanual septiembre 2026 EFE OR 'Europa Press' hoteles andaluces -Málaga",
+        collected_at="2026-09-26", case_id="E052",
+        # --- trabajo 2026-09-26 (E052 t0/t1/t2 15:5xZ) ---
+        fuente_primaria="INE - CTH agosto 2026 (CTH0826): anexo CTH0826.xlsx (fila Andalucia) + API Tempus serie EOT1454 (Andalucia, pernoctaciones total; nult=340, serie desde 1999-M01); edicion anterior: API (agosto 2025 vigente) y anexo CTH0825.xlsx (provisional)",
+        primaria_url="https://www.ine.es/dyngs/Prensa/CTH0826.htm",
+        primaria_url_tipo="nota_de_prensa_html + anexo xlsx + API JSON wstempus DATOS_SERIE/EOT1454",
+        via_de_acceso="api", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="api",
+        dato_actual="Andalucia, agosto 2026: 7.717.597 pernoctaciones (+1,99% con la base vigente); maximo de los 28 agostos de la serie 1999-2026",
+        dato_anterior="agostos anteriores (vigente): 2019 7.587.225 (segundo), 2025 7.566.846 (tercero), 2023 7.427.401; provisional de agosto 2025 (CTH0825): 7.586.225",
+        raw_value_span_actual=(
+            "[INE API] EOT1454 'Andalucía. Pernoctaciones. Total.' 2026-M08: 7717597 | maximo de {1999-M08..2026-M08} "
+            "= 2026-M08 || [CTH0826.xlsx, EOH_Hoja3] 'Andalucía', 2332985, 1348406, 984579, 7717597, 4174092, 3543504, "
+            "3.31 || [Ultima Hora/EP 2026-09-22, el claim] titular; 'un 2% mas que en el mismo mes de 2025 y, de "
+            "confirmarse el avance provisional, el mejor registro de un mes de agosto desde el inicio de la serie "
+            "historica en 1999'"
+        ),
+        raw_value_span_anterior="[INE API] EOT1454 2019-M08: 7587225 | 2025-M08: 7566846 | 2023-M08: 7427401 || [CTH0825.xlsx, provisional] 'Andalucía', 2287040, 1333873, 953167, 7586225, 4125912, 3460312, 3.32",
+        truth="supported", context="undetermined",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta D (extremo), via divergencia (jornada 3). Maximo de los agostos de la serie (1999-2026): cuadra, "
+            "por 130.372 sobre 2019. El +2% sale con la base vigente (+1,99%; provisional +1,73%). El propio teletipo "
+            "condiciona el record a la confirmacion del avance. Sin test aplicable -> undetermined (DEC-029). "
+            "methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="D", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0826",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="extremo_historico",
+            metrica=dict(emisor="INE", tabla="2074",
+                         serie_nombre="Andalucía. Pernoctaciones. Total.",
+                         unidad="pernoctaciones", referencia_principal="interanual",
+                         descripcion="EOH, pernoctaciones en establecimientos hoteleros, Andalucia, mensual"),
+            periodo_objetivo="2026-M08", valor_objetivo=7717597,
+            notas="Extremo: maximo de los agostos desde 1999. Sin test aplicable.",
+        ),
+    ),
+    dict(
+        cid="Q062",
+        claim_text="Las pernoctaciones en establecimientos hoteleros en Galicia alcanzaron los 1,3 millones en julio, lo que representa un aumento del 0,68%. En concreto, han sido 1.334.577 frente a los 1.325.548 del año anterior",
+        claim_date="2026-08-21",
+        post_url="https://www.galiciapress.es/articulo/economia/2026-08-21/5989983-pernoctaciones-hoteleras-aumentan-julio-galicia-068",
+        post_url_tipo="prensa", emisor="Galicia Press (teletipo de Europa Press)", emisor_tipo="prensa_digital",
+        emisor_nivel=2, pais="ES", tema="turismo",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com Galicia pernoctaciones hoteleras julio 2026 0,68% 1.334.577",
+        criba_query_b="Galicia pernoctaciones hoteleras julio 2026 '0,68%' OR '1.334.577' OR '1.325.548' verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="[criba dirigida: tasa provisional recomputada +0,68% frente a vigente -0,35%] pernoctaciones hoteleras Galicia julio 2026 '0,7%' OR '0,68%' OR '0,7 %' suben OR aumentan hoteles gallegos agosto 2026 INE",
+        collected_at="2026-09-26", case_id="E053",
+        # --- trabajo 2026-09-26 (E053 t0/t1/t2 16:0xZ) ---
+        fuente_primaria="INE - CTH julio 2026 (CTH0726): anexo CTH0726.xlsx (EOH_Hoja3, fila 56 Galicia) + API Tempus tabla 2074 (EOT1733, EOT1736); edicion anterior: API (julio 2025 vigente) y anexo CTH0725.xlsx (provisional, publicado 22/08/2025)",
+        primaria_url="https://www.ine.es/dyngs/Prensa/CTH0726.htm",
+        primaria_url_tipo="nota_de_prensa_html + anexo xlsx /prensa/anexo_tablas/es/CTH0726.xlsx + API JSON wstempus DATOS_TABLA/2074",
+        via_de_acceso="dataset", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="dataset",
+        dato_actual="Galicia, julio 2026 (provisional): pernoctaciones 1.334.577 (residentes 1.011.953; extranjeros 322.624); viajeros 644.755",
+        dato_anterior="julio 2025. Vigente (API): pernoctaciones 1.339.309; viajeros 639.220. Provisional (anexo CTH0725, fila 56): pernoctaciones 1.325.548 (1.018.143 / 307.405); viajeros 635.559",
+        raw_value_span_actual=(
+            "[CTH0726.xlsx, hoja EOH_Hoja3, fila 56] 'Galicia', 644755, 458417, 186338, 1334577, 1011953, 322624, "
+            "2.07 || [INE API tabla 2074] EOT1736 2026-M07: 1334577 | EOT1733 2026-M07: 644755 || [Galicia Press/EP "
+            "2026-08-21, el claim] 'Las pernoctaciones en establecimientos hoteleros en Galicia alcanzaron los 1,3 "
+            "millones en julio, lo que representa un aumento del 0,68%'; 'En concreto, han sido 1.334.577 frente a "
+            "los 1.325.548 del ano anterior'; 'la cifra de viajeros se incremento, en este caso un 1,45% al pasar de "
+            "635.559 en julio del ano pasado a los 644.755'"
+        ),
+        raw_value_span_anterior=(
+            "[INE API tabla 2074] EOT1736 2025-M07: 1339309 | EOT1733 2025-M07: 639220 || [CTH0725.xlsx, hoja "
+            "EOH_Hoja3, fila 56, datos provisionales julio 2025] 'Galicia', 635559, 460844, 174716, 1325548, 1018143, "
+            "307405, 2.09"
+        ),
+        truth="mixed", context="divergence_detected",
+        clase_primaria="2b_base_revisada", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="divergencia_real", excedente="no",
+        notas=(
+            "Cubeta B (2b) CON CAMBIO DE SIGNO, via divergencia (jornada 3, criba dirigida sobre la tabla "
+            "provisional/vigente). El teletipo imprime la base (1.325.548), que es la cifra provisional de julio "
+            "2025 del anexo CTH0725; con la vigente (1.339.309) las pernoctaciones CAEN un 0,35%, no suben un 0,68%. "
+            "Viajeros: +1,45% con la provisional (635.559) frente a +0,87% con la vigente (639.220). Otro medio "
+            "(atlantico.net, 2026-08-22) dio '0,4% menos' con la vigente: dos tasas de signo opuesto para el mismo "
+            "dato en la misma semana. Tercer B de la edicion CTH0726 (E042, E043): se declara la concentracion. "
+            "Quinto 2b del conjunto. methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="B", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0726",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="2074",
+                         serie_nombre="Galicia. Pernoctaciones. Total.",
+                         unidad="pernoctaciones", referencia_principal="interanual",
+                         descripcion="EOH, pernoctaciones en establecimientos hoteleros, Galicia, mensual"),
+            periodo_objetivo="2026-M07", periodo_base="2025-M07",
+            valor_objetivo=1334577, cambio_afirmado=0.68, unidad_cambio="pct", direccion_afirmada="sube",
+            evidencia_al_publicar=dict(
+                valor=1325548, edicion="INE CTH0725 (julio 2025, datos provisionales)", fecha="2025-08-22",
+                url="https://www.ine.es/prensa/anexo_tablas/es/CTH0725.xlsx",
+                raw_value_span="[CTH0725.xlsx, hoja EOH_Hoja3, fila 56] 'Galicia', 635559, 460844, 174716, 1325548, 1018143, 307405, 2.09",
+                verificacion="research/evidencia/D2B_CTH0725.json (HTTP 200, sha256)",
+            ),
+            evidencia_vigente=dict(
+                valor=1339309, edicion="API Tempus, tabla 2074, edicion vigente", fecha="2026-09-26",
+                url="https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/2074",
+                raw_value_span="[INE API tabla 2074] EOT1736 2025-M07: 1339309",
+            ),
+            notas="Base interanual correcta en periodo, tomada de la edicion provisional (1.325.548, impresa en el claim) y no de la vigente (1.339.309): 2b con cambio de signo (+0,68% frente a -0,35%).",
+        ),
+    ),
+    dict(
+        cid="Q063",
+        claim_text="Las pernoctaciones en alojamientos turísticos extrahoteleros gallegos se situaron en 473.188 en junio, lo que representa un incremento del 9,33%",
+        claim_date="2026-07-31",
+        post_url="https://www.galiciapress.es/articulo/economia/2026-07-31/5971575-pernoctaciones-extrahoteleras-crecen-93-junio-galicia-frente-descenso-media",
+        post_url_tipo="prensa", emisor="Galicia Press (teletipo de Europa Press)", emisor_tipo="prensa_digital",
+        emisor_nivel=2, pais="ES", tema="turismo",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com Galicia pernoctaciones extrahoteleras junio 2026 9,33% 473.188",
+        criba_query_b="Galicia pernoctaciones extrahoteleras junio 2026 '473.188' OR '9,33%' OR '9,3%' verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="galiciapress pernoctaciones hoteleras Galicia agosto 2026 OR junio 2026 'frente a' año anterior '%' viajeros INE",
+        collected_at="2026-09-26", case_id="E054",
+        # --- trabajo 2026-09-26 (E054 t0/t1/t2 16:1xZ) ---
+        fuente_primaria="INE - EOAT junio 2026 (EOAT0626): anexo EOAT0626.xlsx (filas Galicia en EOAP_Hoja1, EOAC_Hoja1, EOTR_Hoja1, EOAL_Hoja2) + API Tempus tablas 1993, 2016 y 61766; edicion anterior: API (junio 2025 vigente) y anexo EOAT0625.xlsx (provisional, 31/07/2025)",
+        primaria_url="https://www.ine.es/dyngs/Prensa/EOAT0626.htm",
+        primaria_url_tipo="nota_de_prensa_html + anexo xlsx + API JSON (tres tablas)",
+        via_de_acceso="dataset", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="dataset",
+        dato_actual="Galicia, junio 2026: apartamentos 95.756 + campings 195.633 + turismo rural 41.906 + albergues 139.893 = 473.188",
+        dato_anterior="junio 2025. Vigente (API): 90.048 + 158.077 + 38.393 + 146.304 = 432.822 (+9,33%). Provisional (EOAT0625): 87.654 + 166.278 + 35.978 + 142.572 = 432.482 (+9,41%)",
+        raw_value_span_actual=(
+            "[INE API] EOT1108 2026-M06: 95756 | EOT804 2026-M06: 195633 | EOT1217 2026-M06: 41906 | EOT44284 "
+            "2026-M06: 139893 || [EOAT0626.xlsx, filas Galicia] EOAP_Hoja1 ... 95756 | EOAC_Hoja1 ... 195633 | "
+            "EOTR_Hoja1 ... 41906 | EOAL_Hoja2 ... 139893 || [Galicia Press/EP 2026-07-31, el claim] 'se situaron "
+            "en 473.188 en junio, lo que representa un incremento del 9,33%'; 'apartamentos turisticos de Galicia "
+            "subieron de 90.048 a 95.756'; 'campings ascendieron de 158.077 a 195.633'; 'turismo rural, pasaron de "
+            "38.393 a 41.906'; 'albergues ... 139.893, dato algo inferior a las 146.304'"
+        ),
+        raw_value_span_anterior=(
+            "[INE API] EOT1108 2025-M06: 90048 | EOT804 2025-M06: 158077 | EOT1217 2025-M06: 38393 | EOT44284 "
+            "2025-M06: 146304 || [EOAT0625.xlsx, provisional junio 2025, filas Galicia] EOAP_Hoja1 ... 87654 | "
+            "EOAC_Hoja1 ... 166278 | EOTR_Hoja1 ... 35978 | EOAL_Hoja2 ... 142572"
+        ),
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta A regional (EOAT), via divergencia (jornada 3). EP imprime las cuatro bases (90.048, 158.077, "
+            "38.393, 146.304) y las cuatro son las VIGENTES: la suma da +9,33% exacto; con la provisional habria "
+            "sido +9,41%. El mismo teletipo escribe 'mismo mes de 2024' donde corresponde 2025 (errata, no se "
+            "evalua). Metrica compuesta (suma de cuatro series): fuera del prototipo actual, se declara (como E049). "
+            "Segundo caso de EOAT0626 (E050 F). methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="INE EOAT0626",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="1993 + 2016 + 61766 (suma de cuatro series)",
+                         serie_nombre="Galicia. Pernoctaciones extrahoteleras (EOAP + EOAC + EOTR + EOAL)",
+                         unidad="pernoctaciones", referencia_principal="interanual",
+                         descripcion="Suma de pernoctaciones en apartamentos, campings, turismo rural y albergues, Galicia, mensual"),
+            periodo_objetivo="2026-M06", periodo_base="2025-M06",
+            valor_objetivo=473188, cambio_afirmado=9.33, unidad_cambio="pct", direccion_afirmada="sube",
+            notas="Control con metrica compuesta (suma de cuatro series): base interanual vigente.",
+        ),
+    ),
+    dict(
+        cid="Q064",
+        claim_text="Las pernoctaciones en establecimientos hoteleros en Castilla y León en agosto descendieron pese al tirón del eclipse total de sol. Lo hicieron un 4,5 % en comparación con el mismo mes del año anterior, hasta un total de 1.005.272",
+        claim_date="2026-09-22",
+        post_url="https://www.eldebate.com/espana/castilla-y-leon/20260922/pernoctaciones-hoteleras-caen-castilla-leon-pese-eclipse-precios-suben-cerca-12-agosto_461304.html",
+        post_url_tipo="prensa", emisor="El Debate (edición Castilla y León; mismo texto en El Correo de Burgos y CyL Digital, teletipo)", emisor_tipo="prensa_digital",
+        emisor_nivel=1, pais="ES", tema="turismo",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com Castilla y León pernoctaciones hoteleras agosto 2026 4,5% 1.005.272",
+        criba_query_b="Castilla y León pernoctaciones hoteleras agosto 2026 '1.005.272' OR '4,5 %' OR '622.043' verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="pernoctaciones hoteleras julio 2026 OR agosto 2026 'frente a los' OR 'frente a las' 'del año anterior' OR 'de 2025' comunidad OR provincia hoteles INE -Galicia -nacional",
+        collected_at="2026-09-26", case_id="E055",
+        # --- trabajo 2026-09-26 (E055 t0/t1/t2 16:2xZ) ---
+        fuente_primaria="INE - CTH agosto 2026 (CTH0826): anexo CTH0826.xlsx (EOH_Hoja3, fila Castilla y Leon) + API Tempus tabla 2074; edicion anterior: API (agosto 2025 vigente) y anexo CTH0825.xlsx (provisional, publicado 23/09/2025)",
+        primaria_url="https://www.ine.es/dyngs/Prensa/CTH0826.htm",
+        primaria_url_tipo="nota_de_prensa_html + anexo xlsx + API JSON wstempus DATOS_TABLA/2074",
+        via_de_acceso="dataset", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="dataset",
+        dato_actual="Castilla y Leon, agosto 2026 (provisional): pernoctaciones 1.005.272; viajeros 622.043 (residentes 428.650; extranjeros 193.393)",
+        dato_anterior="agosto 2025. Vigente (API): pernoctaciones 1.038.403; viajeros 641.977. Provisional (anexo CTH0825): pernoctaciones 1.051.890; viajeros 651.830",
+        raw_value_span_actual=(
+            "[INE API tabla 2074] 'Castilla y León. Pernoctaciones. Total.' 2026-M08: 1005272 | 'Castilla y León. "
+            "Viajeros. Total.' 2026-M08: 622043 || [El Debate 2026-09-22, el claim] 'Lo hicieron un 4,5 % en "
+            "comparacion con el mismo mes del ano anterior, hasta un total de 1.005.272 operaciones, segun datos "
+            "publicados por el Instituto Nacional de Estadistica (INE)'; 'se alojaron tambien un 4,5 % menos de "
+            "turistas en agosto que en el mismo mes del ano anterior, y se alcanzaron los 622.043 viajeros'"
+        ),
+        raw_value_span_anterior=(
+            "[INE API tabla 2074] 'Castilla y León. Pernoctaciones. Total.' 2025-M08: 1038403 | 'Castilla y León. "
+            "Viajeros. Total.' 2025-M08: 641977 || [CTH0825.xlsx, hoja EOH_Hoja3, datos provisionales agosto 2025] "
+            "'Castilla y León', 651830, ..., 1051890, ..."
+        ),
+        truth="mixed", context="divergence_detected",
+        clase_primaria="2b_base_revisada", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="divergencia_real", excedente="no",
+        notas=(
+            "Cubeta B (2b), via divergencia (jornada 3). Contra la edicion vigente: pernoctaciones -3,19%, viajeros "
+            "-3,11%. Contra la provisional de agosto 2025: -4,43% y -4,57%. El '4,5%' doble del teletipo solo se "
+            "acerca con la provisional (a 0,1 pp; la base exacta no es reproducible al centesimo, NEEDS_REVIEW, "
+            "como E042). Otros medios (heraldodeleon para Leon, y la cobertura que da -3,2% para CyL) usaron la "
+            "vigente: dos tasas para el mismo dato la misma manana. Tercer B de la edicion CTH0826 (E031, E047): "
+            "se declara la concentracion. Sexto 2b del conjunto. methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="B", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0826",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="2074",
+                         serie_nombre="Castilla y León. Pernoctaciones. Total.",
+                         unidad="pernoctaciones", referencia_principal="interanual",
+                         descripcion="EOH, pernoctaciones en establecimientos hoteleros, Castilla y Leon, mensual"),
+            periodo_objetivo="2026-M08", periodo_base="2025-M08",
+            valor_objetivo=1005272, cambio_afirmado=-4.5, unidad_cambio="pct", direccion_afirmada="baja",
+            evidencia_al_publicar=dict(
+                valor=1051890, edicion="INE CTH0825 (agosto 2025, datos provisionales)", fecha="2025-09-23",
+                url="https://www.ine.es/prensa/anexo_tablas/es/CTH0825.xlsx",
+                raw_value_span="[CTH0825.xlsx, hoja EOH_Hoja3] 'Castilla y León', 651830, ..., 1051890, ...",
+                verificacion="research/evidencia/D2B_CTH0825.json (HTTP 200, sha256)",
+            ),
+            evidencia_vigente=dict(
+                valor=1038403, edicion="API Tempus, tabla 2074, edicion vigente", fecha="2026-09-26",
+                url="https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/2074",
+                raw_value_span="[INE API tabla 2074] 'Castilla y León. Pernoctaciones. Total.' 2025-M08: 1038403",
+            ),
+            notas="Base interanual correcta en periodo, tomada de la edicion provisional (1.051.890) y no de la vigente (1.038.403): 2b sin cambio de signo (-4,43% frente a -3,19%).",
+        ),
+    ),
+    dict(
+        cid="Q065",
+        claim_text="Los establecimientos de la Comunidad registraron 410.706 pernoctaciones, un 4,09% más que en el mismo mes de 2025, según los últimos datos publicados por el Instituto Nacional de Estadística (INE)",
+        claim_date="2026-08-21",
+        post_url="https://murciaeconomia.com/art/108300/los-hoteles-de-la-region-de-murcia-superan-las-410000-pernoctaciones-en-julio-y-crecen-un-4",
+        post_url_tipo="prensa", emisor="MurciaEconomía (mismo texto en COPE, Murcia Plaza y Murcia Diario: teletipo regional)", emisor_tipo="prensa_digital",
+        emisor_nivel=2, pais="ES", tema="turismo",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com Murcia pernoctaciones hoteleras julio 2026 410.706 4%",
+        criba_query_b="'Región de Murcia' pernoctaciones hoteleras julio 2026 '410.706' OR '4,09%' OR '165.223' verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="[criba dirigida: tasa provisional recomputada +4,09% frente a vigente +3,32%] pernoctaciones hoteleras julio 2026 'Región de Murcia' '4,1%' OR '3,3%' OR Cantabria '0,1%' OR 'estables' OR Huelva '4,2%' OR '3,1%' hoteles agosto 2026 INE",
+        collected_at="2026-09-26", case_id="E056",
+        # --- trabajo 2026-09-26 (E056 t0/t1/t2 16:4xZ) ---
+        fuente_primaria="INE - CTH julio 2026 (CTH0726): anexo CTH0726.xlsx (EOH_Hoja3, fila Murcia) + API Tempus tabla 2074; edicion anterior: API (julio 2025 vigente) y anexo CTH0725.xlsx (provisional, publicado 22/08/2025, fila 62)",
+        primaria_url="https://www.ine.es/dyngs/Prensa/CTH0726.htm",
+        primaria_url_tipo="nota_de_prensa_html + anexo xlsx + API JSON wstempus DATOS_TABLA/2074",
+        via_de_acceso="dataset", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="dataset",
+        dato_actual="Region de Murcia, julio 2026 (provisional): pernoctaciones 410.706 (residentes 301.143; extranjeros 109.564); viajeros 165.223 (121.005 / 44.218)",
+        dato_anterior="julio 2025. Vigente (API): pernoctaciones 397.508 (285.853 / 111.655); viajeros 163.076 (115.175 / 47.901). Provisional (anexo CTH0725, fila 62): pernoctaciones 394.572 (284.106 / 110.467); viajeros 162.708 (115.570 / 47.139)",
+        raw_value_span_actual=(
+            "[INE API tabla 2074] 'Murcia (Región de). Pernoctaciones. Total.' 2026-M07: 410706 | 'Murcia (Región "
+            "de). Viajeros. Total.' 2026-M07: 165223 || [MurciaEconomia 2026-08-21, el claim] 'Los establecimientos "
+            "de la Comunidad registraron 410.706 pernoctaciones, un 4,09% mas que en el mismo mes de 2025'; 'alojaron "
+            "a 165.223 turistas, un 1,55% mas que en el mismo periodo del ano anterior'; '121.005 fueron residentes "
+            "en Espana, mientras que 44.218 procedieron del extranjero'; 'los turistas nacionales realizaron 301.143, "
+            "frente a las 109.564'"
+        ),
+        raw_value_span_anterior=(
+            "[INE API tabla 2074] 'Murcia (Región de). Pernoctaciones. Total.' 2025-M07: 397508 | 'Murcia (Región "
+            "de). Viajeros. Total.' 2025-M07: 163076 || [CTH0725.xlsx, hoja EOH_Hoja3, fila 62, datos provisionales "
+            "julio 2025] 'Murcia, Región de', 162708, 115570, 47139, 394572, 284106, 110467, 2.43"
+        ),
+        truth="mixed", context="divergence_detected",
+        clase_primaria="2b_base_revisada", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="divergencia_real", excedente="no",
+        notas=(
+            "Cubeta B (2b), via divergencia (jornada 3, criba dirigida sobre la tabla provisional/vigente). Las dos "
+            "tasas del articulo (+4,09% y +1,55%) son exactamente las de la base PROVISIONAL de julio 2025 "
+            "(394.572 y 162.708); con la vigente serian +3,32% y +1,32%. Mismo signo: subtipo magnitud. Cuarto B de "
+            "la edicion CTH0726 (E042, E043, E053): se declara la concentracion. Septimo 2b del conjunto. "
+            "methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="B", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0726",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="2074",
+                         serie_nombre="Murcia (Región de). Pernoctaciones. Total.",
+                         unidad="pernoctaciones", referencia_principal="interanual",
+                         descripcion="EOH, pernoctaciones en establecimientos hoteleros, Region de Murcia, mensual"),
+            periodo_objetivo="2026-M07", periodo_base="2025-M07",
+            valor_objetivo=410706, cambio_afirmado=4.09, unidad_cambio="pct", direccion_afirmada="sube",
+            evidencia_al_publicar=dict(
+                valor=394572, edicion="INE CTH0725 (julio 2025, datos provisionales)", fecha="2025-08-22",
+                url="https://www.ine.es/prensa/anexo_tablas/es/CTH0725.xlsx",
+                raw_value_span="[CTH0725.xlsx, hoja EOH_Hoja3, fila 62] 'Murcia, Región de', 162708, 115570, 47139, 394572, 284106, 110467, 2.43",
+                verificacion="research/evidencia/D2B_CTH0725.json (HTTP 200, sha256)",
+            ),
+            evidencia_vigente=dict(
+                valor=397508, edicion="API Tempus, tabla 2074, edicion vigente", fecha="2026-09-26",
+                url="https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/2074",
+                raw_value_span="[INE API tabla 2074] 'Murcia (Región de). Pernoctaciones. Total.' 2025-M07: 397508",
+            ),
+            notas="Base interanual correcta en periodo, tomada de la edicion provisional (394.572) y no de la vigente (397.508): 2b sin cambio de signo (+4,09% frente a +3,32%).",
+        ),
+    ),
+    dict(
+        cid="Q066",
+        claim_text="C-LM registra en julio 340.617 pernoctaciones hoteleras, un 6,7% menos que hace un año",
+        claim_date="2026-08-21",
+        post_url="https://www.lanzadigital.com/castilla-la-mancha/pernoctaciones-hotelera/",
+        post_url_tipo="prensa", emisor="Lanza (Ciudad Real; mismo texto en La Cerca: teletipo)", emisor_tipo="prensa_digital",
+        emisor_nivel=2, pais="ES", tema="turismo",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com Castilla-La Mancha pernoctaciones hoteleras julio 2026 6,7% 340.617",
+        criba_query_b="Castilla-La Mancha pernoctaciones hoteleras julio 2026 '340.617' OR '6,7%' OR '184.864' verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="'Castilla y León' pernoctaciones hoteleras julio 2026 '7,7%' OR '7,7 %' OR '7,1%' OR '7,1 %' caen hoteles agosto 2026 INE",
+        collected_at="2026-09-26", case_id="E057",
+        # --- trabajo 2026-09-26 (E057 t0/t1/t2 16:5xZ) ---
+        fuente_primaria="INE - CTH julio 2026 (CTH0726): API Tempus tabla 2074 + anexo CTH0726.xlsx; edicion anterior: API (julio 2025 vigente) y anexo CTH0725.xlsx (provisional, fila 38 'Castilla-La Mancha')",
+        primaria_url="https://www.ine.es/dyngs/Prensa/CTH0726.htm",
+        primaria_url_tipo="nota_de_prensa_html + anexo xlsx + API JSON wstempus DATOS_TABLA/2074",
+        via_de_acceso="api", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="api",
+        dato_actual="Castilla-La Mancha, julio 2026: pernoctaciones 340.617 (residentes 279.330; extranjeros 61.287); viajeros 184.864 (151.217 / 33.646)",
+        dato_anterior="julio 2025. Vigente (API): pernoctaciones 365.001 (297.773 / 67.228); viajeros 204.641 (167.557 / 37.083). Provisional (CTH0725, fila 38): pernoctaciones 361.760 (292.584 / 69.175); viajeros 207.407 (169.560 / 37.847)",
+        raw_value_span_actual=(
+            "[INE API tabla 2074] 'Castilla - La Mancha. Pernoctaciones. Total.' 2026-M07: 340617 | 'Castilla - La "
+            "Mancha. Viajeros. Total.' 2026-M07: 184864 || [Lanza 2026-08-21, el claim] 'Las pernoctaciones en "
+            "establecimientos hoteleros en Castilla-La Mancha en julio empeoran y descienden un 6,7%'; 'se alojaron "
+            "un 9,66% menos de turistas en julio'; '151.217 eran residentes en Espana, el 81,8%, mientras que 33.646 "
+            "(18,2%) fueron extranjeros'; 'los viajeros residentes en Espana disminuyeron un 9,8% y los extranjeros "
+            "se redujeron un 9,3%'"
+        ),
+        raw_value_span_anterior=(
+            "[INE API tabla 2074] 'Castilla - La Mancha. Pernoctaciones. Total.' 2025-M07: 365001 | 'Castilla - La "
+            "Mancha. Viajeros. Total.' 2025-M07: 204641 || [CTH0725.xlsx, hoja EOH_Hoja3, fila 38, provisional] "
+            "'Castilla-La Mancha', 207407, 169560, 37847, 361760, 292584, 69175, 1.74"
+        ),
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta A regional, via divergencia (jornada 3). -6,68%, -9,66%, -9,75% y -9,27% son exactamente las "
+            "tasas con la base VIGENTE; con la provisional habrian sido -5,84, -10,87, -10,82 y -11,10. Tercer A de "
+            "CTH0726 (E035, E048): tope por edicion alcanzado. Misma manana y misma edicion en que Galicia Press "
+            "(E053) y MurciaEconomia (E056) usaron la provisional: el mecanismo es del redactor. "
+            "methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0726",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="2074",
+                         serie_nombre="Castilla - La Mancha. Pernoctaciones. Total.",
+                         unidad="pernoctaciones", referencia_principal="interanual",
+                         descripcion="EOH, pernoctaciones en establecimientos hoteleros, Castilla-La Mancha, mensual"),
+            periodo_objetivo="2026-M07", periodo_base="2025-M07",
+            valor_objetivo=340617, cambio_afirmado=-6.7, unidad_cambio="pct", direccion_afirmada="baja",
+            notas="Control regional: base interanual (edicion vigente) = referencia del emisor.",
+        ),
+    ),
     dict(
         cid="Q047",
         claim_text="Las compraventas superan las 60.000 operaciones en el mejor julio desde 2007, a la espera del impacto de los tipos",

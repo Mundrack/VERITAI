@@ -1,0 +1,23 @@
+{
+  "claim_id": "E045",
+  "texto": "Catalunya registra 6,73 millones de pernoctaciones hoteleras en junio, un 2,1% menos",
+  "fuente_url": "https://www.catalunyapress.es/articulo/economia/2026-07-24/5964000-catalunya-registra-673-millones-pernoctaciones-hoteleras-junio-21-menos",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "2074",
+    "serie_nombre": "Cataluña. Pernoctaciones. Total.",
+    "unidad": "pernoctaciones",
+    "referencia_principal": "interanual",
+    "descripcion": "EOH, pernoctaciones en establecimientos hoteleros, Cataluna, mensual"
+  },
+  "periodo_objetivo": "2026-M06",
+  "periodo_base": "2025-M06",
+  "valor_objetivo": 6729507,
+  "cambio_afirmado": -2.1,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "baja",
+  "notas": "Control regional: base interanual (edicion vigente) = referencia del emisor."
+}

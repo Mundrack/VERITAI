@@ -1,0 +1,38 @@
+{
+  "claim_id": "E047",
+  "texto": "Los hoteles de Baleares atendieron en agosto a 2,1 millones de huéspedes que realizaron 11,3 millones de pernoctaciones, cifras que representaron un incremento interanual de los clientes del 3,8%, pero una caída de las noches contratadas de casi el 0,2%",
+  "fuente_url": "https://www.ultimahora.es/noticias/local/2026/09/22/2713709/clientes-hoteles-aumentan-agosto-pernoctaciones-caen.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "2074",
+    "serie_nombre": "Balears, Illes. Pernoctaciones. Total categorías. Total. Dato. ",
+    "unidad": "pernoctaciones",
+    "referencia_principal": "interanual",
+    "descripcion": "EOH, pernoctaciones en establecimientos hoteleros, Illes Balears, mensual"
+  },
+  "periodo_objetivo": "2026-M08",
+  "periodo_base": "2025-M08",
+  "valor_objetivo": 11367443,
+  "cambio_afirmado": -0.2,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "baja",
+  "evidencia_al_publicar": {
+    "valor": 11388816,
+    "edicion": "INE CTH0825 (agosto 2025, datos provisionales)",
+    "fecha": "2025-09-23",
+    "url": "https://www.ine.es/prensa/anexo_tablas/es/CTH0825.xlsx",
+    "raw_value_span": "[CTH0825.xlsx, hoja EOH_Hoja3, fila 23] 'Balears, Illes', 2058841, 203250, 1855591, 11388816, 856252, 10532565, 5.53",
+    "verificacion": "research/evidencia/D2B_CTH0825.json (HTTP 200, sha256)"
+  },
+  "evidencia_vigente": {
+    "valor": 11418035,
+    "edicion": "API Tempus, tabla 2074, edicion vigente",
+    "fecha": "2026-09-26",
+    "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/2074",
+    "raw_value_span": "[INE API tabla 2074] EOT22194 2025-M08: 11418035"
+  },
+  "notas": "Base interanual correcta en periodo, tomada de la edicion provisional (11.388.816) y no de la vigente (11.418.035): 2b sin cambio de signo (-0,19% frente a -0,44%). Los clientes: +3,82% frente a +3,54%."
+}

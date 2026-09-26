@@ -156,6 +156,14 @@ alcance con lo que haya y la tesis se escribe con el resultado negativo
 documentado. 2a queda como clase secundaria con su 0/43, hallazgo publicable
 sobre la muestra y el método.
 
+**Amenaza a la validez de 2b.** La edición anterior se recupera por el
+patrón de código de las notas del INE (`<OPERACION><MM><YY>`), que el INE no
+documenta; INEbase no enlaza notas anteriores. Si el INE cambia el patrón, el
+conector se rompe y 2b deja de ser computable por el agente. Se declara como
+amenaza a la validez externa del conector: la mitigación es que la rotura sea
+visible (abstención `PREVIOUS_EDITION_NOT_FOUND`, nunca un valor inventado) y
+que las ediciones ya descargadas queden conservadas con su sha256.
+
 ## Caso canónico: no hay todavía
 
 Se cotejaron C29, C21 y C18 contra cinco requisitos idénticos —primaria

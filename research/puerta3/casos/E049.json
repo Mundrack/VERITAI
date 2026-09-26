@@ -1,0 +1,23 @@
+{
+  "claim_id": "E049",
+  "texto": "Las pernoctaciones extrahoteleras crecen en Andalucía un 11,6% en julio y superan los tres millones",
+  "fuente_url": "https://www.teleprensa.com/articulo/sevilla/pernoctaciones-extrahoteleras-crecen-andalucia-116-julio-superan-tres-millones/202608310832252496769.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "1993 + 2016 + 61766 (suma de cuatro series)",
+    "serie_nombre": "Andalucía. Pernoctaciones extrahoteleras (EOAP + EOAC + EOTR + EOAL)",
+    "unidad": "pernoctaciones",
+    "referencia_principal": "interanual",
+    "descripcion": "Suma de pernoctaciones en apartamentos, campings, turismo rural y albergues, Andalucia, mensual"
+  },
+  "periodo_objetivo": "2026-M07",
+  "periodo_base": "2025-M07",
+  "valor_objetivo": 3034656,
+  "cambio_afirmado": 11.6,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Control con metrica compuesta (suma de cuatro series): base interanual vigente."
+}
