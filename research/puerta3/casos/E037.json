@@ -1,0 +1,19 @@
+{
+  "claim_id": "E037",
+  "texto": "La inflación industrial se dispara al 13,2% en agosto por la energía y marca récord en casi cuatro años",
+  "fuente_url": "https://www.deia.eus/economia/2026/09/24/inflacion-industrial-dispara-13-2-11578239.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "extremo_historico",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "76655",
+    "serie_nombre": "Nacional. Mercado interior. Total industria. Índice. ",
+    "unidad": "tasa anual %",
+    "referencia_principal": "interanual",
+    "descripcion": "IPRI, indice general mercado interior, tasa de variacion anual, mensual"
+  },
+  "periodo_objetivo": "2026-M08",
+  "valor_objetivo": 13.2,
+  "notas": "Extremo: maximo de la tasa anual desde 2022-M12. Sin test aplicable."
+}

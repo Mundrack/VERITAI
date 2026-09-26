@@ -1,0 +1,19 @@
+{
+  "claim_id": "E027",
+  "texto": "La generación Z ha conseguido bajar su tasa de paro. El problema es que ahora el 60% de los parados tiene más de 45 años",
+  "fuente_url": "https://www.xataka.com/empresas-y-economia/espana-ha-batido-records-empleo-juvenil-mala-noticia-que-uno-cada-tres-parados-supera-50-anos",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "nivel",
+  "metrica": {
+    "emisor": "SEPE",
+    "tabla": "DEMANDAS_PENDIENTES",
+    "serie_nombre": "Parados registrados de 45 o más años sobre el total. Total Nacional.",
+    "unidad": "pct",
+    "referencia_principal": "anterior",
+    "descripcion": "SEPE, paro registrado por edad, cuota de 45 o mas anos sobre el total, mensual"
+  },
+  "periodo_objetivo": "2026-M04",
+  "valor_objetivo": 60,
+  "notas": "Nivel redondeado (58,4 -> 60). Emisor sin conector: sin veredicto hoy."
+}

@@ -1,0 +1,23 @@
+{
+  "claim_id": "E031",
+  "texto": "Las pernoctaciones hoteleras en la Comunidad de Madrid aumentan un 2,36% en agosto, con 2,17 millones de estancias",
+  "fuente_url": "https://www.ultimahora.es/noticias/comunidades/2026/09/22/2713683/pernoctaciones-hoteleras-comunidad-madrid-aumentan-agosto-millones-estancias.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "2074",
+    "serie_nombre": "Madrid (Comunidad de). Pernoctaciones. Total.",
+    "unidad": "pernoctaciones",
+    "referencia_principal": "interanual",
+    "descripcion": "EOH, pernoctaciones en establecimientos hoteleros, Comunidad de Madrid, mensual"
+  },
+  "periodo_objetivo": "2026-M08",
+  "periodo_base": "2025-M08",
+  "valor_objetivo": 2165029,
+  "cambio_afirmado": 2.36,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Base interanual correcta en periodo, pero tomada de la edicion provisional (2.115.059) y no de la vigente (2.090.878): 2b. Sin cambio de signo."
+}

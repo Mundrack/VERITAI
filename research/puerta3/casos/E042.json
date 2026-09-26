@@ -1,0 +1,23 @@
+{
+  "claim_id": "E042",
+  "texto": "Las pernoctaciones hoteleras en Madrid caen un 1,43% en julio con 2,29 millones de noches",
+  "fuente_url": "https://www.eldiariodemadrid.es/articulo/turismo/pernoctaciones-hoteleras-madrid-julio-caida-turismo-extranjero/20260821170152139820.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "2074",
+    "serie_nombre": "Madrid (Comunidad de). Pernoctaciones. Total.",
+    "unidad": "pernoctaciones",
+    "referencia_principal": "interanual",
+    "descripcion": "EOH, pernoctaciones en establecimientos hoteleros, Comunidad de Madrid, mensual"
+  },
+  "periodo_objetivo": "2026-M07",
+  "periodo_base": "2025-M07",
+  "valor_objetivo": 2297978,
+  "cambio_afirmado": -1.43,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "baja",
+  "notas": "Base interanual correcta en periodo, tomada de la edicion provisional (2.330.843) y no de la vigente (2.322.289): 2b. Sin cambio de signo."
+}

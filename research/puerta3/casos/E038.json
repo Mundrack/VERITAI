@@ -1,0 +1,19 @@
+{
+  "claim_id": "E038",
+  "texto": "Las compraventas superan las 60.000 operaciones en el mejor julio desde 2007, a la espera del impacto de los tipos",
+  "fuente_url": "https://prensa.fotocasa.es/las-compraventas-superan-las-60-000-operaciones-en-el-mejor-julio-desde-2007-a-la-espera-del-impacto-de-los-tipos/",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "extremo_historico",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "6150",
+    "serie_nombre": "Total Nacional. General. Compraventa. Número. ",
+    "unidad": "compraventas",
+    "referencia_principal": "interanual",
+    "descripcion": "ETDP, compraventas de viviendas inscritas, total nacional, mensual"
+  },
+  "periodo_objetivo": "2026-M07",
+  "valor_objetivo": 61417,
+  "notas": "Extremo afirmado (maximo de los julios desde 2007) contradicho por la serie: 2025 y 2007 son mayores."
+}

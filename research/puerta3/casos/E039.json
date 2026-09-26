@@ -1,0 +1,19 @@
+{
+  "claim_id": "E039",
+  "texto": "El paro sube en 44.419 personas, su mayor alza en agosto desde 2019, lastrado por los servicios",
+  "fuente_url": "https://theobjective.com/economia/empleo/2026-09-02/paro-sube-44-419-personas-peor-agosto-2019-lastrado-servicios/",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "extremo_historico",
+  "metrica": {
+    "emisor": "SEPE",
+    "tabla": "evolparoseries.pdf / Total",
+    "serie_nombre": "Paro registrado, total nacional",
+    "unidad": "personas",
+    "referencia_principal": "mensual",
+    "descripcion": "Paro registrado, variacion mensual julio->agosto, 2017-2026"
+  },
+  "periodo_objetivo": "2026-M08",
+  "valor_objetivo": 44419,
+  "notas": "Extremo: mayor variacion mensual de un agosto desde 2019. Sin test aplicable."
+}

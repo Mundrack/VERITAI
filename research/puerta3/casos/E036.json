@@ -1,0 +1,23 @@
+{
+  "claim_id": "E036",
+  "texto": "En el primer trimestre de 2026 el número total de infracciones penales en Alcorcón pasó de 1.701 en 2025 a 2.215, un incremento del 30,2%",
+  "fuente_url": "https://www.elicebergdemadrid.com/sur/vox-alcorcon-alerta-de-un-nuevo-incremento-de-la-delincuencia/",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "Ministerio del Interior",
+    "tabla": "09003 (Portal Estadistico, Balance 1T2026)",
+    "serie_nombre": "28007 Alcorcón · III. TOTAL INFRACCIONES PENALES",
+    "unidad": "hechos conocidos",
+    "referencia_principal": "interanual",
+    "descripcion": "Balance de criminalidad, infracciones penales, municipio de Alcorcon, trimestral"
+  },
+  "periodo_objetivo": "2026-T1",
+  "periodo_base": "2025-T1",
+  "valor_objetivo": 2215,
+  "cambio_afirmado": 30.2,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Control Interior/Portal: base interanual = referencia del emisor."
+}

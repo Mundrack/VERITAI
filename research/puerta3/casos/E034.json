@@ -1,0 +1,23 @@
+{
+  "claim_id": "E034",
+  "texto": "El Instituto Nacional de Estadística (INE) ha revelado un desplome del 15% en hipotecas nuevas en abril de 2026, la caída más dura en cinco años",
+  "fuente_url": "https://www.euribor.com.es/2026/05/31/el-desplome-del-mercado-hipotecario-15-menos-de-firmas-en-abril-revela-la-nueva-realidad-inmobiliaria/",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "76316",
+    "serie_nombre": "Viviendas. Número de hipotecas. Total Nacional. Base nueva. ",
+    "unidad": "hipotecas",
+    "referencia_principal": "interanual",
+    "descripcion": "Estadistica de Hipotecas, hipotecas constituidas sobre viviendas, mensual"
+  },
+  "periodo_objetivo": "2026-M04",
+  "periodo_base": "",
+  "valor_objetivo": null,
+  "cambio_afirmado": -15.0,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "baja",
+  "notas": "Base no declarada en el claim ('desplome del 15% en abril'); ni la mensual ni la interanual dan -15%."
+}

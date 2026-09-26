@@ -1,0 +1,19 @@
+{
+  "claim_id": "E041",
+  "texto": "El principal incremento delictivo en la localidad se concentra en la ciberdelincuencia, un fenómeno que ya representa más del 70% del aumento de las infracciones penales",
+  "fuente_url": "https://www.soydemadrid.com/noticia-alcorcon/david-lopez-pp-y-vox-siempre-buscan-el-alarmismo-151798.aspx",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "otro",
+  "metrica": {
+    "emisor": "Ministerio del Interior",
+    "tabla": "09003 (Portal Estadistico, Balance 1T2026)",
+    "serie_nombre": "28007 Alcorcón · II. CIBERCRIMINALIDAD / III. TOTAL INFRACCIONES PENALES",
+    "unidad": "hechos conocidos",
+    "referencia_principal": "interanual",
+    "descripcion": "Cuota de la cibercriminalidad en el aumento interanual de infracciones, Alcorcon, 1T2026"
+  },
+  "periodo_objetivo": "2026-T1",
+  "valor_objetivo": 70,
+  "notas": "Cuota del aumento recomputada: (504-288)/(2215-1701) = 42,0%. El 70% no corresponde a ningun cociente de la tabla salvo la tasa de crecimiento de la ciber (75%)."
+}

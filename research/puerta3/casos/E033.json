@@ -1,0 +1,23 @@
+{
+  "claim_id": "E033",
+  "texto": "La deuda pública cae en julio por debajo del 100% del PIB aunque se mantiene por encima de los 1,7 billones de euros",
+  "fuente_url": "https://www.elespanol.com/invertia/economia/20260917/deuda-publica-cae-julio-debajo-primera-vez-febrero-pandemia/1003744386741_0.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "Banco de España",
+    "tabla": "Deuda PDE de las AAPP (avance mensual)",
+    "serie_nombre": "Ratio deuda PDE / PIB nominal, total AAPP",
+    "unidad": "% del PIB",
+    "referencia_principal": "interanual",
+    "descripcion": "Deuda segun el Protocolo de Deficit Excesivo, ratio sobre PIB, mensual"
+  },
+  "periodo_objetivo": "2026-M07",
+  "periodo_base": "2026-M06",
+  "valor_objetivo": 99.9,
+  "cambio_afirmado": -1.6,
+  "unidad_cambio": "pp",
+  "direccion_afirmada": "baja",
+  "notas": "El claim afirma direccion ('cae por debajo del 100%'); la magnitud mensual (-1,6 pp) sale de las dos notas."
+}

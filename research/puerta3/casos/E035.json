@@ -1,0 +1,23 @@
+{
+  "claim_id": "E035",
+  "texto": "Las pernoctaciones hoteleras aumentaron un 2,39% en julio",
+  "fuente_url": "https://rtvc.es/las-pernoctaciones-hoteleras-aumentaron-un-239-en-julio-21-agosto-2026/",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "2074",
+    "serie_nombre": "Canarias. Pernoctaciones. Total.",
+    "unidad": "pernoctaciones",
+    "referencia_principal": "interanual",
+    "descripcion": "EOH, pernoctaciones en establecimientos hoteleros, Canarias, mensual"
+  },
+  "periodo_objetivo": "2026-M07",
+  "periodo_base": "2025-M07",
+  "valor_objetivo": 6781369,
+  "cambio_afirmado": 2.39,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Control regional: base interanual (edicion vigente) = referencia del emisor."
+}

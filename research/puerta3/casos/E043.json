@@ -1,0 +1,23 @@
+{
+  "claim_id": "E043",
+  "texto": "Las pernoctaciones de residentes nacionales subieron alrededor de un 3,8%, de 740.149 a 768.195, mientras que las de extranjeros cayeron un 2,2%, hasta 10.015.343",
+  "fuente_url": "https://www.economiademallorca.com/articulo/turismo-y-hosteleria/hoteles-islas-reciben-mas-dos-millones-viajeros-julio/20260821103628122733.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "2074",
+    "serie_nombre": "Balears, Illes. Pernoctaciones. Total categorías. Residentes en España. Dato. ",
+    "unidad": "pernoctaciones",
+    "referencia_principal": "interanual",
+    "descripcion": "EOH, pernoctaciones de residentes en Espana, Illes Balears, mensual"
+  },
+  "periodo_objetivo": "2026-M07",
+  "periodo_base": "2025-M07",
+  "valor_objetivo": 768195,
+  "cambio_afirmado": 3.8,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Base interanual correcta en periodo, tomada de la edicion provisional (740.149) y no de la vigente (786.273): 2b con cambio de signo (+3,8% frente a -2,3%)."
+}

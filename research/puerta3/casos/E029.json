@@ -1,0 +1,23 @@
+{
+  "claim_id": "E029",
+  "texto": "La compraventa de viviendas cae un 12,4% en Euskadi y encadena tres meses de descensos",
+  "fuente_url": "https://www.deia.eus/economia/2026/09/25/compraventa-viviendas-cae-12-4-11582445.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "6150",
+    "serie_nombre": "País Vasco. General. Compraventa. Número. ",
+    "unidad": "unidades",
+    "referencia_principal": "interanual",
+    "descripcion": "ETDP, compraventas de viviendas inscritas, Pais Vasco, mensual"
+  },
+  "periodo_objetivo": "2026-M07",
+  "periodo_base": "2025-M07",
+  "valor_objetivo": 2139,
+  "cambio_afirmado": -12.4,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "baja",
+  "notas": "Control regional: base = interanual, referencia del emisor."
+}

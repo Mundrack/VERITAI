@@ -1,0 +1,19 @@
+{
+  "claim_id": "E040",
+  "texto": "Navarra, donde más aumentó la compraventa de viviendas en julio",
+  "fuente_url": "https://www.noticiasdenavarra.com/economia/2026/09/25/navarra-aumento-compraventa-viviendas-julio-11583206.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "otro",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "ETDP.11 (anexo ETDP0726)",
+    "serie_nombre": "% variacion anual de compraventas de viviendas por CCAA",
+    "unidad": "%",
+    "referencia_principal": "interanual",
+    "descripcion": "ETDP, compraventas de viviendas registradas por CCAA, tasa anual, julio 2026"
+  },
+  "periodo_objetivo": "2026-M07",
+  "valor_objetivo": 26.36,
+  "notas": "Ranking (maximo entre CCAA): sin test aplicable en el prototipo."
+}

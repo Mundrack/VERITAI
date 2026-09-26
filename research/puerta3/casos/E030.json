@@ -1,0 +1,19 @@
+{
+  "claim_id": "E030",
+  "texto": "La creación de empresas registró su mejor julio en 31 años, con 11.150 nuevas sociedades",
+  "fuente_url": "https://theobjective.com/economia/2026-09-10/creacion-empresas-mejor-julio-31-anos/",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "extremo_historico",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "13913",
+    "serie_nombre": "Sociedades Constituídas. Número de Sociedades. Total Nacional. Mercantiles. ",
+    "unidad": "unidades",
+    "referencia_principal": "interanual",
+    "descripcion": "Sociedades mercantiles constituidas, total nacional, mensual"
+  },
+  "periodo_objetivo": "2026-M07",
+  "valor_objetivo": 11150,
+  "notas": "Extremo historico (maximo de los julios): sin test aplicable en el prototipo."
+}

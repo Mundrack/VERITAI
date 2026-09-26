@@ -1,0 +1,24 @@
+{
+  "claim_id": "E028",
+  "texto": "Criminalidad en España: se disparan homicidios, agresiones sexuales y la presión sobre la Policía Nacional",
+  "fuente_url": "https://www.esdiario.com/nacional/260608/189913/criminalidad-espana-disparan-homicidios-agresiones-sexuales-presion-sobre-policia-nacional.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "Interior",
+    "tabla": "09001",
+    "serie_nombre": "1. Homicidios dolosos y asesinatos consumados. TOTAL NACIONAL",
+    "unidad": "unidades",
+    "referencia_principal": "interanual",
+    "descripcion": "Portal Estadistico de Criminalidad, balance trimestral, homicidios dolosos y asesinatos consumados, total nacional"
+  },
+  "periodo_objetivo": "2026-T1",
+  "periodo_base": "2025-T1",
+  "valor_objetivo": 94,
+  "valor_base": 85,
+  "cambio_afirmado": 10.6,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Control: base = mismo trimestre del ano anterior, referencia del Balance. Emisor sin conector (CSV del Portal): sin veredicto hoy."
+}

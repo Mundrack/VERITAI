@@ -914,3 +914,49 @@ reloj     0,7 h de 16 (pausas descontadas) · cronometro por caso media 1,3 min,
   hallazgo) y si se levanta el tope de búsquedas para seguir recolectando
 - Reanudar con `P3-PAUSA2 t2`; el orden está en `PROGRESO.md`
 - Fusionar `feat/puerta-3-recoleccion` cuando Mateo lo diga
+
+## 2026-09-26 (14:30Z) — Puerta 3, jornada 2 cerrada con B = 0
+
+Jornada 2 = vía divergencia dirigida, tratada como medición (DEC-033). Reloj
+`P3-J2`: 13:34:56Z → 14:30:15Z, 0,92 h de las 4 h previstas; se cerró al
+agotarse las vetas dirigidas, no el reloj (detalle y tabla en
+`research/puerta3/PROGRESO.md`). Pausa `P3-PAUSA3` abierta.
+
+- **B = 0** tras 17 casos trabajados (E027–E043) y 21 candidatos (Q032–Q052).
+  Acumulado: A 17, B 0, C 4, D 8, E 11, F 2, O 1 (43 casos, 1,6 h de reloj).
+  Regla del diseño §3b: **B = 0 → no se gasta la jornada 3; DEC de replanteo**.
+- Único patrón B encontrado: Delegación del Gobierno en Madrid (tasa por mil
+  y "4,3 puntos menos desde 2023" frente a +2,6 % interanual en recuento), en
+  la edición 2T2026, **vetada por DEC-025** (Q048, rechazado). Reaparece cada
+  trimestre; la siguiente edición admisible es 3T2026 (diciembre).
+- Mecanismo dominante de la vía divergencia: **2b** (tasa calculada contra la
+  edición provisional del año anterior, no la revisada) en teletipos
+  regionales sobre la EOH: E031 (Madrid agosto, cuatro tasas reproducidas con
+  la base provisional), E042 (Madrid julio), E043 (Baleares julio, **con cambio
+  de signo**: +3,8 % frente a −2,3 %). El prototipo no lo cubre (Tempus sin
+  ediciones anteriores, DEC-029).
+- Dos claims falsos (cubeta F): euribor.com.es atribuye al INE "un desplome
+  del 15 %" de hipotecas en abril antes de que el INE publicara abril (E034);
+  Fotocasa titula "el mejor julio desde 2007" cuando 2025 y 2007 fueron
+  mayores (E038). Una clase 4 (E041): "más del 70 % del aumento" es el 42 %.
+- Emisores nuevos con casos: SEPE (E032 A, E039 D; xls y PDF de datos avance,
+  HTTP 200; `evolparoseries.xls` no lo abre xlrd, se usó el PDF), Banco de
+  España (E033 A; notas HTML, HTTP 200), Portal de Criminalidad (E036 A, E041
+  C; tablas 09001–09006 bajo `DatosBalanceAct`, `DatosBalanceAnt/20261` da
+  error al agente).
+- Correcciones sobre la marcha: Q040 se había rechazado por "nivel 3" y se
+  readmitió antes de commitear (el alcance de nivel 1 es de los emisores de
+  datos, no de los publicadores); E043 se había marcado A y pasó a C al leer
+  que el artículo escribe la base provisional (740.149).
+- `methodology_found` sigue en `no` + `NEEDS_REVIEW` en todos los casos
+  (pasada aparte, por instrucción de Mateo).
+
+### Qué queda pendiente
+
+- **Mateo:** DEC de replanteo (salidas de DEC-033: ampliar el tope, bajar el
+  mínimo de B a 10 con intervalo declarado, o ambas; o redefinir la fuente de
+  B: emisores institucionales / ediciones 3T2026). También si quiere completar
+  las 3,1 h restantes de la jornada 2 antes de decidir.
+- Q034 admitido sin trabajar; pasada de `methodology_found`; P-23 (P11);
+  P-20 (los 5 casos de Mateo).
+- Fusionar `feat/puerta-3-recoleccion` cuando Mateo lo diga.

@@ -1,0 +1,34 @@
+# E036 - Portal Estadistico de Criminalidad (Ministerio del Interior), Balance 1T2026, tabla 09003
+# https://estadisticasdecriminalidad.ses.mir.es/sec/jaxiPx/files/_px/es/csv_c/DatosBalanceAct/l0/09003.csv_c
+# descargado 2026-09-26 con el agente identificado (HTTP 200, 548.984 bytes, sha256=949be9399eb00fd4...)
+# cabecera de la tabla y bloque completo de '28007 Alcorcon' (lineas 16569-16589 del CSV)
+
+
+Balance de criminalidad. 2026 - 1er Trimestre - Capitales de provincia, municipios mayores de 20.000 habitantes e islas
+Indicadores de seguridad 2026 - 1er Trimestre por geografía,  tipología penal y periodos:.
+Unidades: Hechos conocidos. Variación porcentual
+
+
+
+...
+28007 Alcorcón,
+
+    I. CRIMINALIDAD CONVENCIONAL,1.413,1.711,21,1,
+
+    1. Homicidios dolosos y asesinatos consumados,0,0,0,0,
+
+    2. Homicidios dolosos y asesinatos en grado tentativa,1,1,0,0,
+
+    3. Delitos graves y menos graves de lesiones y riña tumultuaria,12,22,83,3,
+
+    4. Secuestro,0,0,0,0,
+
+    5. Delitos contra la libertad sexual,9,9,0,0,
+
+    5.1.-Agresión sexual con penetración,2,1,-50,0,
+
+    5.2.-Resto de delitos contra la libertad sexual,7,8,14,3,
+
+    6. Robos con violencia e intimidación,24,38,58,3,
+
+    7. Robos con fuerza en domicilios, establecimientos y otras instalaciones,41,94,129,3,

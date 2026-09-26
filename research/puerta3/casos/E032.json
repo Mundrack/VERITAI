@@ -1,0 +1,23 @@
+{
+  "claim_id": "E032",
+  "texto": "El paro sube un 2,5% en Madrid hasta los 280.512 desempleados y se pierden más de 36.000 cotizantes",
+  "fuente_url": "https://gacetinmadrid.com/2026/09/02/paro-sube-25-madrid-280512-desempleados-36000-cotizantes/",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "SEPE",
+    "tabla": "evolprovsectores.xls / Total sectores",
+    "serie_nombre": "COM. DE MADRID",
+    "unidad": "personas",
+    "referencia_principal": "mensual",
+    "descripcion": "Paro registrado, Comunidad de Madrid, mensual (datos avance SEPE)"
+  },
+  "periodo_objetivo": "2026-M08",
+  "periodo_base": "2026-M07",
+  "valor_objetivo": 280512,
+  "cambio_afirmado": 2.5,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Control SEPE: base mensual = referencia de cabecera del emisor."
+}

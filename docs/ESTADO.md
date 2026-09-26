@@ -21,13 +21,14 @@ PUERTA 2   prototipo end-to-end, UNA clase y UN emisor,      CERRADA 2026-09-25 
            sin LLM en ningun paso (DEC-028)                    P11 en NEEDS_REVIEW (P-23),
            nada del piloto evalua (DEC-025)                    no se cita hasta cotejarlo
 
-PUERTA 3   corpus completo anotado + arnes de evaluacion     <-- AQUI, recoleccion EN CURSO:
-           diseno APROBADO (DEC-031): research/PUERTA-3-DISENO.md   26 casos trabajados (A 11 de 50,
-           arnes: research/arnes/ (fusionado)                   E 11, D 3, O 1) en 0,7 h de 16;
-           recoleccion: research/puerta3/ (rama                revision intermedia ANTICIPADA:
-           feat/puerta-3-recoleccion, sin fusionar)             imf.org e interior.gob.es dan 403
-                                                               al agente (P-24) y el tope de
-                                                               busquedas web de la sesion se agoto
+PUERTA 3   corpus completo anotado + arnes de evaluacion     <-- AQUI, recoleccion PARADA
+           diseno APROBADO (DEC-031): research/PUERTA-3-DISENO.md   tras la jornada 2 (DEC-033):
+           arnes: research/arnes/ (fusionado)                   43 casos (A 17 de 50, B 0 de 20,
+           recoleccion: research/puerta3/ (rama                C 4, D 8, E 11, F 2, O 1) en 1,6 h
+           feat/puerta-3-recoleccion, sin fusionar)             de 16. La via divergencia dirigida
+           emisores tras DEC-032: INE, Portal Criminalidad,     dio B = 0 -> regla DEC-033: no se
+           SEPE, BdE (FMI e interior.gob.es: 403, cubeta E)     gasta la jornada 3; DEC de
+                                                               replanteo pendiente de Mateo
 
 PUERTA 4   evaluacion completa: metricas, ablacion,
            sondas contrafactuales

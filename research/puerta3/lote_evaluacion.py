@@ -1503,4 +1503,1044 @@ CANDIDATOS: list[dict] = [
             notas="Control regional: base = interanual, referencia del emisor.",
         ),
     ),
+    # ---- jornada 2 (13:35Z): VIA DIVERGENCIA dirigida (DEC-032/033): titulares con comparacion propia ----
+    dict(
+        cid="Q032",
+        claim_text="La generación Z ha conseguido bajar su tasa de paro. El problema es que ahora el 60% de los parados tiene más de 45 años",
+        claim_date="2026-05-21",
+        post_url="https://www.xataka.com/empresas-y-economia/espana-ha-batido-records-empleo-juvenil-mala-noticia-que-uno-cada-tres-parados-supera-50-anos",
+        post_url_tipo="prensa", emisor="Xataka", emisor_tipo="prensa_digital",
+        emisor_nivel=1, pais="ES", tema="empleo",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com 'uno de cada tres' parados '50 años' SEPE 2026 récord empleo juvenil",
+        criba_query_b="'uno de cada tres parados' '50 años' empleo juvenil récord SEPE 2026 xataka verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="'uno de cada' 'INE' 2026 noticia titular España hogares OR trabajadores OR jóvenes OR empresas",
+        collected_at="2026-09-26", case_id="E027",
+        # --- trabajo 2026-09-26 (E027 t0 13:37:29Z, t1/t2 13:43:01Z) ---
+        fuente_primaria="SEPE - Datos estadisticos de empleo, abril 2026: PDF 'Demandas de empleo pendientes' (tabla 1.1, parados por sexo y edad)",
+        primaria_url="https://www.sepe.es/SiteSepe/contenidos/que_es_el_sepe/estadisticas/datos_estadisticos/empleo/datos/2026/Abril_2026/DATOS_NACIONALES-DEMANDAS_PENDIENTES.pdf",
+        primaria_url_tipo="PDF mensual del SEPE (200 al agente identificado, 416.538 bytes, sha256 8cc589e7fd3338b0), enlazado desde la pagina de datos estadisticos de abril 2026",
+        via_de_acceso="pdf", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="B", formato="pdf",
+        dato_actual="abril 2026: parados 2.357.044; de 45 o mas anos 1.376.550 (58,4%): 45-49 263.821, 50-54 302.379, 55-59 381.401, mayores de 59 428.949; de 50 o mas 1.112.729 (47,2%)",
+        dato_anterior="edicion anterior = PDF de marzo 2026 (mismo patron de URL); no extraido: el claim es un nivel de abril",
+        raw_value_span_actual=(
+            "[SEPE, DATOS_NACIONALES-DEMANDAS_PENDIENTES.pdf abril 2026, p.1, tabla 1.1, columna PARADOS] "
+            "'DE 45-49 ANOS ... 263.821' | 'DE 50-54 ANOS ... 302.379' | 'DE 55-59 ANOS ... 381.401' | 'MAYOR DE "
+            "59 ANOS ... 428.949' | 'TOTAL EDAD 4.160.836 2.357.044' || [Xataka 2026-05-21, titular actual] 'La "
+            "generacion Z ha conseguido bajar su tasa de paro. El problema es que ahora el 60% de los parados "
+            "tiene mas de 45 anos' | [cuerpo] '1.376.550 desempleados tenian 45 anos o mas' | 'el 58,4% de todo "
+            "el paro registrado' | '755.500 parados mayores de 50' | 'uno de cada tres desempleados supera ya "
+            "los 50 anos'"
+        ),
+        raw_value_span_anterior="no aplica (nivel)",
+        truth="supported", context="undetermined",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta D (nivel): el titular vigente (60% de los parados > 45) cuadra: 1.376.550/2.357.044 = 58,4%, "
+            "redondeado. OBSERVACION registrada, no anotada como claim: el titular ORIGINAL (en la URL y en el "
+            "indice del buscador) decia 'uno de cada tres parados supera los 50', con '755.500 parados mayores de "
+            "50' en el cuerpo; la tabla del SEPE da 1.112.729 parados de 50 o mas (47,2%, casi uno de cada DOS). "
+            "El 755.500 no aparece en la tabla 1.1: viene del 'Informe del Mercado de Trabajo de mayores de 45' "
+            "con otra definicion (NEEDS_REVIEW). Si Mateo decide anotar el titular original, seria "
+            "4_denominator/other_observed con truth contradicted; se deja al criterio de la muestra a ciegas. "
+            "Via divergencia que acaba en control: se cuenta como D. Tercer emisor (SEPE) recuperable en PDF; "
+            "la pagina de datos no enlaza XLS sino PDF. methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="D", hermano_de="", mecanismo_candidato="", primaria_edicion="SEPE abril 2026",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="nivel",
+            metrica=dict(emisor="SEPE", tabla="DEMANDAS_PENDIENTES",
+                         serie_nombre="Parados registrados de 45 o más años sobre el total. Total Nacional.",
+                         unidad="pct", referencia_principal="anterior",
+                         descripcion="SEPE, paro registrado por edad, cuota de 45 o mas anos sobre el total, mensual"),
+            periodo_objetivo="2026-M04", valor_objetivo=60,
+            notas="Nivel redondeado (58,4 -> 60). Emisor sin conector: sin veredicto hoy.",
+        ),
+    ),
+    dict(
+        cid="Q033",
+        claim_text="Criminalidad en España: se disparan homicidios, agresiones sexuales y la presión sobre la Policía Nacional",
+        claim_date="2026-06-08",
+        post_url="https://www.esdiario.com/nacional/260608/189913/criminalidad-espana-disparan-homicidios-agresiones-sexuales-presion-sobre-policia-nacional.html",
+        post_url_tipo="prensa", emisor="ESdiario", emisor_tipo="prensa_digital",
+        emisor_nivel=1, pais="ES", tema="criminalidad",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com criminalidad se disparan homicidios agresiones sexuales presión Policía Nacional primer trimestre 2026",
+        criba_query_b="'se disparan homicidios' criminalidad España 2026 primer trimestre esdiario verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="'delitos sexuales' OR 'agresiones sexuales' OR 'criminalidad' 'se disparan' OR 'aumentan un' 2026 'desde 2019' OR 'desde 2015' balance Interior noticia España",
+        collected_at="2026-09-26", case_id="E028",
+        # --- trabajo 2026-09-26 (E028 t0 13:43:01Z, t1/t2 13:43:50Z) ---
+        fuente_primaria="Ministerio del Interior - Portal Estadistico de Criminalidad (ses.mir.es): CSV 09001 'Balance de criminalidad 2026 - 1er trimestre - CCAA', bloque TOTAL NACIONAL",
+        primaria_url="https://estadisticasdecriminalidad.ses.mir.es/sec/jaxiPx/files/_px/es/csv_c/DatosBalanceAct/l0/09001.csv_c",
+        primaria_url_tipo="CSV (jaxiPx) del Portal Estadistico; HTTP 200 al agente identificado (24.719 bytes, sha256 e80bce45a467c46f)",
+        via_de_acceso="dataset", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="dataset",
+        dato_actual="enero-marzo 2026 (Total Nacional): homicidios dolosos y asesinatos consumados 94 (+10,6%); agresion sexual con penetracion 1.290 (+3,8%); delitos contra la libertad sexual 4.806 (+1,1%); total infracciones penales 595.240 (+1,0%)",
+        dato_anterior="enero-marzo 2025 (misma tabla): homicidios consumados 85; agresion sexual con penetracion 1.243; total 589.113",
+        raw_value_span_actual=(
+            "[Portal Estadistico de Criminalidad, 09001.csv_c, TOTAL NACIONAL] '1. Homicidios dolosos y "
+            "asesinatos consumados,85,94,10,6' | '5.1.-Agresion sexual con penetracion,1.243,1.290,3,8' | "
+            "'III. TOTAL INFRACCIONES PENALES,589.113,595.240,1,0' || [ESdiario 2026-06-08, el claim] "
+            "'Criminalidad en Espana: se disparan homicidios, agresiones sexuales y la presion sobre la Policia "
+            "Nacional'"
+        ),
+        raw_value_span_anterior="[Portal Estadistico de Criminalidad, 09001.csv_c] columna 'enero-marzo 2025': 85 | 1.243 | 589.113",
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta A por la via divergencia: 'se disparan' = +10,6% (homicidios) y +3,8% (agresiones con "
+            "penetracion) contra el mismo trimestre de 2025, que es la comparacion del propio Balance; el "
+            "titular no da cifra, se estructura sobre los homicidios consumados (94, +10,6%). 'La presion sobre "
+            "la Policia' es opinion sindical, no dato. HALLAZGO de recuperabilidad: la misma edicion que E025 "
+            "(bloqueada en interior.gob.es) es recuperable en CSV por el Portal (DEC-032). El CSV llega en "
+            "ISO-8859-15. methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="Interior Balance 1T2026",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="Interior", tabla="09001",
+                         serie_nombre="1. Homicidios dolosos y asesinatos consumados. TOTAL NACIONAL",
+                         unidad="unidades", referencia_principal="interanual",
+                         descripcion="Portal Estadistico de Criminalidad, balance trimestral, homicidios dolosos y asesinatos consumados, total nacional"),
+            periodo_objetivo="2026-T1", periodo_base="2025-T1",
+            valor_objetivo=94, valor_base=85, cambio_afirmado=10.6, unidad_cambio="pct", direccion_afirmada="sube",
+            notas="Control: base = mismo trimestre del ano anterior, referencia del Balance. Emisor sin conector (CSV del Portal): sin veredicto hoy.",
+        ),
+    ),
+    dict(
+        cid="Q034",
+        claim_text="El INE rebaja el crecimiento del PIB en 2025 al 2,6%, sube el de 2024 al 3,7% y baja el de 2023 al 2,4%",
+        claim_date="2026-09-18",
+        post_url="https://www.pressdigital.es/articulo/economia/2026-09-18/6020002-ine-rebaja-crecimiento-pib-2025-26-sube-2024-37-baja-2023-24",
+        post_url_tipo="prensa", emisor="Pressdigital", emisor_tipo="prensa_digital",
+        emisor_nivel=1, pais="ES", tema="pib",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com INE rebaja crecimiento PIB 2025 2,6% sube 2024 3,7% baja 2023 2,4% revisión",
+        criba_query_b="INE rebaja PIB 2025 al 2,6% sube 2024 al 3,7% baja 2023 al 2,4% verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="'respecto a 2023' OR 'respecto a 2022' OR 'frente a 2021' OR 'que en 2020' 'según el INE' 2026 noticia '%' sube OR cae España",
+        # PENDIENTE. Revision anual de la Contabilidad Nacional (2026-09-18): tres cifras revisadas.
+        # Esperado: D (revision entre ediciones, sin test).
+    ),
+    dict(
+        cid="Q035",
+        claim_text="Los españoles se endeudan más: la demanda de crédito se dispara un 130%, hasta máximos históricos, y la morosidad se desploma",
+        claim_date="2026-02-18",
+        post_url="https://www.infobae.com/espana/2026/02/18/los-espanoles-se-endeudan-mas-la-demanda-de-credito-se-dispara-un-130-hasta-maximos-historicos-y-la-morosidad-se-desploma/",
+        post_url_tipo="prensa", emisor="Infobae España", emisor_tipo="prensa_digital",
+        emisor_nivel=3, pais="ES", tema="credito",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com demanda de crédito se dispara 130% máximos históricos morosidad Banco de España 2026",
+        criba_query_b="demanda de crédito '130%' máximos históricos morosidad se desploma Banco de España 2026 verificación OR bulo OR fact-check",
+        criba_resultado="rechazado",
+        criba_motivo="fuera_de_alcance: la cifra del titular (demanda de credito +130%) es de Asnef/Equifax, una asociacion privada, no de un emisor del conjunto; solo la morosidad (1,71%, minimos desde 2008) es del Banco de Espana. No es la regla dura",
+        criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="'Banco de España' 2026 'récord' OR 'máximo histórico' OR 'desde 2008' deuda OR depósitos OR crédito OR morosidad '%' noticia titular",
+    ),
+    dict(
+        cid="Q036",
+        claim_text="La compraventa de viviendas cae un 12,4% en Euskadi y encadena tres meses de descensos",
+        claim_date="2026-09-25",
+        post_url="https://www.deia.eus/economia/2026/09/25/compraventa-viviendas-cae-12-4-11582445.html",
+        post_url_tipo="prensa", emisor="Deia", emisor_tipo="prensa_digital",
+        emisor_nivel=1, pais="ES", tema="vivienda",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com compraventa viviendas Euskadi cae 12,4% julio 2026 tres meses descensos",
+        criba_query_b="compraventa viviendas Euskadi cae 12,4% julio 2026 'tres meses' descensos verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="'compraventa' viviendas 'agosto' 2026 '5,1%' OR '61.417' noticia -julio",
+        collected_at="2026-09-26", case_id="E029",
+        # --- trabajo 2026-09-26 (E029 t0 13:45:41Z, t1 13:45:48Z, t2 13:46:32Z) ---
+        fuente_primaria="INE - ETDP julio 2026: nota ETDP0726 (tabla por CCAA) + API Tempus tabla 6150, serie Pais Vasco",
+        primaria_url="https://www.ine.es/dyngs/Prensa/ETDP0726.htm",
+        primaria_url_tipo="nota_de_prensa_html (provisional) + API JSON wstempus DATOS_TABLA/6150",
+        via_de_acceso="api", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="api",
+        dato_actual="Pais Vasco, julio 2026: 2.139 compraventas de viviendas (provisional), -12,37% interanual; junio 2.138 (-5,5% interanual); mayo 1.964",
+        dato_anterior="Pais Vasco, julio 2025: 2.441 (definitivo); junio 2025: 2.263",
+        raw_value_span_actual=(
+            "[INE API, tabla 6150, ETDP1746 'Pais Vasco. General. Compraventa. Numero.'] 2026-M07: 2139 "
+            "(Provisional) | 2026-M06: 2138 | 2026-M05: 1964 || [Deia 2026-09-25, el claim] 'La compraventa de "
+            "viviendas cae un 12,4% en Euskadi y encadena tres meses de descensos'"
+        ),
+        raw_value_span_anterior="[INE API, tabla 6150] ETDP1746 2025-M07: 2441 (Definitivo) | 2025-M06: 2263",
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta A regional, via divergencia: 2139/2441 - 1 = -12,37%, interanual = referencia. 'Tres meses de "
+            "descensos': julio y junio comprobados (-12,4 y -5,5); mayo 2025 quedo fuera de la ventana pedida "
+            "(nult=14) y no se comprobo (NEEDS_REVIEW menor). Tercer caso de la edicion ETDP0726 (A: E001, E029; "
+            "O: E002). methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="INE ETDP0726",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="6150",
+                         serie_nombre="País Vasco. General. Compraventa. Número. ",
+                         unidad="unidades", referencia_principal="interanual",
+                         descripcion="ETDP, compraventas de viviendas inscritas, Pais Vasco, mensual"),
+            periodo_objetivo="2026-M07", periodo_base="2025-M07",
+            valor_objetivo=2139, cambio_afirmado=-12.4, unidad_cambio="pct", direccion_afirmada="baja",
+            notas="Control regional: base = interanual, referencia del emisor.",
+        ),
+    ),
+    dict(
+        cid="Q037",
+        claim_text="La creación de empresas registró su mejor julio en 31 años, con 11.150 nuevas sociedades",
+        claim_date="2026-09-10",
+        post_url="https://theobjective.com/economia/2026-09-10/creacion-empresas-mejor-julio-31-anos/",
+        post_url_tipo="prensa", emisor="The Objective", emisor_tipo="prensa_digital",
+        emisor_nivel=1, pais="ES", tema="empresas",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com creación de empresas mejor julio 31 años 11.150 sociedades 2026",
+        criba_query_b="creación de empresas 'mejor julio' 31 años 11.150 sociedades 2026 verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="sociedades mercantiles julio 2026 'según el INE' creación de empresas cae OR sube OR baja '%' noticia titular",
+        collected_at="2026-09-26", case_id="E030",
+        # --- trabajo 2026-09-26 (E030 t0 13:46:32Z, t1/t2 13:46:48Z) ---
+        fuente_primaria="INE - Estadistica de Sociedades Mercantiles (SM), julio 2026: nota SM0726 + API Tempus tabla 13913 (serie mensual desde 1995)",
+        primaria_url="https://www.ine.es/dyngs/Prensa/SM0726.htm",
+        primaria_url_tipo="nota_de_prensa_html (provisional) + API JSON wstempus DATOS_TABLA/13913 (nult=400)",
+        via_de_acceso="api", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="api",
+        dato_actual="julio 2026: 11.150 sociedades mercantiles constituidas (provisional), +2,24% interanual; maximo de los 32 julios de la serie (1995-2026); siguientes: julio 2006 11.074, julio 2007 10.976",
+        dato_anterior="julio 2025: 10.906 (definitivo)",
+        raw_value_span_actual=(
+            "[INE API, tabla 13913, SM21483 'Sociedades Constituidas. Numero de Sociedades. Total Nacional. "
+            "Mercantiles.'] 2026-M07: 11150 (Provisional) | maximo de {2026-M07..1995-M07} = 2026-M07 | 2006-M07: "
+            "11074 | 2007-M07: 10976 || [The Objective 2026-09-10, el claim] 'La creacion de empresas registro su "
+            "mejor julio en 31 anos, con 11.150 nuevas sociedades'"
+        ),
+        raw_value_span_anterior="[INE API, tabla 13913] SM21483 2025-M07: 10906 (Definitivo)",
+        truth="supported", context="undetermined",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta D (extremo historico), via divergencia: el maximo de los julios 1995-2026 es 2026 (11.150) "
+            "por 76 sociedades sobre 2006; '31 anos' = 1995-2026 cuadra. Sin test computable en el prototipo -> "
+            "undetermined (DEC-029). Misma tabla que P11 (piloto) pero edicion distinta (julio 2026 vs 2018): "
+            "admisible por DEC-025. methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="D", hermano_de="", mecanismo_candidato="", primaria_edicion="INE SM0726",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="extremo_historico",
+            metrica=dict(emisor="INE", tabla="13913",
+                         serie_nombre="Sociedades Constituídas. Número de Sociedades. Total Nacional. Mercantiles. ",
+                         unidad="unidades", referencia_principal="interanual",
+                         descripcion="Sociedades mercantiles constituidas, total nacional, mensual"),
+            periodo_objetivo="2026-M07", valor_objetivo=11150,
+            notas="Extremo historico (maximo de los julios): sin test aplicable en el prototipo.",
+        ),
+    ),
+    dict(
+        cid="Q038",
+        claim_text="La compraventa de vivienda cae un 7,7% en julio y registra su mayor descenso de 2026",
+        claim_date="2026-09-07",
+        post_url="https://www.infoconstruccion.es/noticias/20260907/compraventa-vivienda-julio-2026-hipotecas",
+        post_url_tipo="prensa", emisor="Infoconstrucción", emisor_tipo="prensa_digital",
+        emisor_nivel=3, pais="ES", tema="vivienda",
+        criba_query_a="", criba_query_b="",
+        criba_resultado="rechazado",
+        criba_motivo="fuera_de_alcance: la cifra (-7,7%, ~60.500 operaciones) es del Colegio de Registradores (Estadistica Registral Inmobiliaria), no de un emisor del conjunto; no atribuye al INE. No es la regla dura",
+        criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="'compraventas' OR 'compraventa de viviendas' 2026 'desde el máximo' OR 'desde el récord' OR 'desde 2025' caen OR han caído OR retroceden '%' noticia -'mismo mes'",
+    ),
+    dict(
+        cid="Q039",
+        claim_text="Las pernoctaciones hoteleras en la Comunidad de Madrid aumentan un 2,36% en agosto, con 2,17 millones de estancias",
+        claim_date="2026-09-22",
+        post_url="https://www.ultimahora.es/noticias/comunidades/2026/09/22/2713683/pernoctaciones-hoteleras-comunidad-madrid-aumentan-agosto-millones-estancias.html",
+        post_url_tipo="prensa", emisor="Última Hora (teletipo de Europa Press)", emisor_tipo="prensa_digital",
+        emisor_nivel=1, pais="ES", tema="turismo",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com pernoctaciones hoteleras Comunidad de Madrid agosto 2026 2,36% 2,17 millones",
+        criba_query_b="pernoctaciones hoteleras Comunidad de Madrid agosto 2026 '2,36%' OR '2,17 millones' verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="[hallado entre los resultados del barrido de la nota CTH0826 y de la criba de E019; la consulta exacta que lo devolvio no quedo registrada: NEEDS_REVIEW] 'pernoctaciones hoteleras' 'Comunidad de Madrid' agosto 2026",
+        collected_at="2026-09-26", case_id="E031",
+        # --- trabajo 2026-09-26 (E031 t0 13:47:35Z, t1 13:53:39Z, t2 13:55:05Z) ---
+        fuente_primaria="INE - Coyuntura Turistica Hotelera agosto 2026 (CTH0826): nota HTML + anexo de tablas CTH0826.xlsx (hoja EOH_Hoja3, fila 'Madrid, Comunidad de') + API Tempus tablas 2074/36570; edicion anterior: anexo CTH0825.xlsx (agosto 2025, provisional)",
+        primaria_url="https://www.ine.es/dyngs/Prensa/CTH0826.htm",
+        primaria_url_tipo="nota_de_prensa_html (provisional) + anexo xlsx /prensa/anexo_tablas/es/CTH0826.xlsx + API JSON wstempus DATOS_TABLA/2074",
+        via_de_acceso="dataset", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="dataset",
+        dato_actual="Comunidad de Madrid, agosto 2026 (provisional): pernoctaciones 2.165.029 (residentes 796.393; extranjeros 1.368.637); viajeros 1.082.623 (454.617 / 628.006)",
+        dato_anterior="Comunidad de Madrid, agosto 2025. Edicion vigente (API, revisada): pernoctaciones 2.090.878 (780.648 / 1.310.230); viajeros 1.012.363. Edicion provisional (anexo CTH0825, 2025-09-23): pernoctaciones 2.115.059 (785.462 / 1.329.597); viajeros 1.025.795 (436.770 / 589.025)",
+        raw_value_span_actual=(
+            "[CTH0826.xlsx, hoja EOH_Hoja3, fila 62] 'Madrid, Comunidad de', 1082623, 454617, 628006, 2165029, "
+            "796393, 1368637, 2 || [INE API tabla 2074, EOT1766 'Madrid (Comunidad de). Pernoctaciones. Total.'] "
+            "2026-M08: 2165029 || [Ultima Hora/EP 2026-09-22, el claim] 'aumentaron un 2,36% en agosto ... hasta "
+            "sumar 2,17 millones'; 'un 5,54% mas de turistas ... 1.082.623 viajeros'; 'residentes en Espana "
+            "aumentaron un 1,39% ... un 2,94% las de los foraneos'"
+        ),
+        raw_value_span_anterior=(
+            "[INE API tabla 2074] EOT1766 2025-M08: 2090878 | EOT1767 (residentes) 780648 | EOT1768 (extranjero) "
+            "1310230 | EOT1763 (viajeros) 1012363 || [CTH0825.xlsx, hoja EOH_Hoja3, fila 61, datos provisionales "
+            "agosto 2025] 'Madrid, Comunidad de', 1025795, 436770, 589025, 2115059, 785462, 1329597, 2.06"
+        ),
+        truth="mixed", context="divergence_detected",
+        clase_primaria="2b_base_revisada", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="divergencia_real", excedente="no",
+        notas=(
+            "Cubeta C (2b, base revisada), via divergencia. El nivel (2,17 M) cuadra; la tasa no: contra la "
+            "edicion vigente de agosto 2025 (2.090.878) el INE da +3,55%. Las CUATRO tasas del teletipo se "
+            "reproducen exactamente con la edicion PROVISIONAL de agosto 2025 (anexo CTH0825): pernoctaciones "
+            "2165029/2115059 = +2,36%; viajeros 1082623/1025795 = +5,54%; residentes 796393/785462 = +1,39%; "
+            "extranjeros 1368637/1329597 = +2,94%. Contra la edicion vigente serian +3,55 / +6,94 / +2,02 / +4,46. "
+            "El anexo por CCAA no trae columna de variacion: la agencia calcula la tasa con su propia base del "
+            "ano anterior (provisional), no con la revisada. Mismo signo: el test 2a del prototipo no disparia "
+            "(esperado: no_divergence_detected; la clase 2b esta fuera del prototipo, DEC-029/TESIS-ENCUADRE). "
+            "Hermano potencial: madridactual.es 2026-09-22 (mismo teletipo, no registrado). Segundo caso de la "
+            "edicion CTH0826 (E019 A, E020 D). methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="C", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0826",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="2074",
+                         serie_nombre="Madrid (Comunidad de). Pernoctaciones. Total.",
+                         unidad="pernoctaciones", referencia_principal="interanual",
+                         descripcion="EOH, pernoctaciones en establecimientos hoteleros, Comunidad de Madrid, mensual"),
+            periodo_objetivo="2026-M08", periodo_base="2025-M08",
+            valor_objetivo=2165029, cambio_afirmado=2.36, unidad_cambio="pct", direccion_afirmada="sube",
+            notas="Base interanual correcta en periodo, pero tomada de la edicion provisional (2.115.059) y no de la vigente (2.090.878): 2b. Sin cambio de signo.",
+        ),
+    ),
+    dict(
+        cid="Q040",
+        claim_text="El Instituto Nacional de Estadística (INE) ha revelado un desplome del 15% en hipotecas nuevas en abril de 2026, la caída más dura en cinco años",
+        claim_date="2026-05-31",
+        post_url="https://www.euribor.com.es/2026/05/31/el-desplome-del-mercado-hipotecario-15-menos-de-firmas-en-abril-revela-la-nueva-realidad-inmobiliaria/",
+        post_url_tipo="prensa", emisor="euribor.com.es", emisor_tipo="prensa_digital",
+        emisor_nivel=3, pais="ES", tema="vivienda",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com hipotecas abril 2026 '15%' desplome INE",
+        criba_query_b="'desplome del 15%' hipotecas abril 2026 INE verificación OR bulo OR fact-check OR falso",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="hipotecas viviendas abril 2026 'caen' OR 'se desploman' OR 'bajan' 'respecto a marzo' OR 'mensual' '14%' OR '14,2%' OR '14,3%' INE noticia",
+        collected_at="2026-09-26", case_id="E034",
+        # Nota de criba: primero se anoto 'rechazado: fuera_de_alcance (nivel 3)'; se corrigio antes de commitear
+        # porque el alcance de nivel 1 (DEC-024) es de los EMISORES DE DATOS, no de los publicadores del claim
+        # (EMISOR_NIVEL admite 1-5 y el lote crudo tenia niveles 3). Cribas (a) y (b) limpias.
+        # --- trabajo 2026-09-26 (E034 t0 14:06:5xZ, t1/t2 14:07:20Z) ---
+        fuente_primaria="INE - Estadistica de Hipotecas abril 2026: nota H0426 (2026-06-22) + API Tempus serie HPT34618 (tabla 76316)",
+        primaria_url="https://www.ine.es/dyngs/Prensa/H0426.htm",
+        primaria_url_tipo="nota_de_prensa_html (provisional) + API JSON wstempus DATOS_SERIE/HPT34618",
+        via_de_acceso="api", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="api",
+        dato_actual="abril 2026: 40.010 hipotecas sobre viviendas (provisional), +2,3% interanual; -14,3% respecto a marzo (46.661)",
+        dato_anterior="abril 2025: 39.103 (definitivo); marzo 2026: 46.661",
+        raw_value_span_actual=(
+            "[INE H0426, 22/06/2026] 'El numero de hipotecas sobre viviendas inscritas en los registros de la "
+            "propiedad fue de 40.010, un 2,3% mas en tasa anual'; tabla resumen: '40.010', '-14,3', '2,3' || "
+            "[INE API] HPT34618 2026-M04: 40010 || [euribor.com.es 2026-05-31, el claim] 'El Instituto Nacional de "
+            "Estadistica (INE) ha revelado un desplome del 15% en hipotecas nuevas en abril de 2026, la caida mas "
+            "dura en cinco anos'"
+        ),
+        raw_value_span_anterior=(
+            "[INE API] HPT34618 2025-M04: 39103 | 2026-M03: 46661 || caidas mensuales mas fuertes de la serie "
+            "desde 2021 (calculo propio sobre HPT34618): 2025-M08 -26,2%, 2023-M04 -26,1%, 2024-M11 -25,8%"
+        ),
+        truth="contradicted", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="claim_falso", excedente="no",
+        notas=(
+            "Cubeta F (claim falso), via divergencia. Ninguna cifra del INE para abril 2026 es -15%: interanual "
+            "+2,3% (22 meses de subidas), mensual -14,3% (que tampoco es 'la caida mas dura en cinco anos': -26,2% "
+            "en agosto 2025, -26,1% en abril 2023). Ademas el post es del 31-05-2026 y el INE publico abril el "
+            "22-06-2026: en la fecha del post el dato no existia. Origen posible, no comprobado (NEEDS_REVIEW): otra "
+            "fuente (BdE, nuevas operaciones) o texto generado. Lo incorrecto es el numero, no el marco: sin "
+            "divergencia contextual. methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="F", hermano_de="", mecanismo_candidato="", primaria_edicion="INE H0426",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="76316",
+                         serie_nombre="Viviendas. Número de hipotecas. Total Nacional. Base nueva. ",
+                         unidad="hipotecas", referencia_principal="interanual",
+                         descripcion="Estadistica de Hipotecas, hipotecas constituidas sobre viviendas, mensual"),
+            periodo_objetivo="2026-M04", periodo_base="",
+            valor_objetivo=None, cambio_afirmado=-15.0, unidad_cambio="pct", direccion_afirmada="baja",
+            notas="Base no declarada en el claim ('desplome del 15% en abril'); ni la mensual ni la interanual dan -15%.",
+        ),
+    ),
+    dict(
+        cid="Q041",
+        claim_text="El paro sube un 2,5% en Madrid hasta los 280.512 desempleados y se pierden más de 36.000 cotizantes",
+        claim_date="2026-09-02",
+        post_url="https://gacetinmadrid.com/2026/09/02/paro-sube-25-madrid-280512-desempleados-36000-cotizantes/",
+        post_url_tipo="prensa", emisor="Gacetín Madrid", emisor_tipo="prensa_digital",
+        emisor_nivel=2, pais="ES", tema="empleo",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com paro Madrid agosto 2026 280.512 2,5% cotizantes",
+        criba_query_b="paro 'Comunidad de Madrid' agosto 2026 '280.512' OR '2,5%' '6.881' verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="paro 'Comunidad de Madrid' agosto 2026 baja OR desciende OR 'se reduce' interanual OR 'respecto al año anterior' OR 'en el último año' Ayuso OR 'Gobierno regional' noticia septiembre 2026 -'44.419'",
+        collected_at="2026-09-26", case_id="E032",
+        # --- trabajo 2026-09-26 (E032 t0 13:59Z; t1/t2 14:1xZ) ---
+        fuente_primaria="SEPE - Paro registrado agosto 2026: nota 'El paro registrado sube en agosto en 44.419 personas...' (2026-09-02) + datos avance xls 'evolprovsectores.xls' (Evolucion mensual del paro registrado por provincias y CCAA, agosto 2026)",
+        primaria_url="https://www.sepe.es/SiteSepe/contenidos/que_es_el_sepe/estadisticas/datos_avance/xls/empleo/evolprovsectores.xls",
+        primaria_url_tipo="xls de datos avance (HTTP 200 al agente identificado, 69.632 bytes) + nota HTML sepe.es/noticia/SEPE/2026/Septiembre/paro-registrado-sube-agosto-44419-personas (HTTP 200)",
+        via_de_acceso="dataset", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="dataset",
+        dato_actual="Comunidad de Madrid, agosto 2026: 280.512 parados registrados; +6.881 respecto a julio (+2,51%)",
+        dato_anterior="Comunidad de Madrid, julio 2026: 273.631 (columna MES ANTERIOR del mismo fichero)",
+        raw_value_span_actual=(
+            "[evolprovsectores.xls, hoja 'Total sectores', fila 58] 53.0, 'COM. DE MADRID', 273631.0, 280512.0, "
+            "6881.0, 2.514700454261396 || [fila 68] 'TOTAL', 2311499.0, 2355918.0, 44419.0, 1.9216534378773256 || "
+            "[Gacetin Madrid 2026-09-02, el claim] 'El paro sube un 2,5% en Madrid hasta los 280.512 desempleados'"
+        ),
+        raw_value_span_anterior=(
+            "[evolprovsectores.xls, hoja 'Total sectores', columna MES ANTERIOR] 'COM. DE MADRID', 273631.0 || "
+            "[nota SEPE 2026-09-02] 'Aumenta en el resto de comunidades autonomas con Catalunya (14.594), Comunidad "
+            "de Madrid (6.881)'"
+        ),
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta A, emisor SEPE (primer control SEPE del conjunto), via divergencia. 280512/273631 - 1 = +2,51%; "
+            "la base mensual es la referencia de cabecera del SEPE ('sube en agosto en 44.419'). 'Se pierden mas de "
+            "36.000 cotizantes' es afiliacion (Seguridad Social), fuera del alcance de emisores: no se evalua. "
+            "Hermano potencial: madridpress.com 2026-09-02 ('sube un 2,51%'). methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="SEPE paro agosto 2026",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="SEPE", tabla="evolprovsectores.xls / Total sectores",
+                         serie_nombre="COM. DE MADRID", unidad="personas", referencia_principal="mensual",
+                         descripcion="Paro registrado, Comunidad de Madrid, mensual (datos avance SEPE)"),
+            periodo_objetivo="2026-M08", periodo_base="2026-M07",
+            valor_objetivo=280512, cambio_afirmado=2.5, unidad_cambio="pct", direccion_afirmada="sube",
+            notas="Control SEPE: base mensual = referencia de cabecera del emisor.",
+        ),
+    ),
+    dict(
+        cid="Q042",
+        claim_text="La deuda pública cae en julio por debajo del 100% del PIB aunque se mantiene por encima de los 1,7 billones de euros",
+        claim_date="2026-09-17",
+        post_url="https://www.elespanol.com/invertia/economia/20260917/deuda-publica-cae-julio-debajo-primera-vez-febrero-pandemia/1003744386741_0.html",
+        post_url_tipo="prensa", emisor="El Español (Invertia)", emisor_tipo="prensa_digital",
+        emisor_nivel=1, pais="ES", tema="deuda_publica",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com deuda pública julio 2026 '100% del PIB' OR '99,9%' 1,7 billones Banco de España",
+        criba_query_b="'deuda pública' julio 2026 '99,9%' OR '1,744 billones' OR 'por debajo del 100%' verificación OR bulo OR fact-check OR desmiente",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="'deuda pública' julio 2026 OR 'segundo trimestre' récord 'billones' sube OR aumenta 'Banco de España' '% del PIB' baja noticia septiembre 2026",
+        collected_at="2026-09-26", case_id="E033",
+        # --- trabajo 2026-09-26 (E033 t0 14:03:16Z, t1/t2 14:05:20Z) ---
+        fuente_primaria="Banco de Espana - Deuda PDE de las AAPP, avance mensual julio 2026: nota 'La deuda de las Administraciones Publicas se situo en julio de 2026 en el 99,9% del PIB' (17/09/2026) + PDF presbe2026-82.pdf; ediciones anteriores: junio 2026 (18/08/2026) y julio 2025",
+        primaria_url="https://www.bde.es/wbe/es/noticias-eventos/actualidad-banco-espana/notas-banco-espana/deuda-aapp-julio26.html",
+        primaria_url_tipo="nota_de_prensa_html (HTTP 200 al agente identificado) + PDF /f/webbe/GAP/Secciones/SalaPrensa/NotasInformativas/26/presbe2026-82.pdf; series en a11b.pdf / a12c.pdf",
+        via_de_acceso="html", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="html",
+        dato_actual="julio 2026: ratio deuda PDE/PIB 99,9% ('por debajo del 100% por primera vez desde febrero de 2020'); saldo 1.744 mm EUR, +3,8% interanual",
+        dato_anterior="junio 2026: 101,5%, 1.763 mm EUR, +4,2% interanual (nota 18/08/2026); julio 2025: 102,3%, 1.680 mm EUR, +3,9% (nota de 2025)",
+        raw_value_span_actual=(
+            "[BdE deuda-aapp-julio26, 17/09/2026] 'la ratio de la deuda de las Administraciones Publicas (AAPP) "
+            "segun el Protocolo de Deficit Excesivo (PDE) en relacion al Producto Interior Bruto (PIB) nominal se "
+            "situo en el 99,9% en julio de 2026'; 'Segun la estimacion disponible para julio, la ratio habria "
+            "descendido por debajo del 100% por primera vez desde febrero de 2020, antes de la pandemia'; '1.744 "
+            "miles de millones (mm) de euros en julio de 2026, con una tasa de crecimiento interanual del 3,8%' || "
+            "[El Espanol 2026-09-17, el claim] titular"
+        ),
+        raw_value_span_anterior=(
+            "[BdE deuda-aapp-junio26, 18/08/2026] 'se situo en el 101,5% en junio de 2026'; '1.763 miles de "
+            "millones (mm) de euros en junio de 2026, con una tasa de crecimiento interanual del 4,2%' || [BdE "
+            "deuda-aapp-julio25] 'se situo en julio de 2025 en el 102,3% del PIB, 1,9 pp menos respecto al mismo "
+            "periodo del ano anterior'; '1.680 miles de millones (mm) de euros en julio de 2025, con una tasa de "
+            "crecimiento interanual del 3,9%'"
+        ),
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta A, emisor Banco de Espana (primer caso BdE del conjunto), via divergencia. Comprobado: 99,9 < "
+            "100 y 'primera vez desde febrero de 2020' lo dice la propia nota; 1.744 mm > 1,7 billones; 'cae en "
+            "julio' = 101,5 -> 99,9 (-1,6 pp mensual) y 1.763 -> 1.744 mm; interanual -2,4 pp (102,3 -> 99,9). "
+            "Referencia del emisor: interanual (las cabeceras de 2025 van en pp interanuales) y la propia nota "
+            "sostiene el descenso mensual. Mismo signo en ambas bases: no hay 2a. La nota enlaza notamet_pde.pdf "
+            "(no abierto: methodology_found NEEDS_REVIEW, pasada final)."
+        ),
+        cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="BdE deuda-aapp-julio26",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="Banco de España", tabla="Deuda PDE de las AAPP (avance mensual)",
+                         serie_nombre="Ratio deuda PDE / PIB nominal, total AAPP", unidad="% del PIB",
+                         referencia_principal="interanual",
+                         descripcion="Deuda segun el Protocolo de Deficit Excesivo, ratio sobre PIB, mensual"),
+            periodo_objetivo="2026-M07", periodo_base="2026-M06",
+            valor_objetivo=99.9, cambio_afirmado=-1.6, unidad_cambio="pp", direccion_afirmada="baja",
+            notas="El claim afirma direccion ('cae por debajo del 100%'); la magnitud mensual (-1,6 pp) sale de las dos notas.",
+        ),
+    ),
+    dict(
+        cid="Q043",
+        claim_text="En el primer trimestre de 2026 el número total de infracciones penales en Alcorcón pasó de 1.701 en 2025 a 2.215, un incremento del 30,2%",
+        claim_date="2026-09-24",
+        post_url="https://www.elicebergdemadrid.com/sur/vox-alcorcon-alerta-de-un-nuevo-incremento-de-la-delincuencia/",
+        post_url_tipo="declaracion", emisor="Vox Alcorcón (declaración recogida por El Iceberg de Madrid)", emisor_tipo="partido_politico",
+        emisor_nivel=3, pais="ES", tema="criminalidad",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com Alcorcón criminalidad 2026 Vox 30% delincuencia",
+        criba_query_b="Alcorcón criminalidad 'primer trimestre' 2026 '30,2%' OR '2.215' OR '25,1%' OR '4.367' Vox verificación OR bulo OR fact-check OR desmiente",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="'criminalidad' OR 'delitos' 2026 'primer trimestre' 'desde 2018' OR 'respecto a 2019' OR 'desde que gobierna' sube OR aumenta OR 'se dispara' '%' Vox OR PP OR Marlaska OR 'Balance de Criminalidad' declaración noticia -'segundo trimestre'",
+        collected_at="2026-09-26", case_id="E036",
+        # --- trabajo 2026-09-26 (E036 t0 14:10:54Z, t1 14:17Z, t2 14:2xZ) ---
+        fuente_primaria="Ministerio del Interior - Portal Estadistico de Criminalidad, Balance 1T2026, tabla 09003 'Capitales de provincia, municipios mayores de 20.000 habitantes e islas', bloque '28007 Alcorcon'",
+        primaria_url="https://estadisticasdecriminalidad.ses.mir.es/sec/jaxiPx/files/_px/es/csv_c/DatosBalanceAct/l0/09003.csv_c",
+        primaria_url_tipo="CSV (jaxiPx) del Portal Estadistico; HTTP 200 al agente identificado (548.984 bytes, sha256 949be9399eb00fd4); evidencia en research/evidencia/E036_portal_criminalidad_1T2026_alcorcon.txt",
+        via_de_acceso="dataset", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="dataset",
+        dato_actual="Alcorcon, enero-marzo 2026: 2.215 infracciones penales (convencional 1.711; cibercriminalidad 504); variacion 2026/2025 +30,2% (columna del Portal)",
+        dato_anterior="Alcorcon, enero-marzo 2025: 1.701 (convencional 1.413; ciber 288), columna 'enero-marzo 2025' de la misma tabla",
+        raw_value_span_actual=(
+            "[09003.csv_c, bloque '28007 Alcorcón'] 'III. TOTAL INFRACCIONES PENALES,1.701,2.215,30,2,' | "
+            "'I. CRIMINALIDAD CONVENCIONAL,1.413,1.711,21,1,' | 'II. CIBERCRIMINALIDAD (infracciones penales "
+            "cometidas en/por medio ciber),288,504,75,0,' || [El Iceberg de Madrid 2026-09-24, el claim] 'numero "
+            "total de infracciones penales pasara de 1.701 en 2025 a 2.215 en 2026, un incremento del 30,2%'"
+        ),
+        raw_value_span_anterior="[09003.csv_c, columna 'enero-marzo 2025'] 'III. TOTAL INFRACCIONES PENALES,1.701,2.215,30,2,'",
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta A, emisor Interior via Portal Estadistico (segundo caso del Portal tras E028), via divergencia "
+            "(declaracion de partido). 2215/1701 - 1 = +30,2% = columna 'Variacion %' del Portal; la base "
+            "interanual (mismo trimestre del ano anterior) es la referencia del emisor. El resto del comunicado de "
+            "Vox (1S2026: 4.367, +25,1%; 2T2026: 2.152, +20,2%) no se usa: edicion 2T2026 vetada por DEC-025 (C18). "
+            "El Portal sirve las tablas de 1T y 2T bajo 'DatosBalanceAct'; la ruta 'DatosBalanceAnt/20261' devuelve "
+            "una pagina de error al agente. methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="Interior Balance 1T2026",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="Ministerio del Interior", tabla="09003 (Portal Estadistico, Balance 1T2026)",
+                         serie_nombre="28007 Alcorcón · III. TOTAL INFRACCIONES PENALES", unidad="hechos conocidos",
+                         referencia_principal="interanual",
+                         descripcion="Balance de criminalidad, infracciones penales, municipio de Alcorcon, trimestral"),
+            periodo_objetivo="2026-T1", periodo_base="2025-T1",
+            valor_objetivo=2215, cambio_afirmado=30.2, unidad_cambio="pct", direccion_afirmada="sube",
+            notas="Control Interior/Portal: base interanual = referencia del emisor.",
+        ),
+    ),
+    dict(
+        cid="Q044",
+        claim_text="Las pernoctaciones hoteleras aumentaron un 2,39% en julio",
+        claim_date="2026-08-21",
+        post_url="https://rtvc.es/las-pernoctaciones-hoteleras-aumentaron-un-239-en-julio-21-agosto-2026/",
+        post_url_tipo="prensa", emisor="RTVC (Radiotelevisión Canaria)", emisor_tipo="prensa_digital",
+        emisor_nivel=1, pais="ES", tema="turismo",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com pernoctaciones hoteleras Canarias julio 2026 2,39% 6,78 millones",
+        criba_query_b="pernoctaciones hoteleras Canarias julio 2026 '2,39%' OR '6,78 millones' verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="'pernoctaciones hoteleras' julio 2026 Europa Press 'Comunidad de Madrid' OR Baleares OR Canarias OR Andalucía OR Cataluña OR 'Comunitat Valenciana' aumentan OR caen '%' agosto 2026 -agosto",
+        collected_at="2026-09-26", case_id="E035",
+        # --- trabajo 2026-09-26 (E035 t0/t1/t2 14:0xZ; anexos descargados en la criba) ---
+        fuente_primaria="INE - CTH julio 2026 (CTH0726): anexo CTH0726.xlsx (EOH_Hoja3, fila 'Canarias') + API Tempus tabla 2074 serie EOT1544; edicion anterior: API (julio 2025 vigente) y anexo CTH0725.xlsx (julio 2025 provisional)",
+        primaria_url="https://www.ine.es/dyngs/Prensa/CTH0726.htm",
+        primaria_url_tipo="nota_de_prensa_html + anexo xlsx /prensa/anexo_tablas/es/CTH0726.xlsx + API JSON wstempus DATOS_TABLA/2074",
+        via_de_acceso="api", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="api",
+        dato_actual="Canarias, julio 2026 (provisional): 6.781.369 pernoctaciones (viajeros 1.058.995), +2,39% interanual",
+        dato_anterior="Canarias, julio 2025. Edicion vigente (API): 6.622.855. Edicion provisional (anexo CTH0725): 6.552.626",
+        raw_value_span_actual=(
+            "[CTH0726.xlsx, hoja EOH_Hoja3, fila 24] 'Canarias', 1058995, 310471, 748524, 6781369, 1204609, "
+            "5576760, 6.4 || [INE API tabla 2074] EOT1544 'Canarias. Pernoctaciones. Total.' 2026-M07: 6781369 || "
+            "[RTVC 2026-08-21, el claim] 'Las pernoctaciones hoteleras aumentaron un 2,39% en julio' (Canarias, "
+            "6,78 millones)"
+        ),
+        raw_value_span_anterior=(
+            "[INE API tabla 2074] EOT1544 2025-M07: 6622855 || [CTH0725.xlsx, hoja EOH_Hoja3, fila 24, datos "
+            "provisionales julio 2025] 'Canarias', 999568, 283655, 715913, 6552626, 1172408, 5380218, 6.56"
+        ),
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta A regional, via divergencia. 6781369/6622855 - 1 = +2,39%: la tasa se calculo contra la "
+            "edicion VIGENTE (revisada) de julio 2025, a diferencia de E031/E042/E043 (base provisional). Contra "
+            "la provisional habria dado +3,49%. Hermano potencial: eldiario.es/canariasahora 2026-08-21 (mismo "
+            "teletipo). Primer caso de CTH0726 (luego E042 C, E043 C). methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0726",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="2074",
+                         serie_nombre="Canarias. Pernoctaciones. Total.",
+                         unidad="pernoctaciones", referencia_principal="interanual",
+                         descripcion="EOH, pernoctaciones en establecimientos hoteleros, Canarias, mensual"),
+            periodo_objetivo="2026-M07", periodo_base="2025-M07",
+            valor_objetivo=6781369, cambio_afirmado=2.39, unidad_cambio="pct", direccion_afirmada="sube",
+            notas="Control regional: base interanual (edicion vigente) = referencia del emisor.",
+        ),
+    ),
+    dict(
+        cid="Q045",
+        claim_text="La inflación industrial se dispara al 13,2% en agosto por la energía y marca récord en casi cuatro años",
+        claim_date="2026-09-24",
+        post_url="https://www.deia.eus/economia/2026/09/24/inflacion-industrial-dispara-13-2-11578239.html",
+        post_url_tipo="prensa", emisor="Deia (teletipo de Europa Press)", emisor_tipo="prensa_digital",
+        emisor_nivel=1, pais="ES", tema="precios",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com precios industriales agosto 2026 13,2% récord energía",
+        criba_query_b="'inflación industrial' OR 'precios industriales' agosto 2026 '13,2%' 'casi cuatro años' OR 'diciembre de 2022' verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="'producción industrial' OR 'compraventa de viviendas' 'en agosto' 2026 INE '%' noticia septiembre 2026 -julio -'agosto de 2025'",
+        collected_at="2026-09-26", case_id="E037",
+        # --- trabajo 2026-09-26 (E037 t0/t1/t2 14:2xZ; la serie ya estaba descargada para E021) ---
+        fuente_primaria="INE - IPRI agosto 2026: nota IPRI0826 + API Tempus serie IPR34522 (tabla 76655), nult=60",
+        primaria_url="https://www.ine.es/dyngs/Prensa/IPRI0826.htm",
+        primaria_url_tipo="nota_de_prensa_html + API JSON wstempus DATOS_SERIE/IPR34522",
+        via_de_acceso="api", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="api",
+        dato_actual="agosto 2026: IPRI general (mercado interior) 141,8; tasa anual +13,17% (julio: +9,36%)",
+        dato_anterior="tasas anuales anteriores >= 13,17%: 2022-M09 35,6 | 2022-M10 25,0 | 2022-M11 20,5 | 2022-M12 14,9; ninguna entre 2023-M01 (7,8) y 2026-M07 (9,4)",
+        raw_value_span_actual=(
+            "[INE API] IPR34522 2026-M08: 141.8 | 2026-M07: 137.8 (tasa anual calculada 13,17%; la nota IPRI0826 "
+            "dice 13,2%, ver E021) || [Deia/EP 2026-09-24, el claim] 'La inflacion industrial se dispara al 13,2% "
+            "en agosto por la energia y marca record en casi cuatro anos'"
+        ),
+        raw_value_span_anterior=(
+            "[INE API IPR34522, nult=60, tasas anuales calculadas] 2022-M12: 14,86 | 2023-M01: 7,82 | maximo de "
+            "2023-M01..2026-M07 < 13,17"
+        ),
+        truth="supported", context="undetermined",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta D (extremo), via divergencia. 'Record en casi cuatro anos' = tasa anual mas alta desde "
+            "diciembre 2022 (3 anos y 8 meses): comprobado sobre la serie, ninguna tasa >= 13,17 entre 2023-M01 y "
+            "2026-M07. Segundo caso de IPRI0826 (E021, A). 'Por la energia' es atribucion causal: no se evalua. "
+            "Sin test aplicable en el prototipo -> undetermined (DEC-029). methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="D", hermano_de="", mecanismo_candidato="", primaria_edicion="INE IPRI0826",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="extremo_historico",
+            metrica=dict(emisor="INE", tabla="76655",
+                         serie_nombre="Nacional. Mercado interior. Total industria. Índice. ",
+                         unidad="tasa anual %", referencia_principal="interanual",
+                         descripcion="IPRI, indice general mercado interior, tasa de variacion anual, mensual"),
+            periodo_objetivo="2026-M08", valor_objetivo=13.2,
+            notas="Extremo: maximo de la tasa anual desde 2022-M12. Sin test aplicable.",
+        ),
+    ),
+    dict(
+        cid="Q046",
+        claim_text="El paro sube en 44.419 personas, su mayor alza en agosto desde 2019, lastrado por los servicios",
+        claim_date="2026-09-02",
+        post_url="https://theobjective.com/economia/empleo/2026-09-02/paro-sube-44-419-personas-peor-agosto-2019-lastrado-servicios/",
+        post_url_tipo="prensa", emisor="The Objective (teletipo de Europa Press)", emisor_tipo="prensa_digital",
+        emisor_nivel=1, pais="ES", tema="empleo",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com paro agosto 2026 44.419 'mayor alza' OR 'mayor subida' desde 2019",
+        criba_query_b="paro agosto 2026 '44.419' 'mayor alza en agosto desde 2019' OR 'mayor subida en un mes de agosto desde 2019' OR 'peor agosto desde 2019' verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="'el paro baja' OR 'el paro desciende' OR 'el paro se reduce' 'en agosto' 2026 '2,9%' OR '70.593' OR '2,91%' titular noticia -'sube en agosto'",
+        collected_at="2026-09-26", case_id="E039",
+        # --- trabajo 2026-09-26 (E039 t0 14:3xZ, t1/t2 14:4xZ) ---
+        fuente_primaria="SEPE - Paro registrado agosto 2026: nota 2026-09-02 + datos avance 'evolparoseries.pdf' (Evolucion del paro registrado segun sectores, ultimos 10 anos: niveles mensuales 2017-2026)",
+        primaria_url="https://www.sepe.es/SiteSepe/contenidos/que_es_el_sepe/estadisticas/datos_avance/pdf/empleo/evolparoseries.pdf",
+        primaria_url_tipo="PDF de datos avance (HTTP 200 al agente identificado, 83.086 bytes); el xls homologo (evolparoseries.xls) no lo abre xlrd (cabecera OLE corrupta) y se uso el PDF",
+        via_de_acceso="pdf", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="pdf",
+        dato_actual="agosto 2026: 2.355.918 parados registrados; julio 2026: 2.311.499; variacion +44.419",
+        dato_anterior="variaciones julio->agosto recomputadas de los niveles del PDF: 2017 +46.400 | 2018 +47.047 | 2019 +54.371 | 2020 +29.780 | 2021 -82.583 | 2022 +40.428 | 2023 +24.826 | 2024 +21.884 | 2025 +21.905",
+        raw_value_span_actual=(
+            "[evolparoseries.pdf, tabla 'segun sectores', bloque 2026] 'JULIO 2.311.499 ...' | 'AGOSTO 2.355.918 "
+            "69.384 181.016 166.106 1.696.287 243.125' || [nota SEPE 2026-09-02] 'El paro registrado sube en agosto "
+            "en 44.419 personas y se situa en 2.355.918' || [The Objective/EP 2026-09-02, el claim] 'El paro sube en "
+            "44.419 personas, su mayor alza en agosto desde 2019, lastrado por los servicios'"
+        ),
+        raw_value_span_anterior=(
+            "[evolparoseries.pdf, bloque 2019] 'JULIO 3.011.433 ...' | 'AGOSTO 3.065.804 ...' (+54.371) || [bloque "
+            "2025] 'JULIO 2.404.606 ...' | 'AGOSTO 2.426.511 ...' (+21.905) || [bloque 2022] 'JULIO 2.883.812 ...' | "
+            "'AGOSTO 2.924.240 ...' (+40.428)"
+        ),
+        truth="supported", context="undetermined",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta D (extremo), emisor SEPE, via divergencia. 'Mayor alza en agosto desde 2019': recomputado sobre "
+            "los niveles mensuales del PDF, agosto 2026 (+44.419) supera a todos los agostos 2020-2025 (maximo "
+            "+40.428 en 2022) y queda por debajo de 2019 (+54.371): cuadra. 'Lastrado por los servicios' (+28.563 en "
+            "servicios, evolprovsectores.xls) no se evalua. Sin test aplicable -> undetermined (DEC-029). Segundo "
+            "caso SEPE de la edicion (E032 A). methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="D", hermano_de="", mecanismo_candidato="", primaria_edicion="SEPE paro agosto 2026",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="extremo_historico",
+            metrica=dict(emisor="SEPE", tabla="evolparoseries.pdf / Total",
+                         serie_nombre="Paro registrado, total nacional", unidad="personas",
+                         referencia_principal="mensual",
+                         descripcion="Paro registrado, variacion mensual julio->agosto, 2017-2026"),
+            periodo_objetivo="2026-M08", valor_objetivo=44419,
+            notas="Extremo: mayor variacion mensual de un agosto desde 2019. Sin test aplicable.",
+        ),
+    ),
+    dict(
+        cid="Q049",
+        claim_text="Navarra, donde más aumentó la compraventa de viviendas en julio",
+        claim_date="2026-09-25",
+        post_url="https://www.noticiasdenavarra.com/economia/2026/09/25/navarra-aumento-compraventa-viviendas-julio-11583206.html",
+        post_url_tipo="prensa", emisor="Noticias de Navarra (teletipo de Europa Press)", emisor_tipo="prensa_digital",
+        emisor_nivel=1, pais="ES", tema="vivienda",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com Navarra compraventa viviendas julio 2026 'donde más'",
+        criba_query_b="'Navarra, donde más aumentó la compraventa de viviendas en julio' OR 'Navarra' compraventa viviendas julio 2026 'donde más' verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="compraventa viviendas julio 2026 'respecto a junio' OR 'en tasa mensual' OR 'frente a junio' sube OR aumenta OR crece '3,6%' OR '3,5%' INE noticia",
+        collected_at="2026-09-26", case_id="E040",
+        # --- trabajo 2026-09-26 (E040 t0/t1/t2 14:4xZ) ---
+        fuente_primaria="INE - ETDP julio 2026: anexo ETDP0726.xlsx, tabla ETDP.11 'Fincas transmitidas por comunidades autonomas' (compraventas de viviendas registradas, % variacion anual por CCAA)",
+        primaria_url="https://www.ine.es/prensa/anexo_tablas/es/ETDP0726.xlsx",
+        primaria_url_tipo="anexo xlsx de la nota (HTTP 200 al agente identificado, 112.453 bytes) + nota ETDP0726",
+        via_de_acceso="dataset", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="dataset",
+        dato_actual="julio 2026, % variacion anual de compraventas de viviendas por CCAA: Navarra +26,36 (652) | Galicia +10,76 (2.409) | Castilla y Leon +9,69 (3.486) | Castilla-La Mancha +7,29 | Murcia +2,57 | Canarias +2,10 | resto negativas | TOTAL -5,11 (61.417)",
+        dato_anterior="la tasa del INE lleva implicita julio 2025 (Navarra: 652/1,2636 = 516 compraventas)",
+        raw_value_span_actual=(
+            "[ETDP0726.xlsx, hoja Hoja9, tabla ETDP.11, fila] 'Navarra, Comunidad Foral de', 2966, 0.44023..., "
+            "537.31..., 652, 26.356589147286826, 118.11... || [fila] 'Galicia', ..., 2409, 10.76 || [Noticias de "
+            "Navarra/EP 2026-09-25, el claim] 'Navarra, donde mas aumento la compraventa de viviendas en julio'"
+        ),
+        raw_value_span_anterior="[misma tabla, ranking recomputado] 1. Navarra 26,36 | 2. Galicia 10,76 | 3. Castilla y Leon 9,69 | TOTAL -5,11",
+        truth="supported", context="undetermined",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta D (ranking entre CCAA, tipo 'otro'), via divergencia. Navarra es la CCAA con mayor tasa anual "
+            "(+26,36%) en ETDP.11: cuadra. Ranking sin test en el prototipo -> undetermined (DEC-029). Quinto caso "
+            "de la edicion ETDP0726 (E001 A, E029 A, E002 O, E038 F): D no cuenta en el tope de controles A. "
+            "methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="D", hermano_de="", mecanismo_candidato="", primaria_edicion="INE ETDP0726",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="otro",
+            metrica=dict(emisor="INE", tabla="ETDP.11 (anexo ETDP0726)",
+                         serie_nombre="% variacion anual de compraventas de viviendas por CCAA", unidad="%",
+                         referencia_principal="interanual",
+                         descripcion="ETDP, compraventas de viviendas registradas por CCAA, tasa anual, julio 2026"),
+            periodo_objetivo="2026-M07", valor_objetivo=26.36,
+            notas="Ranking (maximo entre CCAA): sin test aplicable en el prototipo.",
+        ),
+    ),
+    dict(
+        cid="Q050",
+        claim_text="El principal incremento delictivo en la localidad se concentra en la ciberdelincuencia, un fenómeno que ya representa más del 70% del aumento de las infracciones penales",
+        claim_date="2026-06-22",
+        post_url="https://www.soydemadrid.com/noticia-alcorcon/david-lopez-pp-y-vox-siempre-buscan-el-alarmismo-151798.aspx",
+        post_url_tipo="declaracion", emisor="David López, concejal de Seguridad de Alcorcón, vía SoyDe Madrid", emisor_tipo="institucion",
+        emisor_nivel=3, pais="ES", tema="criminalidad",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com Alcorcón cibercriminalidad '70%' aumento infracciones 2026",
+        criba_query_b="Alcorcón 'David López' cibercriminalidad '70%' OR 'más del 70' infracciones penales 2026 verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="[aparecio en los resultados de la criba (b) de Q043] Alcorcón criminalidad 'primer trimestre' 2026 '30,2%' OR '2.215' OR '25,1%' OR '4.367' Vox verificación OR bulo OR fact-check OR desmiente",
+        collected_at="2026-09-26", case_id="E041",
+        # --- trabajo 2026-09-26 (E041 t0/t1/t2 14:5xZ; misma tabla que E036) ---
+        fuente_primaria="Ministerio del Interior - Portal Estadistico de Criminalidad, Balance 1T2026, tabla 09003, bloque '28007 Alcorcon' (misma descarga que E036)",
+        primaria_url="https://estadisticasdecriminalidad.ses.mir.es/sec/jaxiPx/files/_px/es/csv_c/DatosBalanceAct/l0/09003.csv_c",
+        primaria_url_tipo="CSV (jaxiPx) del Portal Estadistico; HTTP 200 al agente identificado (sha256 949be9399eb00fd4); evidencia en research/evidencia/E036_portal_criminalidad_1T2026_alcorcon.txt",
+        via_de_acceso="dataset", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="dataset",
+        dato_actual="Alcorcon, 1T2026 vs 1T2025: total 1.701 -> 2.215 (+514); cibercriminalidad 288 -> 504 (+216, +75,0%); estafas informaticas 215 -> 453 (+238); convencional 1.413 -> 1.711 (+298). Peso de la ciber en el aumento total: 216/514 = 42,0% (estafas: 46,3%)",
+        dato_anterior="columna 'enero-marzo 2025' de la misma tabla: total 1.701, ciber 288, convencional 1.413",
+        raw_value_span_actual=(
+            "[09003.csv_c, bloque '28007 Alcorcón'] 'III. TOTAL INFRACCIONES PENALES,1.701,2.215,30,2,' | 'II. "
+            "CIBERCRIMINALIDAD (infracciones penales cometidas en/por medio ciber),288,504,75,0,' | '12.-Estafas "
+            "informáticas,215,453,110,7,' | 'I. CRIMINALIDAD CONVENCIONAL,1.413,1.711,21,1,' || [SoyDe Madrid "
+            "2026-06-22, el claim] 'la ciberdelincuencia, un fenomeno que ya representa mas del 70% del aumento de "
+            "las infracciones penales'"
+        ),
+        raw_value_span_anterior="[09003.csv_c, columna 'enero-marzo 2025'] total 1.701 | ciber 288 | convencional 1.413",
+        truth="mixed", context="divergence_detected",
+        clase_primaria="4_denominator", clases_secundarias="3_absolute_vs_relative", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="divergencia_real", excedente="no",
+        notas=(
+            "Cubeta C (clase 4, denominador), via divergencia (declaracion municipal en respuesta al claim de Q043). "
+            "'Mas del 70% del aumento' no sale de la tabla: la ciber aporta 216 de los 514 hechos de mas (42,0%); "
+            "el 75% es la TASA de crecimiento de la ciber (504/288 - 1), no su peso en el aumento total. Numero "
+            "rastreable (75%) con denominador equivocado: mixed + divergence_detected. Lectura alternativa (F, "
+            "claim falso) anotada para la muestra a ciegas: NEEDS_REVIEW. Sin test 2a aplicable (no es un cambio "
+            "entre periodos de una serie). Tercer caso de la edicion 1T2026 del Portal (E028 A, E036 A). "
+            "methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="C", hermano_de="", mecanismo_candidato="", primaria_edicion="Interior Balance 1T2026",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="otro",
+            metrica=dict(emisor="Ministerio del Interior", tabla="09003 (Portal Estadistico, Balance 1T2026)",
+                         serie_nombre="28007 Alcorcón · II. CIBERCRIMINALIDAD / III. TOTAL INFRACCIONES PENALES",
+                         unidad="hechos conocidos", referencia_principal="interanual",
+                         descripcion="Cuota de la cibercriminalidad en el aumento interanual de infracciones, Alcorcon, 1T2026"),
+            periodo_objetivo="2026-T1", valor_objetivo=70,
+            notas="Cuota del aumento recomputada: (504-288)/(2215-1701) = 42,0%. El 70% no corresponde a ningun cociente de la tabla salvo la tasa de crecimiento de la ciber (75%).",
+        ),
+    ),
+    dict(
+        cid="Q051",
+        claim_text="Las pernoctaciones hoteleras en Madrid caen un 1,43% en julio con 2,29 millones de noches",
+        claim_date="2026-08-21",
+        post_url="https://www.eldiariodemadrid.es/articulo/turismo/pernoctaciones-hoteleras-madrid-julio-caida-turismo-extranjero/20260821170152139820.html",
+        post_url_tipo="prensa", emisor="El Diario de Madrid (Diego Domingo Rodríguez)", emisor_tipo="prensa_digital",
+        emisor_nivel=2, pais="ES", tema="turismo",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com pernoctaciones hoteleras Madrid julio 2026 1,43% 2,29 millones",
+        criba_query_b="pernoctaciones hoteleras Madrid julio 2026 '1,43%' OR '2.297.978' OR '2,29 millones' verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="'pernoctaciones hoteleras' 'Comunidad de Madrid' julio 2026 caen OR bajan OR descienden '1,4%' OR '1,41%' OR '1,05%' OR '1,1%' Europa Press agosto 2026",
+        collected_at="2026-09-26", case_id="E042",
+        # --- trabajo 2026-09-26 (E042 t0/t1/t2 15:0xZ; anexos y API ya en mano por E031/E035) ---
+        fuente_primaria="INE - CTH julio 2026 (CTH0726): anexo CTH0726.xlsx (EOH_Hoja3, fila 'Madrid, Comunidad de') + API Tempus tabla 2074 (EOT1763-EOT1768); edicion anterior: API (julio 2025 vigente) y anexo CTH0725.xlsx (julio 2025 provisional)",
+        primaria_url="https://www.ine.es/dyngs/Prensa/CTH0726.htm",
+        primaria_url_tipo="nota_de_prensa_html + anexo xlsx /prensa/anexo_tablas/es/CTH0726.xlsx + API JSON wstempus DATOS_TABLA/2074",
+        via_de_acceso="dataset", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="dataset",
+        dato_actual="Comunidad de Madrid, julio 2026 (provisional): pernoctaciones 2.297.978 (residentes 860.750; extranjeros 1.437.228); viajeros 1.139.288 (504.321 / 634.966)",
+        dato_anterior="Comunidad de Madrid, julio 2025. Edicion vigente (API): pernoctaciones 2.322.289 (895.696 / 1.426.593); viajeros 1.165.046 (517.619 / 647.427). Edicion provisional (anexo CTH0725): pernoctaciones 2.330.843 (903.133 / 1.427.710); viajeros 1.179.239 (527.894 / 651.345)",
+        raw_value_span_actual=(
+            "[CTH0726.xlsx, hoja EOH_Hoja3, fila 61] 'Madrid, Comunidad de', 1139288, 504321, 634966, 2297978, "
+            "860750, 1437228, 2.02 || [INE API tabla 2074] EOT1766 2026-M07: 2297978 | EOT1763 2026-M07: 1139288 || "
+            "[El Diario de Madrid 2026-08-21, el claim] 'La Comunidad de Madrid registro 2.297.978 pernoctaciones "
+            "hoteleras durante el mes de julio ... un descenso del 1,43% respecto al mismo periodo del ano "
+            "anterior'; '1.139.288 viajeros ... un descenso del 3,38%'"
+        ),
+        raw_value_span_anterior=(
+            "[INE API tabla 2074] EOT1766 2025-M07: 2322289 | EOT1763 2025-M07: 1165046 || [CTH0725.xlsx, hoja "
+            "EOH_Hoja3, fila 61, datos provisionales julio 2025] 'Madrid, Comunidad de', 1179239, 527894, 651345, "
+            "2330843, 903133, 1427710, 1.98"
+        ),
+        truth="mixed", context="divergence_detected",
+        clase_primaria="2b_base_revisada", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="divergencia_real", excedente="no",
+        notas=(
+            "Cubeta C (2b, base revisada), via divergencia. Contra la edicion vigente: pernoctaciones -1,05%, "
+            "viajeros -2,21%. Contra la provisional de julio 2025: -1,41% y -3,39%, que reproducen (a 0,01-0,02 pp) "
+            "el -1,43% y el -3,38% del articulo; la base exacta no es reproducible al centesimo (NEEDS_REVIEW), pero "
+            "solo la provisional se acerca. La nota de coyuntura de la Comunidad de Madrid (julio 2026) da -1% "
+            "(vigente), lo que confirma el mecanismo. Mismo mecanismo que E031 (agosto, Ultima Hora/EP) en otra "
+            "edicion y otro medio: no es hermano. Mismo signo: el test 2a no disparia. Segundo caso de CTH0726 "
+            "(E035 A). methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="C", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0726",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="2074",
+                         serie_nombre="Madrid (Comunidad de). Pernoctaciones. Total.",
+                         unidad="pernoctaciones", referencia_principal="interanual",
+                         descripcion="EOH, pernoctaciones en establecimientos hoteleros, Comunidad de Madrid, mensual"),
+            periodo_objetivo="2026-M07", periodo_base="2025-M07",
+            valor_objetivo=2297978, cambio_afirmado=-1.43, unidad_cambio="pct", direccion_afirmada="baja",
+            notas="Base interanual correcta en periodo, tomada de la edicion provisional (2.330.843) y no de la vigente (2.322.289): 2b. Sin cambio de signo.",
+        ),
+    ),
+    dict(
+        cid="Q052",
+        claim_text="Las pernoctaciones de residentes nacionales subieron alrededor de un 3,8%, de 740.149 a 768.195, mientras que las de extranjeros cayeron un 2,2%, hasta 10.015.343",
+        claim_date="2026-08-21",
+        post_url="https://www.economiademallorca.com/articulo/turismo-y-hosteleria/hoteles-islas-reciben-mas-dos-millones-viajeros-julio/20260821103628122733.html",
+        post_url_tipo="prensa", emisor="Economía de Mallorca (Redacción)", emisor_tipo="prensa_digital",
+        emisor_nivel=2, pais="ES", tema="turismo",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com Baleares hoteles julio 2026 pernoctaciones 1,7% viajeros 2.050.150",
+        criba_query_b="Baleares pernoctaciones hoteleras julio 2026 '10.783.538' OR '1,7%' OR '2.050.150' verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="pernoctaciones hoteleras Baleares julio 2026 caen OR bajan '1,9%' OR '1,86%' OR '1,8%' OR '2%' Europa Press agosto 2026 '10,78 millones' OR '10,8 millones'",
+        collected_at="2026-09-26", case_id="E043",
+        # --- trabajo 2026-09-26 (E043 t0 15:0xZ, t1/t2 15:0xZ; t2 corregido tras leer el articulo: 2b, no A) ---
+        fuente_primaria="INE - CTH julio 2026 (CTH0726): anexo CTH0726.xlsx (EOH_Hoja3, fila 'Balears, Illes') + API Tempus tabla 2074 (EOT22192-EOT22197); edicion anterior: API (julio 2025 vigente) y anexo CTH0725.xlsx (julio 2025 provisional)",
+        primaria_url="https://www.ine.es/dyngs/Prensa/CTH0726.htm",
+        primaria_url_tipo="nota_de_prensa_html + anexo xlsx /prensa/anexo_tablas/es/CTH0726.xlsx + API JSON wstempus DATOS_TABLA/2074",
+        via_de_acceso="dataset", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="dataset",
+        dato_actual="Balears, julio 2026 (provisional): pernoctaciones 10.783.538 (residentes 768.195; extranjeros 10.015.343); viajeros 2.050.150",
+        dato_anterior="Balears, julio 2025. Edicion vigente (API): pernoctaciones 10.974.122 (residentes 786.273; extranjeros 10.187.848); viajeros 2.038.016. Edicion provisional (anexo CTH0725): 10.987.630 (residentes 740.149; extranjeros 10.247.481); viajeros 2.036.446",
+        raw_value_span_actual=(
+            "[CTH0726.xlsx, hoja EOH_Hoja3, fila 23] 'Balears, Illes', 2050150, 204284, 1845866, 10783538, 768195, "
+            "10015343, 5.26 || [INE API tabla 2074] EOT22193 2026-M07: 768195 | EOT22192 2026-M07: 10015343 | "
+            "EOT22194 2026-M07: 10783538 || [Economia de Mallorca 2026-08-21, el claim] 'Las pernoctaciones de "
+            "residentes nacionales subieron alrededor de un 3,8%, de 740.149 a 768.195'; 'mientras que las de "
+            "extranjeros cayeron un 2,2%, hasta 10.015.343'"
+        ),
+        raw_value_span_anterior=(
+            "[INE API tabla 2074] EOT22193 2025-M07: 786273 | EOT22192 2025-M07: 10187848 | EOT22194 2025-M07: "
+            "10974122 || [CTH0725.xlsx, hoja EOH_Hoja3, fila 23, datos provisionales julio 2025] 'Balears, Illes', "
+            "2036446, 193208, 1843238, 10987630, 740149, 10247481, 5.4"
+        ),
+        truth="mixed", context="divergence_detected",
+        clase_primaria="2b_base_revisada", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="divergencia_real", excedente="no",
+        notas=(
+            "Cubeta C (2b, base revisada) CON CAMBIO DE SIGNO, via divergencia. El articulo escribe la base "
+            "(740.149), que es la cifra provisional de julio 2025 (anexo CTH0725), no la vigente (786.273): con la "
+            "vigente las pernoctaciones de residentes CAEN un 2,3%, no suben un 3,8%. Extranjeros: -2,27% "
+            "(provisional) frente a -1,69% (vigente). Total: -1,74% vigente / -1,86% provisional (el articulo no "
+            "da la tasa total). Es el 2b mas fuerte del conjunto: la revision de la edicion cambia el signo; el "
+            "prototipo, que solo ve la edicion vigente, lo veria como contradicted sin test aplicable (2b fuera "
+            "del prototipo, DEC-029). Tercer caso de CTH0726 (E035 A, E042 C); tercer 2b del conjunto (E031, "
+            "E042). methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="C", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0726",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="2074",
+                         serie_nombre="Balears, Illes. Pernoctaciones. Total categorías. Residentes en España. Dato. ",
+                         unidad="pernoctaciones", referencia_principal="interanual",
+                         descripcion="EOH, pernoctaciones de residentes en Espana, Illes Balears, mensual"),
+            periodo_objetivo="2026-M07", periodo_base="2025-M07",
+            valor_objetivo=768195, cambio_afirmado=3.8, unidad_cambio="pct", direccion_afirmada="sube",
+            notas="Base interanual correcta en periodo, tomada de la edicion provisional (740.149) y no de la vigente (786.273): 2b con cambio de signo (+3,8% frente a -2,3%).",
+        ),
+    ),
+    dict(
+        cid="Q047",
+        claim_text="Las compraventas superan las 60.000 operaciones en el mejor julio desde 2007, a la espera del impacto de los tipos",
+        claim_date="2026-09-25",
+        post_url="https://prensa.fotocasa.es/las-compraventas-superan-las-60-000-operaciones-en-el-mejor-julio-desde-2007-a-la-espera-del-impacto-de-los-tipos/",
+        post_url_tipo="nota_oficial", emisor="Fotocasa (nota de prensa; María Matos, directora de Estudios)", emisor_tipo="empresa",
+        emisor_nivel=2, pais="ES", tema="vivienda",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com Fotocasa compraventas julio 2026 'mejor julio desde 2007'",
+        criba_query_b="'mejor julio desde 2007' compraventas 2026 Fotocasa verificación OR bulo OR fact-check OR falso",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="'compraventa' viviendas julio 2026 'sube un 3,6%' OR 'aumenta un 3,6%' OR 'repunta un 3,6%' OR 'crece un 3,6%' INE titular",
+        collected_at="2026-09-26", case_id="E038",
+        # --- trabajo 2026-09-26 (E038 t0/t1/t2 14:2xZ; la serie ya estaba descargada) ---
+        fuente_primaria="INE - ETDP julio 2026: nota ETDP0726 + API Tempus serie ETDP1826 (tabla 6150), nult=240 (todos los julios 2007-2026)",
+        primaria_url="https://www.ine.es/dyngs/Prensa/ETDP0726.htm",
+        primaria_url_tipo="nota_de_prensa_html (provisional) + API JSON wstempus DATOS_SERIE/ETDP1826",
+        via_de_acceso="api", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="api",
+        dato_actual="julio 2026: 61.417 compraventas de viviendas (provisional), -5,1% interanual, +3,6% mensual",
+        dato_anterior="julios de la serie (2007-2026): 2025 64.722 (maximo), 2007 63.731, 2026 61.417 (tercero); siguiente 2024 56.942",
+        raw_value_span_actual=(
+            "[INE API] ETDP1826 2026-M07: 61417 || [Fotocasa 2026-09-25, el claim] titular; cuerpo: 'refleja un "
+            "incremento mensual del 3,6% y un descenso anual del 5,1%'; 'Julio ha registrado 61.417 compraventas "
+            "... se mantiene este mes por encima de la media del ejercicio anterior de 58.700 operaciones mensuales'"
+        ),
+        raw_value_span_anterior=(
+            "[INE API, ETDP1826, valores de julio] 2007: 63731 | 2024: 56942 | 2025: 64722 | 2026: 61417 || "
+            "maximo de {julio 2007..julio 2026} = 2025 (64722)"
+        ),
+        truth="contradicted", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="claim_falso", excedente="no",
+        notas=(
+            "Cubeta F (claim falso), via divergencia. 'El mejor julio desde 2007' es falso con la serie del INE: "
+            "julio 2025 (64.722) y julio 2007 (63.731) superan a julio 2026 (61.417), tercer julio de la serie. El "
+            "cuerpo de la nota reconoce el -5,1% interanual. Es un extremo falso, no una base elegida: el numero (el "
+            "ranking) es incorrecto, no el marco. Hermano potencial: blogprofesional.fotocasa.es (mismo texto). "
+            "Edicion ETDP0726 ya con E001 (A), E029 (A) y E002 (O); F no cuenta en el tope de controles. "
+            "methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="F", hermano_de="", mecanismo_candidato="", primaria_edicion="INE ETDP0726",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="extremo_historico",
+            metrica=dict(emisor="INE", tabla="6150",
+                         serie_nombre="Total Nacional. General. Compraventa. Número. ",
+                         unidad="compraventas", referencia_principal="interanual",
+                         descripcion="ETDP, compraventas de viviendas inscritas, total nacional, mensual"),
+            periodo_objetivo="2026-M07", valor_objetivo=61417,
+            notas="Extremo afirmado (maximo de los julios desde 2007) contradicho por la serie: 2025 y 2007 son mayores.",
+        ),
+    ),
+    dict(
+        cid="Q048",
+        claim_text="La criminalidad en Madrid baja a 55,7 delitos por cada mil habitantes, pero aumentan un 9,7 % las denuncias por delitos sexuales",
+        claim_date="2026-09-18",
+        post_url="https://www.eldiariodemadrid.es/articulo/sociedad/criminalidad-madrid-2026-tasa-delitos-cibercriminalidad-delitos-sexuales-primer-semestre/20260918143337141847.html",
+        post_url_tipo="declaracion", emisor="Delegación del Gobierno en la Comunidad de Madrid (Francisco Martín), vía El Diario de Madrid", emisor_tipo="institucion",
+        emisor_nivel=1, pais="ES", tema="criminalidad",
+        criba_query_a="", criba_query_b="",
+        criba_resultado="rechazado",
+        criba_motivo=(
+            "edicion_vetada: los datos son del Balance de Criminalidad 2T2026 (primer semestre), edicion usada por el "
+            "piloto (C18) y vetada por DEC-025. HALLAZGO para la medicion de la jornada 2: es el unico patron B "
+            "encontrado en la via dirigida. La Delegacion sostiene 'la tasa se ha situado en 55,7 delitos por cada "
+            "mil habitantes' (-0,5 puntos interanual) y, segun la cobertura, 'se ha reducido 5,5 puntos desde 2019, "
+            "4,3 desde 2023' [no verbatim, NEEDS_REVIEW], mientras la misma nota registra 159.644 -> 163.734 "
+            "infracciones convencionales (+2,6% interanual). Base elegida (2023/2019) y tasa por poblacion frente al "
+            "recuento: candidato a 2a con cambio de signo o a 4 (denominador). Reaparece en cada balance: la primera "
+            "edicion admisible seria la del 3T2026 (diciembre)"
+        ),
+        criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="Madrid criminalidad 2026 'primer trimestre' baja OR desciende OR 'se reduce' OR 'cae' '%' Ayuso OR 'Consejería' OR 'Delegación del Gobierno' OR Marlaska OR 'Ministerio del Interior' declaración Comunidad de Madrid -Alcorcón",
+    ),
 ]
