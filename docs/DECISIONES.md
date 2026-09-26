@@ -906,3 +906,35 @@ depende del corpus. Los conectores de FMI e Interior, después del diseño.
 Convertiría un cotejo documental en un bloqueo de todo el proyecto; la
 condición se cumple igual estando anotada, y la regla es que las puertas se
 cierran de forma explícita.
+
+---
+
+## DEC-031 · Diseño del conjunto de evaluación aprobado; anotación con un solo humano, declarada
+
+**Fecha:** 2026-09-25 · **Estado:** vigente · **Decide:** Mateo · **Fija:** `research/PUERTA-3-DISENO.md` como diseño vinculante de la Puerta 3
+
+**Decisión.** Se aprueba el diseño tal como estaba propuesto: H3 con FPR ≤ 10 %
+y límite superior del IC 95 % ≤ 15 %; **50 controles con test aplicable,
+mínimo 40**; cubetas B 20 (15), C 15 (10), D 10 (5), E 10 (5), F 5 (3); total
+110 (78); hermanos una vez, ≥ 2 emisores en A y B, ≤ 3 controles por nota de
+prensa, INE ≤ 70 %; criterio de reaparición de P17/C10 aplicado una vez al
+congelar; **tope de cuatro jornadas con revisión a la mitad**, pivote de
+recolección si A proyecta < 40, y las limitaciones por cubeta tal como están
+escritas. La anotación se congela con sha256 antes de correr el arnés.
+
+**Anotación.** Mateo anota a ciegas el 25 % estratificado; **no hay segundo
+anotador humano** todavía (P-05). Lo que se declara si sigue sin haberlo al
+congelar queda escrito ahora en el diseño (§0): sin kappa interanotador, solo
+acuerdo agente–humano con intervalo; amenaza a la validez por anotador único
+que además diseñó la taxonomía; en la muestra manda la etiqueta de Mateo, cada
+desacuerdo registrado, y **si el desacuerdo en `context` supera el 20 %, Mateo
+revisa el 100 % antes de congelar**.
+
+**Ejecución.** La recolección empieza ya, con el método de la TAREA 2 y el
+reloj en `research/cronometro.log` (marca `P3-J1`). Los conectores de FMI e
+Interior van después; sus casos se recolectan y anotan igual y corren cuando
+existan. **La revisión intermedia se reporta a Mateo al llegar, no al final.**
+
+**Alternativa descartada.** Esperar a tener segundo anotador para recolectar.
+Bloquearía la Puerta 3 por una condición que no depende del proyecto; la
+limitación queda declarada por adelantado, que es lo que evita la sorpresa.

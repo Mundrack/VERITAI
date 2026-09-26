@@ -1,6 +1,6 @@
-# Puerta 3 — diseño del conjunto de evaluación (PROPUESTA, pendiente de aprobación)
+# Puerta 3 — diseño del conjunto de evaluación (APROBADO, DEC-031)
 
-**Fecha:** 2026-09-25 · **Estado:** propuesta; **no se recolecta nada hasta que Mateo apruebe** · **Aplica:** DEC-018, DEC-020, DEC-021, DEC-025, DEC-027, DEC-029
+**Fecha:** 2026-09-25 · **Estado:** **aprobado por Mateo el 2026-09-25 (DEC-031)**; la recolección arranca con tope de cuatro jornadas y revisión a la mitad · **Aplica:** DEC-018, DEC-020, DEC-021, DEC-025, DEC-027, DEC-029
 
 > El número que manda es el de **controles con test aplicable**: sin él, H3 no
 > es medible (hoy n = 1). Todo lo demás se dimensiona después de ese número.
@@ -14,9 +14,27 @@ Enums cerrados; `undetermined` cuando ningún test aplica; la señal de horizont
 se anota aparte y no es divergencia (DEC-029). Cada caso registra vía de
 descubrimiento y consulta (DEC-020). **La anotación se congela antes de correr
 el arnés**: sha256 del CSV en una DEC; después, ningún test se toca para este
-conjunto (un cambio de test es una DEC y aplica al siguiente conjunto). Anota
-el agente con cronómetro; Mateo anota a ciegas una muestra estratificada del
-25 % para el acuerdo entre anotadores (P-05; si no llega, se declara).
+conjunto (un cambio de test es una DEC y aplica al siguiente conjunto).
+
+**Anotación, y lo que se declara si no hay segundo anotador (DEC-031).** Anota
+el agente todos los casos, con cronómetro. **Mateo anota a ciegas una muestra
+estratificada del 25 %** (por cubeta, semilla `20260925`, extraída al cerrar la
+recolección y antes de congelar; recibe solo claim y URL, como en P-20). Eso da
+el **acuerdo agente–humano** (kappa sobre `truth`, `context`, `clase`), que
+mide la consistencia del método, **no la fiabilidad entre humanos**. Hoy no
+hay segundo anotador humano (P-05). Si sigue sin haberlo al congelar:
+
+- la tesis **no afirma kappa interanotador**; reporta el acuerdo agente–humano
+  con su intervalo y lo nombra así;
+- se declara como **amenaza a la validez**: un solo anotador humano, que
+  además diseñó la taxonomía; las etiquetas pueden reflejar su lectura;
+- en la muestra del 25 %, ante desacuerdo **manda la etiqueta de Mateo**, cada
+  desacuerdo queda registrado con su motivo, y **si el desacuerdo en `context`
+  supera el 20 % de la muestra, Mateo revisa el 100 % antes de congelar**
+  (la consecuencia se fija ahora para que no sea una decisión a posteriori);
+- si aparece un segundo anotador antes de congelar, anota el mismo 25 % a
+  ciegas y se reporta el kappa entre humanos además del agente–humano; si
+  aparece después, se reporta como trabajo posterior sin tocar el congelado.
 
 ## 1. Tamaño y cubetas
 

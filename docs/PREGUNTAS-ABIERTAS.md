@@ -266,7 +266,12 @@ Sin un segundo anotador sobre el 20–25% del corpus no hay kappa entre anotador
 y el corpus es metodológicamente más débil. `00b-DECISIONES-MATEO` ya fija el
 plan B: declararlo como limitación y seguir.
 
-No bloquea el piloto.
+No bloquea el piloto. **2026-09-25 (DEC-031):** tampoco bloquea la Puerta 3.
+Mateo anota a ciegas el 25 % estratificado (acuerdo agente–humano); lo que se
+declara si no aparece un segundo humano al congelar está escrito por
+adelantado en `research/PUERTA-3-DISENO.md` §0: sin kappa interanotador,
+amenaza a la validez por anotador único, y revisión del 100 % por Mateo si el
+desacuerdo en `context` supera el 20 % de la muestra.
 
 ### P-06 · Plantilla de titulación de la UDLA
 

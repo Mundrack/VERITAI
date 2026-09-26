@@ -72,7 +72,9 @@ conocerlo antes de escribir el sistema, no después.
 | [`PILOT-FAILURES.md`](PILOT-FAILURES.md) | TAREA 3 — catálogo de fallos con casos y lo que piden del prototipo | **entregado** 2026-09-25 |
 | [`PILOT-DECISION.md`](PILOT-DECISION.md) | TAREA 3 — **`PILOT_GO` con alcance declarado a nivel 1**. **Ratificado por Mateo** (DEC-023); alcance y emisores aprobados (DEC-024). Humano/agente pendiente (P-20) | **entregado y ratificado** 2026-09-25 |
 | [`PUERTA-2-CASOS.md`](PUERTA-2-CASOS.md), `puerta2/` | **Puerta 2** — prototipo de una clase (2a) y un emisor (INE) sobre 10 casos de **desarrollo**: casos JSON, ejecutor, resultados con spans, trazabilidad caso a caso, decisiones (DEC-029) | **entregado**; Puerta 2 **cerrada** 2026-09-25 (DEC-030) |
-| [`PUERTA-3-DISENO.md`](PUERTA-3-DISENO.md) | **Puerta 3** — diseño del conjunto de evaluación: tasa de H3, 50 controles con test aplicable (mín. 40) justificados por intervalo, cubetas A–F, criterio de reaparición, regla de parada | **propuesta**, pendiente de aprobación; no se recolecta |
+| [`PUERTA-3-DISENO.md`](PUERTA-3-DISENO.md) | **Puerta 3** — diseño del conjunto de evaluación: tasa de H3, 50 controles con test aplicable (mín. 40) justificados por intervalo, cubetas A–F, criterio de reaparición, regla de parada, anotación con un solo humano declarada | **aprobado** 2026-09-25 (DEC-031); recolección en curso en `puerta3/` |
+| [`arnes/`](arnes/README.md) | **Arnés de evaluación**: cinco métricas de R02 §7 + FPR con intervalos de Wilson y veredicto de H3; guardia de conjunto (DEC-025); 6 tests; humo sobre la Puerta 2 | **entregado** 2026-09-25 |
+| `puerta3/` | **Recolección del conjunto de evaluación**: `lote_evaluacion.py` (datos), `validar_evaluacion.py` (valida, escribe `evaluacion-candidatos.csv`, `evaluacion-anotacion.csv`, `casos/*.json`, imprime cubetas y proyección), `PROGRESO.md` | **en curso** desde 2026-09-25 |
 
 ---
 
