@@ -251,7 +251,18 @@ METRIC_AMBIGUOUS                # anadido 2026-09-25 (DEC-015): el claim no dice
                                 # que metrica usa y el veredicto cambia segun cual
                                 # se elija. 4 de 20 en el piloto: "valor o volumen",
                                 # "euros o % PIB", "tasa o numero", "lider en que"
+PREVIOUS_EDITION_OUT_OF_MAP     # anadido 2026-09-26 (DEC-034): hacia falta la
+                                # edicion al publicar (2b) y la operacion no esta
+                                # en el mapa cerrado de 8 del conector. Fallo de
+                                # cobertura declarado, no bloqueante: context
+                                # queda undetermined, nunca se maquilla
 ```
+
+`NOTA` **Subtipos de 2b** *(DEC-034)*: `cambio_de_signo` (la revisión de la
+edición invierte el signo de la tasa: E043, E053) y `magnitud` (solo cambia la
+magnitud: E031, E042, E047, E055, E056). A diferencia de 2a, en 2b la magnitud
+sí confirma: la tasa afirmada se reproduce exactamente con la base al publicar
+y no con la vigente, y el veredicto lleva las dos evidencias con su fecha.
 
 `NOTA` R02 §11: los motivos reales de abstención se descubren en el piloto, no se
 inventan después. `METRIC_AMBIGUOUS` es el primero descubierto. Otros tres

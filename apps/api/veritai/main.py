@@ -25,6 +25,7 @@ from veritai import __version__
 from veritai.api.routes import analisis, health
 from veritai.config import obtener_settings
 from veritai.db.session import crear_engine
+from veritai.infrastructure.ine.edicion_anterior import EdicionAnteriorINE
 from veritai.infrastructure.ine.proveedor import ProveedorINE
 from veritai.infrastructure.ine.tempus import ClienteTempus
 from veritai.infrastructure.repositorio import RepositorioPostgres
@@ -57,6 +58,10 @@ async def ciclo_de_vida(app: FastAPI) -> AsyncIterator[None]:
     )
     app.state.cliente_ine = cliente_ine
     app.state.proveedor_ine = ProveedorINE(cliente_ine)
+    # Edicion anterior fuera de Tempus (2b, DEC-034): mapa cerrado de 8 operaciones.
+    app.state.proveedor_edicion = EdicionAnteriorINE(
+        timeout_s=settings.http_timeout_s, max_bytes=settings.http_max_bytes
+    )
     app.state.repositorio = RepositorioPostgres(app.state.engine)
     LOG.info("veritai-api %s lista | entorno=%s", __version__, settings.veritai_env)
 

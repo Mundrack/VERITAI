@@ -46,6 +46,10 @@ MOTIVOS = {
     ),
     AbstainReason.EXTRACTION_FAILED: "no se pudo extraer un numero de la fuente",
     AbstainReason.METRIC_AMBIGUOUS: "el claim no dice que metrica usa",
+    AbstainReason.PREVIOUS_EDITION_OUT_OF_MAP: (
+        "hacia falta la edicion al publicar y la operacion no esta en el mapa del conector "
+        "(fallo de cobertura declarado)"
+    ),
 }
 
 
@@ -61,6 +65,8 @@ def explicar(
     truth: Truth,
     context: Context,
     motivos: list[AbstainReason],
+    al_publicar: EvidenciaEdicion | None = None,
+    vigente: EvidenciaEdicion | None = None,
 ) -> tuple[str, list[NumeroUsado]]:
     usados: list[NumeroUsado] = []
     lineas: list[str] = []
@@ -112,6 +118,9 @@ def explicar(
                 and t.calculos.get("periodo_donde_si_aparece") == str(it.periodo)
             ):
                 usados.append(_num(it, it.etiqueta))
+    lineas_2b, usados_2b = lineas_ediciones(al_publicar, vigente)
+    lineas.extend(lineas_2b)
+    usados.extend(usados_2b)
     if motivos:
         lineas.append(
             "Abstencion: " + "; ".join(f"{m.value} ({MOTIVOS[m]})" for m in motivos) + "."

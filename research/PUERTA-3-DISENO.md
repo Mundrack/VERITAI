@@ -222,3 +222,109 @@ los 15 y se sigue; B ≤ 3 → se para y se replantea el mínimo con intervalo
 declarado.** Cuentan los casos anotados en B (2b) con criba hecha y
 trabajados; los hermanos por criba una sola vez. Se avisa al cerrar la
 jornada con el número de B.
+
+Resultado (2026-09-26): B = 4 en 0,48 h de reloj → sigue. Los cuatro salieron
+de dos ediciones de la EOH (CTH0726 y CTH0826), y con los tres de la jornada 2
+los siete B del conjunto venían de la misma operación: de ahí el tope de §4c.
+
+### 4c. Tope de tres B por edición (aprobado por Mateo antes de la jornada 4)
+
+Ninguna edición de una primaria aporta más de **tres** casos a la cubeta B,
+igual que el tope de tres controles por edición. El cuarto y siguientes se
+anotan igual, con `excedente="si"`, y **no cuentan** para la cubeta ni para la
+regla de parada; el validador lo comprueba. Aplicado al lote al aprobarse:
+CTH0726 tenía cuatro (E042, E043, E053, E056) y **E056 pasa a excedente**;
+CTH0826 tiene tres (E031, E047, E055). B cuenta 6.
+
+Por qué: sin tope, la jornada 4 llena B con la EOH y H1 quedaría evaluada
+sobre una sola operación y dos meses. Con tope, quince B exigen al menos cinco
+ediciones distintas.
+
+### 4d. Límite del fenómeno: 2b aparece donde el redactor calcula la tasa
+
+Hipótesis fijada por Mateo antes de la jornada 4: 2b aparece donde el redactor
+tiene que calcular la tasa interanual, y no aparece donde el anexo (o la nota)
+ya la trae hecha. Comprobación sobre los anexos descargados de las ocho
+operaciones del mapa (`research/evidencia/D2B_*.json`):
+
+| operación | tabla por CCAA en el anexo | ¿tasa de variación por CCAA? | casos regionales vistos | 2b observados |
+|---|---|---|---|---|
+| CTH (EOH) | `EOH_Hoja3` viajeros y pernoctaciones | **no** (solo niveles; la tasa está solo para precios, IPH/IRSH) | 22 (jornadas 2–3) | **7** |
+| EOAT | `EOAP_Hoja1`, `EOAC_Hoja1`, `EOTR_Hoja1`, `EOAL_Hoja2` | **no** (solo niveles) | 3 (E049, E050, E054) | 0 (dos con base vigente, uno claim falso) |
+| ETDP | `Hoja9` (ETDP.11) | sí, "% Variación anual" | 3 (E029, E040, Cataluña/Navarra en prensa) | 0 |
+| Hipotecas | `Hoja1`/`Hoja6` (niveles) | sí, en la nota HTML: gráfico "Variación anual (%)" por CCAA | 1 (Galicia abril, no registrado) | 0 |
+| Sociedades | `Hoja 1` (niveles) | sí, en la nota HTML: gráfico "Variación anual (%)" por CCAA | 0 | 0 |
+| IPI | `Tabla 5` | sí, "Tasa anual" por CCAA | 0 | 0 |
+| FRONTUR | `Hoja1` por CCAA de destino | sí, "Variación" mensual y acumulada | 0 regionales (E017 nacional) | 0 |
+| EGATUR | hoja mensual por CCAA | sí, "Variación" | 0 regionales (E018 nacional) | 0 |
+
+**El patrón se confirma:** los siete 2b (más E050, el claim falso con base
+inexistente) están en la única operación sin tasa por CCAA en la que se han
+trabajado casos regionales; en las seis operaciones con la tasa hecha no
+apareció ninguno. EOAT, la otra sin tasa, tiene tres casos y ningún 2b: la
+condición es necesaria, no suficiente (el redactor puede calcular con la
+vigente, como hizo Europa Press en E049 y E054).
+
+**Consecuencia declarada como límite del fenómeno (alcance):** 2b, tal como
+lo captura este conjunto, es un mecanismo de *redacción* que solo puede
+aparecer donde el emisor publica niveles sin tasa por comunidad. La jornada 4
+va dirigida a las operaciones que NO traen la tasa (EOH en otros meses y EOAT)
+y a los emisores con cuota pendiente (§4f). Lo que la evaluación diga de 2b
+vale para ese ámbito, no para "las estadísticas del INE" en general.
+
+### 4e. Control natural: misma edición, mismo día, dos cálculos distintos
+
+Hallazgo de las jornadas 2 y 3, que Mateo pide como apartado propio: en la
+misma edición y la misma mañana, unas redacciones calculan la tasa contra la
+edición provisional del año anterior y otras contra la vigente. Es un control
+natural: el dato es el mismo, la fecha es la misma, y solo cambia la base que
+cada redacción tomó.
+
+Edición **CTH0726** (EOH julio 2026, publicada el 21/08/2026):
+
+| base | redacción (caso) | tasa publicada | tasa con la otra base |
+|---|---|---|---|
+| provisional | Galicia Press / Europa Press (E053) | Galicia +0,68 % | vigente −0,35 % (cambia el signo) |
+| provisional | MurciaEconomía y teletipo regional (E056) | Murcia +4,09 % | vigente +3,32 % |
+| provisional | El Diario de Madrid (E042) | Madrid −1,43 % | vigente −1,05 % |
+| provisional | Economía de Mallorca (E043) | Baleares residentes +3,8 % | vigente −2,3 % (cambia el signo) |
+| vigente | RTVC / Europa Press Canarias (E035) | Canarias +2,39 % | provisional +3,49 % |
+| vigente | Andalucía Información (E048) | Málaga ciudad +15,57 % | (serie de punto turístico) |
+| vigente | Lanza / La Cerca (E057) | Castilla-La Mancha −6,7 % | provisional −5,84 % |
+| vigente | atlantico.net, 22/08/2026 (no registrado) | Galicia −0,4 % | provisional +0,68 % |
+| vigente | teletipo CyL, 21/08/2026 (no registrado) | Castilla y León −7,1 % | provisional −7,66 % |
+
+Edición **CTH0826** (EOH agosto 2026, publicada el 22/09/2026):
+
+| base | redacción (caso) | tasa publicada | tasa con la otra base |
+|---|---|---|---|
+| provisional | Europa Press Madrid / Última Hora (E031) | Madrid +2,36 % | vigente +3,55 % |
+| provisional | EFE Palma / Última Hora (E047) | Baleares −0,2 % y +3,8 % | vigente −0,44 % y +3,54 % |
+| provisional | El Debate / El Correo de Burgos / CyL Digital (E055) | Castilla y León −4,5 % | vigente −3,19 % |
+| vigente | Libertad Digital Canarias (E051) | Canarias +2,5 % | provisional +1,97 % |
+| vigente | Europa Press Andalucía / Última Hora (E052) | Andalucía +2 % | provisional +1,73 % |
+| vigente | Europa Press Valencia / Última Hora (no registrado) | C. Valenciana +1,4 % | provisional +1,43 % (indistinguible) |
+| vigente | Galicia Press (no registrado) | Galicia +1 %, "16.452 más" | provisional +1,24 % |
+| vigente | Heraldo de León (no registrado) | León −2,08 % | provisional −4,39 % |
+| vigente | CLM24 (no registrado) | Castilla-La Mancha −5,6 % | (sin fila provisional comparable en la tabla usada) |
+| vigente | empresas.de Murcia (no registrado) | Murcia −0,2 % | provisional +0,25 % (cambia el signo) |
+| vigente | ifomo / eldiario.es Cantabria (no registrado) | Cantabria +2,3 % | provisional +2,05 % |
+| vigente | Región Digital / Onda Cero Extremadura (no registrado) | Extremadura +5,2 % | provisional +5,76 % |
+
+Lo que sostiene el control: **7 casos registrados con base provisional** frente
+a **6 registrados y 9 observados con URL con base vigente**, en dos ediciones y
+dos días. La misma agencia usa una base en una delegación y otra en otra
+(Europa Press: provisional en Madrid y Galicia, vigente en Canarias, Andalucía
+y Valencia). Galicia Press usó la provisional en julio y la vigente en agosto.
+El mecanismo es del redactor, no de la edición ni del medio. Para la tesis es
+la prueba de que 2b no es un artefacto del conector: dos tasas de signo
+opuesto para el mismo dato, publicadas la misma semana (Galicia julio).
+
+### 4f. Cuota de emisor para la jornada 4
+
+Al cerrar la jornada 3 el INE está en 39 de 57 casos (68,4 %) con tope del
+70 %. La jornada 4 trae casos de SEPE, Portal Estadístico de Criminalidad y
+Banco de España antes que más INE; si no, la cuota bloquea el conjunto.
+Restricciones vigentes: Interior 2T2026 vetado (DEC-025), tope de tres
+controles por edición (Interior 1T2026 tiene dos, SEPE agosto 2026 uno más un
+D, BdE julio 2026 uno).

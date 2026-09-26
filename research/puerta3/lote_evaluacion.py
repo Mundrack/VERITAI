@@ -3281,8 +3281,10 @@ CANDIDATOS: list[dict] = [
         ),
         truth="mixed", context="divergence_detected",
         clase_primaria="2b_base_revisada", clases_secundarias="", abstain_reason="",
-        abandonado_por_tiempo="", bucket_resultado="divergencia_real", excedente="no",
+        abandonado_por_tiempo="", bucket_resultado="divergencia_real", excedente="si",  # 4o B de CTH0726: tope 3 (diseno 4c)
         notas=(
+            "EXCEDENTE por el tope de tres B por edicion (diseno 4c): cuarto B de CTH0726 en orden de "
+            "recoleccion (E042, E043, E053, E056). Se anota igual y no cuenta para la cubeta. "
             "Cubeta B (2b), via divergencia (jornada 3, criba dirigida sobre la tabla provisional/vigente). Las dos "
             "tasas del articulo (+4,09% y +1,55%) son exactamente las de la base PROVISIONAL de julio 2025 "
             "(394.572 y 162.708); con la vigente serian +3,32% y +1,32%. Mismo signo: subtipo magnitud. Cuarto B de "

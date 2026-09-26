@@ -68,6 +68,46 @@ la ruta por `app.state`; los tests los sustituyen por dobles
 
 ---
 
+### El test 2b y el conector de edición anterior (DEC-034)
+
+La cubeta B es 2b, base revisada: la tasa que afirma el claim se calculó con
+el valor del periodo base **tal como se publicó** en su edición (provisional)
+y la edición **vigente** que sirve Tempus la contradice. El flujo:
+
+```
+verdad (vigente) -> 2a -> ¿la tasa afirmada cuadra con la base vigente?
+                              si  -> 2b no aplica (no hay base revisada que explicar)
+                              no  -> conector de edición anterior:
+                                       ¿operación en el mapa?  no -> PREVIOUS_EDITION_OUT_OF_MAP (undetermined)
+                                       ¿anexo y fila?          no -> PREVIOUS_EDITION_NOT_FOUND (undetermined)
+                                       si -> aplicar_2b: ¿cuadra con la base al publicar?
+                                               si -> DISPARA: clase 2b, truth mixed,
+                                                     evidencia_al_publicar + evidencia_vigente (con fecha)
+                                               no -> no dispara: el número es el error (cubeta F)
+```
+
+- `domain/tests/base_revisada.py`: `aplicar_2b`, función pura; subtipos
+  `cambio_de_signo` y `magnitud`; misma tolerancia que el eje `truth`.
+- `domain/puertos.py`: puerto `ProveedorEdicionAnterior` (`disponible`,
+  `obtener`).
+- `infrastructure/ine/mapa_anexos.py`: **mapa cerrado de 8 operaciones**
+  (CTH, EOAT, ETDP, H, SM, IPI, FRONTUR, EGATUR): prefijo de la nota, tablas
+  Tempus, hoja, etiqueta de fila y **columna absoluta** del anexo. Fuera del
+  mapa, fallo de cobertura declarado; no se añade ninguna durante la
+  evaluación.
+- `infrastructure/ine/edicion_anterior.py`: deriva `<PREFIJO><MM><YY>`,
+  descarga anexo XLSX y nota HTML de `www.ine.es`, lee la fecha de
+  publicación y devuelve un `EvidenceItem` con `etiqueta="base_al_publicar"`,
+  `version="nota <CÓDIGO>"` y `document_date`.
+- `Veredicto`: `evidencia_al_publicar` y `evidencia_vigente`, cada una con
+  su fecha (publicación / consulta); la plantilla las imprime.
+
+**Amenaza a la validez:** el patrón de código de las notas no está documentado
+por el INE. Si cambia, el conector se rompe y 2b deja de ser computable; la
+mitigación es que la rotura sea visible (abstención, nunca un valor
+inventado). Detalle en `research/PUERTA-3-DISENO.md` §4 y
+`research/puerta3/RECUPERABILIDAD-2B.md`.
+
 ## 2. Estructura del repositorio
 
 ```

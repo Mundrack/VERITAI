@@ -57,6 +57,9 @@ class AbstainReason(StrEnum):
     CONFLICTING_PRIMARY_VALUES = "CONFLICTING_PRIMARY_VALUES"
     EXTRACTION_FAILED = "EXTRACTION_FAILED"
     METRIC_AMBIGUOUS = "METRIC_AMBIGUOUS"
+    # DEC-034: 2b hacia falta y la operacion no esta en el mapa cerrado del
+    # conector de edicion anterior. Fallo de cobertura declarado, no bloqueante.
+    PREVIOUS_EDITION_OUT_OF_MAP = "PREVIOUS_EDITION_OUT_OF_MAP"
 
 
 # Motivos que impiden cualquier veredicto: sin evidencia utilizable no hay truth

@@ -196,6 +196,12 @@ def validar(marcas: dict) -> list[str]:
     for ed, n in por_edicion.items():
         if n > 3:
             _err(errores, ed, f"{n} controles de la misma edicion primaria (tope 3)")
+    # tope: 3 B por edicion primaria (diseno 4c, aprobado por Mateo); el cuarto va como excedente="si"
+    por_edicion_b = Counter(c["primaria_edicion"] for c in CANDIDATOS
+                            if c.get("cubeta") == "B" and c.get("excedente") != "si")
+    for ed, n in por_edicion_b.items():
+        if n > 3:
+            _err(errores, ed, f"{n} casos B de la misma edicion primaria (tope 3): marcar excedente=si")
     return errores
 
 
@@ -241,8 +247,13 @@ def resumen(anotados: list[dict], marcas: dict) -> None:
     print(f"\n--- criba: {len(CANDIDATOS)} candidatos | admitidos {admitidos} | rechazados {len(rechazados)} ---")
     print("  motivos:", dict(Counter(str(c['criba_motivo']).split(':')[0] for c in rechazados)))
     print(f"\n--- cubetas (DEC-031), {n} anotados; entre parentesis sin hermanos ---")
-    por = Counter(f["cubeta"] for f in anotados)
-    indep = Counter(f["cubeta"] for f in anotados if not f["hermano_de"])
+    # Los excedentes (tope por edicion, diseno 4c) se anotan pero no cuentan.
+    contables = [f for f in anotados if f.get("excedente") != "si"]
+    excedentes = [f["case_id"] for f in anotados if f.get("excedente") == "si"]
+    por = Counter(f["cubeta"] for f in contables)
+    indep = Counter(f["cubeta"] for f in contables if not f["hermano_de"])
+    if excedentes:
+        print("  excedentes (no cuentan):", excedentes)
     for cub, (obj, mn) in OBJETIVO_CUBETA.items():
         if obj == 0:
             estado = "sin objetivo"
@@ -276,6 +287,9 @@ def resumen(anotados: list[dict], marcas: dict) -> None:
         print("  truth x context:", dict(sorted(Counter((f["truth"], f["context"]) for f in anotados).items())))
         ed = Counter(f["primaria_edicion"] for f in anotados if f["cubeta"] == "A")
         print("  controles por edicion primaria (tope 3):", dict(ed.most_common(8)))
+        ed_b = Counter(f["primaria_edicion"] for f in anotados
+                       if f["cubeta"] == "B" and f.get("excedente") != "si")
+        print("  B por edicion primaria (tope 3, diseno 4c):", dict(ed_b.most_common(8)))
         mins = [float(f["minutes_to_locate"]) + float(f["minutes_to_extract"])
                 for f in anotados if f["minutes_to_locate"] and f["minutes_to_extract"]]
         if mins:

@@ -34,6 +34,22 @@ class ProveedorEvidencia(Protocol):
         """Cuantas series de la tabla casan con el nombre: 0 = no encontrada, >1 = ambigua."""
 
 
+class ProveedorEdicionAnterior(Protocol):
+    """Recupera el valor de un periodo TAL COMO SE PUBLICO en su edicion (2b, DEC-034).
+
+    La edicion vigente la da `ProveedorEvidencia`; esta es la otra pata del
+    veredicto de 2b (`evidencia_al_publicar`). Alcance cerrado: un mapa de
+    operaciones; fuera de el, `disponible` es False y el caso de uso abstiene
+    con PREVIOUS_EDITION_OUT_OF_MAP (fallo de cobertura declarado).
+    """
+
+    def disponible(self, metrica: MetricaEmisor) -> bool:
+        """La metrica esta en el mapa del conector (operacion, tabla y serie reconocidas)."""
+
+    def obtener(self, metrica: MetricaEmisor, periodo: Periodo) -> EvidenceItem | None:
+        """El valor del periodo en la edicion que lo publico, con su fecha; None si no se halla."""
+
+
 class Repositorio(Protocol):
     """Persistencia con trazabilidad completa: claim, bundle, items, veredicto, audit."""
 

@@ -49,6 +49,30 @@ equipo de la red local, incluida una wifi pública.
 | Entrada de `POST /analisis` acotada por pydantic: texto ≤ 2000, notas ≤ 2000, `claim_id` con patrón, emisor `Literal["INE"]`, periodos parseados, etiquetas ≤ 10 × 80 | `api/routes/analisis.py` | ✅ `test_rechaza_emisores_fuera_de_alcance_y_periodos_malos` |
 | Excepción no prevista → 500 con solo el nombre del tipo; la traza va al log, nunca al cliente. El rechazo del publicador no es un error HTTP: el caso de uso lo convierte en abstención (`PRIMARY_SOURCE_NOT_FOUND`) y queda en el veredicto | `api/routes/analisis.py`, `application/analizar_claim.py` | ✅ `test_abstiene_si_la_serie_no_existe` |
 
+### Contenido externo: el conector de edición anterior (2b, DEC-034)
+
+`infrastructure/ine/edicion_anterior.py` descarga el anexo XLSX y la nota HTML
+de una edición anterior del INE. Mismas reglas que el conector Tempus, y las
+propias de un fichero binario:
+
+- **Allowlist**: solo `https://www.ine.es/`, dos rutas fijas derivadas del
+  código de la nota; el código se valida contra un patrón estricto antes de
+  formar la URL; sin redirecciones.
+- **Timeout y tope de bytes** en cada descarga (`http_timeout_s`,
+  `http_max_bytes`).
+- **Agente identificado** (DEC-018); 401/403/406/418/429 cierran el caso
+  (DEC-021), sin reintento ni disfraz.
+- **El XLSX se valida por bytes mágicos** (`PK\x03\x04`), no por extensión ni
+  MIME, y se abre con `openpyxl` en modo `data_only` y `read_only` desde
+  memoria: no se escribe en disco, no se evalúan fórmulas ni macros. Un fichero
+  que no sea ZIP se rechaza con `EXTRACTION_FAILED`.
+- **El HTML solo se lee con una expresión regular fija** para la fecha de
+  publicación; no se interpreta ni se ejecuta nada.
+- **Todo lo descargado es dato.** Si no hay anexo, fila o número, el conector
+  devuelve `None` y el dominio abstiene: nunca rellena.
+- **Mapa cerrado**: el conector solo actúa sobre 8 operaciones declaradas; una
+  operación fuera del mapa no dispara ninguna descarga.
+
 ### Privilegios
 
 | Control | Dónde | Verificado |

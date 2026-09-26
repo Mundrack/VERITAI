@@ -127,7 +127,11 @@ def analizar(entrada: ClaimEntrada, request: Request) -> RespuestaAnalisis:
     repositorio = getattr(request.app.state, "repositorio", None)
 
     claim = entrada.a_dominio()
-    caso = AnalizarClaim(proveedor, repositorio)
+    caso = AnalizarClaim(
+        proveedor,
+        repositorio,
+        proveedor_edicion=getattr(request.app.state, "proveedor_edicion", None),
+    )
     if hasattr(proveedor, "preparar"):
         mas_antiguo = min(
             p

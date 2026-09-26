@@ -300,3 +300,5 @@
 2026-09-26T15:34:40+00:00	E057	t2	Vigente: pernoct 365001 -> 340617 = -6,68% (6,7); viajeros 204641 -> 184864 = -9,66% exacto; res -9,75, ext -9,27: base vigente. Provisional daria -5,84 / -10,87. A
 2026-09-26T15:34:40+00:00	P3-J3	t2	Cierre de la jornada 3 (via divergencia, B = 2b, medicion): B = 4 en la jornada (E047 Baleares ago, E053 Galicia jul con cambio de signo, E055 CyL ago, E056 Murcia jul); regla previa (>=4) -> sigue. Se cierra antes de las 4 h para que Mateo decida sobre la concentracion de B en dos ediciones (CTH0726, CTH0826)
 2026-09-26T15:34:40+00:00	P3-PAUSA4	t0	Pausa a la espera de Mateo tras la jornada 3
+2026-09-26T17:58:09+00:00	P3-PAUSA4	t2	Reanuda tras implementar 2b (punto 1), tope de 3 B por edicion (4c), hipotesis 4d, control natural 4e y cuota de emisor 4f
+2026-09-26T17:58:09+00:00	P3-J4	t0	Jornada 4: cuota de emisor (SEPE, Portal, BdE) y 2b en operaciones sin tasa por CCAA (EOH meses anteriores, EOAT), con tope de 3 B por edicion
