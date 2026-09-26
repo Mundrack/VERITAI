@@ -1,0 +1,248 @@
+{
+  "http": 200,
+  "caso": {
+    "claim_id": "P11",
+    "texto": "«Ha decrecido la creación de empresas un 23% y ha aumentado la destrucción de empresas un 73%»",
+    "fuente_url": "https://maldita.es/malditodato/20190326/las-cifras-falsas-y-los-datos-mal-utilizados-de-pablo-casado-sobre-la-economia-con-el-gobierno-del-psoe/",
+    "conjunto": "desarrollo",
+    "origen_case_id": "P11",
+    "etiquetas_corpus": {
+      "truth": "supported",
+      "context": "divergence_detected",
+      "clase_primaria": "2_baseline_selection",
+      "lote": "auditado_20"
+    },
+    "tipo": "cambio_entre_periodos",
+    "metrica": {
+      "emisor": "INE",
+      "tabla": "13913",
+      "serie_nombre": "Sociedades Constituídas. Número de Sociedades. Total Nacional. Mercantiles. ",
+      "unidad": "unidades",
+      "referencia_principal": "interanual",
+      "descripcion": "Sociedades mercantiles constituidas, total nacional, mensual"
+    },
+    "periodo_objetivo": "2018-M12",
+    "periodo_base": "2018-M05",
+    "cambio_afirmado": -23,
+    "unidad_cambio": "pct",
+    "direccion_afirmada": "baja",
+    "notas": "El unico 2a del piloto con primaria INE. El claim (marzo 2019) compara mayo con diciembre de 2018; diciembre es un mes bajo y la referencia del INE es interanual. La API de hoy da mayo 2018 = 8.830 y diciembre 2018 = 6.809; el PDF de febrero de 2019 daba 8.908 (total) / 8.830 (S.L.) y 6.811: la serie fue REVISADA. Se registra tal cual."
+  },
+  "respuesta": {
+    "veredicto": {
+      "claim_id": "P11",
+      "truth": "supported",
+      "context": "divergence_detected",
+      "clase_primaria": "2_baseline_selection",
+      "abstain_reasons": [],
+      "tests": [
+        {
+          "nombre": "2a_periodo_o_base_elegida",
+          "aplicable": true,
+          "disparo": true,
+          "subtipo": "cambio_de_signo",
+          "senales": [],
+          "motivo": "el claim compara contra mayo de 2018 (-22.89 pct); contra la referencia del emisor, interanual (diciembre de 2017), el cambio es +1.10 pct: cambia de signo",
+          "calculos": {
+            "unidad": "pct",
+            "periodo_base_claim": "2018-M05",
+            "valor_base_claim": 8830.0,
+            "periodo_objetivo": "2018-M12",
+            "valor_objetivo": 6809.0,
+            "cambio_recomputado_con_base_del_claim": -22.888,
+            "cambio_afirmado": -23.0,
+            "referencia_emisor": "interanual (2017-M12)",
+            "valor_referencia_emisor": 6735.0,
+            "cambio_recomputado_con_referencia_emisor": 1.099,
+            "ratio_magnitudes": 20.831,
+            "umbral_ratio": 2.0
+          }
+        }
+      ],
+      "comparaciones": [
+        {
+          "que": "cambio (pct)",
+          "afirmado": -23.0,
+          "evidencia": -22.888,
+          "tolerancia": 0.5,
+          "cuadra": true
+        },
+        {
+          "que": "direccion",
+          "afirmado": "baja",
+          "evidencia": "baja",
+          "tolerancia": null,
+          "cuadra": true
+        }
+      ],
+      "numeros_usados": [
+        {
+          "valor": 6809.0,
+          "raw_value_span": "{\"Fecha\":\"2018-12-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"M12\", \"Anyo\":2018, \"Valor\":6809.0}",
+          "item_id": "INE:SM21483:2018-M12",
+          "etiqueta": "objetivo"
+        },
+        {
+          "valor": 8830.0,
+          "raw_value_span": "{\"Fecha\":\"2018-05-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"M05\", \"Anyo\":2018, \"Valor\":8830.0}",
+          "item_id": "INE:SM21483:2018-M05",
+          "etiqueta": "base_claim"
+        },
+        {
+          "valor": 7969.0,
+          "raw_value_span": "{\"Fecha\":\"2018-11-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"M11\", \"Anyo\":2018, \"Valor\":7969.0}",
+          "item_id": "INE:SM21483:2018-M11",
+          "etiqueta": "ref:anterior"
+        },
+        {
+          "valor": 6735.0,
+          "raw_value_span": "{\"Fecha\":\"2017-12-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"M12\", \"Anyo\":2017, \"Valor\":6735.0}",
+          "item_id": "INE:SM21483:2017-M12",
+          "etiqueta": "ref:interanual"
+        }
+      ],
+      "explicacion": "Verdadero pero descontextualizado.\nAfirmacion: \"«Ha decrecido la creación de empresas un 23% y ha aumentado la destrucción de empresas un 73%»\"\nFuente (INE, serie SM21483, \"Sociedades Constituídas. Número de Sociedades. Total Nacional. Mercantiles.\"): diciembre de 2018 = 6809.0.\nBase que usa el claim: mayo de 2018 = 8830.0.\nReferencia del emisor (anterior): noviembre de 2018 = 7969.0.\nReferencia del emisor (interanual): diciembre de 2017 = 6735.0.\nVerdad: cambio (pct): cuadra (claim -23.0, fuente -22.888); direccion: cuadra (claim baja, fuente baja).\nTest 2a_periodo_o_base_elegida: DISPARA. el claim compara contra mayo de 2018 (-22.89 pct); contra la referencia del emisor, interanual (diciembre de 2017), el cambio es +1.10 pct: cambia de signo.\nEvidencia: 13 items, bundle 8a66f87f68d2.",
+      "bundle_hash": "8a66f87f68d2a32b49bdd3d825128e1d60d4801a88324537204d016c46fb6a45",
+      "generado_en": "2026-09-26T01:41:39.927810+00:00"
+    },
+    "evidencia": {
+      "bundle_hash": "8a66f87f68d2a32b49bdd3d825128e1d60d4801a88324537204d016c46fb6a45",
+      "completeness": "complete",
+      "missing_slots": [],
+      "items": [
+        {
+          "etiqueta": "objetivo",
+          "rol": "primary",
+          "serie": "SM21483",
+          "periodo": "2018-M12",
+          "valor": 6809.0,
+          "raw_value_span": "{\"Fecha\":\"2018-12-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"M12\", \"Anyo\":2018, \"Valor\":6809.0}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/13913?nult=111&tip=A",
+          "version": "tabla 13913"
+        },
+        {
+          "etiqueta": "base_claim",
+          "rol": "historical",
+          "serie": "SM21483",
+          "periodo": "2018-M05",
+          "valor": 8830.0,
+          "raw_value_span": "{\"Fecha\":\"2018-05-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"M05\", \"Anyo\":2018, \"Valor\":8830.0}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/13913?nult=111&tip=A",
+          "version": "tabla 13913"
+        },
+        {
+          "etiqueta": "ref:anterior",
+          "rol": "historical",
+          "serie": "SM21483",
+          "periodo": "2018-M11",
+          "valor": 7969.0,
+          "raw_value_span": "{\"Fecha\":\"2018-11-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"M11\", \"Anyo\":2018, \"Valor\":7969.0}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/13913?nult=111&tip=A",
+          "version": "tabla 13913"
+        },
+        {
+          "etiqueta": "ref:interanual",
+          "rol": "historical",
+          "serie": "SM21483",
+          "periodo": "2017-M12",
+          "valor": 6735.0,
+          "raw_value_span": "{\"Fecha\":\"2017-12-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"M12\", \"Anyo\":2017, \"Valor\":6735.0}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/13913?nult=111&tip=A",
+          "version": "tabla 13913"
+        },
+        {
+          "etiqueta": "ventana:2018-M11",
+          "rol": "historical",
+          "serie": "SM21483",
+          "periodo": "2018-M11",
+          "valor": 7969.0,
+          "raw_value_span": "{\"Fecha\":\"2018-11-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"M11\", \"Anyo\":2018, \"Valor\":7969.0}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/13913?nult=111&tip=A",
+          "version": "tabla 13913"
+        },
+        {
+          "etiqueta": "ventana:2018-M10",
+          "rol": "historical",
+          "serie": "SM21483",
+          "periodo": "2018-M10",
+          "valor": 7723.0,
+          "raw_value_span": "{\"Fecha\":\"2018-10-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"M10\", \"Anyo\":2018, \"Valor\":7723.0}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/13913?nult=111&tip=A",
+          "version": "tabla 13913"
+        },
+        {
+          "etiqueta": "ventana:2018-M09",
+          "rol": "historical",
+          "serie": "SM21483",
+          "periodo": "2018-M09",
+          "valor": 5882.0,
+          "raw_value_span": "{\"Fecha\":\"2018-09-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"M09\", \"Anyo\":2018, \"Valor\":5882.0}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/13913?nult=111&tip=A",
+          "version": "tabla 13913"
+        },
+        {
+          "etiqueta": "ventana:2018-M08",
+          "rol": "historical",
+          "serie": "SM21483",
+          "periodo": "2018-M08",
+          "valor": 5870.0,
+          "raw_value_span": "{\"Fecha\":\"2018-08-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"M08\", \"Anyo\":2018, \"Valor\":5870.0}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/13913?nult=111&tip=A",
+          "version": "tabla 13913"
+        },
+        {
+          "etiqueta": "ventana:2018-M07",
+          "rol": "historical",
+          "serie": "SM21483",
+          "periodo": "2018-M07",
+          "valor": 7695.0,
+          "raw_value_span": "{\"Fecha\":\"2018-07-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"M07\", \"Anyo\":2018, \"Valor\":7695.0}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/13913?nult=111&tip=A",
+          "version": "tabla 13913"
+        },
+        {
+          "etiqueta": "ventana:2018-M06",
+          "rol": "historical",
+          "serie": "SM21483",
+          "periodo": "2018-M06",
+          "valor": 8120.0,
+          "raw_value_span": "{\"Fecha\":\"2018-06-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"M06\", \"Anyo\":2018, \"Valor\":8120.0}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/13913?nult=111&tip=A",
+          "version": "tabla 13913"
+        },
+        {
+          "etiqueta": "ventana:2018-M05",
+          "rol": "historical",
+          "serie": "SM21483",
+          "periodo": "2018-M05",
+          "valor": 8830.0,
+          "raw_value_span": "{\"Fecha\":\"2018-05-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"M05\", \"Anyo\":2018, \"Valor\":8830.0}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/13913?nult=111&tip=A",
+          "version": "tabla 13913"
+        },
+        {
+          "etiqueta": "ventana:2018-M04",
+          "rol": "historical",
+          "serie": "SM21483",
+          "periodo": "2018-M04",
+          "valor": 8817.0,
+          "raw_value_span": "{\"Fecha\":\"2018-04-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"M04\", \"Anyo\":2018, \"Valor\":8817.0}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/13913?nult=111&tip=A",
+          "version": "tabla 13913"
+        },
+        {
+          "etiqueta": "metodologia",
+          "rol": "methodology",
+          "serie": "SM21483",
+          "periodo": "1900",
+          "valor": null,
+          "raw_value_span": "\"COD\":\"SM21483\", \"Nombre\":\"Sociedades Constituídas. Número de Sociedades. Total Nacional. Mercantiles. \"",
+          "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=13913",
+          "version": "tabla 13913"
+        }
+      ]
+    },
+    "persistido": true,
+    "duracion_ms": 6079
+  }
+}

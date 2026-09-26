@@ -1,0 +1,160 @@
+{
+  "http": 200,
+  "caso": {
+    "claim_id": "P16",
+    "texto": "«Más de la mitad de las horas extra que hacen las mujeres en España no se pagan»",
+    "fuente_url": "https://www.newtral.es/yolanda-diaz-horas-extra/20260326/",
+    "conjunto": "desarrollo",
+    "origen_case_id": "P16",
+    "etiquetas_corpus": {
+      "truth": "contradicted",
+      "context": "no_divergence_detected",
+      "clase_primaria": "none",
+      "lote": "auditado_20"
+    },
+    "tipo": "umbral",
+    "metrica": {
+      "emisor": "INE",
+      "tabla": "65217",
+      "serie_nombre": "Asalariados : Total. Total Nacional. Mujeres. Total. Horas extra no pagadas. Horas totales. ",
+      "unidad": "miles_horas",
+      "referencia_principal": "anterior",
+      "descripcion": "EPA, horas extra no pagadas de mujeres asalariadas, total"
+    },
+    "periodo_objetivo": "2025-T4",
+    "notas": "'Mas de la mitad' exige dividir dos series (no pagadas / totales): umbral con denominador. Fuera de lo que este prototipo evalua (UNSUPPORTED_CLAIM_TYPE)."
+  },
+  "respuesta": {
+    "veredicto": {
+      "claim_id": "P16",
+      "truth": "insufficient_evidence",
+      "context": "undetermined",
+      "clase_primaria": "none",
+      "abstain_reasons": [
+        "UNSUPPORTED_CLAIM_TYPE"
+      ],
+      "tests": [],
+      "comparaciones": [],
+      "numeros_usados": [
+        {
+          "valor": 1192.7,
+          "raw_value_span": "{\"Fecha\":\"2025-10-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T4\", \"Anyo\":2025, \"Valor\":1192.7}",
+          "item_id": "INE:EPA423404:2025-T4",
+          "etiqueta": "objetivo"
+        }
+      ],
+      "explicacion": "Sin veredicto: evidencia insuficiente.\nAfirmacion: \"«Más de la mitad de las horas extra que hacen las mujeres en España no se pagan»\"\nFuente (INE, serie EPA423404, \"Asalariados : Total. Total Nacional. Mujeres. Total. Horas extra no pagadas. Horas totales.\"): 4T 2025 = 1192.7.\nAbstencion: UNSUPPORTED_CLAIM_TYPE (el tipo de afirmacion no esta soportado por el prototipo).\nEvidencia: 10 items, bundle c7371dafe9aa.",
+      "bundle_hash": "c7371dafe9aa35b67904b263294da6f2692c9daa5ad4c2b60518c7fe0d50b8aa",
+      "generado_en": "2026-09-26T01:41:40.879875+00:00"
+    },
+    "evidencia": {
+      "bundle_hash": "c7371dafe9aa35b67904b263294da6f2692c9daa5ad4c2b60518c7fe0d50b8aa",
+      "completeness": "complete",
+      "missing_slots": [],
+      "items": [
+        {
+          "etiqueta": "objetivo",
+          "rol": "primary",
+          "serie": "EPA423404",
+          "periodo": "2025-T4",
+          "valor": 1192.7,
+          "raw_value_span": "{\"Fecha\":\"2025-10-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T4\", \"Anyo\":2025, \"Valor\":1192.7}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65217?nult=24&tip=A",
+          "version": "tabla 65217"
+        },
+        {
+          "etiqueta": "ventana:2025-T3",
+          "rol": "historical",
+          "serie": "EPA423404",
+          "periodo": "2025-T3",
+          "valor": 745.0,
+          "raw_value_span": "{\"Fecha\":\"2025-07-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T3\", \"Anyo\":2025, \"Valor\":745.0}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65217?nult=24&tip=A",
+          "version": "tabla 65217"
+        },
+        {
+          "etiqueta": "ventana:2025-T2",
+          "rol": "historical",
+          "serie": "EPA423404",
+          "periodo": "2025-T2",
+          "valor": 1206.4,
+          "raw_value_span": "{\"Fecha\":\"2025-04-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T2\", \"Anyo\":2025, \"Valor\":1206.4}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65217?nult=24&tip=A",
+          "version": "tabla 65217"
+        },
+        {
+          "etiqueta": "ventana:2025-T1",
+          "rol": "historical",
+          "serie": "EPA423404",
+          "periodo": "2025-T1",
+          "valor": 1150.9,
+          "raw_value_span": "{\"Fecha\":\"2025-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T1\", \"Anyo\":2025, \"Valor\":1150.9}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65217?nult=24&tip=A",
+          "version": "tabla 65217"
+        },
+        {
+          "etiqueta": "ventana:2024-T4",
+          "rol": "historical",
+          "serie": "EPA423404",
+          "periodo": "2024-T4",
+          "valor": 1138.8,
+          "raw_value_span": "{\"Fecha\":\"2024-10-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T4\", \"Anyo\":2024, \"Valor\":1138.8}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65217?nult=24&tip=A",
+          "version": "tabla 65217"
+        },
+        {
+          "etiqueta": "ventana:2024-T3",
+          "rol": "historical",
+          "serie": "EPA423404",
+          "periodo": "2024-T3",
+          "valor": 1008.9,
+          "raw_value_span": "{\"Fecha\":\"2024-07-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T3\", \"Anyo\":2024, \"Valor\":1008.9}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65217?nult=24&tip=A",
+          "version": "tabla 65217"
+        },
+        {
+          "etiqueta": "ventana:2024-T2",
+          "rol": "historical",
+          "serie": "EPA423404",
+          "periodo": "2024-T2",
+          "valor": 1352.0,
+          "raw_value_span": "{\"Fecha\":\"2024-04-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T2\", \"Anyo\":2024, \"Valor\":1352.0}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65217?nult=24&tip=A",
+          "version": "tabla 65217"
+        },
+        {
+          "etiqueta": "ventana:2024-T1",
+          "rol": "historical",
+          "serie": "EPA423404",
+          "periodo": "2024-T1",
+          "valor": 1239.8,
+          "raw_value_span": "{\"Fecha\":\"2024-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T1\", \"Anyo\":2024, \"Valor\":1239.8}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65217?nult=24&tip=A",
+          "version": "tabla 65217"
+        },
+        {
+          "etiqueta": "ventana:2023-T4",
+          "rol": "historical",
+          "serie": "EPA423404",
+          "periodo": "2023-T4",
+          "valor": 1051.2,
+          "raw_value_span": "{\"Fecha\":\"2023-10-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T4\", \"Anyo\":2023, \"Valor\":1051.2}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65217?nult=24&tip=A",
+          "version": "tabla 65217"
+        },
+        {
+          "etiqueta": "metodologia",
+          "rol": "methodology",
+          "serie": "EPA423404",
+          "periodo": "1900",
+          "valor": null,
+          "raw_value_span": "\"COD\":\"EPA423404\", \"Nombre\":\"Asalariados : Total. Total Nacional. Mujeres. Total. Horas extra no pagadas. Horas totales. \"",
+          "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=65217",
+          "version": "tabla 65217"
+        }
+      ]
+    },
+    "persistido": true,
+    "duracion_ms": 929
+  }
+}

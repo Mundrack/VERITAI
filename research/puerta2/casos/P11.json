@@ -1,0 +1,28 @@
+{
+  "claim_id": "P11",
+  "texto": "«Ha decrecido la creación de empresas un 23% y ha aumentado la destrucción de empresas un 73%»",
+  "fuente_url": "https://maldita.es/malditodato/20190326/las-cifras-falsas-y-los-datos-mal-utilizados-de-pablo-casado-sobre-la-economia-con-el-gobierno-del-psoe/",
+  "conjunto": "desarrollo",
+  "origen_case_id": "P11",
+  "etiquetas_corpus": {
+    "truth": "supported",
+    "context": "divergence_detected",
+    "clase_primaria": "2_baseline_selection",
+    "lote": "auditado_20"
+  },
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "13913",
+    "serie_nombre": "Sociedades Constituídas. Número de Sociedades. Total Nacional. Mercantiles. ",
+    "unidad": "unidades",
+    "referencia_principal": "interanual",
+    "descripcion": "Sociedades mercantiles constituidas, total nacional, mensual"
+  },
+  "periodo_objetivo": "2018-M12",
+  "periodo_base": "2018-M05",
+  "cambio_afirmado": -23,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "baja",
+  "notas": "El unico 2a del piloto con primaria INE. El claim (marzo 2019) compara mayo con diciembre de 2018; diciembre es un mes bajo y la referencia del INE es interanual. La API de hoy da mayo 2018 = 8.830 y diciembre 2018 = 6.809; el PDF de febrero de 2019 daba 8.908 (total) / 8.830 (S.L.) y 6.811: la serie fue REVISADA. Se registra tal cual."
+}

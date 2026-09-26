@@ -1,10 +1,10 @@
 """Punto de entrada de la API de VERITAI.
 
-Estado del proyecto: Puerta 1. La aplicacion solo expone endpoints de salud.
-Los endpoints de dominio se anaden despues de research/PILOT-DECISION.md con
-PILOT_GO, no antes (00b-DECISIONES-MATEO, "Puertas").
+Estado del proyecto: Puerta 2 (DEC-023). Ademas de la salud, la API expone
+`POST /analisis`: analiza un claim estructurado contra el INE con el test 2a
+(comparacion de base) y guarda la trazabilidad completa.
 
-Cuando aparezca el primer endpoint que reciba contenido externo, aplican sin
+Desde que existe un endpoint que recibe contenido externo aplican sin
 excepcion las secciones 23, 24 y 25 del START-HERE: limites de tamano, limites
 de tiempo, validacion estricta con Pydantic, y la regla de que el contenido
 recuperado es DATA y nunca INSTRUCCION.
@@ -16,14 +16,18 @@ import logging
 import sys
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from veritai import __version__
-from veritai.api.routes import health
+from veritai.api.routes import analisis, health
 from veritai.config import obtener_settings
 from veritai.db.session import crear_engine
+from veritai.infrastructure.ine.proveedor import ProveedorINE
+from veritai.infrastructure.ine.tempus import ClienteTempus
+from veritai.infrastructure.repositorio import RepositorioPostgres
 
 LOG = logging.getLogger("veritai")
 
@@ -44,11 +48,22 @@ async def ciclo_de_vida(app: FastAPI) -> AsyncIterator[None]:
 
     app.state.settings = settings
     app.state.engine = crear_engine(settings)
+
+    # Unico emisor de la Puerta 2 (DEC-024). El cliente HTTP vive lo que vive la app.
+    cliente_ine = ClienteTempus(
+        timeout_s=settings.http_timeout_s,
+        max_bytes=settings.http_max_bytes,
+        cache_dir=Path(settings.evidencia_cache_dir) if settings.evidencia_cache_dir else None,
+    )
+    app.state.cliente_ine = cliente_ine
+    app.state.proveedor_ine = ProveedorINE(cliente_ine)
+    app.state.repositorio = RepositorioPostgres(app.state.engine)
     LOG.info("veritai-api %s lista | entorno=%s", __version__, settings.veritai_env)
 
     try:
         yield
     finally:
+        cliente_ine.cerrar()
         app.state.engine.dispose()
         LOG.info("veritai-api detenida")
 
@@ -77,6 +92,7 @@ def crear_app() -> FastAPI:
     )
 
     app.include_router(health.router)
+    app.include_router(analisis.router)
     return app
 
 

@@ -71,6 +71,18 @@ conocerlo antes de escribir el sistema, no después.
 | [`PILOT-FINDINGS.md`](PILOT-FINDINGS.md) | TAREA 3 — las cinco métricas de R02 §7, comparación con el lote sesgado, **amenazas a la validez**, alcance honesto, P-15 con cinco opciones, Perú/bloqueo, humano vs agente (**pendiente**) | **entregado** 2026-09-25 |
 | [`PILOT-FAILURES.md`](PILOT-FAILURES.md) | TAREA 3 — catálogo de fallos con casos y lo que piden del prototipo | **entregado** 2026-09-25 |
 | [`PILOT-DECISION.md`](PILOT-DECISION.md) | TAREA 3 — **`PILOT_GO` con alcance declarado a nivel 1**. **Ratificado por Mateo** (DEC-023); alcance y emisores aprobados (DEC-024). Humano/agente pendiente (P-20) | **entregado y ratificado** 2026-09-25 |
+| [`PUERTA-2-CASOS.md`](PUERTA-2-CASOS.md), `puerta2/` | **Puerta 2** — prototipo de una clase (2a) y un emisor (INE) sobre 10 casos de **desarrollo**: casos JSON, ejecutor, resultados con spans, trazabilidad caso a caso, hallazgos (P-21, P-22) | **entregado** 2026-09-25, cierre pendiente de ratificar |
+
+---
+
+## Puerta 2
+
+Superada la Puerta 1, esta carpeta también guarda el material de la Puerta 2:
+`puerta2/casos/*.json` (los 10 claims estructurados a mano), `puerta2/ejecutar_casos.py`
+(los corre contra `POST /analisis` y escribe `resultados/`, `resultados.csv`,
+`resultados.md`) y el informe [`PUERTA-2-CASOS.md`](PUERTA-2-CASOS.md). Los tres
+casos nuevos (N01, N03, N04) siguen el método de la TAREA 2 y tienen sus hitos en
+`cronometro.log`. **Ninguno de los 10 entra en el conjunto de evaluación** (DEC-025).
 
 ---
 

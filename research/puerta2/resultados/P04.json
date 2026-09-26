@@ -1,0 +1,96 @@
+{
+  "http": 200,
+  "caso": {
+    "claim_id": "P04",
+    "texto": "«Las cifras de condenados por delitos sexuales llevan aumentando un 10% al año desde 1998»",
+    "fuente_url": "https://maldita.es/malditodato/20200114/es-falso-que-las-cifras-de-condenados-por-delitos-sexuales-lleven-aumentando-un-10-al-ano-desde-1998-como-dice-pedro-sanchez/",
+    "conjunto": "desarrollo",
+    "origen_case_id": "P04",
+    "etiquetas_corpus": {
+      "truth": "contradicted",
+      "context": "divergence_detected",
+      "clase_primaria": "3_absolute_vs_relative",
+      "lote": "auditado_20"
+    },
+    "tipo": "crecimiento_compuesto",
+    "metrica": {
+      "emisor": "INE",
+      "tabla": "28724",
+      "serie_nombre": "Total Nacional. Dato base. Por delitos sexuales. ",
+      "unidad": "unidades",
+      "referencia_principal": "anterior",
+      "descripcion": "Personas condenadas por delitos sexuales, total nacional, anual"
+    },
+    "periodo_objetivo": "2018",
+    "periodo_base": "1998",
+    "cambio_afirmado": 10,
+    "unidad_cambio": "pct",
+    "direccion_afirmada": "sube",
+    "notas": "'Un 10% al ano desde 1998' es crecimiento compuesto: fuera de lo que este prototipo evalua (UNSUPPORTED_CLAIM_TYPE). Ademas la tabla Tempus empieza en 2017: 1998 no esta."
+  },
+  "respuesta": {
+    "veredicto": {
+      "claim_id": "P04",
+      "truth": "insufficient_evidence",
+      "context": "undetermined",
+      "clase_primaria": "none",
+      "abstain_reasons": [
+        "UNSUPPORTED_CLAIM_TYPE"
+      ],
+      "tests": [],
+      "comparaciones": [],
+      "numeros_usados": [
+        {
+          "valor": 2431.0,
+          "raw_value_span": "{\"Fecha\":\"2018-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"A\", \"Anyo\":2018, \"Valor\":2431.0}",
+          "item_id": "INE:CON48031:2018",
+          "etiqueta": "objetivo"
+        }
+      ],
+      "explicacion": "Sin veredicto: evidencia insuficiente.\nAfirmacion: \"«Las cifras de condenados por delitos sexuales llevan aumentando un 10% al año desde 1998»\"\nFuente (INE, serie CON48031, \"Total Nacional. Dato base. Por delitos sexuales.\"): 2018 = 2431.0.\nAbstencion: UNSUPPORTED_CLAIM_TYPE (el tipo de afirmacion no esta soportado por el prototipo).\nEvidencia incompleta: faltan base_claim.\nEvidencia: 3 items, bundle 52338f459441.",
+      "bundle_hash": "52338f459441e8aea501db35e1544ee77e3b3850f235c7456aeab05fdae435c6",
+      "generado_en": "2026-09-26T01:41:33.837067+00:00"
+    },
+    "evidencia": {
+      "bundle_hash": "52338f459441e8aea501db35e1544ee77e3b3850f235c7456aeab05fdae435c6",
+      "completeness": "partial",
+      "missing_slots": [
+        "base_claim"
+      ],
+      "items": [
+        {
+          "etiqueta": "objetivo",
+          "rol": "primary",
+          "serie": "CON48031",
+          "periodo": "2018",
+          "valor": 2431.0,
+          "raw_value_span": "{\"Fecha\":\"2018-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"A\", \"Anyo\":2018, \"Valor\":2431.0}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/28724?nult=31&tip=A",
+          "version": "tabla 28724"
+        },
+        {
+          "etiqueta": "ventana:2017",
+          "rol": "historical",
+          "serie": "CON48031",
+          "periodo": "2017",
+          "valor": 2280.0,
+          "raw_value_span": "{\"Fecha\":\"2017-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"A\", \"Anyo\":2017, \"Valor\":2280.0}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/28724?nult=31&tip=A",
+          "version": "tabla 28724"
+        },
+        {
+          "etiqueta": "metodologia",
+          "rol": "methodology",
+          "serie": "CON48031",
+          "periodo": "1900",
+          "valor": null,
+          "raw_value_span": "\"COD\":\"CON48031\", \"Nombre\":\"Total Nacional. Dato base. Por delitos sexuales. \"",
+          "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=28724",
+          "version": "tabla 28724"
+        }
+      ]
+    },
+    "persistido": true,
+    "duracion_ms": 188
+  }
+}

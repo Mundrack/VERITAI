@@ -1,0 +1,167 @@
+{
+  "http": 200,
+  "caso": {
+    "claim_id": "C11",
+    "texto": "El IPC de agosto de 2026 se dispara al 4,3%: la tasa mas alta en mas de tres anos",
+    "fuente_url": "https://www.que.es/2026/09/15/ipc-agosto-2026-maximo-tres-anos/",
+    "conjunto": "desarrollo",
+    "origen_case_id": "C11",
+    "etiquetas_corpus": {
+      "truth": "supported",
+      "context": "undetermined",
+      "clase_primaria": "none",
+      "lote": "crudo_31"
+    },
+    "tipo": "nivel",
+    "metrica": {
+      "emisor": "INE",
+      "tabla": "25333",
+      "serie_nombre": "Nacional. Índice general. Variación anual. ",
+      "unidad": "pct",
+      "referencia_principal": "anterior",
+      "descripcion": "IPC general, variacion anual, nacional (base 2025)"
+    },
+    "periodo_objetivo": "2026-M08",
+    "valor_objetivo": 4.3,
+    "notas": "Claim de NIVEL: el 4,3% es la variacion anual publicada. 'La mas alta en mas de tres anos' es un extremo historico que este prototipo no evalua; el test 2a no aplica."
+  },
+  "respuesta": {
+    "veredicto": {
+      "claim_id": "C11",
+      "truth": "supported",
+      "context": "undetermined",
+      "clase_primaria": "none",
+      "abstain_reasons": [],
+      "tests": [
+        {
+          "nombre": "2a_periodo_o_base_elegida",
+          "aplicable": false,
+          "disparo": false,
+          "subtipo": "",
+          "senales": [],
+          "motivo": "no aplicable a claims de tipo nivel",
+          "calculos": {}
+        }
+      ],
+      "comparaciones": [
+        {
+          "que": "valor en agosto de 2026",
+          "afirmado": 4.3,
+          "evidencia": 4.3,
+          "tolerancia": 0.05,
+          "cuadra": true
+        }
+      ],
+      "numeros_usados": [
+        {
+          "valor": 4.3,
+          "raw_value_span": "{\"Fecha\":\"2026-08-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"M08\", \"Anyo\":2026, \"Valor\":4.3}",
+          "item_id": "INE:IPC290750:2026-M08",
+          "etiqueta": "objetivo"
+        }
+      ],
+      "explicacion": "Respaldado; contexto no evaluable.\nAfirmacion: \"El IPC de agosto de 2026 se dispara al 4,3%: la tasa mas alta en mas de tres anos\"\nFuente (INE, serie IPC290750, \"Nacional. Índice general. Variación anual.\"): agosto de 2026 = 4.3.\nVerdad: valor en agosto de 2026: cuadra (claim 4.3, fuente 4.3).\nTest 2a_periodo_o_base_elegida: no aplicable. no aplicable a claims de tipo nivel.\nEvidencia: 9 items, bundle ab126abf006c.",
+      "bundle_hash": "ab126abf006cc6f182984ed2e78f69a109994d81368c8cef1aa1dbfc9ee73257",
+      "generado_en": "2026-09-26T01:41:26.677534+00:00"
+    },
+    "evidencia": {
+      "bundle_hash": "ab126abf006cc6f182984ed2e78f69a109994d81368c8cef1aa1dbfc9ee73257",
+      "completeness": "complete",
+      "missing_slots": [],
+      "items": [
+        {
+          "etiqueta": "objetivo",
+          "rol": "primary",
+          "serie": "IPC290750",
+          "periodo": "2026-M08",
+          "valor": 4.3,
+          "raw_value_span": "{\"Fecha\":\"2026-08-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"M08\", \"Anyo\":2026, \"Valor\":4.3}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/25333?nult=24&tip=A",
+          "version": "tabla 25333"
+        },
+        {
+          "etiqueta": "ventana:2026-M07",
+          "rol": "historical",
+          "serie": "IPC290750",
+          "periodo": "2026-M07",
+          "valor": 3.6,
+          "raw_value_span": "{\"Fecha\":\"2026-07-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"M07\", \"Anyo\":2026, \"Valor\":3.6}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/25333?nult=24&tip=A",
+          "version": "tabla 25333"
+        },
+        {
+          "etiqueta": "ventana:2026-M06",
+          "rol": "historical",
+          "serie": "IPC290750",
+          "periodo": "2026-M06",
+          "valor": 3.2,
+          "raw_value_span": "{\"Fecha\":\"2026-06-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"M06\", \"Anyo\":2026, \"Valor\":3.2}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/25333?nult=24&tip=A",
+          "version": "tabla 25333"
+        },
+        {
+          "etiqueta": "ventana:2026-M05",
+          "rol": "historical",
+          "serie": "IPC290750",
+          "periodo": "2026-M05",
+          "valor": 3.2,
+          "raw_value_span": "{\"Fecha\":\"2026-05-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"M05\", \"Anyo\":2026, \"Valor\":3.2}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/25333?nult=24&tip=A",
+          "version": "tabla 25333"
+        },
+        {
+          "etiqueta": "ventana:2026-M04",
+          "rol": "historical",
+          "serie": "IPC290750",
+          "periodo": "2026-M04",
+          "valor": 3.2,
+          "raw_value_span": "{\"Fecha\":\"2026-04-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"M04\", \"Anyo\":2026, \"Valor\":3.2}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/25333?nult=24&tip=A",
+          "version": "tabla 25333"
+        },
+        {
+          "etiqueta": "ventana:2026-M03",
+          "rol": "historical",
+          "serie": "IPC290750",
+          "periodo": "2026-M03",
+          "valor": 3.4,
+          "raw_value_span": "{\"Fecha\":\"2026-03-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"M03\", \"Anyo\":2026, \"Valor\":3.4}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/25333?nult=24&tip=A",
+          "version": "tabla 25333"
+        },
+        {
+          "etiqueta": "ventana:2026-M02",
+          "rol": "historical",
+          "serie": "IPC290750",
+          "periodo": "2026-M02",
+          "valor": 2.3,
+          "raw_value_span": "{\"Fecha\":\"2026-02-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"M02\", \"Anyo\":2026, \"Valor\":2.3}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/25333?nult=24&tip=A",
+          "version": "tabla 25333"
+        },
+        {
+          "etiqueta": "ventana:2026-M01",
+          "rol": "historical",
+          "serie": "IPC290750",
+          "periodo": "2026-M01",
+          "valor": 2.3,
+          "raw_value_span": "{\"Fecha\":\"2026-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"M01\", \"Anyo\":2026, \"Valor\":2.3}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/25333?nult=24&tip=A",
+          "version": "tabla 25333"
+        },
+        {
+          "etiqueta": "metodologia",
+          "rol": "methodology",
+          "serie": "IPC290750",
+          "periodo": "1900",
+          "valor": null,
+          "raw_value_span": "\"COD\":\"IPC290750\", \"Nombre\":\"Nacional. Índice general. Variación anual. \"",
+          "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=25333",
+          "version": "tabla 25333"
+        }
+      ]
+    },
+    "persistido": true,
+    "duracion_ms": 14043
+  }
+}

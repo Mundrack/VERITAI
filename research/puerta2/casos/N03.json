@@ -1,0 +1,33 @@
+{
+  "claim_id": "N03",
+  "texto": "Uno de cada seis empleados públicos logró su puesto durante los gobiernos de Sánchez",
+  "fuente_url": "https://theobjective.com/economia/2026-06-08/empleados-publicos-sanchez-545000-record-2026/",
+  "conjunto": "desarrollo",
+  "origen_case_id": "",
+  "etiquetas_corpus": {},
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "65183",
+    "serie_nombre": "Ocupados. Total Nacional. Ambos sexos. Asalariado sector público. Valor absoluto. ",
+    "unidad": "miles_personas",
+    "referencia_principal": "interanual",
+    "descripcion": "EPA, asalariados del sector público, ambos sexos, total nacional, miles de personas"
+  },
+  "periodo_objetivo": "2026-T1",
+  "periodo_base": "2018-T2",
+  "valor_objetivo": 3662.5,
+  "valor_base": 3117.8,
+  "cambio_afirmado": 17.5,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Claim crudo nuevo (INE, mecanismo 2a: base elegida 2T2018, llegada del Gobierno; la referencia de la EPA es interanual o trimestral). El cuerpo da las cifras exactas: 3.662.500 (1T2026) frente a 3.117.800 (2T2018), 544.700 mas, +17,5%. 'Uno de cada seis' es 544,7/3.662,5 = 14,9%, no 16,7%: redondeo del titular, se registra. El articulo tambien cita el Boletin Estadistico del Personal (Registro Central) como fuente secundaria; el claim se ancla en la EPA, que es la que da las cifras.",
+  "_recoleccion": {
+    "fecha_publicacion": "2026-06-08",
+    "medio": "The Objective",
+    "via_descubrimiento": "busqueda_a_organismo",
+    "query": "EPA sector publico 'desde 2018' OR 'desde que Sanchez' 2026 titular",
+    "criba": "ningun verificador cubre las cifras; Maldita 2022 ('uno de cada seis ocupados es sector publico') es un claim de nivel de otro anio; Newtral 2021/2023 sobre empleo publico son otros claims",
+    "cronometro": "N03 t0..t2 en research/cronometro.log"
+  }
+}

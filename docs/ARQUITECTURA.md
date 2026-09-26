@@ -6,13 +6,14 @@
 > El diseño objetivo del sistema completo está en
 > `04-VERITAI-CLAUDE-RESPONSE-R02.md` §2. No lo repito aquí.
 
-**Última actualización:** 2026-09-11
+**Última actualización:** 2026-09-25 (Puerta 2, rama `feat/puerta-2-ine-2a`)
 
 ---
 
 ## 1. Lo que hay construido
 
-Solo el entorno. Cuatro contenedores, ninguna lógica de dominio.
+Cuatro contenedores y, desde la Puerta 2, la primera lógica de dominio: un
+análisis end-to-end de **una clase (2a) sobre un emisor (INE)**, sin LLM.
 
 ```
                       docker compose up -d
@@ -40,6 +41,31 @@ db (healthy)  →  migrate (exit 0)  →  api  →  web
 Si las migraciones fallan, la API **no arranca**. Es deliberado: es preferible
 un servicio caído a un servicio corriendo contra un esquema desactualizado.
 
+### El flujo de análisis (Puerta 2)
+
+```
+POST /analisis  (JSON del claim, estructurado a mano)
+      │
+      ▼
+ClaimEstructurado ───► ProveedorINE ───► EvidenceBundle ───► hard gates ───► test 2a ───► verdad
+  domain/claim.py     infrastructure/    domain/evidencia   domain/          domain/tests/  domain/
+                      ine/proveedor.py   (spans literales,  abstencion.py    comparacion_   verdad.py
+                      + tempus.py        bundle_hash)                        base.py
+                      + extractor.py
+      │
+      ▼
+Veredicto (truth · context · clase · abstain_reasons · tests · numeros_usados)
+      │                                                    domain/veredicto.py
+      ├─► explicación por plantilla numérica              domain/plantilla.py
+      └─► claims · evidence_bundles · evidence_items · verdicts · audit_log
+                                                           infrastructure/repositorio.py
+```
+
+Todo lo orquesta `application/analizar_claim.py`. El proveedor y el
+repositorio se inyectan en el ciclo de vida de la API (`main.py`) y llegan a
+la ruta por `app.state`; los tests los sustituyen por dobles
+(`tests/dobles.py`) sin tocar el dominio.
+
 ---
 
 ## 2. Estructura del repositorio
@@ -63,11 +89,14 @@ VERITAI/
 │  │  │  ├─ config.py             configuracion por entorno. SecretStr
 │  │  │  ├─ main.py               FastAPI, CORS, ciclo de vida
 │  │  │  ├─ api/routes/health.py  /health · /health/live · /health/ready
+│  │  │  ├─ api/routes/analisis.py  POST /analisis (pydantic, limites de tamano)
 │  │  │  ├─ db/session.py         motor SQLAlchemy desde DATABASE_URL
-│  │  │  ├─ domain/               VACIO. Entidades y reglas de negocio
-│  │  │  ├─ application/          VACIO. Casos de uso
-│  │  │  └─ infrastructure/       VACIO. Conectores, parsers, clientes
-│  │  └─ tests/                   5 tests
+│  │  │  ├─ domain/               enums · periodo · claim · evidencia · abstencion
+│  │  │  │                        · verdad · veredicto · plantilla · puertos (Protocol)
+│  │  │  │  └─ tests/comparacion_base.py   el test 2a, deterministico
+│  │  │  ├─ application/          analizar_claim.py: el caso de uso
+│  │  │  └─ infrastructure/       ine/{tempus,extractor,proveedor}.py · repositorio.py
+│  │  └─ tests/                   45 tests + dobles.py + fixtures/ (JSON real del INE)
 │  │
 │  └─ web/
 │     ├─ Dockerfile               etapas: deps · dev · build
@@ -77,15 +106,16 @@ VERITAI/
 │        ├─ estilos.css
 │        └─ i18n/                 es.json · en.json · index.ts
 │
-├─ db/migrations/         000_roles · 001_schema_veritai · 002_rls_baseline
+├─ db/migrations/         000_roles · 001_schema_veritai · 002_rls_baseline · 003_puerta2
 ├─ scripts/               migrate.py · init-env.ps1 · init-env.sh
-├─ research/              piloto. Vacio salvo su README
+├─ research/              piloto (TAREAS 1-3) y puerta2/ (casos JSON, ejecutor, resultados)
 ├─ docs/                  este registro vivo
 └─ migracion-supabase-base-de-datos/
 ```
 
-Las carpetas `domain/`, `application/` e `infrastructure/` están vacías **a
-propósito**: la estructura está definida, el contenido llega tras `PILOT_GO`.
+Las carpetas `domain/`, `application/` e `infrastructure/` se llenaron en la
+Puerta 2 **solo con lo que el prototipo necesita**: una clase, un emisor. No
+hay conectores de FMI ni de Interior, ni N0, ni LLM.
 
 ---
 
@@ -102,21 +132,27 @@ El dominio no importa nada de infraestructura. La infraestructura implementa
 interfaces definidas en el dominio. Es lo que permitirá sustituir un
 `EvidenceProvider` real por uno de prueba sin tocar las reglas.
 
-Hoy no hay nada que verifique esta regla automáticamente. Cuando haya código en
-esas carpetas, conviene un test que falle si `domain/` importa de
-`infrastructure/`.
+Sigue sin haber un test que verifique esta regla automáticamente; hoy se cumple
+por revisión: `domain/` no importa de `infrastructure/`, de `application/` ni
+de `api/`; `infrastructure/` implementa los `Protocol` de `domain/puertos.py`
+(`ProveedorEvidencia`, `Repositorio`). Un test que falle si `domain/` importa
+hacia fuera sigue siendo deuda.
 
 ---
 
 ## 4. La API
 
-Tres endpoints, todos de salud, y cada uno con un trabajo distinto:
+Tres endpoints de salud y uno de dominio:
 
-| Endpoint | Qué comprueba | Códigos |
+| Endpoint | Qué hace | Códigos |
 |---|---|---|
 | `/health/live` | El proceso responde. **Sin tocar la base de datos** | 200 |
 | `/health/ready` | Hay base de datos (`select 1`) | 200 / 503 |
 | `/health` | Resumen legible: servicio, versión, entorno, base de datos | 200 |
+| `POST /analisis` | Recibe un claim estructurado (JSON validado por pydantic: emisor `INE`, tabla `^\d{1,8}$`, periodos parseados, texto ≤ 2000, etiquetas acotadas), lo analiza y devuelve veredicto + evidencia + `persistido` + `duracion_ms` | 200 / 422 (JSON inválido) / 503 (proveedor no inicializado) / 500 (excepción no prevista, solo el nombre del tipo) |
+
+`POST /analisis` no acepta URLs ni texto libre como fuente: el claim ya viene
+estructurado y la única red que toca es `servicios.ine.es`, por allowlist.
 
 **Por qué `live` no toca la base de datos.** Es el que usa el `HEALTHCHECK` de
 Docker. Si dependiera de Postgres, una caída de la base reiniciaría la API en
@@ -136,7 +172,9 @@ comodín `*`**.
 ## 5. La base de datos
 
 ```
-esquema veritai          objetos de dominio. VACIO a proposito
+esquema veritai          claims · evidence_bundles · evidence_items · verdicts · audit_log
+                         (003_puerta2; CHECK con los enums del glosario; RLS activada Y forzada;
+                          audit_log solo insert/select para veritai_app)
 esquema veritai_meta     schema_migrations (archivo, sha256, aplicada_en)
 
 roles
@@ -207,10 +245,29 @@ Detalle completo en
 
 ## 8. Lo que esta arquitectura todavía no responde
 
-Se anota para no olvidarlo cuando llegue la Puerta 2:
+Respondido en la Puerta 2:
 
-- Dónde vive el **audit trail** y con qué esquema
-- Cómo se almacenan los artefactos de evidencia (HTML y PDF crudos): filesystem
-  con adaptador, o `bytea`, o Supabase Storage
+- ~~Dónde vive el **audit trail** y con qué esquema~~ → `veritai.audit_log`,
+  una fila por análisis (claim, bundle_hash, veredicto, duración), solo
+  insert/select para la aplicación.
+- ~~Cómo se almacenan los artefactos de evidencia~~ → **a medias**: el span
+  literal de cada número va en `evidence_items.raw_value_span`; la respuesta
+  JSON completa del INE se guarda opcionalmente en disco
+  (`EVIDENCIA_CACHE_DIR`). HTML y PDF crudos siguen sin decidir.
+
+Limitación conocida del conector INE *(DEC-029)*:
+
+- **La API Tempus sirve solo la edición vigente** de cada serie. El span
+  conserva `T3_TipoDato` (provisional / definitivo), pero una **base revisada
+  (2b) no se puede demostrar desde la API**: hace falta la nota de prensa o el
+  PDF de la edición anterior. Por eso 2b quedó fuera del prototipo y P11 (cuyo
+  valor de la API no cuadra con el PDF de 2019) sigue en `NEEDS_REVIEW`.
+
+Sigue sin responder:
+
 - Dónde corre el LLM local respecto a los contenedores
 - Si N0 (regex + encoder ONNX) corre en el navegador, en la API, o en los dos
+- Frescura de la caché del proveedor INE: vive en la instancia de la API y
+  solo se invalida al pedir un periodo más antiguo; un servicio de larga vida
+  necesita TTL o descarga por petición
+- Un test de arquitectura que falle si `domain/` importa hacia fuera

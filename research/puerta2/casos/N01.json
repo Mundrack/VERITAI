@@ -1,0 +1,31 @@
+{
+  "claim_id": "N01",
+  "texto": "Desde 2019 los salarios han crecido un 1% mientras la vivienda se ha disparado un 64%",
+  "fuente_url": "https://www.elindependiente.com/economia/2026/04/21/desde-2019-salarios-crecido-1-mientras-la-vivienda-se-ha-disparado-un-64/",
+  "conjunto": "desarrollo",
+  "origen_case_id": "",
+  "etiquetas_corpus": {},
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "80270",
+    "serie_nombre": "Nacional. Vivienda nueva. Índice. ",
+    "unidad": "indice",
+    "referencia_principal": "interanual",
+    "descripcion": "IPV, índice de precios de vivienda nueva, nacional, trimestral (base 2015)"
+  },
+  "periodo_objetivo": "2025-T4",
+  "periodo_base": "2019-T4",
+  "cambio_afirmado": 64,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Claim crudo nuevo (INE, mecanismo 2a: base elegida 4T2019, prepandemia; la referencia del IPV es interanual). El cuerpo del articulo atribuye el 64% a la vivienda NUEVA (63,7%) y da 46,4% para segunda mano; se estructura sobre la serie que el propio articulo cita. El titular presenta un subgrupo como 'la vivienda' (indice general 4T2019->4T2025 = +49,0%): reaparicion del mecanismo candidato P17 (agregacion con subgrupos), se registra, no se clasifica (DEC-027). El 1% de salarios (ETCL/ECLU real) queda fuera: el prototipo evalua una metrica por claim.",
+  "_recoleccion": {
+    "fecha_publicacion": "2026-04-21",
+    "medio": "El Independiente",
+    "via_descubrimiento": "busqueda_a_organismo",
+    "query": "2026 INE 'desde 2019' vivienda salarios titular",
+    "criba": "sin verificacion sobre el claim en Newtral/Maldita/EFE Verifica/Verificat (2026-09-26)",
+    "cronometro": "N01 t0..t2 en research/cronometro.log"
+  }
+}

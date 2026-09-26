@@ -1,0 +1,31 @@
+{
+  "claim_id": "N04",
+  "texto": "Hacer la compra cuesta un 37% más: los alimentos se han encarecido en torno a un 37% entre 2020 y 2024",
+  "fuente_url": "https://economia3.com/hacer-la-compra-cuesta-un-37-mas-los-alimentos-que-mas-se-han-encarecido/",
+  "conjunto": "desarrollo",
+  "origen_case_id": "",
+  "etiquetas_corpus": {},
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "50934",
+    "serie_nombre": "Nacional. Alimentos y bebidas no alcohólicas. Media anual. ",
+    "unidad": "indice",
+    "referencia_principal": "anterior",
+    "descripcion": "IPC, grupo ECOICOP 01 alimentos y bebidas no alcohólicas, media anual, nacional (base 2021)"
+  },
+  "periodo_objetivo": "2024",
+  "periodo_base": "2020",
+  "cambio_afirmado": 37,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Claim crudo nuevo (INE, mecanismo 2a: base elegida 2020, ano previo al episodio inflacionario; la referencia del IPC es la variacion anual). El articulo atribuye la cifra a 'series de precios de alimentacion elaboradas a partir del IPC' del INE y usa anos completos: se estructura sobre la media anual del grupo 01. 'En torno a' se toma como 37 con la tolerancia del ultimo decimal. El 37% coincide con el informe Idra citado por Infobae (2025-10-22): productos mas baratos +37% 2021-2024; posible atribucion cruzada de una fuente privada al INE, se registra como observacion, no se corrige el claim.",
+  "_recoleccion": {
+    "fecha_publicacion": "2026-05-26",
+    "medio": "economia3",
+    "via_descubrimiento": "busqueda_a_organismo",
+    "query": "2026 'segun el INE' alimentos 'desde 2020' OR 'desde 2021' titular",
+    "criba": "Newtral 2026-09-22 (Feijoo, alimentos frescos agosto 2026) no cubre la cifra; sin explainer con 37% 2020-2024 en Newtral/Maldita/EFE Verifica/Verificat",
+    "cronometro": "N04 t0..t2 en research/cronometro.log"
+  }
+}

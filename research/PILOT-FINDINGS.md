@@ -56,6 +56,9 @@ Tres lecturas:
 2. **El lote auditado no servía para medir tasa de falsos positivos**: 16 de
    20 divergencias. El crudo tiene 16 controles negativos reales sobre 31 (tras DEC-027), y
    es donde un sistema se puede equivocar en la dirección que importa.
+   *(DEC-029: C11, un claim de nivel, pasa a `context = undetermined` porque
+   ningún test aplica; sigue en la cubeta de control, pero el FPR se mide sobre
+   los controles con test aplicable.)*
 3. **"Verificado" cambia de significado.** En la auditoría solo 3 casos
    tenían el número literal de la primaria; en el crudo, 31 de 31 para la
    edición actual y 25 de 31 para la anterior. Es lo que "ningún número puede

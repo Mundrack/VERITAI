@@ -26,7 +26,7 @@ class Settings(BaseSettings):
     """Configuracion leida del entorno del proceso."""
 
     model_config = SettingsConfigDict(
-        env_file=None,          # el .env lo inyecta Docker Compose, no la app
+        env_file=None,  # el .env lo inyecta Docker Compose, no la app
         case_sensitive=False,
         extra="ignore",
     )
@@ -44,6 +44,14 @@ class Settings(BaseSettings):
 
     # --- http ----------------------------------------------------------------
     cors_allowed_origins: str = ""
+
+    # --- recuperacion de evidencia (Puerta 2) ----------------------------------
+    # Limites de tiempo y tamano para cualquier llamada al exterior (START-HERE 23).
+    http_timeout_s: float = Field(default=15.0, gt=0, le=120)
+    http_max_bytes: int = Field(default=5_000_000, ge=10_000, le=50_000_000)
+    # Si se indica, cada respuesta cruda del emisor se guarda ahi como fixture
+    # reproducible (ruta dentro del contenedor). Vacio = no se guarda.
+    evidencia_cache_dir: str = ""
 
     @field_validator("cors_allowed_origins")
     @classmethod

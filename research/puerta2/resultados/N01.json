@@ -1,0 +1,254 @@
+{
+  "http": 200,
+  "caso": {
+    "claim_id": "N01",
+    "texto": "Desde 2019 los salarios han crecido un 1% mientras la vivienda se ha disparado un 64%",
+    "fuente_url": "https://www.elindependiente.com/economia/2026/04/21/desde-2019-salarios-crecido-1-mientras-la-vivienda-se-ha-disparado-un-64/",
+    "conjunto": "desarrollo",
+    "origen_case_id": "",
+    "etiquetas_corpus": {},
+    "tipo": "cambio_entre_periodos",
+    "metrica": {
+      "emisor": "INE",
+      "tabla": "80270",
+      "serie_nombre": "Nacional. Vivienda nueva. Índice. ",
+      "unidad": "indice",
+      "referencia_principal": "interanual",
+      "descripcion": "IPV, índice de precios de vivienda nueva, nacional, trimestral (base 2015)"
+    },
+    "periodo_objetivo": "2025-T4",
+    "periodo_base": "2019-T4",
+    "cambio_afirmado": 64,
+    "unidad_cambio": "pct",
+    "direccion_afirmada": "sube",
+    "notas": "Claim crudo nuevo (INE, mecanismo 2a: base elegida 4T2019, prepandemia; la referencia del IPV es interanual). El cuerpo del articulo atribuye el 64% a la vivienda NUEVA (63,7%) y da 46,4% para segunda mano; se estructura sobre la serie que el propio articulo cita. El titular presenta un subgrupo como 'la vivienda' (indice general 4T2019->4T2025 = +49,0%): reaparicion del mecanismo candidato P17 (agregacion con subgrupos), se registra, no se clasifica (DEC-027). El 1% de salarios (ETCL/ECLU real) queda fuera: el prototipo evalua una metrica por claim.",
+    "_recoleccion": {
+      "fecha_publicacion": "2026-04-21",
+      "medio": "El Independiente",
+      "via_descubrimiento": "busqueda_a_organismo",
+      "query": "2026 INE 'desde 2019' vivienda salarios titular",
+      "criba": "sin verificacion sobre el claim en Newtral/Maldita/EFE Verifica/Verificat (2026-09-26)",
+      "cronometro": "N01 t0..t2 en research/cronometro.log"
+    }
+  },
+  "respuesta": {
+    "veredicto": {
+      "claim_id": "N01",
+      "truth": "mixed",
+      "context": "no_divergence_detected",
+      "clase_primaria": "none",
+      "abstain_reasons": [],
+      "tests": [
+        {
+          "nombre": "2a_periodo_o_base_elegida",
+          "aplicable": true,
+          "disparo": false,
+          "subtipo": "",
+          "senales": [
+            "horizonte_largo"
+          ],
+          "motivo": "el claim compara contra 4T 2019 (+63.47 pct); contra la referencia del emisor, interanual (4T 2024), el cambio es +11.22 pct: difiere 5.7x en magnitud sin cambiar de signo; senal de horizonte, no divergencia confirmada (DEC-029)",
+          "calculos": {
+            "unidad": "pct",
+            "periodo_base_claim": "2019-T4",
+            "valor_base_claim": 62.739,
+            "periodo_objetivo": "2025-T4",
+            "valor_objetivo": 102.559,
+            "cambio_recomputado_con_base_del_claim": 63.469,
+            "cambio_afirmado": 64.0,
+            "referencia_emisor": "interanual (2024-T4)",
+            "valor_referencia_emisor": 92.211,
+            "cambio_recomputado_con_referencia_emisor": 11.222,
+            "ratio_magnitudes": 5.656,
+            "umbral_ratio": 2.0,
+            "senal": "horizonte_largo"
+          }
+        }
+      ],
+      "comparaciones": [
+        {
+          "que": "cambio (pct)",
+          "afirmado": 64.0,
+          "evidencia": 63.469,
+          "tolerancia": 0.5,
+          "cuadra": false
+        },
+        {
+          "que": "direccion",
+          "afirmado": "sube",
+          "evidencia": "sube",
+          "tolerancia": null,
+          "cuadra": true
+        }
+      ],
+      "numeros_usados": [
+        {
+          "valor": 102.559,
+          "raw_value_span": "{\"Fecha\":\"2025-10-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T4\", \"Anyo\":2025, \"Valor\":102.559}",
+          "item_id": "INE:IPV1613:2025-T4",
+          "etiqueta": "objetivo"
+        },
+        {
+          "valor": 62.739,
+          "raw_value_span": "{\"Fecha\":\"2019-10-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T4\", \"Anyo\":2019, \"Valor\":62.739}",
+          "item_id": "INE:IPV1613:2019-T4",
+          "etiqueta": "base_claim"
+        },
+        {
+          "valor": 100.371,
+          "raw_value_span": "{\"Fecha\":\"2025-07-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T3\", \"Anyo\":2025, \"Valor\":100.371}",
+          "item_id": "INE:IPV1613:2025-T3",
+          "etiqueta": "ref:anterior"
+        },
+        {
+          "valor": 92.211,
+          "raw_value_span": "{\"Fecha\":\"2024-10-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T4\", \"Anyo\":2024, \"Valor\":92.211}",
+          "item_id": "INE:IPV1613:2024-T4",
+          "etiqueta": "ref:interanual"
+        }
+      ],
+      "explicacion": "Parcialmente respaldado, sin divergencia detectada.\nAfirmacion: \"Desde 2019 los salarios han crecido un 1% mientras la vivienda se ha disparado un 64%\"\nFuente (INE, serie IPV1613, \"Nacional. Vivienda nueva. Índice.\"): 4T 2025 = 102.559.\nBase que usa el claim: 4T 2019 = 62.739.\nReferencia del emisor (anterior): 3T 2025 = 100.371.\nReferencia del emisor (interanual): 4T 2024 = 92.211.\nVerdad: cambio (pct): NO cuadra (claim 64.0, fuente 63.469); direccion: cuadra (claim sube, fuente sube).\nTest 2a_periodo_o_base_elegida: no dispara. el claim compara contra 4T 2019 (+63.47 pct); contra la referencia del emisor, interanual (4T 2024), el cambio es +11.22 pct: difiere 5.7x en magnitud sin cambiar de signo; senal de horizonte, no divergencia confirmada (DEC-029).\nSenales registradas: horizonte_largo (se anotan, no cuentan como divergencia; DEC-029).\nEvidencia: 13 items, bundle 794f81d37fd0.",
+      "bundle_hash": "794f81d37fd0110e400736bb85fe71e32e92ee6d767f314027fc7ec85a756982",
+      "generado_en": "2026-09-26T01:41:32.865197+00:00"
+    },
+    "evidencia": {
+      "bundle_hash": "794f81d37fd0110e400736bb85fe71e32e92ee6d767f314027fc7ec85a756982",
+      "completeness": "complete",
+      "missing_slots": [],
+      "items": [
+        {
+          "etiqueta": "objetivo",
+          "rol": "primary",
+          "serie": "IPV1613",
+          "periodo": "2025-T4",
+          "valor": 102.559,
+          "raw_value_span": "{\"Fecha\":\"2025-10-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T4\", \"Anyo\":2025, \"Valor\":102.559}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/80270?nult=31&tip=A",
+          "version": "tabla 80270"
+        },
+        {
+          "etiqueta": "base_claim",
+          "rol": "historical",
+          "serie": "IPV1613",
+          "periodo": "2019-T4",
+          "valor": 62.739,
+          "raw_value_span": "{\"Fecha\":\"2019-10-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T4\", \"Anyo\":2019, \"Valor\":62.739}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/80270?nult=31&tip=A",
+          "version": "tabla 80270"
+        },
+        {
+          "etiqueta": "ref:anterior",
+          "rol": "historical",
+          "serie": "IPV1613",
+          "periodo": "2025-T3",
+          "valor": 100.371,
+          "raw_value_span": "{\"Fecha\":\"2025-07-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T3\", \"Anyo\":2025, \"Valor\":100.371}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/80270?nult=31&tip=A",
+          "version": "tabla 80270"
+        },
+        {
+          "etiqueta": "ref:interanual",
+          "rol": "historical",
+          "serie": "IPV1613",
+          "periodo": "2024-T4",
+          "valor": 92.211,
+          "raw_value_span": "{\"Fecha\":\"2024-10-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T4\", \"Anyo\":2024, \"Valor\":92.211}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/80270?nult=31&tip=A",
+          "version": "tabla 80270"
+        },
+        {
+          "etiqueta": "ventana:2025-T3",
+          "rol": "historical",
+          "serie": "IPV1613",
+          "periodo": "2025-T3",
+          "valor": 100.371,
+          "raw_value_span": "{\"Fecha\":\"2025-07-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T3\", \"Anyo\":2025, \"Valor\":100.371}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/80270?nult=31&tip=A",
+          "version": "tabla 80270"
+        },
+        {
+          "etiqueta": "ventana:2025-T2",
+          "rol": "historical",
+          "serie": "IPV1613",
+          "periodo": "2025-T2",
+          "valor": 99.81,
+          "raw_value_span": "{\"Fecha\":\"2025-04-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T2\", \"Anyo\":2025, \"Valor\":99.81}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/80270?nult=31&tip=A",
+          "version": "tabla 80270"
+        },
+        {
+          "etiqueta": "ventana:2025-T1",
+          "rol": "historical",
+          "serie": "IPV1613",
+          "periodo": "2025-T1",
+          "valor": 97.26,
+          "raw_value_span": "{\"Fecha\":\"2025-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T1\", \"Anyo\":2025, \"Valor\":97.26}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/80270?nult=31&tip=A",
+          "version": "tabla 80270"
+        },
+        {
+          "etiqueta": "ventana:2024-T4",
+          "rol": "historical",
+          "serie": "IPV1613",
+          "periodo": "2024-T4",
+          "valor": 92.211,
+          "raw_value_span": "{\"Fecha\":\"2024-10-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T4\", \"Anyo\":2024, \"Valor\":92.211}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/80270?nult=31&tip=A",
+          "version": "tabla 80270"
+        },
+        {
+          "etiqueta": "ventana:2024-T3",
+          "rol": "historical",
+          "serie": "IPV1613",
+          "periodo": "2024-T3",
+          "valor": 91.5,
+          "raw_value_span": "{\"Fecha\":\"2024-07-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T3\", \"Anyo\":2024, \"Valor\":91.5}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/80270?nult=31&tip=A",
+          "version": "tabla 80270"
+        },
+        {
+          "etiqueta": "ventana:2024-T2",
+          "rol": "historical",
+          "serie": "IPV1613",
+          "periodo": "2024-T2",
+          "valor": 89.036,
+          "raw_value_span": "{\"Fecha\":\"2024-04-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T2\", \"Anyo\":2024, \"Valor\":89.036}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/80270?nult=31&tip=A",
+          "version": "tabla 80270"
+        },
+        {
+          "etiqueta": "ventana:2024-T1",
+          "rol": "historical",
+          "serie": "IPV1613",
+          "periodo": "2024-T1",
+          "valor": 86.656,
+          "raw_value_span": "{\"Fecha\":\"2024-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T1\", \"Anyo\":2024, \"Valor\":86.656}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/80270?nult=31&tip=A",
+          "version": "tabla 80270"
+        },
+        {
+          "etiqueta": "ventana:2023-T4",
+          "rol": "historical",
+          "serie": "IPV1613",
+          "periodo": "2023-T4",
+          "valor": 82.142,
+          "raw_value_span": "{\"Fecha\":\"2023-10-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T4\", \"Anyo\":2023, \"Valor\":82.142}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/80270?nult=31&tip=A",
+          "version": "tabla 80270"
+        },
+        {
+          "etiqueta": "metodologia",
+          "rol": "methodology",
+          "serie": "IPV1613",
+          "periodo": "1900",
+          "valor": null,
+          "raw_value_span": "\"COD\":\"IPV1613\", \"Nombre\":\"Nacional. Vivienda nueva. Índice. \"",
+          "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=80270",
+          "version": "tabla 80270"
+        }
+      ]
+    },
+    "persistido": true,
+    "duracion_ms": 2515
+  }
+}

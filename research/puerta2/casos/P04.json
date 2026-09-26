@@ -1,0 +1,28 @@
+{
+  "claim_id": "P04",
+  "texto": "«Las cifras de condenados por delitos sexuales llevan aumentando un 10% al año desde 1998»",
+  "fuente_url": "https://maldita.es/malditodato/20200114/es-falso-que-las-cifras-de-condenados-por-delitos-sexuales-lleven-aumentando-un-10-al-ano-desde-1998-como-dice-pedro-sanchez/",
+  "conjunto": "desarrollo",
+  "origen_case_id": "P04",
+  "etiquetas_corpus": {
+    "truth": "contradicted",
+    "context": "divergence_detected",
+    "clase_primaria": "3_absolute_vs_relative",
+    "lote": "auditado_20"
+  },
+  "tipo": "crecimiento_compuesto",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "28724",
+    "serie_nombre": "Total Nacional. Dato base. Por delitos sexuales. ",
+    "unidad": "unidades",
+    "referencia_principal": "anterior",
+    "descripcion": "Personas condenadas por delitos sexuales, total nacional, anual"
+  },
+  "periodo_objetivo": "2018",
+  "periodo_base": "1998",
+  "cambio_afirmado": 10,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "'Un 10% al ano desde 1998' es crecimiento compuesto: fuera de lo que este prototipo evalua (UNSUPPORTED_CLAIM_TYPE). Ademas la tabla Tempus empieza en 2017: 1998 no esta."
+}

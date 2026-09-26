@@ -1,0 +1,160 @@
+{
+  "http": 200,
+  "caso": {
+    "claim_id": "P19",
+    "texto": "«Tenemos el menor paro juvenil de la historia de España»",
+    "fuente_url": "https://www.newtral.es/paro-juvenil-espana-diana-morant-factcheck/20260612/",
+    "conjunto": "desarrollo",
+    "origen_case_id": "P19",
+    "etiquetas_corpus": {
+      "truth": "mixed",
+      "context": "divergence_detected",
+      "clase_primaria": "3_absolute_vs_relative",
+      "lote": "auditado_20"
+    },
+    "tipo": "extremo_historico",
+    "metrica": {
+      "emisor": "INE",
+      "tabla": "65334",
+      "serie_nombre": "Tasa de paro de la población. Ambos sexos. Total Nacional. Menores de 25 años. ",
+      "unidad": "pct",
+      "referencia_principal": "anterior",
+      "descripcion": "EPA, tasa de paro de menores de 25 años, ambos sexos, total nacional"
+    },
+    "periodo_objetivo": "2026-T1",
+    "notas": "'El menor paro juvenil de la historia' es un extremo historico y ademas ambiguo entre tasa y numero absoluto (METRIC_AMBIGUOUS en el corpus). Fuera del prototipo."
+  },
+  "respuesta": {
+    "veredicto": {
+      "claim_id": "P19",
+      "truth": "insufficient_evidence",
+      "context": "undetermined",
+      "clase_primaria": "none",
+      "abstain_reasons": [
+        "UNSUPPORTED_CLAIM_TYPE"
+      ],
+      "tests": [],
+      "comparaciones": [],
+      "numeros_usados": [
+        {
+          "valor": 24.54,
+          "raw_value_span": "{\"Fecha\":\"2026-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T1\", \"Anyo\":2026, \"Valor\":24.54}",
+          "item_id": "INE:EPA452436:2026-T1",
+          "etiqueta": "objetivo"
+        }
+      ],
+      "explicacion": "Sin veredicto: evidencia insuficiente.\nAfirmacion: \"«Tenemos el menor paro juvenil de la historia de España»\"\nFuente (INE, serie EPA452436, \"Tasa de paro de la población. Ambos sexos. Total Nacional. Menores de 25 años.\"): 1T 2026 = 24.54.\nAbstencion: UNSUPPORTED_CLAIM_TYPE (el tipo de afirmacion no esta soportado por el prototipo).\nEvidencia: 10 items, bundle 99bfac5fcc2e.",
+      "bundle_hash": "99bfac5fcc2efa1e12d73b37e5c2890b29e331a773d7a229ce2d1aab91598e0b",
+      "generado_en": "2026-09-26T01:41:44.591003+00:00"
+    },
+    "evidencia": {
+      "bundle_hash": "99bfac5fcc2efa1e12d73b37e5c2890b29e331a773d7a229ce2d1aab91598e0b",
+      "completeness": "complete",
+      "missing_slots": [],
+      "items": [
+        {
+          "etiqueta": "objetivo",
+          "rol": "primary",
+          "serie": "EPA452436",
+          "periodo": "2026-T1",
+          "valor": 24.54,
+          "raw_value_span": "{\"Fecha\":\"2026-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T1\", \"Anyo\":2026, \"Valor\":24.54}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65334?nult=24&tip=A",
+          "version": "tabla 65334"
+        },
+        {
+          "etiqueta": "ventana:2025-T4",
+          "rol": "historical",
+          "serie": "EPA452436",
+          "periodo": "2025-T4",
+          "valor": 23.01,
+          "raw_value_span": "{\"Fecha\":\"2025-10-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T4\", \"Anyo\":2025, \"Valor\":23.01}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65334?nult=24&tip=A",
+          "version": "tabla 65334"
+        },
+        {
+          "etiqueta": "ventana:2025-T3",
+          "rol": "historical",
+          "serie": "EPA452436",
+          "periodo": "2025-T3",
+          "valor": 25.42,
+          "raw_value_span": "{\"Fecha\":\"2025-07-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T3\", \"Anyo\":2025, \"Valor\":25.42}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65334?nult=24&tip=A",
+          "version": "tabla 65334"
+        },
+        {
+          "etiqueta": "ventana:2025-T2",
+          "rol": "historical",
+          "serie": "EPA452436",
+          "periodo": "2025-T2",
+          "valor": 24.54,
+          "raw_value_span": "{\"Fecha\":\"2025-04-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T2\", \"Anyo\":2025, \"Valor\":24.54}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65334?nult=24&tip=A",
+          "version": "tabla 65334"
+        },
+        {
+          "etiqueta": "ventana:2025-T1",
+          "rol": "historical",
+          "serie": "EPA452436",
+          "periodo": "2025-T1",
+          "valor": 26.53,
+          "raw_value_span": "{\"Fecha\":\"2025-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T1\", \"Anyo\":2025, \"Valor\":26.53}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65334?nult=24&tip=A",
+          "version": "tabla 65334"
+        },
+        {
+          "etiqueta": "ventana:2024-T4",
+          "rol": "historical",
+          "serie": "EPA452436",
+          "periodo": "2024-T4",
+          "valor": 24.9,
+          "raw_value_span": "{\"Fecha\":\"2024-10-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T4\", \"Anyo\":2024, \"Valor\":24.9}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65334?nult=24&tip=A",
+          "version": "tabla 65334"
+        },
+        {
+          "etiqueta": "ventana:2024-T3",
+          "rol": "historical",
+          "serie": "EPA452436",
+          "periodo": "2024-T3",
+          "valor": 26.89,
+          "raw_value_span": "{\"Fecha\":\"2024-07-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T3\", \"Anyo\":2024, \"Valor\":26.89}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65334?nult=24&tip=A",
+          "version": "tabla 65334"
+        },
+        {
+          "etiqueta": "ventana:2024-T2",
+          "rol": "historical",
+          "serie": "EPA452436",
+          "periodo": "2024-T2",
+          "valor": 26.58,
+          "raw_value_span": "{\"Fecha\":\"2024-04-01T00:00:00.000+02:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T2\", \"Anyo\":2024, \"Valor\":26.58}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65334?nult=24&tip=A",
+          "version": "tabla 65334"
+        },
+        {
+          "etiqueta": "ventana:2024-T1",
+          "rol": "historical",
+          "serie": "EPA452436",
+          "periodo": "2024-T1",
+          "valor": 27.7,
+          "raw_value_span": "{\"Fecha\":\"2024-01-01T00:00:00.000+01:00\", \"T3_TipoDato\":\"Definitivo\", \"T3_Periodo\":\"T1\", \"Anyo\":2024, \"Valor\":27.7}",
+          "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65334?nult=24&tip=A",
+          "version": "tabla 65334"
+        },
+        {
+          "etiqueta": "metodologia",
+          "rol": "methodology",
+          "serie": "EPA452436",
+          "periodo": "1900",
+          "valor": null,
+          "raw_value_span": "\"COD\":\"EPA452436\", \"Nombre\":\"Tasa de paro de la población. Ambos sexos. Total Nacional. Menores de 25 años. \"",
+          "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=65334",
+          "version": "tabla 65334"
+        }
+      ]
+    },
+    "persistido": true,
+    "duracion_ms": 3697
+  }
+}
