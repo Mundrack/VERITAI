@@ -74,7 +74,7 @@ recommended_thesis_classes:
   - "P-15 CERRADA (DEC-026, 2026-09-25): objeto general = divergencia contextual computable (E); primera familia que se implementa y evalua = comparacion de base: 2a periodo o base elegida (2_baseline_selection), 2b base revisada (2b_base_revisada, codigo nuevo), 2c cambio de metodo (5_methodology_change) (B, 8 de 28); 1_ranking_vs_value como caso ilustrativo (A, 2 de 28); base revisada como subtipo 2b, no como apuesta unica (C)."
   - "Sin caso canonico: C29, C21 y C18 no cumplen los cinco requisitos con un claim divergente. La tesis presenta el par C18 + C29; el canonico sale de la Puerta 2 sobre datos no usados en el piloto."
   - "Encuadre completo (titulo, pregunta, H1-H3, objetivos, definicion operacional, alcance) en docs/TESIS-ENCUADRE.md. El sistema demuestra divergencia, no intencion."
-  - "other_observed es 10 de 28: P-12 sigue abierta y Mateo la revisa antes de la Puerta 2."
+  - "other_observed es 8 de 26 divergencias en alcance (10 de 28 si se cuentan P08 y P09, fuera por DEC-013) y 4 de 21 sin hermanos por criba: P-12 sigue abierta y Mateo la revisa antes de la Puerta 2. Desglose en PREGUNTAS-ABIERTAS.md."
 
 recommended_publishers:
   - "INE (API Tempus): recuperabilidad A, sin rechazo; casos C11, C16, C17 en el crudo y P04, P11, P16, P19 en el auditado (tres con divergencia: baseline y absoluto/relativo). Primer conector."

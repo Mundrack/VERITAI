@@ -194,6 +194,29 @@ familias
 código propio, `2b_base_revisada`. Es el único caso reetiquetado y la familia
 no cambia de tamaño.
 
+`CORRECCIÓN (P-12, 2026-09-25)` La tabla de 28 incluye a **P08 y P09, fuera
+de alcance por DEC-013**. Las proporciones que cuentan son sobre las **26 en
+alcance**, y además sin los hermanos por criba (`pilot40.py`, tabla 5b):
+
+```
+clase primaria                en alcance (26)      sin hermanos (21)
+  other_observed                 8   30,8%            4   19,0%
+  2_baseline_selection (2a)      6   23,1%            6   28,6%
+  3_absolute_vs_relative         5   19,2%            4   19,0%
+  4_denominator                  3   11,5%            3   14,3%
+  1_ranking_vs_value             2    7,7%            2    9,5%
+  5_methodology_change (2c)      1    3,8%            1    4,8%
+  2b_base_revisada               1    3,8%            1    4,8%
+
+familia comparacion de base    8   30,8%            8   38,1%
+magnitud mal leida             8   30,8%            7   33,3%
+other_observed en alcance: P05 P07 P17 C03 C05 C08 C10 C13; hermanos: C03 C05 C08 C13
+```
+
+La mitad de `other_observed` es cobertura hermana de datos ya representados.
+El desglose caso a caso, con lo que cada uno necesitaría para entrar en una
+clase, está en `docs/PREGUNTAS-ABIERTAS.md`, P-12.
+
 Cinco opciones de reencuadre. Ninguna se decide aquí.
 
 | | Opción | A favor | En contra | La sostienen |
