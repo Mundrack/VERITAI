@@ -62,6 +62,12 @@ CAMPOS_ANOTACION = (
     + ["minutes_to_locate", "minutes_to_extract", "cronometrado_por", "etiquetado_por"]
 )
 MECANISMOS = {"", "P17_agregacion_subgrupos", "C10_cambio_sin_edicion_anterior", "otro"}
+# Vias de descubrimiento (DEC-020, DEC-032): las del lote crudo mas `titular_prensa`
+# (via divergencia: titulares con cifra y comparacion propia, primaria despues).
+VIAS = {
+    "busqueda_a_organismo", "titular_prensa", "busqueda_de_rankings",
+    "busqueda_de_encuestas", "busqueda_por_tema", "criba_negativa",
+}
 TIPOS = {"cambio_entre_periodos", "nivel", "umbral", "extremo_historico", "crecimiento_compuesto", "otro"}
 
 
@@ -97,6 +103,8 @@ def validar(marcas: dict) -> list[str]:
             _err(errores, q, f"post_url_tipo invalido: {c.get('post_url_tipo')!r}")
         if c.get("emisor_nivel") not in EMISOR_NIVEL:
             _err(errores, q, f"emisor_nivel invalido: {c.get('emisor_nivel')!r}")
+        if c.get("descubrimiento_via") not in VIAS:
+            _err(errores, q, f"descubrimiento_via fuera de enum: {c.get('descubrimiento_via')!r}")
         urls[c.get("post_url", "")] += 1
         if c.get("post_url", "").strip() in urls_pro or c.get("claim_text", "").strip().lower() in textos_pro:
             _err(errores, q, "esta en el piloto o en la Puerta 2: no entra (DEC-025)")
@@ -251,6 +259,19 @@ def resumen(anotados: list[dict], marcas: dict) -> None:
         print(f"  INE {ine}/{n} = {100 * ine / n:.1f} % (tope 70 %)")
         print("  paises:", dict(Counter(f["pais"] for f in anotados)))
         print("  vias:", dict(Counter(f["descubrimiento_via"] for f in anotados)))
+        # DEC-032: el sesgo de la via se mide, no se infiere
+        print("\n--- cubeta x via de descubrimiento (DEC-032) ---")
+        vias = sorted({f["descubrimiento_via"] for f in anotados})
+        print("  cubeta " + "".join(f"{v[:22]:>24}" for v in vias))
+        for cub in OBJETIVO_CUBETA:
+            fila = [sum(1 for f in anotados if f["cubeta"] == cub and f["descubrimiento_via"] == v) for v in vias]
+            if any(fila):
+                print(f"  {cub:6} " + "".join(f"{k:>24}" for k in fila))
+        div = [f for f in anotados if f["cubeta"] in ("B", "C", "F")]
+        for v in vias:
+            n_v = sum(1 for f in anotados if f["descubrimiento_via"] == v)
+            b_v = sum(1 for f in div if f["descubrimiento_via"] == v)
+            print(f"  {v:24} divergencias/claims falsos {b_v}/{n_v}")
         print("  truth x context:", dict(sorted(Counter((f["truth"], f["context"]) for f in anotados).items())))
         ed = Counter(f["primaria_edicion"] for f in anotados if f["cubeta"] == "A")
         print("  controles por edicion primaria (tope 3):", dict(ed.most_common(8)))

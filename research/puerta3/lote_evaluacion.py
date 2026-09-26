@@ -17,6 +17,19 @@ REGLAS QUE GOBIERNAN ESTE ARCHIVO (research/PUERTA-3-DISENO.md, DEC-031)
     - Los ids: Q### para candidatos (orden de descubrimiento), E### para
       admitidos (orden de admision).
 
+DOS VIAS DE DESCUBRIMIENTO (DEC-032), registradas en `descubrimiento_via`
+    control (A, D)         desde el organismo: nota/tabla -> prensa que la relaya
+                           -> `busqueda_a_organismo`. Produce controles, no divergencias.
+    divergencia (B, C, F)  desde la prensa: titulares con cifra y comparacion propia,
+                           la primaria despues -> `titular_prensa`, `busqueda_de_rankings`,
+                           `busqueda_de_encuestas`, `busqueda_por_tema`, `criba_negativa`.
+    La via no cambia la anotacion: un titular correcto es un control A aunque venga
+    de la via divergencia. El validador imprime cubeta x via.
+
+EMISORES (DEC-032): INE (API Tempus), Interior via el Portal Estadistico de
+    Criminalidad (ses.mir.es, CSV), SEPE; Banco de Espana de reserva. imf.org e
+    interior.gob.es devolvieron 403 al agente identificado: hallazgo, no se evade.
+
 CUBETAS (objetivo / minimo)
     A  controles con test aplicable       50 / 40   supported + no_divergence, cambio con base = referencia
     B  2a esperada                        20 / 15   cambio de signo o valor atribuido a otro periodo

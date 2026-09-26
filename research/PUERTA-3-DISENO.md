@@ -70,12 +70,54 @@ el sistema no falla nunca. **40 es el mínimo** que tolera un falso positivo;
 Reglas de composición: los hermanos por criba cuentan **una vez** y quedan
 marcados; A y B con **≥ 2 emisores** cada una; **≤ 3 controles por nota de
 prensa** del INE (50 controles de la misma nota no son 50 casos); INE **≤ 70 %**
-del conjunto, FMI + Interior ≥ 30 % como objetivo (se declara si no se
+del conjunto, los otros emisores ≥ 30 % como objetivo (se declara si no se
 alcanza; sus conectores llegan después del diseño y los casos se anotan
 igual); España / Latinoamérica sin cuota, desequilibrio declarado (DEC-026).
 Esfuerzo previsto al ritmo de la TAREA 2 (31 casos en una jornada de agente,
 unos 15 min por caso con criba): **cuatro jornadas** de recolección y
 anotación.
+
+**Emisores tras la jornada 1 (DEC-032, cierra P-24).** `imf.org` e
+`interior.gob.es` devolvieron **403** al agente identificado en la primera
+petición (API, HTML y PDF en el FMI; PDF del Balance en Interior). Por DEC-018
+y DEC-021 eso cierra esos casos y **no se evade**; queda como hallazgo escrito
+y los nueve casos bloqueados se quedan en la cubeta E. Sustitución, probada
+con una petición identificada por URL el 2026-09-26: el **Portal Estadístico
+de Criminalidad** (`estadisticasdecriminalidad.ses.mir.es`, CSV y HTML, 200)
+sustituye a `interior.gob.es` como vía de Interior; **SEPE** (HTML, 200) entra
+como tercer emisor en lugar del FMI; el **Banco de España** (HTML y CSV del
+Boletín Estadístico, 200) queda como reserva para claims financieros. Nada de
+acceso formal: no cabe en el calendario.
+
+## 1b. Dos vías de descubrimiento, registradas por caso (DEC-032)
+
+La jornada 1 lo dejó claro: 26 casos, **B = 0**. La recolección iba del
+organismo hacia fuera (nota del INE → prensa que la relaya) y esa vía solo
+produce controles: la prensa que relaya una nota reproduce la comparación del
+emisor. Las divergencias están en la prensa que **interpreta** el dato con su
+propia base, su propio periodo o su propio denominador. Por eso hay dos vías,
+separadas y registradas:
+
+| Vía | Para | Cómo | `descubrimiento_via` |
+|---|---|---|---|
+| **Control** (A, D) | controles con test aplicable, niveles, extremos | desde el organismo: nota o tabla → prensa que la relaya, ≤ 3 por edición. **Funciona; no se toca** | `busqueda_a_organismo` |
+| **Divergencia** (B, C, F) | 2a por signo o por valor de otro periodo, otras clases, claims falsos | desde la prensa, como en la TAREA 2: titulares con cifra y una **comparación propia** ("desde 2019", "frente a <periodo no estándar>", "se dispara / se hunde", "por primera vez desde", "uno de cada", "el doble que", rankings, encuestas), y **después** la primaria y su edición anterior | `titular_prensa` (patrón de comparación), `busqueda_de_rankings`, `busqueda_de_encuestas`, `busqueda_por_tema`, `criba_negativa` |
+
+Reglas: cada caso lleva su `descubrimiento_via` y su `descubrimiento_query`
+(DEC-020) **para que el sesgo de la vía quede medido, no inferido**; el
+validador imprime la tabla cubeta × vía; la vía no cambia la anotación (un
+titular de prensa que resulta correcto es un control A aunque venga de la vía
+divergencia, y se cuenta como tal); la criba y el cronómetro son los mismos
+en las dos vías.
+
+**Tasas de referencia para proyectar B**, del lote crudo del piloto (31 casos
+recolectados desde la prensa, etiquetas del corpus): B (2a) 3 de 31 = 9,7 %,
+C 5 de 31 = 16 %, F 2 de 31 = 6,5 %, controles 13 de 31. De los 3 B, 2
+salieron de la vía organismo y 1 de la criba negativa; bajo la regla de
+DEC-029 (solo signo o valor de otro periodo confirman) la tasa de B es menor
+o igual que esa. La proyección por jornada se reporta a Mateo antes de gastar
+más jornadas; si B no puede llegar a 15 con el tope, el conjunto no sirve para
+H1 y se replantea (§3).
 
 ## 2. Criterio de reaparición de P17 y C10, escrito antes de ver los datos
 

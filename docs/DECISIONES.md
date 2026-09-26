@@ -938,3 +938,43 @@ existan. **La revisión intermedia se reporta a Mateo al llegar, no al final.**
 **Alternativa descartada.** Esperar a tener segundo anotador para recolectar.
 Bloquearía la Puerta 3 por una condición que no depende del proyecto; la
 limitación queda declarada por adelantado, que es lo que evita la sorpresa.
+
+---
+
+## DEC-032 · Dos vías de descubrimiento; el FMI e interior.gob.es salen por 403 y entran el Portal de Criminalidad y el SEPE
+
+**Fecha:** 2026-09-26 · **Estado:** vigente · **Decide:** Mateo · **Cierra:** P-24 · **Modifica:** DEC-024 (emisores) y el diseño de la Puerta 3 (§1, §1b)
+
+**Contexto.** Jornada 1 de la Puerta 3: 26 casos trabajados y **cubeta B en
+0**. La recolección iba del organismo hacia fuera y eso produce controles: la
+prensa que relaya una nota copia la comparación del emisor. Además `imf.org`
+e `interior.gob.es` devolvieron 403 al agente identificado.
+
+**Decisión.**
+
+1. **Dos vías, separadas y registradas.** Vía control (A, D): desde el
+   organismo; funciona y no se toca. Vía divergencia (B, C, F): desde la
+   prensa, titulares con cifra y comparación propia, y la primaria después,
+   como en la TAREA 2. Cada caso lleva `descubrimiento_via` y
+   `descubrimiento_query` (DEC-020) y el validador imprime cubeta × vía: **el
+   sesgo de la vía se mide, no se infiere.** Valor nuevo del enum:
+   `titular_prensa`.
+2. **P-24, opción 2 (sustituir), probada antes de decidir:** una petición
+   identificada por URL el 2026-09-26. Portal Estadístico de Criminalidad
+   (`ses.mir.es`): 200 en CSV y HTML → **sustituye a `interior.gob.es`** como
+   vía de Interior. SEPE: 200 → **tercer emisor en lugar del FMI**. Banco de
+   España: 200 en HTML y CSV → reserva. Nada de acceso formal.
+3. **Los 403 de `imf.org` e `interior.gob.es` quedan como hallazgo escrito**,
+   consistentes con DEC-021: no se evade nada, los nueve casos bloqueados se
+   quedan en la cubeta E y cuentan en la métrica de recuperabilidad.
+4. **`methodology_found` se queda en `NEEDS_REVIEW`** y se resuelve en una
+   pasada aparte al final, no caso a caso.
+5. **Regla de parada añadida:** con las dos vías escritas, el agente para y
+   reporta la proyección de B por jornada. **Si B no alcanza 15 con el tope,
+   el conjunto no sirve para evaluar H1 y se replantea antes de gastar más
+   jornadas.**
+
+**Alternativas descartadas.** (a) Seguir solo desde el organismo y esperar
+que aparezcan divergencias: la jornada 1 demuestra que no aparecen. (b)
+Contar como B las señales de horizonte para llenar la cubeta: contradice
+DEC-029. (c) Pedir acceso al FMI: lento, fuera de calendario.

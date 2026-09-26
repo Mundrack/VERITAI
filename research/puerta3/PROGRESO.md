@@ -99,3 +99,28 @@ Estado del lote al parar (salida de `validar_evaluacion.py`, ver bitácora):
 
 Rechazados: Q003 (duplicado), Q006 (Newtral 2026-09-18), Q010 (duplicado),
 Q021 y Q022 (explainer de Newtral 2026-06-04 sobre la ECV 2025).
+
+## Proyección de B por jornada (2026-09-26, tras DEC-032; antes de la jornada 2)
+
+Base: lote crudo del piloto (31 casos desde la prensa): B 3/31 = 9,7 %, C
+5/31 = 16 %, F 2/31 = 6,5 %; bajo DEC-029 (solo signo o valor de otro
+periodo) B ≤ 9,7 %, se toma 6–10 %. Ritmo de la vía divergencia: 25–35 casos
+admitidos por jornada de 4 h (cada candidato exige 2–3 búsquedas: descubrimiento
+y dos cribas), frente a los 20+/h de la vía organismo.
+
+```
+                         por jornada        3,3 jornadas restantes
+B sin dirigir (piloto)   2-3                7-10        < 15
+B dirigido (patrones §1b, supuesto x2, NO medido)  4-6   13-20  >= 15 solo si el x2 se cumple
+C                        4-5                13-17       ~ objetivo
+F                        2                  6-7         ok
+```
+
+Cuello adicional: el tope de 200 búsquedas por sesión cubre 70–90 candidatos,
+es decir, unas 2 jornadas de vía divergencia por sesión.
+
+Propuesta al parar: **jornada 2 = una jornada de vía divergencia dirigida,
+como medición**. Si al cerrarla B ≥ 4, la proyección sostiene 15 y se sigue;
+si B ≤ 2, se replantea antes de gastar más (ampliar el tope en 2 jornadas, o
+bajar el mínimo de B a 10 con intervalo declarado, o ambas). No se cuenta la
+señal de horizonte como B (DEC-029).

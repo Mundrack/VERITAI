@@ -258,9 +258,9 @@ el total que usó el PDF. Se coteja contra `research/evidencia/` (PDF y
 respuesta cruda), se anota el resultado en `PUERTA-2-CASOS.md` §4 y en el
 corpus, y se cierra aquí. Mientras tanto P11 lleva `NEEDS_REVIEW` y no se cita.
 
-### P-24 · El FMI y el Ministerio del Interior rechazan al agente identificado
+### P-24 · El FMI y el Ministerio del Interior rechazan al agente identificado — CERRADA (DEC-032)
 
-**Estado:** abierto desde la jornada 1 de la Puerta 3 (2026-09-26) · **Bloquea:** la cubeta A fuera del INE y los conectores de FMI e Interior · **Decide:** Mateo
+**Estado:** cerrada el 2026-09-26 · **Decisión:** opción (b), probada con una petición identificada por URL: el Portal Estadístico de Criminalidad (200, CSV) sustituye a `interior.gob.es`; el SEPE (200) entra como tercer emisor en lugar del FMI; el Banco de España (200) queda de reserva. Los 403 se quedan como hallazgo, sin evadir nada. Lo que sigue es el planteamiento original.
 
 `imf.org` devolvió 403 al agente identificado en la API datamapper, en las
 páginas HTML del WEO y en el PDF (E007); `interior.gob.es` devolvió 403 al
@@ -342,6 +342,7 @@ No bloquea nada. Evita rehacer.
 | P-12 | ¿Reabrir las clases 6 y 7? | **No.** Tras el desglose: P05 → 2a, P07 → 4, C13 → 2a; C03 → sin divergencia (lectura alternativa); C05 → abstención con dos motivos; C08 se queda; P17 y C10 candidatas con criterio de reaparición, sin clase con n=1. Ver DEC-027 | 2026-09-25 |
 | P-21 | ¿La magnitud ≥ 2× del test 2a es divergencia en bases de horizonte largo? | **No por sí sola.** Señal de horizonte, registrada y explicada, sin contar como divergencia; solo el cambio de signo confirma 2a. N01, N03, N04 → señal. Ver DEC-029 | 2026-09-25 |
 | P-22 | ¿`undetermined` o `no_divergence_detected` sin test aplicable? | **`undetermined`.** El sistema tenía razón; se corrige la etiqueta del corpus (C11) y se anota como hallazgo. FPR sobre controles con test aplicable. Ver DEC-029 | 2026-09-25 |
+| P-24 | El FMI e interior.gob.es devuelven 403 al agente identificado | **Sustituir, sin evadir:** Portal Estadístico de Criminalidad por interior.gob.es, SEPE por el FMI, Banco de España de reserva; los 403 quedan como hallazgo (DEC-021). Ver DEC-032 | 2026-09-26 |
 | — | Geografía del lote nuevo (D2 de la adenda) | **Opción A**: español en general, sin cuota geográfica. Cerrada en `00b` | antes del 2026-09-08 |
 | — | ¿Framework en el panel web? | **No.** TypeScript vanilla, por coherencia con el stack cerrado en R02 §5. Ver DEC-008 | 2026-09-08 |
 | — | ¿Alembic o runner propio? | **Runner propio**, por portabilidad a `supabase db push`. Ver DEC-006 | 2026-09-08 |
