@@ -144,8 +144,11 @@ def validar(marcas: dict) -> list[str]:
         if cub == "B" and not (ctx == "divergence_detected" and cl == "2_baseline_selection"):
             _err(errores, e, "cubeta B exige divergence_detected + 2_baseline_selection")
         if cub == "C" and not (ctx == "divergence_detected" and cl in
-                               {"3_absolute_vs_relative", "4_denominator", "5_methodology_change", "1_ranking_vs_value"}):
-            _err(errores, e, "cubeta C exige divergence_detected con clase 3, 4, 2c o 1")
+                               {"3_absolute_vs_relative", "4_denominator", "5_methodology_change",
+                                "2b_base_revisada", "1_ranking_vs_value"}):
+            _err(errores, e, "cubeta C exige divergence_detected con clase 3, 4, 2b, 2c o 1")
+        if cub == "O" and not (ctx == "divergence_detected" and cl == "other_observed" and c["mecanismo_candidato"]):
+            _err(errores, e, "cubeta O exige divergence_detected + other_observed + mecanismo_candidato")
         if cub == "D" and not (ctx == "undetermined" and est and est.get("tipo") != "cambio_entre_periodos"):
             _err(errores, e, "cubeta D exige undetermined y un tipo sin test aplicable")
         if cub == "E" and not (c["current_edition_found"] == "no" or c["previous_edition_found"] == "no"
@@ -232,7 +235,10 @@ def resumen(anotados: list[dict], marcas: dict) -> None:
     por = Counter(f["cubeta"] for f in anotados)
     indep = Counter(f["cubeta"] for f in anotados if not f["hermano_de"])
     for cub, (obj, mn) in OBJETIVO_CUBETA.items():
-        estado = "OK" if indep[cub] >= obj else ("min" if indep[cub] >= mn else "FALTA")
+        if obj == 0:
+            estado = "sin objetivo"
+        else:
+            estado = "OK" if indep[cub] >= obj else ("min" if indep[cub] >= mn else "FALTA")
         print(f"  {cub}  {por[cub]:3} ({indep[cub]:3})  objetivo {obj:3}  minimo {mn:3}   {estado}")
     print(f"  total {n} ({sum(indep.values())})  objetivo {sum(o for o, _ in OBJETIVO_CUBETA.values())}  "
           f"minimo {sum(m for _, m in OBJETIVO_CUBETA.values())}")
@@ -254,7 +260,14 @@ def resumen(anotados: list[dict], marcas: dict) -> None:
             print(f"  cronometro por caso (localizar+extraer): media {sum(mins) / len(mins):.1f} min, max {max(mins):.1f}")
     ini = marcas.get(MARCA_INICIO, {}).get("t0")
     if ini:
-        horas = (dt.datetime.now(dt.timezone.utc) - ini).total_seconds() / 3600
+        ahora = dt.datetime.now(dt.timezone.utc)
+        # Pausas: marcas P3-PAUSA* con t0 (inicio) y t2 (fin); una pausa abierta llega hasta ahora.
+        pausas = 0.0
+        for cid, h in marcas.items():
+            if cid.startswith("P3-PAUSA") and "t0" in h:
+                pausas += (h.get("t2", ahora) - h["t0"]).total_seconds() / 3600
+        horas = (ahora - ini).total_seconds() / 3600 - pausas
+        print(f"\n  pausas descontadas: {pausas:.2f} h")
         ritmo = n / horas if horas > 0 else 0
         tope = TOPE_JORNADAS * JORNADA_HORAS
         print(f"\n--- reloj de recoleccion: {horas:.1f} h de {tope:.0f} h (jornada = {JORNADA_HORAS:.0f} h; "
