@@ -71,13 +71,15 @@ conocerlo antes de escribir el sistema, no después.
 | [`PILOT-FINDINGS.md`](PILOT-FINDINGS.md) | TAREA 3 — las cinco métricas de R02 §7, comparación con el lote sesgado, **amenazas a la validez**, alcance honesto, P-15 con cinco opciones, Perú/bloqueo, humano vs agente (**pendiente**) | **entregado** 2026-09-25 |
 | [`PILOT-FAILURES.md`](PILOT-FAILURES.md) | TAREA 3 — catálogo de fallos con casos y lo que piden del prototipo | **entregado** 2026-09-25 |
 | [`PILOT-DECISION.md`](PILOT-DECISION.md) | TAREA 3 — **`PILOT_GO` con alcance declarado a nivel 1**. **Ratificado por Mateo** (DEC-023); alcance y emisores aprobados (DEC-024). Humano/agente pendiente (P-20) | **entregado y ratificado** 2026-09-25 |
-| [`PUERTA-2-CASOS.md`](PUERTA-2-CASOS.md), `puerta2/` | **Puerta 2** — prototipo de una clase (2a) y un emisor (INE) sobre 10 casos de **desarrollo**: casos JSON, ejecutor, resultados con spans, trazabilidad caso a caso, hallazgos (P-21, P-22) | **entregado** 2026-09-25, cierre pendiente de ratificar |
+| [`PUERTA-2-CASOS.md`](PUERTA-2-CASOS.md), `puerta2/` | **Puerta 2** — prototipo de una clase (2a) y un emisor (INE) sobre 10 casos de **desarrollo**: casos JSON, ejecutor, resultados con spans, trazabilidad caso a caso, decisiones (DEC-029) | **entregado**; Puerta 2 **cerrada** 2026-09-25 (DEC-030) |
+| [`PUERTA-3-DISENO.md`](PUERTA-3-DISENO.md) | **Puerta 3** — diseño del conjunto de evaluación: tasa de H3, 50 controles con test aplicable (mín. 40) justificados por intervalo, cubetas A–F, criterio de reaparición, regla de parada | **propuesta**, pendiente de aprobación; no se recolecta |
 
 ---
 
 ## Puerta 2
 
-Superada la Puerta 1, esta carpeta también guarda el material de la Puerta 2:
+**Cerrada (DEC-030, 2026-09-25)**, con P11 en `NEEDS_REVIEW` como condición
+anotada (P-23). Esta carpeta guarda el material de la Puerta 2:
 `puerta2/casos/*.json` (los 10 claims estructurados a mano), `puerta2/ejecutar_casos.py`
 (los corre contra `POST /analisis` y escribe `resultados/`, `resultados.csv`,
 `resultados.md`) y el informe [`PUERTA-2-CASOS.md`](PUERTA-2-CASOS.md). Los tres
