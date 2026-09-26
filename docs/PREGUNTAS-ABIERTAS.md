@@ -258,6 +258,32 @@ el total que usó el PDF. Se coteja contra `research/evidencia/` (PDF y
 respuesta cruda), se anota el resultado en `PUERTA-2-CASOS.md` §4 y en el
 corpus, y se cierra aquí. Mientras tanto P11 lleva `NEEDS_REVIEW` y no se cita.
 
+### P-24 · El FMI y el Ministerio del Interior rechazan al agente identificado
+
+**Estado:** abierto desde la jornada 1 de la Puerta 3 (2026-09-26) · **Bloquea:** la cubeta A fuera del INE y los conectores de FMI e Interior · **Decide:** Mateo
+
+`imf.org` devolvió 403 al agente identificado en la API datamapper, en las
+páginas HTML del WEO y en el PDF (E007); `interior.gob.es` devolvió 403 al
+PDF del Balance de Criminalidad (E025). Por DEC-018 y DEC-021 eso cierra el
+caso y **no se evade**. La DGT (también Interior) sí sirvió su PDF de 2026,
+pero su listado no enlaza las notas de 2025 (E026). Consecuencia: **de los
+tres emisores de DEC-024 solo el INE es recuperable-por-agente hoy**; nueve
+casos ya trabajados están en la cubeta E por bloqueo. Opciones:
+
+- **(a) Dejarlo como hallazgo** y seguir con el INE como único emisor de la
+  cubeta A, declarando que el alcance real de nivel 1 es "organismos con API
+  abierta al agente identificado". H3 se mide igual; H2 pierde dos emisores.
+- **(b) Sustituir** FMI e Interior por emisores de nivel 1 que respondan al
+  agente (a comprobar con una petición cada uno antes de recolectar: por
+  ejemplo el Portal Estadístico de Criminalidad en `ses.mir.es`, que sirve
+  CSV y no se probó; SEPE; Banco de España; INEGI, INDEC, DANE, INEC para
+  Latinoamérica).
+- **(c) Pedir acceso** al FMI (su API tiene términos de uso) y a Interior por
+  la vía formal; mientras tanto, (a).
+
+Sea cual sea, los nueve casos bloqueados se quedan en el conjunto: son la
+medida de la métrica que manda (edición anterior localizada) y no se maquillan.
+
 ### P-05 · Segundo anotador
 
 **Estado:** abierto desde el paquete · **Bloquea:** cerrar el corpus (Puerta 3)

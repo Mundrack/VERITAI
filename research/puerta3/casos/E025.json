@@ -1,0 +1,22 @@
+{
+  "claim_id": "E025",
+  "texto": "Aumento de la Criminalidad en España: Homicidios Suben un 10% y Agresiones Sexuales un 3,8% en 2026",
+  "fuente_url": "https://www.madridactual.es/nacional/criminalidad-sube-espana-aumento-homicidios-10-agresiones-20260604-8105146.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "Interior",
+    "tabla": "Balance de Criminalidad",
+    "serie_nombre": "Homicidios dolosos y asesinatos consumados. Total Nacional.",
+    "unidad": "unidades",
+    "referencia_principal": "interanual",
+    "descripcion": "Balance de Criminalidad, homicidios dolosos y asesinatos consumados, total nacional, trimestral"
+  },
+  "periodo_objetivo": "2026-T1",
+  "periodo_base": "2025-T1",
+  "cambio_afirmado": 10,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Emisor sin conector y bloqueado al agente: sin veredicto hoy."
+}

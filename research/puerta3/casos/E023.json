@@ -1,0 +1,19 @@
+{
+  "claim_id": "E023",
+  "texto": "Los costes laborales y los salarios suben en el segundo trimestre del año hasta cifras récord en 26 años",
+  "fuente_url": "https://www.elespanol.com/invertia/economia/empleo/20260917/costes-laborales-salarios-suben-segundo-trimestre-cifras-record-anos/1003744386555_0.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "extremo_historico",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "6030",
+    "serie_nombre": "Industria, construcción y servicios (excepto actividades de los hogares como empleadores y de organizaciones y organismos extraterritoriales). Coste laboral total. Total. Total Nacional. Costes laborales. Euros. ",
+    "unidad": "euros",
+    "referencia_principal": "interanual",
+    "descripcion": "ETCL, coste laboral total por trabajador y mes, total nacional, trimestral"
+  },
+  "periodo_objetivo": "2026-T2",
+  "valor_objetivo": 3388.15,
+  "notas": "Extremo historico: sin test aplicable en el prototipo."
+}

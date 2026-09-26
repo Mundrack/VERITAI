@@ -1,0 +1,22 @@
+{
+  "claim_id": "E016",
+  "texto": "La producción industrial modera su avance en julio al 2,6% y suma cinco meses de alzas",
+  "fuente_url": "https://forbes.es/ultima-hora/1015903/la-produccion-industrial-modera-su-avance-en-julio-al-26-y-suma-cinco-meses-de-alzas/",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "60272",
+    "serie_nombre": "Total Nacional. Total industria. Índice. ",
+    "unidad": "indice",
+    "referencia_principal": "interanual",
+    "descripcion": "IPI, indice general (total industria), serie original, mensual"
+  },
+  "periodo_objetivo": "2026-M07",
+  "periodo_base": "2025-M07",
+  "cambio_afirmado": 2.6,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Control: base = interanual, referencia del emisor; serie original, que es la que cita el claim."
+}

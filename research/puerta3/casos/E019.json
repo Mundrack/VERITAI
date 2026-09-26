@@ -1,0 +1,23 @@
+{
+  "claim_id": "E019",
+  "texto": "Las pernoctaciones hoteleras suben un 1,4% en agosto y superan los 48,7 millones tras el impulso internacional",
+  "fuente_url": "https://forbes.es/ultima-hora/1025617/las-pernoctaciones-hoteleras-suben-un-14-en-agosto-y-superan-los-487-millones-tras-el-impulso-internacional/",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "36570",
+    "serie_nombre": "Nacional. Pernoctaciones. Total categorías. Total.",
+    "unidad": "pernoctaciones",
+    "referencia_principal": "interanual",
+    "descripcion": "EOH, pernoctaciones en establecimientos hoteleros, total nacional, mensual"
+  },
+  "periodo_objetivo": "2026-M08",
+  "periodo_base": "2025-M08",
+  "valor_objetivo": 48798426,
+  "cambio_afirmado": 1.4,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Control: base = interanual, referencia del emisor. OJO: el nombre de la serie no lleva espacio final."
+}

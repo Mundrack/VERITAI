@@ -21,11 +21,13 @@ PUERTA 2   prototipo end-to-end, UNA clase y UN emisor,      CERRADA 2026-09-25 
            sin LLM en ningun paso (DEC-028)                    P11 en NEEDS_REVIEW (P-23),
            nada del piloto evalua (DEC-025)                    no se cita hasta cotejarlo
 
-PUERTA 3   corpus completo anotado + arnes de evaluacion     <-- AQUI, sin recolectar:
-           conjunto de evaluacion recolectado aparte (DEC-025)  diseno del conjunto PROPUESTO
-           diseno: research/PUERTA-3-DISENO.md                 (pendiente de aprobar);
-           arnes: rama feat/arnes-evaluacion                   arnes en paralelo;
-                                                               conectores FMI/Interior despues
+PUERTA 3   corpus completo anotado + arnes de evaluacion     <-- AQUI, recoleccion EN CURSO:
+           diseno APROBADO (DEC-031): research/PUERTA-3-DISENO.md   26 casos trabajados (A 11 de 50,
+           arnes: research/arnes/ (fusionado)                   E 11, D 3, O 1) en 0,7 h de 16;
+           recoleccion: research/puerta3/ (rama                revision intermedia ANTICIPADA:
+           feat/puerta-3-recoleccion, sin fusionar)             imf.org e interior.gob.es dan 403
+                                                               al agente (P-24) y el tope de
+                                                               busquedas web de la sesion se agoto
 
 PUERTA 4   evaluacion completa: metricas, ablacion,
            sondas contrafactuales

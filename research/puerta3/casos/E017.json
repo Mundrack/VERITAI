@@ -1,0 +1,23 @@
+{
+  "claim_id": "E017",
+  "texto": "España supera los 58 millones de turistas hasta julio, un 4,6% más",
+  "fuente_url": "https://bilbaohiria.com/actualidad/espana-record-turismo-frontur-58-millones-2026/",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "75722",
+    "serie_nombre": "Turista. Total Nacional. Acumulado en lo que va de año. ",
+    "unidad": "personas",
+    "referencia_principal": "interanual",
+    "descripcion": "FRONTUR, turistas internacionales, acumulado enero-mes, total nacional"
+  },
+  "periodo_objetivo": "2026-M07",
+  "periodo_base": "2025-M07",
+  "valor_objetivo": 58106406,
+  "cambio_afirmado": 4.6,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Control: acumulado contra acumulado del ano anterior, referencia del emisor. El claim redondea 58,1 M a '58 millones'."
+}

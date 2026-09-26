@@ -1,0 +1,23 @@
+{
+  "claim_id": "E024",
+  "texto": "El coste laboral aumentó un 3,1% en la Región en el segundo trimestre: 2.900€ por trabajador y mes",
+  "fuente_url": "https://www.murciadiario.com/actualidad-economica/murcia-economia-regional/coste-laboral/20260917103342149294.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "6061",
+    "serie_nombre": "Murcia, Región de. Industria, construcción y servicios (excepto actividades de los hogares como empleadores y de organizaciones y organismos extraterritoriales). Coste laboral total. Costes laborales. Euros. ",
+    "unidad": "euros",
+    "referencia_principal": "interanual",
+    "descripcion": "ETCL, coste laboral total por trabajador y mes, Region de Murcia, trimestral"
+  },
+  "periodo_objetivo": "2026-T2",
+  "periodo_base": "2025-T2",
+  "valor_objetivo": 2900,
+  "cambio_afirmado": 3.1,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Control regional: base = interanual, referencia del emisor."
+}

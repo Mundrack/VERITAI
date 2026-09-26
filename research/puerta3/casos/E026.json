@@ -1,0 +1,24 @@
+{
+  "claim_id": "E026",
+  "texto": "240 muertos en carreteras en verano 2026, diez más que en 2025: el balance de la DGT que alerta del aumento de accidentes",
+  "fuente_url": "https://www.moncloa.com/2026/09/07/muertos-carreteras-verano-2026-dgt-3427559/",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "Interior",
+    "tabla": "DGT balance verano",
+    "serie_nombre": "Fallecidos en vias interurbanas, julio y agosto",
+    "unidad": "personas",
+    "referencia_principal": "interanual",
+    "descripcion": "DGT, fallecidos en siniestros de trafico en vias interurbanas durante julio y agosto, por verano"
+  },
+  "periodo_objetivo": "2026",
+  "periodo_base": "2025",
+  "valor_objetivo": 240,
+  "valor_base": 230,
+  "cambio_afirmado": 10,
+  "unidad_cambio": "abs",
+  "direccion_afirmada": "sube",
+  "notas": "Periodos anuales (verano de cada ano). Emisor sin conector."
+}

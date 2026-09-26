@@ -1,0 +1,19 @@
+{
+  "claim_id": "E020",
+  "texto": "Los hoteles disparan sus precios en agosto: una habitación cuesta ya 167 euros de media",
+  "fuente_url": "https://www.democrata.es/economia/hoteles-precios-agosto-2026-habitacion-167-euros-pernoctaciones/",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "nivel",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "2059",
+    "serie_nombre": "ADR. Nacional. Dato.",
+    "unidad": "euros",
+    "referencia_principal": "interanual",
+    "descripcion": "IRSH, tarifa media diaria (ADR) por habitacion ocupada, nacional, mensual"
+  },
+  "periodo_objetivo": "2026-M08",
+  "valor_objetivo": 167,
+  "notas": "Nivel redondeado (166,9 -> 167). Sin test aplicable. Nombre de serie sin espacio final."
+}

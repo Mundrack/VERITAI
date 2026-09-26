@@ -854,3 +854,63 @@ salvo `--desarrollo`), probado en humo sobre los 10 de la Puerta 2.
 - Fusionar `docs/cierre-puerta-2` y `feat/arnes-evaluacion` cuando lo diga
 - Conectores de FMI e Interior, después del diseño
 - P-23 (P11), P-20 (5 casos), P-05 (segundo anotador: el diseño propone 25 %)
+
+---
+
+## 2026-09-26 — Puerta 3, jornada 1: 26 casos y revisión intermedia anticipada
+
+### Qué se hizo
+
+Mateo aprobó el diseño (DEC-031) y pidió recolectar con el tope de cuatro
+jornadas y aviso en la revisión intermedia. En `feat/puerta-3-recoleccion`:
+infraestructura (`lote_evaluacion.py`, `validar_evaluacion.py` con cubetas,
+tope de 3 controles por edición, DEC-025 por URL y texto, pausas descontadas
+del reloj; `ine_buscar.py`), tres barridos dirigidos a organismo, criba (a) y
+(b) para 26 admitidos, y **26 casos trabajados con cronómetro** (E001–E026).
+Todo en `research/puerta3/`; estado y orden de reanudación en `PROGRESO.md`.
+
+### Números al parar (`validar_evaluacion.py`)
+
+```
+candidatos 31 · admitidos 26 · rechazados 5 (2 duplicados, 1 verificacion directa, 2 explainer)
+cubetas   A 11/50 (min 40) · B 0/20 · C 0/15 · D 3/10 · E 11/10 · F 0/5 · O 1 (P17)
+emisor    INE 15 (57,7 %) · FMI 9 · Interior 1 · DGT 1        paises ES 18 · CL 3 · AR 2 · MX 2 · EC 1
+truth x context   supported/no_div 21 · supported/undetermined 4 · mixed/div 1
+reloj     0,7 h de 16 (pausas descontadas) · cronometro por caso media 1,3 min, max 6,5
+```
+
+### Dos bloqueos, por eso se para antes de las 8 h
+
+- **`imf.org` devuelve 403 al agente identificado en API, HTML y PDF** (E007,
+  una petición por vía) e **`interior.gob.es` devuelve 403 al PDF del Balance**
+  (E025). DEC-021: cierra el caso. Los ocho casos del FMI y el de Interior
+  quedan en la cubeta E como bloqueados, con anotación humana desde los PDF que
+  llegaron por otro cliente (no cuentan para el agente). La DGT sirve su PDF
+  de 2026 pero no enlaza 2025 (E026, edición anterior no localizable). **Dos
+  de los tres emisores de DEC-024 no son recuperables-por-agente**: hoy solo
+  el INE alimenta la cubeta A. Se abre **P-24**.
+- **El presupuesto de búsquedas web de la sesión se agotó (200 de 200).** Sin
+  búsqueda no hay criba, y sin criba no se admite nada (DEC-018). Tres
+  candidatos del INE quedaron sin cribar y no se registran como admitidos.
+
+### Hallazgos menores registrados en los casos
+
+- E002: "la compraventa de viviendas" −6,1 % es la de segunda mano (total
+  −5,1 %): mecanismo candidato P17, primera aparición del conjunto de
+  evaluación (N01 era desarrollo).
+- E016: el 2,6 % del IPI es la serie original; la nota titula con la corregida
+  (2,3). Dos cifras del mismo emisor, ambas publicadas.
+- E006: "el INE revisa a la baja sus previsiones" es una revisión
+  avance→definitivo (2,7 → 2,6): territorio 2b, sin test, `undetermined`.
+- ETCL: las tablas 6067/6070 son retrospectivas 2000–2007; dos marcas `t2`
+  erróneas quedaron en el cronómetro y se corrigieron con marcas posteriores
+  (manda la última). El "récord en 26 años" (E023) exige juntar dos bases.
+- `methodology_found` está en `no` con `NEEDS_REVIEW` en todos los INE: no se
+  buscó la nota metodológica en esta pasada.
+
+### Qué quedó pendiente
+
+- Mateo: P-24 (FMI e Interior bloqueados: quitar, sustituir o dejar como
+  hallazgo) y si se levanta el tope de búsquedas para seguir recolectando
+- Reanudar con `P3-PAUSA2 t2`; el orden está en `PROGRESO.md`
+- Fusionar `feat/puerta-3-recoleccion` cuando Mateo lo diga

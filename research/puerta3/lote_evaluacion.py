@@ -418,11 +418,52 @@ CANDIDATOS: list[dict] = [
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
         descubrimiento_via="busqueda_a_organismo",
         descubrimiento_query="DGT balance verano 2026 fallecidos carreteras '%' respecto a 2025 noticia septiembre 2026",
-        # PENDIENTE de trabajar. Primaria: DGT (Interior) nota 2026-09-07 (PDF) 240 vs 230 (+10, +4%).
-        # Dvuelta (asociacion, no verificador) senala que la nota DGT de 2025-09-03 decia 228: base
-        # consolidada vs provisional. Patron C18 (2b latente en la primaria; el claim relaya): por
-        # el precedente de DEC-026 se anotaria A con la revision registrada en notas. A decidir al
-        # trabajarlo; Mateo lo ve en la muestra a ciegas.
+        collected_at="2026-09-26", case_id="E026",
+        # --- trabajo 2026-09-26 (E026 t0 13:12:36Z, t1 13:12:41Z, t2 13:15:01Z) ---
+        fuente_primaria="DGT (Ministerio del Interior) - nota de prensa 'Balance verano 2026' (2026-09-07, PDF); edicion anterior: nota DGT verano 2025 (2025-09-03), NO localizada por el agente",
+        primaria_url="https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/nota_prensa/2026/20260907-240-fallecidos-verano-2026/nota-de-prensa.pdf",
+        primaria_url_tipo="PDF de nota de prensa en dgt.es (HTTP 200 al agente identificado); el listado de notas solo enlaza 2026 (categorias Balances y fallecidos sin 2025)",
+        via_de_acceso="pdf", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="no",
+        historical_series_found="no", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="C", formato="pdf",
+        dato_actual="verano 2026 (julio y agosto): 218 siniestros mortales, 240 fallecidos en vias interurbanas, '+4% (+10)' respecto al verano anterior; 926 hospitalizados (-10%); usuarios vulnerables -12%",
+        dato_anterior="verano 2025: 230 fallecidos, IMPLICITO en la nota de 2026 (240 - 10); la nota DGT de 2025-09-03 (que segun Dvuelta decia 228) no se localizo desde el listado de la DGT",
+        raw_value_span_actual=(
+            "[DGT, nota 2026-09-07, PDF p.2] 'Durante los meses de julio y agosto se han registrado 218 "
+            "siniestros mortales en carretera en los que han fallecido 240' | 'con el verano pasado, supone un "
+            "aumento del 4% de las victimas mortales (+10)' | [p.4] 'el verano finaliza con 240 fallecidos en "
+            "las carreteras, una cifra muy similar a la registrada en los dos ultimos veranos' || [Moncloa.com "
+            "2026-09-07, el claim] '240 muertos en carreteras en verano 2026, diez mas que en 2025: el balance "
+            "de la DGT que alerta del aumento de accidentes'"
+        ),
+        raw_value_span_anterior="NO LOCALIZADA por el agente: sin span de la nota 2025. Referencia externa (no verificador): Dvuelta afirma que la nota de 2025-09-03 decia 228",
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="localizar", bucket_resultado="edicion_anterior_no_localizable", excedente="no",
+        notas=(
+            "Cubeta E: edicion anterior no localizable por el agente. dgt.es sirvio el PDF de 2026 (200) pero "
+            "su listado de notas (y las categorias Balances/fallecidos) solo enlaza 2026; dos patrones de URL "
+            "de 2025 dieron 404; se abandono la localizacion a los ~2,5 min (tope por caso). Un humano la "
+            "localiza por buscador (Dvuelta la cita). El claim relaya la comparacion de la DGT (240 vs 230, "
+            "+10): supported / no_divergence, patron C18: si la nota de 2025 decia 228 (provisional) y la de "
+            "2026 usa 230 (consolidado), la comparacion provisional-vs-consolidado infraestima la subida (+5,3% "
+            "vs +4%): 2b LATENTE en la primaria, no en el claim; se registra para la muestra a ciegas de Mateo. "
+            "Sin conector de Interior/DGT: sin veredicto hoy."
+        ),
+        cubeta="E", hermano_de="", mecanismo_candidato="", primaria_edicion="DGT verano 2026",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="Interior", tabla="DGT balance verano",
+                         serie_nombre="Fallecidos en vias interurbanas, julio y agosto",
+                         unidad="personas", referencia_principal="interanual",
+                         descripcion="DGT, fallecidos en siniestros de trafico en vias interurbanas durante julio y agosto, por verano"),
+            periodo_objetivo="2026", periodo_base="2025",
+            valor_objetivo=240, valor_base=230, cambio_afirmado=10, unidad_cambio="abs", direccion_afirmada="sube",
+            notas="Periodos anuales (verano de cada ano). Emisor sin conector.",
+        ),
     ),
     dict(
         cid="Q010",
@@ -615,10 +656,45 @@ CANDIDATOS: list[dict] = [
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
         descubrimiento_via="busqueda_a_organismo",
         descubrimiento_query="'criminalidad' 'primer trimestre de 2026' sube OR crece OR baja '%' Interior balance noticia España delitos",
-        # PENDIENTE de trabajar. Primaria: Interior, Balance de Criminalidad 1T2026 (PDF) + portal
-        # estadistico. Homicidios y asesinatos consumados +10,6% (94 casos) vs 1T2025; el titular
-        # redondea a 10%. Esperado: cubeta A (interanual = referencia del Balance). Hermanos por
-        # teletipo EP (catalunyapress, diariosigloxxi, infobae, madridpress): no se cuentan.
+        collected_at="2026-09-26", case_id="E025",
+        # --- trabajo 2026-09-26 (E025 t0 13:12:35Z, t1/t2 13:12:36Z) ---
+        fuente_primaria="Ministerio del Interior - Balance de Criminalidad, primer trimestre 2026 (PDF) + Portal Estadistico de Criminalidad",
+        primaria_url="https://www.interior.gob.es/opencms/export/sites/default/.galleries/galeria-de-prensa/documentos-y-multimedia/balances-e-informes/2026/Balance-de-Criminalidad-Primer-Trimestre-2026.pdf",
+        primaria_url_tipo="PDF en interior.gob.es; HTTP 403 al agente identificado en la primera peticion",
+        via_de_acceso="bloqueado", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="no", alcanzable_por_humano="si",
+        recuperabilidad="D", formato="pdf",
+        dato_actual="segun la prensa (no verificado por el agente): 1T2026 homicidios dolosos y asesinatos consumados 94 (+10,6% vs 1T2025); agresiones sexuales con penetracion 1.290 (+3,8%); criminalidad total +1,0% (595.240)",
+        dato_anterior="1T2025: en el mismo Balance (columnas comparadas), no extraido",
+        raw_value_span_actual="NEEDS_REVIEW: sin span de la primaria (bloqueada); [Madridactual 2026-06-04, el claim] 'Aumento de la Criminalidad en Espana: Homicidios Suben un 10% y Agresiones Sexuales un 3,8% en 2026'",
+        raw_value_span_anterior="NEEDS_REVIEW: sin span",
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="bloqueado_por_publicador", excedente="no",
+        notas=(
+            "Cubeta E, BLOQUEADO: interior.gob.es devolvio 403 al agente identificado en la primera peticion "
+            "(PDF del Balance). DEC-021: cierra el caso. HALLAZGO: el segundo emisor de DEC-024 tras el FMI que "
+            "rechaza al agente; en el piloto (C18, 2026-09-25) el mismo dominio sirvio el Balance 2T2026 (a "
+            "comprobar si cambio la politica o si fue por otra ruta; NEEDS_REVIEW). Anotacion humana desde la "
+            "prensa: +10,6% redondeado a 10%, interanual = referencia del Balance -> no_divergence, truth "
+            "supported con NEEDS_REVIEW (sin primaria leida). El Portal Estadistico (estadisticasdecriminalidad."
+            "ses.mir.es, CSV) no se probo en este caso: queda como via alternativa a evaluar antes de dar por "
+            "bloqueado el emisor entero."
+        ),
+        cubeta="E", hermano_de="", mecanismo_candidato="", primaria_edicion="Interior Balance 1T2026",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="Interior", tabla="Balance de Criminalidad",
+                         serie_nombre="Homicidios dolosos y asesinatos consumados. Total Nacional.",
+                         unidad="unidades", referencia_principal="interanual",
+                         descripcion="Balance de Criminalidad, homicidios dolosos y asesinatos consumados, total nacional, trimestral"),
+            periodo_objetivo="2026-T1", periodo_base="2025-T1",
+            cambio_afirmado=10, unidad_cambio="pct", direccion_afirmada="sube",
+            notas="Emisor sin conector y bloqueado al agente: sin veredicto hoy.",
+        ),
     ),
     dict(
         cid="Q015",
@@ -998,7 +1074,47 @@ CANDIDATOS: list[dict] = [
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
         descubrimiento_via="busqueda_a_organismo",
         descubrimiento_query="FRONTUR julio 2026 'según el INE' turistas internacionales 11,5 millones '4,6%' OR EGATUR gasto julio 2026 noticia septiembre 2026",
-        # PENDIENTE. Acumulado enero-julio vs mismo periodo 2025 (referencia del INE). Esperado: A.
+        collected_at="2026-09-26", case_id="E017",
+        # --- trabajo 2026-09-26 (E017 t0 13:01:33Z, t1/t2 ~13:05Z) ---
+        fuente_primaria="INE - Estadistica de Movimientos Turisticos en Fronteras (FRONTUR), julio 2026: nota FRONTUR0726 + API Tempus tabla 75722",
+        primaria_url="https://www.ine.es/dyngs/Prensa/FRONTUR0726.htm",
+        primaria_url_tipo="nota_de_prensa_html (provisional) + API JSON wstempus DATOS_TABLA/75722",
+        via_de_acceso="api", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="api",
+        dato_actual="enero-julio 2026: 58.106.406 turistas (acumulado, provisional), tasa acumulada +4,6%; julio 2026: 11.538.796 (+4,64%)",
+        dato_anterior="enero-julio 2025: 55.552.485 (definitivo); julio 2025: 11.026.681",
+        raw_value_span_actual=(
+            "[INE, nota FRONTUR0726, 2026-09-01] 'En los siete primeros meses de 2026 el numero de turistas "
+            "aumento un 4,6% y supero los 58,1 millones.' | 'Espana recibio 11,5 millones de turistas "
+            "internacionales en julio, un 4,6% mas que en el mismo mes de 2025.' | [INE API, tabla 75722, "
+            "FREG1125 'Turista. Total Nacional. Acumulado en lo que va de ano.'] 2026-M07: 58106406 (Provisional) "
+            "|| [Bilbao Hiria 2026-09-01, el claim] 'Espana supera los 58 millones de turistas hasta julio, un "
+            "4,6% mas'"
+        ),
+        raw_value_span_anterior="[INE API, tabla 75722] FREG1125 2025-M07: 55552485 (Definitivo) | FREG286 2025-M07: 11026681",
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta A: acumulado enero-julio contra el mismo periodo de 2025, que es la referencia que publica el "
+            "INE (serie 'Acumulado en lo que va de ano' y su tasa). 58.106.406/55.552.485 - 1 = +4,60%. Julio "
+            "mensual tambien +4,6 (coincidencia). methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="INE FRONTUR0726",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="75722",
+                         serie_nombre="Turista. Total Nacional. Acumulado en lo que va de año. ",
+                         unidad="personas", referencia_principal="interanual",
+                         descripcion="FRONTUR, turistas internacionales, acumulado enero-mes, total nacional"),
+            periodo_objetivo="2026-M07", periodo_base="2025-M07",
+            valor_objetivo=58106406, cambio_afirmado=4.6, unidad_cambio="pct", direccion_afirmada="sube",
+            notas="Control: acumulado contra acumulado del ano anterior, referencia del emisor. El claim redondea 58,1 M a '58 millones'.",
+        ),
     ),
     dict(
         cid="Q025",
@@ -1012,7 +1128,46 @@ CANDIDATOS: list[dict] = [
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
         descubrimiento_via="busqueda_a_organismo",
         descubrimiento_query="FRONTUR julio 2026 'según el INE' turistas internacionales 11,5 millones '4,6%' OR EGATUR gasto julio 2026 noticia septiembre 2026",
-        # PENDIENTE. EGATUR julio 2026: 18.218 M, +10,9% interanual. Esperado: A.
+        collected_at="2026-09-26", case_id="E018",
+        # --- trabajo 2026-09-26 (E018 t0 13:02:48Z, t1/t2 ~13:07Z) ---
+        fuente_primaria="INE - Encuesta de Gasto Turistico (EGATUR), julio 2026: nota EGATUR0726 + API Tempus tabla 75715",
+        primaria_url="https://www.ine.es/dyngs/Prensa/EGATUR0726.htm",
+        primaria_url_tipo="nota_de_prensa_html (provisional) + API JSON wstempus DATOS_TABLA/75715",
+        via_de_acceso="api", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="api",
+        dato_actual="julio 2026: gasto total de turistas internacionales 18.217,95 millones de euros (provisional), +10,86% interanual; gasto medio 1.579 euros (+5,9%); acumulado enero-julio 82.053,55 M (+7,8%)",
+        dato_anterior="julio 2025: 16.432,61 millones (definitivo); junio 2026: 13.579,04",
+        raw_value_span_actual=(
+            "[INE, nota EGATUR0726, 2026-09-01] 'El gasto total de los turistas internacionales que visitaron "
+            "Espana en julio aumento un 10,9% y alcanzo los 18.218 millones de euros.' | [INE API, tabla 75715, "
+            "FREG647 'Total. Turista. Gasto total. Total Nacional. Dato base.'] 2026-M07: 18217.95 (Provisional) "
+            "|| [Turiscom 2026-09-01, el claim] 'El gasto de los turistas internacionales supera los 18.200 "
+            "millones de euros en julio, un 10,9% mas que en 2025'"
+        ),
+        raw_value_span_anterior="[INE API, tabla 75715] FREG647 2025-M07: 16432.61 (Definitivo) | FREG623 (tasa anual) 2026-M07: 10.86",
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta A: el claim reproduce la nota (18.218 M, +10,9%); 18.217,95/16.432,61 - 1 = +10,86%. La tabla "
+            "vigente es la 75715 (las 23994/24746 estan vacias en la API: tablas antiguas). 'Que en 2025' = julio "
+            "de 2025 = referencia interanual. methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="INE EGATUR0726",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="75715",
+                         serie_nombre="Total. Turista. Gasto total. Total Nacional. Dato base. ",
+                         unidad="millones_euros", referencia_principal="interanual",
+                         descripcion="EGATUR, gasto total de los turistas internacionales, total nacional, mensual, millones de euros"),
+            periodo_objetivo="2026-M07", periodo_base="2025-M07",
+            valor_objetivo=18218, cambio_afirmado=10.9, unidad_cambio="pct", direccion_afirmada="sube",
+            notas="Control: base = interanual, referencia del emisor. El claim dice 'supera los 18.200'; se usa 18.218 (nota).",
+        ),
     ),
     dict(
         cid="Q026",
@@ -1026,7 +1181,47 @@ CANDIDATOS: list[dict] = [
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
         descubrimiento_via="busqueda_a_organismo",
         descubrimiento_query="INE pernoctaciones hoteleras agosto 2026 'según el INE' suben OR bajan '%' noticia septiembre 2026 coyuntura turística",
-        # PENDIENTE. Coyuntura Turistica Hotelera agosto 2026 (2026-09-22). Esperado: A.
+        collected_at="2026-09-26", case_id="E019",
+        # --- trabajo 2026-09-26 (E019 t0 13:03:48Z, t1/t2 ~13:11Z) ---
+        fuente_primaria="INE - Coyuntura Turistica Hotelera (EOH/IPH/IRSH), agosto 2026: nota CTH0826 + API Tempus tabla 36570",
+        primaria_url="https://www.ine.es/dyngs/Prensa/CTH0826.htm",
+        primaria_url_tipo="nota_de_prensa_html (provisional) + API JSON wstempus DATOS_TABLA/36570",
+        via_de_acceso="api", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="api",
+        dato_actual="agosto 2026: 48.798.426 pernoctaciones hoteleras (provisional), +1,38% interanual; residentes -1,1%, no residentes +2,8%; IPH +6,3%; ADR 166,9 euros (+7,3%)",
+        dato_anterior="agosto 2025: 48.135.610 (definitivo)",
+        raw_value_span_actual=(
+            "[INE, nota CTH0826, 2026-09-22] 'Las pernoctaciones en establecimientos hoteleros aumentaron un "
+            "1,4% en agosto respecto al mismo mes de 2025, y superaron los 48,7 millones.' | [INE API, tabla "
+            "36570, EOT25 'Nacional. Pernoctaciones. Total categorias. Total.'] 2026-M08: 48798426 || [Forbes "
+            "Espana 2026-09-22, el claim] 'Las pernoctaciones hoteleras suben un 1,4% en agosto y superan los "
+            "48,7 millones tras el impulso internacional'"
+        ),
+        raw_value_span_anterior="[INE API, tabla 36570] EOT25 2025-M08: 48135610",
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta A: 48.798.426/48.135.610 - 1 = +1,38%; el claim reproduce la nota. 'Tras el impulso "
+            "internacional' es la descomposicion del propio INE (no residentes +2,8%). La primera prueba de "
+            "URL de la nota (EOH0826) dio 404: el codigo de nota es CTH; la tabla 36570 tiene la serie 'Nacional' "
+            "sin 'Total Nacional' en el nombre (dos filtros fallidos antes de listar). methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0826",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="36570",
+                         serie_nombre="Nacional. Pernoctaciones. Total categorías. Total.",
+                         unidad="pernoctaciones", referencia_principal="interanual",
+                         descripcion="EOH, pernoctaciones en establecimientos hoteleros, total nacional, mensual"),
+            periodo_objetivo="2026-M08", periodo_base="2025-M08",
+            valor_objetivo=48798426, cambio_afirmado=1.4, unidad_cambio="pct", direccion_afirmada="sube",
+            notas="Control: base = interanual, referencia del emisor. OJO: el nombre de la serie no lleva espacio final.",
+        ),
     ),
     dict(
         cid="Q027",
@@ -1040,7 +1235,45 @@ CANDIDATOS: list[dict] = [
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
         descubrimiento_via="busqueda_a_organismo",
         descubrimiento_query="INE pernoctaciones hoteleras agosto 2026 'según el INE' suben OR bajan '%' noticia septiembre 2026 coyuntura turística",
-        # PENDIENTE. Nivel (ADR 166,9 euros) + 'disparan' (IPH +6,3%). Esperado: D (nivel).
+        collected_at="2026-09-26", case_id="E020",
+        # --- trabajo 2026-09-26 (E020 t0 13:06:01Z, t1/t2 ~13:13Z) ---
+        fuente_primaria="INE - Coyuntura Turistica Hotelera, agosto 2026: nota CTH0826 + API Tempus tabla 2059 (IRSH, ADR)",
+        primaria_url="https://www.ine.es/dyngs/Prensa/CTH0826.htm",
+        primaria_url_tipo="nota_de_prensa_html (provisional) + API JSON wstempus DATOS_TABLA/2059",
+        via_de_acceso="api", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="api",
+        dato_actual="agosto 2026: ADR 166,90 euros por habitacion ocupada (provisional), +7,32% interanual; IPH +6,3%",
+        dato_anterior="agosto 2025: ADR 155,52 (definitivo); julio 2026: 156,92",
+        raw_value_span_actual=(
+            "[INE, nota CTH0826, 2026-09-22] 'Los hoteles facturaron 166,9 euros de media por habitacion ocupada, "
+            "un 7,3% mas que en el mismo mes del ano anterior.' | [INE API, tabla 2059, EOT16414 'ADR. Nacional. "
+            "Dato.'] 2026-M08: 166.9 (Provisional) || [Democrata 2026-09-22, el claim] 'Los hoteles disparan sus "
+            "precios en agosto: una habitacion cuesta ya 167 euros de media'"
+        ),
+        raw_value_span_anterior="[INE API, tabla 2059] EOT16414 2025-M08: 155.52 (Definitivo) | EOT16415 (tasa) 2026-M08: 7.32",
+        truth="supported", context="undetermined",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta D: claim de NIVEL (167 = 166,9 redondeado); 'disparan' remite al IPH (+6,3%) y al ADR "
+            "(+7,3%), correctos, pero el titular no da tasa: sin test aplicable -> undetermined (DEC-029). ADR = "
+            "tarifa media diaria por habitacion ocupada, no 'precio de una habitacion' en sentido de lista; se "
+            "anota, no es divergencia. Series ADR en la operacion IRSH (180), tabla 2059. methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="D", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0826",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="nivel",
+            metrica=dict(emisor="INE", tabla="2059",
+                         serie_nombre="ADR. Nacional. Dato.",
+                         unidad="euros", referencia_principal="interanual",
+                         descripcion="IRSH, tarifa media diaria (ADR) por habitacion ocupada, nacional, mensual"),
+            periodo_objetivo="2026-M08", valor_objetivo=167,
+            notas="Nivel redondeado (166,9 -> 167). Sin test aplicable. Nombre de serie sin espacio final.",
+        ),
     ),
     dict(
         cid="Q028",
@@ -1054,7 +1287,47 @@ CANDIDATOS: list[dict] = [
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
         descubrimiento_via="busqueda_a_organismo",
         descubrimiento_query="INE 'índice de precios industriales' OR IPRI agosto 2026 'según el INE' '%' interanual noticia septiembre 2026",
-        # PENDIENTE. IPRI agosto 2026 (2026-09-24): tasa anual 13,2%. Esperado: A.
+        collected_at="2026-09-26", case_id="E021",
+        # --- trabajo 2026-09-26 (E021 t0 13:06:52Z, t1/t2 13:08:57Z) ---
+        fuente_primaria="INE - Indices de Precios Industriales (IPRI, base 2021), agosto 2026: nota IPRI0826 + API Tempus tabla 76655",
+        primaria_url="https://www.ine.es/dyngs/Prensa/IPRI0826.htm",
+        primaria_url_tipo="nota_de_prensa_html (provisional) + API JSON wstempus DATOS_TABLA/76655",
+        via_de_acceso="api", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="api",
+        dato_actual="agosto 2026: IPRI total industria (mercado interior) indice 141,808 (provisional), variacion anual 13,2% (julio 9,4%); energia 33,3%; sin energia 3,5%; mensual 2,9%",
+        dato_anterior="agosto 2025: indice 125,302 (definitivo), variacion anual -1,6%",
+        raw_value_span_actual=(
+            "[INE, nota IPRI0826, 2026-09-24] 'La variacion anual del Indice de Precios Industriales aumento 3,8 "
+            "puntos en agosto, hasta el 13,2%.' | 'una variacion anual 12,1 puntos, hasta el 33,3%' (energia) | "
+            "[INE API, tabla 76655, IPR34953 'Nacional. Mercado interior. Total industria. Variacion anual.'] "
+            "2026-M08: 13.2 | IPR34522 (indice) 2026-M08: 141.808 || [The Objective 2026-09-24, el claim] 'La "
+            "inflacion industrial se dispara por culpa de la energia hasta el 13,2% interanual en agosto'"
+        ),
+        raw_value_span_anterior="[INE API, tabla 76655] IPR34522 2025-M08: 125.302 (Definitivo) | IPR34953 2026-M07: 9.4",
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta A: 141,808/125,302 - 1 = +13,17%; 'por culpa de la energia' es la atribucion del propio INE "
+            "(energia +33,3%), no se evalua. En la API el indice general se llama 'Total industria' (no 'Indice "
+            "general', que solo existe en la tabla antigua 1796, vacia): tres pasadas de busqueda. "
+            "methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="INE IPRI0826",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="76655",
+                         serie_nombre="Nacional. Mercado interior. Total industria. Índice. ",
+                         unidad="indice", referencia_principal="interanual",
+                         descripcion="IPRI base 2021, indice general (total industria, mercado interior), mensual"),
+            periodo_objetivo="2026-M08", periodo_base="2025-M08",
+            cambio_afirmado=13.2, unidad_cambio="pct", direccion_afirmada="sube",
+            notas="Control: base = interanual, referencia del emisor.",
+        ),
     ),
     dict(
         cid="Q029",
@@ -1068,7 +1341,48 @@ CANDIDATOS: list[dict] = [
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
         descubrimiento_via="busqueda_a_organismo",
         descubrimiento_query="INE 'coste laboral' segundo trimestre 2026 ETCL 'según el INE' sube '%' por trabajador noticia septiembre 2026",
-        # PENDIENTE. ETCL 2T2026 (2026-09-17): coste laboral por trabajador y mes 3.388,15, +4,0% interanual. Esperado: A.
+        collected_at="2026-09-26", case_id="E022",
+        # --- trabajo 2026-09-26 (E022 t0 13:09:30Z, t1 13:10:08Z, t2 13:11:28Z tras corregir la serie) ---
+        fuente_primaria="INE - Encuesta Trimestral de Coste Laboral (ETCL), 2T2026: nota ETCL2T26 + API Tempus tabla 6030",
+        primaria_url="https://www.ine.es/dyngs/Prensa/ETCL2T26.htm",
+        primaria_url_tipo="nota_de_prensa_html + API JSON wstempus DATOS_TABLA/6030",
+        via_de_acceso="api", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="api",
+        dato_actual="2T2026: coste laboral total por trabajador y mes 3.388,15 euros (definitivo), +4,04% interanual; coste salarial 2.512,68 (+4,0%)",
+        dato_anterior="2T2025: 3.256,54 euros (definitivo); 1T2026: 3.278,01",
+        raw_value_span_actual=(
+            "[INE, nota ETCL2T26, 2026-09-17] 'El coste laboral de las empresas aumento un 4,0% en el segundo "
+            "trimestre respecto al mismo periodo del ano anterior y se situo en 3.388,15 euros por trabajador y "
+            "mes.' | [INE API, tabla 6030, ETCL68 'Industria, construccion y servicios (...). Coste laboral total. "
+            "Total. Total Nacional. Costes laborales. Euros.'] 2026-T2: 3388.15 (Definitivo) || [Ahora Leon "
+            "2026-09-17, el claim] 'El coste laboral sube un 4% en el segundo trimestre de 2026 y alcanza los "
+            "3.388 euros por trabajador'"
+        ),
+        raw_value_span_anterior="[INE API, tabla 6030] ETCL68 2025-T2: 3256.54 (Definitivo) | 2026-T1: 3278.01",
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta A: 3388,15/3256,54 - 1 = +4,04%. Fallo de localizacion registrado: las tablas 6067 y 6070 "
+            "('Coste laboral total por trabajador') son retrospectivas 2000-2007 y la serie vigente esta en la "
+            "6030 (por sectores, desde 2008-T1); dos marcas t2 erroneas quedaron en el cronometro y se "
+            "corrigieron con marcas posteriores (manda la ultima). methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="INE ETCL2T26",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="6030",
+                         serie_nombre="Industria, construcción y servicios (excepto actividades de los hogares como empleadores y de organizaciones y organismos extraterritoriales). Coste laboral total. Total. Total Nacional. Costes laborales. Euros. ",
+                         unidad="euros", referencia_principal="interanual",
+                         descripcion="ETCL, coste laboral total por trabajador y mes, total nacional, trimestral"),
+            periodo_objetivo="2026-T2", periodo_base="2025-T2",
+            valor_objetivo=3388, cambio_afirmado=4, unidad_cambio="pct", direccion_afirmada="sube",
+            notas="Control: base = interanual, referencia del emisor. NEEDS_REVIEW: nombre exacto de la serie (largo) al correrlo.",
+        ),
     ),
     dict(
         cid="Q030",
@@ -1082,7 +1396,46 @@ CANDIDATOS: list[dict] = [
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
         descubrimiento_via="busqueda_a_organismo",
         descubrimiento_query="INE 'coste laboral' segundo trimestre 2026 ETCL 'según el INE' sube '%' por trabajador noticia septiembre 2026",
-        # PENDIENTE. Extremo historico ('record en 26 años' = maximo de un 2T desde 2000). Esperado: D.
+        collected_at="2026-09-26", case_id="E023",
+        # --- trabajo 2026-09-26 (E023 t0/t1 13:10:08Z, t2 13:11:28Z; primaria ya en mano por E022) ---
+        fuente_primaria="INE - ETCL 2T2026: nota ETCL2T26 + API Tempus tablas 6030 (2008-2026) y 6067 (retrospectiva 2000-2007)",
+        primaria_url="https://www.ine.es/dyngs/Prensa/ETCL2T26.htm",
+        primaria_url_tipo="nota_de_prensa_html + API JSON wstempus DATOS_TABLA/6030 y /6067",
+        via_de_acceso="api", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="api",
+        dato_actual="2T2026: 3.388,15 euros; maximo de los segundos trimestres de la serie 2008-2026 (tabla 6030, n=19) y por encima de todos los 2T de 2000-2007 (tabla 6067, max 2.339,64 en 2007)",
+        dato_anterior="2T2025: 3.256,54; 2T2007 (retrospectiva): 2.339,64",
+        raw_value_span_actual=(
+            "[INE API, tabla 6030, ETCL68] 2026-T2: 3388.15 (Definitivo); maximo de {k: 2T} 2008-2026 = 2026-T2 | "
+            "[INE API, tabla 6067, ETCL5742 retrospectiva] 2007-T2: 2339.64 | [INE, nota ETCL2T26] '3.388,15 "
+            "euros por trabajador y mes' || [El Espanol 2026-09-17, el claim] 'Los costes laborales y los "
+            "salarios suben en el segundo trimestre del ano hasta cifras record en 26 anos'"
+        ),
+        raw_value_span_anterior="[INE API, tabla 6030] serie 2T 2008..2025 todas < 3388.15; [tabla 6067] serie 2T 2000..2007 todas < 2339.64",
+        truth="supported", context="undetermined",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta D: extremo historico ('record en 26 anos' = desde 2000, inicio de la ETCL). Verificado en "
+            "dos tablas con bases distintas (2000-2007 y 2008-2026): el maximo es 2026-T2; la nota del INE no "
+            "dice 'record', lo anade la prensa (EP). Sin test computable en el prototipo -> undetermined "
+            "(DEC-029). Nota: comparar bases 2000-2007 y 2008-2026 exige que sean comparables (cambio CNAE-09): "
+            "el INE las publica separadas; se anota como salvedad."
+        ),
+        cubeta="D", hermano_de="", mecanismo_candidato="", primaria_edicion="INE ETCL2T26",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="extremo_historico",
+            metrica=dict(emisor="INE", tabla="6030",
+                         serie_nombre="Industria, construcción y servicios (excepto actividades de los hogares como empleadores y de organizaciones y organismos extraterritoriales). Coste laboral total. Total. Total Nacional. Costes laborales. Euros. ",
+                         unidad="euros", referencia_principal="interanual",
+                         descripcion="ETCL, coste laboral total por trabajador y mes, total nacional, trimestral"),
+            periodo_objetivo="2026-T2", valor_objetivo=3388.15,
+            notas="Extremo historico: sin test aplicable en el prototipo.",
+        ),
     ),
     dict(
         cid="Q031",
@@ -1096,6 +1449,45 @@ CANDIDATOS: list[dict] = [
         criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
         descubrimiento_via="busqueda_a_organismo",
         descubrimiento_query="INE 'coste laboral' segundo trimestre 2026 ETCL 'según el INE' sube '%' por trabajador noticia septiembre 2026",
-        # PENDIENTE. Serie regional (Region de Murcia) de la ETCL 2T2026. Esperado: A.
+        collected_at="2026-09-26", case_id="E024",
+        # --- trabajo 2026-09-26 (E024 t0 13:10:08Z, t1/t2 13:11:45Z) ---
+        fuente_primaria="INE - ETCL 2T2026 por comunidad autonoma: nota ETCL2T26 (anexo) + API Tempus tabla 6061",
+        primaria_url="https://www.ine.es/dyngs/Prensa/ETCL2T26.htm",
+        primaria_url_tipo="nota_de_prensa_html (anexo de tablas por CCAA) + API JSON wstempus DATOS_TABLA/6061",
+        via_de_acceso="api", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="api",
+        dato_actual="Region de Murcia, 2T2026: coste laboral total por trabajador y mes 2.900,37 euros (definitivo), +3,13% interanual",
+        dato_anterior="Region de Murcia, 2T2025: 2.812,36 euros; 1T2026: 2.790,94",
+        raw_value_span_actual=(
+            "[INE API, tabla 6061, ETCL3763 'Murcia, Region de. Industria, construccion y servicios (...). Coste "
+            "laboral total. Costes laborales. Euros.'] 2026-T2: 2900.37 (Definitivo) || [Murcia Diario "
+            "2026-09-17, el claim] 'El coste laboral aumento un 3,1% en la Region en el segundo trimestre: 2.900 "
+            "euros por trabajador y mes'"
+        ),
+        raw_value_span_anterior="[INE API, tabla 6061] ETCL3763 2025-T2: 2812.36 (Definitivo)",
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta A, serie regional: 2900,37/2812,36 - 1 = +3,13%; el claim redondea (3,1%, 2.900). La nota "
+            "nacional no lleva la cifra de Murcia en el texto: esta en el anexo y en la API. Independiente de E022 "
+            "(otra serie y otro medio), misma edicion primaria (tres controles de ETCL2T26: E022, E024 y el D de "
+            "E023; tope de 3 controles respetado con 2). methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="INE ETCL2T26",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="6061",
+                         serie_nombre="Murcia, Región de. Industria, construcción y servicios (excepto actividades de los hogares como empleadores y de organizaciones y organismos extraterritoriales). Coste laboral total. Costes laborales. Euros. ",
+                         unidad="euros", referencia_principal="interanual",
+                         descripcion="ETCL, coste laboral total por trabajador y mes, Region de Murcia, trimestral"),
+            periodo_objetivo="2026-T2", periodo_base="2025-T2",
+            valor_objetivo=2900, cambio_afirmado=3.1, unidad_cambio="pct", direccion_afirmada="sube",
+            notas="Control regional: base = interanual, referencia del emisor.",
+        ),
     ),
 ]

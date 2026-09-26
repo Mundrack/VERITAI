@@ -1,0 +1,23 @@
+{
+  "claim_id": "E018",
+  "texto": "El gasto de los turistas internacionales supera los 18.200 millones de euros en julio, un 10,9% más que en 2025",
+  "fuente_url": "https://www.turiscom.org/estudios-e-informes/gasto-turistas-internacionales-supera-18200-mE-mes-julio-109-mas/20260901161345005605.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "75715",
+    "serie_nombre": "Total. Turista. Gasto total. Total Nacional. Dato base. ",
+    "unidad": "millones_euros",
+    "referencia_principal": "interanual",
+    "descripcion": "EGATUR, gasto total de los turistas internacionales, total nacional, mensual, millones de euros"
+  },
+  "periodo_objetivo": "2026-M07",
+  "periodo_base": "2025-M07",
+  "valor_objetivo": 18218,
+  "cambio_afirmado": 10.9,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Control: base = interanual, referencia del emisor. El claim dice 'supera los 18.200'; se usa 18.218 (nota)."
+}
