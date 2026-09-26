@@ -684,8 +684,9 @@ el repositorio con nueve ajustes, y aprobó el resultado.
 - **Taxonomía:** un solo código nuevo, `2b_base_revisada`; 2a y 2c son
   nombres sobre `2_baseline_selection` y `5_methodology_change`, que se
   conservan; solo C29 se reetiqueta (su nota ya describía la revisión);
-  `other_observed` (10 de 28) sigue en P-12, que Mateo revisa antes de la
-  Puerta 2.
+  `other_observed` (10 de 28; **corregido el mismo día: 8 de 26 en alcance,
+  porque P08 y P09 están fuera por DEC-013**) sigue en P-12, que Mateo revisa
+  antes de la Puerta 2.
 
 **Consecuencia.** Se modifican: `GLOSARIO.md` (caso canónico, fila "fake
 news", enum `clase`), `normalizar_a_enums.py` (enum), `lote_crudo.py` y los

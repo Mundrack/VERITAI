@@ -16,7 +16,7 @@ PUERTA 1   research/PILOT-DECISION.md con PILOT_GO        SUPERADA 2026-09-25
 
 PUERTA 2   prototipo end-to-end, UNA familia y UN emisor,    <-- AQUI, sin arrancar:
            10 casos con trazabilidad completa                 Mateo revisa P-12
-           familia: comparacion de base (DEC-026)             (other_observed, 10 de 28)
+           familia: comparacion de base (DEC-026)             (other_observed, 8 de 26)
            emisor: INE (DEC-024)                              antes de abrirla
            regla ya fijada: nada del piloto entra en el
            conjunto de evaluacion (DEC-025)
@@ -204,9 +204,12 @@ En orden, y sin saltarse pasos:
    objetivos, definición operacional, alcance y taxonomía en
    [`TESIS-ENCUADRE.md`](TESIS-ENCUADRE.md). Sin caso canónico: par C18 + C29;
    el canónico sale de la Puerta 2 con los cinco requisitos.
-9. **Mateo revisa P-12** antes de abrir la Puerta 2: `other_observed` es el
-   grupo más grande (10 de 28) y no se sabe qué hay dentro. Cuando lo pida:
-   desglose de los 10, uno por uno.
+9. **Mateo revisa P-12** antes de abrir la Puerta 2. Corregido: `other_observed`
+   es **8 de 26 en alcance** (P08 y P09 estaban contados aunque están fuera
+   por DEC-013) y **4 de 21 sin hermanos**. El desglose caso a caso, con lo
+   que cada uno necesitaría para entrar en una clase, está en
+   [`PREGUNTAS-ABIERTAS.md`](PREGUNTAS-ABIERTAS.md), P-12. Decide Mateo;
+   ninguna reetiqueta hasta entonces.
 10. **P-20:** los 5 casos manuales de Mateo, en tabla, cierran FINDINGS §7. Si
     contradicen la lectura del agente, la decisión se reabre.
 11. **Puerta 2, después de 9:** prototipo de START-HERE §18 con INE como

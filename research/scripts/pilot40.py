@@ -230,6 +230,19 @@ def resumen(auditados: list[dict], crudos: list[dict], crudos_full: list[dict]) 
     print(f"  familia 'comparacion de base' (2a 2_baseline + 2b base_revisada + 2c 5_methodology): "
           f"{tot.get('2_baseline_selection', 0) + tot.get('2b_base_revisada', 0) + tot.get('5_methodology_change', 0)}")
     print(f"  familia 'magnitud mal leida' (3_absolute_vs_relative + 4_denominator): {tot.get('3_absolute_vs_relative', 0) + tot.get('4_denominator', 0)}")
+    # P-12: el mismo conteo sobre las divergencias EN ALCANCE (sin P08/P09, DEC-013) y,
+    # ademas, sin los hermanos por criba (no independientes), que es el denominador honesto.
+    alc = [f for f in div20 + div31 if f["en_alcance_tesis"] == "si"]
+    sin_h = [f for f in alc if f["descubrimiento_via"] != "criba_negativa"]
+    print(f"\n--- 5b. P-12: clases en las divergencias EN ALCANCE ({len(alc)}; sin DEC-013) y sin hermanos ({len(sin_h)}) ---")
+    ta = Counter(f["clase_primaria"] for f in alc); th = Counter(f["clase_primaria"] for f in sin_h)
+    print(f"  {'clase':26} {'en alcance':>16} {'sin hermanos':>18}")
+    for clase, _ in sorted(ta.items(), key=lambda x: -x[1]):
+        print(f"  {clase:26} {ta[clase]:2}/{len(alc)} {pct(ta[clase], len(alc))}   {th.get(clase, 0):2}/{len(sin_h)} {pct(th.get(clase, 0), len(sin_h))}")
+    oo = [f["case_id"] for f in alc if f["clase_primaria"] == "other_observed"]
+    ooh = [f["case_id"] for f in alc if f["clase_primaria"] == "other_observed" and f["descubrimiento_via"] == "criba_negativa"]
+    print(f"  other_observed en alcance: {oo} | de ellos hermanos por criba: {ooh}")
+    print(f"  fuera de alcance (DEC-013) contados en la tabla de 28: {[f['case_id'] for f in div20 + div31 if f['en_alcance_tesis'] != 'si']}")
     print("  abstain_reason, dos lotes:", dict(Counter(f["abstain_reason"] for f in auditados + crudos if f["abstain_reason"])))
     print("  truth x context, dos lotes:", dict(sorted(Counter((f["truth"], f["context"]) for f in auditados + crudos).items())))
 

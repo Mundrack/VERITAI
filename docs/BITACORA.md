@@ -603,3 +603,37 @@ todo el repositorio** con nueve ajustes antes de cerrar. La pasada encontró:
 - **P-20**: los 5 casos manuales
 - Fusionar `docs/p15-encuadre` a `main`
 - Puerta 2: sin abrir, por orden de Mateo
+
+---
+
+## 2026-09-25 — P-12: el desglose de `other_observed`, con dos correcciones
+
+### Qué se hizo
+
+Merge de `docs/p15-encuadre` a `main` (`c6c47e2`). Después, en
+`docs/p12-other-observed`, el desglose que pidió Mateo con sus dos
+correcciones previas:
+
+1. **P08 y P09 estaban contados** en "10 de 28" pese a estar fuera de alcance
+   por DEC-013. `pilot40.py` imprime ahora la tabla 5b sobre las **26
+   divergencias en alcance**: `other_observed` **8 de 26 (30,8%)**. Corregido
+   en FINDINGS §5, TESIS-ENCUADRE, GLOSARIO, ESTADO, PILOT-DECISION y en el
+   texto de DEC-026 (marcado como corrección).
+2. **C03, C05, C08 y C13 son hermanos por criba**: sin ellos, **4 de 21
+   (19,0%)**. La mitad del grupo es cobertura hermana de datos ya
+   representados.
+
+**Desglose caso a caso** en `PREGUNTAS-ABIERTAS.md`, P-12: tres encajes
+limpios en clases existentes (P05 → 2a, P07 → 4, C13 → 2a), uno discutible
+(C08 → 1 por su núcleo computable), dos candidatas a clase nueva (P17
+agregación con subgrupos en sentido contrario; C10 subtipo 2d "cambio
+afirmado sin edición anterior") y dos que no son clase (C03 lectura parcial;
+C05 abstención por slot faltante y atribución causal). **Ninguna reetiqueta
+hasta que Mateo decida.**
+
+### Qué quedó pendiente
+
+- Mateo decide P-12 con el desglose
+- P-20: los 5 casos manuales
+- Fusionar `docs/p12-other-observed`
+- Puerta 2: sin abrir

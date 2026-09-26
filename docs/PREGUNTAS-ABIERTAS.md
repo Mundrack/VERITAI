@@ -90,10 +90,108 @@ compara contra la edición publicada). Está en
 `research/COLECCION-LOTE-CRUDO.md` §4. La decisión sigue siendo de Mateo.
 
 `2026-09-25` **Mateo la revisa antes de abrir la Puerta 2**: es el grupo más
-grande (10 de 28 divergencias) y no se sabe qué hay dentro. Auditado: P05,
-P07, P08 y P09 (estos dos por DEC-013), P17. Crudo: C03, C05, C08, C10, C13.
-Cuando lo pida: desglose de los diez, uno por uno, con lo que cada caso
-necesitaría para entrar en una clase existente o en una nueva.
+grande y no se sabía qué había dentro. Dos correcciones suyas antes del
+desglose:
+
+1. **P08 y P09 estaban contados** en los "10 de 28" aunque están fuera de
+   alcance por DEC-013. Contando solo divergencias **en alcance**: `other_observed`
+   es **8 de 26** (30,8%). Las proporciones de FINDINGS §5 y del encuadre se
+   recalcularon con ese denominador (`pilot40.py`, tabla 5b).
+2. **C03, C05, C08 y C13 son hermanos por criba** (de C02, C04, C07 y C12), no
+   sorteos independientes. Sin hermanos: **4 de 21** (19,0%): P05, P07, P17,
+   C10. La mitad del grupo es cobertura hermana de datos ya representados.
+
+#### Desglose, uno por uno
+
+Formato: qué dice el claim → mecanismo → qué le faltaría para entrar en una
+clase existente o justificar una nueva. `[H]` = hermano por criba.
+
+**P05 · CIS, clase media** — *"En 2018 se consideraban de clase media dos de
+cada tres; hoy apenas uno de cada dos."* Mecanismo: **valor real atribuido al
+periodo equivocado**: el ~66,7% existe, pero en 2019–2023, no en 2018; la caída
+real abril 2018 → abril 2026 es de 1 pp, no de 16,7. Iría a **2a** si 2a se
+define como "la base declarada no lleva el valor usado": el test es
+`valor(primaria, año declarado) == valor del claim`, y necesita la edición de
+2018 del barómetro (recuperable: serie del CIS). No hace falta clase nueva.
+
+**P07 · Población reclusa "50% extranjera"** — Mecanismo: **ámbito del
+numerador ≠ ámbito de la afirmación**: 53,0% es Cataluña, 32,7% es España; el
+dato catalán se traslada al conjunto. Ya lleva `4_denominator` como
+secundaria; con "denominador" definido como *población de referencia*, entra
+en **4** como primaria. Necesita la estadística mensual de IIPP y la
+autonómica (recuperables; la URL del Excel era una portada). No hace falta
+clase nueva.
+
+**P17 · Frontex "caída de hasta el 60% en todas las rutas"** — Mecanismo:
+**cuantificador universal sobre un agregado con subgrupos en sentido
+contrario**: Canarias −67,4%, Mediterráneo Occidental +17,0%, agregado −36,1%.
+No es 1–5. Test computable: `para toda ruta, signo(cambio) == signo
+afirmado`, con el fichero mensual de Frontex (recuperabilidad A). **Candidata
+a clase nueva** ("agregación con subgrupos en sentido contrario"); hoy 1 de 26.
+Se justifica solo si reaparece en el conjunto de evaluación.
+
+**C03 `[H]` · Paro, "peor agosto en 7 años"** — hermano de C02. Mecanismo:
+**elección de métrica** (flujo mensual vs nivel): las dos lecturas son ciertas
+—+44.419 es la mayor subida de agosto desde 2019; 2.355.918 es el nivel más
+bajo en agosto desde 2007— y el artículo omite la del propio SEPE. No es una
+comparación incorrecta: es una lectura parcial. **No es clase**: es
+enriquecimiento de contexto (mostrar la otra métrica del mismo emisor), no
+divergencia. Si se quisiera test: "existe en la misma nota del emisor una
+métrica de signo opuesto". Recomendación: `context = no_divergence_detected`
+con lectura alternativa, o dejarlo en `other_observed` con la etiqueta
+"lectura parcial", sin clase.
+
+**C05 `[H]` · Inflación de Ecuador "la más baja de la región" + "Gobierno
+protege el bolsillo"** — hermano de C04. Dos capas: (a) el superlativo
+regional se sostiene en una imagen sin cifras ni fuentes →
+`REQUIRED_SLOT_MISSING`, abstención, no clase; verificarlo exigiría la
+primaria de cada país. (b) La atribución causal es **clase 6**
+(correlación/causalidad), fuera de la tesis por `00b`; el sistema abstiene con
+`UNSUPPORTED_CLAIM_TYPE`. **No es clase computable** en el objeto de la tesis.
+
+**C08 `[H]` · FMI, "Sánchez hunde la economía al puesto 14"** — hermano de
+C07. Mecanismo: el núcleo computable es **`1_ranking_vs_value`** (mismo dato
+que C07: puesto 12 → 14 con PIB +9,84%), ya en secundaria; encima, atribución
+causal y lenguaje evaluativo ("certifica el fracaso") que son clase 6/7. Si el
+sistema etiqueta por el núcleo computable, C08 es clase 1 y la capa causal es
+abstención `UNSUPPORTED_CLAIM_TYPE`. No se reetiqueta ahora: sería subir la
+clase ilustrativa de 2 a 3 por decisión de etiquetado, no por dato nuevo.
+
+**C10 · Ranking fiscal, "España cae al puesto 44"** — Mecanismo: **verbo de
+cambio sin edición anterior**: es la primera edición del índice; no hay desde
+dónde caer. Test computable: `existe edición anterior?` → no → la afirmación
+de cambio no se sostiene (`PREVIOUS_EDITION_NOT_FOUND` + truth mixed).
+Encaja en la **familia 2** como subtipo candidato **2d "cambio afirmado sin
+edición anterior"**, distinto de 2a (base mal elegida) y 2b (base revisada).
+Hoy 1 de 26; la evidencia negativa ("no existe") es lo difícil de probar.
+
+**C13 `[H]` · Informalidad en Colombia "llegó a 54,5%"** — hermano de C12.
+Mecanismo: **dirección implícita contraria a la edición anterior**: "llegó a"
+como contrapunto negativo sugiere subida; la serie del DANE baja seis julios
+seguidos (54,8 → 54,5) y el trimestre móvil también. Test computable:
+`dirección implícita vs signo(actual − anterior)`, con la edición anterior
+(recuperable, A). Entra en **2a** si 2a incluye la comparación implícita con
+el periodo anterior. Secundario: "50 de cada 100" redondea 54,5 hacia abajo
+(magnitud, menor).
+
+**Fuera de alcance (DEC-013), solo para constancia:** P08 es `4_denominator`
+puro (104/127 con 905 embarazos sin seguimiento); P09 es
+`3_absolute_vs_relative` + clase 6. Ambos sobre papers en inglés; no entran.
+
+#### Lo que sale del desglose
+
+```
+en alcance (8)      a clase existente     candidata a clase nueva     no es clase
+                    P05 -> 2a             P17  agregacion/subgrupos    C03  lectura parcial
+                    P07 -> 4              C10  2d cambio sin edicion   C05  abstencion (slot / causal)
+                    C13 -> 2a                  anterior (familia 2)
+                    C08 -> 1 (nucleo)
+```
+
+Si Mateo acepta los tres encajes limpios (P05, P07, C13), `other_observed`
+queda en 5 de 26 (P17, C03, C05, C08, C10); C08 es discutible. Ninguna
+reetiqueta se hace hasta que lo decida: sería ajustar el corpus a la
+hipótesis.
 
 ### P-20 · Cierre humano/agente
 

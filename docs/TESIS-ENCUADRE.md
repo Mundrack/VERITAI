@@ -75,7 +75,7 @@ confirmación):
 
 | | Del piloto |
 |---|---|
-| H1 | 28 divergencias en 48 casos; 21 con el dato verdadero (`truth` supported o mixed) |
+| H1 | 26 divergencias en alcance en 46 casos; 20 con el dato verdadero (`truth` supported o mixed). Con P08 y P09, fuera de alcance por DEC-013: 28 en 48 y 21 |
 | H2 | Edición anterior recuperable por el agente: 84,2% en nivel 1; 74,2% global, lectura conservadora (DEC-021) |
 | H3 | 15 controles negativos reales sobre 31 en el lote crudo: la tasa de falsos positivos pasa a ser medible |
 
@@ -122,7 +122,7 @@ Familia 2 · Comparacion de base           primera familia operacional (B)
 Test 1 · ranking vs valor                 1_ranking_vs_value, ilustrativo (A)    C07 · P01
 Test 3 · absoluto vs relativo             3_absolute_vs_relative           C19 C31 · P04 P19
 Test 4 · denominador                      4_denominator                    C25 · P07 (+ secundarias)
-other_observed                            10 de 28 -> P-12, sin decidir
+other_observed                            8 de 26 en alcance (4 de 21 sin hermanos) -> P-12, sin decidir
 ```
 
 Los códigos existentes se conservan: 2a y 2c son nombres de familia sobre

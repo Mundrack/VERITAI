@@ -34,7 +34,8 @@ recuperados. Independiente de `truth`; **no afirma intención**.
 *"España cae 16 puestos en el ranking de países más seguros para mujeres."* El
 dato es correcto: la puntuación de España no cambió, 16 países mejoraron la suya.
 `truth: supported` + `context: divergence_detected`. Es `1_ranking_vs_value`,
-**2 de 28 divergencias** en el piloto: ilustra el fenómeno, no lo representa.
+**2 de 26 divergencias en alcance** en el piloto: ilustra el fenómeno, no lo
+representa.
 
 **Caso canónico**
 No hay todavía (DEC-026). Se cotejaron C29, C21 y C18 contra cinco requisitos
@@ -155,7 +156,7 @@ not_applicable
 4_denominator             test 4 · denominador
 5_methodology_change      familia 2 · 2c cambio de metodo
 none                      control negativo
-other_observed            lo que no encaje, con nota libre (10 de 28 -> P-12)
+other_observed            lo que no encaje, con nota libre (8 de 26 en alcance -> P-12)
 ```
 
 `NOTA` **Familia 2, "comparación de base"** *(DEC-026)*: 2a, 2b y 2c son la
