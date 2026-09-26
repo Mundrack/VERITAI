@@ -969,7 +969,9 @@ CANDIDATOS: list[dict] = [
             "reintento; el Portal Estadistico de Criminalidad del MISMO ministerio publica el mismo PDF y "
             "tablas PC-Axis por trimestre (09004 CCAA, 09005 provincias, 09006 municipios): es la via "
             "dataset del mismo emisor, no un rodeo. Las paginas JAXI son solo JS; el indice pcaxis si "
-            "lista los .px. Metodologia: PDFs por indicador en /metodologia.html."
+            "lista los .px. Metodologia: PDFs por indicador en /metodologia.html. || URL de la edicion "
+            "anterior (Balance 2T2025), recuperada del transcript el 2026-09-25 para reproducibilidad: "
+            "https://estadisticasdecriminalidad.ses.mir.es/publico/portalestadistico/dam/jcr:c1180e96-7fc4-4a27-9fd8-c3217c9faf60/Balance%20de%20Criminalidad%20Segundo%20Trimestre%202025.pdf"
         ),
         criba_query_a="criminalidad Espana aumento 0,5% primer semestre 2026 delitos sexuales",
         criba_query_b="criminalidad sube 0,5% hasta junio 2026 Espana verificacion OR bulo OR fact-check",
@@ -1581,9 +1583,14 @@ CANDIDATOS: list[dict] = [
             "1.586 DOWN-LONG 3' | [p.21, tabla Europa] '18 Spain 1.578 0.003 25'"
         ),
         truth="mixed", context="divergence_detected",
-        clase_primaria="2_baseline_selection", clases_secundarias="5_methodology_change", abstain_reason="",
+        clase_primaria="2b_base_revisada", clases_secundarias="2_baseline_selection", abstain_reason="",  # DEC-026: antes 2_baseline_selection / 5_methodology_change
         abandonado_por_tiempo="", bucket_resultado="divergencia_real", excedente="si",
         notas=(
+            "DEC-026 (2026-09-25): reetiquetado a 2b_base_revisada (secundaria 2_baseline_selection); "
+            "es el unico caso que cambia con la taxonomia nueva y su nota ya lo describia asi. NO es caso "
+            "canonico: la revision se INFIERE del indicador CHANGE del IEP (UP 4, +0,002), que no imprime "
+            "los valores 2025 revisados ni declara politica de revision (PDF entero revisado). Forma par "
+            "con C18 (mecanismo demostrado) en TESIS-ENCUADRE. || "
             "NEEDS_REVIEW; candidato a caso canonico. El puesto 27 es exacto (supported). 'Cae dos "
             "posiciones' se obtiene restando el rank publicado en 2025 (25) del publicado en 2026 (27). "
             "Pero el IEP revisa cada ano la serie anterior y publica el cambio de puesto contra el rank "

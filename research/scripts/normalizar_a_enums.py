@@ -41,10 +41,12 @@ CONTEXT = {"divergence_detected", "no_divergence_detected", "undetermined", "not
 
 CLASE = {
     "1_ranking_vs_value",
-    "2_baseline_selection",
+    "2_baseline_selection",   # familia 2 · 2a periodo o base elegida (DEC-026)
+    "2b_base_revisada",       # familia 2 · 2b base revisada. DEC-026 (2026-09-25): el emisor
+                              # revisa la edicion anterior y el claim compara contra la publicada. C29.
     "3_absolute_vs_relative",
     "4_denominator",
-    "5_methodology_change",
+    "5_methodology_change",   # familia 2 · 2c cambio de metodo (DEC-026)
     "none",
     "other_observed",
 }

@@ -71,10 +71,10 @@ reasons:
   - "PENDIENTE: la recuperabilidad humana (5 casos de Mateo, DEC-014). La decision se revisa si contradice la del agente."
 
 recommended_thesis_classes:
-  - "P-15 sigue abierta: 1_ranking_vs_value es 2 de 28 divergencias en dos lotes independientes."
-  - "Recomendacion (FINDINGS §5): objeto de estudio = comparabilidad de ediciones (opcion E); primera clase del prototipo = familia comparacion de base: 2_baseline_selection + revision de base + 5_methodology_change (opcion B, 8 de 28 mas las revisiones C18 y C29); 1_ranking_vs_value como caso ilustrativo (opcion A, C07/P01)."
-  - "Alternativas con pros y contras en FINDINGS §5: C (revision de base sola, 2 de 12), D (magnitud mal leida, 8 de 28)."
-  - "other_observed es 10 de 28: P-12 (clases 6 y 7) se decide con este dato."
+  - "P-15 CERRADA (DEC-026, 2026-09-25): objeto general = divergencia contextual computable (E); primera familia que se implementa y evalua = comparacion de base: 2a periodo o base elegida (2_baseline_selection), 2b base revisada (2b_base_revisada, codigo nuevo), 2c cambio de metodo (5_methodology_change) (B, 8 de 28); 1_ranking_vs_value como caso ilustrativo (A, 2 de 28); base revisada como subtipo 2b, no como apuesta unica (C)."
+  - "Sin caso canonico: C29, C21 y C18 no cumplen los cinco requisitos con un claim divergente. La tesis presenta el par C18 + C29; el canonico sale de la Puerta 2 sobre datos no usados en el piloto."
+  - "Encuadre completo (titulo, pregunta, H1-H3, objetivos, definicion operacional, alcance) en docs/TESIS-ENCUADRE.md. El sistema demuestra divergencia, no intencion."
+  - "other_observed es 10 de 28: P-12 sigue abierta y Mateo la revisa antes de la Puerta 2."
 
 recommended_publishers:
   - "INE (API Tempus): recuperabilidad A, sin rechazo; casos C11, C16, C17 en el crudo y P04, P11, P16, P19 en el auditado (tres con divergencia: baseline y absoluto/relativo). Primer conector."
@@ -94,7 +94,7 @@ blocking_risks:
   - "Formato hostil 0/2: no se sabe si es raro o si el pool no llego a donde vive (DEC-022)."
 
 next_implementation:
-  - "START-HERE §18, sin LLM (N0): post -> claim estructurado a mano -> EvidenceProvider (un conector: INE API Tempus) -> EvidenceBundle con raw_value_span y base_version -> un test computable (comparacion de base) -> Truth + Context -> plantilla -> audit log."
+  - "START-HERE §18: post -> claim estructurado (a mano en el prototipo) -> EvidenceProvider (un conector: INE API Tempus) -> EvidenceBundle con raw_value_span y base_version -> un test deterministico (familia comparacion de base) -> Truth + Context -> plantilla -> audit log. La decision no depende de ningun modelo de lenguaje; N0 sin LLM (R02); el LLM puede intervenir en interpretacion, extraccion y explicacion, nunca como origen de un numero (DEC-026)."
   - "10 casos del lote con trazabilidad completa, elegidos entre los de INE/FMI/Interior en PILOT-40.csv."
   - "Antes del primer conector: filtro de emisores con codigo HTTP del primer contacto (FAILURES 1.3) y subtipos de abstencion (FAILURES 1.1, 1.2)."
   - "Tablas de dominio y esquema veritai en PostgreSQL solo despues de que Mateo ratifique este documento."

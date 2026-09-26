@@ -30,6 +30,15 @@ DATABASE = trazabilidad
 Todo número usado debe llevar su `raw_value_span`: el texto literal de la fuente
 primaria de donde salió. Eso convierte la regla en un test automatizable.
 
+**Qué es "divergencia contextual computable"** *(DEC-026)*: una afirmación la
+presenta cuando (1) sus números son verificables contra una fuente primaria
+oficial con `raw_value_span`; (2) la comparación que establece difiere de la
+que la propia fuente sostiene con sus ediciones; y (3) esa diferencia se decide
+con un test determinístico sobre los valores recuperados. **No afirma
+intención.** La decisión es determinística; el LLM interpreta, extrae y
+explica. Encuadre completo, alcance (publicadores de nivel 1) y taxonomía en
+[`docs/TESIS-ENCUADRE.md`](docs/TESIS-ENCUADRE.md).
+
 ---
 
 ## 2. Estado y puertas

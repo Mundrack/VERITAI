@@ -22,10 +22,27 @@ marco no se sostiene al recuperar el dato original, **y donde esa discrepancia
 se puede detectar con una regla determinista**, no con un juicio. El "computable"
 es lo que separa la tesis de la crítica de medios.
 
-**Caso canónico**
+**Divergencia contextual computable** *(DEC-026)*
+Una afirmación estadística la presenta cuando (1) sus números son verificables
+contra una fuente primaria oficial y llevan `raw_value_span`; (2) la
+comparación que establece —periodos, bases, magnitudes, denominadores,
+posiciones— difiere de la que la propia fuente sostiene con sus ediciones; y
+(3) esa diferencia se decide con un test determinístico sobre los valores
+recuperados. Independiente de `truth`; **no afirma intención**.
+
+**Caso ilustrativo**
 *"España cae 16 puestos en el ranking de países más seguros para mujeres."* El
 dato es correcto: la puntuación de España no cambió, 16 países mejoraron la suya.
-`truth: supported` + `context: divergence_detected`.
+`truth: supported` + `context: divergence_detected`. Es `1_ranking_vs_value`,
+**2 de 28 divergencias** en el piloto: ilustra el fenómeno, no lo representa.
+
+**Caso canónico**
+No hay todavía (DEC-026). Se cotejaron C29, C21 y C18 contra cinco requisitos
+idénticos —primaria trazable, edición actual, edición anterior, revisión de base
+demostrable, reproducible— y ninguno los cumple todos con un claim divergente.
+La tesis presenta el **par C18 + C29** (mecanismo demostrado + efecto sobre un
+claim). El canónico de la familia "comparación de base" sale de la Puerta 2,
+cumpliendo los cinco requisitos sobre datos no usados en el piloto.
 
 **Truth**
 ¿La afirmación literal es correcta? Máquina de estados **independiente** de
@@ -131,14 +148,20 @@ not_applicable
 ### `clase` (taxonomía)
 
 ```
-1_ranking_vs_value
-2_baseline_selection
-3_absolute_vs_relative
-4_denominator
-5_methodology_change
-none                  # control negativo
-other_observed        # lo que no encaje, con nota libre
+1_ranking_vs_value        test 1 · ranking vs valor (ilustrativo, DEC-026)
+2_baseline_selection      familia 2 · 2a periodo o base elegida
+2b_base_revisada          familia 2 · 2b base revisada (nuevo, DEC-026; C29)
+3_absolute_vs_relative    test 3 · absoluto vs relativo
+4_denominator             test 4 · denominador
+5_methodology_change      familia 2 · 2c cambio de metodo
+none                      control negativo
+other_observed            lo que no encaje, con nota libre (10 de 28 -> P-12)
 ```
+
+`NOTA` **Familia 2, "comparación de base"** *(DEC-026)*: 2a, 2b y 2c son la
+primera familia que se implementa y evalúa. Los códigos `2_baseline_selection`
+y `5_methodology_change` se conservan con su nombre; `2b_base_revisada` es el
+único código nuevo. Solo C29 cambió de etiqueta.
 
 `NOTA` Las clases 6 (correlación/causalidad) y 7 (cifra real, marco falso) se
 acordó dejarlas fuera de la tesis, pero aparecen en varios casos. Se registran
@@ -242,7 +265,7 @@ añadir clases.
 | No usar | Usar |
 |---|---|
 | "Falso" / "verdadero" a secas | `truth` + `context`, separados |
-| "Fake news" | afirmación estadística engañosa, o el estado concreto |
+| "Fake news", "engañoso" | afirmación con **divergencia contextual**, o el estado concreto (`truth` / `context`); nunca una intención del autor |
 | "Score de confianza" como salida única | `truth` + `context` + motivo de abstención |
 | "El sistema cree que…" | el sistema no cree: aplica una regla sobre unos valores |
 | "Detectar desinformación" | detectar divergencia contextual computable |
