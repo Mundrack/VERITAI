@@ -160,3 +160,23 @@ mitad** (fin de la jornada 2): proyección por cubeta con el ritmo real.
 mínimo de A (50 / 40), el resto de cubetas, el tope de cuatro jornadas con
 revisión a la mitad, y el 25 % de doble anotación. Con eso se abre la
 recolección; sin eso, no.
+
+### 3b. Regla de la jornada 2, fijada antes de recolectarla (DEC-033)
+
+La jornada 2 (4 h de reloj, pausas descontadas) se hace **entera por la vía
+divergencia dirigida** y se trata como **medición**. Al cerrarla se cuenta
+**B** = casos anotados en la cubeta B (2a esperada **por cambio de signo o por
+valor atribuido a otro periodo**, DEC-029), con criba hecha, trabajados, y
+contando los hermanos por criba una sola vez. **La señal de horizonte no
+cuenta como B en ningún escenario.** La asignación es completa y previa:
+
+| B al cerrar la jornada 2 | Qué se hace | Por qué esa salida |
+|---|---|---|
+| **≥ 4** | **Sigue.** Jornadas 3 y 4 por la vía divergencia; los controles A que aparezcan por esa vía se cuentan igual. | 4 por jornada × 2 jornadas ≥ 8 más: 12–15 al tope; si al final B < 15, aplica la limitación de §3 (recall con intervalo, sin afirmación sobre H1/H2). |
+| **= 3** | **Replanteo 1: ampliar el tope en dos jornadas** (seis en total). El mínimo de B sigue en 15. | 3 por jornada × 4 jornadas restantes = 12, más 3 = 15: alcanzable justo, sin tocar el mínimo. |
+| **= 1 o 2** | **Replanteo 3: ambas.** Ampliar el tope en dos jornadas **y** bajar el mínimo de B a 10 con intervalo declarado (10 positivos, 9 detectados → 90 % [59,6; 98,2]). | Con 1–2 por jornada no se llega a 15 ni con seis jornadas; con 10 y seis jornadas, sí. La tesis dice que H1/H2 se evalúan con poca potencia y da el intervalo. |
+| **= 0** | **Ninguna de las tres basta: no se gasta la jornada 3.** Se abre una DEC de replanteo con Mateo: si la definición de B (2a por signo) es demasiado estrecha para lo que la prensa produce, si hay que cambiar la vía o los emisores, o si la tesis evalúa H1 con B < 10 como limitación. | Ampliar jornadas a tasa cero no produce casos; bajar el mínimo a 10 con tasa cero tampoco. Decidirlo después de ver un número distinto de cero sería ajustar el umbral a posteriori. |
+
+Lo que no cambia en ningún escenario: la regla dura, DEC-021, DEC-025,
+DEC-029, los hermanos cuentan una vez, y los casos de la vía divergencia que
+resulten controles se anotan como A y cuentan para el FPR.

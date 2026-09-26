@@ -978,3 +978,31 @@ e `interior.gob.es` devolvieron 403 al agente identificado.
 que aparezcan divergencias: la jornada 1 demuestra que no aparecen. (b)
 Contar como B las señales de horizonte para llenar la cubeta: contradice
 DEC-029. (c) Pedir acceso al FMI: lento, fuera de calendario.
+
+---
+
+## DEC-033 · La jornada 2 es una medición: regla completa de B fijada antes de recolectarla
+
+**Fecha:** 2026-09-26 · **Estado:** vigente · **Decide:** Mateo · **Aplica:** diseño de la Puerta 3 §3b
+
+**Contexto.** Con las dos vías escritas (DEC-032), la proyección de B con la
+tasa del lote crudo (6–10 % de los casos de prensa, 25–35 casos por jornada)
+da 2–3 B por jornada: no llega a 15 en el tope. Una búsqueda dirigida podría
+duplicar la tasa, pero eso no está medido. Mateo aprobó hacer la jornada 2
+entera por la vía divergencia dirigida como medición y pidió cerrar el hueco
+de la regla antes de arrancar, para que el umbral sea previo y no se decida
+viendo el número.
+
+**Decisión.** Al cerrar la jornada 2 se cuenta B (2a por signo o por valor
+atribuido a otro periodo; **la señal de horizonte no cuenta en ningún
+escenario**; hermanos una vez). Asignación completa: **B ≥ 4 → sigue**;
+**B = 3 → ampliar el tope en dos jornadas, mínimo 15**; **B = 1 o 2 → ambas:
+ampliar dos jornadas y bajar el mínimo de B a 10 con intervalo declarado**;
+**B = 0 → no se gasta la jornada 3 y se abre una DEC de replanteo** (definición
+de B, vía, emisores, o H1 con B < 10 como limitación). El porqué de cada
+salida está en el diseño §3b. El agente avisa al cerrar la jornada 2 con el
+número de B, no antes.
+
+**Alternativa descartada.** Dejar el 3 sin asignar y decidirlo al verlo:
+convertiría el umbral en posterior. Contar la señal de horizonte como B para
+subir el número: contradice DEC-029.
