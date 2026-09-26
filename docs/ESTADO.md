@@ -3,7 +3,7 @@
 > **Este documento se sobrescribe entero en cada actualización.** Es una foto,
 > no un historial. El historial está en [`BITACORA.md`](BITACORA.md).
 
-**Última actualización:** 2026-09-25 (noche, tras DEC-029)
+**Última actualización:** 2026-09-25 (noche, tras DEC-030)
 
 ---
 
@@ -14,18 +14,18 @@ PUERTA 1   research/PILOT-DECISION.md con PILOT_GO        SUPERADA 2026-09-25
            TAREA 1 · TAREA 2 · TAREA 3 hechas                  (DEC-023, alcance nivel 1
                                                                por DEC-024)
 
-PUERTA 2   prototipo end-to-end, UNA clase y UN emisor,      EJECUTADA y FUSIONADA a main
-           10 casos con trazabilidad completa                 (--no-ff). Decisiones sobre la
-           clase: 2a periodo o base elegida (DEC-026, P-12)    primera corrida tomadas
-           emisor: INE, API Tempus (DEC-024)                   (DEC-029: senal de horizonte,
-           sin LLM en ningun paso (DEC-028)                    undetermined sin test, C17,
-           nada del piloto evalua (DEC-025)                    P11, 2b fuera).
-                                                               Cierre formal: Mateo no lo
-                                                               declaro con esa palabra; pidio
-                                                               lo que falta para la Puerta 3
+PUERTA 2   prototipo end-to-end, UNA clase y UN emisor,      CERRADA 2026-09-25 (DEC-030)
+           10 casos con trazabilidad completa                 fusionada a main (4403971);
+           clase: 2a periodo o base elegida (DEC-026, P-12)    DEC-028, DEC-029 aplicadas.
+           emisor: INE, API Tempus (DEC-024)                   Condicion pendiente anotada:
+           sin LLM en ningun paso (DEC-028)                    P11 en NEEDS_REVIEW (P-23),
+           nada del piloto evalua (DEC-025)                    no se cita hasta cotejarlo
 
-PUERTA 3   corpus completo anotado + arnes de evaluacion     <-- SIGUIENTE, sin abrir
-           (conjunto de evaluacion recolectado aparte, DEC-025)
+PUERTA 3   corpus completo anotado + arnes de evaluacion     <-- AQUI, sin recolectar:
+           conjunto de evaluacion recolectado aparte (DEC-025)  diseno del conjunto PROPUESTO
+           diseno: research/PUERTA-3-DISENO.md                 (pendiente de aprobar);
+           arnes: rama feat/arnes-evaluacion                   arnes en paralelo;
+                                                               conectores FMI/Interior despues
 
 PUERTA 4   evaluacion completa: metricas, ablacion,
            sondas contrafactuales
@@ -155,9 +155,15 @@ main                          paquete + registro vivo + TAREAS 1-3 + Docker + en
 ├─ docs/p15-encuadre          FUSIONADA (c6c47e2): DEC-025, DEC-026, TESIS-ENCUADRE.md
 ├─ docs/p12-other-observed    FUSIONADA (3798414): desglose de other_observed
 ├─ docs/p12-cierre            FUSIONADA (11b9a00): DEC-027
-└─ feat/puerta-2-ine-2a       FUSIONADA (--no-ff; hash en git log): 104cf22 Puerta 2 tal como
-                              se reviso + segundo commit con DEC-029 aplicada
+├─ feat/puerta-2-ine-2a       FUSIONADA (4403971): 104cf22 Puerta 2 tal como se reviso
+│                             + a6c7d91 DEC-029 aplicada
+│
+├─ docs/cierre-puerta-2       DEC-030 (Puerta 2 cerrada), P-23, PUERTA-3-DISENO.md   <- SIN fusionar
+└─ feat/arnes-evaluacion      arnes: cinco metricas de R02 §7 + FPR con intervalos    <- SIN fusionar
 ```
+
+Las dos ramas nuevas se fusionan cuando Mateo lo diga; el diseño de la
+Puerta 3 es propuesta hasta que lo apruebe.
 
 `CLAUDE.md` sigue siendo **propuesta** (P-02); ahora lleva el estado de las
 puertas y las reglas de DEC-025 y DEC-029. Un archivo `AGENTS.md` sigue sin
@@ -179,20 +185,24 @@ En orden, y sin saltarse pasos:
 2. ~~Puerta 2: plan, ejecución, decisiones sobre la primera corrida~~ **Hecho
    y fusionado el 2026-09-25** (DEC-028, DEC-029). Informe:
    [`../research/PUERTA-2-CASOS.md`](../research/PUERTA-2-CASOS.md).
-3. **Mateo:** decir si la Puerta 2 queda cerrada con esa palabra, o qué falta.
-4. **Mateo:** los 5 casos manuales (**C04, C05, C11, C14, C22**, semilla
-   `20260925`), en tabla, cierran FINDINGS §7 (P-20). Si contradicen la
-   lectura del agente, `PILOT-DECISION` se reabre.
-5. `NEEDS_REVIEW` antes de citar P11 en texto: cotejar el 8.830 de la API
-   contra el PDF de 2019 en `research/evidencia/`.
-6. **Puerta 3** (plan de una página primero, como la Puerta 2): recolectar el
-   **conjunto de evaluación** con el método de la TAREA 2 (criba, cronómetro,
-   vía), sin nada del piloto ni de la Puerta 2 (DEC-025); anotar con los
-   enums cerrados y las reglas de DEC-029 desde el principio; conectores de
-   FMI e Interior; arnés que corra el conjunto entero y calcule FPR sobre
-   controles con test aplicable; criterio de reaparición de P17/C10 aplicado
-   una sola vez (DEC-027). Lo que falta, en media página, está en la
-   bitácora de esta sesión y en la respuesta a Mateo.
+3. ~~Cerrar la Puerta 2~~ **Cerrada el 2026-09-25 (DEC-030)**, con P11 en
+   `NEEDS_REVIEW` como condición anotada (P-23).
+4. **Mateo:** aprobar (o corregir) el **diseño del conjunto de evaluación**:
+   [`../research/PUERTA-3-DISENO.md`](../research/PUERTA-3-DISENO.md). Lo que
+   decide: tasa de H3 (10 % / límite superior 15 %), **50 controles con test
+   aplicable (mínimo 40)**, resto de cubetas (total 110 / 78), tope de cuatro
+   jornadas con revisión a la mitad, 25 % de doble anotación. **No se
+   recolecta nada antes.**
+5. En paralelo, sin depender del corpus: el **arnés** (rama
+   `feat/arnes-evaluacion`): cinco métricas de R02 §7 + FPR con intervalos de
+   Wilson; se prueba en humo sobre los 10 casos de desarrollo, marcados como
+   tales.
+6. Después del diseño aprobado: conectores de **FMI e Interior**; después,
+   recolección y anotación; anotación congelada (sha256 en DEC) antes de
+   correr el arnés; criterio de reaparición de P17/C10 aplicado una sola vez.
+7. **Mateo:** los 5 casos manuales (**C04, C05, C11, C14, C22**, semilla
+   `20260925`), en tabla, cierran FINDINGS §7 (P-20).
+8. P-23: cotejar P11 contra `research/evidencia/` antes de citarlo.
 
 No se toca el test 2a a la vista de resultados: lo que cambie sale de una DEC,
-por escrito, antes del conjunto de evaluación.
+por escrito, y aplica al siguiente conjunto.

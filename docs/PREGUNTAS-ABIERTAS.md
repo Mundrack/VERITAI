@@ -247,6 +247,17 @@ el FPR se calcula sobre claims que nadie evaluó; si se cuenta como
 agente: `undetermined`, y que el FPR se mida solo sobre claims con test
 aplicable, declarándolo.
 
+### P-23 · Cotejo de P11 antes de citarlo
+
+**Estado:** abierto desde DEC-030 (2026-09-25) · **Bloquea:** citar P11 como ejemplo de 2a; **no** bloquea la Puerta 3 · **Decide:** el cotejo documental, y Mateo
+
+La API Tempus (tabla 13913, "Mercantiles") da mayo 2018 = 8.830 y diciembre
+2018 = 6.809; el PDF de febrero de 2019 usado en el piloto daba 8.908 (total)
+/ 8.830 (S.L.) y 6.811. O la serie fue revisada, o la serie de la API no es
+el total que usó el PDF. Se coteja contra `research/evidencia/` (PDF y
+respuesta cruda), se anota el resultado en `PUERTA-2-CASOS.md` §4 y en el
+corpus, y se cierra aquí. Mientras tanto P11 lleva `NEEDS_REVIEW` y no se cita.
+
 ### P-05 · Segundo anotador
 
 **Estado:** abierto desde el paquete · **Bloquea:** cerrar el corpus (Puerta 3)

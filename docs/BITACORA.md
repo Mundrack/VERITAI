@@ -806,3 +806,51 @@ Postgres  claims 10 · bundles 10 (sin cambios) · items 96 · verdicts 27 (tres
 - P11: cotejar contra `research/evidencia/` antes de citarlo
 - P-20: los 5 casos manuales
 - Deuda técnica: caché del proveedor sin TTL; test de arquitectura de imports
+
+---
+
+## 2026-09-25 (noche, 3) — Puerta 2 cerrada (DEC-030); diseño de la Puerta 3 propuesto; arnés en paralelo
+
+### Qué se hizo
+
+Mateo declaró cerrada la Puerta 2 con P11 en `NEEDS_REVIEW` como condición
+pendiente anotada. En `docs/cierre-puerta-2`: DEC-030, P-23 (el cotejo de
+P11), estado en `CLAUDE.md` §2, `ESTADO.md`, `research/README.md` y la cabecera
+de `PUERTA-2-CASOS.md`.
+
+Diseño del conjunto de evaluación, **propuesta en una página**:
+[`../research/PUERTA-3-DISENO.md`](../research/PUERTA-3-DISENO.md). El número
+que manda son los controles con test aplicable, justificado con el límite
+superior del IC 95 % de Wilson:
+
+```
+n controles   k=0    k=1    k=2      -> con 20 no se evalua H3 ni con 0 errores;
+   20        16,1   23,6   30,1         40 es el minimo que tolera 1 falso positivo;
+   40         8,8   12,9   16,5         50 tolera 2 con el limite <= 15 %
+   50         7,1   10,5   13,5
+propuesta: FPR <= 10 % y limite superior IC95 <= 15 %; A = 50 (min 40); total 110 (min 78)
+```
+
+Cubetas A–F, criterio de reaparición de P17/C10 operacionalizado (campo
+`mecanismo_candidato`, conteo único al congelar la anotación, evaluación
+exploratoria si pasa), tope de cuatro jornadas con revisión a la mitad y
+pivote de recolección, y lo que se declara como limitación si una cubeta no
+llega. **No se recolecta nada hasta que Mateo apruebe.**
+
+En paralelo, en `feat/arnes-evaluacion`, el arnés: cinco métricas de R02 §7
++ FPR con intervalos, con guardia de conjunto (rechaza casos de desarrollo
+salvo `--desarrollo`), probado en humo sobre los 10 de la Puerta 2.
+
+### Qué se verificó
+
+- Intervalos de Wilson recalculados con la función del arnés (misma
+  aritmética que el diseño)
+- Los docs de esta rama no tocan código; los tests siguen en 46
+
+### Qué quedó pendiente
+
+- Mateo: aprobar o corregir el diseño (tasa de H3, 50/40 controles, cubetas,
+  tope, doble anotación)
+- Fusionar `docs/cierre-puerta-2` y `feat/arnes-evaluacion` cuando lo diga
+- Conectores de FMI e Interior, después del diseño
+- P-23 (P11), P-20 (5 casos), P-05 (segundo anotador: el diseño propone 25 %)

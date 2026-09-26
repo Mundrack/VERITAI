@@ -868,3 +868,41 @@ el test aplicó y el criterio confirmado no disparó. (c) Reetiquetar C17 a 2a:
 decidiría con un caso de desarrollo lo que debe decidir la evaluación.
 (d) Relajar el nombre de serie para "explicar" el 8.830 de P11: sería
 rellenar con algo plausible.
+
+---
+
+## DEC-030 · Puerta 2 cerrada, con P11 en `NEEDS_REVIEW` como condición pendiente anotada
+
+**Fecha:** 2026-09-25 · **Estado:** vigente · **Decide:** Mateo · **Cierra:** la Puerta 2
+
+**Contexto.** La Puerta 2 (prototipo end-to-end, una clase, un emisor, 10
+casos con trazabilidad completa) está ejecutada, con sus decisiones tomadas
+(DEC-028, DEC-029) y fusionada a `main` (`4403971`). Las puertas se cierran
+explícitamente y no se reabren (GLOSARIO, "Puerta").
+
+**Decisión.** **La Puerta 2 queda cerrada.** Lo que la cierra: la cadena
+*claim estructurado → evidencia con spans → test 2a → veredicto en dos ejes →
+explicación → auditoría* existe, corre sobre 10 claims reales del INE y deja
+rastro en cinco tablas; el test 2a está definido a priori y afinado por
+decisión (solo el signo confirma); sin LLM en ningún paso; nada de esos 10
+casos evalúa nada (DEC-025).
+
+**Condición pendiente, anotada, no bloqueante:** **P11 sigue en
+`NEEDS_REVIEW`**. El 8.830 de la API Tempus coincide con la cifra de S.L. del
+PDF de febrero de 2019, no con el total (8.908). Hasta cotejarlo contra
+`research/evidencia/`, P11 **no se cita** en ningún texto de la tesis como
+ejemplo de 2a. La condición se registra como P-23 y se cierra con el cotejo,
+sin reabrir la puerta.
+
+**Consecuencia.** La Puerta 3 (corpus completo anotado + arnés de evaluación)
+es la siguiente. Antes de recolectar un solo caso, Mateo aprueba el **diseño
+del conjunto de evaluación** (tamaño y cubetas con el número de controles
+justificado por intervalo, criterio de reaparición de P17/C10, regla de parada
+y limitaciones): `research/PUERTA-3-DISENO.md`, propuesta. El arnés (cinco
+métricas de R02 §7 más FPR con intervalos) avanza en paralelo porque no
+depende del corpus. Los conectores de FMI e Interior, después del diseño.
+
+**Alternativa descartada.** Dejar la puerta abierta hasta cotejar P11.
+Convertiría un cotejo documental en un bloqueo de todo el proyecto; la
+condición se cumple igual estando anotada, y la regla es que las puertas se
+cierran de forma explícita.

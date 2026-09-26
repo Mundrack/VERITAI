@@ -5,6 +5,8 @@
 **Conjunto:** los 10 casos son de **desarrollo** (DEC-025). Ninguno evalúa nada.
 **Versión:** tras las decisiones de Mateo sobre la primera corrida (DEC-029). La
 primera corrida y lo que se decidió a partir de ella están en §6.
+**Puerta 2: CERRADA (DEC-030, 2026-09-25)**, con una condición pendiente
+anotada: P11 en `NEEDS_REVIEW` (P-23), no se cita hasta cotejarlo.
 
 > Este documento reporta lo que el prototipo hizo con 10 claims reales, número
 > a número. No es una evaluación: es la prueba de que la cadena

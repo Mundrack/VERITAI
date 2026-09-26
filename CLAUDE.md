@@ -47,9 +47,10 @@ El proyecto avanza por puertas, no por calendario (`00b-DECISIONES-MATEO`).
 
 ```
 PUERTA 1  research/PILOT-DECISION.md con PILOT_GO   SUPERADA (DEC-023, alcance nivel 1)
-PUERTA 2  prototipo end-to-end, UNA clase, UN emisor  <- ejecutada (DEC-028, DEC-029);
-                                                       el cierre lo ratifica Mateo
-PUERTA 3  corpus anotado + arnes de evaluacion
+PUERTA 2  prototipo end-to-end, UNA clase, UN emisor  CERRADA (DEC-030; P11 en NEEDS_REVIEW
+                                                       como condicion anotada, P-23)
+PUERTA 3  corpus anotado + arnes de evaluacion        <- siguiente: diseno del conjunto
+                                                       pendiente de aprobar; no se recolecta
 PUERTA 4  evaluacion completa
 ```
 
