@@ -14,10 +14,10 @@ PUERTA 1   research/PILOT-DECISION.md con PILOT_GO        SUPERADA 2026-09-25
            TAREA 1 · TAREA 2 · TAREA 3 hechas                  (DEC-023, alcance nivel 1
                                                                por DEC-024)
 
-PUERTA 2   prototipo end-to-end, UNA familia y UN emisor,    <-- AQUI, sin arrancar:
-           10 casos con trazabilidad completa                 Mateo revisa P-12
-           familia: comparacion de base (DEC-026)             (other_observed, 8 de 26)
-           emisor: INE (DEC-024)                              antes de abrirla
+PUERTA 2   prototipo end-to-end, UNA clase y UN emisor,      <-- AQUI, sin arrancar:
+           10 casos con trazabilidad completa                 plan de una pagina
+           clase: 2a periodo o base elegida (DEC-026, P-12)    PENDIENTE de aprobar
+           emisor: INE (DEC-024)
            regla ya fijada: nada del piloto entra en el
            conjunto de evaluacion (DEC-025)
 
@@ -148,9 +148,12 @@ main                          paquete + registro vivo + TAREA 1 + TAREA 2 + ento
 │
 ├─ feat/tarea-3-decision      FUSIONADA: TAREA 3 + DEC-023, DEC-024
 │
-└─ docs/p15-encuadre          DEC-025, DEC-026, TESIS-ENCUADRE.md, taxonomia 2b   <- rama actual
+├─ docs/p15-encuadre          FUSIONADA (c6c47e2): DEC-025, DEC-026, TESIS-ENCUADRE.md
+├─ docs/p12-other-observed    FUSIONADA (3798414): desglose de other_observed
+│
+└─ docs/p12-cierre            DEC-027: reetiquetas de P-12, candidatas, abstencion   <- rama actual
 
-La rama de la Puerta 2 se crea cuando Mateo termine de revisar P-12.
+La rama de la Puerta 2 se crea cuando Mateo apruebe su plan.
 ```
 
 Con el entorno Docker en `main`, los enlaces a
@@ -204,19 +207,19 @@ En orden, y sin saltarse pasos:
    objetivos, definición operacional, alcance y taxonomía en
    [`TESIS-ENCUADRE.md`](TESIS-ENCUADRE.md). Sin caso canónico: par C18 + C29;
    el canónico sale de la Puerta 2 con los cinco requisitos.
-9. **Mateo revisa P-12** antes de abrir la Puerta 2. Corregido: `other_observed`
-   es **8 de 26 en alcance** (P08 y P09 estaban contados aunque están fuera
-   por DEC-013) y **4 de 21 sin hermanos**. El desglose caso a caso, con lo
-   que cada uno necesitaría para entrar en una clase, está en
-   [`PREGUNTAS-ABIERTAS.md`](PREGUNTAS-ABIERTAS.md), P-12. Decide Mateo;
-   ninguna reetiqueta hasta entonces.
+9. ~~Mateo revisa P-12~~ **Cerrada el 2026-09-25 (DEC-027)**: P05 → 2a, P07 →
+   4, C13 → 2a; C03 → sin divergencia (lectura alternativa); C05 → abstención
+   con dos motivos; C08 se queda; P17 y C10 candidatas con criterio de
+   reaparición, sin clase con n = 1. `other_observed` queda en **3 de 24**;
+   la familia "comparación de base" en **10 de 24**.
 10. **P-20:** los 5 casos manuales de Mateo, en tabla, cierran FINDINGS §7. Si
     contradicen la lectura del agente, la decisión se reabre.
-11. **Puerta 2, después de 9:** prototipo de START-HERE §18 con INE como
-    primer conector, la familia "comparación de base", 10 casos de desarrollo
-    tomados de `PILOT-40.csv` (nunca de evaluación, DEC-025), decisión
-    determinística sobre la evidencia; el LLM en interpretación, extracción y
-    explicación.
+11. **Puerta 2 — plan de una página pendiente de aprobación:** una sola clase
+    (2a, periodo o base elegida), un solo emisor (INE, API Tempus), 10 casos
+    de desarrollo con trazabilidad completa (nunca de evaluación, DEC-025),
+    decisión determinística sobre la evidencia; el LLM en interpretación,
+    extracción y explicación. **No se ejecuta hasta que Mateo apruebe el
+    plan.**
 7. ~~Fusionar `feat/entorno-docker-local`~~ **Hecho (26d42da).** Las reglas de
    DEC-017, DEC-018, DEC-020 y DEC-021 están en `CLAUDE.md` §3, como parte de
    la propuesta que Mateo revisa (P-02).

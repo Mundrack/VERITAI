@@ -44,7 +44,7 @@ ese verde no dice.**
 |---|---|---|
 | Recuperabilidad | A 8 · B 11 · C 1 · **D 0** | A 15 · B 10 · **D 6** |
 | Verificado contra la primaria con `raw_value_span` | **3/20** | actual **31/31** · anterior **25/31** |
-| `divergence_detected` | **16/20** (80%) | **12/31** (39%) |
+| `divergence_detected` | **16/20** (80%) | **10/31** (32%) tras DEC-027; 12/31 en la recolección |
 | `truth = contradicted` | 9/20 | 3/31 |
 | Formato | html 8 · dataset 6 · pdf 6 | pdf 11 · dataset 9 · api 6 · none 3 · html 2 |
 
@@ -54,7 +54,7 @@ Tres lecturas:
    localizable porque alguien —el verificador— ya la había localizado. En
    contenido crudo aparecen 6 de 31, y son la parte informativa del piloto.
 2. **El lote auditado no servía para medir tasa de falsos positivos**: 16 de
-   20 divergencias. El crudo tiene 15 controles negativos reales sobre 31, y
+   20 divergencias. El crudo tiene 16 controles negativos reales sobre 31 (tras DEC-027), y
    es donde un sistema se puede equivocar en la dirección que importa.
 3. **"Verificado" cambia de significado.** En la auditoría solo 3 casos
    tenían el número literal de la primaria; en el crudo, 31 de 31 para la
@@ -216,6 +216,32 @@ other_observed en alcance: P05 P07 P17 C03 C05 C08 C10 C13; hermanos: C03 C05 C0
 La mitad de `other_observed` es cobertura hermana de datos ya representados.
 El desglose caso a caso, con lo que cada uno necesitaría para entrar en una
 clase, está en `docs/PREGUNTAS-ABIERTAS.md`, P-12.
+
+`TRAS DEC-027 (P-12 cerrada, 2026-09-25)` Mateo aceptó tres encajes (P05 →
+2a, P07 → 4, C13 → 2a), sacó C03 a `no_divergence_detected` (lectura
+alternativa) y C05 a abstención con dos motivos, dejó C08 como está y
+convirtió P17 y C10 en candidatas sin código con criterio de reaparición. Las
+divergencias en alcance pasan de 26 a **24** (`pilot40.py`, tablas 5 y 5b):
+
+```
+clase primaria                en alcance (24)      sin hermanos (21)
+  2_baseline_selection (2a)      8   33,3%            7   33,3%
+  3_absolute_vs_relative         5   20,8%            4   19,0%
+  4_denominator                  4   16,7%            4   19,0%
+  other_observed                 3   12,5%            2    9,5%     P17 C08 C10
+  1_ranking_vs_value             2    8,3%            2    9,5%
+  5_methodology_change (2c)      1    4,2%            1    4,8%
+  2b_base_revisada               1    4,2%            1    4,8%
+
+familia comparacion de base   10   41,7%            9   42,9%
+magnitud mal leida             9   37,5%            8   38,1%
+```
+
+La familia "comparación de base" es ahora la más frecuente por sí sola (10
+de 24), lo que sostiene la elección de B como primera familia (DEC-026)
+**sin que ningún caso se haya reetiquetado para lograrlo**: los tres encajes
+los decidió Mateo sobre el mecanismo de cada caso, y C08 —que habría subido
+la clase ilustrativa— se dejó como estaba.
 
 Cinco opciones de reencuadre. Ninguna se decide aquí.
 

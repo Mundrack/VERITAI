@@ -637,3 +637,48 @@ hasta que Mateo decida.**
 - P-20: los 5 casos manuales
 - Fusionar `docs/p12-other-observed`
 - Puerta 2: sin abrir
+
+---
+
+## 2026-09-25 — P-12 cerrada (DEC-027) y la Puerta 2 a la espera de su plan
+
+### Qué se hizo
+
+Merge de `docs/p12-other-observed` a `main` (`3798414`). En
+`docs/p12-cierre`, las decisiones de Mateo sobre el desglose:
+
+| Caso | Decisión | Dónde |
+|---|---|---|
+| P05, P07 | → `2_baseline_selection`, → `4_denominator`, con la nota del mecanismo | `normalizar_a_enums.py`, `pilot-20-normalizado.csv` |
+| C13 | → `2_baseline_selection` (dirección implícita contraria a la edición anterior) | `lote_crudo.py`, CSVs |
+| C08 | se queda: reetiquetar subiría la clase ilustrativa por decisión, no por dato | — |
+| C03 | → `no_divergence_detected`, clase `none`, cubeta `control_negativo`; lectura alternativa (flujo vs stock) en `notas` | ídem |
+| C05 | → abstención con dos motivos `REQUIRED_SLOT_MISSING\|UNSUPPORTED_CLAIM_TYPE`; `insufficient_evidence` / `undetermined`; cubeta nueva `abstencion` | ídem; validadores aceptan `\|` |
+| P17, C10 | candidatas sin código; **criterio de reaparición escrito antes de ver datos**: ≥ 3 casos independientes, ≥ 2 emisores, A o B, test computable; se decide una vez | DEC-027, GLOSARIO, TESIS-ENCUADRE |
+
+Los objetivos de cubeta eran la regla de parada de la recolección: C03 deja
+control negativo en 8 sobre 7 y `validar_lote_crudo.py` **avisa, no falla**;
+la pertenencia al lote no se recompone.
+
+### Números después
+
+```
+divergencias en alcance   24 (eran 26)      other_observed   3 de 24 (P17 C08 C10)
+familia comparacion de base  10 de 24  41,7%   -> sostiene B sin reetiquetar para lograrlo
+2a 8 · 3 5 · 4 4 · 1 2 · 2c 1 · 2b 1      controles negativos crudos 16 de 31
+```
+
+Propagado a FINDINGS §2 y §5, TESIS-ENCUADRE (H1, H3), GLOSARIO, DECISION,
+COLECCION (notas "tras DEC-027"), ESTADO.
+
+### Qué se verificó
+
+- `normalizar_a_enums.py`, `validar_lote_crudo.py` (con aviso) y `pilot40.py`
+  salen 0; las cifras nuevas están en su salida
+
+### Qué quedó pendiente
+
+- **Puerta 2: plan de una página** (clase 2a, emisor INE, 10 casos con
+  trazabilidad completa), a aprobar antes de ejecutar
+- Fusionar `docs/p12-cierre`
+- P-20: los 5 casos manuales
