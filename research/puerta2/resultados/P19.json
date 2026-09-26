@@ -45,7 +45,7 @@
       ],
       "explicacion": "Sin veredicto: evidencia insuficiente.\nAfirmacion: \"«Tenemos el menor paro juvenil de la historia de España»\"\nFuente (INE, serie EPA452436, \"Tasa de paro de la población. Ambos sexos. Total Nacional. Menores de 25 años.\"): 1T 2026 = 24.54.\nAbstencion: UNSUPPORTED_CLAIM_TYPE (el tipo de afirmacion no esta soportado por el prototipo).\nEvidencia: 10 items, bundle 99bfac5fcc2e.",
       "bundle_hash": "99bfac5fcc2efa1e12d73b37e5c2890b29e331a773d7a229ce2d1aab91598e0b",
-      "generado_en": "2026-09-26T01:14:18.861161+00:00"
+      "generado_en": "2026-09-26T01:41:44.591003+00:00"
     },
     "evidencia": {
       "bundle_hash": "99bfac5fcc2efa1e12d73b37e5c2890b29e331a773d7a229ce2d1aab91598e0b",
@@ -155,6 +155,6 @@
       ]
     },
     "persistido": true,
-    "duracion_ms": 3693
+    "duracion_ms": 3697
   }
 }

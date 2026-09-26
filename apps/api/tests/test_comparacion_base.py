@@ -14,6 +14,7 @@ from veritai.domain.claim import (
     TipoClaim,
     UnidadCambio,
 )
+from veritai.domain.enums import Clase, Context, Truth
 from veritai.domain.periodo import Periodo
 from veritai.domain.tests.comparacion_base import aplicar_2a, cambio, tolerancia_para
 
@@ -73,12 +74,49 @@ def test_dispara_cuando_la_base_elegida_cambia_el_signo() -> None:
     claim = _claim(cambio_afirmado=-23.0, direccion_afirmada=Direccion.BAJA)
     r = aplicar_2a(claim, _bundle(prov, claim))
     assert r.aplicable and r.disparo
-    assert r.subtipo == "base_no_es_referencia"
+    assert r.subtipo == "cambio_de_signo" and r.senales == ()
     assert (
         r.calculos["cambio_recomputado_con_base_del_claim"]
         < 0
         < r.calculos["cambio_recomputado_con_referencia_emisor"]
     )
+
+
+METRICA_TRIM_INTERANUAL = MetricaEmisor(
+    emisor="INE",
+    tabla="65334",
+    serie_nombre="Tasa de paro. Menores de 25.",
+    unidad="miles",
+    referencia_principal=Referencia.INTERANUAL,
+)
+
+
+def test_magnitud_sin_cambio_de_signo_es_senal_de_horizonte_no_disparo() -> None:
+    # N03: 2T2018 -> 1T2026 da +17,5%; contra el interanual (1T2025) da +4,7%: ratio 3,7 sin
+    # cambio de signo. Es senal de horizonte, no divergencia confirmada (DEC-029, P-21).
+    serie = serie_trimestral(
+        {"2026-T1": 3662.5, "2025-T4": 3641.4, "2025-T1": 3499.1, "2018-T2": 3117.8}
+    )
+    prov = ProveedorFalso({METRICA_TRIM_INTERANUAL.serie_nombre: serie})
+    claim = _claim(
+        metrica=METRICA_TRIM_INTERANUAL,
+        periodo_objetivo=Periodo.parse("2026-T1"),
+        periodo_base=Periodo.parse("2018-T2"),
+        cambio_afirmado=17.5,
+        direccion_afirmada=Direccion.SUBE,
+    )
+    r = aplicar_2a(claim, _bundle(prov, claim))
+    assert r.aplicable and not r.disparo
+    assert r.senales == ("horizonte_largo",) and r.subtipo == ""
+    assert r.calculos["ratio_magnitudes"] == pytest.approx(3.741, abs=0.01)
+    v = AnalizarClaim(prov).ejecutar(claim)
+    assert (v.truth, v.context, v.clase_primaria) == (
+        Truth.SUPPORTED,
+        Context.NO_DIVERGENCE_DETECTED,
+        Clase.NONE,
+    )
+    assert v.a_dict()["tests"][0]["senales"] == ["horizonte_largo"]
+    assert "Senales registradas: horizonte_largo" in v.explicacion
 
 
 def test_no_dispara_si_la_base_es_la_referencia_del_emisor() -> None:

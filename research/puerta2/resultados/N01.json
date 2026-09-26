@@ -35,16 +35,19 @@
     "veredicto": {
       "claim_id": "N01",
       "truth": "mixed",
-      "context": "divergence_detected",
-      "clase_primaria": "2_baseline_selection",
+      "context": "no_divergence_detected",
+      "clase_primaria": "none",
       "abstain_reasons": [],
       "tests": [
         {
           "nombre": "2a_periodo_o_base_elegida",
           "aplicable": true,
-          "disparo": true,
-          "subtipo": "base_no_es_referencia",
-          "motivo": "el claim compara contra 4T 2019 (+63.47 pct); contra la referencia del emisor, interanual (4T 2024), el cambio es +11.22 pct: difiere 5.7x en magnitud",
+          "disparo": false,
+          "subtipo": "",
+          "senales": [
+            "horizonte_largo"
+          ],
+          "motivo": "el claim compara contra 4T 2019 (+63.47 pct); contra la referencia del emisor, interanual (4T 2024), el cambio es +11.22 pct: difiere 5.7x en magnitud sin cambiar de signo; senal de horizonte, no divergencia confirmada (DEC-029)",
           "calculos": {
             "unidad": "pct",
             "periodo_base_claim": "2019-T4",
@@ -57,7 +60,8 @@
             "valor_referencia_emisor": 92.211,
             "cambio_recomputado_con_referencia_emisor": 11.222,
             "ratio_magnitudes": 5.656,
-            "umbral_ratio": 2.0
+            "umbral_ratio": 2.0,
+            "senal": "horizonte_largo"
           }
         }
       ],
@@ -103,9 +107,9 @@
           "etiqueta": "ref:interanual"
         }
       ],
-      "explicacion": "Parcialmente respaldado y descontextualizado.\nAfirmacion: \"Desde 2019 los salarios han crecido un 1% mientras la vivienda se ha disparado un 64%\"\nFuente (INE, serie IPV1613, \"Nacional. Vivienda nueva. Índice.\"): 4T 2025 = 102.559.\nBase que usa el claim: 4T 2019 = 62.739.\nReferencia del emisor (anterior): 3T 2025 = 100.371.\nReferencia del emisor (interanual): 4T 2024 = 92.211.\nVerdad: cambio (pct): NO cuadra (claim 64.0, fuente 63.469); direccion: cuadra (claim sube, fuente sube).\nTest 2a_periodo_o_base_elegida: DISPARA. el claim compara contra 4T 2019 (+63.47 pct); contra la referencia del emisor, interanual (4T 2024), el cambio es +11.22 pct: difiere 5.7x en magnitud.\nEvidencia: 13 items, bundle 794f81d37fd0.",
+      "explicacion": "Parcialmente respaldado, sin divergencia detectada.\nAfirmacion: \"Desde 2019 los salarios han crecido un 1% mientras la vivienda se ha disparado un 64%\"\nFuente (INE, serie IPV1613, \"Nacional. Vivienda nueva. Índice.\"): 4T 2025 = 102.559.\nBase que usa el claim: 4T 2019 = 62.739.\nReferencia del emisor (anterior): 3T 2025 = 100.371.\nReferencia del emisor (interanual): 4T 2024 = 92.211.\nVerdad: cambio (pct): NO cuadra (claim 64.0, fuente 63.469); direccion: cuadra (claim sube, fuente sube).\nTest 2a_periodo_o_base_elegida: no dispara. el claim compara contra 4T 2019 (+63.47 pct); contra la referencia del emisor, interanual (4T 2024), el cambio es +11.22 pct: difiere 5.7x en magnitud sin cambiar de signo; senal de horizonte, no divergencia confirmada (DEC-029).\nSenales registradas: horizonte_largo (se anotan, no cuentan como divergencia; DEC-029).\nEvidencia: 13 items, bundle 794f81d37fd0.",
       "bundle_hash": "794f81d37fd0110e400736bb85fe71e32e92ee6d767f314027fc7ec85a756982",
-      "generado_en": "2026-09-26T01:14:01.671458+00:00"
+      "generado_en": "2026-09-26T01:41:32.865197+00:00"
     },
     "evidencia": {
       "bundle_hash": "794f81d37fd0110e400736bb85fe71e32e92ee6d767f314027fc7ec85a756982",
@@ -245,6 +249,6 @@
       ]
     },
     "persistido": true,
-    "duracion_ms": 2983
+    "duracion_ms": 2515
   }
 }

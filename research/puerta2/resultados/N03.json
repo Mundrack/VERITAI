@@ -37,16 +37,19 @@
     "veredicto": {
       "claim_id": "N03",
       "truth": "supported",
-      "context": "divergence_detected",
-      "clase_primaria": "2_baseline_selection",
+      "context": "no_divergence_detected",
+      "clase_primaria": "none",
       "abstain_reasons": [],
       "tests": [
         {
           "nombre": "2a_periodo_o_base_elegida",
           "aplicable": true,
-          "disparo": true,
-          "subtipo": "base_no_es_referencia",
-          "motivo": "el claim compara contra 2T 2018 (+17.47 pct); contra la referencia del emisor, interanual (1T 2025), el cambio es +4.67 pct: difiere 3.7x en magnitud",
+          "disparo": false,
+          "subtipo": "",
+          "senales": [
+            "horizonte_largo"
+          ],
+          "motivo": "el claim compara contra 2T 2018 (+17.47 pct); contra la referencia del emisor, interanual (1T 2025), el cambio es +4.67 pct: difiere 3.7x en magnitud sin cambiar de signo; senal de horizonte, no divergencia confirmada (DEC-029)",
           "calculos": {
             "unidad": "pct",
             "periodo_base_claim": "2018-T2",
@@ -59,7 +62,8 @@
             "valor_referencia_emisor": 3499.1,
             "cambio_recomputado_con_referencia_emisor": 4.67,
             "ratio_magnitudes": 3.741,
-            "umbral_ratio": 2.0
+            "umbral_ratio": 2.0,
+            "senal": "horizonte_largo"
           }
         }
       ],
@@ -119,9 +123,9 @@
           "etiqueta": "ref:interanual"
         }
       ],
-      "explicacion": "Verdadero pero descontextualizado.\nAfirmacion: \"Uno de cada seis empleados públicos logró su puesto durante los gobiernos de Sánchez\"\nFuente (INE, serie EPA399407, \"Ocupados. Total Nacional. Ambos sexos. Asalariado sector público. Valor absoluto.\"): 1T 2026 = 3662.5.\nBase que usa el claim: 2T 2018 = 3117.8.\nReferencia del emisor (anterior): 4T 2025 = 3641.4.\nReferencia del emisor (interanual): 1T 2025 = 3499.1.\nVerdad: valor en 1T 2026: cuadra (claim 3662.5, fuente 3662.5); valor en 2T 2018: cuadra (claim 3117.8, fuente 3117.8); cambio (pct): cuadra (claim 17.5, fuente 17.471); direccion: cuadra (claim sube, fuente sube).\nTest 2a_periodo_o_base_elegida: DISPARA. el claim compara contra 2T 2018 (+17.47 pct); contra la referencia del emisor, interanual (1T 2025), el cambio es +4.67 pct: difiere 3.7x en magnitud.\nEvidencia: 13 items, bundle 44751a725ff7.",
+      "explicacion": "Respaldado, sin divergencia detectada.\nAfirmacion: \"Uno de cada seis empleados públicos logró su puesto durante los gobiernos de Sánchez\"\nFuente (INE, serie EPA399407, \"Ocupados. Total Nacional. Ambos sexos. Asalariado sector público. Valor absoluto.\"): 1T 2026 = 3662.5.\nBase que usa el claim: 2T 2018 = 3117.8.\nReferencia del emisor (anterior): 4T 2025 = 3641.4.\nReferencia del emisor (interanual): 1T 2025 = 3499.1.\nVerdad: valor en 1T 2026: cuadra (claim 3662.5, fuente 3662.5); valor en 2T 2018: cuadra (claim 3117.8, fuente 3117.8); cambio (pct): cuadra (claim 17.5, fuente 17.471); direccion: cuadra (claim sube, fuente sube).\nTest 2a_periodo_o_base_elegida: no dispara. el claim compara contra 2T 2018 (+17.47 pct); contra la referencia del emisor, interanual (1T 2025), el cambio es +4.67 pct: difiere 3.7x en magnitud sin cambiar de signo; senal de horizonte, no divergencia confirmada (DEC-029).\nSenales registradas: horizonte_largo (se anotan, no cuentan como divergencia; DEC-029).\nEvidencia: 13 items, bundle 44751a725ff7.",
       "bundle_hash": "44751a725ff716ad0e0a0c10cbfb413b673a6f7bb01a6dc590f92ab6a394b78a",
-      "generado_en": "2026-09-26T01:14:02.568852+00:00"
+      "generado_en": "2026-09-26T01:41:33.256418+00:00"
     },
     "evidencia": {
       "bundle_hash": "44751a725ff716ad0e0a0c10cbfb413b673a6f7bb01a6dc590f92ab6a394b78a",
@@ -261,6 +265,6 @@
       ]
     },
     "persistido": true,
-    "duracion_ms": 867
+    "duracion_ms": 354
   }
 }

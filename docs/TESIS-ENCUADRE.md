@@ -134,6 +134,14 @@ códigos que ya existían; `2b_base_revisada` es el único código nuevo. El ún
 caso reetiquetado es **C29**, cuya nota ya describía la revisión como causa.
 Ningún otro caso cambia.
 
+**2b y la API del INE (DEC-029).** La API Tempus sirve solo la **edición
+vigente** de cada serie: una base revisada no se puede demostrar desde la API,
+hace falta la nota de prensa o el PDF de la edición anterior. Por eso 2b quedó
+**fuera del prototipo de la Puerta 2** y se declara como limitación del
+conector, no de la clase. Y una regla que salió de esa puerta: en 2a **solo el
+cambio de signo confirma** la divergencia; la magnitud ≥ 2× en una base de
+horizonte largo es una *señal*, registrada y explicada, que no cuenta.
+
 ## Caso canónico: no hay todavía
 
 Se cotejaron C29, C21 y C18 contra cinco requisitos idénticos —primaria
@@ -153,6 +161,11 @@ reproducible— y ninguno los cumple todos con un claim divergente
 **El caso canónico de la familia B sale de la Puerta 2**, cumpliendo los cinco
 requisitos y con la divergencia en el claim, sobre datos que no pertenecieron
 al piloto.
+
+*Puerta 2, 2026-09-25 (DEC-029): no salió.* Los 10 casos fueron 2a y el
+conector no ve revisiones (arriba). El canónico de B queda para el conjunto de
+evaluación, con ediciones anteriores documentales. El único 2a confirmado por
+signo (P11) **no se cita** hasta cotejar su primaria (`NEEDS_REVIEW`).
 
 ## Qué afirma la tesis y qué no
 

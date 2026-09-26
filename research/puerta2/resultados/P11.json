@@ -40,7 +40,8 @@
           "nombre": "2a_periodo_o_base_elegida",
           "aplicable": true,
           "disparo": true,
-          "subtipo": "base_no_es_referencia",
+          "subtipo": "cambio_de_signo",
+          "senales": [],
           "motivo": "el claim compara contra mayo de 2018 (-22.89 pct); contra la referencia del emisor, interanual (diciembre de 2017), el cambio es +1.10 pct: cambia de signo",
           "calculos": {
             "unidad": "pct",
@@ -102,7 +103,7 @@
       ],
       "explicacion": "Verdadero pero descontextualizado.\nAfirmacion: \"«Ha decrecido la creación de empresas un 23% y ha aumentado la destrucción de empresas un 73%»\"\nFuente (INE, serie SM21483, \"Sociedades Constituídas. Número de Sociedades. Total Nacional. Mercantiles.\"): diciembre de 2018 = 6809.0.\nBase que usa el claim: mayo de 2018 = 8830.0.\nReferencia del emisor (anterior): noviembre de 2018 = 7969.0.\nReferencia del emisor (interanual): diciembre de 2017 = 6735.0.\nVerdad: cambio (pct): cuadra (claim -23.0, fuente -22.888); direccion: cuadra (claim baja, fuente baja).\nTest 2a_periodo_o_base_elegida: DISPARA. el claim compara contra mayo de 2018 (-22.89 pct); contra la referencia del emisor, interanual (diciembre de 2017), el cambio es +1.10 pct: cambia de signo.\nEvidencia: 13 items, bundle 8a66f87f68d2.",
       "bundle_hash": "8a66f87f68d2a32b49bdd3d825128e1d60d4801a88324537204d016c46fb6a45",
-      "generado_en": "2026-09-26T01:14:13.934965+00:00"
+      "generado_en": "2026-09-26T01:41:39.927810+00:00"
     },
     "evidencia": {
       "bundle_hash": "8a66f87f68d2a32b49bdd3d825128e1d60d4801a88324537204d016c46fb6a45",
@@ -242,6 +243,6 @@
       ]
     },
     "persistido": true,
-    "duracion_ms": 10146
+    "duracion_ms": 6079
   }
 }

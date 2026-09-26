@@ -42,6 +42,7 @@
           "aplicable": true,
           "disparo": false,
           "subtipo": "",
+          "senales": [],
           "motivo": "la base del claim (1T 2026) es la referencia del emisor (anterior)",
           "calculos": {
             "unidad": "pp",
@@ -105,7 +106,7 @@
       ],
       "explicacion": "Respaldado, sin divergencia detectada.\nAfirmacion: \"La tasa de paro juvenil cae al 23,77% pese a sumar 19.600 desempleados\"\nFuente (INE, serie EPA452436, \"Tasa de paro de la población. Ambos sexos. Total Nacional. Menores de 25 años.\"): 2T 2026 = 23.77.\nBase que usa el claim: 1T 2026 = 24.54.\nReferencia del emisor (anterior): 1T 2026 = 24.54.\nReferencia del emisor (interanual): 2T 2025 = 24.54.\nVerdad: valor en 2T 2026: cuadra (claim 23.77, fuente 23.77); cambio (pp): cuadra (claim -0.77, fuente -0.77); direccion: cuadra (claim baja, fuente baja).\nTest 2a_periodo_o_base_elegida: no dispara. la base del claim (1T 2026) es la referencia del emisor (anterior).\nEvidencia: 13 items, bundle f9f55a83f85e.",
       "bundle_hash": "f9f55a83f85e28517780e0e68050aa0e8819e28d26132d1ea35d5252f6c0f396",
-      "generado_en": "2026-09-26T01:13:58.624773+00:00"
+      "generado_en": "2026-09-26T01:41:30.284919+00:00"
     },
     "evidencia": {
       "bundle_hash": "f9f55a83f85e28517780e0e68050aa0e8819e28d26132d1ea35d5252f6c0f396",
@@ -245,6 +246,6 @@
       ]
     },
     "persistido": true,
-    "duracion_ms": 7753
+    "duracion_ms": 3459
   }
 }

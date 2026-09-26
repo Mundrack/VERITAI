@@ -757,3 +757,52 @@ latencia  mediana ~2,1 s · máx 23,5 s (IPC 25333) · 30 ms con caché
 - Un archivo `AGENTS.md` apareció sin seguimiento en la raíz (copia de las
   reglas de `CLAUDE.md`, no lo creó el agente): queda sin tocar y sin commitear
   hasta que Mateo diga qué es
+
+---
+
+## 2026-09-25 (noche, 2) — DEC-029 aplicada: señal de horizonte, C11 corregido, Puerta 2 fusionada
+
+### Qué se hizo
+
+Commit `104cf22` en `feat/puerta-2-ine-2a` con el estado que Mateo revisó.
+Después, sus decisiones sobre la primera corrida (DEC-029), en un segundo
+commit de la misma rama, y merge a `main` con `--no-ff`:
+
+| Decisión | Qué cambió | Dónde |
+|---|---|---|
+| P-21: magnitud ≥ 2× sin signo = **señal de horizonte**, no divergencia; solo el signo confirma 2a | `ResultadoTest.senales`; subtipos `cambio_de_signo` / `valor_atribuido_a_otro_periodo`; plantilla y `a_dict` muestran la señal; test nuevo | `domain/tests/{resultado,comparacion_base}.py`, `plantilla.py`, `veredicto.py`, `tests/test_comparacion_base.py` |
+| P-22: sin test aplicable, `undetermined`; **se corrige el corpus**, no el sistema | C11 `context` → `undetermined` con nota; validador acepta `undetermined` en controles de nivel; CSV y `PILOT-40.csv` regenerados | `lote_crudo.py`, `validar_lote_crudo.py`, `pilot-crudo-*.csv`, `PILOT-40.csv`, FINDINGS |
+| C17: no reetiquetar | discrepancia anotada en `notas`; se resuelve en evaluación | `lote_crudo.py` |
+| P11: no citar | `NEEDS_REVIEW` en informe, encuadre y ARQUITECTURA; DEC-028 corregida por DEC-029 | docs |
+| 2b fuera del prototipo | limitación de la API Tempus (solo edición vigente) | `ARQUITECTURA.md` §8, `TESIS-ENCUADRE.md` |
+| `AGENTS.md` | ni leído ni aplicado ni commiteado | — |
+
+Los 10 casos se relanzaron con la imagen nueva; `ejecutar_casos.py` muestra la
+señal en su columna. `CLAUDE.md` §2 y §3 recogen el estado y las dos reglas
+nuevas (sigue siendo propuesta, P-02).
+
+### Números después
+
+```
+test 2a   confirmada 2 (P11 signo · C17 valor de otro periodo) · señal 3 (N01 N03 N04) · sin señal 1 (C16) · n/a 4
+context   divergence 2 · no_divergence 4 · undetermined 4
+acuerdo con el corpus (7 del piloto)   truth 4/7 · context 3/7   (dentro del alcance: 4/4 · 3/4; C17 registrado)
+Postgres  claims 10 · bundles 10 (sin cambios) · items 96 · verdicts 27 (tres corridas) · audit 27
+```
+
+### Qué se verificó
+
+- `pytest`: **46 passed**; `ruff check .` limpio (un archivo ajeno que `ruff
+  format` querría reformatear se dejó como estaba: `health.py`)
+- `validar_lote_crudo.py` y `pilot40.py` salen 0; los CSV cambian solo en las
+  filas de C11 y C17
+- `docker compose up -d --build api`: `sin migraciones pendientes (4 ya aplicadas)`
+- La señal queda en `verdicts.tests` (`senales`) en Postgres; bundles sin cambio
+
+### Qué quedó pendiente
+
+- Cierre formal de la Puerta 2: Mateo no lo declaró con esa palabra; lo que
+  pidió después del merge es la media página de lo que falta para la Puerta 3
+- P11: cotejar contra `research/evidencia/` antes de citarlo
+- P-20: los 5 casos manuales
+- Deuda técnica: caché del proveedor sin TTL; test de arquitectura de imports

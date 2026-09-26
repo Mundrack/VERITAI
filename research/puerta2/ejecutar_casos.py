@@ -34,7 +34,7 @@ MD = AQUI / "resultados.md"
 
 COLUMNAS = [
     "case_id", "origen", "tipo", "truth", "context", "clase_primaria", "abstain_reasons",
-    "test_aplicable", "test_disparo", "test_subtipo", "corpus_truth", "corpus_context",
+    "test_aplicable", "test_disparo", "test_subtipo", "test_senales", "corpus_truth", "corpus_context",
     "corpus_clase", "acuerdo_truth", "acuerdo_context", "completeness", "missing_slots",
     "n_items", "bundle_hash", "duracion_ms", "http",
 ]
@@ -67,7 +67,7 @@ def fila(caso: dict, estado: int, resp: dict) -> dict:
         "clase_primaria": v.get("clase_primaria", ""),
         "abstain_reasons": "|".join(v.get("abstain_reasons", [])),
         "test_aplicable": t.get("aplicable", ""), "test_disparo": t.get("disparo", ""),
-        "test_subtipo": t.get("subtipo", ""),
+        "test_subtipo": t.get("subtipo", ""), "test_senales": "|".join(t.get("senales", [])),
         "corpus_truth": corpus.get("truth", ""), "corpus_context": corpus.get("context", ""),
         "corpus_clase": corpus.get("clase_primaria", ""),
         "acuerdo_truth": "" if not corpus else str(v.get("truth") == corpus.get("truth")).lower(),
@@ -108,7 +108,12 @@ def main() -> int:
     lineas = ["| caso | origen | tipo | truth | context | clase | abstención | test 2a | corpus (truth/context/clase) | acuerdo | ms |",
               "|---|---|---|---|---|---|---|---|---|---|---|"]
     for f in filas:
-        test = "n/a" if f["test_aplicable"] in ("", False) else ("DISPARA " + f["test_subtipo"] if f["test_disparo"] else "no dispara")
+        if f["test_aplicable"] in ("", False):
+            test = "n/a"
+        elif f["test_disparo"]:
+            test = "DISPARA " + f["test_subtipo"]
+        else:
+            test = "no dispara" + (f" · señal {f['test_senales']}" if f["test_senales"] else "")
         corpus = f"{f['corpus_truth']} / {f['corpus_context']} / {f['corpus_clase']}" if f["corpus_truth"] else "—"
         acuerdo = f"{f['acuerdo_truth']} / {f['acuerdo_context']}" if f["corpus_truth"] else "—"
         lineas.append(f"| {f['case_id']} | {f['origen']} | {f['tipo']} | {f['truth']} | {f['context']} | "
@@ -117,6 +122,9 @@ def main() -> int:
     n = len(filas)
     print(f"\n{n} casos. truth: {dict((k, sum(1 for f in filas if f['truth']==k)) for k in sorted({f['truth'] for f in filas}))}")
     print(f"context: {dict((k, sum(1 for f in filas if f['context']==k)) for k in sorted({f['context'] for f in filas}))}")
+    print(f"test 2a: dispara {sum(1 for f in filas if f['test_disparo'] is True)} · "
+          f"con señal {sum(1 for f in filas if f['test_senales'])} · "
+          f"no aplicable {sum(1 for f in filas if f['test_aplicable'] in ('', False))}")
     con_corpus = [f for f in filas if f["corpus_truth"]]
     if con_corpus:
         print(f"acuerdo con el corpus: truth {sum(1 for f in con_corpus if f['acuerdo_truth']=='true')}/{len(con_corpus)}, "

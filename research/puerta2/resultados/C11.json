@@ -8,7 +8,7 @@
     "origen_case_id": "C11",
     "etiquetas_corpus": {
       "truth": "supported",
-      "context": "no_divergence_detected",
+      "context": "undetermined",
       "clase_primaria": "none",
       "lote": "crudo_31"
     },
@@ -38,6 +38,7 @@
           "aplicable": false,
           "disparo": false,
           "subtipo": "",
+          "senales": [],
           "motivo": "no aplicable a claims de tipo nivel",
           "calculos": {}
         }
@@ -61,7 +62,7 @@
       ],
       "explicacion": "Respaldado; contexto no evaluable.\nAfirmacion: \"El IPC de agosto de 2026 se dispara al 4,3%: la tasa mas alta en mas de tres anos\"\nFuente (INE, serie IPC290750, \"Nacional. Índice general. Variación anual.\"): agosto de 2026 = 4.3.\nVerdad: valor en agosto de 2026: cuadra (claim 4.3, fuente 4.3).\nTest 2a_periodo_o_base_elegida: no aplicable. no aplicable a claims de tipo nivel.\nEvidencia: 9 items, bundle ab126abf006c.",
       "bundle_hash": "ab126abf006cc6f182984ed2e78f69a109994d81368c8cef1aa1dbfc9ee73257",
-      "generado_en": "2026-09-26T01:13:50.791870+00:00"
+      "generado_en": "2026-09-26T01:41:26.677534+00:00"
     },
     "evidencia": {
       "bundle_hash": "ab126abf006cc6f182984ed2e78f69a109994d81368c8cef1aa1dbfc9ee73257",
@@ -161,6 +162,6 @@
       ]
     },
     "persistido": true,
-    "duracion_ms": 23533
+    "duracion_ms": 14043
   }
 }

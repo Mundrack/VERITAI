@@ -55,6 +55,7 @@ class Veredicto:
                     "aplicable": t.aplicable,
                     "disparo": t.disparo,
                     "subtipo": t.subtipo,
+                    "senales": list(t.senales),
                     "motivo": t.motivo,
                     "calculos": t.calculos,
                 }

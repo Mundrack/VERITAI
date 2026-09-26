@@ -205,10 +205,13 @@ def validar() -> list[str]:
             _err(errores, case_id, "bloqueado NO es primaria_no_localizable: son columnas distintas")
         if c["previous_edition_found"] == "no" and c["bucket_resultado"] == "divergencia_real":
             _err(errores, case_id, "divergencia_real exige edicion anterior localizada")
+        # DEC-029 (P-22): un control de NIVEL sin test aplicable lleva context=undetermined
+        # (C11); la cubeta describe la recoleccion y no se recompone (DEC-027).
         if c["bucket_resultado"] == "control_negativo" and not (
-            c["truth"] == "supported" and c["context"] == "no_divergence_detected"
+            c["truth"] == "supported"
+            and c["context"] in ("no_divergence_detected", "undetermined")
         ):
-            _err(errores, case_id, "control_negativo exige supported + no_divergence_detected")
+            _err(errores, case_id, "control_negativo exige supported + no_divergence_detected|undetermined")
         if c["abandonado_por_tiempo"] and not str(c["notas"]).strip():
             _err(errores, case_id, "abandonado sin motivo en notas")
 

@@ -99,6 +99,12 @@ def explicar(
     for t in tests:
         estado = "no aplicable" if not t.aplicable else ("DISPARA" if t.disparo else "no dispara")
         lineas.append(f"Test {t.nombre}: {estado}. {t.motivo}.")
+        if t.senales:
+            lineas.append(
+                "Senales registradas: "
+                + ", ".join(t.senales)
+                + " (se anotan, no cuentan como divergencia; DEC-029)."
+            )
         for it in bundle.historical_items:
             if (
                 it.etiqueta.startswith("ventana")

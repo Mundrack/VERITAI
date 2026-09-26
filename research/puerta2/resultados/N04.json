@@ -35,16 +35,19 @@
     "veredicto": {
       "claim_id": "N04",
       "truth": "mixed",
-      "context": "divergence_detected",
-      "clase_primaria": "2_baseline_selection",
+      "context": "no_divergence_detected",
+      "clase_primaria": "none",
       "abstain_reasons": [],
       "tests": [
         {
           "nombre": "2a_periodo_o_base_elegida",
           "aplicable": true,
-          "disparo": true,
-          "subtipo": "base_no_es_referencia",
-          "motivo": "el claim compara contra 2020 (+31.49 pct); contra la referencia del emisor, anterior (2023), el cambio es +3.57 pct: difiere 8.8x en magnitud",
+          "disparo": false,
+          "subtipo": "",
+          "senales": [
+            "horizonte_largo"
+          ],
+          "motivo": "el claim compara contra 2020 (+31.49 pct); contra la referencia del emisor, anterior (2023), el cambio es +3.57 pct: difiere 8.8x en magnitud sin cambiar de signo; senal de horizonte, no divergencia confirmada (DEC-029)",
           "calculos": {
             "unidad": "pct",
             "periodo_base_claim": "2020",
@@ -57,7 +60,8 @@
             "valor_referencia_emisor": 124.659,
             "cambio_recomputado_con_referencia_emisor": 3.567,
             "ratio_magnitudes": 8.829,
-            "umbral_ratio": 2.0
+            "umbral_ratio": 2.0,
+            "senal": "horizonte_largo"
           }
         }
       ],
@@ -97,9 +101,9 @@
           "etiqueta": "ref:anterior"
         }
       ],
-      "explicacion": "Parcialmente respaldado y descontextualizado.\nAfirmacion: \"Hacer la compra cuesta un 37% más: los alimentos se han encarecido en torno a un 37% entre 2020 y 2024\"\nFuente (INE, serie IPC278286, \"Nacional. Alimentos y bebidas no alcohólicas. Media anual.\"): 2024 = 129.105.\nBase que usa el claim: 2020 = 98.187.\nReferencia del emisor (anterior): 2023 = 124.659.\nVerdad: cambio (pct): NO cuadra (claim 37.0, fuente 31.489); direccion: cuadra (claim sube, fuente sube).\nTest 2a_periodo_o_base_elegida: DISPARA. el claim compara contra 2020 (+31.49 pct); contra la referencia del emisor, anterior (2023), el cambio es +3.57 pct: difiere 8.8x en magnitud.\nEvidencia: 12 items, bundle f9ccb64021ee.",
+      "explicacion": "Parcialmente respaldado, sin divergencia detectada.\nAfirmacion: \"Hacer la compra cuesta un 37% más: los alimentos se han encarecido en torno a un 37% entre 2020 y 2024\"\nFuente (INE, serie IPC278286, \"Nacional. Alimentos y bebidas no alcohólicas. Media anual.\"): 2024 = 129.105.\nBase que usa el claim: 2020 = 98.187.\nReferencia del emisor (anterior): 2023 = 124.659.\nVerdad: cambio (pct): NO cuadra (claim 37.0, fuente 31.489); direccion: cuadra (claim sube, fuente sube).\nTest 2a_periodo_o_base_elegida: no dispara. el claim compara contra 2020 (+31.49 pct); contra la referencia del emisor, anterior (2023), el cambio es +3.57 pct: difiere 8.8x en magnitud sin cambiar de signo; senal de horizonte, no divergencia confirmada (DEC-029).\nSenales registradas: horizonte_largo (se anotan, no cuentan como divergencia; DEC-029).\nEvidencia: 12 items, bundle f9ccb64021ee.",
       "bundle_hash": "f9ccb64021ee1047d5293e953ce38fc9d91f84456445f830816ef94f7a279255",
-      "generado_en": "2026-09-26T01:14:03.253736+00:00"
+      "generado_en": "2026-09-26T01:41:33.617407+00:00"
     },
     "evidencia": {
       "bundle_hash": "f9ccb64021ee1047d5293e953ce38fc9d91f84456445f830816ef94f7a279255",
@@ -229,6 +233,6 @@
       ]
     },
     "persistido": true,
-    "duracion_ms": 668
+    "duracion_ms": 353
   }
 }

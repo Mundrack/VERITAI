@@ -212,9 +212,9 @@ de tiempos humano/agente, y si C22 (el único no recuperado por el agente) lo
 encuentra una persona. Si contradicen la lectura del agente, `PILOT-DECISION`
 se reabre y queda constancia. El agente no mira ese CSV antes.
 
-### P-21 · El test 2a y las bases declaradas de horizonte largo
+### P-21 · El test 2a y las bases declaradas de horizonte largo — CERRADA (DEC-029)
 
-**Estado:** abierto desde la Puerta 2 (2026-09-25) · **Bloquea:** la anotación del conjunto de evaluación · **Decide:** Mateo, **antes** de ver ese conjunto
+**Estado:** cerrada el 2026-09-25 · **Decisión:** endurecer no; subtipo sí. La magnitud ≥ 2× sin cambio de signo es una **señal de horizonte**, registrada y explicada, que **no cuenta como divergencia**; solo el cambio de signo confirma 2a. N01, N03 y N04 pasan a la señal. Ver DEC-029. Lo que sigue es el planteamiento original.
 
 El criterio de magnitud (recomputar contra la referencia del emisor difiere
 ≥ 2×) dispara en los tres casos nuevos —"desde 2019", "desde 2018", "entre
@@ -234,9 +234,9 @@ lectura sin ambigüedad. Opciones, con lo que implica cada una:
 Regla: se decide **una vez**, por escrito, antes de anotar la evaluación; no
 se ajusta el umbral mirando resultados (DEC-028, alternativa c).
 
-### P-22 · `undetermined` o `no_divergence_detected` cuando ningún test aplica
+### P-22 · `undetermined` o `no_divergence_detected` cuando ningún test aplica — CERRADA (DEC-029)
 
-**Estado:** abierto desde la Puerta 2 (2026-09-25) · **Bloquea:** cómo se cuenta el FPR · **Decide:** Mateo
+**Estado:** cerrada el 2026-09-25 · **Decisión:** C11 se queda en `undetermined`; **el sistema tiene razón y el corpus estaba mal**: sin test aplicable no se puede afirmar ausencia de divergencia. Se corrige la etiqueta del corpus (C11), no el sistema, y queda como hallazgo. El FPR se mide sobre controles con test aplicable. Ver DEC-029. Lo que sigue es el planteamiento original.
 
 C11 es un claim de **nivel** correcto: el prototipo no tiene test que aplicar
 y devuelve `undetermined`; el corpus dice `no_divergence_detected`. DEC-016
@@ -298,6 +298,8 @@ No bloquea nada. Evita rehacer.
 | — | ¿`PILOT_GO`? | **Ratificado por Mateo.** Puerta 1 cerrada; la Puerta 2 no arranca hasta cerrar P-15. Ver DEC-023 | 2026-09-25 |
 | P-15 | La clase canónica aparece 1 vez en 20 (y 1 en 12) | **Reencuadre E / B / A, C subtipo 2b.** Objeto general: divergencia contextual computable; primera familia: comparación de base (2a, 2b, 2c); ranking ilustrativo. Título, hipótesis, objetivos y alcance en `TESIS-ENCUADRE.md`. Sin caso canónico: par C18 + C29. Ver DEC-026 | 2026-09-25 |
 | P-12 | ¿Reabrir las clases 6 y 7? | **No.** Tras el desglose: P05 → 2a, P07 → 4, C13 → 2a; C03 → sin divergencia (lectura alternativa); C05 → abstención con dos motivos; C08 se queda; P17 y C10 candidatas con criterio de reaparición, sin clase con n=1. Ver DEC-027 | 2026-09-25 |
+| P-21 | ¿La magnitud ≥ 2× del test 2a es divergencia en bases de horizonte largo? | **No por sí sola.** Señal de horizonte, registrada y explicada, sin contar como divergencia; solo el cambio de signo confirma 2a. N01, N03, N04 → señal. Ver DEC-029 | 2026-09-25 |
+| P-22 | ¿`undetermined` o `no_divergence_detected` sin test aplicable? | **`undetermined`.** El sistema tenía razón; se corrige la etiqueta del corpus (C11) y se anota como hallazgo. FPR sobre controles con test aplicable. Ver DEC-029 | 2026-09-25 |
 | — | Geografía del lote nuevo (D2 de la adenda) | **Opción A**: español en general, sin cuota geográfica. Cerrada en `00b` | antes del 2026-09-08 |
 | — | ¿Framework en el panel web? | **No.** TypeScript vanilla, por coherencia con el stack cerrado en R02 §5. Ver DEC-008 | 2026-09-08 |
 | — | ¿Alembic o runner propio? | **Runner propio**, por portabilidad a `supabase db push`. Ver DEC-006 | 2026-09-08 |

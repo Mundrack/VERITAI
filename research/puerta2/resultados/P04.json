@@ -49,7 +49,7 @@
       ],
       "explicacion": "Sin veredicto: evidencia insuficiente.\nAfirmacion: \"«Las cifras de condenados por delitos sexuales llevan aumentando un 10% al año desde 1998»\"\nFuente (INE, serie CON48031, \"Total Nacional. Dato base. Por delitos sexuales.\"): 2018 = 2431.0.\nAbstencion: UNSUPPORTED_CLAIM_TYPE (el tipo de afirmacion no esta soportado por el prototipo).\nEvidencia incompleta: faltan base_claim.\nEvidencia: 3 items, bundle 52338f459441.",
       "bundle_hash": "52338f459441e8aea501db35e1544ee77e3b3850f235c7456aeab05fdae435c6",
-      "generado_en": "2026-09-26T01:14:03.776934+00:00"
+      "generado_en": "2026-09-26T01:41:33.837067+00:00"
     },
     "evidencia": {
       "bundle_hash": "52338f459441e8aea501db35e1544ee77e3b3850f235c7456aeab05fdae435c6",
@@ -91,6 +91,6 @@
       ]
     },
     "persistido": true,
-    "duracion_ms": 506
+    "duracion_ms": 188
   }
 }

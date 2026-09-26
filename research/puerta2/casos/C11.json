@@ -6,7 +6,7 @@
   "origen_case_id": "C11",
   "etiquetas_corpus": {
     "truth": "supported",
-    "context": "no_divergence_detected",
+    "context": "undetermined",
     "clase_primaria": "none",
     "lote": "crudo_31"
   },

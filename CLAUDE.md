@@ -46,8 +46,9 @@ explica. Encuadre completo, alcance (publicadores de nivel 1) y taxonomía en
 El proyecto avanza por puertas, no por calendario (`00b-DECISIONES-MATEO`).
 
 ```
-PUERTA 1  research/PILOT-DECISION.md con PILOT_GO   <- estado actual: no superada
-PUERTA 2  prototipo end-to-end, UNA clase, UN emisor
+PUERTA 1  research/PILOT-DECISION.md con PILOT_GO   SUPERADA (DEC-023, alcance nivel 1)
+PUERTA 2  prototipo end-to-end, UNA clase, UN emisor  <- ejecutada (DEC-028, DEC-029);
+                                                       el cierre lo ratifica Mateo
 PUERTA 3  corpus anotado + arnes de evaluacion
 PUERTA 4  evaluacion completa
 ```
@@ -95,6 +96,15 @@ Vienen de `docs/DECISIONES.md`; aquí solo la regla, sin el contexto.
   cliente cierra el caso como no recuperable-por-agente, aunque otro cliente
   honesto obtenga 200 después. Solo un error de red (`ECONNREFUSED`, `socket
   hang up`, timeout) admite un reintento. *(DEC-021)*
+- **Nada del piloto ni de la Puerta 2 entra en el conjunto de evaluación.**
+  Todo eso es conjunto de desarrollo: construir, depurar, regresión. *(DEC-025)*
+- **El test 2a solo se confirma por cambio de signo** (o por valor atribuido a
+  otro periodo). Que la magnitud recomputada contra la referencia del emisor
+  difiera ≥ 2× sin cambiar de signo es una *señal de horizonte*: se registra y
+  se explica, no cuenta como divergencia. *(DEC-029)*
+- **Sin test aplicable, `undetermined`.** Un sistema que no evaluó nada no
+  afirma ausencia de divergencia; `no_divergence_detected` exige un test
+  aplicable que no disparó. *(DEC-029)*
 - **La métrica de la Puerta 1 se mide sobre todos los candidatos admitidos por
   la regla dura**, no sobre el lote por cubetas, y se reporta desagregada por
   nivel de emisor y vía de descubrimiento. *(DEC-020)*

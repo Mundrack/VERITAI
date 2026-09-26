@@ -255,6 +255,14 @@ Respondido en la Puerta 2:
   JSON completa del INE se guarda opcionalmente en disco
   (`EVIDENCIA_CACHE_DIR`). HTML y PDF crudos siguen sin decidir.
 
+Limitación conocida del conector INE *(DEC-029)*:
+
+- **La API Tempus sirve solo la edición vigente** de cada serie. El span
+  conserva `T3_TipoDato` (provisional / definitivo), pero una **base revisada
+  (2b) no se puede demostrar desde la API**: hace falta la nota de prensa o el
+  PDF de la edición anterior. Por eso 2b quedó fuera del prototipo y P11 (cuyo
+  valor de la API no cuadra con el PDF de 2019) sigue en `NEEDS_REVIEW`.
+
 Sigue sin responder:
 
 - Dónde corre el LLM local respecto a los contenedores

@@ -40,6 +40,7 @@
           "aplicable": true,
           "disparo": true,
           "subtipo": "valor_atribuido_a_otro_periodo",
+          "senales": [],
           "motivo": "el claim atribuye 24.5 a 2T 2026, pero ese es el valor de 1T 2026; en 2T 2026 la serie da 23.77",
           "calculos": {
             "unidad": "pct",
@@ -104,7 +105,7 @@
       ],
       "explicacion": "Contradicho y descontextualizado.\nAfirmacion: \"La tasa de paro juvenil escala hasta el 24,5% en el segundo trimestre\"\nFuente (INE, serie EPA452436, \"Tasa de paro de la población. Ambos sexos. Total Nacional. Menores de 25 años.\"): 2T 2026 = 23.77.\nBase que usa el claim: 1T 2026 = 24.54.\nReferencia del emisor (anterior): 1T 2026 = 24.54.\nReferencia del emisor (interanual): 2T 2025 = 24.54.\nVerdad: valor en 2T 2026: NO cuadra (claim 24.5, fuente 23.77); direccion: NO cuadra (claim sube, fuente baja).\nTest 2a_periodo_o_base_elegida: DISPARA. el claim atribuye 24.5 a 2T 2026, pero ese es el valor de 1T 2026; en 2T 2026 la serie da 23.77.\nEvidencia: 13 items, bundle f9f55a83f85e.",
       "bundle_hash": "f9f55a83f85e28517780e0e68050aa0e8819e28d26132d1ea35d5252f6c0f396",
-      "generado_en": "2026-09-26T01:13:58.668295+00:00"
+      "generado_en": "2026-09-26T01:41:30.336446+00:00"
     },
     "evidencia": {
       "bundle_hash": "f9f55a83f85e28517780e0e68050aa0e8819e28d26132d1ea35d5252f6c0f396",
@@ -244,6 +245,6 @@
       ]
     },
     "persistido": true,
-    "duracion_ms": 30
+    "duracion_ms": 26
   }
 }

@@ -593,7 +593,7 @@ CANDIDATOS: list[dict] = [
             "mensual del indice general fue del 0,3%.' || [INE API, tabla 50913, serie IPC251856] "
             "2023-02: 6.0 | 2023-04: 4.1 (max intermedio) | 2025-12: 2.9"
         ),
-        truth="supported", context="no_divergence_detected",
+        truth="supported", context="undetermined",  # era no_divergence_detected; DEC-029 (P-22)
         clase_primaria="none", clases_secundarias="", abstain_reason="",
         abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
         notas=(
@@ -608,7 +608,12 @@ CANDIDATOS: list[dict] = [
             "existe y es continua para un humano; para un agente esta partida en dos tablas con ids "
             "distintos. Tambien: el filtro de comunidad autonoma de la API (tv=70:9003) resulto ser "
             "Castilla y Leon, no el total nacional; hubo que pedir las 20 series y elegir 'Nacional' por "
-            "nombre. Metodologia: 'Principales caracteristicas del IPC base 2025' enlazada en la nota."
+            "nombre. Metodologia: 'Principales caracteristicas del IPC base 2025' enlazada en la nota. "
+            "CORRECCION DEC-029 (P-22, Puerta 2): context pasa de no_divergence_detected a undetermined. "
+            "Es un claim de NIVEL: ningun test computable aplica, y sin test aplicable no se puede afirmar "
+            "ausencia de divergencia; el prototipo devolvio undetermined y tenia razon. La cubeta "
+            "control_negativo se conserva (recoleccion, DEC-027); el FPR se mide sobre controles con test "
+            "aplicable."
         ),
         criba_query_a="IPC agosto 2026 4,3% tasa mas alta tres anos",
         criba_query_b="IPC agosto 2026 4,3% inflacion Espana bulo OR verificacion OR fact-check",
@@ -918,7 +923,11 @@ CANDIDATOS: list[dict] = [
             "no_divergence_detected): el eje truth basta, es la celda contradicted x no_divergence de "
             "DEC-016. Cubeta nueva claim_falso, sin objetivo. El '0,74' del cuerpo frente al 0,77 del INE "
             "sale de redondear 24,54 a 24,5 antes de restar. Par natural con C16 (mismo dato, titular "
-            "correcto). Sin costo de localizacion."
+            "correcto). Sin costo de localizacion. DISCREPANCIA REGISTRADA (Puerta 2, DEC-029): el "
+            "prototipo lo lee como 2a por 'valor atribuido a otro periodo' (24,5 es el valor de 1T2026, "
+            "mismo mecanismo con el que DEC-027 paso P05 a 2a) y devuelve contradicted / "
+            "divergence_detected. La etiqueta NO se cambia: la discrepancia claim_falso vs 2a se resuelve "
+            "en el conjunto de evaluacion, no caso a caso."
         ),
         criba_query_a="paro juvenil 23,77% segundo trimestre 2026 Espana",
         criba_query_b="paro juvenil Espana 23,77% 2T 2026 verificacion OR bulo OR fact-check",

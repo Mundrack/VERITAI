@@ -150,11 +150,20 @@ y versión de todos los items del bundle: si cambia lo extraído, cambia el hash
 número del veredicto no tiene span.
 
 **Test 2a (periodo o base elegida)**
-Determinístico, definido antes de correr casos (DEC-028). Dispara por **(B)**
-valor atribuido a otro periodo de la ventana, o por **(A)** base que no es
-referencia del emisor y cuya recomputación contra esa referencia cambia de
-signo o difiere ≥ 2× en magnitud. Lo que dispara por magnitud en horizontes
-largos declarados está en discusión (P-21).
+Determinístico, definido antes de correr casos (DEC-028) y afinado por
+decisión (DEC-029). Dispara por **(B)** `valor_atribuido_a_otro_periodo`
+(el valor afirmado es el de otro periodo de la ventana) o por **(A)**
+`cambio_de_signo` (la base no es referencia del emisor y recomputar contra
+esa referencia invierte el signo). Solo esos dos subtipos son **2a
+confirmada**.
+
+**Señal de horizonte (`horizonte_largo`)**
+Registro, no disparo: la base declarada no es referencia del emisor y la
+magnitud recomputada difiere ≥ 2× **sin** cambiar de signo. Cualquier
+comparación "desde 2019" contra una referencia interanual la produce, así
+que por sí sola no es evidencia de divergencia (DEC-029). Va en
+`tests[].senales`, en `calculos.senal` y en la explicación; `context` no la
+ve. Es el vocabulario cerrado de señales: hoy solo esa.
 
 ---
 
@@ -178,6 +187,14 @@ no_divergence_detected
 undetermined
 not_applicable
 ```
+
+Reglas de asignación *(DEC-016, DEC-029)*: `divergence_detected` solo si un
+test computable **disparó**; `no_divergence_detected` exige un test
+**aplicable** que no disparó (una señal registrada no cambia esto);
+`undetermined` cuando ningún test aplica (un nivel, un extremo histórico) o
+hay un motivo de abstención. Un sistema que no evaluó nada no afirma
+ausencia de divergencia: por eso C11 pasó de `no_divergence_detected` a
+`undetermined` en el corpus (P-22).
 
 ### `clase` (taxonomía)
 

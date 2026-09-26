@@ -3,7 +3,7 @@
 > **Este documento se sobrescribe entero en cada actualización.** Es una foto,
 > no un historial. El historial está en [`BITACORA.md`](BITACORA.md).
 
-**Última actualización:** 2026-09-25 (noche)
+**Última actualización:** 2026-09-25 (noche, tras DEC-029)
 
 ---
 
@@ -14,15 +14,17 @@ PUERTA 1   research/PILOT-DECISION.md con PILOT_GO        SUPERADA 2026-09-25
            TAREA 1 · TAREA 2 · TAREA 3 hechas                  (DEC-023, alcance nivel 1
                                                                por DEC-024)
 
-PUERTA 2   prototipo end-to-end, UNA clase y UN emisor,      <-- AQUI, EJECUTADA:
-           10 casos con trazabilidad completa                 10/10 corren por POST /analisis
-           clase: 2a periodo o base elegida (DEC-026, P-12)    en feat/puerta-2-ine-2a,
-           emisor: INE, API Tempus (DEC-024)                   SIN commitear. Cierre
-           sin LLM en ningun paso (DEC-028)                    pendiente de que Mateo
-           nada del piloto evalua (DEC-025)                    lea PUERTA-2-CASOS.md y
-                                                               decida P-21, P-22 y C17
+PUERTA 2   prototipo end-to-end, UNA clase y UN emisor,      EJECUTADA y FUSIONADA a main
+           10 casos con trazabilidad completa                 (--no-ff). Decisiones sobre la
+           clase: 2a periodo o base elegida (DEC-026, P-12)    primera corrida tomadas
+           emisor: INE, API Tempus (DEC-024)                   (DEC-029: senal de horizonte,
+           sin LLM en ningun paso (DEC-028)                    undetermined sin test, C17,
+           nada del piloto evalua (DEC-025)                    P11, 2b fuera).
+                                                               Cierre formal: Mateo no lo
+                                                               declaro con esa palabra; pidio
+                                                               lo que falta para la Puerta 3
 
-PUERTA 3   corpus completo anotado + arnes de evaluacion
+PUERTA 3   corpus completo anotado + arnes de evaluacion     <-- SIGUIENTE, sin abrir
            (conjunto de evaluacion recolectado aparte, DEC-025)
 
 PUERTA 4   evaluacion completa: metricas, ablacion,
@@ -35,20 +37,24 @@ sin hermanos 72,0 %). Detalle en `research/PILOT-DECISION.md`. La humana real
 sigue esperando los 5 casos de Mateo (P-20).
 
 **Lo que salió de la Puerta 2** (`research/PUERTA-2-CASOS.md`, casos de desarrollo,
-no evalúan):
+no evalúan; corrida final tras DEC-029):
 
 ```
-test 2a   dispara 5 (signo 1: P11 · magnitud 3: N01 N03 N04 · valor de otro periodo 1: C17)
-          no dispara 1 (C16, control) · no aplica 4 (C11 nivel; P04 P16 P19 abstencion por diseno)
+test 2a   confirmada 2 (P11 cambio de signo · C17 valor de otro periodo)
+          senal de horizonte 3 (N01 N03 N04: se registran, no disparan)
+          no dispara sin senal 1 (C16, control) · no aplica 4 (C11 nivel; P04 P16 P19 abstencion)
 truth     supported 4 · mixed 2 · contradicted 1 · insufficient_evidence 3
-acuerdo con el corpus, dentro del alcance del prototipo   truth 4/4 · context 2/4
-Postgres  claims 10 · bundles 10 · items 96 (0 sin raw_value_span) · verdicts 17 · audit 17
+context   divergence 2 · no_divergence 4 · undetermined 4
+acuerdo con el corpus, dentro del alcance del prototipo   truth 4/4 · context 3/4 (C17, registrado)
+Postgres  claims 10 · bundles 10 · items 96 (0 sin raw_value_span) · verdicts 27 · audit 27
 ```
 
-Los dos desacuerdos de contexto son decisiones de regla, no de cálculo:
-**P-21** (la magnitud dispara con toda base declarada de horizonte largo) y
-**P-22** (`undetermined` cuando ningún test aplica). C17 es un desacuerdo de
-etiqueta que decide Mateo.
+Reglas que salieron de ahí y ya gobiernan (DEC-029): **solo el cambio de signo
+confirma 2a**; la magnitud ≥ 2× en una base de horizonte largo es una *señal*,
+registrada y explicada, que no cuenta; **sin test aplicable, `undetermined`**
+(C11 se corrigió en el corpus, no en el sistema). C17 queda como discrepancia
+para la evaluación. **P11 no se cita** hasta cotejarlo (`NEEDS_REVIEW`). 2b
+fuera del prototipo: la API Tempus sirve solo la edición vigente.
 
 ---
 
@@ -71,7 +77,7 @@ python research/puerta2/ejecutar_casos.py --solo C16 # uno
 | PostgreSQL 17 | `127.0.0.1:55432` | funcionando, healthy; 5 tablas de dominio con RLS forzada |
 
 Los contenedores quedaron **apagados** al cerrar la sesión (`docker compose down`,
-sin `-v`: los 10 claims y sus 17 veredictos siguen en el volumen).
+sin `-v`: los 10 claims y sus 27 veredictos siguen en el volumen).
 
 ### Comprobado, no supuesto
 
@@ -86,13 +92,14 @@ sin `-v`: los 10 claims y sus 17 veredictos siguen en el volumen).
 | `verificar-compatibilidad.sql` | ✅ 0 filas en los 3 bloques bloqueantes | 2026-09-08 |
 | `tsc --noEmit` | ✅ sin errores | 2026-09-08 |
 | `normalizar_a_enums.py` sale 0 (TAREA 1) | ✅ | 2026-09-25 |
-| `validar_lote_crudo.py` sale 0: 38 candidatos, cero fuera de enum, 3 hitos por caso (avisa por C03) | ✅ | 2026-09-25 |
-| Migración `003_puerta2.sql` aplicada al reconstruir la API | ✅ `listo: 1 migraciones aplicadas` | 2026-09-25 |
-| Tests de la API (dominio, INE con fixture real, endpoint, trazabilidad) | ✅ **45 passed** | 2026-09-25 |
+| `validar_lote_crudo.py` sale 0: 38 candidatos, cero fuera de enum, 3 hitos por caso (avisa por C03; acepta `undetermined` en C11) | ✅ | 2026-09-25 |
+| Migración `003_puerta2.sql` aplicada; segunda pasada idempotente | ✅ `sin migraciones pendientes (4 ya aplicadas)` | 2026-09-25 |
+| Tests de la API (dominio, INE con fixture real, endpoint, trazabilidad, señal de horizonte) | ✅ **46 passed** | 2026-09-25 |
 | `ruff check .` | ✅ `All checks passed!` | 2026-09-25 |
-| 10 casos por `POST /analisis`, HTTP 200 los 10 | ✅ `research/puerta2/resultados.csv` | 2026-09-25 |
+| 10 casos por `POST /analisis`, HTTP 200 los 10, tres corridas | ✅ `research/puerta2/resultados.csv` | 2026-09-25 |
 | Todo número del veredicto con `raw_value_span` | ✅ 96 items, 0 sin span (SQL) + test automático | 2026-09-25 |
 | RLS activada y forzada en `claims`, `evidence_bundles`, `evidence_items`, `verdicts`, `audit_log` | ✅ `pg_class` | 2026-09-25 |
+| La señal de horizonte queda persistida en `verdicts.tests` | ✅ `["horizonte_largo"]` en N01, N03, N04 | 2026-09-25 |
 | Valores INE de C16/C17 (24,54 en 2025-T2 y 2026-T1) contrastados a mano con la API | ✅ coincidencia real | 2026-09-25 |
 | Ninguna contraseña real en el repositorio ni en archivos sin seguimiento | ✅ `git grep` vacío | 2026-09-25 |
 
@@ -104,13 +111,12 @@ sin `-v`: los 10 claims y sus 17 veredictos siguen en el volumen).
 |---|---|
 | Cualquier LLM, local o remoto | DEC-028: el prototipo demuestra que la decisión no depende de un modelo; el claim se estructura a mano |
 | Conectores de FMI e Interior (los otros dos emisores de DEC-024) | Puerta 2 = un emisor. Llegan con el conjunto de evaluación |
-| Otras clases (1, 3, 4, 2b, 2c) como tests | Puerta 2 = una clase. 2b no es computable con Tempus solo (sirve la edición vigente) |
+| Otras clases (1, 3, 4, 2c) como tests; **2b fuera** | Puerta 2 = una clase. 2b no es computable con Tempus (solo edición vigente, DEC-029) |
 | N0 (regex + encoder) y N1 | Después del prototipo |
 | Panel web que muestre veredictos | Solo si sobra tiempo; hoy pinta `/health` |
 | La extensión MV3 | El panel web es el mismo código; se empaqueta más tarde |
 | pgvector activado | La imagen lo trae; la extensión no hace falta hasta *embeddings* |
-| Conjunto de evaluación | Se recolecta aparte, con el método de la TAREA 2, cuando P-21 y P-22 estén decididas (DEC-025) |
-| Ratificación del cierre de la Puerta 2 | Es de Mateo, al leer `PUERTA-2-CASOS.md` |
+| Conjunto de evaluación | Se recolecta aparte, con el método de la TAREA 2 (DEC-025). Es la Puerta 3 |
 | El aparato completo de `/docs` y los ADR formales | Adenda D6: después de `PILOT_GO`; sigue pendiente |
 
 ---
@@ -138,8 +144,8 @@ arquitectura está preparada para migrar cambiando `DATABASE_URL`: ver
 ## Estado de git
 
 ```
-main                          paquete + registro vivo + TAREAS 1-3 + entorno Docker + encuadre + P-12
-│                             (todo fusionado con --no-ff; ultimo merge 11b9a00)
+main                          paquete + registro vivo + TAREAS 1-3 + Docker + encuadre + P-12 + PUERTA 2
+│                             (todo fusionado con --no-ff)
 ├─ docs/registro-vivo         FUSIONADO
 ├─ feat/auditoria-piloto-20   FUSIONADO (a946ff9)
 ├─ feat/lote-crudo-20         FUSIONADO (84303a8)
@@ -149,14 +155,14 @@ main                          paquete + registro vivo + TAREAS 1-3 + entorno Doc
 ├─ docs/p15-encuadre          FUSIONADA (c6c47e2): DEC-025, DEC-026, TESIS-ENCUADRE.md
 ├─ docs/p12-other-observed    FUSIONADA (3798414): desglose de other_observed
 ├─ docs/p12-cierre            FUSIONADA (11b9a00): DEC-027
-│
-└─ feat/puerta-2-ine-2a       Puerta 2: dominio + INE + POST /analisis + migracion 003   <- rama actual,
-                              + 10 casos + PUERTA-2-CASOS.md + DEC-028 + P-21/P-22       SIN COMMITEAR
+└─ feat/puerta-2-ine-2a       FUSIONADA (--no-ff; hash en git log): 104cf22 Puerta 2 tal como
+                              se reviso + segundo commit con DEC-029 aplicada
 ```
 
-`CLAUDE.md` sigue siendo **propuesta** (P-02). Un archivo `AGENTS.md` apareció
-sin seguimiento en la raíz (copia de las reglas de `CLAUDE.md`; no lo creó el
-agente): queda sin tocar y sin commitear hasta que Mateo diga qué es.
+`CLAUDE.md` sigue siendo **propuesta** (P-02); ahora lleva el estado de las
+puertas y las reglas de DEC-025 y DEC-029. Un archivo `AGENTS.md` sigue sin
+seguimiento en la raíz: **ni leído, ni aplicado, ni commiteado**, por
+instrucción de Mateo, que lo revisa él.
 
 `ATENCIÓN` No hay remoto configurado y `gh` no está instalado: las ramas
 existen pero **no hay pull requests** (P-01). Nada se ha subido a ningún
@@ -170,27 +176,23 @@ En orden, y sin saltarse pasos:
 
 1. ~~TAREA 1, TAREA 2, vía de descubrimiento, TAREA 3, ratificación del GO,
    P-15, P-12~~ **Hechas y fusionadas** (2026-09-24/25; DEC-013 a DEC-027).
-2. ~~Puerta 2: plan de una página~~ **Aprobado y ejecutado el 2026-09-25**:
-   dominio, conector INE, `POST /analisis`, migración 003, 10 casos de
-   desarrollo (7 del piloto + N01, N03, N04) con trazabilidad completa.
-   Informe: [`../research/PUERTA-2-CASOS.md`](../research/PUERTA-2-CASOS.md).
-   Decisión registrada: DEC-028.
-3. **Mateo:** leer el informe y decidir **P-21** (magnitud del 2a en horizontes
-   largos declarados: mantener / subtipo / endurecer), **P-22** (`undetermined`
-   sin test aplicable) y la etiqueta de **C17** (claim falso o 2a por valor
-   atribuido a otro periodo). Con eso, ratificar o no el cierre de la Puerta 2.
-4. **Commit** en `feat/puerta-2-ine-2a` cuando Mateo lo diga; **merge `--no-ff`**
-   a `main` cuando lo diga.
-5. **Mateo:** los 5 casos manuales (**C04, C05, C11, C14, C22**, semilla
+2. ~~Puerta 2: plan, ejecución, decisiones sobre la primera corrida~~ **Hecho
+   y fusionado el 2026-09-25** (DEC-028, DEC-029). Informe:
+   [`../research/PUERTA-2-CASOS.md`](../research/PUERTA-2-CASOS.md).
+3. **Mateo:** decir si la Puerta 2 queda cerrada con esa palabra, o qué falta.
+4. **Mateo:** los 5 casos manuales (**C04, C05, C11, C14, C22**, semilla
    `20260925`), en tabla, cierran FINDINGS §7 (P-20). Si contradicen la
    lectura del agente, `PILOT-DECISION` se reabre.
-6. `NEEDS_REVIEW` antes de citar P11 en texto: el 8.830 de la API coincide con
-   la cifra de S.L. del PDF de 2019 (revisión o serie distinta); cotejar contra
-   `research/evidencia/`.
-7. Puerta 3, solo después de 3 y 4: recolectar el **conjunto de evaluación**
-   con el método de la TAREA 2 (criba, cronómetro, vía), sin nada del piloto
-   ni de la Puerta 2 (DEC-025); conectores de FMI e Interior; criterio de
-   reaparición de P17/C10 aplicado una sola vez (DEC-027).
+5. `NEEDS_REVIEW` antes de citar P11 en texto: cotejar el 8.830 de la API
+   contra el PDF de 2019 en `research/evidencia/`.
+6. **Puerta 3** (plan de una página primero, como la Puerta 2): recolectar el
+   **conjunto de evaluación** con el método de la TAREA 2 (criba, cronómetro,
+   vía), sin nada del piloto ni de la Puerta 2 (DEC-025); anotar con los
+   enums cerrados y las reglas de DEC-029 desde el principio; conectores de
+   FMI e Interior; arnés que corra el conjunto entero y calcule FPR sobre
+   controles con test aplicable; criterio de reaparición de P17/C10 aplicado
+   una sola vez (DEC-027). Lo que falta, en media página, está en la
+   bitácora de esta sesión y en la respuesta a Mateo.
 
-No se toca el test 2a a la vista de estos resultados: lo que cambie sale de
-P-21, por escrito, antes del conjunto de evaluación.
+No se toca el test 2a a la vista de resultados: lo que cambie sale de una DEC,
+por escrito, antes del conjunto de evaluación.
