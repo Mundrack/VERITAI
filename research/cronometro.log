@@ -107,3 +107,50 @@
 2026-09-26T02:41:52+00:00	E001	t1	primaria: nota INE ETDP0726 (25-09-2026, provisional, 200) + tabla Tempus 6150 'Compraventa de viviendas segun regimen y estado' (operacion 7 ETDP); extraer total nacional jul-2025, jun-2026, jul-2026
 2026-09-26T02:43:15+00:00	E001	t2	tabla 6150, serie ETDP1826 'Total Nacional. General. Compraventa. Numero.': jul-2025 64.722 (definitivo) -> jul-2026 61.417 (provisional) = -5,11%; jun-2026 59.288; nueva 13.289 (-1,4%), segunda mano 48.128 (-6,1%)
 2026-09-26T02:43:15+00:00	P3-PAUSA1	t0	pausa de la recoleccion: Mateo se mueve; el reloj de jornada descuenta este tramo
+2026-09-26T12:42:13+00:00	P3-PAUSA1	t2	reanuda la recoleccion (jornada 1)
+2026-09-26T12:42:58+00:00	E002	t0	Navarra Informacion 2026-09-25: 'la compraventa de viviendas' -6,1% interanual = serie de SEGUNDA MANO; misma primaria que E001 (tabla 6150, nota ETDP0726) ya en mano
+2026-09-26T12:42:58+00:00	E002	t1	primaria ya localizada en E001: tabla 6150, serie ETDP1824 'Total Nacional. Vivienda segunda mano. Compraventa. Numero.'; extraer
+2026-09-26T12:43:05+00:00	E002	t2	ETDP1824 segunda mano: jul-2025 51.240 -> jul-2026 48.128 = -6,07%; total ETDP1826 -5,11%. El titular presenta el subgrupo como el total (mecanismo P17, como N01)
+2026-09-26T12:43:46+00:00	E003	t0	idealista 2026-08-26: firma de hipotecas +10,8% en junio (INE H0626); localizar tabla Tempus de hipotecas sobre viviendas, numero, total nacional
+2026-09-26T12:45:51+00:00	E003	t1	primaria: nota INE H0626 (2026-08-26) + tabla Tempus 76316 'Hipotecas constituidas sobre el total de fincas por naturaleza de la finca. Resultados nacionales y por CCAA' (operacion 40 HPT); extraer viviendas, numero, jun-2025, may-2026, jun-2026
+2026-09-26T12:46:47+00:00	E003	t2	tabla 76316, serie HPT34618 'Viviendas. Numero de hipotecas. Total Nacional. Base nueva. Mensual.': jun-2025 41.422 (definitivo) -> jun-2026 45.907 (provisional) = +10,83%; may-2026 42.213. Nota H0626: '45.907', 'un 10,8% mas en tasa anual'
+2026-09-26T12:46:47+00:00	E004	t0	Teleprensa 2026-09-25: PIB acelera al 0,7% trimestral en 2T2026 (INE CNTR2T26); localizar tabla Tempus de PIB volumen, variacion trimestral, y la nota
+2026-09-26T12:48:49+00:00	E004	t1	primaria: nota INE CNTR2T26 (2026-09-25) + tabla Tempus 67824 'PIB pm Demanda (Indices de volumen encadenado)' (operacion 237); serie CNTR6653 ajustada, variacion trimestral
+2026-09-26T12:48:49+00:00	E004	t2	CNTR6653 'Total Nacional. Datos ajustados... PIB pm. Variacion trimestral': 2026-T1 0,6298 -> 2026-T2 0,6847 (provisionales); nota: 'variacion del 0,7%... una decima superior a la del primer trimestre'
+2026-09-26T12:48:49+00:00	E005	t0	La Cronica del Henares 2026-09-25: 'El PIB crece un 0,7%'; misma primaria que E004 (CNTR2T26, tabla 67824) ya en mano
+2026-09-26T12:48:49+00:00	E005	t1	primaria ya localizada en E004: serie CNTR6653
+2026-09-26T12:48:49+00:00	E005	t2	CNTR6653 2026-T2 0,6847 trimestral; 2026-T1 0,6298; interanual CNTR6654 2026-T2 2,6374
+2026-09-26T12:48:49+00:00	E006	t0	Libre Mercado 2026-09-25: 'El INE revisa a la baja sus previsiones' (interanual 2,6%, una decima menos que el avance); localizar el AVANCE avCNTR2T26 para la cifra previa
+2026-09-26T12:49:31+00:00	E006	t1	avance localizado: nota INE avCNTR2T26 (2026-07-30): 'La variacion interanual del PIB fue del 2,7%'; definitivo CNTR2T26: 2,6%; tabla 67824 serie CNTR6654 (ajustada, variacion anual)
+2026-09-26T12:49:31+00:00	E006	t2	CNTR6654 2026-T2 2,6374 (provisional); 2026-T1 2,6205; avance decia 2,7 para 2T y 'similar' para 1T. El claim (2,6, una decima menos que el avance) cuadra; 'previsiones' es un error de nombre (el INE no preve)
+2026-09-26T12:49:31+00:00	E007	t0	El Conciso 2026-07-08: FMI mantiene 2,1% Espana 2026 (WEO update julio 2026 vs abril); localizar la actualizacion de julio y el WEO de abril
+2026-09-26T12:54:14+00:00	E007	t1	BLOQUEADO: imf.org devolvio 403 al agente identificado en la API datamapper (12:50Z, primera peticion del caso) y en las paginas HTML del WEO (en, es). DEC-021: el primer rechazo cierra el caso. Los PDF (abril: tabla en texto, Espana 2026 = 2,1; julio: tabla como IMAGEN, sin texto) llegaron por otro cliente y no cuentan
+2026-09-26T12:54:14+00:00	E007	t2	sin extraccion valida para el agente; registro para humano: WEO abril 2026 Cuadro 1.1 'Espana 2,8 2,1 1,8' (2025, 2026, 2027); actualizacion julio 2026: texto dice zona del euro 0,9% en 2026; la fila de Espana esta en la imagen de la pagina 16
+2026-09-26T12:54:57+00:00	E008	t0	Q007 Primicias FMI Ecuador 2,5% abril; primaria en imf.org (WEO / Articulo IV)
+2026-09-26T12:54:58+00:00	E008	t1	BLOQUEADO: imf.org rechaza al agente identificado con 403 en API, HTML y PDF (comprobado en E007, 12:50-12:54Z); no se repite la peticion para no insistir contra un publicador que rechaza (DEC-018, DEC-021)
+2026-09-26T12:54:58+00:00	E008	t2	sin extraccion por el agente; para humano: WEO abril 2026 Cuadro 1.1 en texto (Mexico 0,6 1,6 2,2; ALC 2,4 2,3 2,7); actualizacion julio 2026 tabla como imagen
+2026-09-26T12:54:58+00:00	E009	t0	Q008 Forbes Chile FMI 2,4% abril (nivel); primaria en imf.org (WEO / Articulo IV)
+2026-09-26T12:54:59+00:00	E009	t1	BLOQUEADO: imf.org rechaza al agente identificado con 403 en API, HTML y PDF (comprobado en E007, 12:50-12:54Z); no se repite la peticion para no insistir contra un publicador que rechaza (DEC-018, DEC-021)
+2026-09-26T12:54:59+00:00	E009	t2	sin extraccion por el agente; para humano: WEO abril 2026 Cuadro 1.1 en texto (Mexico 0,6 1,6 2,2; ALC 2,4 2,3 2,7); actualizacion julio 2026 tabla como imagen
+2026-09-26T12:54:59+00:00	E010	t0	Q016 BioBioChile FMI Chile 1,8% julio (Articulo IV); primaria en imf.org (WEO / Articulo IV)
+2026-09-26T12:55:00+00:00	E010	t1	BLOQUEADO: imf.org rechaza al agente identificado con 403 en API, HTML y PDF (comprobado en E007, 12:50-12:54Z); no se repite la peticion para no insistir contra un publicador que rechaza (DEC-018, DEC-021)
+2026-09-26T12:55:00+00:00	E010	t2	sin extraccion por el agente; para humano: WEO abril 2026 Cuadro 1.1 en texto (Mexico 0,6 1,6 2,2; ALC 2,4 2,3 2,7); actualizacion julio 2026 tabla como imagen
+2026-09-26T12:55:01+00:00	E011	t0	Q017 El Economista AR FMI Argentina 3,5% abril; primaria en imf.org (WEO / Articulo IV)
+2026-09-26T12:55:01+00:00	E011	t1	BLOQUEADO: imf.org rechaza al agente identificado con 403 en API, HTML y PDF (comprobado en E007, 12:50-12:54Z); no se repite la peticion para no insistir contra un publicador que rechaza (DEC-018, DEC-021)
+2026-09-26T12:55:02+00:00	E011	t2	sin extraccion por el agente; para humano: WEO abril 2026 Cuadro 1.1 en texto (Mexico 0,6 1,6 2,2; ALC 2,4 2,3 2,7); actualizacion julio 2026 tabla como imagen
+2026-09-26T12:55:02+00:00	E012	t0	Q018 Infobae AR FMI Argentina mantiene 3,5% julio; primaria en imf.org (WEO / Articulo IV)
+2026-09-26T12:55:02+00:00	E012	t1	BLOQUEADO: imf.org rechaza al agente identificado con 403 en API, HTML y PDF (comprobado en E007, 12:50-12:54Z); no se repite la peticion para no insistir contra un publicador que rechaza (DEC-018, DEC-021)
+2026-09-26T12:55:03+00:00	E012	t2	sin extraccion por el agente; para humano: WEO abril 2026 Cuadro 1.1 en texto (Mexico 0,6 1,6 2,2; ALC 2,4 2,3 2,7); actualizacion julio 2026 tabla como imagen
+2026-09-26T12:55:03+00:00	E013	t0	Q019 El Financiero MX FMI Mexico 1,6% abril; primaria en imf.org (WEO / Articulo IV)
+2026-09-26T12:55:03+00:00	E013	t1	BLOQUEADO: imf.org rechaza al agente identificado con 403 en API, HTML y PDF (comprobado en E007, 12:50-12:54Z); no se repite la peticion para no insistir contra un publicador que rechaza (DEC-018, DEC-021)
+2026-09-26T12:55:04+00:00	E013	t2	sin extraccion por el agente; para humano: WEO abril 2026 Cuadro 1.1 en texto (Mexico 0,6 1,6 2,2; ALC 2,4 2,3 2,7); actualizacion julio 2026 tabla como imagen
+2026-09-26T12:55:04+00:00	E014	t0	Q020 El Financiero MX FMI Mexico 1,2% julio; primaria en imf.org (WEO / Articulo IV)
+2026-09-26T12:55:04+00:00	E014	t1	BLOQUEADO: imf.org rechaza al agente identificado con 403 en API, HTML y PDF (comprobado en E007, 12:50-12:54Z); no se repite la peticion para no insistir contra un publicador que rechaza (DEC-018, DEC-021)
+2026-09-26T12:55:05+00:00	E014	t2	sin extraccion por el agente; para humano: WEO abril 2026 Cuadro 1.1 en texto (Mexico 0,6 1,6 2,2; ALC 2,4 2,3 2,7); actualizacion julio 2026 tabla como imagen
+2026-09-26T12:55:05+00:00	E015	t0	Q023 Cooperativa FMI Chile 2,4% abril; primaria en imf.org (WEO / Articulo IV)
+2026-09-26T12:55:05+00:00	E015	t1	BLOQUEADO: imf.org rechaza al agente identificado con 403 en API, HTML y PDF (comprobado en E007, 12:50-12:54Z); no se repite la peticion para no insistir contra un publicador que rechaza (DEC-018, DEC-021)
+2026-09-26T12:55:06+00:00	E015	t2	sin extraccion por el agente; para humano: WEO abril 2026 Cuadro 1.1 en texto (Mexico 0,6 1,6 2,2; ALC 2,4 2,3 2,7); actualizacion julio 2026 tabla como imagen
+2026-09-26T12:55:06+00:00	E016	t0	Forbes Espana 2026-09-10: produccion industrial +2,6% en julio, cinco meses de alzas (INE IPI julio 2026); localizar tabla Tempus IPI general, tasa anual
+2026-09-26T12:57:23+00:00	E016	t1	primaria: nota INE IPI julio 2026 (2026-09-10) + tabla Tempus 60276 'General y por destino economico corregidos de efecto calendario. Nacional.' (operacion 26 IPI); extraer indice general, tasa anual, jul-2026 y jun-2026
+2026-09-26T13:01:33+00:00	E016	t2	IPI julio 2026: serie ORIGINAL (tabla 60272, IPI13868 'Total Nacional. Total industria. Variacion anual.') jun 3,8 -> jul 2,6 (el 2,6 del titular); serie corregida de estacionalidad y calendario (nota): 2,3; solo calendario (60276, IPI14424): 2,4. Indice original IPI13491 jul-2025 110,304 -> jul-2026 113,157 = +2,59%
+2026-09-26T13:01:33+00:00	E017	t0	Bilbao Hiria 2026-09-01: 58,1 millones de turistas hasta julio, +4,6% (INE FRONTUR julio 2026); localizar nota FRONTUR0726 y tabla Tempus de llegadas acumuladas

@@ -1,0 +1,24 @@
+{
+  "claim_id": "E007",
+  "texto": "El FMI mantiene que España crecerá el 2,1% en 2026, más del doble que la eurozona (0,9%)",
+  "fuente_url": "https://www.elconciso.es/coyuntura/fmi-mantiene-crecimiento-espana-2026_0_2007365627.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "FMI",
+    "tabla": "WEO",
+    "serie_nombre": "España. PIB real, variación anual, proyección para 2026",
+    "unidad": "pct",
+    "referencia_principal": "anterior",
+    "descripcion": "WEO: proyeccion de crecimiento del PIB real de Espana para 2026, por edicion (mes de publicacion)"
+  },
+  "periodo_objetivo": "2026-M07",
+  "periodo_base": "2026-M04",
+  "valor_objetivo": 2.1,
+  "valor_base": 2.1,
+  "cambio_afirmado": 0,
+  "unidad_cambio": "pp",
+  "direccion_afirmada": "igual",
+  "notas": "Periodos = ediciones del WEO (julio 2026 vs abril 2026). Emisor sin conector: sin veredicto hoy."
+}

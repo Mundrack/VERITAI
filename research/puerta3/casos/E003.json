@@ -1,0 +1,23 @@
+{
+  "claim_id": "E003",
+  "texto": "La firma de hipotecas retoma las subidas y crece un 10,8% en junio, según el INE",
+  "fuente_url": "https://www.idealista.com/news/finanzas/hipotecas/2026/08/26/911268-la-firma-de-hipotecas-retoma-las-subidas-y-crece-un-10-8-en-junio-segun-el-ine",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "76316",
+    "serie_nombre": "Viviendas. Número de hipotecas. Total Nacional. Base nueva. Mensual. ",
+    "unidad": "unidades",
+    "referencia_principal": "interanual",
+    "descripcion": "Estadistica de Hipotecas, hipotecas sobre viviendas inscritas, total nacional, mensual"
+  },
+  "periodo_objetivo": "2026-M06",
+  "periodo_base": "2025-M06",
+  "valor_objetivo": 45907,
+  "cambio_afirmado": 10.8,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Control: base = referencia interanual del emisor."
+}

@@ -1,0 +1,19 @@
+{
+  "claim_id": "E009",
+  "texto": "El FMI prevé un crecimiento del 2,3% para América Latina y El Caribe y del 2,4%, para Chile este año",
+  "fuente_url": "https://forbes.cl/economia-y-finanzas/2026-04-14/el-fmi-preve-un-crecimiento-del-23-para-america-latina-y-el-caribe-y-del-24-para-chile-este-ano",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "nivel",
+  "metrica": {
+    "emisor": "FMI",
+    "tabla": "WEO",
+    "serie_nombre": "Chile. PIB real, variación anual, proyección para 2026",
+    "unidad": "pct",
+    "referencia_principal": "anterior",
+    "descripcion": "WEO: proyeccion de crecimiento del PIB real de Chile para 2026, por edicion"
+  },
+  "periodo_objetivo": "2026-M04",
+  "valor_objetivo": 2.4,
+  "notas": "Nivel; el 2,3 de ALC es un segundo numero del mismo claim (una metrica por claim)."
+}

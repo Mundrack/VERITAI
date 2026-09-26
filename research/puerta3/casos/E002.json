@@ -1,0 +1,22 @@
+{
+  "claim_id": "E002",
+  "texto": "La compraventa de viviendas registra una caída interanual del 6,1%",
+  "fuente_url": "https://www.navarrainformacion.es/2026/09/25/la-compraventa-de-viviendas-registra-una-caida-interanual-del-61/",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "6150",
+    "serie_nombre": "Total Nacional. General. Compraventa. Número. ",
+    "unidad": "unidades",
+    "referencia_principal": "interanual",
+    "descripcion": "ETDP, compraventas de viviendas inscritas (total), total nacional, mensual"
+  },
+  "periodo_objetivo": "2026-M07",
+  "periodo_base": "2025-M07",
+  "cambio_afirmado": -6.1,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "baja",
+  "notas": "El titular habla de 'la compraventa de viviendas' sin restringir: se estructura sobre el total. El -6,1% es el de segunda mano (ETDP1824)."
+}

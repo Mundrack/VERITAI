@@ -1,0 +1,19 @@
+# WEO_2026-04_cap1  sha256=3d4d6defb4f2a567c515faff188039ebbb1d016cf23bd0305bee436aebcec960  origen=imf.org (PDF descargado 2026-09-26)
+
+
+## pagina 28
+Zona del euro 1,4 1,1 1,2 —0,2 —0,2 —0,1 —0,2
+España 2,8 2,1 1,8 —0,2 —0,1 0,1 0,1
+América Latina y el Caribe 2,4 2,3 2,7 0,1 0,0 0,0 0,1
+Brasil 2,3 1,9 2,0 0,3 —0,3 0,0 —0,2
+México 0,6 1,6 2,2 0,1 0,1 0,1 0,2
+
+## pagina 29
+Zona del euro 1,2 1,2 1,5 —0,5 0,2 —0,6 . . .
+España 2,6 1,6 2,2 —0,4 0,3 —0,2 . . .
+América Latina y el Caribe 2,1 2,9 2,3 0,1 —0,1 0,3 . . .
+Brasil 2,0 2,6 1,9 0,3 —0,3 0,3 . . .
+México 1,8 1,5 2,4 —0,7 0,3 —0,2 . . .
+
+## pagina 30
+América Latina y el Caribe 2,2 2,3 2,6 0,2 0,0 0,1 0,1

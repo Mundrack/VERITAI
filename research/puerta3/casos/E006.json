@@ -1,0 +1,19 @@
+{
+  "claim_id": "E006",
+  "texto": "El INE revisa a la baja sus previsiones sobre el crecimiento económico",
+  "fuente_url": "https://www.libertaddigital.com/libremercado/2026-09-25/el-ine-desmiente-el-triunfalismo-de-sanchez-y-revisa-a-la-baja-sus-previsiones-sobre-el-crecimiento-economico-7465884/",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "nivel",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "67824",
+    "serie_nombre": "Total Nacional. Datos ajustados de estacionalidad y calendario. Producto interior bruto a precios de mercado. Variación anual. Índices de volumen encadenados. ",
+    "unidad": "pct",
+    "referencia_principal": "anterior",
+    "descripcion": "CNTR, PIB pm en volumen, variacion interanual, ajustada, trimestral"
+  },
+  "periodo_objetivo": "2026-T2",
+  "valor_objetivo": 2.6,
+  "notas": "Nivel: el claim es una revision avance->definitivo del mismo periodo; sin test aplicable."
+}

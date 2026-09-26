@@ -1,0 +1,24 @@
+{
+  "claim_id": "E010",
+  "texto": "El FMI vuelve a bajar proyección de crecimiento para Chile hasta el 1,8% durante 2026",
+  "fuente_url": "https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/07/06/el-fmi-vuelve-a-bajar-su-proyeccion-de-crecimiento-para-chile-hasta-el-18-en-2026.shtml",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "FMI",
+    "tabla": "WEO",
+    "serie_nombre": "Chile. PIB real, variación anual, proyección para 2026",
+    "unidad": "pct",
+    "referencia_principal": "anterior",
+    "descripcion": "FMI: proyeccion de crecimiento del PIB real de Chile para 2026, por edicion/documento"
+  },
+  "periodo_objetivo": "2026-M07",
+  "periodo_base": "2026-M05",
+  "valor_objetivo": 1.8,
+  "valor_base": 2.2,
+  "cambio_afirmado": -0.4,
+  "unidad_cambio": "pp",
+  "direccion_afirmada": "baja",
+  "notas": "Periodos = documentos del FMI (julio Art. IV vs mayo declaracion). Emisor sin conector."
+}

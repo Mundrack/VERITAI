@@ -1,0 +1,22 @@
+{
+  "claim_id": "E004",
+  "texto": "El PIB acelera su crecimiento al 0,7% en el segundo trimestre por el tirón del consumo y la inversión",
+  "fuente_url": "https://www.teleprensa.com/nacional-3/economia/amp-pib-acelera-crecimiento-07-segundo-trimestre-tiron-consumo-inversion/202609251224042516451.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "67824",
+    "serie_nombre": "Total Nacional. Datos ajustados de estacionalidad y calendario. Producto interior bruto a precios de mercado. Dato base. Índices de volumen encadenados. ",
+    "unidad": "indice",
+    "referencia_principal": "anterior",
+    "descripcion": "CNTR, PIB pm en volumen encadenado, ajustado de estacionalidad y calendario, indice, trimestral"
+  },
+  "periodo_objetivo": "2026-T2",
+  "periodo_base": "2026-T1",
+  "cambio_afirmado": 0.7,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Control: base = trimestre anterior, referencia del emisor. El claim da la tasa redondeada (0,7)."
+}

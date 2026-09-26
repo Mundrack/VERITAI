@@ -1,0 +1,24 @@
+{
+  "claim_id": "E015",
+  "texto": "El FMI elevó al 2,4 % su proyección de crecimiento para Chile en 2026",
+  "fuente_url": "https://www.cooperativa.cl/noticias/economia/crecimiento/el-fmi-elevo-al-2-4-su-proyeccion-de-crecimiento-para-chile-en-2026/2026-04-14/103709.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "FMI",
+    "tabla": "WEO",
+    "serie_nombre": "Chile. PIB real, variación anual, proyección para 2026",
+    "unidad": "pct",
+    "referencia_principal": "anterior",
+    "descripcion": "WEO: proyeccion de crecimiento del PIB real de Chile para 2026, por edicion"
+  },
+  "periodo_objetivo": "2026-M04",
+  "periodo_base": "2025-M10",
+  "valor_objetivo": 2.4,
+  "valor_base": 2.0,
+  "cambio_afirmado": 0.4,
+  "unidad_cambio": "pp",
+  "direccion_afirmada": "sube",
+  "notas": "Periodos = ediciones del WEO. Emisor sin conector."
+}

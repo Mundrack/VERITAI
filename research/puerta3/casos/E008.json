@@ -1,0 +1,24 @@
+{
+  "claim_id": "E008",
+  "texto": "FMI mejora la proyección de crecimiento para la economía de Ecuador en 2026",
+  "fuente_url": "https://www.primicias.ec/economia/fmi-mejora-proyeccion-crecimiento-pib-economia-ecuador-reuniones-primavera-120378/",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "FMI",
+    "tabla": "WEO",
+    "serie_nombre": "Ecuador. PIB real, variación anual, proyección para 2026",
+    "unidad": "pct",
+    "referencia_principal": "anterior",
+    "descripcion": "WEO: proyeccion de crecimiento del PIB real de Ecuador para 2026, por edicion"
+  },
+  "periodo_objetivo": "2026-M04",
+  "periodo_base": "2025-M10",
+  "valor_objetivo": 2.5,
+  "valor_base": 2.0,
+  "cambio_afirmado": 0.5,
+  "unidad_cambio": "pp",
+  "direccion_afirmada": "sube",
+  "notas": "Periodos = ediciones del WEO. Emisor sin conector."
+}

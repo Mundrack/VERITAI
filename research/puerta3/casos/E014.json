@@ -1,0 +1,24 @@
+{
+  "claim_id": "E014",
+  "texto": "FMI 'desinfla' pronósticos de crecimiento para México: Baja de 1.6 a 1.2% para 2026",
+  "fuente_url": "https://www.elfinanciero.com.mx/economia/2026/07/08/fmi-ajusta-a-la-baja-estimados-de-crecimiento-economico-de-mexico/",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "FMI",
+    "tabla": "WEO",
+    "serie_nombre": "México. PIB real, variación anual, proyección para 2026",
+    "unidad": "pct",
+    "referencia_principal": "anterior",
+    "descripcion": "WEO: proyeccion de crecimiento del PIB real de Mexico para 2026, por edicion"
+  },
+  "periodo_objetivo": "2026-M07",
+  "periodo_base": "2026-M04",
+  "valor_objetivo": 1.2,
+  "valor_base": 1.6,
+  "cambio_afirmado": -0.4,
+  "unidad_cambio": "pp",
+  "direccion_afirmada": "baja",
+  "notas": "Periodos = ediciones del WEO. Emisor sin conector."
+}

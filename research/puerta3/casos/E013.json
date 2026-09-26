@@ -1,0 +1,24 @@
+{
+  "claim_id": "E013",
+  "texto": "FMI mejora pronóstico para PIB de México a 1.6% en 2026; advierte de riesgos por guerra en Irán",
+  "fuente_url": "https://www.elfinanciero.com.mx/economia/2026/04/14/fmi-mejora-pronostico-de-crecimiento-para-mexico-en-2026-a-cuanto/",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "FMI",
+    "tabla": "WEO",
+    "serie_nombre": "México. PIB real, variación anual, proyección para 2026",
+    "unidad": "pct",
+    "referencia_principal": "anterior",
+    "descripcion": "WEO: proyeccion de crecimiento del PIB real de Mexico para 2026, por edicion"
+  },
+  "periodo_objetivo": "2026-M04",
+  "periodo_base": "2026-M01",
+  "valor_objetivo": 1.6,
+  "valor_base": 1.5,
+  "cambio_afirmado": 0.1,
+  "unidad_cambio": "pp",
+  "direccion_afirmada": "sube",
+  "notas": "Periodos = ediciones del WEO. Emisor sin conector."
+}

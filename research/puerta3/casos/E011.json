@@ -1,0 +1,24 @@
+{
+  "claim_id": "E011",
+  "texto": "El FMI empeora el pronóstico: inflación al 30% y recorte del crecimiento (Argentina crecerá 3,5% del PBI, medio punto menos que lo estimado en octubre)",
+  "fuente_url": "https://eleconomista.com.ar/economia/el-fmi-empeora-pronostico-inflacion-30-recorte-crecimiento-n94122",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "FMI",
+    "tabla": "WEO",
+    "serie_nombre": "Argentina. PIB real, variación anual, proyección para 2026",
+    "unidad": "pct",
+    "referencia_principal": "anterior",
+    "descripcion": "WEO: proyeccion de crecimiento del PIB real de Argentina para 2026, por edicion"
+  },
+  "periodo_objetivo": "2026-M04",
+  "periodo_base": "2025-M10",
+  "valor_objetivo": 3.5,
+  "valor_base": 4.0,
+  "cambio_afirmado": -0.5,
+  "unidad_cambio": "pp",
+  "direccion_afirmada": "baja",
+  "notas": "Periodos = ediciones del WEO. El claim dice 'octubre'; enero (G20) pudo decir lo mismo. Emisor sin conector."
+}
