@@ -43,7 +43,7 @@ from __future__ import annotations
 
 OBJETIVO_CUBETA: dict[str, tuple[int, int]] = {
     "A": (50, 40),
-    "B": (7, 7)  # DEC-035: declarada con 7 e intervalo; antes (20, 15),
+    "B": (7, 7),  # DEC-035: declarada con 7 e intervalo; antes (20, 15)
     "C": (15, 10),
     "D": (10, 5),
     "E": (10, 5),
