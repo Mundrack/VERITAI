@@ -420,7 +420,12 @@ EOAT0726 0/5), así que P1 es una predicción con riesgo real de fallar.
 es compatible con §4d y con la observación de §4e ampliado (el patrón se
 concentra en julio y agosto). La edición que separa ambas lecturas es
 `CTH0926` (23 de octubre): §4d admite 2b; la lectura estacional lo hace menos
-probable. Queda **opcional** (§4i).
+probable. Por eso **`CTH0926` es necesaria, no opcional** (decisión de Mateo,
+2026-09-27, enmienda a DEC-035): es la única edición fuera del verano
+disponible antes de cerrar la Puerta, y sin ella la predicción P1 no separa
+§4d de la lectura estacional. La jornada 5 no se cierra hasta trabajarla; la
+prueba de predicción se lee con las dos ediciones (P1 sobre `EOAT0826`, P1'
+sobre `CTH0926` con la misma tabla de lectura, y P2 sobre ambas).
 
 **Método de la jornada 5, el mismo de las jornadas 3 y 4:** tabla de tasas
 provisional/vigente por CCAA con `EOAT0825` (anexo) y la API, búsqueda de las
@@ -437,8 +442,9 @@ y septiembre si sale el 2 de octubre; tres por edición), Banco de España
 notas de mayo y julio de 2026) y Portal Estadístico de Criminalidad (edición
 anual 2025, publicada en marzo de 2026, si no está vetada; 1T2026 ya llegó al
 tope). Cada control con criba, cronómetro y la misma regla de tres por
-edición. `CTH0926` (23 de octubre) se recolecta **si el calendario lo permite**;
-no bloquea el cierre de la jornada ni de la Puerta.
+edición. `CTH0926` (23 de octubre) es **necesaria** (§4h, enmienda a DEC-035):
+la jornada 5 queda abierta hasta trabajarla, y el cierre de la Puerta 3 espera
+a esa edición.
 
 ### 4j. Vía descartada: rastrear las redacciones que ya mostraron el mecanismo
 

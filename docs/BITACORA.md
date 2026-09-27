@@ -1090,3 +1090,29 @@ limitación de H1 en `TESIS-ENCUADRE.md`; `OBJETIVO_CUBETA["B"]` = (7, 7);
 
 - **Jornada 5 el 30-09 o después**: P1/P2 sobre `EOAT0826`, ≥ 9 A sin INE,
   `CTH0926` opcional. Avisar a Mateo al cerrarla.
+
+---
+
+## 2026-09-27 (18:20Z) — Enmienda a DEC-035: CTH0926 pasa a necesaria; esqueleto de tesis
+
+### Qué se hizo
+
+Mateo aprobó todo y abre la jornada 5 el 30. Dos cambios que no dependen del
+INE: **`CTH0926` sube de opcional a necesaria** (diseño §4h y §4i, DEC-035
+enmendada, PROGRESO, ESTADO, CLAUDE.md): es la única edición fuera del verano
+y sin ella la predicción P1 no separa §4d de la lectura estacional. Y el
+**esqueleto del documento de tesis** en `docs/TESIS/` (11 secciones, solo
+estructura y qué material del repo alimenta cada una; nada redactado).
+
+### Qué se verificó
+
+- Los nombres y el orden de las 11 secciones quedan como `NEEDS_REVIEW` hasta
+  cotejarlos con la plantilla de titulación de la UDLA (P-06: existe, no está
+  en el repo). El mapeo de material es por contenido y sobrevive a un cambio
+  de nombres.
+
+### Qué quedó pendiente
+
+- Jornada 5: no se abre hasta que Mateo lo diga (30-09 o después); queda
+  abierta hasta `CTH0926` (23-10).
+- P-06: entregar la plantilla de la UDLA en `docs/TESIS/` para fijar nombres.

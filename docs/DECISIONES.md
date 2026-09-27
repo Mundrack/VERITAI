@@ -1090,7 +1090,10 @@ tasa y en ninguna de las seis con tasa.
 3. **En la misma jornada se completa A hasta 40**, lo que sostiene H3 (hoy
    31), **sin emisor INE** por la cuota (§4i).
 4. **`CTH0926` (23-10) es opcional:** se recolecta si el calendario lo
-   permite; nada se bloquea por esperarlo.
+   permite; nada se bloquea por esperarlo. **Enmienda del mismo día (Mateo,
+   2026-09-27): `CTH0926` pasa a necesaria.** Es la única edición fuera del
+   verano y sin ella §4d no se separa de la lectura estacional (§4h). La
+   jornada 5 y el cierre de la Puerta 3 esperan a esa edición.
 5. **Vía (c) descartada:** rastrear las redacciones que ya mostraron el
    mecanismo sesga lo que el control natural de §4e pretende medir. Anotado
    en §4j con la razón.

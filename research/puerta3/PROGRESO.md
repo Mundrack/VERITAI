@@ -28,7 +28,8 @@ publicación:
 **Además, en la misma jornada:** ≥ 9 controles A sin INE (SEPE junio/agosto
 2026, BdE 2T2026 por CCAA del 30-09 y notas de mayo/julio, Portal anual 2025
 si no está vetado), con criba, cronómetro y tres por edición. `CTH0926`
-(23-10) opcional. **Vía descartada:** seguir a las redacciones que ya
+(23-10) **necesaria** (enmienda a DEC-035: única edición fuera del verano; sin
+ella §4d no se separa de la lectura estacional). **Vía descartada:** seguir a las redacciones que ya
 mostraron el mecanismo (§4j).
 
 **Cubeta B declarada con 7** (E031, E042, E043, E047, E053, E055, E066; E056

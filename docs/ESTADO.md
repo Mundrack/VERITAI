@@ -32,7 +32,7 @@ PUERTA 3   corpus completo anotado + arnes de evaluacion     <-- AQUI. B = 2b de
            propuesta: docs/PROPUESTA-2B.md (8 operaciones)     intervalo (limitacion de H1); jornada 5 =
            tope 3 B/edicion (4c), hipotesis 4d confirmada        prediccion sobre EOAT0826 (30-09, escrita
            prediccion P1/P2 escrita el 27-09 (diseno 4h)       el 27-09) + A hasta 40 sin INE; CTH0926
-                                                               opcional; via (c) descartada por sesgo
+                                                               NECESARIA (23-10); via (c) descartada
 
 PUERTA 4   evaluacion completa: metricas, ablacion,
            sondas contrafactuales

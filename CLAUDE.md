@@ -115,7 +115,7 @@ Vienen de `docs/DECISIONES.md`; aquí solo la regla, sin el contexto.
 - **La cubeta B se declara con 7 casos e intervalo** (limitación explícita
   de H1: 2b solo existe en 2 de las 8 operaciones del mapa). La jornada 5 es
   una prueba de predicción sobre `EOAT0826` escrita antes del 30-09 (diseño
-  §4h) y completa A hasta 40 sin INE; `CTH0926` opcional; rastrear
+  §4h) y completa A hasta 40 sin INE; `CTH0926` (23-10) es necesaria; rastrear
   redacciones ya vistas está descartado por sesgo. *(DEC-035)*
 - **La métrica de la Puerta 1 se mide sobre todos los candidatos admitidos por
   la regla dura**, no sobre el lote por cubetas, y se reporta desagregada por
