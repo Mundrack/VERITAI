@@ -284,8 +284,12 @@ para eliminar.
 
 Multimodal, imagen, video, audio, deepfakes, detección de texto generado por IA,
 C2PA, dashboard B2B, app móvil, análisis continuo del feed, evidence graph,
-lógica subjetiva, multilingüe en el análisis, retórica general, sistema de
-alertas.
+lógica subjetiva, multilingüe en el análisis, sistema de alertas. El **eje de
+detección de manipulación** (técnicas de lenguaje persuasivo, enum cerrado,
+sin afirmar intención) sí entra al proyecto, pero **después de cerrar la
+Puerta 3, no en paralelo** (DEC-036; `docs/EJE-MANIPULACION.md`). Las ideas
+que aún no son decisiones van a `docs/IDEAS.md`; nada pasa de ahí a
+`DECISIONES.md` sin aprobación explícita de Mateo.
 
 Y la regla que las resume todas (START-HERE §21):
 

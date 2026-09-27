@@ -22,6 +22,8 @@ Esto es otra cosa: el sitio donde no se pierde lo que ya se sabe.
 | [`PREGUNTAS-ABIERTAS.md`](PREGUNTAS-ABIERTAS.md) | Lo que está sin resolver y quién lo decide | Al abrir o cerrar una pregunta |
 | [`SEGURIDAD.md`](SEGURIDAD.md) | Controles de seguridad **ya implementados**, no los planeados | Cuando se implementa o se rompe un control |
 | [`../research/README.md`](../research/README.md) | Estado del piloto (Puerta 1) y material de la Puerta 2: casos, ejecutor, informe | Cuando avanza el piloto o una puerta |
+| [`EJE-MANIPULACION.md`](EJE-MANIPULACION.md) | El tercer eje (técnicas de lenguaje persuasivo, sin afirmar intención): qué es, preguntas abiertas, papers, qué lo condiciona. **Se construye después de la Puerta 3** (DEC-036) | Cuando Mateo deje material o se cierre una pregunta por DEC |
+| [`IDEAS.md`](IDEAS.md) | Ideas que todavía no son decisiones, con fecha, origen y estado. Lo que venga de otra IA o de un paper entra aquí primero. **Nada pasa a `DECISIONES.md` sin aprobación explícita de Mateo** | Al anotar, estudiar, decidir o descartar una idea |
 | [`TESIS/`](TESIS/README.md) | Esqueleto del documento de tesis (formato UDLA, 11 secciones): solo estructura y qué material del repo alimenta cada sección. **Nada redactado** | Cuando Mateo lo pida; nombres `NEEDS_REVIEW` hasta cotejar la plantilla (P-06) |
 
 ---

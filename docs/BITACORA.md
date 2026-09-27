@@ -1152,3 +1152,31 @@ ya están revisados, así que las dos ediciones de la prueba son evaluables.
 
 - La misma pasada para las otras operaciones del INE (siguen en `no`).
 - Jornada 5: no se abre hasta que Mateo lo diga.
+
+---
+
+## 2026-09-27 (19:40Z) — DEC-036: eje de manipulación después de la Puerta 3; `IDEAS.md` con I-001
+
+### Qué se hizo
+
+Decisión de alcance de Mateo registrada como DEC-036: el eje de detección
+de manipulación entra al proyecto y se construye después de cerrar la Puerta
+3, no en paralelo. `docs/EJE-MANIPULACION.md` (qué es y qué no es, preguntas
+abiertas sobre corpus, anotadores y evaluación, hueco para papers, decisiones
+que lo condicionan). `docs/IDEAS.md` como bitácora de ideas con fecha, origen
+y estado, y la regla de paso a `DECISIONES.md` solo con aprobación explícita.
+Primera entrada I-001: contraste con búsqueda web (baseline B0 sobre los 7
+casos B, español e inglés, 10 primeros resultados), en estudio, con lo que hay
+que fijar antes de medirlo. `CLAUDE.md` §11, `docs/README.md` y el encuadre
+actualizados.
+
+### Qué se verificó
+
+- Nada de código: solo documentación. Ninguna referencia bibliográfica
+  añadida (las pone Mateo).
+
+### Qué quedó pendiente
+
+- I-001: fijar consultas, criterio de "llega" y procedimiento antes de medir;
+  esperar el visto bueno de Mateo.
+- Jornada 5: no se abre hasta que Mateo lo diga.

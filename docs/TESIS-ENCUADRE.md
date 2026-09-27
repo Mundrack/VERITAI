@@ -164,6 +164,12 @@ amenaza a la validez externa del conector: la mitigación es que la rotura sea
 visible (abstención `PREVIOUS_EDITION_NOT_FOUND`, nunca un valor inventado) y
 que las ediciones ya descargadas queden conservadas con su sha256.
 
+**Tercer eje, después de la Puerta 3 (DEC-036).** El eje de detección de
+manipulación (técnicas de lenguaje persuasivo con enum cerrado y fragmento
+literal, sin afirmar intención) entra al proyecto y se construye después de
+cerrar la Puerta 3, no en paralelo (`docs/EJE-MANIPULACION.md`). No cambia
+nada de lo que la Puerta 3 mide.
+
 **Premisa de 2b, con fuente primaria (2026-09-27).** El INE declara por escrito
 la política de revisión provisional → definitivo de la EOH, la EOAP y la EOAC,
 con calendario, en el Informe Metodológico Estandarizado de cada encuesta

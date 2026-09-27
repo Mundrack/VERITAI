@@ -1107,3 +1107,37 @@ la tasa observada en las ediciones de primavera es cero, y el tope de tres
 por edición ya está lleno en las dos ediciones que sí lo producen. Bajar a 10:
 no hay universo del que sacar los tres que faltan sin la vía (c). Rastrear
 redacciones (vía c): sesgo declarado arriba.
+
+---
+
+## DEC-036 · El eje de detección de manipulación entra al proyecto, después de cerrar la Puerta 3; `IDEAS.md` como antesala de las decisiones
+
+**Fecha:** 2026-09-27 · **Estado:** vigente · **Decide:** Mateo · **Aplica:** `docs/EJE-MANIPULACION.md`, `docs/IDEAS.md`, `CLAUDE.md` §11, encuadre (alcance)
+
+**Contexto.** Hasta hoy la "retórica general" estaba en la lista de lo que no
+se implementa todavía (`CLAUDE.md` §11) y el eje de persuasión solo aparecía
+como trabajo futuro. Mateo toma la decisión de alcance.
+
+**Decisión.**
+
+1. **El eje de detección de manipulación entra al proyecto**, no solo a
+   trabajo futuro. Detecta técnicas de lenguaje persuasivo con enum cerrado
+   y fragmento literal; **nunca afirma intención del autor**.
+2. **Se construye después de cerrar la Puerta 3, no en paralelo.** Cerrar la
+   Puerta 3 incluye la jornada 5, `CTH0926`, el congelado del conjunto, el
+   arnés y su DEC de cierre.
+3. Documento vivo: `docs/EJE-MANIPULACION.md` (qué es y qué no, preguntas
+   abiertas, papers, decisiones que lo condicionan).
+4. **`docs/IDEAS.md`** es la bitácora de ideas que todavía no son decisiones,
+   con fecha, origen y estado. Lo que Mateo traiga de otra IA o de un paper
+   entra ahí primero. **Nada pasa de `IDEAS.md` a `DECISIONES.md` sin
+   aprobación explícita de Mateo.**
+
+**Consecuencias.** `CLAUDE.md` §11: "retórica general" deja de ser un
+"todavía" incondicional y pasa a "eje de manipulación, después de la Puerta
+3, con enum cerrado". Primera entrada de `IDEAS.md`: I-001, contraste con
+búsqueda web (baseline B0), en estudio.
+
+**Alternativas descartadas.** Construirlo en paralelo: dispersa la Puerta 3
+cuando le quedan dos ediciones y el congelado. Dejarlo solo como trabajo
+futuro: Mateo lo descarta; el eje forma parte del alcance del proyecto.
