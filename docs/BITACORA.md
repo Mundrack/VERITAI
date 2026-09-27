@@ -1282,3 +1282,50 @@ implementación; no toca la Puerta 3; B0/B1/B2 no se diseñan.
 - I-003 espera aprobación de Mateo para leerse.
 - Taxonomía del eje: sin decidir.
 - Jornada 5: sigue cerrada.
+
+---
+
+## 2026-09-27 (23:20Z) — T-01: primaria de Ecker con *paltering* leída (L-11); regla de `DECISIONES.md`
+
+### Qué se hizo
+
+- I-003 sale de `IDEAS.md` (Mateo: sostiene la sección 5 de la tesis
+  principal, no el eje de manipulación). Pasa a ser la tarea T-01 en
+  `docs/TESIS/README.md` §Tareas de la tesis principal; en `IDEAS.md` queda
+  solo la fila del índice, apuntando a T-01, porque la bitácora cita I-003.
+- Powell, Bian & Markman 2020 descargado de PLOS ONE (acceso abierto,
+  CC BY) y versionado en `research/literatura/journal.pone.0230360.pdf` con su sha256 en
+  `SHA256SUMS`.
+- Ficha L-11 en `docs/TESIS/LITERATURA.md`, fichero nuevo para las fichas de
+  la tesis principal. Responde las tres preguntas de Mateo. *Paltering* es
+  engañar con enunciados verdaderos. "Inadvertent" afirma que el emisor ni
+  desea engañar ni sabe que induce a error. El marco no exige atribuir
+  intención para identificar el mecanismo ni para medir su efecto, pero sí
+  para calificar un caso. Lectura del agente: la cita es compatible con la
+  regla dura si se usa el mecanismo y no se adopta ninguna de las dos
+  etiquetas.
+- `05-marco-teorico.md` §D: el recuadro dice ahora una primaria leída y
+  cinco sin leer; la primaria leída entra con su tabla y su condición de uso.
+  Mapa C, ficha 02 e índice de TESIS, alineados.
+- Regla de `DECISIONES.md` escrita en `CLAUDE.md` §3 y en la cabecera de
+  `DECISIONES.md`: corrección en su sitio con nota mientras la rama no esté
+  fusionada; una vez fusionada, entrada nueva que supersede.
+
+### Qué se verificó
+
+- Descarga: tres peticiones a journals.plos.org en total. `robots.txt` se
+  pidió dos veces seguidas en la misma orden, antes de leer su
+  `Crawl-delay: 30`; el PDF, una vez. Respuesta 200, `application/pdf`, sin
+  redirecciones; 16 páginas; sha256 `373d40ed35545c2a52cd4c84d71f0c9c136b7477e57c3ce58febd128c76286cd`; `sha256sum -c` en verde.
+- Identidad leída de la p. 1 del propio PDF: título, autores, *PLOS ONE*
+  15(5): e0230360, DOI impreso. Coincide con la ref. 265 de Ecker, que omite
+  el número.
+- Texto leído entero, las 16 páginas; ficha con página en cada dato.
+
+### Qué quedó pendiente
+
+- Mateo confirma o corrige la lectura de compatibilidad con la regla dura.
+- Cinco primarias de Ecker sin leer. Las que cita Powell (Schauer &
+  Zeckhauser 2009, origen del término; Rogers et al. 2017), sin leer y sin
+  tarea abierta.
+- Taxonomía: sin decidir. Jornada 5: sigue cerrada.

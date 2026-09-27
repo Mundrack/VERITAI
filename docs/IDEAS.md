@@ -16,7 +16,7 @@ que se conserva).
 |---|---|---|---|---|---|
 | I-001 | 2026-09-27 | Contraste con búsqueda web: baseline B0 medido sobre los 7 casos B | Mateo | en estudio | [abajo](#i-001--contraste-con-búsqueda-web-baseline-b0) |
 | I-002 | 2026-09-27 | Literatura para el futuro eje de manipulación, pasada 1: 9 fichas, SemEval como base, matriz de tres niveles, brechas | Mateo (PDF) | en estudio; la regla de §3, decidida en DEC-037 | [abajo](#i-002--literatura-para-el-futuro-eje-de-manipulación--pasada-1) |
-| I-003 | 2026-09-27 | Leer la primaria de Ecker con *paltering* en el título (Powell, Bian & Markman 2020, ref. 265) | Mateo | idea | [abajo](#i-003--leer-la-primaria-de-ecker-con-paltering-en-el-título) |
+| I-003 | 2026-09-27 | Leer la primaria de Ecker con *paltering* en el título (Powell, Bian & Markman 2020, ref. 265) | Mateo | fuera de IDEAS: es tarea de la tesis principal, T-01 (Mateo, 2026-09-27) | [`TESIS/README.md`](TESIS/README.md) |
 
 ---
 
@@ -753,33 +753,3 @@ a 0,375 en la tabla 1 (p. 2727).
 §3 lleva las nueve fichas marcadas como evidencia candidata. Eso no convierte
 nada en decisión.
 
----
-
-## I-003 · Leer la primaria de Ecker con paltering en el título
-
-**Fecha:** 2026-09-27 · **De dónde salió:** Mateo · **Estado:** idea
-
-**Qué es.** Leer la única referencia de Ecker et al. 2022 que lleva
-*paltering* en el título. Transcrita tal como la cita el manuscrito aceptado
-(ref. 265, lista de referencias, ms p. 45); no se ha buscado fuera ni se ha
-cotejado con la publicación:
-
-> Powell, D., Bian, L. & Markman, E. M. When intents to educate can
-> misinform: Inadvertent paltering through violations of communicative
-> norms. PLOS ONE 15, e0230360 (2020).
-
-- **Autores:** Powell, D., Bian, L. y Markman, E. M.
-- **Año:** 2020.
-- **Publicación:** *PLOS ONE* 15, e0230360.
-- **Dónde la cita Ecker:** ms p. 28, junto con las refs. 95, 264 y 266, en
-  el pasaje sobre el engaño que dice técnicamente la verdad
-  (`docs/TESIS/05-marco-teorico.md` §D). El preprint de Ecker
-  (`ecker.2022.nrp_preprint.pdf`) la transcribe igual.
-- **Material:** el PDF no está en `research/literatura/`.
-
-**Por qué (Mateo).** *Paltering* es el término académico del objeto de
-VeritAI, y hoy lo citamos de segunda mano, a través de una revisión.
-
-**Qué no es.** No es decisión y no cambia la sección 5: la ficha 05 §D sigue
-citando a Ecker como respaldo de revisión, con las seis primarias sin leer.
-Se lee solo cuando Mateo lo apruebe.

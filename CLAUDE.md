@@ -74,6 +74,11 @@ La métrica que decide es una sola:
   archivo se propone antes. No se escribe hasta un "ejecuta".
 - **Ramas y pull requests.** Nunca commits directos en `main`. Una rama por
   unidad de trabajo, con su PR.
+- **Registro de decisiones (`docs/DECISIONES.md`).** Mientras la rama donde
+  se escribió una DEC no esté fusionada en `main`, la DEC se puede corregir
+  en su sitio dejando una nota de registro. Una vez fusionada, una decisión
+  no se edita: se corrige con una entrada nueva que la supersede. *(Mateo,
+  2026-09-27)*
 - **Incrementos pequeños y verificados.** Cada funcionalidad termina con algo que
   demuestra que sirve: un test que pasa, el script ejecutado, un curl al
   endpoint. Nada de código sin correr.

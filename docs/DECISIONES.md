@@ -3,8 +3,11 @@
 Cada decisión técnica tomada **construyendo**, con la alternativa que se
 descartó y por qué. Formato ADR simplificado.
 
-> **Append-only.** Una decisión pasada no se edita. Si se revoca, se añade una
-> entrada nueva que dice cuál revoca y qué dato la cambió.
+> **Append-only una vez fusionada** (Mateo, 2026-09-27; `CLAUDE.md` §3).
+> Mientras la rama donde se escribió una DEC no esté fusionada en `main`, la
+> DEC se puede corregir en su sitio dejando una nota de registro. Una vez
+> fusionada, una decisión no se edita: se corrige con una entrada nueva que
+> dice cuál supersede y qué dato la cambió.
 
 **Esto no incluye las decisiones cerradas del paquete** (`00b-DECISIONES-MATEO.md`
 y `04-VERITAI-CLAUDE-RESPONSE-R02.md`). Esas son la fuente de verdad y no se

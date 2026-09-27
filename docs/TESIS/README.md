@@ -14,7 +14,7 @@ material es por contenido, así que sobrevive a un cambio de nombres.
 | 2 | [`02-introduccion.md`](02-introduccion.md) | Introducción: antecedentes, problema, pregunta | `TESIS-ENCUADRE`, `02-1`, DEC-026 | disponible |
 | 3 | [`03-objetivos-hipotesis.md`](03-objetivos-hipotesis.md) | Objetivos e hipótesis | `TESIS-ENCUADRE` (H1–H3), DEC-031, DEC-034, DEC-035 | disponible |
 | 4 | [`04-alcance-justificacion.md`](04-alcance-justificacion.md) | Alcance declarado y justificación | DEC-024, DEC-013, `PILOT-FINDINGS` §4, `CLAUDE.md` §11 | disponible |
-| 5 | [`05-marco-teorico.md`](05-marco-teorico.md) | Marco teórico y estado del arte | taxonomía (`TESIS-ENCUADRE`, `GLOSARIO`), `02-1`; andamiaje Q1–Q12 / C1–C12 | taxonomía disponible; **literatura no existe en el repo**; andamiaje listo; primer respaldo para el objeto de estudio (§D, Ecker et al. 2022): de revisión, primarias sin leer |
+| 5 | [`05-marco-teorico.md`](05-marco-teorico.md) | Marco teórico y estado del arte | taxonomía (`TESIS-ENCUADRE`, `GLOSARIO`), `02-1`; andamiaje Q1–Q12 / C1–C12 | taxonomía disponible; **literatura no existe en el repo**; andamiaje listo; respaldo para el objeto de estudio en §D: una revisión (Ecker et al. 2022) y una primaria leída (Powell, Bian & Markman 2020); cinco primarias sin leer |
 | 6 | [`06-metodologia.md`](06-metodologia.md) | Metodología | puertas (`00b`), DEC-014/018/019/020/021/025/031/032/033/035 | disponible |
 | 7 | [`07-diseno-sistema.md`](07-diseno-sistema.md) | Diseño del sistema | `ARQUITECTURA`, `SEGURIDAD`, `GLOSARIO` enums, DEC-016, `PROPUESTA-2B` | disponible |
 | 8 | [`08-implementacion.md`](08-implementacion.md) | Implementación y verificación del prototipo | `PUERTA-2-CASOS`, `RECUPERABILIDAD-2B`, tests, arnés | disponible; humo, no evaluación |
@@ -52,3 +52,14 @@ consolidado sección → afirmación → categoría. **Sin fuentes: las pone Mat
   DEC), `research/evidencia/D2B_*` (ediciones anteriores con sha256),
   `research/cronometro.log`, `docs/DECISIONES.md` completo, `docs/GLOSARIO.md`
   (enums cerrados).
+
+## Tareas de la tesis principal
+
+Tareas que sostienen la tesis principal, no el eje de manipulación. La
+congelación del tercer eje hasta cerrar la Puerta 3 (DEC-036) no las afecta.
+Numeración `T-NN`, correlativa. Las fichas que producen van a
+[`LITERATURA.md`](LITERATURA.md).
+
+| # | Fecha | Tarea | De dónde salió | Estado | Resultado |
+|---|---|---|---|---|---|
+| T-01 | 2026-09-27 | Leer la primaria de Ecker con *paltering* en el título: Powell, Bian & Markman 2020, *PLOS ONE* 15, e0230360 (ref. 265 de Ecker, ms p. 28). Descargarla de PLOS ONE (acceso abierto), versionarla con sha256 y hacer la ficha con páginas, respondiendo qué entienden por *paltering*, qué significa "inadvertent" y si su marco exige atribuir intención | Mateo, 2026-09-27; antes I-003 en `docs/IDEAS.md` | hecha (2026-09-27) | ficha L-11 en `LITERATURA.md`; incorporada a `05-marco-teorico.md` §D; el recuadro pasa a cinco primarias sin leer |
