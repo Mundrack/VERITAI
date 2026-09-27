@@ -31,6 +31,19 @@ tiempos, y lo que pasó en cada jornada.
 | Congelado | sha256 del CSV en DEC (diseño §0) | **pendiente** |
 | Muestra del 25 % anotada a ciegas por Mateo | diseño §0, DEC-031 | **pendiente** |
 
+## Qué afirma esta sección que hoy no está respaldado
+
+| Afirmación | Dónde se afirma | Qué falta | Buscar en |
+|---|---|---|---|
+| 40 controles son el mínimo que tolera un falso positivo con la tasa de H3 | diseño §1 (tabla Wilson) | referencia del intervalo; el umbral sigue siendo convención (ver 3) | C7 |
+| Un tope de tres casos por edición evita contar la misma nota muchas veces | diseño §1, §4c | literatura sobre pseudorréplica y muestras agrupadas | C7 |
+| La cuota de emisor (INE ≤ 70 %) y ≥ 2 emisores por cubeta protegen la validez externa | diseño §1, §4f | justificación de cuotas de composición en corpus de evaluación | C7 |
+| Los hermanos por criba (misma primaria, misma consulta) cuentan una vez | diseño §0 | muestras agrupadas | C7 |
+| Excluir casos ya verificados es un criterio de novedad válido | diseño §0 | qué cubren los verificadores | C1, C9 |
+| Una jornada tratada como medición con regla previa es un diseño legítimo | DEC-033, §4b | preinscripción | C10 |
+| Declarar B con 7 e intervalo es preferible a seguir recolectando | DEC-035, §4g | reporte de estudios con n pequeño y potencia declarada | C7 |
+| El 74,2 % de la Puerta 1 es la tasa natural sobre todos los admitidos | DEC-020; `PILOT-FINDINGS` §3.1 | nada bibliográfico; las amenazas ya están declaradas | — |
+
 ## No entra
 
 Resultados del arnés (van en 10). Casos de desarrollo.

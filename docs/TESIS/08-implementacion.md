@@ -23,6 +23,15 @@ enseñó (sin evaluar nada: todo es desarrollo hasta la sección 9).
 | Cómo reproducir | `research/PUERTA-2-CASOS.md` §9; `CLAUDE.md` §6 (docker, pytest); `research/puerta2/ejecutar_casos.py` | |
 | Herramientas de investigación | `research/puerta3/edicion_anterior.py`, `ine_buscar.py`, `validar_evaluacion.py`, `research/scripts/cronometro.py` | |
 
+## Qué afirma esta sección que hoy no está respaldado
+
+| Afirmación | Dónde se afirma | Qué falta | Buscar en |
+|---|---|---|---|
+| El patrón de código de las notas del INE no está documentado y es una amenaza a la validez del conector | encuadre §Amenaza a la validez de 2b; `RECUPERABILIDAD-2B` | comprobación con el INE (documentación o consulta); hoy es observación propia | C8 |
+| La edición anterior es recuperable por el agente en las operaciones del mapa | `RECUPERABILIDAD-2B` (5 ediciones, 200) | nada bibliográfico; empírico y disponible | — |
+| La extracción por columna absoluta contra el anexo es robusta | `mapa_anexos.py`; fixture de 19 series | nada bibliográfico; queda la amenaza de cambio de formato del anexo (declarar) | C11 |
+| Los 10 casos de la Puerta 2 no evalúan nada | DEC-025 | nada bibliográfico; regla propia con antecedente en separación de conjuntos | C7 |
+
 ## No entra
 
 Ninguna métrica de los 10 casos como resultado (DEC-025). El `requirements.lock.txt`

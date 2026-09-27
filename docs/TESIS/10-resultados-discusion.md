@@ -29,6 +29,19 @@ natural; y las amenazas a la validez y limitaciones, sin maquillar.
 | Lo que la revisión de método cambió sobre la marcha | `research/PILOT-FAILURES.md` §5; DEC-029; DEC-034 ("último reencuadre del objeto") | disponible |
 | Ablación y baseline LLM del `02-1` | no se hicieron | se declara |
 
+## Qué afirma esta sección que hoy no está respaldado
+
+| Afirmación | Dónde se afirma | Qué falta | Buscar en |
+|---|---|---|---|
+| Dos redacciones con tasas distintas sobre la misma nota y el mismo día demuestran un mecanismo de redacción, no del conector | diseño §4e (inferencia propia) | literatura sobre rutinas de agencias y redacciones regionales con estadísticas oficiales; errores de reproducción | C5 |
+| El INE revisa los datos provisionales de la EOH y la EOAT (base al publicar ≠ vigente) | observado en los anexos y la API | **la nota metodológica del INE no se ha leído** (`methodology_found = no` en casi todos los casos): pasada pendiente antes de afirmarlo en la tesis | C4 + pasada `methodology_found` |
+| La lectura estacional (el patrón se concentra en verano) es una observación, no una prueba | diseño §4e ampliado, §4h | se resuelve con CTH0926; literatura sobre turnos y plantillas en redacciones solo como contexto | C5 |
+| 2a en 0 de 43 es un hallazgo sobre la muestra y el método | DEC-034 | contraste con lo que la literatura dice de la frecuencia del cherry-picking de base en prensa | C3, C5 |
+| Un 403 al agente identificado es un resultado, no un fallo del sistema | DEC-018, DEC-021 | marco de acceso automatizado y bloqueo | C8 |
+| Un fallo de cobertura declarado (`OUT_OF_MAP`) es preferible a un valor inventado | DEC-035; enum de abstención | precedente de abstención explícita en sistemas de verificación | C1, C6 |
+| Las amenazas a la validez declaradas son las relevantes (dos poblaciones, hermanos, un buscador, tiempos de agente, anotador único, patrón de código) | `PILOT-FINDINGS` §3; diseño §0; encuadre | marco de amenazas a la validez en evaluación de sistemas | C7 |
+| No haber hecho ablación ni baseline con modelo de lenguaje es una limitación y no invalida H2 | `02-1` §Evaluación (planificado, no hecho) | precedente de qué aporta una ablación en verificación | C6, C7 |
+
 ## No entra
 
 Ninguna cifra del piloto como confirmación (DEC-025). Ninguna afirmación

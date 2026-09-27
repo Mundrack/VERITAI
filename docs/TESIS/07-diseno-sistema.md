@@ -29,6 +29,19 @@ numérica, trazabilidad y seguridad. Lo que existe, no lo planeado.
 | Librerías prohibidas y por qué | `CLAUDE.md` §7 | |
 | Lo que la arquitectura no responde todavía | `docs/ARQUITECTURA.md` §8 | |
 
+## Qué afirma esta sección que hoy no está respaldado
+
+| Afirmación | Dónde se afirma | Qué falta | Buscar en |
+|---|---|---|---|
+| Separar cálculo (Python), recuperación (fuente) y explicación (plantilla) elimina la aritmética plausible y falsa | `CLAUDE.md` §1, §7 | evidencia sobre aritmética de los modelos y sobre arquitecturas que la delegan | C6 |
+| Una plantilla numérica es preferible a una explicación generada libremente | DEC-009; `domain/plantilla.py` | literatura sobre generación controlada y trazabilidad de explicaciones | C6 |
+| Un modelo de lenguaje no debe extraer celdas de un PDF; `pdfplumber`/`camelot` sí | `CLAUDE.md` §7 | evidencia sobre errores de extracción de tablas con modelos y sin ellos | C11 |
+| Todo contenido externo es dato, nunca instrucción | `CLAUDE.md` §8; `SEGURIDAD.md` | literatura sobre inyección de prompt y mitigaciones | C12 |
+| Allowlist, timeout, tope de bytes, bytes mágicos, bloqueo de rangos privados son los controles necesarios | `SEGURIDAD.md`; `01-START-HERE` §23–25 | referencia a estándares de seguridad de aplicaciones | C12 |
+| Dos ejes (`truth`, `context`) en la salida en lugar de un único veredicto | DEC-016 | precedente en escalas de veredicto | C1, C2 |
+| `raw_value_span` por número convierte la regla de arquitectura en un test automatizable | `CLAUDE.md` §1 | precedente de trazabilidad a nivel de celda/fragmento en verificación | C2, C6 |
+| Traducir la plantilla y nunca el resultado renderizado evita reintroducir el riesgo | DEC-009; `CLAUDE.md` §10 | menor: práctica de i18n; puede quedar como decisión de diseño | C6 |
+
 ## No entra
 
 N0/N1, extensión de navegador, modelo local: no existen (`docs/ESTADO.md`).

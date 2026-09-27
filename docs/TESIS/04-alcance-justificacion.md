@@ -24,6 +24,16 @@ escritos antes de medir; y por qué merece una tesis.
 | Justificación (por qué es tesis) | `02-1` §"Por qué esto sí es una tesis"; `03-2` | contrastar con el encuadre vigente |
 | Coste variable ~0 y reproducibilidad | `CLAUDE.md` §7 (librerías prohibidas), DEC-018 | |
 
+## Qué afirma esta sección que hoy no está respaldado
+
+| Afirmación | Dónde se afirma | Qué falta | Buscar en |
+|---|---|---|---|
+| Los publicadores de nivel 1 (organismos con API, dataset o boletín en URL estable) son un alcance con sentido; los demás son una limitación | DEC-024; piloto 84,2 % / 58,3 % | marco de datos abiertos oficiales y de acceso automatizado; qué se sabe de la cobertura de API en organismos estadísticos | C8, C9 |
+| No evadir bloqueos anti-bot es la conducta correcta de un agente recolector, y un rechazo es un resultado | DEC-018, DEC-021 | ética y legalidad de la recolección automatizada; `robots.txt` y términos de uso | C8 |
+| Coste variable ~0 y reproducibilidad justifican prohibir APIs comerciales como dependencia | `CLAUDE.md` §7 | literatura sobre reproducibilidad en sistemas con modelos y sobre coste de verificación | C6, C7 |
+| El mapa cerrado de 8 operaciones es un alcance defendible y un 2b fuera del mapa es un fallo de cobertura, no un error | `PROPUESTA-2B`; DEC-035 | precedente de "cobertura declarada" en sistemas de verificación | C1, C2 |
+| Esto es una tesis (y no un producto): el problema es abierto y el método es evaluable | `02-1` §Por qué esto sí es una tesis | estado del arte que muestre el hueco | C1, C2, C3 |
+
 ## No entra
 
 Modelo de negocio, nombre comercial, empresa patrocinadora (`00b`, P-07):

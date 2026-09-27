@@ -30,6 +30,15 @@ numeración).
 | Anexo E: glosario y enums | `docs/GLOSARIO.md` | disponible |
 | Anexo F: salida del arnés | `<salida>.md` y `<salida>.json` del arnés sobre el conjunto congelado | **pendiente** |
 
+## Qué afirma esta sección que hoy no está respaldado
+
+| Afirmación | Dónde se afirma | Qué falta | Buscar en |
+|---|---|---|---|
+| Lo que se concluya por hipótesis | sección 10 | los resultados del arnés y de P1/P2 (**pendiente**) | — |
+| Los mecanismos `other_observed` (agregación de subgrupos P17, cambio sin edición anterior C10) merecen trabajo futuro | DEC-027 | relación con falacias de agregación conocidas | C3 |
+| Un segundo anotador humano, la ablación y el baseline con modelo son el trabajo futuro correcto | diseño §0; `02-1` | precedente de qué añade cada uno | C6, C7 |
+| El avance mensual del Banco de España es una segunda operación con revisión (2b posible) | `PROGRESO.md` §Jornada 4 | nada bibliográfico; empírico pendiente (cuadro del PDF no extraíble) | C4, C11 |
+
 ## No entra
 
 Promesas sobre niveles 3–5 ("el 58,3 % es una limitación, no una promesa").

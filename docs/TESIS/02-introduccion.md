@@ -24,6 +24,16 @@ piloto.
 | Caso ilustrativo del fenómeno | E043 (Baleares, +3,8 % publicado frente a −2,3 % con la edición vigente) y E053 (Galicia, +0,68 % frente a −0,35 %): `research/puerta3/casos/E043.json`, `E053.json` | son casos de **evaluación**: se citan como ilustración sin adelantar resultados |
 | Por qué no hay caso canónico todavía | `docs/TESIS-ENCUADRE.md` §Caso canónico | |
 
+## Qué afirma esta sección que hoy no está respaldado
+
+| Afirmación | Dónde se afirma | Qué falta | Buscar en |
+|---|---|---|---|
+| Existe un tipo de afirmación con dato verdadero y comparación insostenible, y es relevante para la verificación | encuadre §Definición operacional; `PILOT-FINDINGS` §0–§2 (46 casos) | relevancia más allá del piloto; cómo lo nombran y tratan los verificadores; **no** se afirma frecuencia (DEC-035) | C1, C2, C9 |
+| La verificación de hechos clásica (¿es verdadero el dato?) no cubre ese caso | encuadre (afirmación propia) | descripción de los pipelines y escalas de veredicto existentes y de su hueco | C1, C2 |
+| Un número del veredicto no puede tener como único origen un modelo de lenguaje | `CLAUDE.md` §1 | evidencia sobre aritmética y alucinación numérica de los modelos | C6 |
+| Las revisiones de datos oficiales cambian comparaciones ya publicadas | E043, E053, E066; `RECUPERABILIDAD-2B` (5 ediciones) | fundamento general de las revisiones (provisional/definitivo) y su magnitud; nota metodológica del INE no leída (`methodology_found = no`) | C4 |
+| El caso canónico de base revisada con los cinco requisitos todavía no existe | encuadre §Caso canónico | nada bibliográfico; se resuelve o no con el conjunto de evaluación | — |
+
 ## No entra
 
 Revisión de literatura (va en 5). Objetivos e hipótesis (van en 3).

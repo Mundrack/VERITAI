@@ -24,6 +24,12 @@ plantilla lo pide (`NEEDS_REVIEW`).
 | Resultado de la predicción P1/P2 | diseño §4h; `research/puerta3/PROGRESO.md` jornada 5 | **pendiente** (30-09 y 23-10) |
 | Limitación principal | encuadre §Limitación explícita de H1 (DEC-035); diseño §0 (anotador único) | disponible |
 
+## Qué afirma esta sección que hoy no está respaldado
+
+| Afirmación | Dónde se afirma | Qué falta | Buscar en |
+|---|---|---|---|
+| Todo lo que afirme el resumen | secciones 8–10 | los números pendientes (arnés sobre el conjunto congelado, P1/P2, A = 40); ninguna afirmación bibliográfica propia | ninguna: el resumen no abre frentes nuevos |
+
 ## No entra
 
 Cifras del piloto como prueba de hipótesis (DEC-025). Nada de intención

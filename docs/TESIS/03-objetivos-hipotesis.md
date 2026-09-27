@@ -21,6 +21,16 @@ con la tasa de H3 fijada antes de evaluar y la limitación explícita de H1.
 | Qué afirma la tesis y qué no | `docs/TESIS-ENCUADRE.md` §Qué afirma la tesis y qué no | incluye "no afirma que 2b sea frecuente" (DEC-035) |
 | Hipótesis auxiliar sobre dónde aparece 2b | diseño §4d (fijada por Mateo antes de la jornada 4) y §4h (predicción P1/P2 preinscrita el 2026-09-27, commit `13e03fa`) | resultado **pendiente** |
 
+## Qué afirma esta sección que hoy no está respaldado
+
+| Afirmación | Dónde se afirma | Qué falta | Buscar en |
+|---|---|---|---|
+| Un FPR ≤ 10 % con límite superior Wilson ≤ 15 % es una tasa razonable para H3 | diseño §1 ("propuesta", aprobada en DEC-031) | justificación externa del orden de magnitud, o declararlo como convención del proyecto | C7 |
+| Wilson al 95 % y la regla de tres son el método adecuado para proporciones con n pequeño | `research/arnes/metricas.py`; diseño §1 | referencia del método | C7 |
+| H2: la divergencia se decide con tests determinísticos sobre dos ediciones | encuadre §Hipótesis; DEC-028, DEC-034 | antecedente de verificación numérica contra datos estructurados | C2 |
+| H1 se puede sostener como existencia y computabilidad sin afirmar frecuencia | DEC-035; encuadre §Limitación explícita de H1 | precedente de estudios de existencia/mecanismo con n pequeño y su forma de reportarse | C7 |
+| La hipótesis §4d (2b aparece donde el redactor calcula la tasa) tiene un mecanismo plausible | diseño §4d, §4e | literatura sobre rutinas de redacción con estadísticas oficiales | C5 |
+
 ## No entra
 
 Los objetivos del `02-1` que el encuadre dejó fuera (calibración Brier/ECE,

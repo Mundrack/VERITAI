@@ -28,6 +28,18 @@ conjuntos, anotación, y la prueba de predicción.
 | Método de la Puerta 2 (prototipo de una clase y un emisor) | DEC-028; `research/PUERTA-2-CASOS.md` §1 | |
 | Método original planificado (para contraste) | `02-1` §Metodología (revisión sistemática, doble anotación 20 %, ablación) | lo que no se hizo se declara en 10 |
 
+## Qué afirma esta sección que hoy no está respaldado
+
+| Afirmación | Dónde se afirma | Qué falta | Buscar en |
+|---|---|---|---|
+| Trabajar por puertas con reglas escritas antes del número protege la evaluación | `00b`; `PILOT-DECISION` §La regla; DEC-033 | antecedentes de preinscripción y de evaluación por puertas | C10 |
+| Recuperabilidad-por-agente y por-humano son dos métricas distintas y la del agente es la que decide | DEC-014, DEC-019 | precedente de medir accesibilidad para agentes automáticos frente a personas | C7, C8 |
+| Excluir lo ya verificado por verificadores (regla dura) es un criterio de novedad válido | diseño §0 | qué cubren los verificadores y qué no; sesgo de esa exclusión | C1, C9 |
+| El acuerdo agente–humano sobre una muestra del 25 % mide consistencia del método, no fiabilidad entre humanos | diseño §0, DEC-031 | literatura sobre acuerdo entre anotadores, kappa y anotador único | C7 |
+| Los tiempos del cronómetro son tiempos de agente, no esfuerzo humano | DEC-014; `PILOT-FINDINGS` §3.4 | precedente de evaluación de agentes por tiempo y por éxito de recuperación | C7, C8 |
+| Dos vías de descubrimiento registradas por caso permiten desagregar los resultados | DEC-020, DEC-032 | precedente de registrar la vía de muestreo en corpus de verificación | C1, C7 |
+| Una predicción preinscrita con fecha y commit es una prueba, no una recolección | diseño §4h | antecedentes de preinscripción | C10 |
+
 ## No entra
 
 Resultados (van en 10). Detalles del código (van en 7 y 8).
