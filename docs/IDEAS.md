@@ -15,7 +15,7 @@ que se conserva).
 | # | Fecha | Idea | De dónde salió | Estado | Enlace |
 |---|---|---|---|---|---|
 | I-001 | 2026-09-27 | Contraste con búsqueda web: baseline B0 medido sobre los 7 casos B | Mateo | en estudio | [abajo](#i-001--contraste-con-búsqueda-web-baseline-b0) |
-| I-002 | 2026-09-27 | Literatura para el futuro eje de manipulación, pasada 1: 9 fichas, SemEval como base, matriz de tres niveles, brechas | Mateo (PDF) | en estudio | [abajo](#i-002--literatura-para-el-futuro-eje-de-manipulación--pasada-1) |
+| I-002 | 2026-09-27 | Literatura para el futuro eje de manipulación, pasada 1: 9 fichas, SemEval como base, matriz de tres niveles, brechas | Mateo (PDF) | en estudio; la regla de §3, decidida en DEC-037 | [abajo](#i-002--literatura-para-el-futuro-eje-de-manipulación--pasada-1) |
 
 ---
 
@@ -68,13 +68,21 @@ no el acceso al dato. Cualquiera de los dos resultados se escribe.
 
 ## I-002 · Literatura para el futuro eje de manipulación — pasada 1
 
-**Fecha:** 2026-09-27 · **De dónde salió:** Mateo (PDF en Descargas) · **Estado:** en estudio
+**Fecha:** 2026-09-27 · **De dónde salió:** Mateo (PDF en Descargas) · **Estado:** en estudio (la regla de §3, decidida: DEC-037)
 
 **Alcance de la pasada, fijado por Mateo:** fichas por paper, evaluación de
 SemEval 2020/2023 como base metodológica, matriz de tres niveles e informe de
 brechas. **Nada de esto es decisión del proyecto, no toca la Puerta 3, no abre
 implementación y no modifica `docs/EJE-MANIPULACION.md`.** El diseño de
 B0/B1/B2 no se hace todavía.
+
+**Actualización tras la pasada (Mateo, 2026-09-27; DEC-037).** Mateo
+aprueba la regla de §3; retira como respaldo la guía árabe de L-10; mueve
+el pasaje de Ecker sobre el engaño que dice técnicamente la verdad y la
+selección interesada de datos a la tesis principal; y pide rellenar la
+tabla de `EJE-MANIPULACION.md` §3 con estas fichas como evidencia
+candidata, lo que no convierte nada en decisión. Qué técnicas adoptar
+sigue sin decidirse (§2).
 
 **Regla de lectura.** Cada ficha sale del PDF leído, con página. Nada se
 rellena de memoria. Los PDF están versionados con su sha256 en
@@ -277,7 +285,7 @@ comprobaron en la página de la Antología ACL de cada artículo el 2026-09-27.
     shift towards more emotional language when attempting to convince others"
     (ref. 72, Rocklage et al. 2018) (ms p. 9).
   - Técnicas: la inoculación enseña técnicas engañosas como "selective use
-    ('cherry-picking') of data" y los falsos expertos (ms pp. 17–18). Un
+    ('cherry-picking') of data" y los falsos expertos (ms p. 18). Un
     preprint no revisado sugiere que fijarse en pistas léxicas, simplicidad y
     "blatant use of emotion" ayuda a identificar noticias falsas (ref. 169;
     los propios autores lo marcan como no revisado, ms p. 19).
@@ -294,12 +302,11 @@ comprobaron en la página de la Antología ACL de cada artículo el 2026-09-27.
   categoría distinta (desinformación frente a desinformación intencionada) y
   poco estudiada desde el lado del lector, lo que respalda mantenerla fuera
   de la salida; el mecanismo de la repetición; que la emoción puede aumentar
-  la persuasión (respaldo de revisión, secundario). **Hallazgo colateral
-  para la tesis principal, no para este eje:** el *paltering* ("misleading
-  while technically saying the truth") figura como poco comprendido (ms
-  p. 28), y el *cherry-picking* de datos como técnica engañosa reconocida
-  (ms pp. 17–18); ambos tocan el objeto de VeritAI (dato verdadero,
-  comparación insostenible) y pueden alimentar las secciones 2 y 5.
+  la persuasión (respaldo de revisión, secundario). **Movido fuera de este
+  eje (Mateo, 2026-09-27):** el pasaje sobre el engaño que dice técnicamente
+  la verdad (ms p. 28) y la selección interesada de datos (ms p. 18) no es
+  del eje de manipulación sino de la tesis principal. Está en
+  `docs/TESIS/05-marco-teorico.md` §D como respaldo del objeto de estudio.
 - **Qué NO permite afirmar:** tamaños de efecto (es narrativa); efectos en
   prensa en español; que un texto concreto cause creencia; usar el preprint
   de la ref. 169 como evidencia.
@@ -536,28 +543,24 @@ No hay PDF en la carpeta. Sin ficha. No se escribe nada sobre su contenido.
     micro-F1: árabe 0,117, inglés 0,111, francés 0,138, alemán 0,057,
     italiano 0,115, polaco 0,071, ruso 0,073 (tabla 9, p. 2730). Español no
     evaluado.
-  - **Directrices de anotación (anexo D, p. 2744; en árabe, traducción del
-    agente, NEEDS_REVIEW por un lector de árabe):** no confundir la tarea
-    (detectar técnicas de persuasión en el texto) con verificar la veracidad
-    de las afirmaciones o comprobar la información, porque un fragmento
-    puede contener una afirmación correcta y aun así una técnica; no recurrir
-    a fuentes externas, la clasificación se basa en el texto mismo; los
-    anotadores tienden a interpretar los nombres de las técnicas según su
-    propio punto de vista, lo que lleva a sobreetiquetar, sobre todo las de
-    simplificación.
+  - Anexo D (p. 2744): guía de anotación en árabe. **No se usa como
+    respaldo** (Mateo, 2026-09-27; DEC-037): leerla depende de una
+    traducción propia sin revisar, y una cita así no entra en la tesis. Si
+    alguien la verifica, se añade. Aquí no se reproduce su contenido.
 - **Limitaciones que declara:** "annotations are subjective, inevitably
   introducing biases into our dataset" (p. 2732); la distribución sesgada de
   técnicas "requires further studies to understand whether such techniques
   are inherently scarcely used in news reporting" (p. 2725).
-- **Qué afirmación de VeritAI puede respaldar:** la independencia del eje de
-  técnicas respecto de la veracidad, escrita como regla de anotación; el
-  riesgo de sobreetiquetado por interpretación, que pide manual con ejemplos
-  y segundo anotador; que un LLM *zero-shot* no localiza spans de forma
-  fiable en siete idiomas.
+- **Qué afirmación de VeritAI puede respaldar:** que el acuerdo de la fase 1,
+  entre tres anotadores, es bajo (α 0,243 multietiqueta y 0,296 binario) y
+  que los autores lo leen como prueba de que hace falta la segunda fase, con
+  consolidadores expertos (p. 2727); que un LLM *zero-shot* no localiza
+  spans de forma fiable en siete idiomas (p. 2730).
 - **Qué NO permite afirmar:** nada en español ni en prensa estadística;
   prevalencia de técnicas en las noticias (lo dejan como pregunta).
-- **Estado candidato:** respaldo para la independencia de ejes y para "el LLM
-  no decide"; el recurso árabe no es reutilizable aquí.
+- **Estado candidato:** respaldo para "el LLM no decide" y para consolidar
+  la anotación; el recurso árabe no es reutilizable aquí. La independencia
+  de ejes se apoya solo en L-01.
 
 ### 2. SemEval 2020 y 2023 como taxonomía y metodología base
 
@@ -565,10 +568,10 @@ No hay PDF en la carpeta. Sin ficha. No se escribe nada sobre su contenido.
 |---|---|---|---|
 | **Identificación de spans** | tarea propia (SI), F1 con crédito parcial por carácter; mejor 51,74 (p. 1404) | anotado por span pero evaluado por párrafo; la evaluación por span queda como trabajo futuro (pp. 2346–2347, 2351) | el formato span + etiqueta encaja con `raw_text_span` de `EJE-MANIPULACION.md` §1; las cifras muestran que la localización exacta es lo más difícil |
 | **Multietiqueta** | el 1,8 % de spans idénticos con varias técnicas se trata como una etiqueta (p. 1383) | multietiqueta por párrafo, micro-F1 oficial (p. 2347) | la coaparición de técnicas es frecuente en árabe (L-10, tabla 5, p. 2728) y los spans pueden solaparse (L-10, fig. 1, p. 2724); la unidad de evaluación hay que decidirla |
-| **Taxonomía cerrada** | 14 técnicas, reducidas desde 18 por escasez (p. 1380) | 23 técnicas en 6 categorías (p. 2344) | ambas son enums cerrados; varias definiciones de 2023 incluyen intención (§4) |
+| **Taxonomía cerrada** | 14 técnicas, reducidas desde 18 por escasez (p. 1380) | 23 técnicas en 6 categorías (p. 2344) | ambas son enums cerrados; varias definiciones de 2023 incluyen intención (§3) |
 | **Resultados en español** | ninguno | solo test: 30 documentos, 546 spans; mejor micro-F1 0,381 sin datos de entrenamiento en español (pp. 2346, 2351) | la evidencia en español es mínima y de otro dominio (política, COVID, guerra) |
 | **Acuerdo entre anotadores** | γ ≈ 0,6 anotador–gold (p. 1381) | α = 0,342 antes de consolidar (p. 2347) | la subjetividad es la amenaza principal; mayor que en el eje numérico |
-| **Criterio intrínseco** | explícito: sin fuentes externas (p. 1378; fig. 8, p. 1407) | no lo repite en el overview; sí lo recoge la guía árabe derivada (L-10, p. 2744) | separa el eje de `truth` y `context`, que sí usan fuente |
+| **Criterio intrínseco** | explícito: sin fuentes externas (p. 1378; fig. 8, p. 1407) | no lo repite en el overview | separa el eje de `truth` y `context`, que sí usan fuente; respaldo solo en SemEval 2020 |
 
 **Qué aportaría cada opción** (análisis, no decisión):
 
@@ -598,6 +601,18 @@ No hay PDF en la carpeta. Sin ficha. No se escribe nada sobre su contenido.
 Las tres opciones son compatibles con conservar las métricas y el formato;
 lo que cambia es el enum y sus definiciones. Nada de esto se decide aquí.
 
+**Qué técnicas de SemEval adoptar no se decide ahora** (Mateo, 2026-09-27):
+queda en esta entrada hasta después de cerrar la Puerta 3.
+
+**Pendiente para el diseño de la taxonomía: definiciones con intención.**
+Varias definiciones de SemEval 2023 incorporan intención: *Obfuscation*,
+"words that are deliberately not clear"; *Repetition*, "with the hope that
+the repetition will lead to persuade the audience"; *Loaded Language*, "to
+influence and convince the audience that an argument is valid"; la categoría
+*Manipulative wording*, "in order to impact the reader emotionally" (L-02,
+fig. 1, p. 2344). Adoptarlas tal cual contradiría la regla dura (§3). Es el
+punto que habrá que resolver al diseñar la taxonomía.
+
 ### 3. Regla dura
 
 > **El sistema nunca emite intención del autor.**
@@ -611,11 +626,11 @@ that…" y el *Manipulative wording* busca "impact the reader emotionally"
 esas definiciones tal cual metería la intención en la salida por la puerta de
 atrás.
 
-Propuesta derivada de la lectura, **a decidir por Mateo** (no es decisión):
-tampoco emitir **estados del lector** (miedo, creencia, persuasión) ni
-**efectos de difusión**. L-06 distingue el miedo representado en el mensaje
+**Aprobado por Mateo (2026-09-27; DEC-037):** el sistema tampoco emite
+**estados del lector** (miedo, creencia, persuasión) ni **efectos de
+difusión**. Razón anotada: L-06 distingue el miedo representado en el mensaje
 del experimentado por el receptor y solo 71 de 248 estudios midieron lo
-segundo (p. 3); L-07 pide experimentos para establecer efectos sobre
+segundo (p. 3, nota 2); L-07 pide experimentos para establecer efectos sobre
 actitudes (p. 7317). Los mecanismos de la columna 2 son resultados
 poblacionales, casi todos experimentales y de otros dominios: no licencian
 una afirmación sobre un texto concreto ni sobre un lector concreto.
@@ -647,9 +662,9 @@ estadística son del agente, no de las fuentes.
   cerrada y se evalúan con métricas de span (L-01, L-02), con acuerdo
   moderado y subjetividad declarada.
 - Que la detección de técnicas es **intrínseca al texto** y distinta de
-  verificar su veracidad (L-01 p. 1378 y fig. 8 p. 1407; guía de L-10,
-  p. 2744). Esto respalda que el eje sea un tercer eje independiente de
-  `truth` y `context`.
+  verificar su veracidad (L-01 p. 1378 y fig. 8 p. 1407). Esto respalda que
+  el eje sea un tercer eje independiente de `truth` y `context`. Apoyo solo
+  en SemEval 2020; la guía árabe de L-10 está retirada como respaldo.
 - Que conviene separar la propiedad del mensaje del estado del receptor (L-06
   p. 3).
 - Que la repetición aumenta la credibilidad (L-03), como hallazgo de revisión.
@@ -675,7 +690,8 @@ estadística son del agente, no de las fuentes.
   práctica, porque varias definiciones la incluyen; la sostienen de forma
   indirecta L-03 (la inferencia de intencionalidad está poco estudiada, ms
   p. 6) y L-06 (texto frente a lector, p. 3). Es una decisión de diseño.
-- La propuesta de no emitir estados del lector ni efectos de difusión (§3).
+- No emitir estados del lector ni efectos de difusión: aprobado por Mateo
+  (DEC-037), con la razón anotada en §3.
 - Qué técnicas son pertinentes en prensa estadística y cuáles no.
 - La unidad de anotación y de evaluación (span, frase, párrafo, titular).
 - Cualquier umbral de acuerdo o de falsos positivos para este eje.
@@ -732,6 +748,6 @@ papers): L-01, orden de columnas de la tabla 9 (p. 1405 frente a p. 1388);
 L-02, porcentajes intercambiados en p. 2356; L-10, α 0,335 en el texto frente
 a 0,375 en la tabla 1 (p. 2727).
 
-**Siguiente paso posible (no se hace sin OK):** rellenar la tabla de papers
-de `EJE-MANIPULACION.md` §3 con estas fichas, con estado "leído". No se ha
-tocado ese documento.
+**Hecho (Mateo, 2026-09-27):** la tabla de papers de `EJE-MANIPULACION.md`
+§3 lleva las nueve fichas marcadas como evidencia candidata. Eso no convierte
+nada en decisión.

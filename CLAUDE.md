@@ -117,6 +117,8 @@ Vienen de `docs/DECISIONES.md`; aquí solo la regla, sin el contexto.
   una prueba de predicción sobre `EOAT0826` escrita antes del 30-09 (diseño
   §4h) y completa A hasta 40 sin INE; `CTH0926` (23-10) es necesaria; rastrear
   redacciones ya vistas está descartado por sesgo. *(DEC-035)*
+- **Una cita que depende de una traducción propia sin revisar no entra en la
+  tesis.** Si alguien la verifica, se añade. *(DEC-037)*
 - **La métrica de la Puerta 1 se mide sobre todos los candidatos admitidos por
   la regla dura**, no sobre el lote por cubetas, y se reporta desagregada por
   nivel de emisor y vía de descubrimiento. *(DEC-020)*
@@ -286,7 +288,8 @@ Multimodal, imagen, video, audio, deepfakes, detección de texto generado por IA
 C2PA, dashboard B2B, app móvil, análisis continuo del feed, evidence graph,
 lógica subjetiva, multilingüe en el análisis, sistema de alertas. El **eje de
 detección de manipulación** (técnicas de lenguaje persuasivo, enum cerrado,
-sin afirmar intención) sí entra al proyecto, pero **después de cerrar la
+sin afirmar intención, estados del lector ni efectos de difusión, DEC-037)
+sí entra al proyecto, pero **después de cerrar la
 Puerta 3, no en paralelo** (DEC-036; `docs/EJE-MANIPULACION.md`). Las ideas
 que aún no son decisiones van a `docs/IDEAS.md`; nada pasa de ahí a
 `DECISIONES.md` sin aprobación explícita de Mateo.

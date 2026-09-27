@@ -1213,3 +1213,41 @@ implementación; no toca la Puerta 3; B0/B1/B2 no se diseñan.
 - Mateo decide qué hacer con I-002; el siguiente paso posible (rellenar la
   tabla de papers de `EJE-MANIPULACION.md` §3) no se hace sin su OK.
 - Jornada 5: sigue cerrada.
+
+---
+
+## 2026-09-27 (21:19Z) — DEC-037 y ajustes de Mateo sobre I-002
+
+### Qué se hizo
+
+- El pasaje de Ecker et al. 2022 sobre el engaño que dice técnicamente la
+  verdad (ms p. 28) y la selección interesada de datos (ms p. 18) sale de
+  I-002 y pasa a `docs/TESIS/05-marco-teorico.md` §D, como respaldo del
+  objeto de estudio, con sus primarias citadas y por leer. Se actualizan la
+  fila del mapa C de la ficha 05, la de la ficha 02 y el índice de TESIS.
+- La guía en árabe de Hasanain, Ahmed & Alam 2024 se retira como respaldo; la
+  separación de ejes se apoya solo en SemEval 2020. Se borra de I-002 la
+  traducción propia.
+- DEC-037: el eje tampoco emite estados del lector ni efectos de difusión
+  (razón anotada: Tannenbaum, miedo representado frente a miedo sentido); una
+  cita que depende de una traducción propia sin revisar no entra en la tesis.
+  Escrito en `EJE-MANIPULACION.md` §1, junto a la regla de intención, y en
+  `CLAUDE.md` §3 y §11.
+- Tabla de papers de `EJE-MANIPULACION.md` §3 rellenada con las nueve fichas
+  como evidencia candidata; Hauch figura como no disponible.
+- Pendiente anotado en I-002 §2 y en `EJE-MANIPULACION.md` §2: varias
+  definiciones de SemEval 2023 incorporan intención. Qué técnicas adoptar no
+  se decide hasta después de la Puerta 3.
+
+### Qué se verificó
+
+- Las dos citas de Ecker y sus referencias, contra el texto extraído del
+  manuscrito aceptado: la selección interesada de datos está en la ms p. 18
+  (la ficha decía pp. 17–18, porque la frase empieza en la 17); el pasaje
+  sobre *paltering*, en la ms p. 28.
+- El acuerdo de la fase 1 de LREC 2024 (α 0,243 y 0,296, p. 2727) y la nota 2
+  de Tannenbaum (p. 3), contra sus PDF.
+
+### Qué quedó pendiente
+
+- Jornada 5: sigue cerrada.

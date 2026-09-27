@@ -1141,3 +1141,43 @@ búsqueda web (baseline B0), en estudio.
 **Alternativas descartadas.** Construirlo en paralelo: dispersa la Puerta 3
 cuando le quedan dos ediciones y el congelado. Dejarlo solo como trabajo
 futuro: Mateo lo descarta; el eje forma parte del alcance del proyecto.
+
+---
+
+## DEC-037 · El eje de manipulación tampoco emite estados del lector ni efectos de difusión; una cita que depende de una traducción propia sin revisar no entra en la tesis
+
+**Fecha:** 2026-09-27 · **Estado:** vigente · **Decide:** Mateo · **Aplica:** `docs/EJE-MANIPULACION.md` §1, §2 y §3, `docs/IDEAS.md` I-002, `docs/TESIS/05-marco-teorico.md` §D, `CLAUDE.md` §3 y §11
+
+**Contexto.** La pasada de literatura 1 para el futuro eje de manipulación
+(`docs/IDEAS.md` I-002) dejó como propuesta ampliar la regla de intención, y
+usó como respaldo una guía de anotación en árabe traducida por el agente.
+
+**Decisión.**
+
+1. **El eje no emite estados del lector ni efectos de difusión**, además de
+   no emitir intención del autor (DEC-036). No dice que el lector sienta
+   miedo, crea o sea persuadido, ni que el texto vaya a difundirse más. Su
+   salida se limita a técnica del enum, span literal y explicación por
+   plantilla. **Razón anotada:** Tannenbaum et al. 2015 separan el miedo
+   representado en el mensaje del miedo que siente el receptor, y solo 71 de
+   248 estudios midieron lo segundo (manuscrito p. 3, nota 2).
+2. **Una cita que depende de una traducción propia sin revisar no entra en la
+   tesis.** La guía en árabe de Hasanain, Ahmed & Alam 2024 (p. 2744) se
+   retira como respaldo de la separación de ejes, que se apoya solo en
+   SemEval 2020 (p. 1378; fig. 8, p. 1407). Si alguien la verifica, se añade.
+
+**Consecuencias, en la misma instrucción de Mateo.**
+
+- El pasaje de Ecker et al. 2022 sobre el engaño que dice técnicamente la
+  verdad y la selección interesada de datos se mueve a la tesis principal
+  (`docs/TESIS/05` §D), como respaldo del objeto de estudio.
+- La tabla de papers de `EJE-MANIPULACION.md` §3 se rellena con las nueve
+  fichas como evidencia candidata, lo que no convierte nada en decisión.
+- **Qué técnicas de SemEval adoptar no se decide**: queda en `IDEAS.md`
+  hasta después de la Puerta 3. Queda anotado como pendiente que varias
+  definiciones de SemEval 2023 incorporan intención y que adoptarlas tal cual
+  contradiría la regla dura.
+
+**Alternativas descartadas.** Mantener la ampliación como propuesta abierta
+en I-002: Mateo la aprueba. Citar la guía árabe con la marca NEEDS_REVIEW:
+Mateo la retira, por la regla del punto 2.

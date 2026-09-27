@@ -11,8 +11,8 @@ definición cerrada, y la revisión de literatura que sitúa el trabajo.
 **Andamiaje, no texto:** las preguntas que el estado del arte debe responder
 *para este proyecto*, las categorías de trabajo previo que hay que cubrir, y
 qué afirma cada sección de la tesis que necesita respaldo bibliográfico. La
-redacción y las fuentes las pone Mateo. **Aquí no hay ninguna referencia y no
-se inventa ninguna.**
+redacción y las fuentes las pone Mateo. **No se inventa ninguna referencia;
+las únicas que aparecen están leídas y citadas con página (§D).**
 
 ## A. Preguntas que debe responder el estado del arte de este proyecto
 
@@ -65,7 +65,8 @@ hoy no está respaldado" de cada ficha.
 
 | Sección | Afirmación que hará la tesis | Hoy se sostiene en | Categoría |
 |---|---|---|---|
-| 2 | La verificación de hechos clásica no cubre el caso "dato verdadero, comparación insostenible" | encuadre (afirmación propia) | C1, C2, C9 |
+| 2 | La verificación de hechos clásica no cubre el caso "dato verdadero, comparación insostenible" | encuadre (afirmación propia); **respaldo parcial leído**: Ecker et al. 2022, ms p. 28 (§D), de revisión | C1, C2, C9 |
+| 2, 5 | El objeto de estudio cae en una categoría reconocida y poco estudiada: el engaño que dice técnicamente la verdad y la selección interesada de datos | **leído**: Ecker et al. 2022, ms pp. 28 y 18 (§D); primarias por leer | C1, C3 |
 | 2 | Un número del veredicto no puede tener como único origen un modelo de lenguaje | `CLAUDE.md` §1 (regla propia) | C6 |
 | 2 | Las revisiones de datos oficiales cambian comparaciones publicadas | casos propios (E043, E053, E066; `RECUPERABILIDAD-2B`) | C4 |
 | 3 | Un FPR ≤ 10 % con límite superior ≤ 15 % es una tasa razonable para H3 | diseño §1 ("propuesta") | C7 |
@@ -88,6 +89,36 @@ hoy no está respaldado" de cada ficha.
 | 10 | 2a en 0 de 43 es un hallazgo sobre la muestra y el método | DEC-034 (redacción fijada por Mateo) | C3, C5 |
 | 11 | Los mecanismos `other_observed` (agregación de subgrupos, cambio sin edición anterior) son trabajo futuro con sentido | DEC-027 | C3 |
 
+## D. Respaldo leído para el objeto de estudio (por qué existe VeritAI)
+
+Movido desde `docs/IDEAS.md` I-002 por decisión de Mateo (2026-09-27,
+DEC-037): no es del eje de manipulación, es de la tesis principal. Es la cita
+que justifica el objeto de estudio.
+
+**Fuente.** Ecker, U. K. H., Lewandowsky, S., Cook, J., Schmid, P., Fazio,
+L. K., Brashier, N., Kendeou, P., Vraga, E. K., & Amazeen, M. A. (2022). The
+psychological drivers of misinformation belief and its resistance to
+correction. *Nature Reviews Psychology*, 1, 13–29. DOI
+10.1038/s44159-021-00006-y. Se cita el manuscrito aceptado,
+`research/literatura/Ecker_v4_TSshorten_UE_clean.pdf` (sha256 `eba14487…`);
+"ms" es la página impresa del manuscrito.
+
+| Afirmación que respalda | Cita literal | Página | Tipo de respaldo | Primarias que cita, por leer |
+|---|---|---|---|---|
+| Lo que engaña diciendo técnicamente la verdad está poco estudiado frente a la desinformación explícita. Ese es el hueco donde se sitúa VeritAI: dato verdadero, comparación insostenible | "most existing work has focused on explicit misinformation and text-based materials. Thus, the cognitive impacts of other types of misinformation, including subtler types of misdirection such as paltering (misleading while technically saying the truth) … are currently not well understood" | ms p. 28 (PDF p. 29) | revisión narrativa: respaldo secundario | ref. 95, Tay, Hurlstone, Kurz & Ecker 2021, *British Journal of Psychology*; ref. 264, Ecker, Lewandowsky, Chang & Pillai 2014, *Journal of Experimental Psychology: Applied* 20, 323–335; ref. 265, Powell, Bian & Markman 2020, *PLOS ONE* 15, e0230360; ref. 266, Rich & Zaragoza 2016, *Journal of Experimental Psychology: Learning, Memory, and Cognition* 42, 62–74 |
+| La selección interesada de datos es una técnica de engaño reconocida en la literatura de la desinformación. Es lo que la clase 2a, periodo o base elegida, formaliza | "techniques used to mislead include selective use (‘cherry-picking’) of data (for example, only showing temperatures from outlier years to create the illusion that global temperatures have dropped)" | ms p. 18 (PDF p. 19) | revisión narrativa, en el contexto de la inoculación: respaldo secundario | ref. 157, Maertens, Roozenbeek, Basol & van der Linden 2020, *Journal of Experimental Psychology: Applied* 27, 1–16; ref. 158, van der Linden, Leiserowitz, Rosenthal & Maibach 2017, *Global Challenges* 1, 1600008 |
+
+Las referencias se transcriben tal como las imprime el manuscrito.
+
+**Qué permite y qué no.** Permite afirmar que el objeto de VeritAI cae en una
+categoría que la psicología de la desinformación reconoce y declara poco
+estudiada. No permite afirmar que VeritAI mida lo que esa literatura mide:
+VeritAI no mide efectos en lectores. Tampoco permite importar intención: la
+definición de Ecker ("misleading while technically saying the truth") no la
+incluye, y el título de una de sus primarias habla de *paltering*
+"inadvertent" (ref. 265); al citarla se mantiene la regla de DEC-026. Las
+primarias no están leídas: hasta leerlas, esto es respaldo de revisión.
+
 ## Material que alimenta la taxonomía (ya disponible)
 
 | Qué | De dónde | Estado |
@@ -99,7 +130,7 @@ hoy no está respaldado" de cada ficha.
 | Términos que NO se usan | `docs/GLOSARIO.md` §Términos que NO se usan | disponible |
 | Dos ejes | DEC-016; `01-VERITAI-START-HERE` §Truth, §Context; `04-...-R02` §10 | disponible |
 | Subtipos de 2a y 2b | DEC-029; `domain/tests/base_revisada.py` | disponible |
-| **Revisión de literatura** | **no existe en el repo**; este andamiaje es lo que la sustituye hasta que Mateo la redacte | **pendiente** |
+| **Revisión de literatura** | **no existe en el repo**; este andamiaje es lo que la sustituye hasta que Mateo la redacte. Primera referencia leída para el objeto de estudio en §D | **pendiente** |
 
 ## Qué afirma esta sección que hoy no está respaldado
 

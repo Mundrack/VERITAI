@@ -29,7 +29,7 @@ piloto.
 | Afirmación | Dónde se afirma | Qué falta | Buscar en |
 |---|---|---|---|
 | Existe un tipo de afirmación con dato verdadero y comparación insostenible, y es relevante para la verificación | encuadre §Definición operacional; `PILOT-FINDINGS` §0–§2 (46 casos) | relevancia más allá del piloto; cómo lo nombran y tratan los verificadores; **no** se afirma frecuencia (DEC-035) | C1, C2, C9 |
-| La verificación de hechos clásica (¿es verdadero el dato?) no cubre ese caso | encuadre (afirmación propia) | descripción de los pipelines y escalas de veredicto existentes y de su hueco | C1, C2 |
+| La verificación de hechos clásica (¿es verdadero el dato?) no cubre ese caso | encuadre (afirmación propia); respaldo parcial leído en 05 §D (Ecker et al. 2022, ms p. 28), de revisión | descripción de los pipelines y escalas de veredicto existentes y de su hueco | C1, C2 |
 | Un número del veredicto no puede tener como único origen un modelo de lenguaje | `CLAUDE.md` §1 | evidencia sobre aritmética y alucinación numérica de los modelos | C6 |
 | Las revisiones de datos oficiales cambian comparaciones ya publicadas | E043, E053, E066; `RECUPERABILIDAD-2B` (5 ediciones) | la política del INE ya está leída y citada (IME §14.1 y §17 de EOH, EOAP y EOAC; Política de revisión 2015; `research/puerta3/METODOLOGIA-REVISION-INE.md`); falta la literatura general sobre revisiones de datos oficiales y su magnitud | C4 |
 | El caso canónico de base revisada con los cinco requisitos todavía no existe | encuadre §Caso canónico | nada bibliográfico; se resuelve o no con el conjunto de evaluación | — |
