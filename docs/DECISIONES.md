@@ -1196,3 +1196,38 @@ fig. 8, p. 1407).
 
 **Alternativa descartada.** Citar la guía con la marca NEEDS_REVIEW: Mateo
 la retira por esta regla.
+
+---
+
+## DEC-039 · Powell, Bian & Markman 2020 se cita por el mecanismo; VeritAI no adopta "genuine" ni "inadvertent"
+
+**Fecha:** 2026-09-27 · **Estado:** vigente · **Decide:** Mateo · **Aplica:** `docs/TESIS/05-marco-teorico.md` §D, `docs/TESIS/LITERATURA.md` L-11
+
+**Contexto.** La tarea T-01 leyó la primaria de Ecker et al. 2022 que lleva
+*paltering* en el título: Powell, Bian & Markman 2020, *PLOS ONE* 15(5),
+e0230360 (ficha L-11). Su marco distingue el *paltering* "genuine", un engaño
+deliberado, del "inadvertent", en el que el emisor ni desea engañar ni sabe
+que induce a error (pp. 1–2). La ficha concluyó que el marco no exige
+atribuir intención para identificar el mecanismo ni para medir su efecto,
+pero sí para calificar un caso.
+
+**Decisión.**
+
+1. **La primaria de Powell se cita por el mecanismo:** enunciados
+   verdaderos que inducen una conclusión falsa violando las máximas de
+   Grice (pp. 1, 3 y 14).
+2. **VeritAI no adopta ninguna de las dos etiquetas del marco, ni "genuine"
+   ni "inadvertent",** porque ambas afirman algo sobre el estado mental del
+   emisor: la primera, que quería engañar; la segunda, que no quería ni lo
+   sabía.
+
+**Razón.** La regla dura de no atribuir intención (DEC-026; `CLAUDE.md` §1).
+Afirmar la ausencia de intención es tan atribución como afirmarla.
+
+**Referencia cruzada.** La condición de uso escrita en
+`docs/TESIS/05-marco-teorico.md` §D, bajo la primaria leída, y el apartado de
+compatibilidad de la ficha L-11. Las dos remiten a esta DEC.
+
+**Alternativa descartada.** Describir los casos de VeritAI como *paltering*
+"inadvertent" por analogía con el caso de la ADA: atribuiría ausencia de
+intención, que la regla dura tampoco permite.

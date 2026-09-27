@@ -125,15 +125,18 @@ Las referencias se transcriben tal como las imprime el manuscrito.
 
 Ficha completa, con las tres preguntas sobre intención: L-11 en
 [`LITERATURA.md`](LITERATURA.md). PDF en
-`research/literatura/journal.pone.0230360.pdf` (sha256 `373d40ed…`).
+`research/literatura/journal.pone.0230360.pdf` (sha256 `373d40ed…`). El
+término viene de Schauer & Zeckhauser 2009, al que Powell et al. lo
+atribuyen (p. 1, ref. 1); la tesis lo cita a través de Powell, sin haber
+leído esa fuente.
 
 | Afirmación que respalda | Cita literal | Página | Tipo de respaldo |
 |---|---|---|---|
 | La literatura tiene una categoría con nombre para lo que induce a error diciendo la verdad | "Paltering is a form of deception whereby true statements are used to mislead" | p. 1 | primaria: definición |
 | Decir la verdad puede inducir a error sin que el emisor lo pretenda: el mecanismo es la violación de normas comunicativas, no la intención | "These same kinds of violations can occur without an explicit intent to deceive which can result in unintentional paltering" … "the neglect of these norms can be just as detrimental to communication as their abuse" | p. 14 | primaria: efecto medido en otro dominio (salud; participantes de MTurk en EE. UU.), p. 10 |
 
-**Condición de uso** (compatibilidad con la regla dura; lectura del agente,
-decide Mateo). Se cita el mecanismo, no la calificación del emisor. Ni
+**Condición de uso** (compatibilidad con la regla dura; **DEC-039**). Se
+cita el mecanismo, no la calificación del emisor. Ni
 "genuine" ni "inadvertent" entran en la tesis como descripción de un caso:
 son afirmaciones sobre el estado mental del emisor, una positiva y otra
 negativa, y DEC-026 no permite ninguna de las dos.

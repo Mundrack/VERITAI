@@ -1329,3 +1329,37 @@ implementación; no toca la Puerta 3; B0/B1/B2 no se diseñan.
   Zeckhauser 2009, origen del término; Rogers et al. 2017), sin leer y sin
   tarea abierta.
 - Taxonomía: sin decidir. Jornada 5: sigue cerrada.
+
+---
+
+## 2026-09-27 (23:38Z) — DEC-039; literatura cerrada con L-01 a L-11
+
+### Qué se hizo
+
+- DEC-039: Mateo confirma la lectura de compatibilidad de la ficha L-11. La
+  primaria de Powell se cita por el mecanismo, enunciados verdaderos que
+  inducen una conclusión falsa violando las máximas de Grice. VeritAI no
+  adopta "genuine" ni "inadvertent", porque las dos afirman algo sobre el
+  estado mental del emisor. La condición de uso de `TESIS/05` §D y la ficha
+  L-11 remiten a la DEC.
+- Ficha L-11: Schauer & Zeckhauser 2009 queda escrito como origen del
+  término, citado a través de Powell y sin leer. Lo mismo, en una frase, en
+  `TESIS/05` §D.
+- La cadena de citas se corta aquí. Schauer & Zeckhauser 2009, Rogers et al.
+  2017 y las demás referencias pendientes quedan anotadas sin tarea abierta.
+- **Literatura cerrada con L-01 a L-11** (Mateo), anotado en
+  `docs/TESIS/LITERATURA.md` y en `research/literatura/README.md`.
+
+### Convención de trabajo para las próximas descargas
+
+- **Consultar el `robots.txt` antes de la primera petición a un dominio, no
+  después.** Se pide una sola vez, se lee y se aplica antes de cualquier otra
+  petición a ese dominio, incluido su `Crawl-delay`. Origen: la descarga de
+  T-01, donde el `robots.txt` de journals.plos.org se pidió dos veces seguidas
+  antes de leer su `Crawl-delay: 30`. No es un incidente; es la convención a
+  partir de ahora.
+
+### Qué quedó pendiente
+
+- Taxonomía: sin decidir hasta después de la Puerta 3.
+- Jornada 5: sigue cerrada hasta que Mateo la abra.

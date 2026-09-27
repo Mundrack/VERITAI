@@ -7,6 +7,10 @@ del PDF leído, con página, y nada se rellena de memoria. Los PDF están en
 `research/literatura/` con su sha256. La tarea que origina cada ficha está en
 `docs/TESIS/README.md` §Tareas de la tesis principal.
 
+**La literatura queda cerrada con L-01 a L-11** (Mateo, 2026-09-27). La
+cadena de citas se corta aquí: lo que las fichas anotan como pendiente de
+lectura queda anotado, sin tarea abierta, y no se persigue.
+
 ---
 
 ## L-11 · Powell, Bian & Markman 2020
@@ -23,6 +27,11 @@ del PDF leído, con página, y nada se rellena de memoria. Los PDF están en
   29-05-2020 (p. 1). Las páginas son las del artículo, 1 a 16.
 - **Cómo llega aquí:** es la ref. 265 de Ecker et al. 2022 (ms p. 28), la
   única de sus primarias con *paltering* en el título. Tarea T-01.
+- **Origen del término y nivel de la evidencia:** Schauer & Zeckhauser
+  2009, capítulo "Paltering", es el origen del término: Powell et al. se lo
+  atribuyen al definirlo (p. 1, ref. 1). **VeritAI lo cita a través de
+  Powell, no de la fuente original**, que no está leída. La cadena de citas
+  se corta aquí (Mateo, 2026-09-27).
 - **Qué estudia:** si las explicaciones de la American Diabetes Association
   (ADA) sobre "mitos" de la diabetes inducen a error por violar las máximas
   de Grice (cantidad, calidad, relevancia y manera), y si reescribirlas para
@@ -95,7 +104,7 @@ del PDF leído, con página, y nada se rellena de memoria. Los PDF están en
      "an apparently unintentional form of paltering" (p. 4); "we suspect that
      ADA had the additional goals…" (p. 13).
 
-**Compatibilidad con la regla dura** (lectura del agente; decide Mateo). La
+**Compatibilidad con la regla dura** (decidida por Mateo: **DEC-039**). La
 cita es compatible si se usa para el mecanismo: enunciados verdaderos que
 inducen a error por lo que omiten, enfatizan o dejan vago, con intención o
 sin ella (p. 14). Y si **no** se adopta ninguna de las dos etiquetas, ni
@@ -117,9 +126,10 @@ emisor, y DEC-026 no permite afirmarlo en ningún sentido.
   EE. UU.); ninguna frecuencia (los autores sospechan que los casos claros
   son raros, p. 13); que VeritAI mida lo que mide el artículo, porque VeritAI
   no mide efectos en lectores; ninguna intención del emisor, ni su ausencia.
-- **Falta por leer** (citadas en el artículo; no se describe su contenido):
-  Schauer & Zeckhauser 2009, capítulo "Paltering" (ref. 1, p. 1), a quienes
-  atribuyen el término; Rogers et al. 2017, "Artful paltering", *Journal of
+- **Falta por leer, sin tarea abierta** (citadas en el artículo; no se
+  describe su contenido; Mateo, 2026-09-27: no se persiguen): Schauer &
+  Zeckhauser 2009, capítulo "Paltering" (ref. 1, p. 1), origen del
+  término; Rogers et al. 2017, "Artful paltering", *Journal of
   Personality and Social Psychology* 112(3) (ref. 2); Powell et al. 2018,
   *Psychological Science* (ref. 12), el estudio previo sobre los mitos de la
   ADA; Malle & Knobe 1997 (ref. 11), el modelo de intencionalidad.

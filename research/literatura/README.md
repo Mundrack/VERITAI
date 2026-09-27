@@ -22,6 +22,9 @@ Respuesta 200, `application/pdf`, sin redirecciones ni registro. El
 `Crawl-delay: 30`. Ficha L-11 en `docs/TESIS/LITERATURA.md`, no en
 `docs/IDEAS.md`.
 
+**Cerrada con L-01 a L-11** (Mateo, 2026-09-27). No se añaden PDF sin una
+nueva instrucción de Mateo.
+
 | Fichero | Ficha | Identificación (leída del propio PDF) | Páginas | Bytes | sha256 |
 |---|---|---|---|---|---|
 | `2020.semeval-1.186.pdf` | L-01 | Da San Martino et al. (2020). SemEval-2020 Task 11: Detection of Propaganda Techniques in News Articles | 38 | 3.407.496 | `61dec4f001222713d2790532d27e075fc8d341040db77944cde958722ce11618` |
