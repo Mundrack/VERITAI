@@ -1201,7 +1201,7 @@ CANDIDATOS: list[dict] = [
         primaria_url_tipo="nota_de_prensa_html (provisional) + API JSON wstempus DATOS_TABLA/36570",
         via_de_acceso="api", access_requires_login="no",
         current_edition_found="si", previous_edition_found="si",
-        historical_series_found="si", methodology_found="no",
+        historical_series_found="si", methodology_found="si",
         alcanzable_por_agente="si", alcanzable_por_humano="si",
         recuperabilidad="A", formato="api",
         dato_actual="agosto 2026: 48.798.426 pernoctaciones hoteleras (provisional), +1,38% interanual; residentes -1,1%, no residentes +2,8%; IPH +6,3%; ADR 166,9 euros (+7,3%)",
@@ -1221,7 +1221,7 @@ CANDIDATOS: list[dict] = [
             "Cubeta A: 48.798.426/48.135.610 - 1 = +1,38%; el claim reproduce la nota. 'Tras el impulso "
             "internacional' es la descomposicion del propio INE (no residentes +2,8%). La primera prueba de "
             "URL de la nota (EOH0826) dio 404: el codigo de nota es CTH; la tabla 36570 tiene la serie 'Nacional' "
-            "sin 'Total Nacional' en el nombre (dos filtros fallidos antes de listar). methodology_found=no (NEEDS_REVIEW)."
+            "sin 'Total Nacional' en el nombre (dos filtros fallidos antes de listar). methodology_found=si: IME del INE, seccion 17 'Revision de datos' (pasada 2026-09-27, research/puerta3/METODOLOGIA-REVISION-INE.md)."
         ),
         cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0826",
         conjunto="evaluacion", etiquetado_por="agente",
@@ -1255,7 +1255,7 @@ CANDIDATOS: list[dict] = [
         primaria_url_tipo="nota_de_prensa_html (provisional) + API JSON wstempus DATOS_TABLA/2059",
         via_de_acceso="api", access_requires_login="no",
         current_edition_found="si", previous_edition_found="si",
-        historical_series_found="si", methodology_found="no",
+        historical_series_found="si", methodology_found="si",
         alcanzable_por_agente="si", alcanzable_por_humano="si",
         recuperabilidad="A", formato="api",
         dato_actual="agosto 2026: ADR 166,90 euros por habitacion ocupada (provisional), +7,32% interanual; IPH +6,3%",
@@ -1274,7 +1274,7 @@ CANDIDATOS: list[dict] = [
             "Cubeta D: claim de NIVEL (167 = 166,9 redondeado); 'disparan' remite al IPH (+6,3%) y al ADR "
             "(+7,3%), correctos, pero el titular no da tasa: sin test aplicable -> undetermined (DEC-029). ADR = "
             "tarifa media diaria por habitacion ocupada, no 'precio de una habitacion' en sentido de lista; se "
-            "anota, no es divergencia. Series ADR en la operacion IRSH (180), tabla 2059. methodology_found=no (NEEDS_REVIEW)."
+            "anota, no es divergencia. Series ADR en la operacion IRSH (180), tabla 2059. methodology_found=si: IME del INE, seccion 17 'Revision de datos' (pasada 2026-09-27, research/puerta3/METODOLOGIA-REVISION-INE.md)."
         ),
         cubeta="D", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0826",
         conjunto="evaluacion", etiquetado_por="agente",
@@ -1787,7 +1787,7 @@ CANDIDATOS: list[dict] = [
         primaria_url_tipo="nota_de_prensa_html (provisional) + anexo xlsx /prensa/anexo_tablas/es/CTH0826.xlsx + API JSON wstempus DATOS_TABLA/2074",
         via_de_acceso="dataset", access_requires_login="no",
         current_edition_found="si", previous_edition_found="si",
-        historical_series_found="si", methodology_found="no",
+        historical_series_found="si", methodology_found="si",
         alcanzable_por_agente="si", alcanzable_por_humano="si",
         recuperabilidad="A", formato="dataset",
         dato_actual="Comunidad de Madrid, agosto 2026 (provisional): pernoctaciones 2.165.029 (residentes 796.393; extranjeros 1.368.637); viajeros 1.082.623 (454.617 / 628.006)",
@@ -1817,7 +1817,7 @@ CANDIDATOS: list[dict] = [
             "ano anterior (provisional), no con la revisada. Mismo signo: el test 2a del prototipo no disparia "
             "(esperado: no_divergence_detected; la clase 2b esta fuera del prototipo, DEC-029/TESIS-ENCUADRE). "
             "Hermano potencial: madridactual.es 2026-09-22 (mismo teletipo, no registrado). Segundo caso de la "
-            "edicion CTH0826 (E019 A, E020 D). methodology_found=no (NEEDS_REVIEW)."
+            "edicion CTH0826 (E019 A, E020 D). methodology_found=si: IME del INE, seccion 17 'Revision de datos' (pasada 2026-09-27, research/puerta3/METODOLOGIA-REVISION-INE.md)."
         ),
         cubeta="B", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0826",  # C -> B por DEC-034
         conjunto="evaluacion", etiquetado_por="agente",
@@ -2098,7 +2098,7 @@ CANDIDATOS: list[dict] = [
         primaria_url_tipo="nota_de_prensa_html + anexo xlsx /prensa/anexo_tablas/es/CTH0726.xlsx + API JSON wstempus DATOS_TABLA/2074",
         via_de_acceso="api", access_requires_login="no",
         current_edition_found="si", previous_edition_found="si",
-        historical_series_found="si", methodology_found="no",
+        historical_series_found="si", methodology_found="si",
         alcanzable_por_agente="si", alcanzable_por_humano="si",
         recuperabilidad="A", formato="api",
         dato_actual="Canarias, julio 2026 (provisional): 6.781.369 pernoctaciones (viajeros 1.058.995), +2,39% interanual",
@@ -2120,7 +2120,7 @@ CANDIDATOS: list[dict] = [
             "Cubeta A regional, via divergencia. 6781369/6622855 - 1 = +2,39%: la tasa se calculo contra la "
             "edicion VIGENTE (revisada) de julio 2025, a diferencia de E031/E042/E043 (base provisional). Contra "
             "la provisional habria dado +3,49%. Hermano potencial: eldiario.es/canariasahora 2026-08-21 (mismo "
-            "teletipo). Primer caso de CTH0726 (luego E042 C, E043 C). methodology_found=no (NEEDS_REVIEW)."
+            "teletipo). Primer caso de CTH0726 (luego E042 C, E043 C). methodology_found=si: IME del INE, seccion 17 'Revision de datos' (pasada 2026-09-27, research/puerta3/METODOLOGIA-REVISION-INE.md)."
         ),
         cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0726",
         conjunto="evaluacion", etiquetado_por="agente",
@@ -2372,7 +2372,7 @@ CANDIDATOS: list[dict] = [
         primaria_url_tipo="nota_de_prensa_html + anexo xlsx /prensa/anexo_tablas/es/CTH0726.xlsx + API JSON wstempus DATOS_TABLA/2074",
         via_de_acceso="dataset", access_requires_login="no",
         current_edition_found="si", previous_edition_found="si",
-        historical_series_found="si", methodology_found="no",
+        historical_series_found="si", methodology_found="si",
         alcanzable_por_agente="si", alcanzable_por_humano="si",
         recuperabilidad="A", formato="dataset",
         dato_actual="Comunidad de Madrid, julio 2026 (provisional): pernoctaciones 2.297.978 (residentes 860.750; extranjeros 1.437.228); viajeros 1.139.288 (504.321 / 634.966)",
@@ -2399,7 +2399,7 @@ CANDIDATOS: list[dict] = [
             "solo la provisional se acerca. La nota de coyuntura de la Comunidad de Madrid (julio 2026) da -1% "
             "(vigente), lo que confirma el mecanismo. Mismo mecanismo que E031 (agosto, Ultima Hora/EP) en otra "
             "edicion y otro medio: no es hermano. Mismo signo: el test 2a no disparia. Segundo caso de CTH0726 "
-            "(E035 A). methodology_found=no (NEEDS_REVIEW)."
+            "(E035 A). methodology_found=si: IME del INE, seccion 17 'Revision de datos' (pasada 2026-09-27, research/puerta3/METODOLOGIA-REVISION-INE.md)."
         ),
         cubeta="B", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0726",  # C -> B por DEC-034
         conjunto="evaluacion", etiquetado_por="agente",
@@ -2445,7 +2445,7 @@ CANDIDATOS: list[dict] = [
         primaria_url_tipo="nota_de_prensa_html + anexo xlsx /prensa/anexo_tablas/es/CTH0726.xlsx + API JSON wstempus DATOS_TABLA/2074",
         via_de_acceso="dataset", access_requires_login="no",
         current_edition_found="si", previous_edition_found="si",
-        historical_series_found="si", methodology_found="no",
+        historical_series_found="si", methodology_found="si",
         alcanzable_por_agente="si", alcanzable_por_humano="si",
         recuperabilidad="A", formato="dataset",
         dato_actual="Balears, julio 2026 (provisional): pernoctaciones 10.783.538 (residentes 768.195; extranjeros 10.015.343); viajeros 2.050.150",
@@ -2473,7 +2473,7 @@ CANDIDATOS: list[dict] = [
             "da la tasa total). Es el 2b mas fuerte del conjunto: la revision de la edicion cambia el signo; el "
             "prototipo, que solo ve la edicion vigente, lo veria como contradicted sin test aplicable (2b fuera "
             "del prototipo, DEC-029). Tercer caso de CTH0726 (E035 A, E042 C); tercer 2b del conjunto (E031, "
-            "E042). methodology_found=no (NEEDS_REVIEW)."
+            "E042). methodology_found=si: IME del INE, seccion 17 'Revision de datos' (pasada 2026-09-27, research/puerta3/METODOLOGIA-REVISION-INE.md)."
         ),
         cubeta="B", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0726",  # C -> B por DEC-034
         conjunto="evaluacion", etiquetado_por="agente",
@@ -2520,7 +2520,7 @@ CANDIDATOS: list[dict] = [
         primaria_url_tipo="nota_de_prensa_html + API JSON wstempus DATOS_TABLA/2074 + anexo xlsx de la edicion anterior (CTH0625, HTTP 200 al agente)",
         via_de_acceso="api", access_requires_login="no",
         current_edition_found="si", previous_edition_found="si",
-        historical_series_found="si", methodology_found="no",
+        historical_series_found="si", methodology_found="si",
         alcanzable_por_agente="si", alcanzable_por_humano="si",
         recuperabilidad="A", formato="api",
         dato_actual="Comunidad de Madrid, junio 2026: pernoctaciones 2.421.276 (residentes 988.985; extranjeros 1.432.291); viajeros 1.199.893 (578.040 / 621.852)",
@@ -2544,7 +2544,7 @@ CANDIDATOS: list[dict] = [
             "Cubeta A regional, via divergencia (jornada 3, veta 2b). Las cuatro tasas del teletipo (+1,16, +1,41, "
             "+4,21, -1,07) se reproducen con la edicion VIGENTE de junio 2025; contra la provisional habrian sido "
             "+0,35, -0,21, +2,18 y -2,33. EFE uso la base revisada: no es 2b. Primer caso de CTH0626. "
-            "methodology_found=no (NEEDS_REVIEW)."
+            "methodology_found=si: IME del INE, seccion 17 'Revision de datos' (pasada 2026-09-27, research/puerta3/METODOLOGIA-REVISION-INE.md)."
         ),
         cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0626",
         conjunto="evaluacion", etiquetado_por="agente",
@@ -2578,7 +2578,7 @@ CANDIDATOS: list[dict] = [
         primaria_url_tipo="nota_de_prensa_html + API JSON wstempus DATOS_TABLA/2074 + anexo xlsx de la edicion anterior (CTH0625, HTTP 200 al agente)",
         via_de_acceso="api", access_requires_login="no",
         current_edition_found="si", previous_edition_found="si",
-        historical_series_found="si", methodology_found="no",
+        historical_series_found="si", methodology_found="si",
         alcanzable_por_agente="si", alcanzable_por_humano="si",
         recuperabilidad="A", formato="api",
         dato_actual="Cataluna, junio 2026: pernoctaciones 6.729.507 (residentes 1.903.239; extranjeros 4.826.268); viajeros 2.454.534 (908.260 / 1.546.274)",
@@ -2601,7 +2601,7 @@ CANDIDATOS: list[dict] = [
         notas=(
             "Cubeta A regional, via divergencia (jornada 3, veta 2b). -2,10% y -0,28% se reproducen con la base "
             "VIGENTE de junio 2025; contra la provisional habrian sido -2,34% y -0,05%. Idescat publica la misma "
-            "tasa. Segundo caso de CTH0626 (E044). methodology_found=no (NEEDS_REVIEW)."
+            "tasa. Segundo caso de CTH0626 (E044). methodology_found=si: IME del INE, seccion 17 'Revision de datos' (pasada 2026-09-27, research/puerta3/METODOLOGIA-REVISION-INE.md)."
         ),
         cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0626",
         conjunto="evaluacion", etiquetado_por="agente",
@@ -2635,7 +2635,7 @@ CANDIDATOS: list[dict] = [
         primaria_url_tipo="nota_de_prensa_html + API JSON wstempus DATOS_TABLA/2074 + anexo xlsx de la edicion anterior (CTH0525, HTTP 200 al agente)",
         via_de_acceso="api", access_requires_login="no",
         current_edition_found="si", previous_edition_found="si",
-        historical_series_found="si", methodology_found="no",
+        historical_series_found="si", methodology_found="si",
         alcanzable_por_agente="si", alcanzable_por_humano="si",
         recuperabilidad="A", formato="api",
         dato_actual="Comunidad de Madrid, mayo 2026: pernoctaciones 2.560.746; viajeros 1.232.338 (residentes 536.225; extranjeros 696.113)",
@@ -2659,7 +2659,7 @@ CANDIDATOS: list[dict] = [
             "Cubeta A regional, via divergencia (jornada 3, veta 2b). +0,66%, +4,82% y +0,12% se reproducen con la "
             "base VIGENTE de mayo 2025; contra la provisional habrian sido 0,00%, +4,22% y -1,67%. Primer caso de "
             "CTH0526. La provisional de mayo 2025 (2.560.824) se reviso a 2.543.911 (-16.913). "
-            "methodology_found=no (NEEDS_REVIEW)."
+            "methodology_found=si: IME del INE, seccion 17 'Revision de datos' (pasada 2026-09-27, research/puerta3/METODOLOGIA-REVISION-INE.md)."
         ),
         cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0526",
         conjunto="evaluacion", etiquetado_por="agente",
@@ -2693,7 +2693,7 @@ CANDIDATOS: list[dict] = [
         primaria_url_tipo="nota_de_prensa_html + anexo xlsx /prensa/anexo_tablas/es/CTH0826.xlsx + API JSON wstempus DATOS_TABLA/2074",
         via_de_acceso="dataset", access_requires_login="no",
         current_edition_found="si", previous_edition_found="si",
-        historical_series_found="si", methodology_found="no",
+        historical_series_found="si", methodology_found="si",
         alcanzable_por_agente="si", alcanzable_por_humano="si",
         recuperabilidad="A", formato="dataset",
         dato_actual="Balears, agosto 2026 (provisional): viajeros 2.137.472; pernoctaciones 11.367.443 (residentes 895.649; extranjeros 10.471.794)",
@@ -2718,8 +2718,8 @@ CANDIDATOS: list[dict] = [
             "-0,44%. Contra la provisional de agosto 2025: +3,82% y -0,19%, que son el 3,8% y el 'casi 0,2%' del "
             "teletipo: EFE calculo con la base provisional. Mismo signo en ambas bases: subtipo magnitud. Misma "
             "edicion (CTH0826) y mecanismo que E031 (EP, Madrid): claim, agencia y region distintos, no es hermano "
-            "por criba; se declara la concentracion por edicion. Cuarto 2b del conjunto. methodology_found=no "
-            "(NEEDS_REVIEW)."
+            "por criba; se declara la concentracion por edicion. Cuarto 2b del conjunto. methodology_found=si: IME "
+            "del INE, seccion 17 (pasada 2026-09-27, METODOLOGIA-REVISION-INE.md)."
         ),
         cubeta="B", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0826",
         conjunto="evaluacion", etiquetado_por="agente",
@@ -2764,7 +2764,7 @@ CANDIDATOS: list[dict] = [
         primaria_url_tipo="nota_de_prensa_html + API JSON wstempus DATOS_TABLA/2078",
         via_de_acceso="api", access_requires_login="no",
         current_edition_found="si", previous_edition_found="si",
-        historical_series_found="si", methodology_found="no",
+        historical_series_found="si", methodology_found="si",
         alcanzable_por_agente="si", alcanzable_por_humano="si",
         recuperabilidad="A", formato="api",
         dato_actual="Malaga (punto turistico), julio 2026: pernoctaciones 374.405 (residentes 90.771; extranjeros 283.634); viajeros extranjeros 119.163, residentes 47.092",
@@ -2785,7 +2785,7 @@ CANDIDATOS: list[dict] = [
             "Cubeta A (punto turistico), via divergencia (jornada 3). 283634/245412 - 1 = +15,57%; 374405/359309 - 1 "
             "= +4,20%; 119163/110208 - 1 = +8,13%: todas con la base vigente. Serie de punto turistico: fuera del "
             "mapa de 2b (el anexo solo lista los puntos con mas pernoctaciones y Malaga ciudad no aparece en "
-            "CTH0725). Segundo A de CTH0726 (E035). methodology_found=no (NEEDS_REVIEW)."
+            "CTH0725). Segundo A de CTH0726 (E035). methodology_found=si: IME del INE, seccion 17 'Revision de datos' (pasada 2026-09-27, research/puerta3/METODOLOGIA-REVISION-INE.md)."
         ),
         cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0726",
         conjunto="evaluacion", etiquetado_por="agente",
@@ -2819,7 +2819,7 @@ CANDIDATOS: list[dict] = [
         primaria_url_tipo="nota_de_prensa_html + anexo xlsx /prensa/anexo_tablas/es/EOAT0726.xlsx + API JSON (tres tablas)",
         via_de_acceso="dataset", access_requires_login="no",
         current_edition_found="si", previous_edition_found="si",
-        historical_series_found="si", methodology_found="no",
+        historical_series_found="si", methodology_found="si",
         alcanzable_por_agente="si", alcanzable_por_humano="si",
         recuperabilidad="A", formato="dataset",
         dato_actual="Andalucia, julio 2026, pernoctaciones extrahoteleras: apartamentos 1.686.628 + campings 1.002.789 + turismo rural 223.947 + albergues 121.292 = 3.034.656",
@@ -2847,7 +2847,7 @@ CANDIDATOS: list[dict] = [
             "con la provisional habria sido +15,32%: EP uso la revisada. El emisor no publica el agregado por CCAA, "
             "lo calcula la agencia sumando cuatro tablas: metrica compuesta, fuera de lo que el prototipo evalua "
             "hoy (contaria como abstencion UNSUPPORTED_CLAIM_TYPE, no como falso positivo; se declara). Revision "
-            "de julio 2025: +86.779 (+3,3%). methodology_found=no (NEEDS_REVIEW)."
+            "de julio 2025: +86.779 (+3,3%). methodology_found=si: IME del INE, seccion 17 'Revision de datos' (pasada 2026-09-27, research/puerta3/METODOLOGIA-REVISION-INE.md)."
         ),
         cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="INE EOAT0726",
         conjunto="evaluacion", etiquetado_por="agente",
@@ -2881,7 +2881,7 @@ CANDIDATOS: list[dict] = [
         primaria_url_tipo="nota_de_prensa_html + anexo xlsx + API JSON (tres tablas)",
         via_de_acceso="dataset", access_requires_login="no",
         current_edition_found="si", previous_edition_found="si",
-        historical_series_found="si", methodology_found="no",
+        historical_series_found="si", methodology_found="si",
         alcanzable_por_agente="si", alcanzable_por_humano="si",
         recuperabilidad="A", formato="dataset",
         dato_actual="Madrid, junio 2026: apartamentos 265.965 + campings 140.905 + turismo rural 26.202 + albergues 100.882 = 533.954 (cuadra con el claim); apartamentos: 107.779 viajeros, 265.965 pernoctaciones (100.025 / 165.940)",
@@ -2911,7 +2911,7 @@ CANDIDATOS: list[dict] = [
             "-0,55% con la vigente, no +15,9%, con cambio de signo. Tampoco cuadran el +4,2% de apartamentos "
             "(-4,7% / -5,2%) ni el +54,76% de viajeros (+28% vigente). Se busco 2b y 'valor de otro periodo' y no se "
             "reproducen: contradicted. NEEDS_REVIEW para la muestra a ciegas: si Mateo localiza la base, pasa a 2a "
-            "o 2b. Tercer F del conjunto. methodology_found=no (NEEDS_REVIEW)."
+            "o 2b. Tercer F del conjunto. methodology_found=si: IME del INE, seccion 17 'Revision de datos' (pasada 2026-09-27, research/puerta3/METODOLOGIA-REVISION-INE.md)."
         ),
         cubeta="F", hermano_de="", mecanismo_candidato="", primaria_edicion="INE EOAT0626",
         conjunto="evaluacion", etiquetado_por="agente",
@@ -2945,7 +2945,7 @@ CANDIDATOS: list[dict] = [
         primaria_url_tipo="nota_de_prensa_html + anexo xlsx + API JSON wstempus DATOS_TABLA/2074",
         via_de_acceso="api", access_requires_login="no",
         current_edition_found="si", previous_edition_found="si",
-        historical_series_found="si", methodology_found="no",
+        historical_series_found="si", methodology_found="si",
         alcanzable_por_agente="si", alcanzable_por_humano="si",
         recuperabilidad="A", formato="api",
         dato_actual="Canarias, agosto 2026: pernoctaciones 7.216.680 (residentes 1.427.401; extranjeros 5.789.279); viajeros 1.112.371 (336.433 / 775.939)",
@@ -2970,7 +2970,7 @@ CANDIDATOS: list[dict] = [
             "Cubeta A regional, via divergencia (jornada 3, veta 2b). +2,45%, +4,96%, +3,0% y +5,84% se reproducen "
             "con la base VIGENTE de agosto 2025; con la provisional habrian sido +1,97, +5,29, +2,78 y +6,42. Misma "
             "edicion CTH0826 en la que EP (Madrid, E031) y EFE (Baleares, E047) usaron la provisional: el mecanismo "
-            "es del redactor, no de la edicion. methodology_found=no (NEEDS_REVIEW)."
+            "es del redactor, no de la edicion. methodology_found=si: IME del INE, seccion 17 'Revision de datos' (pasada 2026-09-27, research/puerta3/METODOLOGIA-REVISION-INE.md)."
         ),
         cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0826",
         conjunto="evaluacion", etiquetado_por="agente",
@@ -3004,7 +3004,7 @@ CANDIDATOS: list[dict] = [
         primaria_url_tipo="nota_de_prensa_html + anexo xlsx + API JSON wstempus DATOS_SERIE/EOT1454",
         via_de_acceso="api", access_requires_login="no",
         current_edition_found="si", previous_edition_found="si",
-        historical_series_found="si", methodology_found="no",
+        historical_series_found="si", methodology_found="si",
         alcanzable_por_agente="si", alcanzable_por_humano="si",
         recuperabilidad="A", formato="api",
         dato_actual="Andalucia, agosto 2026: 7.717.597 pernoctaciones (+1,99% con la base vigente); maximo de los 28 agostos de la serie 1999-2026",
@@ -3024,7 +3024,7 @@ CANDIDATOS: list[dict] = [
             "Cubeta D (extremo), via divergencia (jornada 3). Maximo de los agostos de la serie (1999-2026): cuadra, "
             "por 130.372 sobre 2019. El +2% sale con la base vigente (+1,99%; provisional +1,73%). El propio teletipo "
             "condiciona el record a la confirmacion del avance. Sin test aplicable -> undetermined (DEC-029). "
-            "methodology_found=no (NEEDS_REVIEW)."
+            "methodology_found=si: IME del INE, seccion 17 'Revision de datos' (pasada 2026-09-27, research/puerta3/METODOLOGIA-REVISION-INE.md)."
         ),
         cubeta="D", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0826",
         conjunto="evaluacion", etiquetado_por="agente",
@@ -3057,7 +3057,7 @@ CANDIDATOS: list[dict] = [
         primaria_url_tipo="nota_de_prensa_html + anexo xlsx /prensa/anexo_tablas/es/CTH0726.xlsx + API JSON wstempus DATOS_TABLA/2074",
         via_de_acceso="dataset", access_requires_login="no",
         current_edition_found="si", previous_edition_found="si",
-        historical_series_found="si", methodology_found="no",
+        historical_series_found="si", methodology_found="si",
         alcanzable_por_agente="si", alcanzable_por_humano="si",
         recuperabilidad="A", formato="dataset",
         dato_actual="Galicia, julio 2026 (provisional): pernoctaciones 1.334.577 (residentes 1.011.953; extranjeros 322.624); viajeros 644.755",
@@ -3085,7 +3085,7 @@ CANDIDATOS: list[dict] = [
             "Viajeros: +1,45% con la provisional (635.559) frente a +0,87% con la vigente (639.220). Otro medio "
             "(atlantico.net, 2026-08-22) dio '0,4% menos' con la vigente: dos tasas de signo opuesto para el mismo "
             "dato en la misma semana. Tercer B de la edicion CTH0726 (E042, E043): se declara la concentracion. "
-            "Quinto 2b del conjunto. methodology_found=no (NEEDS_REVIEW)."
+            "Quinto 2b del conjunto. methodology_found=si: IME del INE, seccion 17 'Revision de datos' (pasada 2026-09-27, research/puerta3/METODOLOGIA-REVISION-INE.md)."
         ),
         cubeta="B", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0726",
         conjunto="evaluacion", etiquetado_por="agente",
@@ -3130,7 +3130,7 @@ CANDIDATOS: list[dict] = [
         primaria_url_tipo="nota_de_prensa_html + anexo xlsx + API JSON (tres tablas)",
         via_de_acceso="dataset", access_requires_login="no",
         current_edition_found="si", previous_edition_found="si",
-        historical_series_found="si", methodology_found="no",
+        historical_series_found="si", methodology_found="si",
         alcanzable_por_agente="si", alcanzable_por_humano="si",
         recuperabilidad="A", formato="dataset",
         dato_actual="Galicia, junio 2026: apartamentos 95.756 + campings 195.633 + turismo rural 41.906 + albergues 139.893 = 473.188",
@@ -3156,7 +3156,7 @@ CANDIDATOS: list[dict] = [
             "38.393, 146.304) y las cuatro son las VIGENTES: la suma da +9,33% exacto; con la provisional habria "
             "sido +9,41%. El mismo teletipo escribe 'mismo mes de 2024' donde corresponde 2025 (errata, no se "
             "evalua). Metrica compuesta (suma de cuatro series): fuera del prototipo actual, se declara (como E049). "
-            "Segundo caso de EOAT0626 (E050 F). methodology_found=no (NEEDS_REVIEW)."
+            "Segundo caso de EOAT0626 (E050 F). methodology_found=si: IME del INE, seccion 17 'Revision de datos' (pasada 2026-09-27, research/puerta3/METODOLOGIA-REVISION-INE.md)."
         ),
         cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="INE EOAT0626",
         conjunto="evaluacion", etiquetado_por="agente",
@@ -3190,7 +3190,7 @@ CANDIDATOS: list[dict] = [
         primaria_url_tipo="nota_de_prensa_html + anexo xlsx + API JSON wstempus DATOS_TABLA/2074",
         via_de_acceso="dataset", access_requires_login="no",
         current_edition_found="si", previous_edition_found="si",
-        historical_series_found="si", methodology_found="no",
+        historical_series_found="si", methodology_found="si",
         alcanzable_por_agente="si", alcanzable_por_humano="si",
         recuperabilidad="A", formato="dataset",
         dato_actual="Castilla y Leon, agosto 2026 (provisional): pernoctaciones 1.005.272; viajeros 622.043 (residentes 428.650; extranjeros 193.393)",
@@ -3216,7 +3216,7 @@ CANDIDATOS: list[dict] = [
             "acerca con la provisional (a 0,1 pp; la base exacta no es reproducible al centesimo, NEEDS_REVIEW, "
             "como E042). Otros medios (heraldodeleon para Leon, y la cobertura que da -3,2% para CyL) usaron la "
             "vigente: dos tasas para el mismo dato la misma manana. Tercer B de la edicion CTH0826 (E031, E047): "
-            "se declara la concentracion. Sexto 2b del conjunto. methodology_found=no (NEEDS_REVIEW)."
+            "se declara la concentracion. Sexto 2b del conjunto. methodology_found=si: IME del INE, seccion 17 'Revision de datos' (pasada 2026-09-27, research/puerta3/METODOLOGIA-REVISION-INE.md)."
         ),
         cubeta="B", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0826",
         conjunto="evaluacion", etiquetado_por="agente",
@@ -3261,7 +3261,7 @@ CANDIDATOS: list[dict] = [
         primaria_url_tipo="nota_de_prensa_html + anexo xlsx + API JSON wstempus DATOS_TABLA/2074",
         via_de_acceso="dataset", access_requires_login="no",
         current_edition_found="si", previous_edition_found="si",
-        historical_series_found="si", methodology_found="no",
+        historical_series_found="si", methodology_found="si",
         alcanzable_por_agente="si", alcanzable_por_humano="si",
         recuperabilidad="A", formato="dataset",
         dato_actual="Region de Murcia, julio 2026 (provisional): pernoctaciones 410.706 (residentes 301.143; extranjeros 109.564); viajeros 165.223 (121.005 / 44.218)",
@@ -3289,7 +3289,7 @@ CANDIDATOS: list[dict] = [
             "tasas del articulo (+4,09% y +1,55%) son exactamente las de la base PROVISIONAL de julio 2025 "
             "(394.572 y 162.708); con la vigente serian +3,32% y +1,32%. Mismo signo: subtipo magnitud. Cuarto B de "
             "la edicion CTH0726 (E042, E043, E053): se declara la concentracion. Septimo 2b del conjunto. "
-            "methodology_found=no (NEEDS_REVIEW)."
+            "methodology_found=si: IME del INE, seccion 17 'Revision de datos' (pasada 2026-09-27, research/puerta3/METODOLOGIA-REVISION-INE.md)."
         ),
         cubeta="B", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0726",
         conjunto="evaluacion", etiquetado_por="agente",
@@ -3334,7 +3334,7 @@ CANDIDATOS: list[dict] = [
         primaria_url_tipo="nota_de_prensa_html + anexo xlsx + API JSON wstempus DATOS_TABLA/2074",
         via_de_acceso="api", access_requires_login="no",
         current_edition_found="si", previous_edition_found="si",
-        historical_series_found="si", methodology_found="no",
+        historical_series_found="si", methodology_found="si",
         alcanzable_por_agente="si", alcanzable_por_humano="si",
         recuperabilidad="A", formato="api",
         dato_actual="Castilla-La Mancha, julio 2026: pernoctaciones 340.617 (residentes 279.330; extranjeros 61.287); viajeros 184.864 (151.217 / 33.646)",
@@ -3360,7 +3360,7 @@ CANDIDATOS: list[dict] = [
             "tasas con la base VIGENTE; con la provisional habrian sido -5,84, -10,87, -10,82 y -11,10. Tercer A de "
             "CTH0726 (E035, E048): tope por edicion alcanzado. Misma manana y misma edicion en que Galicia Press "
             "(E053) y MurciaEconomia (E056) usaron la provisional: el mecanismo es del redactor. "
-            "methodology_found=no (NEEDS_REVIEW)."
+            "methodology_found=si: IME del INE, seccion 17 'Revision de datos' (pasada 2026-09-27, research/puerta3/METODOLOGIA-REVISION-INE.md)."
         ),
         cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="INE CTH0726",
         conjunto="evaluacion", etiquetado_por="agente",
@@ -3882,7 +3882,7 @@ CANDIDATOS: list[dict] = [
         primaria_url_tipo="nota_de_prensa_html + API JSON wstempus DATOS_TABLA/1993 + anexos EOAT0726.xlsx y EOAT0626.xlsx (HTTP 200 al agente identificado, research/puerta3/edicion_anterior.py)",
         via_de_acceso="api", access_requires_login="no",
         current_edition_found="si", previous_edition_found="si",
-        historical_series_found="si", methodology_found="no",
+        historical_series_found="si", methodology_found="si",
         alcanzable_por_agente="si", alcanzable_por_humano="si",
         recuperabilidad="A", formato="api",
         dato_actual="Cantabria, apartamentos turisticos, julio 2026: 111.666 pernoctaciones (API y anexo EOAT0726); julio 2025 vigente 113.353 -> -1,49%. Viajeros julio 2026: 27.600 (+6,43%), cifra que el articulo si da bien",
@@ -3911,7 +3911,7 @@ CANDIDATOS: list[dict] = [
             "SI son de julio y cuadran con la base vigente. Numero rastreable al emisor pero de otro periodo: mixed + "
             "divergence_detected; el prototipo lo detecta con la ventana de 2a (valor de 2026-M06 atribuido a "
             "2026-M07). Albergues fuera del mapa (no se evalua). Segundo C del conjunto (E041). Segundo caso de "
-            "EOAT0726 (E054 A). methodology_found=no (NEEDS_REVIEW)."
+            "EOAT0726 (E054 A). methodology_found=si: IME del INE, seccion 17 'Revision de datos' (pasada 2026-09-27, research/puerta3/METODOLOGIA-REVISION-INE.md)."
         ),
         cubeta="C", hermano_de="", mecanismo_candidato="", primaria_edicion="INE EOAT0726",
         conjunto="evaluacion", etiquetado_por="agente",
@@ -3945,7 +3945,7 @@ CANDIDATOS: list[dict] = [
         primaria_url_tipo="nota_de_prensa_html + API JSON wstempus DATOS_TABLA/1993 + anexos EOAT0526.xlsx (HTTP 200, 158.771 bytes) y EOAT0525.xlsx (HTTP 200, 157.423 bytes) descargados con research/puerta3/edicion_anterior.py",
         via_de_acceso="api", access_requires_login="no",
         current_edition_found="si", previous_edition_found="si",
-        historical_series_found="si", methodology_found="no",
+        historical_series_found="si", methodology_found="si",
         alcanzable_por_agente="si", alcanzable_por_humano="si",
         recuperabilidad="A", formato="api",
         dato_actual="Region de Murcia, apartamentos turisticos, mayo 2026: 11.752 viajeros (8.454 residentes, 3.299 extranjeros); 42.396 pernoctaciones (API y anexo EOAT0526, fila 26)",
@@ -3975,7 +3975,7 @@ CANDIDATOS: list[dict] = [
             "del INE. La misma redaccion uso en julio (EOAT0726) una base sin revision (viajeros +15%, cuadra; "
             "pernoctaciones '+15%' frente a +17,5%, inexactitud no anotada) y solo totales extrahoteleros en junio. "
             "Los totales extrahoteleros del articulo (28.514 viajeros +2,6%; 128.429 noches -3,8%) agregan cuatro "
-            "encuestas y no se evaluan. methodology_found=no (NEEDS_REVIEW)."
+            "encuestas y no se evaluan. methodology_found=si: IME del INE, seccion 17 'Revision de datos' (pasada 2026-09-27, research/puerta3/METODOLOGIA-REVISION-INE.md)."
         ),
         cubeta="B", hermano_de="", mecanismo_candidato="", primaria_edicion="INE EOAT0526",
         conjunto="evaluacion", etiquetado_por="agente",

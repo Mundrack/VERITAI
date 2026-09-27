@@ -164,6 +164,13 @@ amenaza a la validez externa del conector: la mitigación es que la rotura sea
 visible (abstención `PREVIOUS_EDITION_NOT_FOUND`, nunca un valor inventado) y
 que las ediciones ya descargadas queden conservadas con su sha256.
 
+**Premisa de 2b, con fuente primaria (2026-09-27).** El INE declara por escrito
+la política de revisión provisional → definitivo de la EOH, la EOAP y la EOAC,
+con calendario, en el Informe Metodológico Estandarizado de cada encuesta
+(§14.1 y §17) y en su Política de revisión (2015); la nota de la EOAT lo repite
+en su pie. Citas y evidencia en `research/puerta3/METODOLOGIA-REVISION-INE.md`.
+Lo que el INE no declara es la magnitud de la revisión por comunidad.
+
 **Limitación explícita de H1 (DEC-035).** La cubeta B del conjunto de
 evaluación se declara con **7 casos** de 2b (Wilson 95 % del recall: 7/7 →
 [64,6; 100]; 6/7 → [48,7; 97,4]), no con los 15 del diseño. La razón es

@@ -84,7 +84,7 @@ hoy no está respaldado" de cada ficha.
 | 9 | Un tope por edición evita contar la misma nota muchas veces (pseudorréplica) | diseño §1, §4c (regla propia) | C7 |
 | 9 | Excluir lo ya verificado por los verificadores es un criterio de novedad válido | diseño §0 (regla dura) | C1, C9 |
 | 10 | Que dos redacciones calculen tasas distintas sobre la misma nota el mismo día demuestra un mecanismo de redacción | diseño §4e (inferencia propia) | C5 |
-| 10 | El INE revisa los datos provisionales de la EOH y la EOAT en la edición siguiente o en la anual | observado en los anexos; **la nota metodológica del INE no se ha leído** (`methodology_found = no` en casi todos los casos) | C4 + pasada `methodology_found` |
+| 10 | El INE revisa los datos provisionales de la EOH y la EOAT con calendario declarado | **fuente primaria leída y citada**: IME §14.1 y §17 de EOH, EOAP y EOAC, Política de revisión del INE (2015), pie de las notas de la EOAT (`research/puerta3/METODOLOGIA-REVISION-INE.md`, 2026-09-27) | C4 solo para la literatura general |
 | 10 | 2a en 0 de 43 es un hallazgo sobre la muestra y el método | DEC-034 (redacción fijada por Mateo) | C3, C5 |
 | 11 | Los mecanismos `other_observed` (agregación de subgrupos, cambio sin edición anterior) son trabajo futuro con sentido | DEC-027 | C3 |
 
@@ -108,7 +108,7 @@ hoy no está respaldado" de cada ficha.
 | La taxonomía del proyecto cubre las divergencias contextuales computables que aparecen en prensa | encuadre §Taxonomía (nacida de 46 casos del piloto) | relación con taxonomías previas; no se afirma exhaustividad | C3 |
 | `truth` y `context` como dos ejes es una distinción necesaria y no una clase más | DEC-016 | precedente en escalas de veredicto de verificadores y en sistemas | C1, C2 |
 | "Base revisada" (2b) es una categoría distinta de "base elegida" (2a) | DEC-034 | precedente en revisiones de datos y en falacias de comparación | C3, C4 |
-| Una "señal de horizonte" (magnitud ≥ 2× sin cambio de signo) no debe contar como divergencia | DEC-029 | justificación externa del umbral; hoy es convención declarada | C3, C7 |
+| Una "señal de horizonte" (magnitud ≥ 2× sin cambio de signo) no debe contar como divergencia | DEC-029 | convención del proyecto fijada antes de medir, no derivada de nada (diseño §4l): DEC-029, 2026-09-25 (`a6c7d91`). Si aparece literatura, se añade | C3, C7 |
 | Los términos descartados (`GLOSARIO` §Términos que NO se usan) se descartan con razón | `GLOSARIO` | contraste con el uso en la literatura | C1, C3 |
 
 ## No entra

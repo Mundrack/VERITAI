@@ -1116,3 +1116,39 @@ estructura y qué material del repo alimenta cada una; nada redactado).
 - Jornada 5: no se abre hasta que Mateo lo diga (30-09 o después); queda
   abierta hasta `CTH0926` (23-10).
 - P-06: entregar la plantilla de la UDLA en `docs/TESIS/` para fijar nombres.
+
+---
+
+## 2026-09-27 (19:15Z) — Pasada de metodología (EOH/EOAT) y convenciones marcadas
+
+### Qué se hizo
+
+**La premisa de 2b tiene fuente primaria.** El INE declara por escrito la
+política de revisión provisional → definitivo de la EOH, la EOAP y la EOAC en
+el Informe Metodológico Estandarizado de cada encuesta (§14.1 y §17), en la
+Política de revisión del INE (abril 2015) y en el pie de las notas de la
+EOAT. Citas literales, calendario, indicadores MAR/RMAR, URL, sha256 y
+consecuencias en `research/puerta3/METODOLOGIA-REVISION-INE.md`; evidencia
+en `research/evidencia/METODOLOGIA_*`. Diseño §4k. Los 22 casos EOH/EOAT
+pasan a `methodology_found = si`.
+
+**Convenciones marcadas** (diseño §4l y fichas 3, 5 y 9): FPR 10 % / 15 %,
+señal de horizonte 2×, tope de 3 por edición (controles y B), cuota de
+emisor, regla de jornada, doble anotación, tolerancia de 2b y mínimo de B,
+cada una con fecha y commit. No derivan de nada; si aparece literatura, se
+añade.
+
+**Condición de evaluabilidad de P1**, añadida al diseño §4h antes del 30-09:
+comprobado contra la API que agosto de 2025 (EOAT) y septiembre de 2025 (EOH)
+ya están revisados, así que las dos ediciones de la prueba son evaluables.
+
+### Qué se verificó
+
+- Cuatro descargas con el agente identificado, todas 200 (tres IME, un PDF).
+- Comparación anexo/API: EOAT0825 34/34 (EOAP) y 26/34 (EOAC) series
+  revisadas; CTH0925 98/104. Validador OK.
+
+### Qué quedó pendiente
+
+- La misma pasada para las otras operaciones del INE (siguen en `no`).
+- Jornada 5: no se abre hasta que Mateo lo diga.

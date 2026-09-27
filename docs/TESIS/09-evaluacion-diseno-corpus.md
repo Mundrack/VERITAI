@@ -35,9 +35,9 @@ tiempos, y lo que pasó en cada jornada.
 
 | Afirmación | Dónde se afirma | Qué falta | Buscar en |
 |---|---|---|---|
-| 40 controles son el mínimo que tolera un falso positivo con la tasa de H3 | diseño §1 (tabla Wilson) | referencia del intervalo; el umbral sigue siendo convención (ver 3) | C7 |
-| Un tope de tres casos por edición evita contar la misma nota muchas veces | diseño §1, §4c | literatura sobre pseudorréplica y muestras agrupadas | C7 |
-| La cuota de emisor (INE ≤ 70 %) y ≥ 2 emisores por cubeta protegen la validez externa | diseño §1, §4f | justificación de cuotas de composición en corpus de evaluación | C7 |
+| 40 controles son el mínimo que tolera un falso positivo con la tasa de H3 | diseño §1 (tabla Wilson) | referencia del intervalo; el umbral 10 % / 15 % es convención del proyecto fijada antes de medir, no derivada de nada (diseño §4l): 2026-09-25 (`4c75769` / `b87623c`) | C7 |
+| Un tope de tres casos por edición evita contar la misma nota muchas veces | diseño §1, §4c | convención del proyecto fijada antes de medir, no derivada de nada (diseño §4l): controles por nota, 2026-09-25 (`4c75769` / `b87623c`); B por edición, 2026-09-26 (`2f151ef`). Literatura sobre pseudorréplica solo si aparece | C7 |
+| La cuota de emisor (INE ≤ 70 %) y ≥ 2 emisores por cubeta protegen la validez externa | diseño §1, §4f | convención del proyecto fijada antes de medir, no derivada de nada (diseño §4l): 2026-09-25 (`4c75769` / `b87623c`). Literatura sobre cuotas solo si aparece | C7 |
 | Los hermanos por criba (misma primaria, misma consulta) cuentan una vez | diseño §0 | muestras agrupadas | C7 |
 | Excluir casos ya verificados es un criterio de novedad válido | diseño §0 | qué cubren los verificadores | C1, C9 |
 | Una jornada tratada como medición con regla previa es un diseño legítimo | DEC-033, §4b | preinscripción | C10 |

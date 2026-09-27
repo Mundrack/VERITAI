@@ -25,7 +25,7 @@ con la tasa de H3 fijada antes de evaluar y la limitación explícita de H1.
 
 | Afirmación | Dónde se afirma | Qué falta | Buscar en |
 |---|---|---|---|
-| Un FPR ≤ 10 % con límite superior Wilson ≤ 15 % es una tasa razonable para H3 | diseño §1 ("propuesta", aprobada en DEC-031) | justificación externa del orden de magnitud, o declararlo como convención del proyecto | C7 |
+| Un FPR ≤ 10 % con límite superior Wilson ≤ 15 % es una tasa razonable para H3 | diseño §1 ("propuesta", aprobada en DEC-031) | convención del proyecto fijada antes de medir, no derivada de nada (diseño §4l): propuesta el 2026-09-25 (`4c75769`), aprobada en DEC-031 el 2026-09-25 (`b87623c`). Si aparece literatura, se añade | C7 |
 | Wilson al 95 % y la regla de tres son el método adecuado para proporciones con n pequeño | `research/arnes/metricas.py`; diseño §1 | referencia del método | C7 |
 | H2: la divergencia se decide con tests determinísticos sobre dos ediciones | encuadre §Hipótesis; DEC-028, DEC-034 | antecedente de verificación numérica contra datos estructurados | C2 |
 | H1 se puede sostener como existencia y computabilidad sin afirmar frecuencia | DEC-035; encuadre §Limitación explícita de H1 | precedente de estudios de existencia/mecanismo con n pequeño y su forma de reportarse | C7 |

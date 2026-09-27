@@ -427,6 +427,15 @@ disponible antes de cerrar la Puerta, y sin ella la predicción P1 no separa
 prueba de predicción se lee con las dos ediciones (P1 sobre `EOAT0826`, P1'
 sobre `CTH0926` con la misma tabla de lectura, y P2 sobre ambas).
 
+**Condición de evaluabilidad, escrita el 2026-09-27.** P1 solo es evaluable
+si en la fecha de la nota la base del año anterior ya está revisada; si el
+anexo del año anterior y la API coincidieran en todas las comunidades, 2b
+sería imposible por calendario y P1 quedaría **no evaluable**, no refutada.
+Comprobado hoy contra la API: agosto de 2025 ya está revisado (EOAP 34/34
+series distintas del anexo `EOAT0825`, EOAC 26/34) y septiembre de 2025
+también (EOH 98/104 distintas de `CTH0925`), conforme al calendario que el
+INE declara (§4k). Las dos ediciones son evaluables.
+
 **Método de la jornada 5, el mismo de las jornadas 3 y 4:** tabla de tasas
 provisional/vigente por CCAA con `EOAT0825` (anexo) y la API, búsqueda de las
 cifras que solo salen con la provisional, criba (a) y (b) por caso, cronómetro
@@ -455,3 +464,40 @@ mide: la proporción de redacciones que calculan con una base u otra sobre la
 misma edición. Un conjunto enriquecido con esas redacciones diría que 2b es
 frecuente porque se buscó donde ya se sabía que estaba. Queda anotado como
 vía descartada y por qué.
+
+### 4k. La política de revisión del INE, leída (premisa de 2b con fuente primaria)
+
+Pasada de `methodology_found` sobre las dos operaciones con B, hecha el
+2026-09-27 a petición de Mateo. **El INE declara por escrito una política de
+revisión provisional → definitivo para la EOH, la EOAP y la EOAC**, en el
+Informe Metodológico Estandarizado de cada una (§14.1 puntualidad, §17.1
+política, §17.2 práctica), en la Política de revisión del INE (abril de
+2015) y en el pie de las notas de la EOAT. Calendario declarado: la EOH
+publica cada mes los provisionales del mes anterior y los definitivos del
+mismo mes del año anterior (enero–mayo el mismo día; junio–diciembre con la
+publicación anual de junio); la EOAP y la EOAC, los definitivos de enero a
+junio a los 13 meses y los de julio a diciembre en el tercer trimestre del
+año siguiente. Citas, URL, sha256 y consecuencias en
+`research/puerta3/METODOLOGIA-REVISION-INE.md`. Lo que el INE **no**
+declara: la magnitud de la revisión por comunidad (solo MAR/RMAR nacionales)
+y el patrón de código de las notas. Los 22 casos EOH/EOAT del lote pasan a
+`methodology_found = si`; el resto de operaciones del INE sigue en `no`.
+
+### 4l. Convenciones del proyecto fijadas antes de medir (no derivadas de nada)
+
+Estas reglas son **convenciones del proyecto**, fijadas antes de medir y con
+fecha y commit. No derivan de ninguna fuente externa. Si aparece literatura
+que las respalde, se añade; lo que no puede pasar es presentarlas como
+derivadas de algo.
+
+| Convención | Valor | Dónde vive | Fijada | Commit |
+|---|---|---|---|---|
+| Tasa de falsos positivos de H3 | FPR ≤ 10 % y límite superior Wilson 95 % ≤ 15 %; mínimo 40 controles | diseño §1 | propuesta 2026-09-25; aprobada en DEC-031 el 2026-09-25 | `4c75769` (propuesta), `b87623c` (aprobación) |
+| Señal de horizonte | magnitud recomputada ≥ 2× sin cambio de signo: se registra, no cuenta como divergencia | DEC-029; diseño §0 | 2026-09-25 | `a6c7d91` (DEC-029); anticipada en `PUERTA-2-CASOS` en `104cf22` |
+| Tope de controles por edición | ≤ 3 controles por nota de prensa | diseño §1 | 2026-09-25 | `4c75769` / `b87623c` |
+| Tope de B por edición | ≤ 3 B por edición; el resto, excedente | diseño §4c | aprobado por Mateo antes de la jornada 4, 2026-09-26 | `2f151ef` |
+| Cuota de emisor | INE ≤ 70 % del conjunto; otros emisores ≥ 30 % como objetivo; ≥ 2 emisores en A y en B | diseño §1, §4f | 2026-09-25 | `4c75769` / `b87623c` |
+| Regla de jornada como medición | B por jornada ≥ 4 sigue; ≤ 3 se para y se replantea | DEC-033; diseño §3b, §4b | 2026-09-26 | `e97d051` (DEC-033) |
+| Doble anotación | 25 % estratificado a ciegas, semilla 20260925 | DEC-031; diseño §0 | 2026-09-25 | `b87623c` |
+| Tolerancia mínima del test 2b | 0,15 puntos porcentuales | `domain/tests/base_revisada.py` | 2026-09-26 | `2f151ef` |
+| Mínimo de B declarado | 7 con intervalo | DEC-035; diseño §4g | 2026-09-27 | `13e03fa` |

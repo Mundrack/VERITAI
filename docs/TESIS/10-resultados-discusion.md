@@ -34,7 +34,7 @@ natural; y las amenazas a la validez y limitaciones, sin maquillar.
 | Afirmación | Dónde se afirma | Qué falta | Buscar en |
 |---|---|---|---|
 | Dos redacciones con tasas distintas sobre la misma nota y el mismo día demuestran un mecanismo de redacción, no del conector | diseño §4e (inferencia propia) | literatura sobre rutinas de agencias y redacciones regionales con estadísticas oficiales; errores de reproducción | C5 |
-| El INE revisa los datos provisionales de la EOH y la EOAT (base al publicar ≠ vigente) | observado en los anexos y la API | **la nota metodológica del INE no se ha leído** (`methodology_found = no` en casi todos los casos): pasada pendiente antes de afirmarlo en la tesis | C4 + pasada `methodology_found` |
+| El INE revisa los datos provisionales de la EOH y la EOAT (base al publicar ≠ vigente) | IME §14.1 y §17 de EOH, EOAP y EOAC; Política de revisión del INE (2015); pie de las notas de la EOAT (`research/puerta3/METODOLOGIA-REVISION-INE.md`, 2026-09-27) | respaldado por fuente primaria; el INE no declara la magnitud por comunidad (se reporta la observada en el conjunto); falta solo literatura general | C4 |
 | La lectura estacional (el patrón se concentra en verano) es una observación, no una prueba | diseño §4e ampliado, §4h | se resuelve con CTH0926; literatura sobre turnos y plantillas en redacciones solo como contexto | C5 |
 | 2a en 0 de 43 es un hallazgo sobre la muestra y el método | DEC-034 | contraste con lo que la literatura dice de la frecuencia del cherry-picking de base en prensa | C3, C5 |
 | Un 403 al agente identificado es un resultado, no un fallo del sistema | DEC-018, DEC-021 | marco de acceso automatizado y bloqueo | C8 |
