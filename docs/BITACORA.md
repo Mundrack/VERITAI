@@ -1062,3 +1062,31 @@ vigente; primer 2b fuera de la EOH).
   NEEDS_REVIEW.
 - Pasada final de `methodology_found`; P-23; P-20; Q034 sin trabajar;
   regenerar `requirements.lock.txt` desde el contenedor (openpyxl).
+
+---
+
+## 2026-09-27 (18:00Z) — DEC-035: B declarada con 7 e intervalo; predicción sobre EOAT0826 escrita antes del 30-09
+
+### Qué se hizo
+
+Mateo decidió (a) y (b), no (c). Se escribió en el diseño la razón estructural
+(§4g: 2b solo existe en 2 de las 8 operaciones del mapa; B acotado por el
+universo, no por el esfuerzo), la **predicción P1/P2 sobre `EOAT0826`**
+(§4h, con la lectura de cada resultado fijada de antemano), el plan de A hasta
+40 sin INE (§4i) y la vía descartada (§4j). DEC-035 en `DECISIONES.md`;
+limitación de H1 en `TESIS-ENCUADRE.md`; `OBJETIVO_CUBETA["B"]` = (7, 7);
+`CLAUDE.md`, `ESTADO.md` y `PROGRESO.md` actualizados.
+
+### Qué se verificó
+
+- Intervalos con `research/arnes/metricas.wilson`: 7/7 → [64,6; 100];
+  6/7 → [48,7; 97,4]; 5/7 → [35,9; 91,8]. FPR 0/31 → límite 11,0 %;
+  0/40 → 8,8 %.
+- Validador OK con el nuevo objetivo de B (7 de 7).
+- La predicción queda fechada por este commit, tres días antes de la edición
+  de prueba.
+
+### Qué quedó pendiente
+
+- **Jornada 5 el 30-09 o después**: P1/P2 sobre `EOAT0826`, ≥ 9 A sin INE,
+  `CTH0926` opcional. Avisar a Mateo al cerrarla.

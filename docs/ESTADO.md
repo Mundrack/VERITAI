@@ -28,9 +28,11 @@ PUERTA 3   corpus completo anotado + arnes de evaluacion     <-- AQUI. B = 2b de
            feat/puerta-3-recoleccion, sin fusionar)             62,1 % (tope 70 %). Test 2b y conector
            emisores tras DEC-032: INE, Portal Criminalidad,     implementados (mapa cerrado de 8 ops,
            SEPE, BdE (FMI e interior.gob.es: 403, cubeta E)     114 tests). Jornada 4 cerrada con
-           2b: research/puerta3/RECUPERABILIDAD-2B.md           B = 1 (regla 4b: parar). Decide Mateo:
-           propuesta: docs/PROPUESTA-2B.md (8 operaciones)     declarar B, jornada 5 (EOAT0826, CTH0926)
-           tope 3 B/edicion (4c), hipotesis 4d confirmada        o rastrear redacciones (sesgo declarado)
+           2b: research/puerta3/RECUPERABILIDAD-2B.md           B = 1. DEC-035: B declarada con 7 e
+           propuesta: docs/PROPUESTA-2B.md (8 operaciones)     intervalo (limitacion de H1); jornada 5 =
+           tope 3 B/edicion (4c), hipotesis 4d confirmada        prediccion sobre EOAT0826 (30-09, escrita
+           prediccion P1/P2 escrita el 27-09 (diseno 4h)       el 27-09) + A hasta 40 sin INE; CTH0926
+                                                               opcional; via (c) descartada por sesgo
 
 PUERTA 4   evaluacion completa: metricas, ablacion,
            sondas contrafactuales

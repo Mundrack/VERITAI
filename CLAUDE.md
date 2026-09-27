@@ -50,7 +50,8 @@ PUERTA 1  research/PILOT-DECISION.md con PILOT_GO   SUPERADA (DEC-023, alcance n
 PUERTA 2  prototipo end-to-end, UNA clase, UN emisor  CERRADA (DEC-030; P11 en NEEDS_REVIEW
                                                        como condicion anotada, P-23)
 PUERTA 3  corpus anotado + arnes de evaluacion        EN CURSO (DEC-031 diseno aprobado; DEC-034:
-                                                       la cubeta B es 2b, base revisada; 66 casos)
+                                                       la cubeta B es 2b; DEC-035: B declarada con 7;
+                                                       jornada 5 = prediccion sobre EOAT0826, 30-09)
 PUERTA 4  evaluacion completa
 ```
 
@@ -111,6 +112,11 @@ Vienen de `docs/DECISIONES.md`; aquí solo la regla, sin el contexto.
   `evidencia_al_publicar` y `evidencia_vigente`, cada una con su fecha; la
   edición anterior se recupera fuera de Tempus por el código de la nota
   (`research/puerta3/edicion_anterior.py`). Q048 sigue vetado. *(DEC-034)*
+- **La cubeta B se declara con 7 casos e intervalo** (limitación explícita
+  de H1: 2b solo existe en 2 de las 8 operaciones del mapa). La jornada 5 es
+  una prueba de predicción sobre `EOAT0826` escrita antes del 30-09 (diseño
+  §4h) y completa A hasta 40 sin INE; `CTH0926` opcional; rastrear
+  redacciones ya vistas está descartado por sesgo. *(DEC-035)*
 - **La métrica de la Puerta 1 se mide sobre todos los candidatos admitidos por
   la regla dura**, no sobre el lote por cubetas, y se reporta desagregada por
   nivel de emisor y vía de descubrimiento. *(DEC-020)*

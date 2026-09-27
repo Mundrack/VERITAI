@@ -164,6 +164,16 @@ amenaza a la validez externa del conector: la mitigación es que la rotura sea
 visible (abstención `PREVIOUS_EDITION_NOT_FOUND`, nunca un valor inventado) y
 que las ediciones ya descargadas queden conservadas con su sha256.
 
+**Limitación explícita de H1 (DEC-035).** La cubeta B del conjunto de
+evaluación se declara con **7 casos** de 2b (Wilson 95 % del recall: 7/7 →
+[64,6; 100]; 6/7 → [48,7; 97,4]), no con los 15 del diseño. La razón es
+estructural: 2b solo puede darse donde el emisor publica niveles sin la tasa
+por comunidad, y eso ocurre en dos de las ocho operaciones del mapa (EOH y
+EOAT); en las seis restantes no apareció ninguno. B está acotado por el
+universo, no por el esfuerzo de recolección. H1 se sostiene, si se sostiene,
+como existencia y computabilidad del fenómeno con ese intervalo; **no como
+frecuencia en la prensa**.
+
 ## Caso canónico: no hay todavía
 
 Se cotejaron C29, C21 y C18 contra cinco requisitos idénticos —primaria
@@ -200,7 +210,8 @@ afirmaciones correctas.
 
 **No afirma:** que el autor quiso engañar; que el dato sea falso; que el método
 funcione fuera de nivel 1 (el 58,3% es una limitación, no una promesa); que el
-corpus represente a España o a Latinoamérica; que el piloto pruebe H1, H2 o
+corpus represente a España o a Latinoamérica; que 2b sea frecuente en la
+prensa (B se declara con 7 casos e intervalo, DEC-035); que el piloto pruebe H1, H2 o
 H3; que el sistema funcione sin modelos de lenguaje —solo que la decisión no
 depende de ellos—; ni que exista todavía un caso canónico de base revisada con
 los cinco requisitos.

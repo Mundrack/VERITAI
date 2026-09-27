@@ -60,12 +60,12 @@ el sistema no falla nunca. **40 es el mínimo** que tolera un falso positivo;
 | Cubeta | Qué es | Objetivo (mín.) | Para qué |
 |---|---|---|---|
 | **A · Controles con test aplicable** | cambio entre periodos correctamente enmarcado: base = referencia del emisor, `truth` supported, `context` no_divergence | **50 (40)** | **FPR, H3** |
-| B · **2b esperada** (DEC-034; antes 2a) | base revisada: la tasa del claim usa la edición **al publicar** del periodo base y la edición **vigente** la contradice, con o sin cambio de signo | 20 (15) — 18/20 detectados da 90 % [69,9; 97,2] | H1, H2 |
+| B · **2b esperada** (DEC-034; antes 2a) | base revisada: la tasa del claim usa la edición **al publicar** del periodo base y la edición **vigente** la contradice, con o sin cambio de signo | **7 (7)** desde DEC-035 (§4g; antes 20 (15)) — 7/7 detectados da 100 % [64,6; 100]; 6/7, 85,7 % [48,7; 97,4] | H1, H2 |
 | C · Otras clases | 2a periodo o base elegida (secundaria desde DEC-034, 0/43), 3 absoluto/relativo, 4 denominador, 2c método; 1 ilustrativa | 15 (10) | el test principal no debe disparar; H1 |
 | D · Sin test aplicable | niveles, extremos, umbrales, compuestos, correctos | 10 (5) | `undetermined` y abstención correctos |
 | E · Fallo de recuperación | primaria o edición anterior no localizable; bloqueado | 10 (5) | las cinco de R02 §7, sin maquillar |
 | F · Claims falsos | `contradicted` sin divergencia | 5 (3) | resuelve la discrepancia C17 |
-| | **Total** | **110 (78)** | |
+| | **Total** | **97 (70)** desde DEC-035 (antes 110 (78)) | |
 
 Reglas de composición: los hermanos por criba cuentan **una vez** y quedan
 marcados; A y B con **≥ 2 emisores** cada una; **≤ 3 controles por nota de
@@ -148,7 +148,7 @@ mitad** (fin de la jornada 2): proyección por cubeta con el ritmo real.
   FPR < 10 %**, y se declara como limitación. **< 20** → H3 **no evaluable**;
   la Puerta 3 no se cierra y se decide por DEC (más tiempo o rediseño).
 - **Otras cubetas bajo mínimo:** se reporta con su intervalo y se declara la
-  limitación por hipótesis (B < 15: recall sin afirmación sobre H2; E < 5:
+  limitación por hipótesis (B < 7 desde DEC-035, antes 15: recall sin afirmación sobre H2; E < 5:
   métricas de recuperabilidad marcadas como posiblemente optimistas; F < 3: la
   discrepancia C17 queda sin resolver). Ninguna cubeta se rellena con
   hermanos, con casos del piloto ni relajando la regla dura.
@@ -349,3 +349,103 @@ D, BdE julio 2026 uno).
 tope; E064 D). Todos los PDF mensuales del SEPE (nueve ediciones) y las notas
 del BdE respondieron 200 al agente identificado. B de la jornada = 1 (E066):
 por la regla §4b se para y decide Mateo.
+
+### 4g. Cubeta B declarada con 7 casos e intervalo (DEC-035, 2026-09-27)
+
+**Decisión de Mateo tras la jornada 4.** La cubeta B se declara con los
+**7 casos** anotados (E031, E042, E043, E047, E053, E055, E066; E056 queda
+como excedente por el tope §4c). El mínimo de 15 **baja a 7 con intervalo
+declarado** y esa rebaja queda como **limitación explícita de H1**.
+
+**Razón estructural, no de esfuerzo.** 2b es un mecanismo de redacción que
+solo puede darse donde el emisor publica niveles sin la tasa por comunidad
+(§4d). En el mapa cerrado de ocho operaciones eso ocurre en **dos** (EOH y
+EOAT); en las otras seis el anexo o la nota traen la tasa hecha y no apareció
+ninguno. El universo de B es, por tanto: dos operaciones × las ediciones
+admisibles de 2026 × las piezas regionales que calculan la tasa × el tope de
+tres por edición. Dentro de ese universo, las ediciones de marzo a junio dieron
+0 piezas con base provisional de unas 25 comprobadas, y la jornada 4 (0,9 h,
+unas 40 búsquedas dirigidas) produjo 1. **B está acotado por el universo, no
+por el esfuerzo de recolección**: seguir buscando en las mismas ediciones no
+cambia el número, solo el tiempo.
+
+**Lo que se afirma y con qué intervalo.** Recall de 2b sobre 7 positivos,
+Wilson 95 %: 7/7 → 100 % [64,6; 100]; 6/7 → 85,7 % [48,7; 97,4]; 5/7 →
+71,4 % [35,9; 91,8]. La tesis afirma que el fenómeno existe, es computable
+con dos ediciones y el sistema lo detecta con ese intervalo; **no afirma nada
+sobre su frecuencia en la prensa**. H2 se evalúa igual (la edición anterior
+se recuperó en los 7). La fila B de la tabla de §1 pasa a **7 (7)** con el
+intervalo de arriba; §3 se lee con ese mínimo.
+
+**Lo que no cambia.** A sigue en 50 (40): es lo que sostiene H3 y hoy está
+en 31 (límite superior del FPR con 0 errores: 11,0 %; con 40, 8,8 %). C, D,
+E, F y O, igual. Regla dura, DEC-021, DEC-025 y DEC-029, igual.
+
+### 4h. Jornada 5 como prueba de predicción, no como recolección (escrita antes del 30-09)
+
+La hipótesis de §4d predice **dónde** aparece 2b. Para que la comprobación no
+sea retrospectiva, la predicción queda escrita el **2026-09-27**, en el commit
+que introduce esta sección, tres días antes de la edición que la pone a
+prueba.
+
+**Edición de prueba:** EOAT agosto 2026 (`EOAT0826`), calendario del INE:
+**30 de septiembre de 2026**. Edición anterior de la base: `EOAT0825`
+(agosto 2025), recuperable por el conector.
+
+**Predicción P1 (aparece).** Entre las piezas regionales que se localicen
+sobre `EOAT0826` con una tasa interanual de viajeros o pernoctaciones en
+apartamentos o campings por comunidad, calculada por la redacción (la nota
+del INE no la trae), **al menos una** reproduce la tasa solo con la base de
+`EOAT0825` y no con la vigente: un 2b.
+
+**Predicción P2 (no aparece).** Entre las piezas regionales localizadas en la
+misma jornada sobre ediciones de 2026 de las seis operaciones con tasa
+publicada (ETDP, Hipotecas, Sociedades, IPI, FRONTUR, EGATUR), **ninguna**
+usa una base provisional distinta de la vigente.
+
+**Cómo se lee el resultado, fijado ahora.**
+
+| P1: piezas localizadas con tasa propia | 2b encontrados | lectura |
+|---|---|---|
+| ≥ 6 | ≥ 1 | P1 confirmada para esta edición |
+| ≥ 8 | 0 | P1 **refutada** para esta edición: la condición de §4d es necesaria pero no discrimina; se declara |
+| < 6 | cualquiera | inconclusa: el universo localizable fue demasiado pequeño; se reporta el número |
+
+P2 se considera refutada con un solo 2b en las seis operaciones con tasa, sea
+cual sea el número de piezas. Tasa base observada hasta hoy en la EOAT: 1
+pieza con base provisional de 11 localizadas (EOAT0526 1/3, EOAT0626 0/3,
+EOAT0726 0/5), así que P1 es una predicción con riesgo real de fallar.
+
+**Lo que P1 no discrimina.** `EOAT0826` es una edición de verano; un 2b ahí
+es compatible con §4d y con la observación de §4e ampliado (el patrón se
+concentra en julio y agosto). La edición que separa ambas lecturas es
+`CTH0926` (23 de octubre): §4d admite 2b; la lectura estacional lo hace menos
+probable. Queda **opcional** (§4i).
+
+**Método de la jornada 5, el mismo de las jornadas 3 y 4:** tabla de tasas
+provisional/vigente por CCAA con `EOAT0825` (anexo) y la API, búsqueda de las
+cifras que solo salen con la provisional, criba (a) y (b) por caso, cronómetro
+por caso, tope de tres B por edición. Se cuentan y se listan **todas** las
+piezas localizadas, con la base que usan, no solo las que dan B.
+
+### 4i. La jornada 5 completa A hasta 40, sin INE
+
+H3 necesita 40 controles y hay 31. En la misma jornada se recolectan **al
+menos 9 controles A sin emisor INE** (cuota, §4f): SEPE (junio y agosto 2026,
+y septiembre si sale el 2 de octubre; tres por edición), Banco de España
+(deuda por CCAA del segundo trimestre, que se publica el 30 de septiembre;
+notas de mayo y julio de 2026) y Portal Estadístico de Criminalidad (edición
+anual 2025, publicada en marzo de 2026, si no está vetada; 1T2026 ya llegó al
+tope). Cada control con criba, cronómetro y la misma regla de tres por
+edición. `CTH0926` (23 de octubre) se recolecta **si el calendario lo permite**;
+no bloquea el cierre de la jornada ni de la Puerta.
+
+### 4j. Vía descartada: rastrear las redacciones que ya mostraron el mecanismo
+
+Se propuso y **se descarta (DEC-035)**. Seguir edición a edición a El Nuevo
+Digital Murcia, MurciaEconomía, EFE Baleares, Europa Press Madrid o Galicia
+Press produciría B barato, pero sesga justo lo que el control natural de §4e
+mide: la proporción de redacciones que calculan con una base u otra sobre la
+misma edición. Un conjunto enriquecido con esas redacciones diría que 2b es
+frecuente porque se buscó donde ya se sabía que estaba. Queda anotado como
+vía descartada y por qué.

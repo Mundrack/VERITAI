@@ -1058,3 +1058,49 @@ jornada, con la tasa observada en la jornada 2 (3 de 17 casos de prensa).
 una clase que no aparece con este método. Redefinir el alcance hacia emisores
 institucionales para salvar 2a: cambia el objeto más que la clase, y Q048
 muestra que las ediciones admisibles no llegan hasta diciembre.
+
+---
+
+## DEC-035 · La cubeta B se declara con 7 casos e intervalo; la jornada 5 es una prueba de predicción sobre EOAT0826 y completa A hasta 40 sin INE
+
+**Fecha:** 2026-09-27 · **Estado:** vigente · **Decide:** Mateo · **Aplica:** diseño de la Puerta 3 (§1, §3, §4g–§4j), lote y validador (`OBJETIVO_CUBETA`), encuadre (`TESIS-ENCUADRE`, H1), `CLAUDE.md`
+
+**Contexto.** La jornada 4 cerró con B = 1 (E066, EOAT0526) tras cumplir la
+cuota de emisor (INE 62,1 %). Por la regla de §4b (B ≤ 3) se paró. El conjunto
+tiene 7 B contables (más E056 excedente) en tres ediciones de dos operaciones.
+Unas 25 piezas regionales de las ediciones de marzo a junio se cotejaron
+contra las dos bases y todas usaban la vigente. La hipótesis de §4d (2b solo
+donde el anexo no trae la tasa por CCAA) se cumple en las dos operaciones sin
+tasa y en ninguna de las seis con tasa.
+
+**Decisión.**
+
+1. **B se declara con 7 casos y su intervalo** (Wilson 95 %: 7/7 → [64,6;
+   100]; 6/7 → [48,7; 97,4]). El mínimo de 15 baja a 7. **Razón estructural,
+   escrita en el diseño (§4g):** 2b solo existe en 2 de las 8 operaciones del
+   mapa, así que B está acotado por el universo y no por el esfuerzo de
+   recolección. Queda como **limitación explícita de H1**: la tesis afirma
+   que el fenómeno existe, es computable y se detecta con ese intervalo; no
+   afirma su frecuencia.
+2. **Jornada 5 = prueba de predicción, no recolección.** La predicción sobre
+   `EOAT0826` (30-09) queda escrita en §4h **antes** de la publicación, con
+   fecha y commit: P1 (aparece al menos un 2b entre las piezas con tasa
+   propia) y P2 (ninguno en las seis operaciones con tasa publicada), con la
+   lectura de cada resultado fijada de antemano.
+3. **En la misma jornada se completa A hasta 40**, lo que sostiene H3 (hoy
+   31), **sin emisor INE** por la cuota (§4i).
+4. **`CTH0926` (23-10) es opcional:** se recolecta si el calendario lo
+   permite; nada se bloquea por esperarlo.
+5. **Vía (c) descartada:** rastrear las redacciones que ya mostraron el
+   mecanismo sesga lo que el control natural de §4e pretende medir. Anotado
+   en §4j con la razón.
+
+**Consecuencias.** `OBJETIVO_CUBETA["B"]` pasa a (7, 7); el total del diseño
+pasa de 110 (78) a 97 (70). El encuadre añade la limitación de H1. Se avisa a
+Mateo al cerrar la jornada 5 con el resultado de P1 y P2 y el número de A.
+
+**Alternativas descartadas.** Mantener el mínimo en 15 y ampliar jornadas:
+la tasa observada en las ediciones de primavera es cero, y el tope de tres
+por edición ya está lleno en las dos ediciones que sí lo producen. Bajar a 10:
+no hay universo del que sacar los tres que faltan sin la vía (c). Rastrear
+redacciones (vía c): sesgo declarado arriba.

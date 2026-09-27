@@ -9,6 +9,33 @@ Emisores del conjunto: **INE, Interior vía Portal Estadístico de Criminalidad,
 SEPE y Banco de España** (DEC-032; FMI e interior.gob.es quedan como hallazgo
 de bloqueo, cubeta E).
 
+## JORNADA 5 — preinscrita el 2026-09-27 (DEC-035): prueba de predicción sobre EOAT0826 + A hasta 40 sin INE
+
+**Se abre el 30 de septiembre de 2026**, cuando el INE publique la EOAT de
+agosto (`EOAT0826`). Hasta entonces no se recolecta nada. La predicción está
+escrita en el diseño (§4h) y en el commit de esta sección, antes de la
+publicación:
+
+- **P1:** al menos un 2b entre las piezas regionales con tasa propia sobre
+  `EOAT0826` (apartamentos o campings por CCAA). Confirmada con ≥ 1 en ≥ 6
+  piezas; refutada con 0 en ≥ 8; inconclusa con < 6 localizadas.
+- **P2:** ningún 2b en las piezas localizadas sobre ediciones de 2026 de las
+  seis operaciones con tasa publicada (ETDP, Hipotecas, Sociedades, IPI,
+  FRONTUR, EGATUR). Un solo 2b la refuta.
+- Tasa base observada en la EOAT hasta hoy: 1 pieza con base provisional de
+  11 localizadas.
+
+**Además, en la misma jornada:** ≥ 9 controles A sin INE (SEPE junio/agosto
+2026, BdE 2T2026 por CCAA del 30-09 y notas de mayo/julio, Portal anual 2025
+si no está vetado), con criba, cronómetro y tres por edición. `CTH0926`
+(23-10) opcional. **Vía descartada:** seguir a las redacciones que ya
+mostraron el mecanismo (§4j).
+
+**Cubeta B declarada con 7** (E031, E042, E043, E047, E053, E055, E066; E056
+excedente): Wilson 95 % del recall 7/7 → [64,6; 100]; 6/7 → [48,7; 97,4].
+Limitación explícita de H1: 2b solo existe en 2 de las 8 operaciones del
+mapa.
+
 ## JORNADA 4 (cuota de emisor + 2b dirigido a EOH/EOAT): CERRADA con **B = 1 → parar y replantear**
 
 Regla previa (diseño §4b, la misma de la jornada 3): **B por jornada ≥ 4 →
