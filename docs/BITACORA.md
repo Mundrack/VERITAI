@@ -1180,3 +1180,36 @@ actualizados.
 - I-001: fijar consultas, criterio de "llega" y procedimiento antes de medir;
   esperar el visto bueno de Mateo.
 - Jornada 5: no se abre hasta que Mateo lo diga.
+
+---
+
+## 2026-09-27 (21:00Z) — Literatura para el futuro eje de manipulación, pasada 1 (I-002)
+
+### Qué se hizo
+
+Lectura completa de los PDF que Mateo dejó en Descargas, versionados en
+`research/literatura/` con `SHA256SUMS` (idénticos byte a byte a los de
+Descargas). Nueve fichas (L-01 a L-10; L-04 Hauch, **no disponible**), la
+evaluación de SemEval 2020/2023 como base metodológica, la matriz de tres
+niveles con la regla dura y el informe de brechas, todo en `docs/IDEAS.md`
+(I-002). Nada va a `DECISIONES.md`; `EJE-MANIPULACION.md` no se toca; no hay
+implementación; no toca la Puerta 3; B0/B1/B2 no se diseñan.
+
+### Qué se verificó
+
+- Identidad de cada PDF leída de su primera página: `nihms715564.pdf` es
+  Tannenbaum et al. 2015, **no Hauch**; `2023.semeval-1.0.pdf` es el front
+  matter de las actas; los dos Ecker son el mismo artículo (se cita el
+  manuscrito aceptado).
+- DOI de los cuatro artículos de ACL comprobados en la Antología ACL (los PDF
+  no los imprimen); el de LREC-COLING 2024 no muestra DOI.
+- Tablas giradas y anexos en imagen (SemEval 2020, tabla 9 y guía de
+  anotación; guía árabe de LREC 2024) leídos renderizando la página. La guía
+  árabe se tradujo por el agente: NEEDS_REVIEW por un lector de árabe.
+- Porcentajes de SemEval 2023 recalculados desde su tabla 17.
+
+### Qué quedó pendiente
+
+- Mateo decide qué hacer con I-002; el siguiente paso posible (rellenar la
+  tabla de papers de `EJE-MANIPULACION.md` §3) no se hace sin su OK.
+- Jornada 5: sigue cerrada.
