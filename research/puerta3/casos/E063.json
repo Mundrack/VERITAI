@@ -1,0 +1,23 @@
+{
+  "claim_id": "E063",
+  "texto": "Aldaia (Valencia) alcanza las 521 infracciones penales en el primer trimestre y registra un incremento del 79,7% respecto al mismo periodo de 2025",
+  "fuente_url": "https://www.elperiodic.com/criminalidad-municipio-municipio-comunitat-valenciana-donde-suben-delitos-donde-caen_1079239",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "Ministerio del Interior",
+    "tabla": "09003 (Portal Estadistico, Balance 1T2026)",
+    "serie_nombre": "46021 Aldaia · III. TOTAL INFRACCIONES PENALES",
+    "unidad": "hechos conocidos",
+    "referencia_principal": "interanual",
+    "descripcion": "Balance de criminalidad, infracciones penales, municipio de Aldaia, trimestral"
+  },
+  "periodo_objetivo": "2026-T1",
+  "periodo_base": "2025-T1",
+  "valor_objetivo": 521,
+  "cambio_afirmado": 79.7,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Control Interior/Portal: base interanual = referencia del emisor."
+}

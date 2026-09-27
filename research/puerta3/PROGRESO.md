@@ -9,6 +9,102 @@ Emisores del conjunto: **INE, Interior vía Portal Estadístico de Criminalidad,
 SEPE y Banco de España** (DEC-032; FMI e interior.gob.es quedan como hallazgo
 de bloqueo, cubeta E).
 
+## JORNADA 4 (cuota de emisor + 2b dirigido a EOH/EOAT): CERRADA con **B = 1 → parar y replantear**
+
+Regla previa (diseño §4b, la misma de la jornada 3): **B por jornada ≥ 4 →
+sigue; ≤ 3 → se para y se replantea el mínimo con intervalo declarado.**
+Reloj `P3-J4`: 2026-09-26 17:58:09Z → 18:28:19Z y 2026-09-27 17:03:11Z →
+17:29Z = **0,9 h**. Entre ambos tramos la sesión quedó suspendida;
+`P3-PAUSA5` se escribió retroactivamente el 27 al detectar el salto de fecha
+(t0 = última marca real, t2 = primera marca nueva). **B = 1 → se para.**
+
+Resultado: 9 casos trabajados (E058–E066), 9 candidatos (Q067–Q075), 0
+rechazados. **Cuota de emisor (§4f) cumplida**: INE pasa de 39/57 (68,4 %) a
+41/66 (62,1 %): SEPE julio 2026 ×3 (A), Banco de España junio 2026 ×2 (A),
+Portal 1T2026 ×2 (A + D), INE EOAT0726 ×1 (C) y EOAT0526 ×1 (B).
+
+| cubeta | jornada 4 | acumulado | objetivo (mín.) |
+|---|---|---|---|
+| A controles con test | 6 | 31 | 50 (40) |
+| **B 2b esperada** | **1** | **7** (+1 excedente) | 20 (15) |
+| C otras clases (2a, 3, 4, 2c, 1) | 1 | 2 | 15 (10) |
+| D sin test | 1 | 10 | 10 (5) |
+| E fallo de recuperación | 0 | 11 | 10 (5) |
+| F claim falso | 0 | 3 | 5 (3) |
+| O other_observed | 0 | 1 | — |
+
+**El B de la jornada: E066**, El Nuevo Digital Murcia (2026-07-01, el mismo
+día que la nota del INE): "los apartamentos [de la Región] recibieron un 60 %
+más de viajeros (11.752)" y "42.396 noches (+25 %)". Solo sale con la base
+provisional de mayo 2025 (anexo EOAT0525: 7.336 viajeros, 33.809 noches); con
+la vigente (8.740; 35.167) es +34,5 % y +20,6 %. **Primer 2b fuera de la EOH
+(EOAT, apartamentos)** y primera edición nueva con B (EOAT0526): confirma la
+hipótesis §4d en la segunda operación sin tasa por CCAA.
+
+**Los otros ocho**: E058 Junta de Andalucía (−9.661, −1,8 %, 526.862; SEPE
+julio, A), E059 El Pespunte (Sevilla, "13.005 menos en seis meses": base
+elegida, mismo signo, señal de horizonte 8×; A), E060 elDiario.es Cantabria
+(−250, −0,94 %; A), E061 Tercera Información (deuda 1,76 bn, +4,2 %, 101,5 %;
+BdE junio, A), E062 Catalunya Press (CCAA 355.000 M, +3,6 %; A), E063 El
+Periòdic (Aldaia +79,7 %; Portal 1T2026, A: tope de controles de la edición),
+E064 Aldaya Decidix ("lidera el aumento en la Comunitat": ranking recomputado
+sobre los 68 municipios de la tabla 09003, cuadra; D) y **E065 elDiario.es
+Cantabria (C, 2a *valor atribuido a otro periodo*)**: el artículo de julio
+repite literalmente la frase de apartamentos y albergues del artículo de junio
+(57.049, +1,3 %), cuando julio es 111.666 (−1,49 %). Hallado al cotejar con la
+API mientras se buscaba 2b.
+
+**Método.** (1) Cuota: nueve PDF mensuales del SEPE (diciembre 2025 a julio
+2026 y julio 2025, todos 200 al agente identificado, ~700 KB cada uno) para
+Andalucía, Sevilla y Cantabria; notas del BdE de junio y marzo de 2026; tabla
+09003 del Portal (ya descargada para E036). (2) 2b dirigido por la hipótesis
+§4d: tabla de tasas provisional/vigente por CCAA y provincia para CTH0326,
+CTH0426, CTH0526 y CTH0626 (anexos CTH0325–CTH0625 + API `nult=20`) y para
+EOAT0526, EOAT0626 y EOAT0726 (anexos EOAT0525–EOAT0725), y unas 40 búsquedas
+con las cifras que solo salen con la provisional.
+
+**Hallazgo principal: en las ediciones de marzo a junio la prensa regional
+localizada usó la base vigente.** Unas 25 piezas comprobadas, todas vigente:
+CTH0326 (Última Hora/EFE Baleares +14,5 %; ara.cat Girona +18,6 %), CTH0426
+(Última Hora Baleares ≈ +4 %; Murcia Confidencial −1 %; leonoticias), CTH0526
+(Valencia Plaza C. Valenciana +6,6 %; La Voz de Madrid +0,7 %; Gente Digital
+La Rioja −12,7 % y Valladolid −3,2 %; viaempresa Cataluña +2,8 %; fibwidiario
+Baleares +5,4 %; La Voz de Almería +11,8 %), CTH0626 (madridactual/EP Madrid
++1,2 % y residentes +4,2 %; Catalunya Press −2,1 %; Gente Digital/EP CyL
+−4,4 % y Cantabria −5,1 %; La Nueva Crónica y Heraldo de León −3,1 %;
+Florencio Sevilla ciudad, base 258.050 = vigente; Galicia Press +3 %,
+indistinguible), EOAT0526 (Cantabria Económica campings +7,1 %; moncloa.com
+Canarias −8,7 %), EOAT0626 (EP Andalucía; Crónica de Cantabria campings +13,9 %
+y apartamentos +1,3 %; Galicia Press/EP 90.048 → 95.756) y EOAT0726 (EP
+Andalucía; elDiario.es Cantabria campings +4 %; RTVC/eldiario Canarias −4,4 %;
+Noticias de Navarra apartamentos +40,4 %; Galicia Press +10,5 %). Las mismas
+redacciones que usaron la provisional en julio y agosto (EP Madrid, EFE
+Baleares, El Debate CyL, Galicia Press) usaron la vigente en junio. Con lo
+recolectado, el patrón de base provisional se concentra en **CTH0726, CTH0826
+y EOAT0526** (y en redacciones concretas: MurciaEconomía y El Nuevo Digital
+Murcia, ambas en Murcia). Hipótesis abierta, no probada: el mecanismo depende
+del turno de redacción (verano) más que de la operación; la prueba barata es
+EOAT0826 (30-09) y CTH0926 (23-10).
+
+**Comprobaciones de método.** Los anexos de 2026 (CTH0526, CTH0626) coinciden
+con la API de hoy para 2026: el INE no ha revisado 2026, así que las tablas
+provisional/vigente son válidas. La revisión de 2025 ya estaba vigente el
+2026-04-23 (Girona +18,6 % y Baleares +14,5 % solo salen con la vigente): 2b
+era posible en todas las ediciones de 2026. Sevilla ciudad (puntos turísticos,
+fuera del mapa) usó la vigente: no hay fallo de cobertura que anotar. El BdE
+avisa en cada nota de que el avance se revisa, pero el cuadro mensual del PDF
+no es texto extraíble (pdfplumber): un 2b sobre el avance del BdE queda como
+NEEDS_REVIEW, no evaluado. La base de El Español (E033, julio: 1.763 → 1.744)
+es la de la nota de junio; no se comprobó si la nota de julio la revisa.
+
+**Lo que decide Mateo** (regla §4b: B = 1 ≤ 3 → parar): (a) declarar la
+cubeta B con lo que hay (7 + 1 excedente, tres ediciones, dos operaciones) y
+el intervalo; (b) jornada 5 sobre EOAT0826 (30-09) y CTH0926 (23-10) para
+probar si el patrón de verano continúa; (c) rastrear las redacciones que ya
+mostraron el mecanismo (El Nuevo Digital Murcia, MurciaEconomía, EFE Baleares,
+EP Madrid, Galicia Press) edición a edición, que es barato pero sesga la
+muestra hacia esas redacciones y hay que declararlo.
+
 ## JORNADA 3 (vía divergencia, B = 2b, medición): CERRADA con **B = 4 → sigue**
 
 Regla previa, fijada por Mateo (diseño §4b): **B por jornada ≥ 4 → sigue;
@@ -254,6 +350,15 @@ Estado del lote al parar (salida de `validar_evaluacion.py`, ver bitácora):
 | E055 | Q064 | B | INE CTH0826 | Castilla y León −4,5 % agosto (vigente −3,2 %) | mixed / div, 2b |
 | E056 | Q065 | B | INE CTH0726 | Murcia +4,09 % julio (vigente +3,32 %) | mixed / div, 2b |
 | E057 | Q066 | A | INE CTH0726 | Castilla-La Mancha −6,7 % julio | supported / no_div |
+| E058 | Q067 | A | SEPE julio 2026 | Junta: Andalucía −9.661 (−1,8 %), 526.862 | supported / no_div |
+| E059 | Q068 | A | SEPE julio 2026 | Sevilla "13.005 menos en seis meses" (horizonte 8×) | supported / no_div |
+| E060 | Q069 | A | SEPE julio 2026 | Cantabria −250 (−0,94 %) | supported / no_div |
+| E061 | Q070 | A | BdE junio 2026 | deuda 1,76 bn, +4,2 %, 101,5 % | supported / no_div |
+| E062 | Q071 | A | BdE junio 2026 | CCAA 355.000 M, +3,6 % | supported / no_div |
+| E063 | Q072 | A | Interior 1T2026 | Aldaia 521, +79,7 % | supported / no_div |
+| E064 | Q073 | D | Interior 1T2026 | Aldaia "lidera el aumento" (ranking) | supported / undetermined |
+| E065 | Q074 | C | INE EOAT0726 | Cantabria apartamentos "57.049, +1,3 %" (es junio) | mixed / div, 2a otro periodo |
+| E066 | Q075 | B | INE EOAT0526 | Murcia apartamentos +60 % viajeros (vigente +34,5 %) | mixed / div, 2b |
 
 Rechazados en la jornada 2: Q035 (Asnef, fuera de alcance), Q038
 (Registradores, fuera de alcance), Q048 (Delegación del Gobierno en Madrid,

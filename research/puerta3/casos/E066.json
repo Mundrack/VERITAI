@@ -1,0 +1,38 @@
+{
+  "claim_id": "E066",
+  "texto": "Buen mayo para los apartamentos de la Región, que recibieron un 60% más de viajeros: llegaron a los 11.752 y acumularon 42.396 noches (+25%)",
+  "fuente_url": "https://elnuevodigitalmurcia.es/art/8408/buen-mayo-para-los-apartamentos-de-la-region-que-recibieron-un-60-mas-de-viajeros",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "1993",
+    "serie_nombre": "Murcia (Región de). Viajeros. Total.",
+    "unidad": "viajeros",
+    "referencia_principal": "interanual",
+    "descripcion": "EOAT, viajeros en apartamentos turisticos, Region de Murcia, mensual"
+  },
+  "periodo_objetivo": "2026-M05",
+  "periodo_base": "2025-M05",
+  "valor_objetivo": 11752,
+  "cambio_afirmado": 60,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "evidencia_al_publicar": {
+    "valor": 7336,
+    "edicion": "INE EOAT0525 (mayo 2025, datos provisionales)",
+    "fecha": "2025-07-01",
+    "url": "https://www.ine.es/prensa/anexo_tablas/es/EOAT0525.xlsx",
+    "raw_value_span": "[EOAT0525.xlsx, hoja EOAP_Hoja1, fila 26] 'Murcia, Región de', 7336, 6009, 1327, 33809, 26508, 7301, 4.61",
+    "verificacion": "descarga 2026-09-27 con research/puerta3/edicion_anterior.py (HTTP 200, 157.423 bytes; fecha de la nota leida del HTML)"
+  },
+  "evidencia_vigente": {
+    "valor": 8740,
+    "edicion": "API Tempus, tabla 1993, edicion vigente",
+    "fecha": "2026-09-26",
+    "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/1993",
+    "raw_value_span": "[INE API tabla 1993] 'Murcia (Región de). Viajeros. Total.' 2025-M05: 8740"
+  },
+  "notas": "Base interanual correcta en periodo, tomada de la edicion provisional (7.336) y no de la vigente (8.740): 2b sin cambio de signo (+60,2% frente a +34,5%). Pernoctaciones: +25,4% provisional frente a +20,6% vigente."
+}

@@ -52,9 +52,7 @@ def listo(request: Request, response: Response) -> RespuestaListo:
     engine = getattr(request.app.state, "engine", None)
     if engine is None:
         response.status_code = status.HTTP_503_SERVICE_UNAVAILABLE
-        return RespuestaListo(
-            estado="no_listo", base_de_datos="sin_inicializar", detalle=None
-        )
+        return RespuestaListo(estado="no_listo", base_de_datos="sin_inicializar", detalle=None)
 
     viva, error = comprobar_conexion(engine)
     if not viva:

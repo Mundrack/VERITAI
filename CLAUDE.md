@@ -50,7 +50,7 @@ PUERTA 1  research/PILOT-DECISION.md con PILOT_GO   SUPERADA (DEC-023, alcance n
 PUERTA 2  prototipo end-to-end, UNA clase, UN emisor  CERRADA (DEC-030; P11 en NEEDS_REVIEW
                                                        como condicion anotada, P-23)
 PUERTA 3  corpus anotado + arnes de evaluacion        EN CURSO (DEC-031 diseno aprobado; DEC-034:
-                                                       la cubeta B es 2b, base revisada; 43 casos)
+                                                       la cubeta B es 2b, base revisada; 66 casos)
 PUERTA 4  evaluacion completa
 ```
 

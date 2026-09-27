@@ -3454,4 +3454,551 @@ CANDIDATOS: list[dict] = [
         descubrimiento_via="titular_prensa",
         descubrimiento_query="Madrid criminalidad 2026 'primer trimestre' baja OR desciende OR 'se reduce' OR 'cae' '%' Ayuso OR 'Consejería' OR 'Delegación del Gobierno' OR Marlaska OR 'Ministerio del Interior' declaración Comunidad de Madrid -Alcorcón",
     ),
+    # ------------------------------------------------------------------
+    # JORNADA 4 (2026-09-26, desde 17:58Z): cuota de emisor (diseno 4f).
+    # Localizacion en lote 18:05-18:15Z: busquedas SEPE julio 2026, BdE junio 2026
+    # y Portal 1T2026, y descarga de 9 PDF mensuales del SEPE (todos 200).
+    # ------------------------------------------------------------------
+    dict(
+        cid="Q067",
+        claim_text="El paro se redujo en Andalucía en 9.661 personas (-1,8%) en julio, situando la cifra total de desempleados en la comunidad en 526.862 personas, el registro más bajo desde diciembre de 2007",
+        claim_date="2026-08-04",
+        post_url="https://www.juntadeandalucia.es/organismos/empleoempresaytrabajoautonomo/servicios/actualidad/noticias/detalle/679072.html",
+        post_url_tipo="nota_oficial", emisor="Junta de Andalucía (Consejería de Empleo, nota de prensa)", emisor_tipo="institucion",
+        emisor_nivel=2, pais="ES", tema="empleo",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com paro Andalucía julio 2026 9.661 526.862",
+        criba_query_b="paro Andalucía julio 2026 '9.661' OR '526.862' 'diciembre de 2007' verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_a_organismo",
+        descubrimiento_query="paro julio 2026 Andalucía '9.661' baja OR desciende Junta OR SEPE noticia agosto 2026 comunidad",
+        collected_at="2026-09-26", case_id="E058",
+        # --- trabajo 2026-09-26 (localizacion en lote 18:05-18:15Z; E058 t0 18:16Z) ---
+        fuente_primaria="SEPE - Paro registrado julio 2026: nota 'El paro sube en 19.517 personas en julio y se situa en 2.311.499' (2026-08-04) + Datos estadisticos de empleo julio 2026, PDF 'DATOS_POR_CCAA-DEMANDAS_PENDIENTES.pdf' (tabla 6.2, parados por CCAA y provincia); ediciones anteriores: el mismo PDF de junio 2026 y de julio 2025",
+        primaria_url="https://www.sepe.es/SiteSepe/contenidos/que_es_el_sepe/estadisticas/datos_estadisticos/empleo/datos/2026/Julio_2026/DATOS_POR_CCAA-DEMANDAS_PENDIENTES.pdf",
+        primaria_url_tipo="PDF mensual del SEPE (HTTP 200 al agente identificado, 710.727 bytes, sha256 856b794bb982123d) + nota HTML (200); junio 2026 (200, 710.639 bytes, b59396969ece7759) y julio 2025 (200, 699.282 bytes, d4e55adbdbe8f483)",
+        via_de_acceso="pdf", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="pdf",
+        dato_actual="Andalucia, julio 2026: 526.862 parados (tabla 6.2, p.4); total nacional 2.311.499",
+        dato_anterior="junio 2026: Andalucia 536.523 (-> -9.661, -1,80%); total 2.291.982 (-> +19.517, +0,85%). Julio 2025: Andalucia 590.855 (-> -63.993, -10,83%); total 2.404.606 (-> -93.107, -3,87%)",
+        raw_value_span_actual=(
+            "[DATOS_POR_CCAA-DEMANDAS_PENDIENTES.pdf julio 2026, p.4, tabla 6.2] 'ANDALUCIA 526.862 11.012 29.970 "
+            "39.401 44.338 50.097 52.366 59.594 68.354 84.511 87.219' | 'TOTAL ZONA GEOGRAFICA 2.311.499 ...' || "
+            "[nota SEPE 2026-08-04] 'El paro registrado baja en tres Comunidades Autonomas en cifras absolutas en "
+            "Andalucia (-9.661 personas), Extremadura (-767 personas) y Cantabria (-250 personas)' || [Junta de "
+            "Andalucia 2026-08-04, el claim] 'El paro se redujo en Andalucia en 9.661 personas (-1,8%)'; 'la cifra "
+            "total de desempleados en la comunidad en 526.862 personas, el registro mas bajo desde diciembre de 2007'"
+        ),
+        raw_value_span_anterior=(
+            "[mismo PDF, junio 2026, p.4] 'ANDALUCIA 536.523 11.632 31.036 ...' | 'TOTAL ZONA GEOGRAFICA 2.291.982 "
+            "...' || [mismo PDF, julio 2025, p.4] 'ANDALUCIA 590.855 12.771 34.810 ...' | 'TOTAL ZONA GEOGRAFICA "
+            "2.404.606 ...'"
+        ),
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta A, emisor SEPE (edicion julio 2026, primer caso), jornada 4 (cuota de emisor), via busqueda a "
+            "organismo. 536523-526862 = 9.661; 9661/536523 = 1,80%: la base mensual es la referencia de cabecera del "
+            "SEPE; interanual -10,83%, mismo signo: sin 2a. 'Mas bajo desde diciembre de 2007' NO evaluado: cada PDF "
+            "mensual trae solo su mes; la serie por CCAA exigiria ~225 PDF (NEEDS_REVIEW). El resto de la nota "
+            "(68,7% del descenso nacional: 63993/93107 = 68,7%, cuadra; 'multiplica por mas de siete la suma de los "
+            "otros cuatro territorios') no se anota como claim. methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="SEPE paro julio 2026",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="SEPE", tabla="DATOS_POR_CCAA-DEMANDAS_PENDIENTES.pdf / tabla 6.2",
+                         serie_nombre="Parados registrados, Andalucía", unidad="personas",
+                         referencia_principal="mensual",
+                         descripcion="Paro registrado por comunidad autonoma, nivel mensual"),
+            periodo_objetivo="2026-M07", periodo_base="2026-M06",
+            valor_objetivo=526862, cambio_afirmado=-1.8, unidad_cambio="pct", direccion_afirmada="baja",
+            notas="Base mensual = referencia del emisor. El extremo ('mas bajo desde diciembre de 2007') no se evalua.",
+        ),
+    ),
+    dict(
+        cid="Q068",
+        claim_text="La provincia de Sevilla registra seis meses consecutivos de descenso del paro: 13.005 personas menos en los registros del SEPE",
+        claim_date="2026-08-04",
+        post_url="https://www.elpespunte.es/articulo/provincia/provincia-sevilla-registra-seis-meses-consecutivos-descenso-paro-13005-personas-menos-desempleo/20260804144002144084.html",
+        post_url_tipo="prensa", emisor="El Pespunte (Lucía Palop)", emisor_tipo="prensa_digital",
+        emisor_nivel=2, pais="ES", tema="empleo",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com paro Sevilla julio 2026 13.005 seis meses consecutivos",
+        criba_query_b="paro Sevilla julio 2026 '13.005' OR '131.385' OR '1.618' verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_a_organismo",
+        descubrimiento_query="paro julio 2026 Andalucía '9.661' baja OR desciende Junta OR SEPE noticia agosto 2026 comunidad",
+        collected_at="2026-09-26", case_id="E059",
+        # --- trabajo 2026-09-26 (localizacion en lote 18:05-18:15Z; E059 t0 18:16Z) ---
+        fuente_primaria="SEPE - Datos estadisticos de empleo, PDF 'DATOS_POR_CCAA-DEMANDAS_PENDIENTES.pdf' (tabla 6.2, parados por provincia) de julio 2026 y de las siete ediciones anteriores (diciembre 2025 a junio 2026) y de julio 2025",
+        primaria_url="https://www.sepe.es/SiteSepe/contenidos/que_es_el_sepe/estadisticas/datos_estadisticos/empleo/datos/2026/Julio_2026/DATOS_POR_CCAA-DEMANDAS_PENDIENTES.pdf",
+        primaria_url_tipo="PDF mensual del SEPE, misma ruta con <Mes>_<Anyo>: 9 ediciones, todas HTTP 200 al agente identificado (~700 KB cada una; sha256 julio 2026 856b794bb982123d, enero 2026 0ea4bb5bb79879b3, julio 2025 d4e55adbdbe8f483)",
+        via_de_acceso="pdf", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="pdf",
+        dato_actual="Sevilla (provincia), julio 2026: 131.385 parados (hombres 49.828, mujeres 81.557)",
+        dato_anterior="Sevilla: dic-2025 142.010 | ene-2026 144.390 | feb 144.076 | mar 142.137 | abr 136.312 | may 134.838 | jun 133.003 | jul 131.385 (seis descensos consecutivos feb-jul; 144390-131385 = 13.005; junio->julio -1.618). Julio 2025: 145.192 (-13.807, -9,51%)",
+        raw_value_span_actual=(
+            "[DATOS_POR_CCAA-DEMANDAS_PENDIENTES.pdf julio 2026, p.4, tabla 6.2] 'SEVILLA 131.385 2.717 7.647 10.153 "
+            "11.148 12.419 13.011 15.028 17.309 21.024 20.929' | [p.5, hombres] 'SEVILLA 49.828 ...' | [p.6, mujeres] "
+            "'SEVILLA 81.557 ...' || [El Pespunte 2026-08-04, el claim] '13.005 personas han salido de los registros "
+            "del Servicio Publico de Empleo Estatal (SEPE) durante la primera mitad de 2026'; '1.618 personas dejaron "
+            "de estar en las listas del paro en julio'; 'el desempleo se ha reducido un 9,5 % en el ultimo ano, con "
+            "131.385 personas desempleadas'"
+        ),
+        raw_value_span_anterior=(
+            "[mismo PDF, p.4, tabla 6.2, por edicion] enero 2026 'SEVILLA 144.390 ...' | febrero 'SEVILLA 144.076 "
+            "...' | marzo 'SEVILLA 142.137 ...' | abril 'SEVILLA 136.312 ...' | mayo 'SEVILLA 134.838 ...' | junio "
+            "'SEVILLA 133.003 ...' | julio 2025 'SEVILLA 145.192 ...' | diciembre 2025 'SEVILLA 142.010 ...'"
+        ),
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta A, emisor SEPE (edicion julio 2026, segundo caso), jornada 4, via busqueda a organismo. La "
+            "ventana 'primera mitad de 2026' (enero->julio, base elegida) es distinta de las referencias del SEPE "
+            "(mensual, interanual): test 2a aplicable. Recomputado: mensual -1.618, interanual -13.807, ambos "
+            "descensos -> sin cambio de signo, no dispara. SENAL DE HORIZONTE (DEC-029): 13.005 frente a 1.618 "
+            "mensual = 8x; se registra, no cuenta como divergencia. 'Seis meses consecutivos': feb-jul 2026 todos "
+            "por debajo del mes anterior (siete PDF), cuadra. La 'tasa de paro 13,45%' es EPA, fuera del emisor: no se "
+            "evalua. methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="SEPE paro julio 2026",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="SEPE", tabla="DATOS_POR_CCAA-DEMANDAS_PENDIENTES.pdf / tabla 6.2",
+                         serie_nombre="Parados registrados, Sevilla (provincia)", unidad="personas",
+                         referencia_principal="mensual",
+                         descripcion="Paro registrado por provincia, nivel mensual"),
+            periodo_objetivo="2026-M07", periodo_base="2026-M01",
+            valor_objetivo=131385, cambio_afirmado=-13005, unidad_cambio="abs", direccion_afirmada="baja",
+            notas="Base elegida (enero 2026, 'primera mitad de 2026'); referencias del emisor mensual (-1.618) e interanual (-13.807): mismo signo. Senal de horizonte 8x.",
+        ),
+    ),
+    dict(
+        cid="Q069",
+        claim_text="Cantabria, una de las tres únicas autonomías donde bajó el paro en julio, con 250 desempleados menos (-0,94%)",
+        claim_date="2026-08-04",
+        post_url="https://www.eldiario.es/cantabria/cantabria-tres-unicas-autonomias-paro-julio-250-desempleados_1_13426684.html",
+        post_url_tipo="prensa", emisor="elDiario.es Cantabria", emisor_tipo="prensa_digital",
+        emisor_nivel=1, pais="ES", tema="empleo",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com paro Cantabria julio 2026 250 desempleados",
+        criba_query_b="paro Cantabria julio 2026 '250' '26.355' OR '0,94%' verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_a_organismo",
+        descubrimiento_query="paro julio 2026 Cantabria '250' OR Extremadura '767' OR Cádiz '3.479' baja desempleados noticia 4 agosto 2026",
+        collected_at="2026-09-26", case_id="E060",
+        # --- trabajo 2026-09-26 (localizacion en lote 18:05-18:15Z; E060 t0 18:16Z) ---
+        fuente_primaria="SEPE - Paro registrado julio 2026: nota 2026-08-04 + PDF 'DATOS_POR_CCAA-DEMANDAS_PENDIENTES.pdf' (tabla 6.2) de julio 2026, junio 2026 y julio 2025",
+        primaria_url="https://www.sepe.es/SiteSepe/contenidos/que_es_el_sepe/estadisticas/datos_estadisticos/empleo/datos/2026/Julio_2026/DATOS_POR_CCAA-DEMANDAS_PENDIENTES.pdf",
+        primaria_url_tipo="PDF mensual del SEPE (HTTP 200 al agente identificado, 710.727 bytes, sha256 856b794bb982123d) + nota HTML (200) + PDF de junio 2026 y julio 2025 (200)",
+        via_de_acceso="pdf", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="pdf",
+        dato_actual="Cantabria, julio 2026: 26.355 parados; junio 2026: 26.605 (-> -250, -0,94%). Nota SEPE: baja en Andalucia (-9.661), Extremadura (-767) y Cantabria (-250)",
+        dato_anterior="julio 2025: Cantabria 26.971 (-> -616, -2,28%); total nacional 2.404.606 -> 2.311.499 (-3,87%)",
+        raw_value_span_actual=(
+            "[DATOS_POR_CCAA-DEMANDAS_PENDIENTES.pdf julio 2026, p.4, tabla 6.2] 'CANTABRIA 26.355 474 1.223 1.822 "
+            "1.989 2.350 2.707 3.189 3.433 4.218 4.950' || [nota SEPE 2026-08-04] 'El paro registrado baja en tres "
+            "Comunidades Autonomas en cifras absolutas en Andalucia (-9.661 personas), Extremadura (-767 personas) y "
+            "Cantabria (-250 personas)' || [elDiario.es Cantabria 2026-08-04, el claim] 'bajo en 250 personas en "
+            "julio en Cantabria en relacion al mes anterior (-0,94%)'; 'cerro el mes con 26.355 desempleados'; 'En el "
+            "ultimo ano el desempleo en la comunidad autonoma acumula un descenso de 616 parados, lo que supone un "
+            "2,28% menos'"
+        ),
+        raw_value_span_anterior="[mismo PDF, junio 2026, p.4] 'CANTABRIA 26.605 535 1.319 ...' || [mismo PDF, julio 2025, p.4] 'CANTABRIA 26.971 462 1.243 ...'",
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta A, emisor SEPE (edicion julio 2026, tercer caso: tope de controles alcanzado), jornada 4, via "
+            "busqueda a organismo. 26605-26355 = 250; 250/26605 = 0,94%; interanual 26971-26355 = 616 (2,28%): "
+            "cuadra con la base mensual (referencia de cabecera) y con la interanual, mismo signo: sin 2a. 'Tres "
+            "unicas autonomias': la nota del SEPE nombra exactamente esas tres. 'Cifra mas baja en un mes de julio "
+            "desde 2008' y 'cinco meses consecutivos de descensos' no evaluados (NEEDS_REVIEW). methodology_found=no."
+        ),
+        cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="SEPE paro julio 2026",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="SEPE", tabla="DATOS_POR_CCAA-DEMANDAS_PENDIENTES.pdf / tabla 6.2",
+                         serie_nombre="Parados registrados, Cantabria", unidad="personas",
+                         referencia_principal="mensual",
+                         descripcion="Paro registrado por comunidad autonoma, nivel mensual"),
+            periodo_objetivo="2026-M07", periodo_base="2026-M06",
+            valor_objetivo=26355, cambio_afirmado=-0.94, unidad_cambio="pct", direccion_afirmada="baja",
+            notas="Base mensual = referencia del emisor.",
+        ),
+    ),
+    dict(
+        cid="Q070",
+        claim_text="La deuda pública crece un 4,2% en junio y marca un nuevo máximo de 1,76 billones de euros, el 101,5% del PIB",
+        claim_date="2026-08-18",
+        post_url="https://www.tercerainformacion.es/articulo/actualidad/18/08/2026/la-deuda-publica-crece-un-42-en-junio-y-marca-un-nuevo-maximo-de-176-billones-de-euros-el-1015-del-pib/",
+        post_url_tipo="prensa", emisor="Tercera Información (Agencias)", emisor_tipo="prensa_digital",
+        emisor_nivel=2, pais="ES", tema="deuda",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com deuda pública junio 2026 1,76 billones 101,5%",
+        criba_query_b="deuda pública junio 2026 '1,76 billones' OR '1.763' '101,5%' '4,2%' verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_a_organismo",
+        descubrimiento_query="'deuda' junio 2026 '1,763' OR '1.763' OR '101,5%' 'Banco de España' récord agosto 2026 noticia comunidades OR '1,76 billones'",
+        collected_at="2026-09-26", case_id="E061",
+        # --- trabajo 2026-09-26 (localizacion en lote 18:05-18:15Z; E061 t0 18:16Z) ---
+        fuente_primaria="Banco de Espana - Deuda PDE de las AAPP, avance mensual junio 2026: nota 'La deuda de las Administraciones Publicas se situo en junio de 2026 en el 101,5% del PIB' (18/08/2026) + PDF presbe2026-78.pdf; ediciones anteriores: marzo 2026 (19/05/2026, anterior maximo) y julio 2026 (17/09/2026, E033)",
+        primaria_url="https://www.bde.es/wbe/es/noticias-eventos/actualidad-banco-espana/notas-banco-espana/deuda-aapp-junio26.html",
+        primaria_url_tipo="nota_de_prensa_html (HTTP 200 al agente identificado; copia bde_jun26.htm) + PDF /f/webbe/GAP/Secciones/SalaPrensa/NotasInformativas/26/presbe2026-78.pdf; serie enlazada en la nota: app.bde.es/bie_www?SERIE=DMNPDE2010_P00000_PS_APU",
+        via_de_acceso="html", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="html",
+        dato_actual="junio 2026: ratio deuda PDE/PIB 101,5%; saldo 1.763 mm EUR; tasa interanual +4,2%",
+        dato_anterior="marzo 2026 (nota 19/05/2026): 1.740 mm EUR, 101,6%, +4,3% (1763/1740 = +1,32%). Julio 2026 (E033): 1.744 mm, 99,9%",
+        raw_value_span_actual=(
+            "[BdE deuda-aapp-junio26, 18/08/2026] 'la ratio de la deuda de las Administraciones Publicas (AAPP) "
+            "segun el Protocolo de Deficit Excesivo (PDE) en relacion al Producto Interior Bruto (PIB) nominal se "
+            "situo en el 101,5% en junio de 2026'; 'el saldo de deuda ascendio a 1.763 miles de millones (mm) de "
+            "euros en junio de 2026'; 'tasa de crecimiento interanual del 4,2%' || [Tercera Informacion 2026-08-18, "
+            "el claim] 'La deuda de las administraciones publicas (AAPP) se situo en el mes de junio en 1,76 billones "
+            "de euros'; 'un 4,2% mas que en igual mes de 2025'; 'en porcentaje del Producto Interior Bruto (PIB) se "
+            "modero hasta el 101,5%'"
+        ),
+        raw_value_span_anterior="[BdE deuda-aapp-marzo26, 19/05/2026] 'ascendio a 1.740 miles de millones (mm) de euros en marzo de 2026'; ratio 101,6%; interanual 4,3%",
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta A, emisor Banco de Espana (edicion junio 2026, primer caso; segundo caso BdE del conjunto tras "
+            "E033), jornada 4, via busqueda a organismo. 1.763 mm = 1,76 billones; 4,2% y 101,5% son los de la nota: "
+            "la referencia interanual es la del emisor, sin 2a. 'Nuevo maximo': 1.763 > 1.740 (marzo 2026, anterior "
+            "maximo segun la prensa); el maximo sobre toda la serie mensual NO se comprueba aqui (serie DMNPDE2010 "
+            "enlazada en la nota, NEEDS_REVIEW). 'Avance mensual del 1,9%' (mayo 2026) no se evalua. La nota enlaza "
+            "notamet_pde.pdf, no abierto: methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="BdE deuda-aapp-junio26",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="Banco de España", tabla="deuda-aapp-junio26 / presbe2026-78.pdf",
+                         serie_nombre="Deuda PDE de las AAPP, saldo (mm EUR)", unidad="mm EUR",
+                         referencia_principal="interanual",
+                         descripcion="Deuda de las AAPP segun el PDE, avance mensual"),
+            periodo_objetivo="2026-M06", periodo_base="2025-M06",
+            valor_objetivo=1763, cambio_afirmado=4.2, unidad_cambio="pct", direccion_afirmada="sube",
+            notas="Tasa interanual dada por el emisor. El extremo ('nuevo maximo') no se evalua sobre la serie completa.",
+        ),
+    ),
+    dict(
+        cid="Q071",
+        claim_text="Las comunidades autónomas aumentaron sus números rojos un 3,6% en el último año, sumando un total de 355.000 millones de euros en junio de 2026",
+        claim_date="2026-08-18",
+        post_url="https://www.catalunyapress.es/articulo/economia/2026-08-18/5986949-deuda-publica-pulveriza-maximo-historico-roza-176-billones-euros",
+        post_url_tipo="prensa", emisor="Catalunya Press (Joaquín Carles)", emisor_tipo="prensa_digital",
+        emisor_nivel=2, pais="ES", tema="deuda",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com deuda comunidades autónomas junio 2026 355.000 millones 3,6%",
+        criba_query_b="deuda comunidades autónomas junio 2026 '355.000 millones' OR '355 mm' '3,6%' verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_a_organismo",
+        descubrimiento_query="'deuda' junio 2026 '1,763' OR '1.763' OR '101,5%' 'Banco de España' récord agosto 2026 noticia comunidades OR '1,76 billones'",
+        collected_at="2026-09-26", case_id="E062",
+        # --- trabajo 2026-09-26 (localizacion en lote 18:05-18:15Z; E062 t0 18:16Z) ---
+        fuente_primaria="Banco de Espana - Deuda PDE de las AAPP, avance mensual junio 2026: nota 18/08/2026 (subsector Comunidades Autonomas) + PDF presbe2026-78.pdf; edicion anterior: nota de marzo 2026",
+        primaria_url="https://www.bde.es/wbe/es/noticias-eventos/actualidad-banco-espana/notas-banco-espana/deuda-aapp-junio26.html",
+        primaria_url_tipo="nota_de_prensa_html (HTTP 200 al agente identificado) + PDF presbe2026-78.pdf",
+        via_de_acceso="html", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="html",
+        dato_actual="Comunidades Autonomas, junio 2026: 355 mm EUR, 20,4% del PIB, variacion interanual +3,6%",
+        dato_anterior="AAPP marzo 2026: 1.740 mm (anterior maximo; 1763/1740 = +1,32%, el '1,3%' del articulo). Subsector CCAA de junio 2025: implicito en la tasa del emisor (355/1,036 = 342,7 mm), no leido de una nota",
+        raw_value_span_actual=(
+            "[BdE deuda-aapp-junio26, 18/08/2026] 'Comunidades Autonomas: 355 mm de euros en junio de 2026, "
+            "equivalente a un 20,4% del PIB, con una variacion interanual del 3,6%' || [Catalunya Press 2026-08-18, "
+            "el claim] 'Sus numeros rojos aumentaron un 3,6% en el ultimo ano, sumando un total de 355.000 millones "
+            "de euros'; [mismo articulo] 'supera en un 1,3% el anterior maximo historico que se habia marcado el "
+            "pasado mes de marzo'"
+        ),
+        raw_value_span_anterior="[BdE deuda-aapp-marzo26, 19/05/2026] 'ascendio a 1.740 miles de millones (mm) de euros en marzo de 2026'",
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta A, emisor Banco de Espana (edicion junio 2026, segundo caso), jornada 4, via busqueda a "
+            "organismo. 355 mm y +3,6% interanual son los del subsector CCAA de la nota: referencia del emisor, sin "
+            "2a. Observacion, no anotada como claim: el mismo articulo compara con marzo 2026 ('supera en un 1,3% el "
+            "anterior maximo'): 1763/1740 = +1,32%, cuadra; base elegida (marzo) frente a la interanual (+4,2%), "
+            "mismo signo, magnitud 3,2x: senal de horizonte sobre un elemento secundario, se registra. "
+            "methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="BdE deuda-aapp-junio26",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="Banco de España", tabla="deuda-aapp-junio26 / presbe2026-78.pdf",
+                         serie_nombre="Deuda PDE, subsector Comunidades Autonomas (mm EUR)", unidad="mm EUR",
+                         referencia_principal="interanual",
+                         descripcion="Deuda de las CCAA segun el PDE, avance mensual"),
+            periodo_objetivo="2026-M06", periodo_base="2025-M06",
+            valor_objetivo=355, cambio_afirmado=3.6, unidad_cambio="pct", direccion_afirmada="sube",
+            notas="Tasa interanual dada por el emisor.",
+        ),
+    ),
+    dict(
+        cid="Q072",
+        claim_text="Aldaia (Valencia) alcanza las 521 infracciones penales en el primer trimestre y registra un incremento del 79,7% respecto al mismo periodo de 2025",
+        claim_date="2026-06-11",
+        post_url="https://www.elperiodic.com/criminalidad-municipio-municipio-comunitat-valenciana-donde-suben-delitos-donde-caen_1079239",
+        post_url_tipo="prensa", emisor="El Periòdic (Redacción)", emisor_tipo="prensa_digital",
+        emisor_nivel=2, pais="ES", tema="criminalidad",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com criminalidad Aldaia 2026 79,7%",
+        criba_query_b="criminalidad Aldaia 'primer trimestre' 2026 '79,7%' OR '521' infracciones verificación OR bulo OR fact-check",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="busqueda_a_organismo",
+        descubrimiento_query="Portal Estadístico de Criminalidad 'primer trimestre' 2026 municipio criminalidad sube '%' Torrent OR Elche OR Alicante OR Gandia OR Castellón OR Sagunto OR Orihuela junio 2026",
+        collected_at="2026-09-26", case_id="E063",
+        # --- trabajo 2026-09-26 (localizacion en lote 18:05-18:15Z; E063 t0 18:16Z) ---
+        fuente_primaria="Ministerio del Interior - Portal Estadistico de Criminalidad, Balance 1T2026, tabla 09003 'Capitales de provincia, municipios mayores de 20.000 habitantes e islas', bloque '46021 Aldaia'",
+        primaria_url="https://estadisticasdecriminalidad.ses.mir.es/sec/jaxiPx/files/_px/es/csv_c/DatosBalanceAct/l0/09003.csv_c",
+        primaria_url_tipo="CSV (jaxiPx) del Portal Estadistico; HTTP 200 al agente identificado (548.984 bytes, sha256 949be9399eb00fd4, descargado para E036 el 2026-09-26)",
+        via_de_acceso="dataset", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="dataset",
+        dato_actual="Aldaia, enero-marzo 2026: 521 infracciones penales (convencional 448; ciber 73); hurtos 228; variacion 2026/2025 +79,7% (columna del Portal)",
+        dato_anterior="Aldaia, enero-marzo 2025: 290 (convencional 235; ciber 55; hurtos 87), columna 'enero-marzo 2025' de la misma tabla",
+        raw_value_span_actual=(
+            "[09003.csv_c, bloque '46021 Aldaia'] 'III. TOTAL INFRACCIONES PENALES,290,521,79,7,' | 'I. CRIMINALIDAD "
+            "CONVENCIONAL,235,448,90,6,' | '8. Hurtos,87,228,162,1,' | 'II. CIBERCRIMINALIDAD (infracciones penales "
+            "cometidas en/por medio ciber),55,73,32,7,' || [El Periodic 2026-06-11, el claim] 'Aldaia (Valencia)' "
+            "'521 infracciones penales' 'incremento del 79,7%'"
+        ),
+        raw_value_span_anterior="[09003.csv_c, columna 'enero-marzo 2025'] 'III. TOTAL INFRACCIONES PENALES,290,521,79,7,'",
+        truth="supported", context="no_divergence_detected",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta A, emisor Interior via Portal Estadistico (edicion 1T2026, tercer control: tope alcanzado; E028, "
+            "E036), jornada 4, via busqueda a organismo. 521/290 - 1 = +79,7% = columna 'Variacion %' del Portal; base "
+            "interanual = referencia del emisor, sin 2a. Contexto recogido por la prensa: el Ayuntamiento atribuye "
+            "parte de la subida al centro comercial Bonaire (hurtos 87 -> 228); no es una verificacion del dato. "
+            "methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="A", hermano_de="", mecanismo_candidato="", primaria_edicion="Interior Balance 1T2026",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="Ministerio del Interior", tabla="09003 (Portal Estadistico, Balance 1T2026)",
+                         serie_nombre="46021 Aldaia · III. TOTAL INFRACCIONES PENALES", unidad="hechos conocidos",
+                         referencia_principal="interanual",
+                         descripcion="Balance de criminalidad, infracciones penales, municipio de Aldaia, trimestral"),
+            periodo_objetivo="2026-T1", periodo_base="2025-T1",
+            valor_objetivo=521, cambio_afirmado=79.7, unidad_cambio="pct", direccion_afirmada="sube",
+            notas="Control Interior/Portal: base interanual = referencia del emisor.",
+        ),
+    ),
+    dict(
+        cid="Q073",
+        claim_text="Aldaya Decidix alerta de que el municipio lidera el aumento de la criminalidad en la Comunitat Valenciana con una subida del 79,7%",
+        claim_date="2026-06-12",
+        post_url="https://www.elperiodicodeaqui.com/valencia/horta/aldaya-decidix-alerta-municipio-lidera-aumento-criminalidad-con-subida-797_100116916_102.html",
+        post_url_tipo="declaracion", emisor="Aldaya Decidix (declaración recogida por El Periódico de Aquí)", emisor_tipo="partido_politico",
+        emisor_nivel=3, pais="ES", tema="criminalidad",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com criminalidad Aldaia 2026 79,7%",
+        criba_query_b="Aldaia 'mayor subida' OR 'donde más sube' criminalidad 'Comunitat Valenciana' 2026 municipio verificación OR bulo OR fact-check OR desmentido",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="criminalidad Aldaia 'primer trimestre' 2026 '79,7%' OR '521' infracciones verificación OR bulo OR fact-check",
+        collected_at="2026-09-26", case_id="E064",
+        # --- trabajo 2026-09-26 (localizacion en lote 18:05-18:15Z; E064 t0 18:16Z) ---
+        fuente_primaria="Ministerio del Interior - Portal Estadistico de Criminalidad, Balance 1T2026, tabla 09003: los 68 municipios de las provincias 03, 12 y 46 (capitales y mayores de 20.000 habitantes), fila 'III. TOTAL INFRACCIONES PENALES'",
+        primaria_url="https://estadisticasdecriminalidad.ses.mir.es/sec/jaxiPx/files/_px/es/csv_c/DatosBalanceAct/l0/09003.csv_c",
+        primaria_url_tipo="CSV (jaxiPx) del Portal Estadistico; HTTP 200 al agente identificado (548.984 bytes, sha256 949be9399eb00fd4)",
+        via_de_acceso="dataset", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="dataset",
+        dato_actual="Ranking recomputado sobre los 68 municipios valencianos de la tabla 09003 (variacion 1T2026/1T2025 del total de infracciones): 1 Aldaia +79,7% (290->521) | 2 Petrer +45,9% | 3 Picassent +45,6% | 4 Vinaros +30,5% | 5 Requena +29,2%",
+        dato_anterior="Aldaia 1T2025: 290 infracciones (misma tabla). Media autonomica citada por el partido: +4,7% (Comunitat Valenciana en la tabla 09001, E028/E041)",
+        raw_value_span_actual=(
+            "[09003.csv_c, bloque '46021 Aldaia'] 'III. TOTAL INFRACCIONES PENALES,290,521,79,7,' | [bloque '03104 "
+            "Petrer'] 'III. TOTAL INFRACCIONES PENALES,170,248,45,9,' | [bloque '46194 Picassent'] 'III. TOTAL "
+            "INFRACCIONES PENALES,217,316,45,6,' || [El Periodico de Aqui 2026-06-12, el claim] 'el municipio "
+            "encabeza el incremento de las infracciones penales en la Comunitat Valenciana' 'subida del 79,7%'; "
+            "'hurtos, que se han disparado un 162,1%'"
+        ),
+        raw_value_span_anterior="[09003.csv_c, columna 'enero-marzo 2025'] 'III. TOTAL INFRACCIONES PENALES,290,521,79,7,'",
+        truth="supported", context="undetermined",
+        clase_primaria="none", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="control_negativo", excedente="no",
+        notas=(
+            "Cubeta D (ranking), emisor Interior via Portal Estadistico (edicion 1T2026; no cuenta como control), "
+            "jornada 4, declaracion de partido (nivel 3) hallada en la criba (b) de E063. Ranking recomputado por el "
+            "agente sobre los 68 municipios de la tabla 09003 con codigo 03/12/46: Aldaia es el primero con "
+            "diferencia (siguiente Petrer +45,9%). Alcance del ranking: la tabla solo cubre capitales, municipios de "
+            "mas de 20.000 habitantes e islas, no 'toda la Comunitat'; se anota como limitacion, no como error. La "
+            "tasa 79,7% es la del emisor (E063). Sin test aplicable al ranking -> undetermined (DEC-029). "
+            "methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="D", hermano_de="E063", mecanismo_candidato="", primaria_edicion="Interior Balance 1T2026",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="otro",
+            metrica=dict(emisor="Ministerio del Interior", tabla="09003 (Portal Estadistico, Balance 1T2026)",
+                         serie_nombre="III. TOTAL INFRACCIONES PENALES, municipios de las provincias 03/12/46", unidad="hechos conocidos",
+                         referencia_principal="interanual",
+                         descripcion="Ranking de variacion interanual 1T2026 entre municipios valencianos de la tabla 09003"),
+            periodo_objetivo="2026-T1", valor_objetivo=79.7,
+            notas="Ranking ('lidera el aumento'): recomputado, cuadra. Sin test aplicable.",
+        ),
+    ),
+    dict(
+        cid="Q074",
+        claim_text="Además, se registraron 57.049 pernoctaciones en apartamentos, un 1,3% más que en el mismo mes de 2025, y 9.493 en albergues, con un descenso del 14,2%, el único de los extrahoteleros [julio de 2026, Cantabria]",
+        claim_date="2026-08-31",
+        post_url="https://www.eldiario.es/cantabria/pernoctaciones-extrahoteleras-cantabria-crecen-4-1-julio-viajeros-4-3_1_13476308.html",
+        post_url_tipo="prensa", emisor="elDiario.es Cantabria", emisor_tipo="prensa_digital",
+        emisor_nivel=1, pais="ES", tema="turismo",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com Cantabria pernoctaciones extrahoteleras julio 2026 apartamentos 57.049",
+        criba_query_b="Cantabria apartamentos julio 2026 '57.049' OR '111.666' pernoctaciones verificación OR bulo OR fact-check OR corrección",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="Cantabria campings julio 2026 pernoctaciones apartamentos turísticos extrahoteleras 'julio' INE noticia agosto 2026 crecen OR caen",
+        collected_at="2026-09-27", case_id="E065",
+        # --- trabajo 2026-09-27 (E065 t0 17:03Z; hallado al cotejar el articulo con la API en la busqueda de 2b) ---
+        fuente_primaria="INE - EOAT julio 2026 (EOAT0726): API Tempus tabla 1993 (apartamentos turisticos; EOT1072 'Cantabria. Pernoctaciones. Total.') + anexo EOAT0726.xlsx (EOAP_Hoja1, fila 18); edicion de junio 2026 (EOAT0626, anexo fila 18) para localizar el periodo al que pertenece la cifra",
+        primaria_url="https://www.ine.es/dyngs/Prensa/EOAT0726.htm",
+        primaria_url_tipo="nota_de_prensa_html + API JSON wstempus DATOS_TABLA/1993 + anexos EOAT0726.xlsx y EOAT0626.xlsx (HTTP 200 al agente identificado, research/puerta3/edicion_anterior.py)",
+        via_de_acceso="api", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="api",
+        dato_actual="Cantabria, apartamentos turisticos, julio 2026: 111.666 pernoctaciones (API y anexo EOAT0726); julio 2025 vigente 113.353 -> -1,49%. Viajeros julio 2026: 27.600 (+6,43%), cifra que el articulo si da bien",
+        dato_anterior="junio 2026: 57.049 pernoctaciones (API y anexo EOAT0626, fila 18); junio 2025 vigente 56.306 -> +1,32%: la cifra y la tasa del claim son las de JUNIO, no las de julio",
+        raw_value_span_actual=(
+            "[INE API tabla 1993] EOT1072 'Cantabria. Pernoctaciones. Total.' 2026-M07: 111666 | 2025-M07: 113353 | "
+            "2026-M06: 57049 | 2025-M06: 56306 || [EOAT0726.xlsx, hoja EOAP_Hoja1, fila 18] 'Cantabria', 27600, 24791, "
+            "2808, 111666, 101605, 10061, 4.05 || [elDiario.es Cantabria 2026-08-31, el claim] 'Ademas, se registraron "
+            "57.049 pernoctaciones en apartamentos, un 1,3% mas que en el mismo mes de 2025, y 9.493 en albergues, "
+            "con un descenso del 14,2%, el unico de los extrahoteleros'"
+        ),
+        raw_value_span_anterior=(
+            "[EOAT0626.xlsx, hoja EOAP_Hoja1, fila 18] 'Cantabria', 22144, 19239, 2905, 57049, 50479, 6570, 2.58 || "
+            "[Cronica de Cantabria 2026-07-31, articulo de JUNIO del mismo teletipo] '57.049 pernoctaciones en "
+            "apartamentos, un 1,3% mas' | '9.493 en albergues, con un descenso del 14,2%'"
+        ),
+        truth="mixed", context="divergence_detected",
+        clase_primaria="2_baseline_selection", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="divergencia_real", excedente="no",
+        notas=(
+            "Cubeta C (2a, subtipo valor atribuido a otro periodo, DEC-029), jornada 4, hallado al cotejar el "
+            "articulo de julio con la API durante la busqueda de 2b. El articulo de julio repite literalmente las "
+            "frases de apartamentos y albergues del articulo de junio del mismo teletipo (57.049, +1,3%; 9.493, "
+            "-14,2%): 57049/56306 - 1 = +1,32% es junio 2026 sobre junio 2025; julio 2026 es 111.666 (-1,49% sobre "
+            "113.353). Las demas cifras del articulo (campings 488.109 +4%, viajeros en apartamentos 27.600 +6,4%) "
+            "SI son de julio y cuadran con la base vigente. Numero rastreable al emisor pero de otro periodo: mixed + "
+            "divergence_detected; el prototipo lo detecta con la ventana de 2a (valor de 2026-M06 atribuido a "
+            "2026-M07). Albergues fuera del mapa (no se evalua). Segundo C del conjunto (E041). Segundo caso de "
+            "EOAT0726 (E054 A). methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="C", hermano_de="", mecanismo_candidato="", primaria_edicion="INE EOAT0726",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="1993",
+                         serie_nombre="Cantabria. Pernoctaciones. Total.",
+                         unidad="pernoctaciones", referencia_principal="interanual",
+                         descripcion="EOAT, pernoctaciones en apartamentos turisticos, Cantabria, mensual"),
+            periodo_objetivo="2026-M07", periodo_base="2025-M07",
+            valor_objetivo=57049, cambio_afirmado=1.3, unidad_cambio="pct", direccion_afirmada="sube",
+            notas="Valor atribuido a otro periodo: 57.049 y +1,3% son los de 2026-M06 (57049/56306); 2026-M07 es 111.666 (-1,49%). 2a, subtipo valor_atribuido_a_otro_periodo.",
+        ),
+    ),
+    dict(
+        cid="Q075",
+        claim_text="Buen mayo para los apartamentos de la Región, que recibieron un 60% más de viajeros: llegaron a los 11.752 y acumularon 42.396 noches (+25%)",
+        claim_date="2026-07-01",
+        post_url="https://elnuevodigitalmurcia.es/art/8408/buen-mayo-para-los-apartamentos-de-la-region-que-recibieron-un-60-mas-de-viajeros",
+        post_url_tipo="prensa", emisor="El Nuevo Digital Murcia (Nuevo Digital)", emisor_tipo="prensa_digital",
+        emisor_nivel=2, pais="ES", tema="turismo",
+        criba_query_a="site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com apartamentos turísticos Región de Murcia mayo 2026 viajeros 60%",
+        criba_query_b="apartamentos turísticos Región de Murcia mayo 2026 '60%' OR '11.752' viajeros verificación OR bulo OR fact-check OR corrección",
+        criba_resultado="admitido", criba_motivo="", criba_url_verificacion="",
+        descubrimiento_via="titular_prensa",
+        descubrimiento_query="apartamentos turísticos mayo 2026 Murcia viajeros '60%' OR '60,2%' OR Cantabria campings mayo 2026 '19%' OR Aragón apartamentos mayo 2026 '48,8%' OR '65%' extrahoteleros noticia julio 2026",
+        collected_at="2026-09-27", case_id="E066",
+        # --- trabajo 2026-09-27 (E066 t0/t1/t2 17:2x-17:4xZ; via divergencia dirigida por la hipotesis 4d) ---
+        fuente_primaria="INE - EOAT mayo 2026 (EOAT0526, publicada 2026-07-01): API Tempus tabla 1993 (EOT1117 viajeros, EOT1120 pernoctaciones; Region de Murcia) + anexo EOAT0526.xlsx (EOAP_Hoja1, fila 26); edicion anterior: anexo EOAT0525.xlsx (EOAP_Hoja1, fila 26; nota publicada 2025-07-01)",
+        primaria_url="https://www.ine.es/dyngs/Prensa/EOAT0526.htm",
+        primaria_url_tipo="nota_de_prensa_html + API JSON wstempus DATOS_TABLA/1993 + anexos EOAT0526.xlsx (HTTP 200, 158.771 bytes) y EOAT0525.xlsx (HTTP 200, 157.423 bytes) descargados con research/puerta3/edicion_anterior.py",
+        via_de_acceso="api", access_requires_login="no",
+        current_edition_found="si", previous_edition_found="si",
+        historical_series_found="si", methodology_found="no",
+        alcanzable_por_agente="si", alcanzable_por_humano="si",
+        recuperabilidad="A", formato="api",
+        dato_actual="Region de Murcia, apartamentos turisticos, mayo 2026: 11.752 viajeros (8.454 residentes, 3.299 extranjeros); 42.396 pernoctaciones (API y anexo EOAT0526, fila 26)",
+        dato_anterior="mayo 2025 vigente (API): viajeros 8.740 -> +34,46%; pernoctaciones 35.167 -> +20,56%. Mayo 2025 al publicar (anexo EOAT0525, provisional): viajeros 7.336 -> +60,20%; pernoctaciones 33.809 -> +25,40%",
+        raw_value_span_actual=(
+            "[INE API tabla 1993] EOT1117 'Murcia (Región de). Viajeros. Total.' 2026-M05: 11752 | EOT1120 'Murcia "
+            "(Región de). Pernoctaciones. Total.' 2026-M05: 42396 || [EOAT0526.xlsx, hoja EOAP_Hoja1, fila 26] "
+            "'Murcia, Región de', 11752, 8454, 3299, 42396, 31148, 11249, 3.61 || [El Nuevo Digital Murcia 2026-07-01, "
+            "el claim] 'los apartamentos registraron una espectacular subida de usuarios, llegando a los 11.752, un "
+            "60% mas'; 'que acumularon 42.396 noches (+25%)'"
+        ),
+        raw_value_span_anterior=(
+            "[INE API tabla 1993, edicion vigente] EOT1117 2025-M05: 8740 | EOT1120 2025-M05: 35167 || "
+            "[EOAT0525.xlsx, hoja EOAP_Hoja1, fila 26, edicion al publicar] 'Murcia, Región de', 7336, 6009, 1327, "
+            "33809, 26508, 7301, 4.61"
+        ),
+        truth="mixed", context="divergence_detected",
+        clase_primaria="2b_base_revisada", clases_secundarias="", abstain_reason="",
+        abandonado_por_tiempo="", bucket_resultado="divergencia_real", excedente="no",
+        notas=(
+            "Cubeta B (2b, base revisada, subtipo magnitud), jornada 4, via divergencia dirigida por la hipotesis 4d "
+            "(la EOAT no trae la tasa por CCAA). 11752/7336 - 1 = +60,2% y 42396/33809 - 1 = +25,4% solo salen con la "
+            "base PROVISIONAL de mayo 2025 (anexo EOAT0525, nota del 2025-07-01); con la vigente: +34,5% y +20,6%. "
+            "Mismo signo: 2b sin cambio de signo. Los campings del mismo articulo ('13.257 usuarios, -19%') tambien "
+            "cuadran con la provisional (13257/16320 = -18,8%; vigente -19,7%). Primer B fuera de la EOH, primer B "
+            "de la jornada 4 y primer caso de la edicion EOAT0526; el articulo se publico el mismo dia que la nota "
+            "del INE. La misma redaccion uso en julio (EOAT0726) una base sin revision (viajeros +15%, cuadra; "
+            "pernoctaciones '+15%' frente a +17,5%, inexactitud no anotada) y solo totales extrahoteleros en junio. "
+            "Los totales extrahoteleros del articulo (28.514 viajeros +2,6%; 128.429 noches -3,8%) agregan cuatro "
+            "encuestas y no se evaluan. methodology_found=no (NEEDS_REVIEW)."
+        ),
+        cubeta="B", hermano_de="", mecanismo_candidato="", primaria_edicion="INE EOAT0526",
+        conjunto="evaluacion", etiquetado_por="agente",
+        estructura=dict(
+            tipo="cambio_entre_periodos",
+            metrica=dict(emisor="INE", tabla="1993",
+                         serie_nombre="Murcia (Región de). Viajeros. Total.",
+                         unidad="viajeros", referencia_principal="interanual",
+                         descripcion="EOAT, viajeros en apartamentos turisticos, Region de Murcia, mensual"),
+            periodo_objetivo="2026-M05", periodo_base="2025-M05",
+            valor_objetivo=11752, cambio_afirmado=60, unidad_cambio="pct", direccion_afirmada="sube",
+            evidencia_al_publicar=dict(
+                valor=7336, edicion="INE EOAT0525 (mayo 2025, datos provisionales)", fecha="2025-07-01",
+                url="https://www.ine.es/prensa/anexo_tablas/es/EOAT0525.xlsx",
+                raw_value_span="[EOAT0525.xlsx, hoja EOAP_Hoja1, fila 26] 'Murcia, Región de', 7336, 6009, 1327, 33809, 26508, 7301, 4.61",
+                verificacion="descarga 2026-09-27 con research/puerta3/edicion_anterior.py (HTTP 200, 157.423 bytes; fecha de la nota leida del HTML)",
+            ),
+            evidencia_vigente=dict(
+                valor=8740, edicion="API Tempus, tabla 1993, edicion vigente", fecha="2026-09-26",
+                url="https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/1993",
+                raw_value_span="[INE API tabla 1993] 'Murcia (Región de). Viajeros. Total.' 2025-M05: 8740",
+            ),
+            notas="Base interanual correcta en periodo, tomada de la edicion provisional (7.336) y no de la vigente (8.740): 2b sin cambio de signo (+60,2% frente a +34,5%). Pernoctaciones: +25,4% provisional frente a +20,6% vigente.",
+        ),
+    ),
 ]

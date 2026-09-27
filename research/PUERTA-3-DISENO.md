@@ -320,6 +320,20 @@ El mecanismo es del redactor, no de la edición ni del medio. Para la tesis es
 la prueba de que 2b no es un artefacto del conector: dos tasas de signo
 opuesto para el mismo dato, publicadas la misma semana (Galicia julio).
 
+**Ampliación en la jornada 4 (2026-09-27).** Se comprobaron unas 25 piezas
+regionales de las ediciones de marzo a junio de la EOH y de mayo a julio de
+la EOAT (lista en `research/puerta3/PROGRESO.md`, jornada 4): **todas con la
+base vigente**, incluidas las redacciones que en julio y agosto usaron la
+provisional (Europa Press Madrid +1,2 % en junio; EFE Baleares +14,5 % en
+marzo; El Debate/EP Castilla y León −4,4 % en junio; Galicia Press en junio).
+El único 2b nuevo, E066 (El Nuevo Digital Murcia, EOAT0526: apartamentos
++60 % con la provisional, +34,5 % con la vigente), sale de una redacción
+murciana, como E056 (MurciaEconomía). El control natural se sostiene y se
+afina: el mecanismo es del redactor y del turno, no de la edición ni de la
+operación; y con lo recolectado se concentra en las ediciones de verano
+(CTH0726, CTH0826) más EOAT0526. Es una observación, no una prueba: la
+comprobación barata es EOAT0826 (30-09) y CTH0926 (23-10).
+
 ### 4f. Cuota de emisor para la jornada 4
 
 Al cerrar la jornada 3 el INE está en 39 de 57 casos (68,4 %) con tope del
@@ -328,3 +342,10 @@ Banco de España antes que más INE; si no, la cuota bloquea el conjunto.
 Restricciones vigentes: Interior 2T2026 vetado (DEC-025), tope de tres
 controles por edición (Interior 1T2026 tiene dos, SEPE agosto 2026 uno más un
 D, BdE julio 2026 uno).
+
+**Resultado (jornada 4, 2026-09-27).** Cuota cumplida: INE 41/66 = 62,1 %
+(antes 68,4 %). SEPE julio 2026 ×3 (E058–E060, tope de controles), BdE junio
+2026 ×2 (E061, E062), Portal 1T2026 ×2 (E063 A, con el que la edición llega al
+tope; E064 D). Todos los PDF mensuales del SEPE (nueve ediciones) y las notas
+del BdE respondieron 200 al agente identificado. B de la jornada = 1 (E066):
+por la regla §4b se para y decide Mateo.

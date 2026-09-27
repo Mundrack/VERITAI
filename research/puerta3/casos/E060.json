@@ -1,0 +1,23 @@
+{
+  "claim_id": "E060",
+  "texto": "Cantabria, una de las tres únicas autonomías donde bajó el paro en julio, con 250 desempleados menos (-0,94%)",
+  "fuente_url": "https://www.eldiario.es/cantabria/cantabria-tres-unicas-autonomias-paro-julio-250-desempleados_1_13426684.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "SEPE",
+    "tabla": "DATOS_POR_CCAA-DEMANDAS_PENDIENTES.pdf / tabla 6.2",
+    "serie_nombre": "Parados registrados, Cantabria",
+    "unidad": "personas",
+    "referencia_principal": "mensual",
+    "descripcion": "Paro registrado por comunidad autonoma, nivel mensual"
+  },
+  "periodo_objetivo": "2026-M07",
+  "periodo_base": "2026-M06",
+  "valor_objetivo": 26355,
+  "cambio_afirmado": -0.94,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "baja",
+  "notas": "Base mensual = referencia del emisor."
+}

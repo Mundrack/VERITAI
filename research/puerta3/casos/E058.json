@@ -1,0 +1,23 @@
+{
+  "claim_id": "E058",
+  "texto": "El paro se redujo en Andalucía en 9.661 personas (-1,8%) en julio, situando la cifra total de desempleados en la comunidad en 526.862 personas, el registro más bajo desde diciembre de 2007",
+  "fuente_url": "https://www.juntadeandalucia.es/organismos/empleoempresaytrabajoautonomo/servicios/actualidad/noticias/detalle/679072.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "SEPE",
+    "tabla": "DATOS_POR_CCAA-DEMANDAS_PENDIENTES.pdf / tabla 6.2",
+    "serie_nombre": "Parados registrados, Andalucía",
+    "unidad": "personas",
+    "referencia_principal": "mensual",
+    "descripcion": "Paro registrado por comunidad autonoma, nivel mensual"
+  },
+  "periodo_objetivo": "2026-M07",
+  "periodo_base": "2026-M06",
+  "valor_objetivo": 526862,
+  "cambio_afirmado": -1.8,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "baja",
+  "notas": "Base mensual = referencia del emisor. El extremo ('mas bajo desde diciembre de 2007') no se evalua."
+}

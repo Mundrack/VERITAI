@@ -1,0 +1,19 @@
+{
+  "claim_id": "E064",
+  "texto": "Aldaya Decidix alerta de que el municipio lidera el aumento de la criminalidad en la Comunitat Valenciana con una subida del 79,7%",
+  "fuente_url": "https://www.elperiodicodeaqui.com/valencia/horta/aldaya-decidix-alerta-municipio-lidera-aumento-criminalidad-con-subida-797_100116916_102.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "otro",
+  "metrica": {
+    "emisor": "Ministerio del Interior",
+    "tabla": "09003 (Portal Estadistico, Balance 1T2026)",
+    "serie_nombre": "III. TOTAL INFRACCIONES PENALES, municipios de las provincias 03/12/46",
+    "unidad": "hechos conocidos",
+    "referencia_principal": "interanual",
+    "descripcion": "Ranking de variacion interanual 1T2026 entre municipios valencianos de la tabla 09003"
+  },
+  "periodo_objetivo": "2026-T1",
+  "valor_objetivo": 79.7,
+  "notas": "Ranking ('lidera el aumento'): recomputado, cuadra. Sin test aplicable."
+}

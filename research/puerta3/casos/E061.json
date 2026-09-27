@@ -1,0 +1,23 @@
+{
+  "claim_id": "E061",
+  "texto": "La deuda pública crece un 4,2% en junio y marca un nuevo máximo de 1,76 billones de euros, el 101,5% del PIB",
+  "fuente_url": "https://www.tercerainformacion.es/articulo/actualidad/18/08/2026/la-deuda-publica-crece-un-42-en-junio-y-marca-un-nuevo-maximo-de-176-billones-de-euros-el-1015-del-pib/",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "Banco de España",
+    "tabla": "deuda-aapp-junio26 / presbe2026-78.pdf",
+    "serie_nombre": "Deuda PDE de las AAPP, saldo (mm EUR)",
+    "unidad": "mm EUR",
+    "referencia_principal": "interanual",
+    "descripcion": "Deuda de las AAPP segun el PDE, avance mensual"
+  },
+  "periodo_objetivo": "2026-M06",
+  "periodo_base": "2025-M06",
+  "valor_objetivo": 1763,
+  "cambio_afirmado": 4.2,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Tasa interanual dada por el emisor. El extremo ('nuevo maximo') no se evalua sobre la serie completa."
+}

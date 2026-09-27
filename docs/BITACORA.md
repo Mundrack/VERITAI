@@ -1016,3 +1016,49 @@ implícito); dos controles con métrica compuesta (E049, E054: suma de cuatro
 encuestas, fuera del prototipo, declarados); en la misma edición y la misma
 mañana unas redacciones calculan con la provisional y otras con la vigente
 (el mecanismo es del redactor, no de la edición).
+
+---
+
+## 2026-09-27 (17:29Z) — Puerta 3: test 2b implementado; jornada 4 cerrada con B = 1 (cuota cumplida)
+
+### Qué se hizo
+
+**Punto 1 (commit 2f151ef, 2026-09-26).** Test 2b (`domain/tests/base_revisada.py`),
+puerto `ProveedorEdicionAnterior`, mapa cerrado de 8 operaciones con columnas
+absolutas verificadas contra los anexos (`infrastructure/ine/mapa_anexos.py`),
+conector de edición anterior (`infrastructure/ine/edicion_anterior.py`), caso
+de uso con orden verdad → 2a → 2b y abstención `PREVIOUS_EDITION_OUT_OF_MAP`
+(fallo de cobertura declarado). Diseño §4c (tope de 3 B por edición, E056 pasa
+a excedente), §4d (hipótesis confirmada: 2b solo donde el anexo no trae la
+tasa por CCAA), §4e (control natural) y §4f (cuota de emisor).
+
+**Jornada 4** (`P3-J4`, 0,9 h de reloj en dos tramos; la sesión quedó
+suspendida entre el 26 a las 18:28Z y el 27 a las 17:03Z y se anotó como
+`P3-PAUSA5` retroactiva). Nueve casos: E058–E060 (SEPE julio 2026, A), E061–E062
+(BdE junio 2026, A), E063 (Portal 1T2026, A), E064 (Portal, D, ranking
+recomputado sobre 68 municipios), E065 (EOAT0726, C: 2a valor atribuido a otro
+periodo, la frase de junio repetida en el artículo de julio) y E066 (EOAT0526,
+**B**: apartamentos de Murcia +60 % con la base provisional, +34,5 % con la
+vigente; primer 2b fuera de la EOH).
+
+### Qué se verificó
+
+- 114 tests, `ruff check` y `ruff format --check` limpios (health.py
+  reformateado en este commit).
+- Validador OK: 66 casos (A 31, B 7 + 1 excedente, C 2, D 10, E 11, F 3, O 1);
+  INE 41/66 = 62,1 % (tope 70 %); tope de 3 B por edición respetado (CTH0726
+  3, CTH0826 3, EOAT0526 1); controles por edición ≤ 3.
+- Nueve PDF mensuales del SEPE, notas del BdE (junio, mayo, marzo de 2026) y
+  siete anexos del INE (CTH0325, CTH0425, CTH0526, CTH0626, EOAT0525, EOAT0526
+  con HTML) descargados con el agente identificado: todos HTTP 200.
+- Unas 25 piezas regionales de marzo a julio cotejadas con las dos bases:
+  todas vigente salvo E066. Anexos de 2026 = API de hoy (2026 sin revisar).
+
+### Qué quedó pendiente
+
+- **Decisión de Mateo** (regla §4b, B = 1 ≤ 3): declarar B con intervalo,
+  jornada 5 sobre EOAT0826 (30-09) y CTH0926 (23-10), o rastrear redacciones.
+- 2b sobre el avance mensual del BdE: el cuadro del PDF no es texto extraíble;
+  NEEDS_REVIEW.
+- Pasada final de `methodology_found`; P-23; P-20; Q034 sin trabajar;
+  regenerar `requirements.lock.txt` desde el contenedor (openpyxl).

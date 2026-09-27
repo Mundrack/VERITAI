@@ -22,14 +22,15 @@ PUERTA 2   prototipo end-to-end, UNA clase y UN emisor,      CERRADA 2026-09-25 
            nada del piloto evalua (DEC-025)                    no se cita hasta cotejarlo
 
 PUERTA 3   corpus completo anotado + arnes de evaluacion     <-- AQUI. B = 2b desde DEC-034; 2a
-           diseno APROBADO (DEC-031): research/PUERTA-3-DISENO.md   secundaria con 0/43. 57 casos
-           arnes: research/arnes/ (fusionado)                   (A 25 de 50, B 7 de 20, C 1, D 9,
-           recoleccion: research/puerta3/ (rama                E 11, F 3, O 1) en 2,1 h de 16.
-           feat/puerta-3-recoleccion, sin fusionar)             Jornada 3 cerrada con B = 4 (regla
-           emisores tras DEC-032: INE, Portal Criminalidad,     4b: sigue). Pendiente de Mateo: tope
-           SEPE, BdE (FMI e interior.gob.es: 403, cubeta E)     de B por edicion (los 7 B salen de
-           2b: research/puerta3/RECUPERABILIDAD-2B.md           dos ediciones de la EOH) y el
-           propuesta: docs/PROPUESTA-2B.md (8 operaciones)     "ejecuta" del test 2b y su conector
+           diseno APROBADO (DEC-031): research/PUERTA-3-DISENO.md   secundaria. 66 casos (A 31 de 50,
+           arnes: research/arnes/ (fusionado)                   B 7 de 20 + 1 excedente, C 2, D 10,
+           recoleccion: research/puerta3/ (rama                E 11, F 3, O 1) en 3,0 h de 16; INE
+           feat/puerta-3-recoleccion, sin fusionar)             62,1 % (tope 70 %). Test 2b y conector
+           emisores tras DEC-032: INE, Portal Criminalidad,     implementados (mapa cerrado de 8 ops,
+           SEPE, BdE (FMI e interior.gob.es: 403, cubeta E)     114 tests). Jornada 4 cerrada con
+           2b: research/puerta3/RECUPERABILIDAD-2B.md           B = 1 (regla 4b: parar). Decide Mateo:
+           propuesta: docs/PROPUESTA-2B.md (8 operaciones)     declarar B, jornada 5 (EOAT0826, CTH0926)
+           tope 3 B/edicion (4c), hipotesis 4d confirmada        o rastrear redacciones (sesgo declarado)
 
 PUERTA 4   evaluacion completa: metricas, ablacion,
            sondas contrafactuales

@@ -1,0 +1,23 @@
+{
+  "claim_id": "E059",
+  "texto": "La provincia de Sevilla registra seis meses consecutivos de descenso del paro: 13.005 personas menos en los registros del SEPE",
+  "fuente_url": "https://www.elpespunte.es/articulo/provincia/provincia-sevilla-registra-seis-meses-consecutivos-descenso-paro-13005-personas-menos-desempleo/20260804144002144084.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "SEPE",
+    "tabla": "DATOS_POR_CCAA-DEMANDAS_PENDIENTES.pdf / tabla 6.2",
+    "serie_nombre": "Parados registrados, Sevilla (provincia)",
+    "unidad": "personas",
+    "referencia_principal": "mensual",
+    "descripcion": "Paro registrado por provincia, nivel mensual"
+  },
+  "periodo_objetivo": "2026-M07",
+  "periodo_base": "2026-M01",
+  "valor_objetivo": 131385,
+  "cambio_afirmado": -13005,
+  "unidad_cambio": "abs",
+  "direccion_afirmada": "baja",
+  "notas": "Base elegida (enero 2026, 'primera mitad de 2026'); referencias del emisor mensual (-1.618) e interanual (-13.807): mismo signo. Senal de horizonte 8x."
+}

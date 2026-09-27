@@ -1,0 +1,23 @@
+{
+  "claim_id": "E062",
+  "texto": "Las comunidades autónomas aumentaron sus números rojos un 3,6% en el último año, sumando un total de 355.000 millones de euros en junio de 2026",
+  "fuente_url": "https://www.catalunyapress.es/articulo/economia/2026-08-18/5986949-deuda-publica-pulveriza-maximo-historico-roza-176-billones-euros",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "Banco de España",
+    "tabla": "deuda-aapp-junio26 / presbe2026-78.pdf",
+    "serie_nombre": "Deuda PDE, subsector Comunidades Autonomas (mm EUR)",
+    "unidad": "mm EUR",
+    "referencia_principal": "interanual",
+    "descripcion": "Deuda de las CCAA segun el PDE, avance mensual"
+  },
+  "periodo_objetivo": "2026-M06",
+  "periodo_base": "2025-M06",
+  "valor_objetivo": 355,
+  "cambio_afirmado": 3.6,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Tasa interanual dada por el emisor."
+}

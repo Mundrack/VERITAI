@@ -302,3 +302,34 @@
 2026-09-26T15:34:40+00:00	P3-PAUSA4	t0	Pausa a la espera de Mateo tras la jornada 3
 2026-09-26T17:58:09+00:00	P3-PAUSA4	t2	Reanuda tras implementar 2b (punto 1), tope de 3 B por edicion (4c), hipotesis 4d, control natural 4e y cuota de emisor 4f
 2026-09-26T17:58:09+00:00	P3-J4	t0	Jornada 4: cuota de emisor (SEPE, Portal, BdE) y 2b en operaciones sin tasa por CCAA (EOH meses anteriores, EOAT), con tope de 3 B por edicion
+2026-09-26T18:16:12+00:00	E058	t0	Jornada 4, cuota de emisor: localizacion en lote (busquedas y descargas SEPE/BdE/Portal 18:05-18:15Z), marca por caso al registrar
+2026-09-26T18:16:12+00:00	E059	t0	Jornada 4, cuota de emisor: localizacion en lote (busquedas y descargas SEPE/BdE/Portal 18:05-18:15Z), marca por caso al registrar
+2026-09-26T18:16:12+00:00	E060	t0	Jornada 4, cuota de emisor: localizacion en lote (busquedas y descargas SEPE/BdE/Portal 18:05-18:15Z), marca por caso al registrar
+2026-09-26T18:16:12+00:00	E061	t0	Jornada 4, cuota de emisor: localizacion en lote (busquedas y descargas SEPE/BdE/Portal 18:05-18:15Z), marca por caso al registrar
+2026-09-26T18:16:13+00:00	E062	t0	Jornada 4, cuota de emisor: localizacion en lote (busquedas y descargas SEPE/BdE/Portal 18:05-18:15Z), marca por caso al registrar
+2026-09-26T18:16:13+00:00	E063	t0	Jornada 4, cuota de emisor: localizacion en lote (busquedas y descargas SEPE/BdE/Portal 18:05-18:15Z), marca por caso al registrar
+2026-09-26T18:16:13+00:00	E064	t0	Jornada 4, cuota de emisor: localizacion en lote (busquedas y descargas SEPE/BdE/Portal 18:05-18:15Z), marca por caso al registrar
+2026-09-26T18:28:18+00:00	E058	t1	primaria localizada en el lote de descargas (SEPE PDF julio 2026 y ediciones anteriores / BdE nota junio 2026 / Portal 09003 1T2026)
+2026-09-26T18:28:18+00:00	E058	t2	extraido y anotado en lote_evaluacion.py
+2026-09-26T18:28:18+00:00	E059	t1	primaria localizada en el lote de descargas (SEPE PDF julio 2026 y ediciones anteriores / BdE nota junio 2026 / Portal 09003 1T2026)
+2026-09-26T18:28:18+00:00	E059	t2	extraido y anotado en lote_evaluacion.py
+2026-09-26T18:28:18+00:00	E060	t1	primaria localizada en el lote de descargas (SEPE PDF julio 2026 y ediciones anteriores / BdE nota junio 2026 / Portal 09003 1T2026)
+2026-09-26T18:28:18+00:00	E060	t2	extraido y anotado en lote_evaluacion.py
+2026-09-26T18:28:18+00:00	E061	t1	primaria localizada en el lote de descargas (SEPE PDF julio 2026 y ediciones anteriores / BdE nota junio 2026 / Portal 09003 1T2026)
+2026-09-26T18:28:18+00:00	E061	t2	extraido y anotado en lote_evaluacion.py
+2026-09-26T18:28:19+00:00	E062	t1	primaria localizada en el lote de descargas (SEPE PDF julio 2026 y ediciones anteriores / BdE nota junio 2026 / Portal 09003 1T2026)
+2026-09-26T18:28:19+00:00	E062	t2	extraido y anotado en lote_evaluacion.py
+2026-09-26T18:28:19+00:00	E063	t1	primaria localizada en el lote de descargas (SEPE PDF julio 2026 y ediciones anteriores / BdE nota junio 2026 / Portal 09003 1T2026)
+2026-09-26T18:28:19+00:00	E063	t2	extraido y anotado en lote_evaluacion.py
+2026-09-26T18:28:19+00:00	E064	t1	primaria localizada en el lote de descargas (SEPE PDF julio 2026 y ediciones anteriores / BdE nota junio 2026 / Portal 09003 1T2026)
+2026-09-26T18:28:19+00:00	E064	t2	extraido y anotado en lote_evaluacion.py
+2026-09-26T18:28:19+00:00	P3-PAUSA5	t0	Sesion suspendida (reloj de pared): marca retroactiva escrita el 2026-09-27 al detectar el salto de fecha; ultimo trabajo real 18:28Z
+2026-09-27T17:03:11+00:00	P3-PAUSA5	t2	Reanuda la jornada 4 (marca retroactiva, misma hora que E065 t0)
+2026-09-27T17:03:11+00:00	E065	t0	Jornada 4: candidato F hallado al cotejar eldiario.es Cantabria (extrahoteleros julio 2026) con la API: cifra de apartamentos de junio repetida en el articulo de julio
+2026-09-27T17:16:35+00:00	E065	t1	primaria: API tabla 1993 (EOT1072) + anexos EOAT0726/EOAT0626 ya descargados; articulo de junio del mismo teletipo cotejado
+2026-09-27T17:16:35+00:00	E065	t2	extraido y anotado: 2a valor atribuido a otro periodo (junio por julio), cubeta C
+2026-09-27T17:18:16+00:00	E066	t0	Jornada 4: candidato 2b en EOAT0526 (apartamentos, Region de Murcia, viajeros +60% solo sale con la base provisional de EOAT0525)
+2026-09-27T17:19:14+00:00	E066	t1	primaria localizada: API tabla 1993 (EOT1117/EOT1120 Murcia) + anexo EOAT0525 fila 26 (base al publicar) + EOAT0526 fila 26; nota EOAT0525 publicada 2025-07-01
+2026-09-27T17:29:26+00:00	E066	t2	extraido y anotado: 2b magnitud (+60,2% provisional / +34,5% vigente), cubeta B, edicion EOAT0526
+2026-09-27T17:29:27+00:00	P3-J4	t2	Cierre de la jornada 4: cuota cumplida (INE 62,1%), 9 casos (E058-E066), B = 1 (E066, EOAT0526) -> regla 4b: parar y decide Mateo
+2026-09-27T17:29:27+00:00	P3-PAUSA6	t0	Pausa a la espera de Mateo tras la jornada 4
