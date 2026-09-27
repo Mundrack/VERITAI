@@ -130,7 +130,7 @@ nada es decisión.**
 | 2026-09-27 | Brady et al. (2017). PNAS. DOI 10.1073/pnas.1618923114 | Lenguaje moral-emocional contable con diccionarios validados, asociado a la difusión en Twitter, en inglés (pp. 7313–7315); efecto causal sobre actitudes sin probar (p. 7317) | Taxonomía (operacionalizar la carga emocional); Evaluación | leído · **evidencia candidata** (L-07) |
 | 2026-09-27 | Chernyavskiy, Ilvovsky & Nakov (2024). EACL. DOI 10.18653/v1/2024.eacl-long.87 | Rasgos de discurso mejoran la detección en inglés y ruso (pp. 1456–1457); exageración o minimización asociada a la relación de comparación (p. 1459); sin español | Evaluación (detector auditable) | leído · **evidencia candidata** (L-08) |
 | 2026-09-27 | Hasanain, Ahmad & Alam (2024). Findings of EMNLP. DOI 10.18653/v1/2024.findings-emnlp.850 | GPT-4 sin ajuste como anotador de spans: micro-F1 0,050 e índices que no corresponden al texto (pp. 14527–14528); un modelo ajustado rinde más (p. 14529) | Evaluación; Anotadores (LLM como anotador) | leído · **evidencia candidata** (L-09) |
-| 2026-09-27 | Hasanain, Ahmed & Alam (2024). LREC-COLING. Sin DOI en la Antología ACL | Acuerdo bajo en la fase 1, que los autores leen como razón para consolidar con expertos (p. 2727); GPT-4 sin ajuste en spans, micro-F1 máximo 0,138 en siete idiomas (p. 2730). Su guía en árabe no se usa como respaldo (DEC-037) | Anotadores; Evaluación | leído · **evidencia candidata** (L-10) |
+| 2026-09-27 | Hasanain, Ahmed & Alam (2024). LREC-COLING. Sin DOI en la Antología ACL | Acuerdo bajo en la fase 1, que los autores leen como razón para consolidar con expertos (p. 2727); GPT-4 sin ajuste en spans, micro-F1 máximo 0,138 en siete idiomas (p. 2730). Su guía en árabe no se usa como respaldo (DEC-038) | Anotadores; Evaluación | leído · **evidencia candidata** (L-10) |
 
 ## 4. Decisiones del proyecto actual que lo condicionan
 
@@ -149,4 +149,5 @@ nada es decisión.**
 | DEC-035 y puertas (`CLAUDE.md` §2) | **Se construye después de cerrar la Puerta 3** (jornada 5, `CTH0926`, congelado del conjunto, arnés y DEC de cierre). Nada en paralelo. |
 | `CLAUDE.md` §11 ("retórica general" no se implementa todavía) | Deja de ser un "todavía" incondicional: el eje entra, con enum cerrado, después de la Puerta 3 (DEC-036). |
 | Regla nueva (DEC-036): `IDEAS.md` → `DECISIONES.md` solo con aprobación explícita de Mateo | Ninguna pregunta de §2 se cierra sin DEC. |
-| DEC-037 (ni estados del lector ni efectos de difusión; ninguna cita que dependa de una traducción propia sin revisar) | La salida se limita a técnica, span y plantilla. La literatura en otra lengua respalda solo si alguien verificó la lectura. |
+| DEC-037 (ni estados del lector ni efectos de difusión) | La salida se limita a técnica, span y plantilla. |
+| DEC-038 (ninguna fuente que dependa de una traducción propia sin verificar) | La literatura en otra lengua respalda al eje solo si alguien verificó la lectura. |

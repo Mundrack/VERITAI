@@ -117,8 +117,8 @@ Vienen de `docs/DECISIONES.md`; aquí solo la regla, sin el contexto.
   una prueba de predicción sobre `EOAT0826` escrita antes del 30-09 (diseño
   §4h) y completa A hasta 40 sin INE; `CTH0926` (23-10) es necesaria; rastrear
   redacciones ya vistas está descartado por sesgo. *(DEC-035)*
-- **Una cita que depende de una traducción propia sin revisar no entra en la
-  tesis.** Si alguien la verifica, se añade. *(DEC-037)*
+- **Ninguna fuente que dependa de una traducción propia sin verificar entra
+  en la tesis.** Si alguien la verifica, se añade. *(DEC-038)*
 - **La métrica de la Puerta 1 se mide sobre todos los candidatos admitidos por
   la regla dura**, no sobre el lote por cubetas, y se reporta desagregada por
   nivel de emisor y vía de descubrimiento. *(DEC-020)*

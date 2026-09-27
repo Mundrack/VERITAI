@@ -1251,3 +1251,34 @@ implementación; no toca la Puerta 3; B0/B1/B2 no se diseñan.
 ### Qué quedó pendiente
 
 - Jornada 5: sigue cerrada.
+
+---
+
+## 2026-09-27 (22:44Z) — Correcciones de Mateo sobre `1c564cb`: DEC-037 y DEC-038, I-003, nivel de evidencia en TESIS/05
+
+### Qué se hizo
+
+- DEC-037 queda solo como "el eje no emite estados del lector ni efectos de
+  difusión", con la razón de Tannenbaum. La regla de citas pasa a DEC-038:
+  ninguna fuente que dependa de una traducción propia sin verificar entra en
+  la tesis. DEC-037 se corrige en su sitio, con una nota de registro, porque
+  Mateo lo pide y la entrada es del mismo día y no está fusionada.
+  `CLAUDE.md` §3 apunta a DEC-038; §11 sigue en DEC-037. Referencias
+  actualizadas en `IDEAS.md` y `EJE-MANIPULACION.md` §3 y §4.
+- I-003 en `IDEAS.md`, estado `idea`: leer la ref. 265 de Ecker (Powell,
+  Bian & Markman 2020, *PLOS ONE*), la única con *paltering* en el título.
+  Transcrita tal como la cita el manuscrito, sin buscarla fuera.
+- `TESIS/05` §D declara de forma visible su nivel de evidencia: respaldo de
+  revisión, seis primarias sin leer. Mapa C, ficha 02 e índice de TESIS
+  dicen lo mismo.
+
+### Qué se verificó
+
+- La ref. 265 es la única con *paltering* en el título en la lista de
+  referencias de Ecker (ms p. 45); el preprint la transcribe igual.
+
+### Qué quedó pendiente
+
+- I-003 espera aprobación de Mateo para leerse.
+- Taxonomía del eje: sin decidir.
+- Jornada 5: sigue cerrada.
