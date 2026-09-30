@@ -17,6 +17,7 @@ que se conserva).
 | I-001 | 2026-09-27 | Contraste con búsqueda web: baseline B0 medido sobre los 7 casos B | Mateo | en estudio | [abajo](#i-001--contraste-con-búsqueda-web-baseline-b0) |
 | I-002 | 2026-09-27 | Literatura para el futuro eje de manipulación, pasada 1: 9 fichas, SemEval como base, matriz de tres niveles, brechas | Mateo (PDF) | en estudio; la regla de §3, decidida en DEC-037 | [abajo](#i-002--literatura-para-el-futuro-eje-de-manipulación--pasada-1) |
 | I-003 | 2026-09-27 | Leer la primaria de Ecker con *paltering* en el título (Powell, Bian & Markman 2020, ref. 265) | Mateo | fuera de IDEAS: es tarea de la tesis principal, T-01 (Mateo, 2026-09-27) | [`TESIS/README.md`](TESIS/README.md) |
+| I-004 | 2026-09-30 | Probar graphify (grafo de conocimiento del código) como ayuda para el agente | Mateo | **descartada**: peor que grep en las 3 consultas; modifica `CLAUDE.md` sin declararlo e instala hooks sobre Read, Grep, Glob y Bash | [abajo](#i-004--graphify-descartada) |
 
 ---
 
@@ -752,4 +753,22 @@ a 0,375 en la tabla 1 (p. 2727).
 **Hecho (Mateo, 2026-09-27):** la tabla de papers de `EJE-MANIPULACION.md`
 §3 lleva las nueve fichas marcadas como evidencia candidata. Eso no convierte
 nada en decisión.
+
+---
+
+## I-004 · graphify (descartada)
+
+**Fecha:** 2026-09-30 · **De dónde salió:** Mateo · **Estado:** descartada
+(Mateo, 2026-09-30). Sobre herramientas, no sobre el objeto de estudio: no
+abre DEC.
+
+**Qué era.** Probar `graphifyy` 0.9.73 en un clon aparte, solo con el grafo
+de código, para ver si ahorra trabajo al agente al navegar el repo.
+
+**Resultado y razón del descarte.** Informe completo, medido, en
+`research/PRUEBA-GRAPHIFY.md`. En resumen: 707 nodos y 1947 aristas (250
+INFERRED); las tres consultas salieron **peor** que buscar en los ficheros;
+`install --project` modificó `CLAUDE.md` sin declararlo como modificación e
+instaló hooks que interceptan Read, Grep, Glob y Bash. Grafo de documentos
+sin probar. Todo desmontado el mismo día; el repo no se tocó.
 

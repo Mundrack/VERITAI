@@ -1363,3 +1363,29 @@ implementación; no toca la Puerta 3; B0/B1/B2 no se diseñan.
 
 - Taxonomía: sin decidir hasta después de la Puerta 3.
 - Jornada 5: sigue cerrada hasta que Mateo la abra.
+
+---
+
+## 2026-09-30 (23:31Z) — Prueba de graphify, descartada y desmontada
+
+### Qué se hizo
+
+- Prueba de `graphifyy` 0.9.73 en un clon aparte (`VERITAI-GRAFO`), solo
+  grafo de código, sin `--strict` ni hooks globales. Informe en
+  `research/PRUEBA-GRAPHIFY.md`; idea I-004 cerrada en `docs/IDEAS.md`.
+- `uv` no existía: instalado con autorización de Mateo (0.12.21) y se
+  conserva.
+- Desmontaje: carpeta `VERITAI-GRAFO` borrada, `uv tool uninstall graphifyy`,
+  `~/.cache/graphify` eliminada.
+
+### Qué se verificó
+
+- Ningún `settings.json` de Claude (usuario ni proyecto) ni ningún hook de
+  git menciona graphify; `uv tool list` vacío; sin ejecutables en
+  `~/.local/bin`; la caché no existe.
+- `git status` del repo original: solo `AGENTS.md` sin versionar, más el
+  informe nuevo.
+
+### Qué quedó pendiente
+
+- Jornada 5: sigue cerrada. Taxonomía: sin decidir.
