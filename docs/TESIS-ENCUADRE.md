@@ -110,6 +110,7 @@ Puerta 2  -> evaluacion sobre datos distintos          (DEC-025: sin contaminaci
 | **Evidencia** | Publicadores de **nivel 1**: organismos estadísticos y ministerios con API, dataset o boletín en URL estable (DEC-024). Prototipo con **INE, FMI e Interior**. Niveles 3–5 como limitación escrita: 58,3% de recuperabilidad en el piloto |
 | **Geografía** | Español, con fuentes de España y Latinoamérica. **No se afirma representatividad** de ninguno de los dos; el desequilibrio del corpus se declara |
 | **Decisión** | Determinística sobre la evidencia recuperada. El modelo de lenguaje interviene en interpretación, extracción y explicación, nunca como origen de un número |
+| **Preparación de la entrada** | El **claim estructurado** (qué cifra se afirma, de qué métrica y periodo, y contra qué se compara) **se prepara a mano y queda versionado en JSON**, un fichero por caso. El intérprete del texto de entrada, el componente que haría ese paso sobre la pieza de prensa, **no está construido**. Es una decisión de alcance tomada en la Puerta 2 y sostenida desde entonces (DEC-028): lo que la tesis demuestra es que la **verificación** de la divergencia es computable sin modelo; la preparación de la entrada hoy la hace una persona |
 | **Fuera** | Intención del autor; afirmaciones sin fuente oficial de nivel 1; lo que `02` ya excluía (móvil, deepfakes, texto generado, multilingüe) |
 
 ## Taxonomía
@@ -226,5 +227,9 @@ funcione fuera de nivel 1 (el 58,3% es una limitación, no una promesa); que el
 corpus represente a España o a Latinoamérica; que 2b sea frecuente en la
 prensa (B se declara con 7 casos e intervalo, DEC-035); que el piloto pruebe H1, H2 o
 H3; que el sistema funcione sin modelos de lenguaje —solo que la decisión no
-depende de ellos—; ni que exista todavía un caso canónico de base revisada con
-los cinco requisitos.
+depende de ellos—; que el sistema lea una pieza de prensa y extraiga por sí
+mismo qué cifra se afirma y contra qué se compara —el claim estructurado se
+prepara a mano y el intérprete de entrada no está construido (DEC-028): lo
+demostrado es que la verificación es computable sin modelo, no la lectura—;
+ni que exista todavía un caso canónico de base revisada con los cinco
+requisitos.

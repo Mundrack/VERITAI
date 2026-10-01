@@ -20,6 +20,7 @@ numeración).
 | Trabajo futuro: `other_observed` (P08, P09, P17, C10) | DEC-013, DEC-027; criterio de reaparición (diseño §2) | disponible |
 | Trabajo futuro: lo no implementado | `CLAUDE.md` §11; `docs/ARQUITECTURA.md` §8 | disponible |
 | Trabajo futuro: segundo anotador, ablación, baseline LLM, calibración | diseño §0; `02-1` §Evaluación | disponible como lista |
+| **Trabajo futuro: el intérprete del texto de entrada** (de la pieza de prensa al claim estructurado). Hoy ese paso lo hace una persona y queda en JSON por decisión de alcance de la Puerta 2 (DEC-028); construirlo es trabajo futuro, no algo pendiente de esta tesis. Lo que esta tesis deja hecho es la verificación computable sobre el claim ya estructurado, y es lo que un intérprete futuro tendría que alimentar | DEC-028; `docs/TESIS-ENCUADRE.md` §Alcance declarado | disponible |
 | Trabajo futuro: BdE como segunda operación con revisión (cuadro del PDF no extraíble) | `PROGRESO.md` §Jornada 4 | disponible |
 | Preguntas abiertas | `docs/PREGUNTAS-ABIERTAS.md` (P-05, P-06, P-08, P-20, P-23, entre otras) | disponible |
 | Referencias | **no existen en el repo** (ver sección 5) | **pendiente** |

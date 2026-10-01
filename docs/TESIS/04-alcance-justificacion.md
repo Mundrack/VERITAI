@@ -20,6 +20,7 @@ escritos antes de medir; y por qué merece una tesis.
 | Límite del fenómeno 2b | diseño §4d y §4g | 2b solo en 2 de las 8 operaciones (EOH, EOAT) |
 | Lo que sale del corpus | DEC-013 (P08, P09), DEC-027 (`other_observed`) | |
 | Lo que no se implementa | `CLAUDE.md` §11; `02-1` §Fuera del alcance | |
+| **Límite del alcance: la entrada se prepara a mano.** El claim estructurado (cifra afirmada, métrica, periodo y comparación) lo escribe una persona y queda versionado en JSON, un fichero por caso; el intérprete del texto de entrada no está construido. Decisión de alcance de la Puerta 2, sostenida desde entonces: la tesis demuestra que la *verificación* de la divergencia es computable sin modelo, no que el sistema lea la pieza | DEC-028; `docs/TESIS-ENCUADRE.md` §Alcance declarado y §Qué afirma; `research/puerta3/casos/*.json` | 76 claims estructurados a mano en el conjunto de evaluación (2026-09-30) |
 | Alcance honesto tras el piloto | `research/PILOT-FINDINGS.md` §4 | |
 | Justificación (por qué es tesis) | `02-1` §"Por qué esto sí es una tesis"; `03-2` | contrastar con el encuadre vigente |
 | Coste variable ~0 y reproducibilidad | `CLAUDE.md` §7 (librerías prohibidas), DEC-018 | |

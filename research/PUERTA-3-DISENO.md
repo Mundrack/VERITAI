@@ -230,6 +230,13 @@ el 403 del FMI e Interior: aquí la limitación es inversa, el publicador no
 bloqueó pero su política escrita excluye a los agentes, y el proyecto lo
 supo tarde.
 
+**Y una limitación de alcance que atraviesa todo el conjunto:** los 76 claims
+estructurados del conjunto de evaluación están preparados a mano y
+versionados en JSON; el intérprete del texto de entrada no está construido
+(decisión de alcance de la Puerta 2, DEC-028). Lo que el arnés mide es la
+verificación computable sobre el claim ya estructurado, no la lectura de la
+pieza.
+
 ## 4. Replanteo tras la jornada 2 (DEC-034): la cubeta B es 2b
 
 La jornada 2 cerró con **B = 0**: 2a no apareció en 43 casos recolectados con
