@@ -1389,3 +1389,50 @@ implementación; no toca la Puerta 3; B0/B1/B2 no se diseñan.
 ### Qué quedó pendiente
 
 - Jornada 5: sigue cerrada. Taxonomía: sin decidir.
+
+---
+
+## 2026-09-30 (noche local; 01:03Z del 2026-10-01) — Jornada 5, sesión 1: P2 sin 2b, siete A y un F sin INE; EOAT0826 se publica el 1-10; SEPE vetado por robots.txt
+
+### Qué se hizo
+
+- Mateo abrió la jornada 5. `robots.txt` consultado antes de la primera
+  petición a cada dominio (convención del 27-09). Hallazgo: **el `robots.txt`
+  del SEPE prohíbe los PDF y xlsx a cualquier agente y deniega todo a los
+  bots de Claude por nombre**. Nada descargado del SEPE; DEC-018.
+- **P1 pendiente:** `EOAT0826` devolvió 404 tres veces; el calendario del
+  INE la fija el **1 de octubre**, no el 30 de septiembre que decía el diseño
+  (error de un día; `EOAT0825` también salió el 1-10). La predicción sigue
+  preinscrita (`13e03fa`, 27-09). Corregido en diseño §4h, PROGRESO,
+  `CLAUDE.md` §2 y ESTADO. `EOAT0825` (nota, PDF y anexo) y la API (agosto
+  2025 revisado) ya están descargados para evaluar P1 mañana.
+- **P2, no refutada:** seis piezas regionales de julio 2026 (Hipotecas,
+  Sociedades, ETDP), nueve cifras, todas iguales a la tasa que el INE
+  publica; 0 2b. Tabla en diseño §4h. IPI, FRONTUR y EGATUR sin pieza.
+- **Controles:** E067–E069 (BdE deuda por CCAA 2T2026, publicada hoy),
+  E070–E071 (BdE mayo 2026), E073–E074 (Interior, Balance 2025 anual).
+  E075: F, EFE da +3,8 % donde el BdE publica +3,6 % (contradicted por
+  tolerancia; anotado para Mateo). E072 retirado: misma URL que E033.
+- Validador OK: A 38, B 7, C 2, D 10, E 11, F 4, O 1 = 74; INE 55,4 %.
+
+### Qué se verificó
+
+- Cada cifra de los siete A contra la tabla o nota del emisor, con
+  `raw_value_span`; las de P2 contra el JSON de la nota del INE (H, SM) y la
+  hoja 9 del anexo (ETDP).
+- El BdE revisa ratios de trimestres anteriores (CLM 2T2025: 28,5 al
+  publicar, 29,3 vigente): las redacciones usaron la vigente (anotado en
+  E067 y E068 como caso inverso de 2b).
+- Peticiones de red: un `robots.txt` por dominio (servicios.ine.es sin
+  respuesta ×3, error de transporte); El Correo Gallego devolvió 406 al
+  primer intento: cerrado (DEC-021). Sin reintentos sobre rechazos.
+
+### Qué quedó pendiente
+
+- **P1 sobre `EOAT0826`** a partir del 1-10 (07:00Z). P1' sobre `CTH0926`
+  el 23-10. La jornada 5 sigue abierta (`P3-PAUSA7`).
+- **Decide Mateo:** (1) los seis casos SEPE anteriores, descargados sin
+  consultar el `robots.txt`; (2) los dos A que faltan para 40, sin SEPE:
+  BdE julio 2026 admite dos más y Portal 2025 uno; (3) E075 como F por la
+  regla de tolerancia (0,17 pp).
+- Taxonomía del eje: sin decidir. Tercer eje: no tocado.

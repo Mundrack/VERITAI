@@ -1,0 +1,266 @@
+{
+ "codigo": "SM0726",
+ "consultado": "2026-10-01T00:45:59+00:00",
+ "agente": "VERITAI-prototipo/0.1 (tesis UDLA; agente identificado, DEC-018)",
+ "descargas": {
+  "html": {
+   "url": "https://www.ine.es/dyngs/Prensa/SM0726.htm",
+   "http": 200,
+   "content_type": "text/html;charset=UTF-8",
+   "bytes": 39418,
+   "sha256": "076cfe9316faa63473bb0b309d3b5f93ff15a037554ffd6a1f29c671b2c434ab",
+   "guardado_en": "research\\evidencia\\D2B_SM0726.htm",
+   "fecha_publicacion": "10 de septiembre de 2026",
+   "titular": "El número de sociedades mercantiles creadas aumentó un 2,2% en julio respecto al mismo mes de 2025."
+  },
+  "pdf": {
+   "url": "https://www.ine.es/dyngs/Prensa/SM0726.pdf",
+   "http": 200,
+   "content_type": "application/pdf",
+   "bytes": 161191,
+   "sha256": "4fb1bbed846b6ba088445d4be5a1a3ec9cedcf8e6f952d8b38c0854efbe23c39",
+   "guardado_en": "research\\evidencia\\D2B_SM0726.pdf"
+  },
+  "xlsx": {
+   "url": "https://www.ine.es/prensa/anexo_tablas/es/SM0726.xlsx",
+   "http": 200,
+   "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+   "bytes": 153428,
+   "sha256": "0d3e0769535bb1a81871ec58865a2104d8207b0478f6bb9538cdad857f48b195",
+   "guardado_en": "research\\evidencia\\D2B_SM0726.xlsx",
+   "filas": [
+    {
+     "hoja": "Hoja 1",
+     "fila_idx": 11,
+     "cabecera": [
+      "10 de septiembre de 2026",
+      "Estadística de Sociedades Mercantiles",
+      "Julio 2026  (datos provisionales)",
+      "SM.1 Sociedades mercantiles creadas",
+      "Capital en miles de euros",
+      "Total general* | Sociedad anónima | Sociedad limitada",
+      "Número | Capital | Número | Capital | Número | Capital",
+      "Suscrito | Desem- | Suscrito | Desem- | Suscrito | Desem-"
+     ],
+     "valores": [
+      "TOTAL",
+      11150,
+      0,
+      464613,
+      0,
+      456038,
+      0,
+      57,
+      0,
+      25999,
+      0,
+      17425,
+      0,
+      11090,
+      0,
+      438389,
+      0,
+      438389
+     ]
+    },
+    {
+     "hoja": "Hoja 1",
+     "fila_idx": 35,
+     "cabecera": [
+      "10 de septiembre de 2026",
+      "Estadística de Sociedades Mercantiles",
+      "Julio 2026  (datos provisionales)",
+      "SM.1 Sociedades mercantiles creadas",
+      "Capital en miles de euros",
+      "Total general* | Sociedad anónima | Sociedad limitada",
+      "Número | Capital | Número | Capital | Número | Capital",
+      "Suscrito | Desem- | Suscrito | Desem- | Suscrito | Desem-"
+     ],
+     "valores": [
+      "Total general *",
+      "Sociedad anónima",
+      "Sociedad limitada",
+      "Total",
+      "Volun-",
+      "Por ",
+      "Otras"
+     ]
+    },
+    {
+     "hoja": "Hoja 1",
+     "fila_idx": 38,
+     "cabecera": [
+      "10 de septiembre de 2026",
+      "Estadística de Sociedades Mercantiles",
+      "Julio 2026  (datos provisionales)",
+      "SM.1 Sociedades mercantiles creadas",
+      "Capital en miles de euros",
+      "Total general* | Sociedad anónima | Sociedad limitada",
+      "Número | Capital | Número | Capital | Número | Capital",
+      "Suscrito | Desem- | Suscrito | Desem- | Suscrito | Desem-"
+     ],
+     "valores": [
+      "TOTAL",
+      2481,
+      0,
+      1566717,
+      0,
+      111,
+      0,
+      334879,
+      0,
+      2369,
+      0,
+      1231836,
+      0,
+      1813,
+      0,
+      1382,
+      0,
+      216,
+      0,
+      215
+     ]
+    },
+    {
+     "hoja": "Hoja 2",
+     "fila_idx": 10,
+     "cabecera": [
+      "10 de septiembre de 2026",
+      "Estadística de Sociedades Mercantiles",
+      "Julio 2026  (datos provisionales)",
+      "SM.3 Sociedades mercantiles que desembolsan dividendos ",
+      "pasivos y sociedades que reducen capital",
+      "Capital en miles de euros",
+      "Desembolso de dividendos pasivos | Reducen capital",
+      "Número | Capital desembolsado | Número  | Capital suscrito"
+     ],
+     "valores": [
+      "TOTAL",
+      17,
+      0,
+      0,
+      14494,
+      0,
+      659,
+      0,
+      0,
+      1890045
+     ]
+    },
+    {
+     "hoja": "Hoja 2",
+     "fila_idx": 33,
+     "cabecera": [
+      "10 de septiembre de 2026",
+      "Estadística de Sociedades Mercantiles",
+      "Julio 2026  (datos provisionales)",
+      "SM.3 Sociedades mercantiles que desembolsan dividendos ",
+      "pasivos y sociedades que reducen capital",
+      "Capital en miles de euros",
+      "Desembolso de dividendos pasivos | Reducen capital",
+      "Número | Capital desembolsado | Número  | Capital suscrito"
+     ],
+     "valores": [
+      "Total",
+      "Sociedades mercantiles",
+      "Sociedades anónimas",
+      "Sociedades especiales"
+     ]
+    },
+    {
+     "hoja": "Hoja 3",
+     "fila_idx": 10,
+     "cabecera": [
+      "10 de septiembre de 2026",
+      "Estadística de Sociedades Mercantiles",
+      "Julio 2026  (datos provisionales)",
+      "SM.5 Sociedades mercantiles creadas por provincias",
+      "Capital en miles de euros",
+      "Total general* | Sociedad anónima | Sociedad limitada",
+      "Número | Capital | Número | Capital | Número | Capital",
+      "Suscrito | Desem- | Suscrito | Desem- | Suscrito | Desem-"
+     ],
+     "valores": [
+      "TOTAL",
+      11150,
+      0,
+      464613,
+      0,
+      456038,
+      0,
+      57,
+      0,
+      25999,
+      0,
+      17425,
+      0,
+      11090,
+      0,
+      438389,
+      0,
+      438389
+     ]
+    },
+    {
+     "hoja": "Hoja 4",
+     "fila_idx": 7,
+     "cabecera": [
+      "10 de septiembre de 2026",
+      "Estadística de Sociedades Mercantiles",
+      "Julio 2026  (datos provisionales)",
+      "SM.6 Sociedades mercantiles que amplían capital y disueltas por provincias",
+      "Capital en miles de euros",
+      "Amplían capital | Disueltas",
+      "Total general * | Sociedad anónima | Sociedad limitada | Total | Volun- | Por  | Otras"
+     ],
+     "valores": [
+      "Total general *",
+      "Sociedad anónima",
+      "Sociedad limitada",
+      "Total",
+      "Volun-",
+      "Por ",
+      "Otras"
+     ]
+    },
+    {
+     "hoja": "Hoja 4",
+     "fila_idx": 10,
+     "cabecera": [
+      "10 de septiembre de 2026",
+      "Estadística de Sociedades Mercantiles",
+      "Julio 2026  (datos provisionales)",
+      "SM.6 Sociedades mercantiles que amplían capital y disueltas por provincias",
+      "Capital en miles de euros",
+      "Amplían capital | Disueltas",
+      "Total general * | Sociedad anónima | Sociedad limitada | Total | Volun- | Por  | Otras",
+      "taria | fusión"
+     ],
+     "valores": [
+      "TOTAL",
+      2481,
+      0,
+      1566717,
+      0,
+      111,
+      0,
+      334879,
+      0,
+      2369,
+      0,
+      1231836,
+      0,
+      1813,
+      0,
+      1382,
+      0,
+      216,
+      0,
+      215
+     ]
+    }
+   ]
+  }
+ }
+}

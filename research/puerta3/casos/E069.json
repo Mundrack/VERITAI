@@ -1,0 +1,30 @@
+{
+  "claim_id": "E069",
+  "texto": "La Región de Murcia ya es la segunda comunidad más endeudada de España",
+  "fuente_url": "https://murciaplaza.com/murciaplaza/region/la-region-de-murcia-ya-es-la-segunda-comunidad-mas-endeudada-de-espana",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "Banco de España",
+    "tabla": "a1309.pdf / cuadro 13.9",
+    "serie_nombre": "Deuda PDE, Region de Murcia (millones EUR)",
+    "unidad": "millones EUR",
+    "referencia_principal": "trimestral",
+    "descripcion": "Deuda PDE por CCAA, importes, trimestral"
+  },
+  "periodo_objetivo": "2026-T2",
+  "periodo_base": "2026-T1",
+  "valor_objetivo": 14254,
+  "cambio_afirmado": 87,
+  "unidad_cambio": "abs",
+  "direccion_afirmada": "sube",
+  "evidencia_vigente": {
+    "valor": 14167,
+    "edicion": "BdE Boletin Estadistico cuadro 13.9, fila 2026 I A",
+    "fecha": "2026-09-30",
+    "url": "https://www.bde.es/webbe/es/estadisticas/compartido/datos/pdf/a1309.pdf",
+    "raw_value_span": "[a1309.pdf, fila '26 I A', col. 15] 14 167"
+  },
+  "notas": "La pieza compara con el trimestre anterior (referencia explicita). Sin 2a ni 2b."
+}

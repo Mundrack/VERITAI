@@ -30,7 +30,7 @@ PUERTA 3   corpus completo anotado + arnes de evaluacion     <-- AQUI. B = 2b de
            SEPE, BdE (FMI e interior.gob.es: 403, cubeta E)     114 tests). Jornada 4 cerrada con
            2b: research/puerta3/RECUPERABILIDAD-2B.md           B = 1. DEC-035: B declarada con 7 e
            propuesta: docs/PROPUESTA-2B.md (8 operaciones)     intervalo (limitacion de H1); jornada 5 =
-           tope 3 B/edicion (4c), hipotesis 4d confirmada        prediccion sobre EOAT0826 (30-09, escrita
+           tope 3 B/edicion (4c), hipotesis 4d confirmada        prediccion sobre EOAT0826 (1-10, escrita
            prediccion P1/P2 escrita el 27-09 (diseno 4h)       el 27-09) + A hasta 40 sin INE; CTH0926
                                                                NECESARIA (23-10); via (c) descartada
 

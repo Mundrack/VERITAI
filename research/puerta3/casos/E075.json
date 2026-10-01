@@ -1,0 +1,38 @@
+{
+  "claim_id": "E075",
+  "texto": "La deuda de CCAA baja al 20,4 % del PIB en segundo trimestre pero el importe marca récord",
+  "fuente_url": "https://www.infobae.com/espana/agencias/2026/09/30/la-deuda-de-ccaa-baja-al-204-del-pib-en-segundo-trimestre-pero-el-importe-marca-record/",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "Banco de España",
+    "tabla": "a1309.pdf / cuadro 13.9",
+    "serie_nombre": "Deuda PDE, total Comunidades Autonomas (millones EUR)",
+    "unidad": "millones EUR",
+    "referencia_principal": "interanual",
+    "descripcion": "Deuda PDE del conjunto de CCAA, importes, trimestral"
+  },
+  "periodo_objetivo": "2026-T2",
+  "periodo_base": "2025-T2",
+  "valor_objetivo": 355241,
+  "cambio_afirmado": 3.8,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "evidencia_al_publicar": {
+    "valor": 343000,
+    "edicion": "BdE nota 2T2025 (30/09/2025), '343 mm'",
+    "fecha": "2025-09-30",
+    "url": "https://www.bde.es/wbe/es/noticias-eventos/actualidad-banco-espana/notas-banco-espana/deuda-aapp-2025t2.html",
+    "raw_value_span": "[BdE deuda-aapp-2025t2] 'fue de 343 mm de euros (21% del PIB)'",
+    "verificacion": "leida el 2026-09-30 de la nota HTML del BdE; redondeada a mm por el emisor"
+  },
+  "evidencia_vigente": {
+    "valor": 342799,
+    "edicion": "BdE Boletin Estadistico cuadro 13.9, fila 2025 II P",
+    "fecha": "2026-09-30",
+    "url": "https://www.bde.es/webbe/es/estadisticas/compartido/datos/pdf/a1309.pdf",
+    "raw_value_span": "[a1309.pdf, fila '25 II P', col. 1] 342 799"
+  },
+  "notas": "+3,8% no se reproduce con la base vigente (+3,63%) ni con la base al publicar (+3,57%). Contradicted en la tasa; importe y ratio correctos."
+}

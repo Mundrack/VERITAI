@@ -333,3 +333,34 @@
 2026-09-27T17:29:26+00:00	E066	t2	extraido y anotado: 2b magnitud (+60,2% provisional / +34,5% vigente), cubeta B, edicion EOAT0526
 2026-09-27T17:29:27+00:00	P3-J4	t2	Cierre de la jornada 4: cuota cumplida (INE 62,1%), 9 casos (E058-E066), B = 1 (E066, EOAT0526) -> regla 4b: parar y decide Mateo
 2026-09-27T17:29:27+00:00	P3-PAUSA6	t0	Pausa a la espera de Mateo tras la jornada 4
+2026-10-01T00:43:46+00:00	P3-PAUSA6	t2	Reanuda: Mateo abre la jornada 5 (2026-09-30 local)
+2026-10-01T00:43:46+00:00	P3-J5	t0	Jornada 5: P1 sobre EOAT0826, P2, nueve controles A sin INE. robots.txt consultado antes de la primera peticion a cada dominio
+2026-10-01T00:52:50+00:00	E067	t0	Jornada 5, control A sin INE: El Espanol CLM: deuda 28,1% PIB 2T2026, -1,2 pp. localizacion en lote 00:49-00:55Z (BdE nota 2T2026 + tablas a1309/a1310; BdE notas mayo y julio 2026; Portal balance 4T2025 tabla 1509010); criba (a) y (b) por edicion, sin articulo de verificacion
+2026-10-01T00:52:50+00:00	E068	t0	Jornada 5, control A sin INE: Diario de Alicante: deuda C. Valenciana 40% PIB, 64.593 M, 2T2026. localizacion en lote 00:49-00:55Z (BdE nota 2T2026 + tablas a1309/a1310; BdE notas mayo y julio 2026; Portal balance 4T2025 tabla 1509010); criba (a) y (b) por edicion, sin articulo de verificacion
+2026-10-01T00:52:50+00:00	E069	t0	Jornada 5, control A sin INE: Empresas de Cartagena: deuda Murcia roza el 31% PIB, segunda mas alta, 2T2026. localizacion en lote 00:49-00:55Z (BdE nota 2T2026 + tablas a1309/a1310; BdE notas mayo y julio 2026; Portal balance 4T2025 tabla 1509010); criba (a) y (b) por edicion, sin articulo de verificacion
+2026-10-01T00:52:50+00:00	E070	t0	Jornada 5, control A sin INE: merca2: deuda AAPP mayo 2026 100,2% PIB, 1,729 bn, +4%. localizacion en lote 00:49-00:55Z (BdE nota 2T2026 + tablas a1309/a1310; BdE notas mayo y julio 2026; Portal balance 4T2025 tabla 1509010); criba (a) y (b) por edicion, sin articulo de verificacion
+2026-10-01T00:52:50+00:00	E071	t0	Jornada 5, control A sin INE: El Confidencial Digital: deuda AAPP mayo 2026 100,2%, -2 pp. localizacion en lote 00:49-00:55Z (BdE nota 2T2026 + tablas a1309/a1310; BdE notas mayo y julio 2026; Portal balance 4T2025 tabla 1509010); criba (a) y (b) por edicion, sin articulo de verificacion
+2026-10-01T00:52:50+00:00	E072	t0	Jornada 5, control A sin INE: El Espanol Invertia: deuda CCAA julio 2026 349.305 M, +2,7%. localizacion en lote 00:49-00:55Z (BdE nota 2T2026 + tablas a1309/a1310; BdE notas mayo y julio 2026; Portal balance 4T2025 tabla 1509010); criba (a) y (b) por edicion, sin articulo de verificacion
+2026-10-01T00:52:50+00:00	E073	t0	Jornada 5, control A sin INE: EP/Diario Siglo XXI: Castilla y Leon lidera la criminalidad 2025, +5,8%. localizacion en lote 00:49-00:55Z (BdE nota 2T2026 + tablas a1309/a1310; BdE notas mayo y julio 2026; Portal balance 4T2025 tabla 1509010); criba (a) y (b) por edicion, sin articulo de verificacion
+2026-10-01T00:52:50+00:00	E074	t0	Jornada 5, control A sin INE: Radio Insular: criminalidad Canarias 2025 +3,1%. localizacion en lote 00:49-00:55Z (BdE nota 2T2026 + tablas a1309/a1310; BdE notas mayo y julio 2026; Portal balance 4T2025 tabla 1509010); criba (a) y (b) por edicion, sin articulo de verificacion
+2026-10-01T00:55:00+00:00	E075	t0	Jornada 5: candidato F hallado al cotejar EFE/Infobae (deuda CCAA 2T2026 +3,8%) con la nota del BdE (+3,6%) y la tabla a1309 (355241/342799 = +3,63%)
+2026-10-01T01:01:13+00:00	E067	t1	primaria localizada en el lote de descargas (BdE nota 2T2026 + a1309/a1310; BdE mayo y julio 2026; Portal 1509010.csv_c)
+2026-10-01T01:01:13+00:00	E067	t2	extraido y anotado en lote_evaluacion.py
+2026-10-01T01:01:13+00:00	E068	t1	primaria localizada en el lote de descargas (BdE nota 2T2026 + a1309/a1310; BdE mayo y julio 2026; Portal 1509010.csv_c)
+2026-10-01T01:01:13+00:00	E068	t2	extraido y anotado en lote_evaluacion.py
+2026-10-01T01:01:13+00:00	E069	t1	primaria localizada en el lote de descargas (BdE nota 2T2026 + a1309/a1310; BdE mayo y julio 2026; Portal 1509010.csv_c)
+2026-10-01T01:01:13+00:00	E069	t2	extraido y anotado en lote_evaluacion.py
+2026-10-01T01:01:13+00:00	E070	t1	primaria localizada en el lote de descargas (BdE nota 2T2026 + a1309/a1310; BdE mayo y julio 2026; Portal 1509010.csv_c)
+2026-10-01T01:01:14+00:00	E070	t2	extraido y anotado en lote_evaluacion.py
+2026-10-01T01:01:14+00:00	E071	t1	primaria localizada en el lote de descargas (BdE nota 2T2026 + a1309/a1310; BdE mayo y julio 2026; Portal 1509010.csv_c)
+2026-10-01T01:01:14+00:00	E071	t2	extraido y anotado en lote_evaluacion.py
+2026-10-01T01:01:14+00:00	E072	t1	primaria localizada en el lote de descargas (BdE nota 2T2026 + a1309/a1310; BdE mayo y julio 2026; Portal 1509010.csv_c)
+2026-10-01T01:01:14+00:00	E072	t2	extraido y anotado en lote_evaluacion.py
+2026-10-01T01:01:14+00:00	E073	t1	primaria localizada en el lote de descargas (BdE nota 2T2026 + a1309/a1310; BdE mayo y julio 2026; Portal 1509010.csv_c)
+2026-10-01T01:01:14+00:00	E073	t2	extraido y anotado en lote_evaluacion.py
+2026-10-01T01:01:14+00:00	E074	t1	primaria localizada en el lote de descargas (BdE nota 2T2026 + a1309/a1310; BdE mayo y julio 2026; Portal 1509010.csv_c)
+2026-10-01T01:01:14+00:00	E074	t2	extraido y anotado en lote_evaluacion.py
+2026-10-01T01:01:14+00:00	E075	t1	primaria localizada en el lote de descargas (BdE nota 2T2026 + a1309/a1310; BdE mayo y julio 2026; Portal 1509010.csv_c)
+2026-10-01T01:01:14+00:00	E075	t2	extraido y anotado en lote_evaluacion.py
+2026-10-01T01:01:35+00:00	E072	t2	RETIRADO antes de anotar: la URL es la de E033 (mismo articulo, no hermano); el validador lo detecto. No es un caso
+2026-10-01T01:03:38+00:00	P3-PAUSA7	t0	Jornada 5 sigue abierta: sesion 1 cerrada (P2 y controles); P1 espera EOAT0826 (1-10) y P1' CTH0926 (23-10)

@@ -1,0 +1,38 @@
+{
+  "claim_id": "E067",
+  "texto": "Castilla-La Mancha reduce su deuda al 28,1 % del PIB, pero sigue entre las regiones más endeudadas de España",
+  "fuente_url": "https://www.elespanol.com/eldigitalcastillalamancha/region/20260930/castilla-la-mancha-reduce-deuda-pib-sigue-regiones-endeudadas-espana/1003744403470_0.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "Banco de España",
+    "tabla": "a1310.pdf / cuadro 13.10",
+    "serie_nombre": "Deuda PDE / PIB, Castilla-La Mancha (%)",
+    "unidad": "pct_pib",
+    "referencia_principal": "interanual",
+    "descripcion": "Ratio de deuda PDE sobre PIB por CCAA, trimestral"
+  },
+  "periodo_objetivo": "2026-T2",
+  "periodo_base": "2025-T2",
+  "valor_objetivo": 28.1,
+  "cambio_afirmado": -1.2,
+  "unidad_cambio": "pp",
+  "direccion_afirmada": "baja",
+  "evidencia_al_publicar": {
+    "valor": 28.5,
+    "edicion": "BdE nota 2T2025 (30/09/2025)",
+    "fecha": "2025-09-30",
+    "url": "https://www.bde.es/wbe/es/noticias-eventos/actualidad-banco-espana/notas-banco-espana/deuda-aapp-2025t2.html",
+    "raw_value_span": "[BdE deuda-aapp-2025t2] Castilla-La Mancha 28,5%",
+    "verificacion": "leida el 2026-09-30 de la nota HTML del BdE"
+  },
+  "evidencia_vigente": {
+    "valor": 29.3,
+    "edicion": "BdE Boletin Estadistico cuadro 13.10, fila 2025 II P",
+    "fecha": "2026-09-30",
+    "url": "https://www.bde.es/webbe/es/estadisticas/compartido/datos/pdf/a1310.pdf",
+    "raw_value_span": "[a1310.pdf, fila '25 II P', col. 8] 29,3"
+  },
+  "notas": "La redaccion calcula con la base vigente (29,3): -1,2 pp. Con la base al publicar (28,5) la bajada seria de 0,4 pp, mismo signo. Sin 2a ni 2b."
+}

@@ -1,0 +1,23 @@
+{
+  "claim_id": "E072",
+  "texto": "La deuda pública cae en julio por debajo del 100% del PIB aunque se mantiene por encima de los 1,7 billones de euros",
+  "fuente_url": "https://www.elespanol.com/invertia/economia/20260917/deuda-publica-cae-julio-debajo-primera-vez-febrero-pandemia/1003744386741_0.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "Banco de España",
+    "tabla": "deuda-aapp-julio26",
+    "serie_nombre": "Deuda PDE de las CCAA, saldo (millones EUR)",
+    "unidad": "millones EUR",
+    "referencia_principal": "interanual",
+    "descripcion": "Deuda PDE de las Comunidades Autonomas, avance mensual"
+  },
+  "periodo_objetivo": "2026-M07",
+  "periodo_base": "2025-M07",
+  "valor_objetivo": 349305,
+  "cambio_afirmado": 2.7,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Tasa interanual dada por el emisor. Sin 2a ni 2b."
+}

@@ -1,0 +1,309 @@
+{
+ "codigo": "ETDP0726",
+ "consultado": "2026-10-01T00:47:12+00:00",
+ "agente": "VERITAI-prototipo/0.1 (tesis UDLA; agente identificado, DEC-018)",
+ "descargas": {
+  "html": {
+   "url": "https://www.ine.es/dyngs/Prensa/ETDP0726.htm",
+   "http": 200,
+   "content_type": "text/html;charset=UTF-8",
+   "bytes": 38476,
+   "sha256": "7e842d9678c190b7bb02e90a4f7b1cdf43dd2d12a4b40d5261fb643b65fcbc65",
+   "guardado_en": "research\\evidencia\\D2B_ETDP0726.htm",
+   "fecha_publicacion": "25 de septiembre de 2026",
+   "titular": "En julio se inscribieron en los registros de la propiedad 205."
+  },
+  "pdf": {
+   "url": "https://www.ine.es/dyngs/Prensa/ETDP0726.pdf",
+   "http": 200,
+   "content_type": "application/pdf",
+   "bytes": 142808,
+   "sha256": "3387fd57b6b226a106ca9909dbace029ef3d567c9ebee14b01a984d9038f856d",
+   "guardado_en": "research\\evidencia\\D2B_ETDP0726.pdf"
+  },
+  "xlsx": {
+   "url": "https://www.ine.es/prensa/anexo_tablas/es/ETDP0726.xlsx",
+   "http": 200,
+   "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+   "bytes": 112453,
+   "sha256": "46f15e8e49cf736c91742587b217595506beb44feb769e682f5d24326b9b8ed4",
+   "guardado_en": "research\\evidencia\\D2B_ETDP0726.xlsx",
+   "filas": [
+    {
+     "hoja": "Hoja1",
+     "fila_idx": 6,
+     "cabecera": [
+      "25 de septiembre de 2026",
+      "Estadística de Transmisiones de Derechos de la Propiedad",
+      "Julio 2026. Datos provisionales",
+      "ETDP.1 Transmisiones inscritas en los registros de la propiedad",
+      "               efectuadas sobre fincas rústicas y urbanas",
+      "Total | Fincas rústicas | Fincas urbanas"
+     ],
+     "valores": [
+      "Total",
+      "Fincas rústicas",
+      "Fincas urbanas"
+     ]
+    },
+    {
+     "hoja": "Hoja1",
+     "fila_idx": 8,
+     "cabecera": [
+      "25 de septiembre de 2026",
+      "Estadística de Transmisiones de Derechos de la Propiedad",
+      "Julio 2026. Datos provisionales",
+      "ETDP.1 Transmisiones inscritas en los registros de la propiedad",
+      "               efectuadas sobre fincas rústicas y urbanas",
+      "Total | Fincas rústicas | Fincas urbanas",
+      "Viviendas | Solares | Otras urbanas",
+      "TOTAL | 205870 | 37864 | 98718 | 7745 | 61543"
+     ],
+     "valores": [
+      "TOTAL",
+      205870,
+      37864,
+      98718,
+      7745,
+      61543
+     ]
+    },
+    {
+     "hoja": "Hoja1",
+     "fila_idx": 32,
+     "cabecera": [
+      "25 de septiembre de 2026",
+      "Estadística de Transmisiones de Derechos de la Propiedad",
+      "Julio 2026. Datos provisionales",
+      "ETDP.1 Transmisiones inscritas en los registros de la propiedad",
+      "               efectuadas sobre fincas rústicas y urbanas",
+      "Total | Fincas rústicas | Fincas urbanas",
+      "Viviendas | Solares | Otras urbanas",
+      "TOTAL | 205870 | 37864 | 98718 | 7745 | 61543"
+     ],
+     "valores": [
+      "TOTAL",
+      37864,
+      13585,
+      1280,
+      189,
+      14230,
+      8580
+     ]
+    },
+    {
+     "hoja": "Hoja2",
+     "fila_idx": 5,
+     "cabecera": [
+      "25 de septiembre de 2026",
+      "Estadística de Transmisiones de Derechos de la Propiedad",
+      "Julio 2026. Datos provisionales",
+      "ETDP.3 Fincas urbanas transmitidas, según título de adquisición",
+      "Fincas urbanas | Compraventa | Donación | Permuta | Herencia | Otros",
+      "TOTAL | 168006 | 103953 | 3526 | 315 | 29610 | 30602"
+     ],
+     "valores": [
+      "TOTAL",
+      168006,
+      103953,
+      3526,
+      315,
+      29610,
+      30602
+     ]
+    },
+    {
+     "hoja": "Hoja2",
+     "fila_idx": 29,
+     "cabecera": [
+      "25 de septiembre de 2026",
+      "Estadística de Transmisiones de Derechos de la Propiedad",
+      "Julio 2026. Datos provisionales",
+      "ETDP.3 Fincas urbanas transmitidas, según título de adquisición",
+      "Fincas urbanas | Compraventa | Donación | Permuta | Herencia | Otros",
+      "TOTAL | 168006 | 103953 | 3526 | 315 | 29610 | 30602",
+      "Andalucía | 30992 | 20191 | 561 | 77 | 4600 | 5563",
+      "Aragón | 4917 | 2692 | 71 | 17 | 960 | 1177"
+     ],
+     "valores": [
+      "TOTAL",
+      98718,
+      61417,
+      2092,
+      84,
+      18620,
+      16505
+     ]
+    },
+    {
+     "hoja": "Hoja3",
+     "fila_idx": 5,
+     "cabecera": [
+      "25 de septiembre de 2026",
+      "Estadística de Transmisiones de Derechos de la Propiedad",
+      "Julio 2026. Datos provisionales",
+      "ETDP.5 Compraventa de viviendas, según régimen y estado ",
+      "Viviendas | Vivienda libre | Vivienda protegida | Vivienda nueva | Vivienda usada",
+      "TOTAL | 61417 | 57607 | 3810 | 13289 | 48128"
+     ],
+     "valores": [
+      "TOTAL",
+      61417,
+      57607,
+      3810,
+      13289,
+      48128
+     ]
+    },
+    {
+     "hoja": "Hoja4",
+     "fila_idx": 6,
+     "cabecera": [
+      "25 de septiembre de 2026",
+      "Estadística de Transmisiones de Derechos de la Propiedad",
+      "Julio 2026. Datos provisionales",
+      "ETDP.6 Transmisiones inscritas en los registros de la propiedad",
+      "               efectuadas sobre fincas rústicas y urbanas por provincias",
+      "Total | Fincas rústicas | Fincas urbanas"
+     ],
+     "valores": [
+      "Total",
+      "Fincas rústicas",
+      "Fincas urbanas"
+     ]
+    },
+    {
+     "hoja": "Hoja4",
+     "fila_idx": 8,
+     "cabecera": [
+      "25 de septiembre de 2026",
+      "Estadística de Transmisiones de Derechos de la Propiedad",
+      "Julio 2026. Datos provisionales",
+      "ETDP.6 Transmisiones inscritas en los registros de la propiedad",
+      "               efectuadas sobre fincas rústicas y urbanas por provincias",
+      "Total | Fincas rústicas | Fincas urbanas",
+      "Viviendas | Solares | Otras urbanas",
+      "TOTAL | 205870 | 37864 | 98718 | 7745 | 61543"
+     ],
+     "valores": [
+      "TOTAL",
+      205870,
+      37864,
+      98718,
+      7745,
+      61543
+     ]
+    },
+    {
+     "hoja": "Hoja5",
+     "fila_idx": 6,
+     "cabecera": [
+      "25 de septiembre de 2026",
+      "Estadística de Transmisiones de Derechos de la Propiedad",
+      "Julio 2026. Datos provisionales",
+      "ETDP.7 Fincas rústicas transmitidas, según título de adquisición",
+      "               por provincias",
+      "Fincas rústicas | Compraventa | Donación | Permuta | Herencia | Otros",
+      "TOTAL | 37864 | 13585 | 1280 | 189 | 14230 | 8580"
+     ],
+     "valores": [
+      "TOTAL",
+      37864,
+      13585,
+      1280,
+      189,
+      14230,
+      8580
+     ]
+    },
+    {
+     "hoja": "Hoja6",
+     "fila_idx": 6,
+     "cabecera": [
+      "25 de septiembre de 2026",
+      "Estadística de Transmisiones de Derechos de la Propiedad",
+      "Julio 2026. Datos provisionales",
+      "ETDP.8 Fincas urbanas transmitidas, según título de adquisición",
+      "               por provincias",
+      "Fincas urbanas | Compraventa | Donación | Permuta | Herencia | Otros",
+      "TOTAL | 168006 | 103953 | 3526 | 315 | 29610 | 30602"
+     ],
+     "valores": [
+      "TOTAL",
+      168006,
+      103953,
+      3526,
+      315,
+      29610,
+      30602
+     ]
+    },
+    {
+     "hoja": "Hoja7",
+     "fila_idx": 6,
+     "cabecera": [
+      "25 de septiembre de 2026",
+      "Estadística de Transmisiones de Derechos de la Propiedad",
+      "Julio 2026. Datos provisionales",
+      "ETDP.9 Viviendas transmitidas, según título de adquisición",
+      "               por provincias",
+      "Viviendas | Compraventa | Donación | Permuta | Herencia | Otros",
+      "TOTAL | 98718 | 61417 | 2092 | 84 | 18620 | 16505"
+     ],
+     "valores": [
+      "TOTAL",
+      98718,
+      61417,
+      2092,
+      84,
+      18620,
+      16505
+     ]
+    },
+    {
+     "hoja": "Hoja8",
+     "fila_idx": 6,
+     "cabecera": [
+      "25 de septiembre de 2026",
+      "Estadística de Transmisiones de Derechos de la Propiedad",
+      "Julio 2026. Datos provisionales",
+      "ETDP.10 Compraventa de viviendas, según régimen y estado ",
+      "                 por provincias",
+      "Viviendas | Vivienda libre | Vivienda protegida | Vivienda nueva | Vivienda usada",
+      "TOTAL | 61417 | 57607 | 3810 | 13289 | 48128"
+     ],
+     "valores": [
+      "TOTAL",
+      61417,
+      57607,
+      3810,
+      13289,
+      48128
+     ]
+    },
+    {
+     "hoja": "Hoja9",
+     "fila_idx": 10,
+     "cabecera": [
+      "25 de septiembre de 2026",
+      "Estadística de Transmisiones de Derechos de la Propiedad",
+      "Julio 2026. Datos provisionales",
+      "ETDP.11 Fincas transmitidas por comunidades autónomas",
+      "Total de fincas transmitidas inscritas en los registros | Compraventas de viviendas registradas",
+      "Número | % Variación anual | Número por cada cien mil habitantes 1 | Número | % Variación anual | Número por cada cien mil habitantes1",
+      "TOTAL | 205870 | -1.826886853186203 | 509.85493343033625 | 61417 | -5.106455301134081 | 152.1045341550054"
+     ],
+     "valores": [
+      "TOTAL",
+      205870,
+      -1.826886853186203,
+      509.85493343033625,
+      61417,
+      -5.106455301134081,
+      152.1045341550054
+     ]
+    }
+   ]
+  }
+ }
+}

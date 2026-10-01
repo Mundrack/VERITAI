@@ -1,0 +1,23 @@
+{
+  "claim_id": "E074",
+  "texto": "La criminalidad aumenta un 3,1% en Canarias en 2025, según el balance del Ministerio del Interior",
+  "fuente_url": "https://radioinsular.es/la-criminalidad-aumenta-un-31-en-canarias-en-2025-segun-el-balance-del-ministerio-del-interior/",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "Ministerio del Interior",
+    "tabla": "Portal Estadistico de Criminalidad, Balance 2025 4T, tabla 1509010",
+    "serie_nombre": "Infracciones penales, Canarias (hechos conocidos)",
+    "unidad": "infracciones",
+    "referencia_principal": "interanual",
+    "descripcion": "Total de infracciones penales por CCAA, acumulado enero-diciembre"
+  },
+  "periodo_objetivo": "2025",
+  "periodo_base": "2024",
+  "valor_objetivo": 110325,
+  "cambio_afirmado": 3.1,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "El nivel (110.325) no esta en la pieza; se toma de la primaria para el test."
+}

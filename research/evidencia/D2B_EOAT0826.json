@@ -1,0 +1,22 @@
+{
+ "codigo": "EOAT0826",
+ "consultado": "2026-10-01T00:44:20+00:00",
+ "agente": "VERITAI-prototipo/0.1 (tesis UDLA; agente identificado, DEC-018)",
+ "descargas": {
+  "html": {
+   "url": "https://www.ine.es/dyngs/Prensa/EOAT0826.htm",
+   "http": 404,
+   "error": "HTTP 404"
+  },
+  "pdf": {
+   "url": "https://www.ine.es/dyngs/Prensa/EOAT0826.pdf",
+   "http": 404,
+   "error": "HTTP 404"
+  },
+  "xlsx": {
+   "url": "https://www.ine.es/prensa/anexo_tablas/es/EOAT0826.xlsx",
+   "http": 404,
+   "error": "HTTP 404"
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+  "claim_id": "E073",
+  "texto": "Castilla y León lidera la criminalidad en 2025, mientras que en Cataluña y Madrid es donde más caen los delitos",
+  "fuente_url": "https://www.diariosigloxxi.com/texto-ep/mostrar/20260228100030/castilla-leon-lidera-criminalidad-2025-mientras-cataluna-madrid-donde-caen-delitos",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "Ministerio del Interior",
+    "tabla": "Portal Estadistico de Criminalidad, Balance 2025 4T, tabla 1509010",
+    "serie_nombre": "Infracciones penales, Castilla y Leon (hechos conocidos)",
+    "unidad": "infracciones",
+    "referencia_principal": "interanual",
+    "descripcion": "Total de infracciones penales por CCAA, acumulado enero-diciembre"
+  },
+  "periodo_objetivo": "2025",
+  "periodo_base": "2024",
+  "valor_objetivo": 96625,
+  "cambio_afirmado": 5.8,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "El nivel (96.625) no esta en la pieza; se toma de la primaria para el test. La pieza afirma solo la tasa y el ranking."
+}

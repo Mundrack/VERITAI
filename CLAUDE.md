@@ -51,7 +51,7 @@ PUERTA 2  prototipo end-to-end, UNA clase, UN emisor  CERRADA (DEC-030; P11 en N
                                                        como condicion anotada, P-23)
 PUERTA 3  corpus anotado + arnes de evaluacion        EN CURSO (DEC-031 diseno aprobado; DEC-034:
                                                        la cubeta B es 2b; DEC-035: B declarada con 7;
-                                                       jornada 5 = prediccion sobre EOAT0826, 30-09)
+                                                       jornada 5 = prediccion sobre EOAT0826, 1-10)
 PUERTA 4  evaluacion completa
 ```
 
@@ -119,7 +119,8 @@ Vienen de `docs/DECISIONES.md`; aquí solo la regla, sin el contexto.
   (`research/puerta3/edicion_anterior.py`). Q048 sigue vetado. *(DEC-034)*
 - **La cubeta B se declara con 7 casos e intervalo** (limitación explícita
   de H1: 2b solo existe en 2 de las 8 operaciones del mapa). La jornada 5 es
-  una prueba de predicción sobre `EOAT0826` escrita antes del 30-09 (diseño
+  una prueba de predicción sobre `EOAT0826` escrita el 27-09, antes de la
+  publicación del 1-10 (diseño
   §4h) y completa A hasta 40 sin INE; `CTH0926` (23-10) es necesaria; rastrear
   redacciones ya vistas está descartado por sesgo. *(DEC-035)*
 - **Ninguna fuente que dependa de una traducción propia sin verificar entra

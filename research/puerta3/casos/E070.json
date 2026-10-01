@@ -1,0 +1,23 @@
+{
+  "claim_id": "E070",
+  "texto": "Deuda pública España se modera al 100,2% del PIB en mayo, hasta 1,72 billones",
+  "fuente_url": "https://www.merca2.es/2026/07/18/deuda-publica-espana-mayo-1002-pib-2419875/",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "Banco de España",
+    "tabla": "deuda-aapp-mayo26",
+    "serie_nombre": "Deuda PDE de las AAPP, saldo (mm EUR)",
+    "unidad": "mm EUR",
+    "referencia_principal": "interanual",
+    "descripcion": "Deuda de las AAPP segun el PDE, avance mensual"
+  },
+  "periodo_objetivo": "2026-M05",
+  "periodo_base": "2025-M05",
+  "valor_objetivo": 1729,
+  "cambio_afirmado": 4.0,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Tasa interanual dada por el emisor. Sin 2a ni 2b."
+}

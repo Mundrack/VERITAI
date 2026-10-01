@@ -389,7 +389,9 @@ que introduce esta sección, tres días antes de la edición que la pone a
 prueba.
 
 **Edición de prueba:** EOAT agosto 2026 (`EOAT0826`), calendario del INE:
-**30 de septiembre de 2026**. Edición anterior de la base: `EOAT0825`
+**30 de septiembre de 2026** *(corregido el 2026-09-30: el calendario del INE
+la fija el 1 de octubre; ver el resultado al final de esta sección)*.
+Edición anterior de la base: `EOAT0825`
 (agosto 2025), recuperable por el conector.
 
 **Predicción P1 (aparece).** Entre las piezas regionales que se localicen
@@ -442,6 +444,40 @@ cifras que solo salen con la provisional, criba (a) y (b) por caso, cronómetro
 por caso, tope de tres B por edición. Se cuentan y se listan **todas** las
 piezas localizadas, con la base que usan, no solo las que dan B.
 
+**Resultado de la sesión 1 de la jornada 5 (2026-09-30 local, 2026-10-01
+00:43–01:1xZ), escrito el mismo día.**
+
+- **Corrección de fecha, no de predicción.** El calendario del INE
+  (`calenHTML.htm`, leído el 2026-09-30) fija `EOAT0826` el **1 de octubre de
+  2026** y `CTH0926` el 23 de octubre. El "30 de septiembre" de arriba era un
+  error de un día del diseño: la nota de agosto de 2025 (`EOAT0825`) también
+  se publicó el 1 de octubre. La predicción sigue escrita antes de la
+  publicación (commit `13e03fa`, 2026-09-27). `EOAT0826` devolvió 404 en
+  tres intentos (00:44Z, 00:47Z, 00:57Z). **P1 queda pendiente** hasta que la
+  nota exista; se evalúa con el método de arriba. La API ya sirve agosto de
+  2025 revisado (condición de evaluabilidad, comprobada de nuevo:
+  `research/evidencia/J5_api_1993_nult14.json`, 120 series, 200).
+- **P2, no refutada en lo localizado.** Piezas regionales de 2026 sobre las
+  seis operaciones con tasa publicada, cotejadas con la tasa que el INE
+  imprime en su nota o anexo (vigente por construcción):
+
+| Operación (edición) | Pieza | Cifra de la pieza | Tasa publicada por el INE | Base |
+|---|---|---|---|---|
+| Hipotecas julio 2026 (H0726, 28-09) | El Conciso, 28-09 | Andalucía 8.136, −9,3 % | −9,3 (nota, gráfico CCAA) | vigente |
+| Hipotecas julio 2026 | Crónica del Henares, 28-09 | Madrid 5.624, −5,2 %; Castilla-La Mancha 1.896, −1,4 % | −5,2; −1,4 | vigente |
+| Sociedades julio 2026 (SM0726, 10-09) | Navarra Información, 10-09 | Navarra 64, −4,5 % | −4,5 | vigente |
+| Sociedades julio 2026 | Via Empresa (ACN), 10-09 | Cataluña 2.272, −1,3 % | −1,3 | vigente |
+| ETDP julio 2026 (ETDP0726, 25-09) | Ahora León, 25-09 | Castilla y León +9,7 %; Navarra +26,4 %; Galicia +10,8 % | +9,69; +26,36; +10,76 (anexo, hoja 9) | vigente |
+| ETDP julio 2026 | Región Digital (EP), 25-09 | Extremadura 1.124, −6,4 % | −6,41 | vigente |
+| IPI julio 2026 | ninguna pieza de prensa regional localizada (solo el PDF de la Comunidad de Madrid, que es organismo) | — | — | — |
+| FRONTUR / EGATUR | ninguna pieza regional localizada; agosto de 2026 no publicado | — | — | — |
+
+  Seis piezas, nueve cifras regionales, tres de las seis operaciones: **0 2b**.
+  Las piezas copian la tasa que el emisor publica, que es lo que §4d
+  predice. Cobertura declarada: IPI, FRONTUR y EGATUR sin pieza; P2 se
+  reevalúa con lo que aparezca sobre `EOAT0826` y `CTH0926`. Ninguna de
+  estas piezas entra como caso (la cuota INE no sube por P2).
+
 ### 4i. La jornada 5 completa A hasta 40, sin INE
 
 H3 necesita 40 controles y hay 31. En la misma jornada se recolectan **al
@@ -454,6 +490,39 @@ tope). Cada control con criba, cronómetro y la misma regla de tres por
 edición. `CTH0926` (23 de octubre) es **necesaria** (§4h, enmienda a DEC-035):
 la jornada 5 queda abierta hasta trabajarla, y el cierre de la Puerta 3 espera
 a esa edición.
+
+**Resultado de la sesión 1 (2026-09-30 local).** Siete controles A y un F,
+todos sin INE: E067–E069 (BdE deuda por CCAA 2T2026, nota del 30-09: tope de
+tres), E070–E071 (BdE mayo 2026), E073–E074 (Interior, Balance 2025 anual,
+tabla 1509010 del Portal), y E075 (F: EFE da +3,8 % interanual al importe
+de la deuda autonómica donde el BdE publica +3,6 % y los cuadros dan +3,63 %;
+contradicted por la regla de tolerancia). **A pasa de 31 a 38; faltan 2 para
+los 40 de H3.** INE 41/74 = 55,4 %.
+
+Dos cosas que impidieron los nueve:
+
+- **SEPE queda vetado para el agente por su `robots.txt`**, leído antes de la
+  primera petición (convención del 2026-09-27): el bloque `User-agent: *`
+  prohíbe `/*.pdf$`, `/*.xlsx$`, `/*?` y las noticias de 2026, y un bloque
+  previo deniega todo a `ClaudeBot`, `Claude-User` y `Claude-SearchBot` por
+  nombre. Los PDF mensuales por CCAA están en la ruta prohibida. DEC-018:
+  respetar `robots.txt`; no se descargó nada. **Decide Mateo** qué pasa con
+  los seis casos SEPE ya admitidos (E058–E060 y tres anteriores), descargados
+  en las jornadas anteriores sin consultar el `robots.txt`: anotarlos como
+  hallazgo, mantenerlos con la fecha de descarga declarada, o retirarlos.
+- **E072 retirado antes de anotar:** su URL era la de E033 (mismo artículo);
+  lo detectó el validador. Queda en el cronómetro como retirado.
+
+Lo que sí hay para los dos A que faltan, sin SEPE: BdE julio 2026 admite dos
+controles más (tiene uno), y la edición anual 2025 del Portal admite uno.
+`CTH0926` (23-10) sigue siendo necesaria y la jornada 5 sigue abierta.
+
+**Hallazgo colateral, anotado en E067 y E068:** el BdE revisa las ratios
+deuda/PIB de trimestres anteriores (Castilla-La Mancha 2T2025: 28,5 % al
+publicar, 29,3 % vigente; Comunitat Valenciana 39,9 % → 39,8 %), y las dos
+redacciones calcularon con la vigente, que es la referencia del emisor. Es
+el caso inverso de 2b y se registra como evidencia de que el patrón de §4d
+no es automático fuera del INE.
 
 ### 4j. Vía descartada: rastrear las redacciones que ya mostraron el mecanismo
 

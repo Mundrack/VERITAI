@@ -1,0 +1,23 @@
+{
+  "claim_id": "E071",
+  "texto": "La deuda pública en España baja al 100,2% del PIB en mayo 2026: ¿qué significa para la economía?",
+  "fuente_url": "https://www.elconfidencialdigital.com/articulo/dinero/deuda-publica-espana-baja-1002-pib-mayo-2026-que-significa-economia/202607261409141033146.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "Banco de España",
+    "tabla": "deuda-aapp-mayo26",
+    "serie_nombre": "Deuda PDE de las AAPP / PIB (%)",
+    "unidad": "pct_pib",
+    "referencia_principal": "interanual",
+    "descripcion": "Ratio de deuda PDE de las AAPP sobre PIB, avance mensual"
+  },
+  "periodo_objetivo": "2026-M05",
+  "periodo_base": "2025-M05",
+  "valor_objetivo": 100.2,
+  "cambio_afirmado": -2.0,
+  "unidad_cambio": "pp",
+  "direccion_afirmada": "baja",
+  "notas": "Diferencia en pp dada por el emisor. Sin 2a ni 2b."
+}

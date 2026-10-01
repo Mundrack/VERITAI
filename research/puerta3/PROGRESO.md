@@ -12,7 +12,9 @@ de bloqueo, cubeta E).
 ## JORNADA 5 — preinscrita el 2026-09-27 (DEC-035): prueba de predicción sobre EOAT0826 + A hasta 40 sin INE
 
 **Se abre el 30 de septiembre de 2026**, cuando el INE publique la EOAT de
-agosto (`EOAT0826`). Hasta entonces no se recolecta nada. La predicción está
+agosto (`EOAT0826`). *Corrección (2026-09-30): el calendario del INE fija
+`EOAT0826` el 1 de octubre; Mateo abrió la jornada el 30 y la sesión 1 hizo P2
+y los controles; P1 espera a la nota.* Hasta entonces no se recolecta nada. La predicción está
 escrita en el diseño (§4h) y en el commit de esta sección, antes de la
 publicación:
 
@@ -420,3 +422,29 @@ como medición**. Si al cerrarla B ≥ 4, la proyección sostiene 15 y se sigue;
 si B ≤ 2, se replantea antes de gastar más (ampliar el tope en 2 jornadas, o
 bajar el mínimo de B a 10 con intervalo declarado, o ambas). No se cuenta la
 señal de horizonte como B (DEC-029).
+
+### Jornada 5, sesión 1 (2026-09-30 local; cronómetro 2026-10-01 00:43Z → pausa P3-PAUSA7)
+
+- `robots.txt` consultado antes de la primera petición a cada dominio:
+  www.ine.es (permite), servicios.ine.es (conexión reiniciada tres veces,
+  sin respuesta HTTP; la API respondió 200 por el canal del conector),
+  bde.es (prohíbe dos xlsx), ses.mir.es (no sirve `robots.txt`: redirige a
+  la aplicación y a `error/404`), **sepe.es (prohíbe `/*.pdf$`, `/*.xlsx$`,
+  `/*?` y noticias 2026 a `*`; deniega todo a los bots de Claude por nombre:
+  SEPE vetado para el agente)**.
+- **P1:** `EOAT0826` no existe aún (404 ×3); se publica el 1-10. Pendiente.
+- **P2:** 6 piezas, 9 cifras, 3 operaciones (Hipotecas, Sociedades, ETDP de
+  julio 2026): todas iguales a la tasa publicada por el INE; **0 2b**. IPI,
+  FRONTUR y EGATUR sin pieza regional localizada.
+- **Casos:** E067–E071, E073, E074 (A, 7) y E075 (F). E072 retirado (misma
+  URL que E033). Validador OK: **A 38 / B 7 / C 2 / D 10 / E 11 / F 4 / O 1 =
+  74**; INE 41/74 = 55,4 %; tope de 3 controles por edición respetado (BdE
+  2T2026 en 3); B por edición sin cambios.
+- Evidencia nueva en `research/evidencia/`: `J5_bde_2026t2.htm`,
+  `J5_bde_a1309.pdf`, `J5_bde_a1310.pdf`, `J5_bde_mayo26.htm`,
+  `J5_bde_julio26.htm`, `J5_portal_4T2025_1509010.csv`,
+  `J5_api_1993_nult14.json`; anexos `D2B_EOAT0825.*`, `D2B_H0726.*`,
+  `D2B_SM0726.*`, `D2B_ETDP0726.*`.
+- **Decide Mateo:** los seis casos SEPE anteriores, descargados sin
+  consultar el `robots.txt`; y cómo cubrir los dos A que faltan (BdE julio
+  2026 admite dos; Portal 2025 admite uno).

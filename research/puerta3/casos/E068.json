@@ -1,0 +1,30 @@
+{
+  "claim_id": "E068",
+  "texto": "La deuda de la Comunitat Valenciana aumenta 3.897 millones en un año y alcanza los 64.593 millones, el 40% del PIB",
+  "fuente_url": "https://valenciaplaza.com/valenciaplaza/bolsas/la-deuda-de-la-comunitat-valenciana-alcanza-el-40-del-pib-y-es-la-mas-elevada-de-espana",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "Banco de España",
+    "tabla": "a1309.pdf / cuadro 13.9",
+    "serie_nombre": "Deuda PDE, Comunitat Valenciana (millones EUR)",
+    "unidad": "millones EUR",
+    "referencia_principal": "interanual",
+    "descripcion": "Deuda PDE por CCAA, importes, trimestral"
+  },
+  "periodo_objetivo": "2026-T2",
+  "periodo_base": "2025-T2",
+  "valor_objetivo": 64593,
+  "cambio_afirmado": 3897,
+  "unidad_cambio": "abs",
+  "direccion_afirmada": "sube",
+  "evidencia_vigente": {
+    "valor": 60696,
+    "edicion": "BdE Boletin Estadistico cuadro 13.9, fila 2025 II P",
+    "fecha": "2026-09-30",
+    "url": "https://www.bde.es/webbe/es/estadisticas/compartido/datos/pdf/a1309.pdf",
+    "raw_value_span": "[a1309.pdf, fila '25 II P', col. 18] 60 696"
+  },
+  "notas": "Diferencia absoluta con la base vigente. Sin 2a ni 2b."
+}

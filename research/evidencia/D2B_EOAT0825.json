@@ -1,0 +1,83 @@
+{
+ "codigo": "EOAT0825",
+ "consultado": "2026-10-01T00:44:23+00:00",
+ "agente": "VERITAI-prototipo/0.1 (tesis UDLA; agente identificado, DEC-018)",
+ "descargas": {
+  "html": {
+   "url": "https://www.ine.es/dyngs/Prensa/EOAT0825.htm",
+   "http": 200,
+   "content_type": "text/html;charset=UTF-8",
+   "bytes": 41973,
+   "sha256": "0b4f824323053da737ad5111e777650310f9b672e024eabe087472f10f76e69b",
+   "guardado_en": "research\\evidencia\\D2B_EOAT0825.htm",
+   "fecha_publicacion": "1 de octubre de 2025",
+   "titular": "Las pernoctaciones en alojamientos turísticos extrahoteleros aumentaron un 0,6% en agosto respecto al mismo mes de 2024."
+  },
+  "pdf": {
+   "url": "https://www.ine.es/dyngs/Prensa/EOAT0825.pdf",
+   "http": 200,
+   "content_type": "application/pdf",
+   "bytes": 273419,
+   "sha256": "b3697d8a8fa6f37ad8a06e2f40ad2aebf902cfbc89a11b30720788bebdbb190d",
+   "guardado_en": "research\\evidencia\\D2B_EOAT0825.pdf"
+  },
+  "xlsx": {
+   "url": "https://www.ine.es/prensa/anexo_tablas/es/EOAT0825.xlsx",
+   "http": 200,
+   "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+   "bytes": 158958,
+   "sha256": "eeb28bf6c7c556ee2d8d23afe52215bd06004e86c7f21de9b17fb2d06f150f3a",
+   "guardado_en": "research\\evidencia\\D2B_EOAT0825.xlsx",
+   "filas": [
+    {
+     "hoja": "EOAP_Hoja1",
+     "fila_idx": 25,
+     "cabecera": [
+      "Encuesta de ocupación en alojamientos turísticos extrahoteleros",
+      "(Apartamentos turísticos)",
+      "Agosto 2025",
+      "Datos provisionales | 1 de octubre de 2025",
+      "1. Viajeros, pernoctaciones y estancia media según comunidades y ciudades autónomas",
+      "Comunidades y ciudades | Viajeros | Pernoctaciones | Estancia",
+      "autónomas | Total | Residentes | Residentes | Total | Residentes | Residentes | media",
+      "en  | en el  | en  | en el"
+     ],
+     "valores": [
+      "Murcia, Región de",
+      25803,
+      19645,
+      6158,
+      150328,
+      132659,
+      17669,
+      5.83
+     ]
+    },
+    {
+     "hoja": "EOAP_Hoja1",
+     "fila_idx": 54,
+     "cabecera": [
+      "Encuesta de ocupación en alojamientos turísticos extrahoteleros",
+      "(Apartamentos turísticos)",
+      "Agosto 2025",
+      "Datos provisionales | 1 de octubre de 2025",
+      "1. Viajeros, pernoctaciones y estancia media según comunidades y ciudades autónomas",
+      "Comunidades y ciudades | Viajeros | Pernoctaciones | Estancia",
+      "autónomas | Total | Residentes | Residentes | Total | Residentes | Residentes | media",
+      "en  | en el  | en  | en el"
+     ],
+     "valores": [
+      "Murcia, Región de",
+      10594,
+      2458,
+      45.74,
+      45.3,
+      68.87,
+      67.83,
+      319
+     ]
+    }
+   ]
+  }
+ }
+}

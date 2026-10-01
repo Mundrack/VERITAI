@@ -1,0 +1,406 @@
+{
+ "codigo": "H0726",
+ "consultado": "2026-10-01T00:45:54+00:00",
+ "agente": "VERITAI-prototipo/0.1 (tesis UDLA; agente identificado, DEC-018)",
+ "descargas": {
+  "html": {
+   "url": "https://www.ine.es/dyngs/Prensa/H0726.htm",
+   "http": 200,
+   "content_type": "text/html;charset=UTF-8",
+   "bytes": 38581,
+   "sha256": "6b6ded8f1f01c7daa550341efede5145f41df8a2147926a1ed45a5411e94b973",
+   "guardado_en": "research\\evidencia\\D2B_H0726.htm",
+   "fecha_publicacion": "28 de septiembre de 2026",
+   "titular": "El número de hipotecas sobre viviendas inscritas en los registros de la propiedad fue de 43."
+  },
+  "pdf": {
+   "url": "https://www.ine.es/dyngs/Prensa/H0726.pdf",
+   "http": 200,
+   "content_type": "application/pdf",
+   "bytes": 167006,
+   "sha256": "d230f113e16ef521d55ca3d8d4203da4860b5c459b4449fdf134cbb20f2a9183",
+   "guardado_en": "research\\evidencia\\D2B_H0726.pdf"
+  },
+  "xlsx": {
+   "url": "https://www.ine.es/prensa/anexo_tablas/es/H0726.xlsx",
+   "http": 200,
+   "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+   "bytes": 228681,
+   "sha256": "299474281f08f947e9c54fd3943e85566704eac78d66b899bcf99a8c163b8917",
+   "guardado_en": "research\\evidencia\\D2B_H0726.xlsx",
+   "filas": [
+    {
+     "hoja": "Hoja1 ",
+     "fila_idx": 11,
+     "cabecera": [
+      "28 de septiembre de 2026",
+      "Estadística de Hipotecas",
+      "Julio 2026. Datos provisionales",
+      "H.1 Hipotecas constituidas sobre fincas rústicas y urbanas",
+      "Capital en miles de euros",
+      "Total fincas | Fincas rústicas | Fincas urbanas",
+      "Número | Capital | Número | Capital | Número | Capital",
+      "TOTAL | 56595 | 12314875 | 1061 | 262440 | 55534 | 12052435"
+     ],
+     "valores": [
+      "TOTAL",
+      56595,
+      12314875,
+      1061,
+      262440,
+      55534,
+      12052435
+     ]
+    },
+    {
+     "hoja": "Hoja1 ",
+     "fila_idx": 37,
+     "cabecera": [
+      "28 de septiembre de 2026",
+      "Estadística de Hipotecas",
+      "Julio 2026. Datos provisionales",
+      "H.1 Hipotecas constituidas sobre fincas rústicas y urbanas",
+      "Capital en miles de euros",
+      "Total fincas | Fincas rústicas | Fincas urbanas",
+      "Número | Capital | Número | Capital | Número | Capital",
+      "TOTAL | 56595 | 12314875 | 1061 | 262440 | 55534 | 12052435"
+     ],
+     "valores": [
+      "TOTAL",
+      55534,
+      12052435,
+      43372,
+      7841020,
+      588,
+      775084,
+      11574,
+      3436331
+     ]
+    },
+    {
+     "hoja": "Hoja2",
+     "fila_idx": 12,
+     "cabecera": [
+      "28 de septiembre de 2026",
+      "Estadística de Hipotecas",
+      "Julio 2026. Datos provisionales",
+      "H.3 Hipotecas constituidas sobre fincas rústicas,",
+      "       según entidad prestamista",
+      "Capital en miles de euros",
+      "Fincas rústicas | Bancos | Otras Entidades",
+      "Número | Capital | Número | Capital | Número | Capital"
+     ],
+     "valores": [
+      "TOTAL",
+      1061,
+      262440,
+      767,
+      197259,
+      294,
+      65181
+     ]
+    },
+    {
+     "hoja": "Hoja2",
+     "fila_idx": 38,
+     "cabecera": [
+      "28 de septiembre de 2026",
+      "Estadística de Hipotecas",
+      "Julio 2026. Datos provisionales",
+      "H.3 Hipotecas constituidas sobre fincas rústicas,",
+      "       según entidad prestamista",
+      "Capital en miles de euros",
+      "Fincas rústicas | Bancos | Otras Entidades",
+      "Número | Capital | Número | Capital | Número | Capital"
+     ],
+     "valores": [
+      "TOTAL",
+      55534,
+      12052435,
+      50499,
+      11018263,
+      5035,
+      1034172
+     ]
+    },
+    {
+     "hoja": "Hoja3",
+     "fila_idx": 11,
+     "cabecera": [
+      "28 de septiembre de 2026",
+      "Estadística de Hipotecas",
+      "Julio 2026. Datos provisionales",
+      "H.5 Hipotecas canceladas registralmente según naturaleza de la finca",
+      "Total fincas | Fincas rústicas | Viviendas | Solares | Otras urbanas",
+      "TOTAL | 62974 | 1502 | 40256 | 923 | 20293"
+     ],
+     "valores": [
+      "TOTAL",
+      62974,
+      1502,
+      40256,
+      923,
+      20293
+     ]
+    },
+    {
+     "hoja": "Hoja3",
+     "fila_idx": 38,
+     "cabecera": [
+      "28 de septiembre de 2026",
+      "Estadística de Hipotecas",
+      "Julio 2026. Datos provisionales",
+      "H.5 Hipotecas canceladas registralmente según naturaleza de la finca",
+      "Total fincas | Fincas rústicas | Viviendas | Solares | Otras urbanas",
+      "TOTAL | 62974 | 1502 | 40256 | 923 | 20293"
+     ],
+     "valores": [
+      "TOTAL",
+      55127,
+      7847,
+      1139,
+      363,
+      53988,
+      7484
+     ]
+    },
+    {
+     "hoja": "Hoja4",
+     "fila_idx": 13,
+     "cabecera": [
+      "                                                                                                           28 de septiembre de 2026",
+      "Estadística de Hipotecas",
+      "Julio 2026. Datos provisionales",
+      "H.7 Hipotecas con cambios registrales según tipo de cambio",
+      "       y naturaleza de la finca",
+      "Total fincas | Por tipo de cambio | Por naturaleza de la finca",
+      "Novación | Subrogación  | Subrogación  | Fincas | Fincas | Viviendas"
+     ],
+     "valores": [
+      "TOTAL",
+      10926,
+      7569,
+      2676,
+      681,
+      237,
+      10689,
+      7647
+     ]
+    },
+    {
+     "hoja": "Hoja5",
+     "fila_idx": 10,
+     "cabecera": [
+      "28 de septiembre de 2026",
+      "Estadística de Hipotecas",
+      "Julio 2026. Datos provisionales",
+      "H.8 Hipotecas constituidas sobre fincas rústicas y urbanas  ",
+      "       por provincias",
+      "Capital en miles de euros",
+      "Total | Fincas rústicas | Fincas urbanas"
+     ],
+     "valores": [
+      "Total",
+      "Fincas rústicas",
+      "Fincas urbanas"
+     ]
+    },
+    {
+     "hoja": "Hoja5",
+     "fila_idx": 12,
+     "cabecera": [
+      "28 de septiembre de 2026",
+      "Estadística de Hipotecas",
+      "Julio 2026. Datos provisionales",
+      "H.8 Hipotecas constituidas sobre fincas rústicas y urbanas  ",
+      "       por provincias",
+      "Capital en miles de euros",
+      "Total | Fincas rústicas | Fincas urbanas",
+      "Número | Capital | Número | Capital | Número | Capital"
+     ],
+     "valores": [
+      "TOTAL",
+      56595,
+      12314875,
+      1061,
+      262440,
+      55534,
+      12052435
+     ]
+    },
+    {
+     "hoja": "Hoja6",
+     "fila_idx": 12,
+     "cabecera": [
+      "28 de septiembre de 2026",
+      "Estadística de Hipotecas",
+      "Julio 2026. Datos provisionales",
+      "H.9 Hipotecas constituidas sobre fincas urbanas,",
+      "       según naturaleza de la finca por provincias",
+      "Capital en miles de euros",
+      "Fincas urbanas | Viviendas | Solares | Otras urbanas",
+      "Número | Capital | Número | Capital | Número | Capital | Número | Capital"
+     ],
+     "valores": [
+      "TOTAL",
+      55534,
+      12052435,
+      43372,
+      7841020,
+      588,
+      775084,
+      11574,
+      3436331
+     ]
+    },
+    {
+     "hoja": "Hoja7",
+     "fila_idx": 12,
+     "cabecera": [
+      "28 de septiembre de 2026",
+      "Estadística de Hipotecas",
+      "Julio 2026. Datos provisionales",
+      "H.10 Hipotecas constituidas sobre fincas rústicas,",
+      "         según entidad prestamista por provincias",
+      "Capital en miles de euros",
+      "Fincas rústicas | Bancos | Otras Entidades",
+      "Número | Capital | Número | Capital | Número | Capital"
+     ],
+     "valores": [
+      "TOTAL",
+      1061,
+      262440,
+      767,
+      197259,
+      294,
+      65181
+     ]
+    },
+    {
+     "hoja": "Hoja8",
+     "fila_idx": 11,
+     "cabecera": [
+      "28 de septiembre de 2026",
+      "Estadística de Hipotecas",
+      "Julio 2026. Datos provisionales",
+      "H.11 Hipotecas constituidas sobre fincas urbanas,",
+      "         según entidad prestamista por provincias",
+      "Capital en miles de euros",
+      "Fincas urbanas | Bancos | Otras Entidades",
+      "Número | Capital | Número | Capital | Número | Capital"
+     ],
+     "valores": [
+      "TOTAL",
+      55534,
+      12052435,
+      50499,
+      11018263,
+      5035,
+      1034172
+     ]
+    },
+    {
+     "hoja": "Hoja9",
+     "fila_idx": 10,
+     "cabecera": [
+      "28 de septiembre de 2026",
+      "Estadística de Hipotecas",
+      "Julio 2026. Datos provisionales",
+      "H.12 Hipotecas canceladas registralmente según naturaleza de la finca",
+      "         por provincias",
+      "Total | Fincas rústicas | Viviendas | Solares | Otras urbanas"
+     ],
+     "valores": [
+      "Total",
+      "Fincas rústicas",
+      "Viviendas",
+      "Solares",
+      "Otras urbanas"
+     ]
+    },
+    {
+     "hoja": "Hoja9",
+     "fila_idx": 12,
+     "cabecera": [
+      "28 de septiembre de 2026",
+      "Estadística de Hipotecas",
+      "Julio 2026. Datos provisionales",
+      "H.12 Hipotecas canceladas registralmente según naturaleza de la finca",
+      "         por provincias",
+      "Total | Fincas rústicas | Viviendas | Solares | Otras urbanas"
+     ],
+     "valores": [
+      "TOTAL",
+      62974,
+      1502,
+      40256,
+      923,
+      20293
+     ]
+    },
+    {
+     "hoja": "Hoja10",
+     "fila_idx": 13,
+     "cabecera": [
+      "28 de septiembre de 2026",
+      "Estadística de Hipotecas",
+      "Julio 2026. Datos provisionales",
+      "H.13 Hipotecas canceladas registralmente según naturaleza y",
+      "         entidad prestamista por provincias",
+      "Total fincas | Fincas rústicas | Fincas urbanas",
+      "Bancos | Otras | Bancos | Otras | Bancos | Otras"
+     ],
+     "valores": [
+      "TOTAL",
+      55127,
+      7847,
+      1139,
+      363,
+      53988,
+      7484
+     ]
+    },
+    {
+     "hoja": "Hoja11",
+     "fila_idx": 10,
+     "cabecera": [
+      "28 de septiembre de 2026",
+      "Estadística de Hipotecas",
+      "Julio 2026. Datos provisionales",
+      "H.14 Hipotecas con cambios registrales según tipo de cambio y naturaleza",
+      "         de la finca por provincias",
+      "Total | Por tipo de cambio | Por naturaleza de la finca"
+     ],
+     "valores": [
+      "Total",
+      "Por tipo de cambio",
+      "Por naturaleza de la finca"
+     ]
+    },
+    {
+     "hoja": "Hoja11",
+     "fila_idx": 13,
+     "cabecera": [
+      "28 de septiembre de 2026",
+      "Estadística de Hipotecas",
+      "Julio 2026. Datos provisionales",
+      "H.14 Hipotecas con cambios registrales según tipo de cambio y naturaleza",
+      "         de la finca por provincias",
+      "Total | Por tipo de cambio | Por naturaleza de la finca",
+      "Novación | Subrogación  | Subrogación  | Fincas | Fincas | Viviendas"
+     ],
+     "valores": [
+      "TOTAL",
+      10926,
+      7569,
+      2676,
+      681,
+      237,
+      10689,
+      7647
+     ]
+    }
+   ]
+  }
+ }
+}
