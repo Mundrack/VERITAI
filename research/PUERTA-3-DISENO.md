@@ -136,6 +136,9 @@ desarrollo y no cuenta.
 
 ## 3. Regla de parada y qué se declara como limitación
 
+> Limitación añadida el 2026-09-30: §3c (seis casos SEPE anteriores a la
+> convención del `robots.txt`; SEPE vetado desde entonces).
+
 **Tope:** cuatro jornadas de recolección cronometradas, con **revisión a la
 mitad** (fin de la jornada 2): proyección por cubeta con el ritmo real.
 
@@ -180,6 +183,52 @@ cuenta como B en ningún escenario.** La asignación es completa y previa:
 Lo que no cambia en ningún escenario: la regla dura, DEC-021, DEC-025,
 DEC-029, los hermanos cuentan una vez, y los casos de la vía divergencia que
 resulten controles se anotan como A y cuentan para el FPR.
+
+### 3c. Limitación declarada: seis casos SEPE descargados antes de la convención del `robots.txt`; SEPE vetado desde el 2026-09-30
+
+**Hecho.** El `robots.txt` de `www.sepe.es`, leído el 2026-09-30 (23:42
+local; 2026-10-01 00:42Z) antes de la primera petición de la jornada 5,
+prohíbe en su bloque `User-agent: *` las rutas `/*.pdf$`, `/*.xlsx$`,
+`/*.xls$`, `/*?` y `/noticias/detalle-noticia?folder=/SEPE/2026/`, y en un
+bloque previo deniega todo (`Disallow: /`) a `ClaudeBot`, `Claude-User` y
+`Claude-SearchBot` por nombre. Los PDF mensuales por CCAA y los ficheros de
+datos de avance que sostienen los casos SEPE están en rutas prohibidas.
+
+**Lo que ya estaba descargado, con fecha.** Seis casos del conjunto de
+evaluación tienen primaria del SEPE, todos descargados el **2026-09-26** con
+el agente identificado (`VERITAI-prototipo/0.1`, DEC-018), todos con HTTP 200,
+y **sin haber consultado el `robots.txt`**:
+
+| Caso | Edición | Fichero | Descarga |
+|---|---|---|---|
+| E027 | SEPE abril 2026 | `DATOS_NACIONALES-DEMANDAS_PENDIENTES.pdf` (416.538 bytes, sha256 `8cc589e7…`) | 2026-09-26 13:43Z |
+| E032 | SEPE paro agosto 2026 | `evolprovsectores.xls` (69.632 bytes) + nota HTML | 2026-09-26 14:10Z |
+| E039 | SEPE paro agosto 2026 | `evolparoseries.pdf` (83.086 bytes) | 2026-09-26 14:22Z |
+| E058 | SEPE paro julio 2026 | `DATOS_POR_CCAA-DEMANDAS_PENDIENTES.pdf` julio 2026 (710.727 bytes, sha256 `856b794b…`), junio 2026 y julio 2025 | 2026-09-26 18:28Z |
+| E059 | SEPE paro julio 2026 | el mismo PDF, nueve ediciones de enero a julio de 2026 y de 2025 | 2026-09-26 18:28Z |
+| E060 | SEPE paro julio 2026 | el mismo PDF de julio 2026, junio 2026 y julio 2025 | 2026-09-26 18:28Z |
+
+**Cronología de la convención.** La regla "consultar el `robots.txt` antes
+de la primera petición a un dominio, no después" se adoptó el **2026-09-27**
+a raíz de la descarga de la tarea T-01 (bitácora, entrada de DEC-039;
+commit `18afba2`), es decir, **un día después** de las descargas del SEPE.
+Antes de esa fecha el proyecto respetaba DEC-018 y DEC-021 (sin evadir
+bloqueos, primer rechazo cierra) pero no leía el `robots.txt` por adelantado.
+El SEPE nunca rechazó al agente: devolvió 200 a todas las peticiones.
+
+**Decisión de Mateo (2026-09-30).** Los seis casos **se mantienen**, con esta
+limitación escrita donde se verá: las primarias se obtuvieron antes de la
+convención y de rutas que el `robots.txt` del SEPE prohíbe a los agentes;
+cada caso lleva su fecha de descarga y su sha256 cuando lo hay. **El SEPE
+queda vetado desde ahora**: no se descargará nada más de `www.sepe.es` por
+agente, ni PDF, ni xls, ni noticias; si el conjunto necesita más controles
+de empleo, se buscan en otro emisor o se declara el hueco. La cuota de
+emisor (§4f) se cumple sin él.
+
+**Para la tesis.** Va a la sección de limitaciones (TESIS 10/11) junto con
+el 403 del FMI e Interior: aquí la limitación es inversa, el publicador no
+bloqueó pero su política escrita excluye a los agentes, y el proyecto lo
+supo tarde.
 
 ## 4. Replanteo tras la jornada 2 (DEC-034): la cubeta B es 2b
 
@@ -517,12 +566,8 @@ Lo que sí hay para los dos A que faltan, sin SEPE: BdE julio 2026 admite dos
 controles más (tiene uno), y la edición anual 2025 del Portal admite uno.
 `CTH0926` (23-10) sigue siendo necesaria y la jornada 5 sigue abierta.
 
-**Hallazgo colateral, anotado en E067 y E068:** el BdE revisa las ratios
-deuda/PIB de trimestres anteriores (Castilla-La Mancha 2T2025: 28,5 % al
-publicar, 29,3 % vigente; Comunitat Valenciana 39,9 % → 39,8 %), y las dos
-redacciones calcularon con la vigente, que es la referencia del emisor. Es
-el caso inverso de 2b y se registra como evidencia de que el patrón de §4d
-no es automático fuera del INE.
+**Hallazgo colateral, anotado en E067 y E068:** ver §4m (observación fijada
+por Mateo, sin clase ni cubeta).
 
 ### 4j. Vía descartada: rastrear las redacciones que ya mostraron el mecanismo
 
@@ -570,3 +615,18 @@ derivadas de algo.
 | Doble anotación | 25 % estratificado a ciegas, semilla 20260925 | DEC-031; diseño §0 | 2026-09-25 | `b87623c` |
 | Tolerancia mínima del test 2b | 0,15 puntos porcentuales | `domain/tests/base_revisada.py` | 2026-09-26 | `2f151ef` |
 | Mínimo de B declarado | 7 con intervalo | DEC-035; diseño §4g | 2026-09-27 | `13e03fa` |
+
+### 4m. Observación: el emisor revisa su propia base y la redacción usa la vigente (caso inverso de 2b; no es clase ni cubeta)
+
+Anotado en la sesión 1 de la jornada 5 (E067, E068) y fijado por Mateo el
+2026-09-30 como **observación**, sin crear clase ni cubeta. El Banco de
+España revisa las ratios deuda/PIB de trimestres anteriores cuando revisa
+PIB y deuda: Castilla-La Mancha 2T2025 fue 28,5 % en la nota del 30/09/2025 y
+es 29,3 % en el cuadro 13.10 vigente; Comunitat Valenciana 39,9 % → 39,8 %.
+Las dos redacciones (El Español CLM, Valencia Plaza) calcularon la variación
+interanual con la cifra **vigente**, que es la referencia del emisor, y por
+eso son controles A. Es el espejo exacto del mecanismo 2b del INE: misma
+estructura (base revisada entre la publicación y hoy), resultado contrario
+(la redacción usa la vigente). Sirve para decir en la tesis que 2b no es
+automático cuando hay revisión, y que depende de dónde toma la base el
+redactor (§4d). No se busca más de esto a propósito (§4j).

@@ -364,3 +364,9 @@
 2026-10-01T01:01:14+00:00	E075	t2	extraido y anotado en lote_evaluacion.py
 2026-10-01T01:01:35+00:00	E072	t2	RETIRADO antes de anotar: la URL es la de E033 (mismo articulo, no hermano); el validador lo detecto. No es un caso
 2026-10-01T01:03:38+00:00	P3-PAUSA7	t0	Jornada 5 sigue abierta: sesion 1 cerrada (P2 y controles); P1 espera EOAT0826 (1-10) y P1' CTH0926 (23-10)
+2026-10-01T01:13:12+00:00	E076	t0	Jornada 5 sesion 2, control A sin INE: Forbes Espana/EP 17-09: deuda AAPP 99,9% PIB julio 2026, -2,4 pp (BdE julio 2026)
+2026-10-01T01:13:12+00:00	E077	t0	Jornada 5 sesion 2, control A sin INE: eldiario.es 17-09: deuda CCAA julio 2026 349.300 M, +2,7% (BdE julio 2026; la edicion llega al tope con E033)
+2026-10-01T01:13:12+00:00	E076	t1	primaria ya descargada (BdE nota julio 2026, J5_bde_julio26.htm)
+2026-10-01T01:13:13+00:00	E076	t2	extraido y anotado en lote_evaluacion.py
+2026-10-01T01:13:13+00:00	E077	t1	primaria ya descargada (BdE nota julio 2026, J5_bde_julio26.htm)
+2026-10-01T01:13:13+00:00	E077	t2	extraido y anotado en lote_evaluacion.py

@@ -448,3 +448,15 @@ señal de horizonte como B (DEC-029).
 - **Decide Mateo:** los seis casos SEPE anteriores, descargados sin
   consultar el `robots.txt`; y cómo cubrir los dos A que faltan (BdE julio
   2026 admite dos; Portal 2025 admite uno).
+
+### Jornada 5, sesión 2 (01:13Z del 2026-10-01; decisiones de Mateo)
+
+- SEPE: los seis casos se mantienen; limitación escrita en diseño §3c; SEPE
+  vetado desde ahora. E075 se queda como F (nota en la ficha). Observación
+  del BdE en diseño §4m, sin clase ni cubeta.
+- Dos A más con la nota de julio 2026 del BdE: E076 (Forbes/EP, ratio -2,4
+  pp) y E077 (elDiario.es, CCAA +2,7%); la edición llega al tope (3 con
+  E033). Asturias Hoy devolvió 403 (cerrado, DEC-021); Portal 2025 queda en 2.
+- Validador OK: **A 40 / B 7 / C 2 / D 10 / E 11 / F 4 / O 1 = 76**; INE
+  41/76 = 53,9 %. **A alcanza el mínimo de H3.**
+- Pendiente: P1 sobre `EOAT0826` (1-10, con el método de §4h sin cambios).

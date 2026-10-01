@@ -1436,3 +1436,27 @@ implementación; no toca la Puerta 3; B0/B1/B2 no se diseñan.
   BdE julio 2026 admite dos más y Portal 2025 uno; (3) E075 como F por la
   regla de tolerancia (0,17 pp).
 - Taxonomía del eje: sin decidir. Tercer eje: no tocado.
+
+---
+
+## 2026-09-30 (noche local; 01:13Z del 2026-10-01) — Jornada 5, sesión 2: tres decisiones de Mateo y A = 40
+
+### Qué se hizo
+
+- **SEPE:** los seis casos (E027, E032, E039, E058–E060, descargados el
+  2026-09-26) se mantienen. Limitación declarada en diseño §3c con ficheros,
+  fechas y la cronología de la convención del `robots.txt` (adoptada el
+  27-09, commit `18afba2`, un día después). SEPE vetado desde ahora.
+- **E075** se queda como F, contradicted; la ficha anota que la tolerancia
+  (0,05 pp) se fijó antes de medir y que la diferencia fue 0,17 pp.
+- **Observación BdE** (ratios revisadas, redacción con la vigente) en
+  diseño §4m: observación, no clase ni cubeta.
+- **E076 y E077** (BdE julio 2026, Forbes/EP y elDiario.es): A llega a 40.
+  Validador OK: 76 casos; INE 53,9 %.
+
+### Qué quedó pendiente
+
+- **P1 sobre `EOAT0826`** cuando el INE publique (1-10, 07:00Z): método de
+  §4h sin cambios; veredicto con conteo de piezas y criterio aplicado.
+- P1' sobre `CTH0926` (23-10). Jornada 5 abierta (`P3-PAUSA7` sigue).
+- Taxonomía: sin decidir. Tercer eje: no tocado.

@@ -1,0 +1,23 @@
+{
+  "claim_id": "E076",
+  "texto": "La deuda pública cae en julio por debajo del 100% por primera vez desde febrero de 2020, antes de la pandemia",
+  "fuente_url": "https://forbes.es/ultima-hora/1022211/la-deuda-publica-cae-en-julio-por-debajo-del-100-por-primera-vez-desde-febrero-de-2020-antes-de-la-pandemia/",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "Banco de España",
+    "tabla": "deuda-aapp-julio26",
+    "serie_nombre": "Deuda PDE de las AAPP / PIB (%)",
+    "unidad": "pct_pib",
+    "referencia_principal": "interanual",
+    "descripcion": "Ratio de deuda PDE de las AAPP sobre PIB, avance mensual"
+  },
+  "periodo_objetivo": "2026-M07",
+  "periodo_base": "2025-M07",
+  "valor_objetivo": 99.9,
+  "cambio_afirmado": -2.4,
+  "unidad_cambio": "pp",
+  "direccion_afirmada": "baja",
+  "notas": "Diferencia en pp dada por el emisor. Sin 2a ni 2b."
+}

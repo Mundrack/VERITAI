@@ -1,0 +1,23 @@
+{
+  "claim_id": "E077",
+  "texto": "La deuda pública cerró julio por debajo del 100% del PIB por primera vez desde el estallido de la pandemia",
+  "fuente_url": "https://www.eldiario.es/economia/deuda-publica-cerro-julio-debajo-100-pib-primera-vez-estallido-pandemia_1_13516813.html",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "Banco de España",
+    "tabla": "deuda-aapp-julio26",
+    "serie_nombre": "Deuda PDE de las CCAA, saldo (millones EUR)",
+    "unidad": "millones EUR",
+    "referencia_principal": "interanual",
+    "descripcion": "Deuda PDE de las Comunidades Autonomas, avance mensual"
+  },
+  "periodo_objetivo": "2026-M07",
+  "periodo_base": "2025-M07",
+  "valor_objetivo": 349300,
+  "cambio_afirmado": 2.7,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "sube",
+  "notas": "Tasa interanual dada por el emisor. Sin 2a ni 2b."
+}
