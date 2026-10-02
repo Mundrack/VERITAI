@@ -1,0 +1,1753 @@
+[{"COD":"EOT729", "Nombre":"Nacional. Viajeros. Total.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":2280785.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":1870394.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":1396168.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":1081735.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":909153.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":476185.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":249869.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":233745.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":259985.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":272319.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":644010.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":1098032.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":2241657.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":1855548.0, "Secreto":false}
+]
+}
+,{"COD":"EOT730", "Nombre":"Nacional. Viajeros. Residentes en España.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":1576738.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":1227649.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":992981.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":622937.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":598548.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":298191.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":147367.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":116578.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":146142.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":142350.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":351350.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":652993.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":1558245.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":1192372.0, "Secreto":false}
+]
+}
+,{"COD":"EOT731", "Nombre":"Nacional. Viajeros. Residentes en el extranjero.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":704047.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":642746.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":403187.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":458798.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":310605.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":177993.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":102502.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":117166.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":113843.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":129969.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":292660.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":445039.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":683412.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":663176.0, "Secreto":false}
+]
+}
+,{"COD":"EOT732", "Nombre":"Nacional. Pernoctaciones. Total.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":1.1594539E7, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":9477276.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":5727832.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":4088012.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":3552957.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":2056448.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":1492453.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":1499470.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":1526505.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":1476780.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":2738672.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":5066361.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":1.1635179E7, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":9367210.0, "Secreto":false}
+]
+}
+,{"COD":"EOT733", "Nombre":"Nacional. Pernoctaciones. Residentes en España.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":7529711.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":5582426.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":3529169.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":2033354.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":2074962.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":841706.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":373166.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":297675.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":448553.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":478730.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":1155489.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":2735750.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":7585846.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":5377170.0, "Secreto":false}
+]
+}
+,{"COD":"EOT734", "Nombre":"Nacional. Pernoctaciones. Residentes en el extranjero.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":4064829.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":3894850.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":2198663.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":2054658.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":1477995.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":1214742.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":1119287.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":1201795.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":1077953.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":998050.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":1583183.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":2330612.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":4049333.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":3990040.0, "Secreto":false}
+]
+}
+,{"COD":"EOT735", "Nombre":"Andalucía. Viajeros. Total.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":271489.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":254454.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":188658.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":153077.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":134240.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":80638.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":55861.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":51879.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":53943.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":58555.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":121927.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":153145.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":266053.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":233994.0, "Secreto":false}
+]
+}
+,{"COD":"EOT736", "Nombre":"Andalucía. Viajeros. Residentes en España.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":232441.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":224465.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":156587.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":91982.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":81605.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":41632.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":23747.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":16319.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":22501.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":23633.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":63594.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":107992.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":227334.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":206129.0, "Secreto":false}
+]
+}
+,{"COD":"EOT737", "Nombre":"Andalucía. Viajeros. Residentes en el extranjero.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":39049.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":29989.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":32071.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":61095.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":52636.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":39006.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":32113.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":35560.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":31442.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":34922.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":58333.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":45153.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":38719.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":27864.0, "Secreto":false}
+]
+}
+,{"COD":"EOT738", "Nombre":"Andalucía. Pernoctaciones. Total.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":1273468.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":1002789.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":625344.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":490942.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":478752.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":393028.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":368508.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":368021.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":344486.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":328291.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":455841.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":578208.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":1237445.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":985631.0, "Secreto":false}
+]
+}
+,{"COD":"EOT739", "Nombre":"Andalucía. Pernoctaciones. Residentes en España.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":1111810.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":888690.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":501292.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":283614.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":275259.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":134233.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":72848.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":50583.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":72781.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":87390.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":210239.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":402221.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":1077935.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":871528.0, "Secreto":false}
+]
+}
+,{"COD":"EOT740", "Nombre":"Andalucía. Pernoctaciones. Residentes en el extranjero.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":161658.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":114100.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":124052.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":207329.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":203493.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":258794.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":295660.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":317438.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":271705.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":240900.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":245603.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":175987.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":159509.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":114104.0, "Secreto":false}
+]
+}
+,{"COD":"EOT741", "Nombre":"Aragón. Viajeros. Total.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":141797.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":111174.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":63044.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":39685.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":39735.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":16925.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":9634.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":6906.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":11678.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":9536.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":26956.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":52163.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":133561.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":95459.0, "Secreto":false}
+]
+}
+,{"COD":"EOT742", "Nombre":"Aragón. Viajeros. Residentes en España.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":88626.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":74085.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":41067.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":17854.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":25391.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":12684.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":7382.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":4862.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":8346.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":5249.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":16425.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":28536.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":95914.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":61756.0, "Secreto":false}
+]
+}
+,{"COD":"EOT743", "Nombre":"Aragón. Viajeros. Residentes en el extranjero.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":53171.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":37089.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":21977.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":21831.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":14344.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":4241.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":2252.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":2044.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":3333.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":4287.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":10531.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":23628.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":37646.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":33704.0, "Secreto":false}
+]
+}
+,{"COD":"EOT744", "Nombre":"Aragón. Pernoctaciones. Total.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":458075.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":335983.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":138618.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":90470.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":105617.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":43705.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":22699.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":17145.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":32826.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":26623.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":73538.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":135552.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":477392.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":307824.0, "Secreto":false}
+]
+}
+,{"COD":"EOT745", "Nombre":"Aragón. Pernoctaciones. Residentes en España.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":316821.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":228269.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":91412.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":40872.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":72057.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":32021.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":18194.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":13024.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":27396.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":19124.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":48778.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":81188.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":361245.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":196877.0, "Secreto":false}
+]
+}
+,{"COD":"EOT746", "Nombre":"Aragón. Pernoctaciones. Residentes en el extranjero.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":141254.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":107714.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":47206.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":49598.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":33560.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":11684.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":4505.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":4121.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":5430.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":7498.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":24760.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":54364.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":116147.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":110947.0, "Secreto":false}
+]
+}
+,{"COD":"EOT747", "Nombre":"Asturias (Principado de). Viajeros. Total.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":103251.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":89336.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":37723.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":15739.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":11595.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":1945.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":6216.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":27874.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":106307.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":83519.0, "Secreto":false}
+]
+}
+,{"COD":"EOT748", "Nombre":"Asturias (Principado de). Viajeros. Residentes en España.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":68074.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":59174.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":20930.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":5195.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":6729.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":1166.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":3656.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":13837.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":76152.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":54278.0, "Secreto":false}
+]
+}
+,{"COD":"EOT749", "Nombre":"Asturias (Principado de). Viajeros. Residentes en el extranjero.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":35176.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":30161.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":16792.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":10544.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":4866.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":779.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":2560.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":14038.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":30156.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":29241.0, "Secreto":false}
+]
+}
+,{"COD":"EOT750", "Nombre":"Asturias (Principado de). Pernoctaciones. Total.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":469002.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":359953.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":119438.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":38234.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":30775.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":4617.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":19396.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":103214.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":459749.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":324825.0, "Secreto":false}
+]
+}
+,{"COD":"EOT751", "Nombre":"Asturias (Principado de). Pernoctaciones. Residentes en España.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":360258.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":274262.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":84503.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":20008.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":20420.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":3438.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":14991.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":75882.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":369982.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":251710.0, "Secreto":false}
+]
+}
+,{"COD":"EOT752", "Nombre":"Asturias (Principado de). Pernoctaciones. Residentes en el extranjero.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":108744.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":85690.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":34935.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":18226.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":10355.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":1179.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":4405.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":27331.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":89767.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":73115.0, "Secreto":false}
+]
+}
+,{"COD":"EOT753", "Nombre":"Baleares (Illes). Viajeros. Total.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":11364.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":8933.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":8863.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":6114.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":2065.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":8171.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":12350.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":11221.0, "Secreto":false}
+]
+}
+,{"COD":"EOT754", "Nombre":"Baleares (Illes). Viajeros. Residentes en España.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":4128.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":3659.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":5065.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":4150.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":114.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":3625.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":5206.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":4152.0, "Secreto":false}
+]
+}
+,{"COD":"EOT755", "Nombre":"Baleares (Illes). Viajeros. Residentes en el extranjero.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":7236.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":5274.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":3798.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":1964.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":1951.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":4546.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":7144.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":7069.0, "Secreto":false}
+]
+}
+,{"COD":"EOT756", "Nombre":"Baleares (Illes). Pernoctaciones. Total.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":74185.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":62491.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":39630.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":21279.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":11016.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":38398.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":69031.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":62650.0, "Secreto":false}
+]
+}
+,{"COD":"EOT757", "Nombre":"Baleares (Illes). Pernoctaciones. Residentes en España.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":28516.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":21578.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":16344.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":10160.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":1336.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":16579.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":26875.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":19736.0, "Secreto":false}
+]
+}
+,{"COD":"EOT758", "Nombre":"Baleares (Illes). Pernoctaciones. Residentes en el extranjero.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":45669.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":40913.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":23286.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":11119.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":9680.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":21819.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":42156.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":42914.0, "Secreto":false}
+]
+}
+,{"COD":"EOT759", "Nombre":"Canarias. Viajeros. Total.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":4087.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":4920.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":3886.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":3587.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":2562.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":1793.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":2020.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":2667.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":4582.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":4063.0, "Secreto":false}
+]
+}
+,{"COD":"EOT760", "Nombre":"Canarias. Viajeros. Residentes en España.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":3975.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":4772.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":3690.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":3536.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":2334.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":1697.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":1895.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":2506.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":4495.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":4013.0, "Secreto":false}
+]
+}
+,{"COD":"EOT761", "Nombre":"Canarias. Viajeros. Residentes en el extranjero.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":112.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":148.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":196.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":51.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":228.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":96.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":125.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":161.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":87.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":50.0, "Secreto":false}
+]
+}
+,{"COD":"EOT762", "Nombre":"Canarias. Pernoctaciones. Total.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":16862.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":22450.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":12967.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":12296.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":11402.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":9468.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":9494.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":11523.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":13439.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":18497.0, "Secreto":false}
+]
+}
+,{"COD":"EOT763", "Nombre":"Canarias. Pernoctaciones. Residentes en España.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":14235.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":19629.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":9638.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":9363.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":6063.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":4219.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":3626.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":7184.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":9186.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":13352.0, "Secreto":false}
+]
+}
+,{"COD":"EOT764", "Nombre":"Canarias. Pernoctaciones. Residentes en el extranjero.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":2627.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":2821.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":3329.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":2933.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":5339.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":5248.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":5868.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":4339.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":4253.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":5145.0, "Secreto":false}
+]
+}
+,{"COD":"EOT765", "Nombre":"Cantabria. Viajeros. Total.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":128773.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":105085.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":63130.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":31595.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":32463.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":7407.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":1687.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":972.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":1643.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":2254.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":12036.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":49681.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":112869.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":97491.0, "Secreto":false}
+]
+}
+,{"COD":"EOT766", "Nombre":"Cantabria. Viajeros. Residentes en España.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":88100.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":70343.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":41559.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":17844.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":25830.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":6171.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":1286.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":647.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":1257.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":1455.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":8505.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":27898.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":84073.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":69285.0, "Secreto":false}
+]
+}
+,{"COD":"EOT767", "Nombre":"Cantabria. Viajeros. Residentes en el extranjero.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":40673.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":34741.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":21571.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":13751.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":6633.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":1236.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":400.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":325.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":386.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":799.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":3531.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":21782.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":28796.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":28206.0, "Secreto":false}
+]
+}
+,{"COD":"EOT768", "Nombre":"Cantabria. Pernoctaciones. Total.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":606447.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":488109.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":292402.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":151495.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":163296.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":22193.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":2818.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":1677.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":2410.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":18692.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":28881.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":224765.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":640909.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":469540.0, "Secreto":false}
+]
+}
+,{"COD":"EOT769", "Nombre":"Cantabria. Pernoctaciones. Residentes en España.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":451816.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":365931.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":231395.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":112281.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":149549.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":19465.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":2102.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":1184.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":1912.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":17136.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":21398.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":160921.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":536319.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":368756.0, "Secreto":false}
+]
+}
+,{"COD":"EOT770", "Nombre":"Cantabria. Pernoctaciones. Residentes en el extranjero.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":154630.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":122177.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":61007.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":39214.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":13747.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":2728.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":716.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":493.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":497.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":1557.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":7483.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":63844.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":104591.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":100785.0, "Secreto":false}
+]
+}
+,{"COD":"EOT771", "Nombre":"Castilla y León. Viajeros. Total.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":86610.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":69166.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":47676.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":34257.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":28710.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":14547.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":4673.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":3381.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":4098.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":6485.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":16544.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":38160.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":108875.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":80645.0, "Secreto":false}
+]
+}
+,{"COD":"EOT772", "Nombre":"Castilla y León. Viajeros. Residentes en España.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":58015.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":53067.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":26223.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":15604.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":15071.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":6357.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":2623.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":1808.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":1854.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":3678.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":7363.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":17568.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":85195.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":60223.0, "Secreto":false}
+]
+}
+,{"COD":"EOT773", "Nombre":"Castilla y León. Viajeros. Residentes en el extranjero.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":28595.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":16099.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":21453.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":18653.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":13639.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":8189.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":2049.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":1573.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":2244.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":2807.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":9181.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":20592.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":23681.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":20422.0, "Secreto":false}
+]
+}
+,{"COD":"EOT774", "Nombre":"Castilla y León. Pernoctaciones. Total.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":274733.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":257367.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":121332.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":75229.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":69729.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":30723.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":7872.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":6218.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":9838.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":13515.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":44079.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":95400.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":314904.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":253155.0, "Secreto":false}
+]
+}
+,{"COD":"EOT775", "Nombre":"Castilla y León. Pernoctaciones. Residentes en España.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":218015.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":227815.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":81223.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":42530.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":45740.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":17827.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":4805.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":3865.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":5889.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":9476.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":28028.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":56544.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":275097.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":219723.0, "Secreto":false}
+]
+}
+,{"COD":"EOT776", "Nombre":"Castilla y León. Pernoctaciones. Residentes en el extranjero.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":56718.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":29552.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":40109.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":32699.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":23989.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":12895.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":3067.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":2353.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":3948.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":4038.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":16051.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":38856.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":39807.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":33432.0, "Secreto":false}
+]
+}
+,{"COD":"EOT777", "Nombre":"Castilla - La Mancha. Viajeros. Total.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":22783.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":19224.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":12263.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":7741.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":10077.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":4325.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":2980.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":3080.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":3828.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":3012.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":7818.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":14807.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":27955.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":22178.0, "Secreto":false}
+]
+}
+,{"COD":"EOT778", "Nombre":"Castilla - La Mancha. Viajeros. Residentes en España.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":21102.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":18247.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":10662.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":5384.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":8731.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":3825.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":2955.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":3046.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":3211.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":2276.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":5224.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":11244.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":24993.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":19874.0, "Secreto":false}
+]
+}
+,{"COD":"EOT779", "Nombre":"Castilla - La Mancha. Viajeros. Residentes en el extranjero.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":1681.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":977.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":1602.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":2357.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":1346.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":500.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":25.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":34.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":617.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":736.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":2593.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":3563.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":2962.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":2304.0, "Secreto":false}
+]
+}
+,{"COD":"EOT780", "Nombre":"Castilla - La Mancha. Pernoctaciones. Total.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":93408.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":58939.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":32753.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":20196.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":26895.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":13332.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":11618.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":3891.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":11741.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":7620.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":17398.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":29927.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":97245.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":67337.0, "Secreto":false}
+]
+}
+,{"COD":"EOT781", "Nombre":"Castilla - La Mancha. Pernoctaciones. Residentes en España.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":89650.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":57489.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":30308.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":15683.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":24203.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":12548.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":11585.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":3818.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":10772.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":5569.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":12374.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":24710.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":92203.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":61027.0, "Secreto":false}
+]
+}
+,{"COD":"EOT782", "Nombre":"Castilla - La Mancha. Pernoctaciones. Residentes en el extranjero.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":3758.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":1450.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":2446.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":4513.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":2692.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":784.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":34.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":73.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":969.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":2051.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":5025.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":5217.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":5042.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":6310.0, "Secreto":false}
+]
+}
+,{"COD":"EOT783", "Nombre":"Cataluña. Viajeros. Total.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":909079.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":727481.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":617640.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":517085.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":393885.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":202884.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":88516.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":78773.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":67151.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":76434.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":232478.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":448119.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":858261.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":730954.0, "Secreto":false}
+]
+}
+,{"COD":"EOT784", "Nombre":"Cataluña. Viajeros. Residentes en España.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":573492.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":364546.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":437433.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":319345.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":271698.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":143274.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":69340.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":54916.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":44746.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":49737.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":141788.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":262800.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":508026.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":348174.0, "Secreto":false}
+]
+}
+,{"COD":"EOT785", "Nombre":"Cataluña. Viajeros. Residentes en el extranjero.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":335587.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":362935.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":180208.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":197740.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":122187.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":59610.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":19177.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":23857.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":22405.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":26697.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":90690.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":185319.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":350235.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":382780.0, "Secreto":false}
+]
+}
+,{"COD":"EOT786", "Nombre":"Cataluña. Pernoctaciones. Total.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":5399002.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":4519954.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":2839711.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":1967493.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":1483023.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":503853.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":201986.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":182887.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":204142.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":209916.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":958241.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":2542330.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":5440058.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":4578188.0, "Secreto":false}
+]
+}
+,{"COD":"EOT787", "Nombre":"Cataluña. Pernoctaciones. Residentes en España.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":2748239.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":1732369.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":1513459.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":969931.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":924284.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":302703.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":136995.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":96062.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":111732.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":126149.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":450749.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":1225593.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":2650808.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":1671895.0, "Secreto":false}
+]
+}
+,{"COD":"EOT788", "Nombre":"Cataluña. Pernoctaciones. Residentes en el extranjero.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":2650763.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":2787586.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":1326252.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":997563.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":558739.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":201150.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":64991.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":86824.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":92410.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":83768.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":507492.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":1316737.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":2789250.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":2906293.0, "Secreto":false}
+]
+}
+,{"COD":"EOT789", "Nombre":"Comunitat Valenciana. Viajeros. Total.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":227889.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":184481.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":152712.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":126264.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":129242.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":80895.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":51361.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":55124.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":68232.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":64312.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":109221.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":141430.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":226686.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":179219.0, "Secreto":false}
+]
+}
+,{"COD":"EOT790", "Nombre":"Comunitat Valenciana. Viajeros. Residentes en España.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":170856.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":141886.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":114224.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":63402.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":76199.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":37987.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":16131.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":14961.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":29653.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":25467.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":42259.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":80467.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":175930.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":141240.0, "Secreto":false}
+]
+}
+,{"COD":"EOT791", "Nombre":"Comunitat Valenciana. Viajeros. Residentes en el extranjero.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":57033.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":42594.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":38488.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":62862.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":53043.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":42908.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":35230.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":40163.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":38579.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":38845.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":66962.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":60962.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":50757.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":37979.0, "Secreto":false}
+]
+}
+,{"COD":"EOT792", "Nombre":"Comunitat Valenciana. Pernoctaciones. Total.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":1415544.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":1166207.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":865125.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":780233.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":754718.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":710981.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":674295.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":723921.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":680655.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":636219.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":778233.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":800398.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":1362552.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":1126597.0, "Secreto":false}
+]
+}
+,{"COD":"EOT793", "Nombre":"Comunitat Valenciana. Pernoctaciones. Residentes en España.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":966571.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":796453.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":486592.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":271752.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":266846.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":138538.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":59703.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":73571.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":110813.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":102494.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":171642.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":334085.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":981938.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":774635.0, "Secreto":false}
+]
+}
+,{"COD":"EOT794", "Nombre":"Comunitat Valenciana. Pernoctaciones. Residentes en el extranjero.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":448974.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":369754.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":378533.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":508481.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":487872.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":572443.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":614592.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":650350.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":569842.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":533725.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":606591.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":466313.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":380614.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":351962.0, "Secreto":false}
+]
+}
+,{"COD":"EOT795", "Nombre":"Extremadura. Viajeros. Total.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":20675.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":16846.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":12134.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":12173.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":13453.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":7856.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":2059.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":2044.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":3454.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":3018.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":7181.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":10250.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":19258.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":16554.0, "Secreto":false}
+]
+}
+,{"COD":"EOT796", "Nombre":"Extremadura. Viajeros. Residentes en España.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":18740.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":15153.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":9179.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":6928.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":9763.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":5249.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":1485.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":932.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":2552.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":1684.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":3726.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":6531.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":17699.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":14578.0, "Secreto":false}
+]
+}
+,{"COD":"EOT797", "Nombre":"Extremadura. Viajeros. Residentes en el extranjero.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":1935.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":1693.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":2955.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":5245.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":3690.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":2607.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":573.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":1111.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":902.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":1334.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":3455.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":3719.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":1559.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":1975.0, "Secreto":false}
+]
+}
+,{"COD":"EOT798", "Nombre":"Extremadura. Pernoctaciones. Total.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":77288.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":53717.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":32136.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":30978.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":33467.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":16849.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":4248.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":3740.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":7807.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":5924.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":14845.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":28195.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":78601.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":56209.0, "Secreto":false}
+]
+}
+,{"COD":"EOT799", "Nombre":"Extremadura. Pernoctaciones. Residentes en España.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":72529.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":50097.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":24943.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":16911.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":25554.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":11624.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":3056.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":1990.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":6144.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":3920.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":7552.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":21293.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":75190.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":52389.0, "Secreto":false}
+]
+}
+,{"COD":"EOT800", "Nombre":"Extremadura. Pernoctaciones. Residentes en el extranjero.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":4759.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":3621.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":7193.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":14067.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":7912.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":5224.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":1191.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":1750.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":1663.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":2004.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":7294.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":6901.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":3410.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":3821.0, "Secreto":false}
+]
+}
+,{"COD":"EOT801", "Nombre":"Galicia. Viajeros. Total.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":138698.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":107288.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":54343.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":23957.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":14142.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":6617.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":2258.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":2383.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":4134.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":3742.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":9595.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":35845.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":145108.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":112395.0, "Secreto":false}
+]
+}
+,{"COD":"EOT802", "Nombre":"Galicia. Viajeros. Residentes en España.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":101017.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":76633.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":35019.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":10703.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":8675.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":4864.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":1996.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":2044.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":3597.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":2969.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":5291.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":19961.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":107358.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":84271.0, "Secreto":false}
+]
+}
+,{"COD":"EOT803", "Nombre":"Galicia. Viajeros. Residentes en el extranjero.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":37681.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":30655.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":19325.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":13255.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":5467.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":1753.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":262.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":339.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":536.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":773.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":4303.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":15884.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":37750.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":28124.0, "Secreto":false}
+]
+}
+,{"COD":"EOT804", "Nombre":"Galicia. Pernoctaciones. Total.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":570381.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":458187.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":195633.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":60642.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":49248.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":27185.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":3234.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":3618.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":6836.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":6292.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":15278.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":91115.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":534694.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":420965.0, "Secreto":false}
+]
+}
+,{"COD":"EOT805", "Nombre":"Galicia. Pernoctaciones. Residentes en España.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":466436.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":382827.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":159685.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":38167.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":38326.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":22902.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":2778.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":3063.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":5779.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":4739.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":8115.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":61249.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":440615.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":355268.0, "Secreto":false}
+]
+}
+,{"COD":"EOT806", "Nombre":"Galicia. Pernoctaciones. Residentes en el extranjero.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":103946.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":75359.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":35948.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":22474.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":10922.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":4284.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":455.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":555.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":1057.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":1553.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":7163.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":29867.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":94079.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":65697.0, "Secreto":false}
+]
+}
+,{"COD":"EOT807", "Nombre":"Madrid (Comunidad de). Viajeros. Total.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":52277.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":39924.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":43716.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":36508.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":32323.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":16838.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":12652.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":13000.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":20758.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":15238.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":29828.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":34974.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":49249.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":45597.0, "Secreto":false}
+]
+}
+,{"COD":"EOT808", "Nombre":"Madrid (Comunidad de). Viajeros. Residentes en España.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":46434.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":37503.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":37341.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":28724.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":27074.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":13502.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":10972.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":10700.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":16922.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":12541.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":24065.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":28849.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":40074.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":39493.0, "Secreto":false}
+]
+}
+,{"COD":"EOT809", "Nombre":"Madrid (Comunidad de). Viajeros. Residentes en el extranjero.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":5842.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":2421.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":6374.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":7784.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":5250.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":3336.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":1679.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":2300.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":3836.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":2697.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":5763.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":6125.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":9175.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":6104.0, "Secreto":false}
+]
+}
+,{"COD":"EOT810", "Nombre":"Madrid (Comunidad de). Pernoctaciones. Total.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":213509.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":184739.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":140905.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":115655.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":104840.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":61736.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":40648.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":38908.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":63459.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":52874.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":92943.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":112584.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":207730.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":158805.0, "Secreto":false}
+]
+}
+,{"COD":"EOT811", "Nombre":"Madrid (Comunidad de). Pernoctaciones. Residentes en España.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":198687.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":175231.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":125213.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":95785.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":87229.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":49270.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":35203.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":32895.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":52199.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":43257.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":75723.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":100328.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":158216.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":139997.0, "Secreto":false}
+]
+}
+,{"COD":"EOT812", "Nombre":"Madrid (Comunidad de). Pernoctaciones. Residentes en el extranjero.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":14822.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":9508.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":15692.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":19870.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":17611.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":12466.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":5445.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":6013.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":11259.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":9617.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":17220.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":12256.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":49514.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":18807.0, "Secreto":false}
+]
+}
+,{"COD":"EOT813", "Nombre":"Murcia (Región de). Viajeros. Total.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":16191.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":13437.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":13551.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":13257.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":15167.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":11115.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":8994.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":7742.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":9159.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":14462.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":14878.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":16496.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":26228.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":19803.0, "Secreto":false}
+]
+}
+,{"COD":"EOT814", "Nombre":"Murcia (Región de). Viajeros. Residentes en España.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":14152.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":12254.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":10569.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":5798.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":9842.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":4587.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":2451.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":1047.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":3722.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":3117.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":6682.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":10981.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":22217.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":17912.0, "Secreto":false}
+]
+}
+,{"COD":"EOT815", "Nombre":"Murcia (Región de). Viajeros. Residentes en el extranjero.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":2039.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":1183.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":2982.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":7459.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":5325.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":6528.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":6543.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":6695.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":5437.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":11344.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":8196.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":5515.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":4011.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":1890.0, "Secreto":false}
+]
+}
+,{"COD":"EOT816", "Nombre":"Murcia (Región de). Pernoctaciones. Total.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":108832.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":79302.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":59415.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":78058.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":87600.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":112596.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":126624.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":124052.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":129330.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":115680.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":98145.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":77220.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":148874.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":95473.0, "Secreto":false}
+]
+}
+,{"COD":"EOT817", "Nombre":"Murcia (Región de). Pernoctaciones. Residentes en España.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":95384.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":65856.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":34436.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":19324.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":28924.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":13271.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":7607.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":3129.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":22776.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":20459.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":26649.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":47920.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":125985.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":82111.0, "Secreto":false}
+]
+}
+,{"COD":"EOT818", "Nombre":"Murcia (Región de). Pernoctaciones. Residentes en el extranjero.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":13448.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":13446.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":24979.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":58734.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":58676.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":99325.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":119016.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":120922.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":106554.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":95221.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":71497.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":29300.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":22889.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":13361.0, "Secreto":false}
+]
+}
+,{"COD":"EOT819", "Nombre":"Navarra (Comunidad Foral de). Viajeros. Total.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":53266.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":40256.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":26101.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":21049.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":17583.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":7100.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":2435.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":1889.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":2728.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":3606.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":13513.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":20448.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":51123.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":41450.0, "Secreto":false}
+]
+}
+,{"COD":"EOT820", "Nombre":"Navarra (Comunidad Foral de). Viajeros. Residentes en España.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":39265.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":31829.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":19661.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":13340.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":12012.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":6214.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":2165.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":1727.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":2493.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":3290.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":9197.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":13192.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":36825.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":30608.0, "Secreto":false}
+]
+}
+,{"COD":"EOT821", "Nombre":"Navarra (Comunidad Foral de). Viajeros. Residentes en el extranjero.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":14001.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":8426.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":6440.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":7709.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":5571.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":886.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":270.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":162.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":235.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":315.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":4316.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":7256.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":14298.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":10842.0, "Secreto":false}
+]
+}
+,{"COD":"EOT822", "Nombre":"Navarra (Comunidad Foral de). Pernoctaciones. Total.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":208058.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":143478.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":75670.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":57635.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":55992.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":53037.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":4748.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":3802.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":7019.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":9664.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":44508.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":73447.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":212738.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":156296.0, "Secreto":false}
+]
+}
+,{"COD":"EOT823", "Nombre":"Navarra (Comunidad Foral de). Pernoctaciones. Residentes en España.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":176319.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":122288.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":63105.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":42143.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":46254.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":44871.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":4383.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":3527.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":6739.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":9305.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":36964.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":58364.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":182804.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":134466.0, "Secreto":false}
+]
+}
+,{"COD":"EOT824", "Nombre":"Navarra (Comunidad Foral de). Pernoctaciones. Residentes en el extranjero.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":31739.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":21190.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":12566.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":15492.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":9738.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":8166.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":365.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":275.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":280.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":359.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":7544.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":15083.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":29934.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":21829.0, "Secreto":false}
+]
+}
+,{"COD":"EOT825", "Nombre":"País Vasco. Viajeros. Total.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":73338.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":58454.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":39389.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":32352.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":24231.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":10164.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":3108.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":3381.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":5627.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":6980.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":24977.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":33969.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":73316.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":60778.0, "Secreto":false}
+]
+}
+,{"COD":"EOT826", "Nombre":"País Vasco. Viajeros. Residentes en España.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":32748.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":22170.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":15770.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":8397.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":10856.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":5117.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":1409.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":710.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":2195.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":3350.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":7049.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":11021.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":30024.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":18577.0, "Secreto":false}
+]
+}
+,{"COD":"EOT827", "Nombre":"País Vasco. Viajeros. Residentes en el extranjero.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":40590.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":36283.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":23619.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":23955.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":13375.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":5047.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":1699.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":2671.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":3432.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":3630.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":17928.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":22949.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":43292.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":42201.0, "Secreto":false}
+]
+}
+,{"COD":"EOT828", "Nombre":"País Vasco. Pernoctaciones. Total.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":237408.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":195185.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":104086.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":78355.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":63023.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":31335.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":7762.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":7361.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":11682.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":24171.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":59080.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":94742.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":238255.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":195112.0, "Secreto":false}
+]
+}
+,{"COD":"EOT829", "Nombre":"País Vasco. Pernoctaciones. Residentes en España.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":126233.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":90778.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":50720.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":30670.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":37783.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":18652.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":3870.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":2273.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":4990.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":15047.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":23808.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":39912.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":126791.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":79169.0, "Secreto":false}
+]
+}
+,{"COD":"EOT830", "Nombre":"País Vasco. Pernoctaciones. Residentes en el extranjero.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":111175.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":104407.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":53366.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":47685.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":25239.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":12683.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":3892.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":5087.0, "Secreto":false}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":6692.0, "Secreto":false}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":9124.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":35272.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":54830.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":111464.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":115943.0, "Secreto":false}
+]
+}
+,{"COD":"EOT831", "Nombre":"Rioja (La). Viajeros. Total.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":19218.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":19935.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":11337.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":7295.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":8142.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":3840.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":1334.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":2075.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":6758.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":9832.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":19875.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":20229.0, "Secreto":false}
+]
+}
+,{"COD":"EOT832", "Nombre":"Rioja (La). Viajeros. Residentes en España.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":15572.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":17861.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":8003.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":4751.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":6478.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":3273.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":1275.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":1806.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":4517.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":5986.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":16730.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":17808.0, "Secreto":false}
+]
+}
+,{"COD":"EOT833", "Nombre":"Rioja (La). Viajeros. Residentes en el extranjero.", "FK_Unidad":213, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":3646.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":2073.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":3334.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":2544.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":1664.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":567.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":59.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":269.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":2241.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":3846.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":3145.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":2421.0, "Secreto":false}
+]
+}
+,{"COD":"EOT834", "Nombre":"Rioja (La). Pernoctaciones. Total.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":98338.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":88426.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":32667.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":18821.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":26283.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":14841.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":3748.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":9465.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":17755.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":29343.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":101564.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":90107.0, "Secreto":false}
+]
+}
+,{"COD":"EOT835", "Nombre":"Rioja (La). Pernoctaciones. Residentes en España.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":88192.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":82863.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":24902.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":14160.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":21807.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":13684.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":3648.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":8962.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":13518.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":21778.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":94658.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":84532.0, "Secreto":false}
+]
+}
+,{"COD":"EOT836", "Nombre":"Rioja (La). Pernoctaciones. Residentes en el extranjero.", "FK_Unidad":242, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":2, "FK_Periodo":8, "Anyo":2026, "Valor":10146.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":2, "FK_Periodo":7, "Anyo":2026, "Valor":5564.0, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":2, "FK_Periodo":6, "Anyo":2026, "Valor":7765.0, "Secreto":false}
+,{"Fecha":1777586400000, "FK_TipoDato":2, "FK_Periodo":5, "Anyo":2026, "Valor":4661.0, "Secreto":false}
+,{"Fecha":1774994400000, "FK_TipoDato":2, "FK_Periodo":4, "Anyo":2026, "Valor":4476.0, "Secreto":false}
+,{"Fecha":1772319600000, "FK_TipoDato":2, "FK_Periodo":3, "Anyo":2026, "Valor":1157.0, "Secreto":false}
+,{"Fecha":1769900400000, "FK_TipoDato":2, "FK_Periodo":2, "Anyo":2026, "Valor":100.0, "Secreto":false}
+,{"Fecha":1767222000000, "FK_TipoDato":2, "FK_Periodo":1, "Anyo":2026, "Valor":null, "Secreto":true}
+,{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":null, "Secreto":true}
+,{"Fecha":1761951600000, "FK_TipoDato":1, "FK_Periodo":11, "Anyo":2025, "Valor":504.0, "Secreto":false}
+,{"Fecha":1759269600000, "FK_TipoDato":1, "FK_Periodo":10, "Anyo":2025, "Valor":4237.0, "Secreto":false}
+,{"Fecha":1756677600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2025, "Valor":7565.0, "Secreto":false}
+,{"Fecha":1753999200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2025, "Valor":6906.0, "Secreto":false}
+,{"Fecha":1751320800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2025, "Valor":5575.0, "Secreto":false}
+]
+}
+,{"COD":"EOT21283", "Nombre":"Ceuta. Viajero. Total categorías. Total. Dato. ", "FK_Unidad":213, "FK_Escala":1, "Data":[]
+}
+,{"COD":"EOT21282", "Nombre":"Ceuta. Viajero. Total categorías. Residentes en España. Dato. ", "FK_Unidad":213, "FK_Escala":1, "Data":[]
+}
+,{"COD":"EOT21281", "Nombre":"Ceuta. Viajero. Total categorías. Residentes en el Extranjero. Dato. ", "FK_Unidad":213, "FK_Escala":1, "Data":[]
+}
+,{"COD":"EOT21280", "Nombre":"Ceuta. Pernoctaciones. Total categorías. Total. Dato. ", "FK_Unidad":242, "FK_Escala":1, "Data":[]
+}
+,{"COD":"EOT21279", "Nombre":"Ceuta. Pernoctaciones. Total categorías. Residentes en España. Dato. ", "FK_Unidad":242, "FK_Escala":1, "Data":[]
+}
+,{"COD":"EOT21278", "Nombre":"Ceuta. Pernoctaciones. Total categorías. Residentes en el Extranjero. Dato. ", "FK_Unidad":242, "FK_Escala":1, "Data":[]
+}
+,{"COD":"EOT21277", "Nombre":"Melilla. Viajero. Total categorías. Total. Dato. ", "FK_Unidad":213, "FK_Escala":1, "Data":[]
+}
+,{"COD":"EOT21276", "Nombre":"Melilla. Viajero. Total categorías. Residentes en España. Dato. ", "FK_Unidad":213, "FK_Escala":1, "Data":[]
+}
+,{"COD":"EOT21275", "Nombre":"Melilla. Viajero. Total categorías. Residentes en el Extranjero. Dato. ", "FK_Unidad":213, "FK_Escala":1, "Data":[]
+}
+,{"COD":"EOT21274", "Nombre":"Melilla. Pernoctaciones. Total categorías. Total. Dato. ", "FK_Unidad":242, "FK_Escala":1, "Data":[]
+}
+,{"COD":"EOT21273", "Nombre":"Melilla. Pernoctaciones. Total categorías. Residentes en España. Dato. ", "FK_Unidad":242, "FK_Escala":1, "Data":[]
+}
+,{"COD":"EOT21272", "Nombre":"Melilla. Pernoctaciones. Total categorías. Residentes en el Extranjero. Dato. ", "FK_Unidad":242, "FK_Escala":1, "Data":[]
+}
+]

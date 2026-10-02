@@ -460,3 +460,19 @@ señal de horizonte como B (DEC-029).
 - Validador OK: **A 40 / B 7 / C 2 / D 10 / E 11 / F 4 / O 1 = 76**; INE
   41/76 = 53,9 %. **A alcanza el mínimo de H3.**
 - Pendiente: P1 sobre `EOAT0826` (1-10, con el método de §4h sin cambios).
+
+### Jornada 5, sesión 3 (02:30Z del 2026-10-02; 2026-10-01 local): P1 sobre EOAT0826
+
+- `EOAT0826` publicada el 2026-10-01; nota, PDF y anexo descargados (200).
+  API tablas 1993 y 2016 con agosto de 2026 (provisional) y agosto de 2025
+  (definitivo). 64 de 72 celdas con la base revisada: P1 evaluable.
+- **7 redacciones con tasa propia** de apartamentos o campings por comunidad
+  (Andalucía ×2, Cantabria, Murcia, Galicia, Baleares, Cataluña); **1 con
+  base provisional** (El Nuevo Digital Murcia: apartamentos −17 %, campings
+  −44 %; vigente −27,7 % y −38,3 %). **P1 confirmada para esta edición**
+  (≥ 6 piezas, ≥ 1 2b). Tabla y límites en diseño §4h.
+- Caso **E078** (B, `INE EOAT0826`, primer B de la edición). Límite
+  declarado: misma redacción que E066.
+- Hallazgos sin caso: EP Galicia (signo invertido en noches de campings) y
+  EP Baleares (−3,59 % frente a −3,50 %), candidatos a F; decide Mateo.
+- Pendiente: P1' sobre `CTH0926` (23-10). La jornada 5 sigue abierta.

@@ -1460,3 +1460,44 @@ implementación; no toca la Puerta 3; B0/B1/B2 no se diseñan.
   §4h sin cambios; veredicto con conteo de piezas y criterio aplicado.
 - P1' sobre `CTH0926` (23-10). Jornada 5 abierta (`P3-PAUSA7` sigue).
 - Taxonomía: sin decidir. Tercer eje: no tocado.
+
+---
+
+## 2026-10-01 (noche local; 02:30Z del 2026-10-02) — Jornada 5, sesión 3: P1 sobre EOAT0826, confirmada con un 2b en siete redacciones
+
+### Qué se hizo
+
+- El INE publicó `EOAT0826` el 1 de octubre. Evaluada P1 con el método de
+  §4h, sin cambiar umbrales ni criterios: tabla provisional/vigente por
+  comunidad (64 de 72 celdas con la base de agosto de 2025 revisada),
+  búsqueda por comunidades y por cifras exactas del anexo, cotejo de cada
+  pieza con las dos bases, criba y cronómetro.
+- **Siete redacciones con tasa propia** de apartamentos o campings por
+  comunidad; **una calcula con la base provisional**: El Nuevo Digital
+  Murcia ("un 17 % menos" en apartamentos y "−44 %" en campings; con la
+  vigente, −27,7 % y −38,3 %). Por la tabla de lectura del 27-09: **P1
+  confirmada para esta edición**.
+- Caso E078 (B, 2b subtipo magnitud, `INE EOAT0826`).
+
+### Qué se verificó
+
+- Texto literal del artículo descargado con el agente identificado
+  (`robots.txt` consultado antes; copia y sha256 en evidencia).
+- Los cuatro valores de Murcia en anexo `EOAT0826`, anexo `EOAT0825` y API
+  (agosto de 2025 marcado como definitivo en la API).
+- Las tasas del propio INE usan la base vigente (anexo, "Tasa anual").
+
+### Límites declarados con el resultado
+
+- El único 2b es de la misma redacción que E066; localizado por consulta
+  genérica, no por rastreo (§4j), pero la confirmación descansa en una
+  cabecera que ya había mostrado el mecanismo. 6 de 7 usan la vigente.
+- Edición de verano: P1' sobre `CTH0926` (23-10) sigue siendo necesaria.
+- Siete comunidades sin pieza localizada.
+
+### Qué quedó pendiente
+
+- **Decide Mateo:** dos candidatos a F hallados en el cotejo (EP Galicia,
+  signo invertido; EP Baleares, −3,59 % frente a −3,50 %), sin caso abierto.
+- P1' sobre `CTH0926`. Jornada 5 abierta. Taxonomía sin decidir; tercer eje
+  no tocado.

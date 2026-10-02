@@ -370,3 +370,8 @@
 2026-10-01T01:13:13+00:00	E076	t2	extraido y anotado en lote_evaluacion.py
 2026-10-01T01:13:13+00:00	E077	t1	primaria ya descargada (BdE nota julio 2026, J5_bde_julio26.htm)
 2026-10-01T01:13:13+00:00	E077	t2	extraido y anotado en lote_evaluacion.py
+2026-10-02T02:24:06+00:00	P3-PAUSA7	t2	Reanuda la jornada 5 (sesion 3): Mateo avisa de que el INE publico EOAT0826; se evalua P1 con el metodo de 4h
+2026-10-02T02:26:43+00:00	E078	t0	Jornada 5 sesion 3: candidato 2b en EOAT0826 (apartamentos, Region de Murcia, viajeros 'un 17% menos' solo sale con la base provisional de EOAT0825; El Nuevo Digital Murcia 2026-10-01), localizado por la consulta generica por comunidad
+2026-10-02T02:30:14+00:00	E078	t1	primaria localizada: API tablas 1993/2016 (EOT1117, EOT813; Murcia) + anexo EOAT0825 filas 26 y 50 (base al publicar, nota 2025-10-01) + EOAT0826; articulo descargado
+2026-10-02T02:30:14+00:00	E078	t2	extraido y anotado: 2b magnitud (apartamentos -17,2% provisional / -27,7% vigente; campings -44,6% / -38,3%), cubeta B, edicion EOAT0826
+2026-10-02T02:30:26+00:00	P3-PAUSA8	t0	Jornada 5 sigue abierta: P1 sobre EOAT0826 evaluada (confirmada, 1 de 7); espera P1' sobre CTH0926 (23-10)

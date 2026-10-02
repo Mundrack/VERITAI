@@ -1,0 +1,38 @@
+{
+  "claim_id": "E078",
+  "texto": "Apartamentos, camping y casas rurales perdieron en agosto un 30% de viajeros y un 23% de pernoctaciones: los 21.362 viajeros que optaron por un apartamento fueron un 17% menos que en agosto de 2025",
+  "fuente_url": "https://elnuevodigitalmurcia.es/art/9286/apartamentos-camping-y-casas-rurales-perdieron-en-agosto-un-30-de-viajeros-y-un-23-de-pernoctaciones",
+  "conjunto": "evaluacion",
+  "origen_case_id": "",
+  "tipo": "cambio_entre_periodos",
+  "metrica": {
+    "emisor": "INE",
+    "tabla": "1993",
+    "serie_nombre": "Murcia (Región de). Viajeros. Total.",
+    "unidad": "viajeros",
+    "referencia_principal": "interanual",
+    "descripcion": "EOAT, viajeros en apartamentos turisticos, Region de Murcia, mensual"
+  },
+  "periodo_objetivo": "2026-M08",
+  "periodo_base": "2025-M08",
+  "valor_objetivo": 21362,
+  "cambio_afirmado": -17,
+  "unidad_cambio": "pct",
+  "direccion_afirmada": "baja",
+  "evidencia_al_publicar": {
+    "valor": 25803,
+    "edicion": "INE EOAT0825 (agosto 2025, datos provisionales)",
+    "fecha": "2025-10-01",
+    "url": "https://www.ine.es/prensa/anexo_tablas/es/EOAT0825.xlsx",
+    "raw_value_span": "[EOAT0825.xlsx, hoja EOAP_Hoja1, fila 26] 'Murcia, Región de', 25803, 19645, 6158, 150328, 132659, 17669, 5.83",
+    "verificacion": "descarga 2026-09-30 con research/puerta3/edicion_anterior.py (HTTP 200, 158.958 bytes, sha256 eeb28bf6c7c556ee; fecha de la nota leida del HTML: 1 de octubre de 2025)"
+  },
+  "evidencia_vigente": {
+    "valor": 29538,
+    "edicion": "API Tempus, tabla 1993, edicion vigente (dato definitivo)",
+    "fecha": "2026-10-01",
+    "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/1993",
+    "raw_value_span": "[INE API tabla 1993] EOT1117 'Murcia (Región de). Viajeros. Total.' 2025-M08: 29538 (T3_TipoDato definitivo)"
+  },
+  "notas": "Base interanual correcta en periodo, tomada de la edicion provisional (25.803) y no de la vigente (29.538): 2b sin cambio de signo (-17,2% frente a -27,7%). Campings del mismo articulo: -44,6% provisional frente a -38,3% vigente."
+}

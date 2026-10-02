@@ -534,6 +534,75 @@ piezas localizadas, con la base que usan, no solo las que dan B.
   reevalúa con lo que aparezca sobre `EOAT0826` y `CTH0926`. Ninguna de
   estas piezas entra como caso (la cuota INE no sube por P2).
 
+**Resultado de P1 sobre `EOAT0826` (sesión 3 de la jornada 5; 2026-10-01
+local, 2026-10-02 02:24Z en adelante). Método de arriba, sin tocar umbrales
+ni criterios.**
+
+*Condición de evaluabilidad.* Cumplida: de las 72 celdas de la tabla
+(apartamentos y campings × 18 filas × viajeros y pernoctaciones), **64 tienen
+la base de agosto de 2025 revisada** (anexo `EOAT0825` ≠ API). Las tasas que
+imprime el propio INE (anexo, "Tasa anual": apartamentos +7,29 % viajeros y
+−1,68 % pernoctaciones) salen con la base vigente. Tabla completa:
+`research/evidencia/J5_EOAT0826_tabla_prov_vig.json`.
+
+*Búsqueda.* Una consulta nacional, siete por grupos de comunidades que
+cubren las 17, doce por las cifras exactas del anexo de cada comunidad, dos
+de refuerzo (Navarra; teletipos de Europa Press) y la criba (a) y (b) del
+candidato. La nota del INE imprime dos tasas regionales (Canarias,
+apartamentos, −3,9 %; Cataluña, campings, −0,8 %): las piezas que solo
+repiten esas no cuentan como tasa propia.
+
+*Piezas localizadas con tasa propia de apartamentos o campings por comunidad
+(una fila por redacción; las reimpresiones del mismo teletipo se listan, no
+se cuentan):*
+
+| # | Redacción (reimpresiones) | Comunidad | Cifras de la pieza | Tasa provisional / vigente | Base |
+|---|---|---|---|---|---|
+| 1 | Europa Press (Última Hora, Andalucía Información, Teleprensa) | Andalucía | apart. viajeros +20,3 %, pernoct. +11,7 %; campings viajeros +2,04 %, pernoct. +2,9 % | 20,25 / 20,32; 13,48 / 11,74; 0,58 / 2,04; 4,91 / 2,91 | vigente |
+| 2 | El Conciso (A. Ruiz) | Andalucía | apart. viajeros +20,3 %; campings viajeros +2 % | 20,25 / 20,32; 0,58 / 2,04 | vigente |
+| 3 | ifomo (M. Alonso; Cantabria Económica, Cantabria Liberal) | Cantabria | apart. pernoct. −8 %; campings pernoct. −5,4 % | −5,51 / −7,98; −0,75 / −5,38 | vigente |
+| 4 | **El Nuevo Digital Murcia (F. A.)** | Región de Murcia | apart. viajeros "un 17 % menos"; campings viajeros "(−44 %)" | **−17,20** / −27,67; **−44,60** / −38,27 | **provisional: 2b (E078)** |
+| 5 | Europa Press (Galicia Press, esRadio, gcdiario, El Debate) | Galicia | apart. viajeros +4,3 %, pernoct. +11,5 %; campings viajeros −4,4 %, noches "cayeron un 6,6 %" | 1,20 / 4,31; 7,38 / 11,58; −3,67 / −4,42; +6,93 / +6,67 | vigente (la última con el signo invertido: ver nota) |
+| 6 | Europa Press (Última Hora, Forbes Baleares) | Illes Balears | apart. viajeros +9 %; pernoct. −3,59 % | 10,31 / 9,00; −2,02 / −3,50 | vigente en viajeros; la de pernoctaciones no sale exacta con ninguna |
+| 7 | ACN (Via Empresa) | Cataluña | campings viajeros +5,92 %; cita las bases: campings 5.440.058 y apartamentos 1.461.194 pernoctaciones en 2025 | 5,61 / 5,92; las dos bases citadas son las de la API | vigente |
+
+*Localizadas sin tasa propia de apartamentos o campings (no cuentan):*
+Lanza (Castilla-La Mancha, solo niveles), Región Digital/EP (Extremadura,
+solo el total agregado de cuatro encuestas), El Español y Valladolid Plural
+(Castilla y León, niveles; tasa solo de turismo rural), Empresas de Murcia
+(niveles), elDiario.es/EP (Canarias, la tasa del INE), infoCLM, CLM24 y
+Heraldo de León (turismo rural). Sin pieza localizada: Aragón, Asturias,
+Comunitat Valenciana, Madrid, Navarra, País Vasco y La Rioja.
+
+**Veredicto, por la tabla de lectura fijada el 2026-09-27:** piezas
+localizadas con tasa propia = **7** (≥ 6); 2b encontrados = **1** (≥ 1) →
+**P1 confirmada para esta edición.** El caso es E078, primer B de `EOAT0826`
+(tope de tres por edición: 1 de 3).
+
+**Lo que la confirmación no dice, declarado con el resultado:**
+
+- **El único 2b viene de El Nuevo Digital Murcia, la misma redacción que
+  E066** (`EOAT0526`). Se localizó con la consulta genérica por comunidad,
+  igual que las otras, no rastreando la cabecera (§4j); pero la predicción
+  se cumple gracias a una redacción que ya había mostrado el mecanismo. Es
+  evidencia de que el mecanismo **persiste** en esa redacción, no de que
+  esté extendido: 1 de 7 redacciones, y 6 de 7 calcularon con la vigente.
+  Acumulado en la EOAT: 2 piezas con base provisional de 18 localizadas
+  (1/11 antes, 1/7 ahora), las dos de la misma cabecera.
+- `EOAT0826` es una edición de verano. P1 no separa §4d de la lectura
+  estacional: eso lo hace **P1' sobre `CTH0926` (23 de octubre)**, que sigue
+  siendo necesaria.
+- **P2 sigue sin refutar:** ninguna de estas piezas es de las seis
+  operaciones con tasa publicada.
+
+*Dos hallazgos del cotejo, anotados y sin caso abierto (decide Mateo):* el
+teletipo de Europa Press de Galicia dice que las noches en campings
+"cayeron un 6,6 %" cuando subieron un 6,67 % (570.381 frente a 534.694,
+vigente): magnitud de la base vigente con el signo invertido, candidato a F;
+y el de Baleares da −3,59 % en pernoctaciones de apartamentos donde la
+vigente da −3,50 %: 0,09 puntos de diferencia, por encima de la tolerancia,
+también candidato a F. Ninguno es 2b.
+
 ### 4i. La jornada 5 completa A hasta 40, sin INE
 
 H3 necesita 40 controles y hay 31. En la misma jornada se recolectan **al
