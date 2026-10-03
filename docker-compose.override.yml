@@ -29,6 +29,9 @@ services:
       - ./apps/web/src:/app/src:ro
       - ./apps/web/index.html:/app/index.html:ro
       - ./apps/web/vite.config.ts:/app/vite.config.ts:ro
+      - ./apps/web/vitest.config.ts:/app/vitest.config.ts:ro
+      - ./apps/web/arquitectura.json:/app/arquitectura.json:ro
+      - ./apps/web/tests:/app/tests:ro
       # Volumen anonimo: evita que el node_modules del host (si existe) pise
       # el que se instalo dentro de la imagen.
       - /app/node_modules

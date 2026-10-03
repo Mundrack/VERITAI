@@ -309,8 +309,15 @@ para el día a día). Son tres dependencias de desarrollo: `vitest`,
 `happy-dom`, `@vitest/coverage-v8`.
 
 `npm test` ejecuta todo; `npm run build` no se da por bueno si `npm test`
-falla. Las pruebas corren dentro del contenedor `veritai-web`, como las de la
-API corren en el suyo.
+falla (pendiente de conectar en `package.json` cuando las pruebas de
+arquitectura estén en verde, para no romper la etapa `build` del Dockerfile
+mientras `main.ts` siga como está). Las pruebas corren dentro del contenedor
+`veritai-web`, como las de la API corren en el suyo: `tests/`,
+`vitest.config.ts` y `arquitectura.json` van montados en solo lectura
+(`docker-compose.override.yml`); hace falta reconstruir la imagen para que
+tenga Vitest. Las pruebas que solo leen ficheros llevan
+`// @vitest-environment node` en la primera línea: bajo happy-dom,
+`import.meta.url` no es una URL `file:`.
 
 ### 5.2 Tipos de prueba y qué cubre cada uno
 
@@ -660,9 +667,9 @@ que mover antes del primer componente.
 | 10 | Un fichero de estilos para todo; no hay `tokens.css`, `base.css`, `raiz.css` ni hojas por componente | `estilos.css` | §2 |
 | 11 | La capa i18n toca el DOM: `fijarLocale` escribe `document.documentElement.lang` | `src/i18n/index.ts` línea 55 | §1.2 (`i18n` no importa nada ni toca el DOM); eso va a `presentacion/montar.ts` |
 | 12 | `t()` cae en silencio al catálogo español si la clave falta en inglés; sin prueba de paridad, una traducción que falta pasa desapercibida | `i18n/index.ts` línea 70 | §5.2 prueba de i18n |
-| 13 | **Ninguna prueba** de la interfaz; no hay runner ni `npm test`; `build` solo hace `tsc --noEmit` | `package.json` | §5 |
+| 13 | ~~Ninguna prueba de la interfaz; no hay runner ni `npm test`~~ **Desde el 2026-10-03:** Vitest 5 con happy-dom, `npm test`, `npm run test:cobertura`, y las dos primeras pruebas de arquitectura (dependencias y DOM inseguro), **en rojo contra `main.ts` a propósito**. Siguen sin existir las demás pruebas de §5.2, y `build` todavía no exige `npm test` (se conecta cuando las pruebas estén en verde) | `package.json`, `vitest.config.ts`, `tests/arquitectura/` | §5 |
 | 14 | Ni lint ni formateador para TypeScript, cuando la API tiene `ruff` y `ruff format` | `apps/web/` | §5.3 punto 3 exige al menos `typecheck`; un lint es deuda declarada |
-| 15 | No existe `arquitectura.json` ni prueba de dependencias; tampoco en la API, que lo declara como deuda | `apps/web/`, `ARQUITECTURA.md` §3 | §1.4 |
+| 15 | ~~No existe `arquitectura.json` ni prueba de dependencias~~ **Desde el 2026-10-03** existen `arquitectura.json` y `tests/arquitectura/dependencias.test.ts`, que falla en `main.ts:9` (importa `i18n` en vez de `aplicacion`). La prueba equivalente del lado Python sigue siendo deuda (`ARQUITECTURA.md` §3) | `apps/web/`, `ARQUITECTURA.md` §3 | §1.4 |
 | 16 | `index.html` no declara CSP; el panel suelto la necesitará y la extensión la exige | `index.html` | §8 |
 | 17 | La explicación del veredicto se genera solo en español en el dominio (`plantilla.py`, `SALIDA`, `MOTIVOS`); la interfaz en inglés no puede mostrarla sin incumplir §10, y hoy no tiene plantillas propias para recomponerla | `apps/api/veritai/domain/plantilla.py` | §1.3 punto 4; es trabajo de interfaz, no de dominio |
 | 18 | `sitios/`, `localizacion/`, fixtures y extensión no existen. No es un incumplimiento: es lo que este documento ordena antes de escribirlos | — | §7 |

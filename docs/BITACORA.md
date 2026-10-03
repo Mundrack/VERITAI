@@ -1533,3 +1533,44 @@ implementación; no toca la Puerta 3; B0/B1/B2 no se diseñan.
 - Aprobación de Mateo del documento; orden propuesto en §9 para ponerse al
   día. No se escribió ningún componente ni se tocó la lógica de verificación,
   la tesis ni la jornada 5 (abierta, `P3-PAUSA8`).
+
+---
+
+## 2026-10-03 (13:53Z) — Rama `feat/interfaz`; runner Vitest y las dos primeras pruebas de arquitectura, en rojo a propósito
+
+### Qué se hizo
+
+- **Rama separada.** Los dos commits de interfaz (`3151cc5`, `ea5609b`) pasan
+  a `feat/interfaz`, creada en la punta; `feat/puerta-3-recoleccion` vuelve a
+  `f5dbead` y queda solo para la tesis hasta el 23-10. Sin reescribir
+  commits: `git diff f5dbead feat/puerta-3-recoleccion` vacío;
+  `git diff ea5609b feat/interfaz` vacío.
+- **Runner.** Vitest 5.0.3, happy-dom 20, cobertura v8 y `@types/node` como
+  dependencias de desarrollo; `vitest.config.ts` con los umbrales de §5.3;
+  scripts `test`, `test:ver`, `test:cobertura`; `tsconfig` cubre `tests/`;
+  `tests/`, `vitest.config.ts` y `arquitectura.json` montados en el contenedor
+  web (solo lectura).
+- **`arquitectura.json`**: la matriz de §1.2 como datos.
+- **Dos pruebas de arquitectura**, con el analizador de TypeScript, no con
+  expresiones regulares: `dependencias.test.ts` (matriz) y
+  `dom-inseguro.test.ts` (innerHTML/outerHTML con datos, insertAdjacentHTML,
+  document.write, eval, new Function, temporizadores con cadena, import()
+  dinámico construido).
+
+### Qué se verificó
+
+- `npm run typecheck` en verde con `src` y `tests`.
+- `npm test`: **2 fallan, 3 pasan**, y fallan por lo que miden:
+  `src/main.ts:9` importa `./i18n` cuando `main` solo puede importar de
+  `aplicacion`; `src/main.ts:60` asigna `innerHTML` con datos. La lectura de
+  `innerHTML` en `escapar()` (línea 24) no se marca, como debe ser.
+- Un fallo propio corregido antes de dar la salida: bajo happy-dom,
+  `import.meta.url` no es `file:`; las pruebas que leen ficheros llevan
+  `// @vitest-environment node`.
+
+### Qué quedó pendiente
+
+- `main.ts` **no se arregla todavía** (orden de Mateo). Las demás pruebas de
+  §5.2. Conectar `npm test` al `build` cuando esté en verde. Reconstruir la
+  imagen web para tener Vitest dentro del contenedor.
+- Jornada 5: abierta en `feat/puerta-3-recoleccion`, sin tocar.

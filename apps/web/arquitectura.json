@@ -1,0 +1,18 @@
+{
+  "_descripcion": "Matriz de dependencias permitidas entre las capas de apps/web/src (docs/ARQUITECTURA-VISUAL.md §1.2). Una capa puede importar de si misma y de las capas listadas en puede_importar; de ninguna otra. Los paquetes externos (sin ./ ni /) no los gobierna esta matriz. La comprueba tests/arquitectura/dependencias.test.ts.",
+  "capas": {
+    "contrato": { "raiz": "src/contrato", "puede_importar": [] },
+    "cliente": { "raiz": "src/cliente", "puede_importar": ["contrato"] },
+    "formato": { "raiz": "src/formato", "puede_importar": ["i18n"] },
+    "i18n": { "raiz": "src/i18n", "puede_importar": [] },
+    "presentacion": { "raiz": "src/presentacion", "puede_importar": ["contrato", "formato", "i18n"] },
+    "localizacion": { "raiz": "src/localizacion", "puede_importar": ["sitios"] },
+    "sitios": { "raiz": "src/sitios", "puede_importar": [] },
+    "aplicacion": {
+      "raiz": "src/aplicacion",
+      "puede_importar": ["contrato", "cliente", "i18n", "presentacion", "localizacion"]
+    },
+    "extension": { "raiz": "src/extension", "puede_importar": ["aplicacion", "sitios"] },
+    "main": { "raiz": "src/main.ts", "puede_importar": ["aplicacion"] }
+  }
+}
