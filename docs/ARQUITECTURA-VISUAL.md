@@ -37,7 +37,7 @@ Esto es lo que existe en `apps/web/`. El resto del documento parte de aquí.
 | Escapado | `escapar()` con `textContent` antes de meter cualquier dato en `innerHTML` | `main.ts` |
 | Red | `fetch` con `AbortController` y 4 segundos de tope; la URL de la API viene de `VITE_API_BASE_URL` | `main.ts` |
 | Servido | Contenedor `veritai-web` (Vite dev, puerto publicado solo en `127.0.0.1:5173`); `src/` montado en solo lectura | `docker-compose.yml`, `docker-compose.override.yml` |
-| Tests | **Ninguno.** No hay runner, ni `npm test`, ni lint ni formateador para TypeScript (la API tiene `ruff` y 114 tests) | — |
+| Tests | **Ninguno.** No hay runner, ni `npm test`, ni lint ni formateador para TypeScript (la API tiene `ruff`, `ruff format` y una suite de pytest en `apps/api/tests/`) | — |
 | Extensión | **No existe.** El Dockerfile y `ESTADO.md` declaran que el panel es el mismo código que se empaquetará como MV3 "más tarde" | — |
 | Inyección en páginas de terceros | **No existe** ningún código que lea el DOM de X ni de ningún sitio. La tesis (`02-1`) la define: extensión Chromium que "lee el DOM y muestra el panel de contexto"; alcance de la Fase 0: **X**, texto, español (`03-2`, `00b`) | — |
 
