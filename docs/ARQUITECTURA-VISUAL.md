@@ -204,7 +204,7 @@ apps/web/
 │  │  │  ├─ numero-trazado/   —  Un número con su raw_value_span desplegable. Es la unidad que hace visible la trazabilidad.
 │  │  │  ├─ motivo-abstencion/—  El motivo de abstención con su texto i18n.
 │  │  │  └─ estado-servicio/  ✓  Lo que pintaba main.ts: API y base de datos vivas o no.
-│  │  ├─ marca/               ✓  Los dos SVG del símbolo (§2.1): con órbita a partir de 48 px, mínimo por debajo. Carpeta preparada; los SVG aún no están.
+│  │  ├─ marca/               ✓  Los dos SVG del símbolo (§2.1): con órbita a partir de 48 px, mínimo por debajo.
 │  │  ├─ estilos/
 │  │  │  ├─ tokens.css        ✓  Las variables --veritai-* (color, espacio, radio, tipografía, sombra, capa) para tema claro y oscuro. Es el ÚNICO fichero con valores literales de color y tamaño.
 │  │  │  ├─ base.css          ✓  Estilos del panel suelto (index.html): body, tipografía base. NUNCA se inyecta en una página de terceros.
@@ -222,7 +222,7 @@ apps/web/
 │  │  └─ flujo.ts             ✓
 │  └─ extension/              —  Adaptación a MV3. Entra: manifest (generado), content script, service worker, popup. No entra: lógica fuera de aplicacion.
 │     ├─ manifest.base.json   —  Permisos mínimos; host_permissions se generan desde sitios/*.json en el build.
-│     ├─ iconos/              —  PNG generados por scripts/generar-iconos.mjs desde src/presentacion/marca/. Nunca a mano.
+│     ├─ iconos/              ✓  PNG generados por scripts/generar-iconos.mjs desde src/presentacion/marca/. Nunca a mano.
 │     ├─ contenido.ts         —  Content script: llama a aplicacion.
 │     ├─ fondo.ts             —  Service worker: solo lo que MV3 obliga a hacer ahí.
 │     └─ popup/
@@ -264,14 +264,21 @@ hay en `src/` pertenece a una capa declarada, §1.4) ni en `public/`.
 | `veritai-simbolo.svg` | el símbolo con órbita, con su color propio | **a partir de 48 px** |
 | `veritai-simbolo-min.svg` | solo la estrella, `fill="currentColor"` | **por debajo de 48 px**; hereda el color del texto que lo rodea, así que **no lleva color propio** y no se le pone ninguno desde CSS |
 
-Los dos tienen `viewBox` cuadrado, para que los iconos salgan cuadrados.
+Los dos tienen `viewBox="0 0 100 100"`, `role="img"` y `aria-label`, y los
+dos llevan un manifiesto C2PA en `<metadata>` cuyo hash cubre el fichero: **no
+se editan**, ni para añadir un `id`; si el símbolo cambia, se sustituye el
+fichero entero. Versionados el 2026-10-03 (sha256 `ab8c5df2…` y
+`10f12528…`).
 
 **Cómo los usa un componente.** El símbolo con órbita se pinta con
 `<img src=... alt=...>`: tiene color propio y el texto alternativo va en
-`alt`, por `t()`. El mínimo se pinta en línea, con `<svg role="img"
-aria-label=...><use href="...#simbolo"/></svg>`, porque `currentColor` solo
-se hereda cuando el SVG está en el DOM; el fichero expone un `<symbol
-id="simbolo">`. Ninguno de los dos se mete por `innerHTML` (§4).
+`alt`, por `t()`; es lo que hace `estado-servicio` en la cabecera del panel,
+a 48 px (`--veritai-marca-tamano-cabecera`). El mínimo necesita heredar
+`currentColor`, y un `<img>` no hereda nada; como el fichero no expone
+ningún `id` (y no se edita), `<use href="...#id">` no sirve. Cuando haga
+falta se usará `mask-image: url(...)` con `background-color: currentColor`
+sobre un `<span role="img" aria-label>`, que hereda el color y no inyecta
+nada en el DOM. Ninguno de los dos se mete por `innerHTML` (§4).
 
 **Iconos de la extensión.** Los PNG que pide Manifest V3 (16, 32, 48 y 128
 px) y el de la ficha de la tienda (512) **no se dibujan a mano**:
@@ -287,13 +294,12 @@ exista, o `--color=#rrggbb`; sin ninguno de los dos el script se para. Si
 el símbolo cambia, se vuelve a ejecutar y los PNG cambian con él; los PNG
 generados se versionan junto al script.
 
-**Tokens de acento: medido, propuesto, sin aplicar.** El 2026-10-03 los
-SVG no estaban en el repositorio; los colores se midieron sobre
-`icono-512.png`, un render vectorial del símbolo con órbita hecho a mano. El
-anillo es un rojo sólido `#98242c` (el color sólido más frecuente del
-render) y la estrella lleva un degradado de `#922328` a `#ea959a`, con
-brillo `#fbe7e8`. Ninguno coincide con los dos únicos rojos de
-`tokens.css`, que son de estado, no de marca:
+**Tokens de acento: medidos, aprobados por Mateo el 2026-10-03.** Los
+colores se midieron primero sobre `icono-512.png`, un render del símbolo
+hecho a mano, y después se contrastaron con el SVG: el anillo va de
+`#8A1F25` a `#D9444C` y la estrella de `#9C2A31` a `#FFF4F4`; el rojo sólido
+más frecuente del render es `#98242c`. Ninguno coincide con los dos únicos
+rojos que había en `tokens.css`, que son de estado, no de marca:
 
 | Color | Tono | Contraste sobre `#ffffff` | Contraste sobre `#14161a` |
 |---|---|---|---|
@@ -303,18 +309,24 @@ brillo `#fbe7e8`. Ninguno coincide con los dos únicos rojos de
 | `--veritai-color-mal` oscuro `#ff6b61` | 4° | 2,79:1 | 6,49:1 |
 | mockup "Control Center" `--red` `#e63946` | 356° | 4,17:1 | 4,35:1 |
 
-Propuesta, a decidir por Mateo (no se ha tocado `tokens.css`):
+Decisión (Mateo, 2026-10-03), aplicada en `tokens.css`:
 
 - `--veritai-color-acento`: `#98242c` en tema claro y `#ea959a` en tema
   oscuro. Los dos salen del propio símbolo y los dos pasan AA (≥ 4,5:1) como
-  texto sobre su fondo.
+  texto sobre su fondo. Hoy solo lo usa el script de iconos para dar color al
+  símbolo mínimo; ningún componente lo aplica a texto todavía, así que no hay
+  ningún contraste que haya bajado de AA al aplicarlo.
 - `--veritai-color-mal` se queda como está: es el color de "fallo", no el de
-  la marca, y conviene que no sean el mismo rojo para que un servicio caído
-  no se lea como el logotipo. Si Mateo prefiere que la familia sea una sola,
-  `mal` se re-deriva del carmesí del símbolo y se vuelve a pasar la
-  comprobación de contraste.
+  la marca; un servicio caído no puede leerse igual que el logotipo.
 - El rojo del mockup (`#e63946`) no pasa AA como texto sobre blanco (4,17:1)
   y no sale del símbolo: no se adopta.
+
+**Límite conocido de los iconos pequeños.** Manifest V3 admite un solo
+juego de iconos, sin variante por tema. El 16 y el 32 llevan el acento
+claro (`#98242c`): 8,0:1 sobre una barra clara, pero 2,0:1 sobre la barra
+oscura de Chrome (`#202124`). El tono intermedio del propio anillo,
+`#D9444C`, daría 4,3:1 y 3,7:1 en las dos. No se cambia sin decisión de
+Mateo; se deja medido.
 
 **Hallazgo que justifica el script.** De los cinco PNG hechos a mano que
 llegaron a la raíz del repositorio, `icono-16.png` es negro puro (48 píxeles

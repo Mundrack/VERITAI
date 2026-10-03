@@ -17,5 +17,7 @@
   "acciones.idioma": "Language",
 
   "plantilla.consultado_en": "Checked at {hora}",
-  "plantilla.servicios_activos": "{activos} of {total} services up"
+  "plantilla.servicios_activos": "{activos} of {total} services up",
+
+  "marca.alt": "VERITAI symbol"
 }

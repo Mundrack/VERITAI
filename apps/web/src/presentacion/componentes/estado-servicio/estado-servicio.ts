@@ -10,6 +10,9 @@
 import { BASE_DE_DATOS_CONECTADA, type RespuestaSalud } from "../../../contrato/salud";
 import { formatearHora } from "../../../formato/fechas";
 import { localesDisponibles, obtenerLocale, t, type Locale } from "../../../i18n";
+// El simbolo con orbita, que es el que toca a 48 px (docs/ARQUITECTURA-VISUAL.md §2.1).
+// Vite lo sirve como URL; se pinta con <img> y su alt sale del catalogo.
+import urlSimbolo from "../../marca/veritai-simbolo.svg";
 
 export interface DatosEstadoServicio {
   /** Respuesta de GET /health, o null si la API no respondio. */
@@ -89,8 +92,14 @@ export function crearEstadoServicio(
 
   const raiz = elemento("div", BLOQUE);
 
+  const simbolo = elemento("img", `${BLOQUE}__marca`);
+  simbolo.src = urlSimbolo;
+  simbolo.alt = t("marca.alt");
+  const encabezado = elemento("div", `${BLOQUE}__encabezado`);
+  encabezado.append(simbolo, elemento("h1", `${BLOQUE}__titulo`, t("app.titulo")));
+
   raiz.append(
-    elemento("h1", `${BLOQUE}__titulo`, t("app.titulo")),
+    encabezado,
     elemento("p", `${BLOQUE}__subtitulo`, t("app.subtitulo")),
     elemento("div", `${BLOQUE}__aviso`, t("app.aviso_puerta")),
     elemento("h2", undefined, t("estado.titulo")),

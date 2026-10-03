@@ -4,6 +4,18 @@
  * Ningun valor literal: todo var(--veritai-...).
  */
 
+.veritai-estado-servicio__encabezado {
+  display: flex;
+  align-items: center;
+  gap: var(--veritai-espacio-5);
+}
+
+.veritai-estado-servicio__marca {
+  width: var(--veritai-marca-tamano-cabecera);
+  height: var(--veritai-marca-tamano-cabecera);
+  flex: none;
+}
+
 .veritai-estado-servicio__titulo {
   margin: 0 0 var(--veritai-espacio-1);
   font-size: var(--veritai-tipografia-tamano-titulo);

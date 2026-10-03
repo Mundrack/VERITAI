@@ -61,3 +61,10 @@ desktop.ini
 .vscode/*
 !.vscode/extensions.json
 ~$*
+
+# Arte conceptual de marca (Mateo, 2026-10-03): no entra en el repositorio.
+# Los recursos de verdad son los SVG de apps/web/src/presentacion/marca/ y los
+# PNG que genera `npm run iconos` en apps/web/src/extension/iconos/.
+/VeritAI_*.zip
+/VeritAI_*.html
+/icono-*.png

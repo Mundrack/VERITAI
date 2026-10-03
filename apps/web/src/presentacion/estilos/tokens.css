@@ -21,6 +21,13 @@
   --veritai-color-mal: #b3261e;
   --veritai-color-aviso-fondo: #fff8e6;
   --veritai-color-aviso-borde: #e8c96a;
+  /* Acento de marca (Mateo, 2026-10-03): el rojo del anillo del simbolo. No es
+     el color de "fallo" (--veritai-color-mal): un servicio caido no puede
+     leerse igual que el logotipo. Da color al simbolo minimo en los iconos. */
+  --veritai-color-acento: #98242c;
+
+  /* Marca */
+  --veritai-marca-tamano-cabecera: 48px; /* a partir de 48 px se usa el simbolo con orbita (§2.1) */
 
   /* Tipografia */
   --veritai-tipografia-familia: system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -69,5 +76,6 @@
     --veritai-color-mal: #ff6b61;
     --veritai-color-aviso-fondo: #2a2413;
     --veritai-color-aviso-borde: #6b5a24;
+    --veritai-color-acento: #ea959a; /* el extremo claro del degradado del propio simbolo */
   }
 }

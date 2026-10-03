@@ -1666,3 +1666,46 @@ implementación; no toca la Puerta 3; B0/B1/B2 no se diseñan.
 - Con los SVG: cabecera del panel en `estado-servicio` con `alt`, y
   `npm run iconos` para generar y versionar `src/extension/iconos/`.
 - Jornada 5 abierta en `feat/puerta-3-recoleccion`, sin tocar.
+
+---
+
+## 2026-10-03 (14:43Z) — Marca integrada: SVG versionados, acento aprobado, símbolo en la cabecera, iconos generados
+
+### Qué se hizo
+
+- Los dos SVG estaban en Descargas, no en el repositorio (misma hora que los
+  PNG a mano). Copiados byte a byte a `apps/web/src/presentacion/marca/`
+  (sha256 `ab8c5df2…` y `10f12528…`). Llevan manifiesto C2PA: no se editan.
+- `tokens.css`: `--veritai-color-acento` (`#98242c` claro, `#ea959a` oscuro)
+  y `--veritai-marca-tamano-cabecera: 48px`. `--veritai-color-mal` intacto.
+- `estado-servicio`: encabezado con el símbolo de órbita a 48 px como `<img>`
+  con `alt` por `t("marca.alt")` (es/en) y el título al lado. Es la única
+  diferencia visual respecto a ayer, y es la pedida.
+- `npm run iconos`: cinco PNG generados desde los SVG en
+  `src/extension/iconos/` y versionados (16 y 32 desde el mínimo con el
+  acento; 48, 128 y 512 desde el de órbita).
+- `.gitignore`: `/VeritAI_*.zip`, `/VeritAI_*.html`, `/icono-*.png` en la
+  raíz (arte conceptual, no assets).
+- `ARQUITECTURA-VISUAL.md` §2.1 al día: el `<use>` no sirve porque los SVG no
+  exponen `id` y no se editan; la vía para el mínimo será `mask-image` con
+  `currentColor`. README de la carpeta actualizado.
+
+### Qué se verificó
+
+- `npm run typecheck` y `npm test` en verde: 3 ficheros, 13 pruebas. La
+  prueba de componente fija el encabezado (`img` + `h1`), el `alt` en los dos
+  idiomas, que el `src` es el SVG de órbita y no el mínimo, y que la única
+  `<img>` es la de la marca aunque la API devuelva HTML hostil.
+- Iconos: ningún píxel negro en 16 y 32 (el fallo del PNG a mano); el centro
+  del 512 generado es `#d5767c`, el mismo valor que el render a mano.
+- `npm run build` en verde con el SVG resuelto por Vite.
+- Contraste del acento: no se aplica a texto en ningún componente, así que
+  ningún contraste baja de AA. Medido y anotado el límite de los iconos
+  pequeños sobre barra oscura.
+
+### Qué quedó pendiente
+
+- Mateo: mover el arte conceptual fuera del repositorio (propuesta:
+  `WORK SPACE/VERITAI-marca/`), y decidir si los iconos de 16 y 32 pasan al
+  tono intermedio `#D9444C` por la barra oscura.
+- Jornada 5 abierta en `feat/puerta-3-recoleccion`, sin tocar.

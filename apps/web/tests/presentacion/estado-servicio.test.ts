@@ -39,11 +39,11 @@ function textos(raiz: HTMLElement, selector: string): string[] {
 describe("estado-servicio", () => {
   beforeEach(() => fijarLocale("es"));
 
-  test("pinta, en este orden, titulo, subtitulo, aviso, cabecera de seccion, tabla, acciones y pie", () => {
+  test("pinta, en este orden, encabezado (simbolo y titulo), subtitulo, aviso, cabecera de seccion, tabla, acciones y pie", () => {
     const raiz = crearEstadoServicio({ salud: SALUD_VIVA, consultadoEn: CONSULTADO }, acciones());
     const orden = Array.from(raiz.children).map((hijo) => `${hijo.tagName.toLowerCase()}.${hijo.className}`);
     expect(orden).toEqual([
-      "h1.veritai-estado-servicio__titulo",
+      "div.veritai-estado-servicio__encabezado",
       "p.veritai-estado-servicio__subtitulo",
       "div.veritai-estado-servicio__aviso",
       "h2.",
@@ -51,6 +51,24 @@ describe("estado-servicio", () => {
       "div.veritai-estado-servicio__acciones",
       "p.veritai-estado-servicio__pie",
     ]);
+    const encabezado = Array.from(raiz.children[0]!.children).map(
+      (hijo) => `${hijo.tagName.toLowerCase()}.${hijo.className}`,
+    );
+    expect(encabezado).toEqual(["img.veritai-estado-servicio__marca", "h1.veritai-estado-servicio__titulo"]);
+  });
+
+  test("el simbolo de la cabecera es el de orbita, entra como <img> con alt del catalogo, en los dos idiomas", () => {
+    for (const [locale, catalogo] of [["es", es], ["en", en]] as const) {
+      fijarLocale(locale);
+      const raiz = crearEstadoServicio({ salud: SALUD_VIVA, consultadoEn: CONSULTADO }, acciones());
+      const imagenes = raiz.querySelectorAll("img");
+      expect(imagenes).toHaveLength(1);
+      const simbolo = imagenes[0]!;
+      expect(simbolo.getAttribute("alt")).toBe(catalogo["marca.alt"]);
+      expect(simbolo.getAttribute("src")).toMatch(/veritai-simbolo\.svg$/);
+      expect(simbolo.getAttribute("src")).not.toMatch(/-min\.svg$/);
+      expect(raiz.querySelector("svg")).toBeNull(); // no se inyecta SVG en linea ni por innerHTML
+    }
   });
 
   test("con la API y la base de datos vivas muestra OK y conectada en verde, y 2 de 2 servicios", () => {
@@ -136,7 +154,11 @@ describe("estado-servicio", () => {
     const hostil = { ...SALUD_VIVA, entorno: "<img src=x onerror=alert(1)>", version: "<b>x</b>" };
     const raiz = crearEstadoServicio({ salud: hostil, consultadoEn: CONSULTADO }, acciones());
 
-    expect(raiz.querySelectorAll("img, b")).toHaveLength(0);
+    // La unica imagen es el simbolo de la marca; la hostil no existe como nodo.
+    const imagenes = Array.from(raiz.querySelectorAll("img")).map((i) => i.getAttribute("src"));
+    expect(imagenes).toHaveLength(1);
+    expect(imagenes[0]).toMatch(/veritai-simbolo\.svg$/);
+    expect(raiz.querySelectorAll("img[src='x'], b")).toHaveLength(0);
     expect(textos(raiz, "td").slice(2)).toEqual(["<img src=x onerror=alert(1)>", "<b>x</b>"]);
   });
 });

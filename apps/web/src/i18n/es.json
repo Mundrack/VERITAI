@@ -17,5 +17,7 @@
   "acciones.idioma": "Idioma",
 
   "plantilla.consultado_en": "Consultado a las {hora}",
-  "plantilla.servicios_activos": "{activos} de {total} servicios activos"
+  "plantilla.servicios_activos": "{activos} de {total} servicios activos",
+
+  "marca.alt": "Símbolo de VERITAI"
 }

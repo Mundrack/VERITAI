@@ -13,5 +13,7 @@ Los dos tienen que tener `viewBox` cuadrado. Los PNG de icono de la extensión
 **no se dibujan a mano**: `npm run iconos` los genera desde estos dos ficheros
 en `src/extension/iconos/`.
 
-Estado (2026-10-03): la carpeta está preparada y los dos SVG **todavía no
-están en el repositorio**.
+Los dos ficheros llevan un manifiesto C2PA (`<metadata>`) cuyo hash cubre el
+fichero: **no se editan**, ni para añadir un `id`. Versionados el 2026-10-03:
+`veritai-simbolo.svg` sha256 `ab8c5df2…`, `veritai-simbolo-min.svg` sha256
+`10f12528…`.
