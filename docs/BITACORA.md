@@ -1737,3 +1737,89 @@ implementación; no toca la Puerta 3; B0/B1/B2 no se diseñan.
 ### Qué quedó pendiente
 
 - Jornada 5 abierta en `feat/puerta-3-recoleccion`, sin tocar.
+
+---
+
+## 2026-10-03 (16:05Z) — La bolita: el componente, solo; dos ejes en dos canales, raíz aislada, vitrina
+
+### Qué se preguntó antes de escribir
+
+Mateo pidió los estados "del enum que ya existe en el contrato" y que se le
+preguntara si el enum no cubría alguno. No lo cubría, por dos lados, y se
+preguntó:
+
+- En `apps/web/src/contrato/` no había ningún enum de veredicto, y el veredicto
+  de la API no es un enum: son dos ejes (`truth`, `context`, DEC-016). Ninguno
+  sirve solo para un único color. **Decisión de Mateo: dos ejes, dos canales**
+  (el símbolo lleva `context`; el anillo, `truth`). No se deriva ningún estado
+  y no se toca la API.
+- "En espera" y "analizando" no están en ningún enum de la API. **Decisión de
+  Mateo: `en_espera`, `analizando` y `error`** como enum cerrado propio de la
+  interfaz (`contrato/fase-consulta.ts`).
+
+### Qué se hizo
+
+- `contrato/enums.ts` (Truth y Context, con los valores de `domain/enums.py`),
+  `contrato/fase-consulta.ts`, `presentacion/estados.ts` (un valor fuera del
+  enum da `desconocido`).
+- `presentacion/componentes/bolita/` (`bolita.ts`, `bolita.css`):
+  `crearBolita` y `fijarEstadoBolita`. Un `<button>` nativo; dentro, el disco
+  (anillo, halo del pulso, símbolo mínimo como máscara) y la etiqueta con el
+  estado en palabras.
+- `presentacion/montar.ts` y `estilos/raiz.css`: la raíz aislada (anfitrión
+  `<veritai-raiz>`, shadow root cerrado, hojas adoptadas, tokens declarados
+  dentro, en `.veritai-raiz`).
+- `tokens.css`: 54 px y 44 px, colores de estado en los dos temas, foco,
+  duraciones, sombra. Ningún valor en el componente. `es.json` y `en.json`:
+  16 claves nuevas en cada uno.
+- `.gitignore`: `coverage/`, que `npm run test:cobertura` deja en `apps/web/`
+  y no estaba ignorado.
+- `apps/web/vitrina/` y `npm run vitrina`: página local que hace de página de
+  un tercero, con zona hostil y autocomprobación.
+- `ARQUITECTURA-VISUAL.md`: §2 (cómo se monta la raíz aislada), §2.2 (la
+  bolita), §5.4 (la vitrina), §9 (puntos 19 a 26).
+
+### Qué se verificó
+
+- `npm test`: 8 ficheros, 86 pruebas, en verde. `npm run typecheck` limpio.
+  `npm run build` en verde.
+- Las pruebas muerden: 28 mutaciones (romper el código de una forma cada vez),
+  28 hacen caer alguna prueba, y todo restaurado después. **Una sobrevivió a
+  la primera pasada**: poner `supported` en verde junto al rojo de
+  `contradicted` no hacía caer la prueba de daltonismo. El criterio era
+  demasiado laxo; se endureció y se reajustaron cuatro colores del tema oscuro.
+- En Chrome 154 de verdad (sin ventana, perfil desechable), con la vitrina: 14
+  de 14 comprobaciones, en tema claro, oscuro y con movimiento reducido
+  forzado; Tab, Enter y Espacio; foco que no se pierde al llegar el veredicto;
+  44 × 44 px con puntero táctil.
+- Dos defectos que las pruebas con happy-dom no veían y Chrome sí:
+  `direction` se heredaba de la página (`all: initial` no la reinicia), y la
+  etiqueta se escalaba con el disco al pasar por encima y al pulsar. Corregidos
+  y con prueba.
+- Cobertura de los ficheros nuevos: 100 % de líneas, ramas y funciones.
+
+### Qué no salió, y se anota
+
+- `npm run test:cobertura` **sigue en rojo, y ya lo estaba**: `salud.ts`,
+  `i18n/index.ts`, `cliente/`, `aplicacion/` y `main.ts` no tienen prueba
+  (ramas 66 % frente al 80 %). Sobre lo que había antes de hoy eran 73 % de
+  líneas y 53 % de ramas. No se ha tocado: no es la bolita.
+- Para simular daltonismo se quiso verificar unas matrices de simulación en su
+  fuente (`www.inf.ufrgs.br`; referencia recordada como Machado, Oliveira y
+  Fernandes, 2009: `NEEDS_REVIEW`, sin comprobar). El `robots.txt` del dominio
+  redirigió y devolvió **403**; por DEC-021 ese es el resultado y no se pidió
+  la página. La prueba usa solo fórmulas de norma (WCAG, sRGB, CIELAB) y es una
+  aproximación.
+- Docker no estaba arrancado: nada de esto se ha ejecutado dentro del
+  contenedor `web`, y `docker-compose.override.yml` no se ha tocado.
+
+### Qué quedó pendiente
+
+- §9 de `ARQUITECTURA-VISUAL.md`, puntos 19 a 26: colocar la bolita en una
+  página, cortar sus eventos hacia la página, el tema de la página anfitriona,
+  el símbolo en la extensión, el registro de `desconocido`, `aria-live`, la
+  simulación de daltonismo, el humo e2e.
+- A decidir por Mateo: los valores de la paleta de estados y los dos umbrales
+  de la comprobación de daltonismo (15 en claridad, 30 en azul-amarillo), que
+  son elección de quien escribió la prueba.
+- Jornada 5 abierta en `feat/puerta-3-recoleccion`, sin tocar.

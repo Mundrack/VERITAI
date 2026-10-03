@@ -1,0 +1,182 @@
+/*
+ * Hoja de la VITRINA, no de VERITAI. Es una herramienta de desarrollo que hace
+ * de pagina de un tercero, asi que no usa los tokens ni las reglas de
+ * docs/ARQUITECTURA-VISUAL.md: tiene sus propios valores, a proposito.
+ */
+
+:root {
+  color-scheme: light dark;
+  /* A proposito: una pagina cuyo rem no es el nuestro. Si algo de la bolita
+     dependiera de rem, aqui se veria mas grande. La autocomprobacion lo mide. */
+  font-size: 22px;
+}
+
+body {
+  margin: 0;
+  padding: 24px 28px 64px;
+  background: Canvas;
+  color: CanvasText;
+  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-size: 24px;
+}
+
+h2 {
+  margin: 36px 0 6px;
+  font-size: 17px;
+}
+
+p {
+  max-width: 760px;
+  margin: 0 0 12px;
+}
+
+code {
+  font: 13px ui-monospace, Consolas, monospace;
+}
+
+.nota {
+  opacity: 0.75;
+  font-size: 13px;
+}
+
+.controles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  margin: 12px 0 0;
+  font-size: 13px;
+}
+
+.fila {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+  align-items: flex-start;
+  /* La etiqueta de la bolita sale hacia la izquierda: se le deja sitio para que se vea entera. */
+  padding-left: 250px;
+}
+
+.matriz {
+  margin-left: 110px;
+}
+
+@media (max-width: 700px) {
+  .fila {
+    justify-content: flex-end;
+    padding-left: 0;
+  }
+
+  .matriz {
+    margin-left: 0;
+  }
+}
+
+.muestra {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  min-width: 110px;
+  margin: 0;
+  padding: 14px 8px 8px;
+}
+
+.muestra figcaption {
+  font: 12px ui-monospace, Consolas, monospace;
+  opacity: 0.75;
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+th,
+td {
+  padding: 10px 14px;
+  border: 1px solid color-mix(in srgb, CanvasText 18%, transparent);
+  text-align: center;
+  vertical-align: middle;
+}
+
+th {
+  font: 12px ui-monospace, Consolas, monospace;
+  font-weight: 400;
+}
+
+.comprobacion td,
+.comprobacion th {
+  text-align: left;
+  font: 13px/1.4 system-ui, sans-serif;
+}
+
+.comprobacion td:last-child {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.comprobacion code {
+  font-size: 12px;
+}
+
+/*
+ * --- La zona hostil ---
+ * Una pagina que hace todo lo posible por deformar lo que tenga dentro: reglas
+ * de elemento, reglas con nuestras mismas clases, propiedades heredables y
+ * hasta nuestros propios tokens, todo con !important.
+ */
+.pagina-hostil {
+  padding: 16px;
+  border: 2px dashed #c2185b;
+}
+
+.pagina-hostil,
+.pagina-hostil * {
+  color: #00c853 !important;
+  font-family: fantasy !important;
+  font-size: 30px !important;
+  line-height: 3 !important;
+  letter-spacing: 6px !important;
+  text-transform: uppercase !important;
+  text-align: right !important;
+  text-indent: 40px !important;
+  text-shadow: 2px 2px #c2185b !important;
+  word-spacing: 20px !important;
+  white-space: pre !important;
+  font-weight: 900 !important;
+  font-style: italic !important;
+  direction: rtl !important;
+  cursor: wait !important;
+  --veritai-bolita-tamano: 999px !important;
+  --veritai-color-fase-en_espera: #00c853 !important;
+  --veritai-bolita-fondo: #00c853 !important;
+  --veritai-tipografia-familia: fantasy !important;
+}
+
+.pagina-hostil button,
+.pagina-hostil .veritai-bolita {
+  width: 200px !important;
+  height: 80px !important;
+  border: 6px dotted #c2185b !important;
+  border-radius: 0 !important;
+  background: #00c853 !important;
+}
+
+.pagina-hostil span,
+.pagina-hostil .veritai-bolita__etiqueta,
+.pagina-hostil .veritai-bolita__simbolo {
+  display: block !important;
+  width: 150px !important;
+  background: #c2185b !important;
+}
+
+.pagina-hostil div,
+.pagina-hostil .veritai-raiz {
+  outline: 4px solid #c2185b !important;
+}

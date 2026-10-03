@@ -19,5 +19,25 @@
   "plantilla.consultado_en": "Consultado a las {hora}",
   "plantilla.servicios_activos": "{activos} de {total} servicios activos",
 
-  "marca.alt": "Símbolo de VERITAI"
+  "marca.alt": "Símbolo de VERITAI",
+
+  "bolita.etiqueta_fase": "VeritAI: {fase}",
+  "bolita.etiqueta_veredicto": "VeritAI. Contexto: {context}. Dato: {truth}.",
+
+  "fase.en_espera": "en espera",
+  "fase.analizando": "analizando",
+  "fase.error": "no se pudo analizar",
+
+  "truth.supported": "respaldado por la fuente",
+  "truth.contradicted": "contradicho por la fuente",
+  "truth.mixed": "respaldado solo en parte",
+  "truth.insufficient_evidence": "evidencia insuficiente",
+  "truth.not_applicable": "no aplica",
+  "truth.desconocido": "estado no reconocido",
+
+  "context.divergence_detected": "divergencia detectada",
+  "context.no_divergence_detected": "sin divergencia detectada",
+  "context.undetermined": "no evaluable",
+  "context.not_applicable": "no aplica",
+  "context.desconocido": "estado no reconocido"
 }

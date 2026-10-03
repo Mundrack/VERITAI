@@ -14,6 +14,7 @@ export default mergeConfig(
   defineConfig({
     test: {
       environment: "happy-dom",
+      css: true,
       include: ["tests/**/*.test.ts"],
       coverage: {
         provider: "v8",

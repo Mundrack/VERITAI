@@ -1,15 +1,29 @@
 /*
  * Tokens de la interfaz (docs/ARQUITECTURA-VISUAL.md §2, §4, §6.3).
  *
- * Es el UNICO fichero con valores literales de color, tamano, radio y peso.
- * Todo lo demas usa var(--veritai-...). Un token por significado, no por
- * valor; cada color de texto o fondo existe en tema claro y en tema oscuro.
+ * Es el UNICO fichero con valores literales de color, tamano, radio, peso,
+ * duracion y sombra. Todo lo demas usa var(--veritai-...). Un token por
+ * significado, no por valor; cada color de texto o fondo existe en tema claro
+ * y en tema oscuro.
  *
- * Los valores son exactamente los que tenia src/estilos.css el 2026-10-03:
- * reestructuracion, no redisenio.
+ * Se declaran en dos sitios a la vez:
+ *   :root          el panel suelto (index.html), que es una pagina nuestra;
+ *   .veritai-raiz  el elemento raiz DENTRO del shadow root que se inyecta en
+ *                  una pagina de terceros (presentacion/montar.ts). Ahi, y no
+ *                  en :host, porque una regla de la pagina puede alcanzar al
+ *                  anfitrion (p. ej. `* { ... }`) pero nunca a un elemento de
+ *                  dentro: asi la pagina no puede cambiarnos un token.
+ *
+ * Los colores, espacios y tipografia del panel son exactamente los que tenia
+ * src/estilos.css el 2026-10-03 (reestructuracion, no redisenio). Lo que hay
+ * de "Foco" hacia abajo es nuevo y nace con la bolita.
+ *
+ * OJO con rem: dentro de una pagina de terceros, rem depende del font-size del
+ * <html> de ESA pagina. Lo que se inyecta solo usa tokens en px o sin unidad.
  */
 
-:root {
+:root,
+.veritai-raiz {
   color-scheme: light dark;
 
   /* Color */
@@ -23,7 +37,7 @@
   --veritai-color-aviso-borde: #e8c96a;
   /* Acento de marca (Mateo, 2026-10-03): el rojo del anillo del simbolo. No es
      el color de "fallo" (--veritai-color-mal): un servicio caido no puede
-     leerse igual que el logotipo. Da color al simbolo minimo en los iconos. */
+     leerse igual que el logotipo. Es el color de la bolita en espera. */
   --veritai-color-acento: #98242c;
 
   /* Marca */
@@ -67,14 +81,86 @@
   --veritai-borde-ancho: 1px;
   --veritai-radio-1: 6px;
   --veritai-radio-2: 8px;
+  --veritai-radio-circulo: 50%;
 
   /* Medidas */
   --veritai-panel-ancho-maximo: 46rem;
   --veritai-tabla-cabecera-ancho: 40%;
+
+  /* Foco. Un solo valor para los dos temas, como el del icono de la extension:
+     el anillo de foco se dibuja FUERA de la bolita, sobre la pagina de un
+     tercero cuyo fondo no se conoce. Este azul da 4,5:1 contra blanco y 4,7:1
+     contra negro, asi que se ve en los dos extremos (WCAG 1.4.11 pide 3:1). */
+  --veritai-color-foco: #1a73e8;
+  --veritai-foco-ancho: 3px;
+  --veritai-foco-separacion: 3px;
+
+  /* Movimiento */
+  --veritai-duracion-breve: 140ms; /* crecer al pasar por encima, encoger al pulsar */
+  --veritai-duracion-pulso: 1600ms; /* un ciclo del pulso mientras analiza */
+
+  /* Sombra: separa la bolita de una pagina cuyo fondo no se conoce */
+  --veritai-sombra-flotante: 0 2px 8px rgba(20, 22, 26, 0.28);
+
+  /*
+   * Colores de estado. Un token por valor de enum, con el valor del enum en el
+   * nombre: --veritai-color-<eje>-<valor> (presentacion/estados.ts).
+   *
+   * Son colores de GRAFICO (simbolo y anillo), no de texto: tienen que dar
+   * 3:1 contra el disco de la bolita (WCAG 1.4.11). Y tienen que servir a
+   * quien no distingue el rojo del verde: no hay ningun verde, y dentro de un
+   * mismo eje dos estados se separan siempre por claridad o por azul-amarillo.
+   * Por eso "respaldado" es azul y no verde, y "parcial" es ambar claro frente
+   * al rojo oscuro de "contradicho". Lo comprueba
+   * tests/presentacion/accesibilidad.test.ts: cambiar un valor de aqui sin
+   * pasar esa prueba no vale.
+   */
+
+  /* Fases de la consulta (contrato/fase-consulta.ts): simbolo y anillo */
+  --veritai-color-fase-en_espera: var(--veritai-color-acento);
+  --veritai-color-fase-analizando: #e0575f;
+  --veritai-color-fase-error: #475569; /* gris pizarra, no rojo: un fallo de la API no dice nada de la afirmacion */
+
+  /* truth -> anillo */
+  --veritai-color-truth-supported: #1d4ed8;
+  --veritai-color-truth-contradicted: #b3261e;
+  --veritai-color-truth-mixed: #b8860b;
+  --veritai-color-truth-insufficient_evidence: #4b5360;
+  --veritai-color-truth-not_applicable: #8b929c;
+  --veritai-color-truth-desconocido: var(--veritai-color-texto);
+
+  /* context -> simbolo */
+  --veritai-color-context-divergence_detected: #c2410c;
+  --veritai-color-context-no_divergence_detected: #1d4ed8; /* azul, no verde: no haber detectado divergencia no es dar por bueno */
+  --veritai-color-context-undetermined: #4b5360;
+  --veritai-color-context-not_applicable: #8b929c;
+  --veritai-color-context-desconocido: var(--veritai-color-texto);
+
+  /* Bolita (presentacion/componentes/bolita). Todo en px o sin unidad: se inyecta. */
+  --veritai-bolita-tamano-escritorio: 54px;
+  --veritai-bolita-tamano-movil: 44px; /* el minimo de un objetivo tactil (WCAG 2.5.5) */
+  --veritai-bolita-tamano: var(--veritai-bolita-tamano-escritorio); /* lo cambia el bloque de puntero grueso, abajo */
+  --veritai-bolita-fondo: var(--veritai-color-fondo);
+  --veritai-bolita-simbolo-proporcion: 0.52; /* lado del simbolo respecto al de la bolita */
+  --veritai-bolita-anillo-ancho-fase: 2px; /* sin veredicto: anillo fino */
+  --veritai-bolita-anillo-ancho-veredicto: 4px; /* con veredicto: el anillo lleva truth y tiene que verse */
+  --veritai-bolita-escala-encima: 1.08;
+  --veritai-bolita-escala-pulsada: 0.94;
+  --veritai-bolita-halo-ancho: 6px;
+  --veritai-bolita-halo-mezcla: 30%; /* cuanto del color del estado lleva el halo */
+  --veritai-bolita-pulso-escala: 1.6;
+  --veritai-bolita-pulso-escala-quieta: 1.22; /* con movimiento reducido el halo no late: se queda fijo aqui */
+  --veritai-bolita-pulso-opacidad: 0.6;
+  --veritai-bolita-etiqueta-tamano: 13px;
+  --veritai-bolita-etiqueta-relleno-bloque: 6px;
+  --veritai-bolita-etiqueta-relleno-linea: 10px;
+  --veritai-bolita-etiqueta-separacion: 8px;
+  --veritai-bolita-etiqueta-ancho-maximo: 240px;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root,
+  .veritai-raiz {
     --veritai-color-fondo: #14161a;
     --veritai-color-texto: #eef1f5;
     --veritai-color-tenue: #9aa3b0;
@@ -84,5 +170,32 @@
     --veritai-color-aviso-fondo: #2a2413;
     --veritai-color-aviso-borde: #6b5a24;
     --veritai-color-acento: #ea959a; /* el extremo claro del degradado del propio simbolo */
+
+    --veritai-sombra-flotante: 0 2px 8px rgba(0, 0, 0, 0.6);
+
+    --veritai-color-fase-analizando: #e5384a;
+    --veritai-color-fase-error: #8aa0cc;
+
+    --veritai-color-truth-supported: #7aa2ff;
+    --veritai-color-truth-contradicted: #f2695a;
+    --veritai-color-truth-mixed: #f7d154;
+    --veritai-color-truth-insufficient_evidence: #9aa3b0;
+    --veritai-color-truth-not_applicable: #5f6672;
+
+    --veritai-color-context-divergence_detected: #ffa14a;
+    --veritai-color-context-no_divergence_detected: #7aa2ff;
+    --veritai-color-context-undetermined: #9aa3b0;
+    --veritai-color-context-not_applicable: #5f6672;
+  }
+}
+
+/*
+ * "Movil" es puntero grueso (dedo), no ancho de ventana: una ventana estrecha
+ * en un escritorio sigue teniendo raton, y lo que pide 44 px es el dedo.
+ */
+@media (pointer: coarse) {
+  :root,
+  .veritai-raiz {
+    --veritai-bolita-tamano: var(--veritai-bolita-tamano-movil);
   }
 }

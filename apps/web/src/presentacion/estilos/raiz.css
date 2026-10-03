@@ -1,0 +1,42 @@
+/*
+ * raiz: lo unico que se aplica al shadow root que VERITAI inyecta en una
+ * pagina de terceros, ademas de los tokens y de las hojas de los componentes
+ * (docs/ARQUITECTURA-VISUAL.md §2; presentacion/montar.ts).
+ *
+ * El shadow root ya impide que los SELECTORES de la pagina entren y que los
+ * nuestros salgan. Lo que si cruza la frontera es la HERENCIA: color, fuente,
+ * interlineado, text-transform... llegan desde el padre del anfitrion. Se
+ * corta dos veces:
+ *
+ *   :host          el anfitrion no hereda nada. Pero una regla de la pagina
+ *                  que alcance al anfitrion (`* { ... }`) gana a :host.
+ *   .veritai-raiz  por eso el reinicio se repite en un elemento de DENTRO,
+ *                  donde ninguna regla de la pagina llega.
+ *
+ * `all` no toca las custom properties: los tokens de tokens.css siguen ahi.
+ *
+ * Tampoco toca `direction` (ni `unicode-bidi`): la especificacion las excluye
+ * de `all`. Como `direction` se hereda, una pagina de derecha a izquierda nos
+ * la pasaria; por eso se fija a mano. La direccion de lo nuestro es la de
+ * nuestro idioma de interfaz, no la de la pagina. Lo encontro la
+ * autocomprobacion de la vitrina en un navegador de verdad (2026-10-03).
+ *
+ * Sin selectores de elemento. Ningun valor literal.
+ */
+
+:host {
+  all: initial;
+  direction: ltr;
+  display: inline-block;
+}
+
+.veritai-raiz {
+  all: initial;
+  direction: ltr;
+  display: block; /* el anfitrion se ajusta a su contenido; dentro no hay cajas de linea que anadan altura */
+  color-scheme: light dark;
+  color: var(--veritai-color-texto);
+  font-family: var(--veritai-tipografia-familia);
+  font-size: var(--veritai-tipografia-tamano-base);
+  line-height: var(--veritai-tipografia-interlineado);
+}

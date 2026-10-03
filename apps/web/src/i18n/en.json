@@ -19,5 +19,25 @@
   "plantilla.consultado_en": "Checked at {hora}",
   "plantilla.servicios_activos": "{activos} of {total} services up",
 
-  "marca.alt": "VERITAI symbol"
+  "marca.alt": "VERITAI symbol",
+
+  "bolita.etiqueta_fase": "VeritAI: {fase}",
+  "bolita.etiqueta_veredicto": "VeritAI. Context: {context}. Figure: {truth}.",
+
+  "fase.en_espera": "waiting",
+  "fase.analizando": "analyzing",
+  "fase.error": "analysis failed",
+
+  "truth.supported": "supported by the source",
+  "truth.contradicted": "contradicted by the source",
+  "truth.mixed": "only partly supported",
+  "truth.insufficient_evidence": "insufficient evidence",
+  "truth.not_applicable": "not applicable",
+  "truth.desconocido": "unrecognized state",
+
+  "context.divergence_detected": "divergence detected",
+  "context.no_divergence_detected": "no divergence detected",
+  "context.undetermined": "not assessable",
+  "context.not_applicable": "not applicable",
+  "context.desconocido": "unrecognized state"
 }

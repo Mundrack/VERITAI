@@ -1,0 +1,268 @@
+/*
+ * bolita: el boton circular que VERITAI pone sobre la esquina de una
+ * publicacion (docs/ARQUITECTURA-VISUAL.md §2.2).
+ *
+ * Bloque .veritai-bolita; elementos con __; estado con --. Ningun valor
+ * literal: todo var(--veritai-...), y ninguno en rem (se inyecta en paginas
+ * de terceros). Sin selectores de elemento, sin !important.
+ *
+ * Estructura:
+ *   .veritai-bolita              el <button>: la caja fija que se pulsa y se enfoca
+ *     .veritai-bolita__disco     lo que se ve: fondo, anillo, sombra; es lo que crece y encoge
+ *       .veritai-bolita__pulso   el halo que late mientras analiza
+ *       .veritai-bolita__simbolo el simbolo minimo
+ *     .veritai-bolita__etiqueta  el estado en palabras; fuera del disco para no escalarse con el
+ *
+ * Dos canales, uno por eje del veredicto (DEC-016; Mateo, 2026-10-03):
+ *   color                    -> el simbolo  -> context
+ *   border-color del disco   -> el anillo   -> truth
+ * Mientras no hay veredicto, los dos llevan el color de la fase.
+ *
+ * Las propiedades de animacion y transicion van desglosadas (animation-name,
+ * transition-property) y no en su forma abreviada: asi la preferencia de
+ * movimiento reducido las apaga una a una y la prueba puede leerlas.
+ */
+
+.veritai-bolita {
+  appearance: none;
+  box-sizing: border-box;
+  position: relative;
+  display: block; /* no en linea: una caja en linea deja debajo el hueco de la linea base */
+  width: var(--veritai-bolita-tamano);
+  height: var(--veritai-bolita-tamano);
+  margin: 0;
+  padding: 0;
+  border-style: none;
+  border-radius: var(--veritai-radio-circulo);
+  background-color: transparent;
+  color: var(--veritai-color-context-desconocido);
+  font: inherit;
+  cursor: pointer;
+}
+
+.veritai-bolita__disco {
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  border-width: var(--veritai-bolita-anillo-ancho-fase);
+  border-color: var(--veritai-color-truth-desconocido);
+  border-radius: inherit;
+  background-color: var(--veritai-bolita-fondo);
+  box-shadow: var(--veritai-sombra-flotante);
+  transition-property: transform, box-shadow;
+  transition-duration: var(--veritai-duracion-breve);
+  transition-timing-function: ease-out;
+}
+
+/* El simbolo minimo: no lleva color propio, toma el del estado (currentColor). */
+.veritai-bolita__simbolo {
+  flex: none;
+  width: calc(var(--veritai-bolita-tamano) * var(--veritai-bolita-simbolo-proporcion));
+  height: calc(var(--veritai-bolita-tamano) * var(--veritai-bolita-simbolo-proporcion));
+  background-color: currentColor;
+  -webkit-mask-image: url("../../marca/veritai-simbolo-min.svg");
+  mask-image: url("../../marca/veritai-simbolo-min.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+/* El halo del pulso: un anillo quieto e invisible salvo mientras analiza. */
+.veritai-bolita__pulso {
+  position: absolute;
+  inset: 0;
+  border-style: solid;
+  border-width: var(--veritai-bolita-anillo-ancho-fase);
+  border-color: currentColor;
+  border-radius: inherit;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* El estado en palabras, a la vista al pasar por encima o al enfocar. */
+.veritai-bolita__etiqueta {
+  display: none;
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: calc(100% + var(--veritai-bolita-etiqueta-separacion));
+  block-size: fit-content;
+  inline-size: max-content;
+  max-inline-size: var(--veritai-bolita-etiqueta-ancho-maximo);
+  margin-block: auto;
+  padding: var(--veritai-bolita-etiqueta-relleno-bloque) var(--veritai-bolita-etiqueta-relleno-linea);
+  border: var(--veritai-borde-ancho) solid var(--veritai-color-borde);
+  border-radius: var(--veritai-radio-1);
+  background-color: var(--veritai-color-fondo);
+  box-shadow: var(--veritai-sombra-flotante);
+  color: var(--veritai-color-texto);
+  font-size: var(--veritai-bolita-etiqueta-tamano);
+  line-height: var(--veritai-tipografia-interlineado);
+  text-align: start;
+  pointer-events: none;
+}
+
+/* --- Fases de la consulta: simbolo y anillo del mismo color, anillo fino --- */
+
+.veritai-bolita--fase-en_espera {
+  color: var(--veritai-color-fase-en_espera);
+}
+
+.veritai-bolita--fase-en_espera .veritai-bolita__disco {
+  border-color: var(--veritai-color-fase-en_espera);
+}
+
+.veritai-bolita--fase-analizando {
+  color: var(--veritai-color-fase-analizando);
+}
+
+.veritai-bolita--fase-analizando .veritai-bolita__disco {
+  border-color: var(--veritai-color-fase-analizando);
+}
+
+.veritai-bolita--fase-error {
+  color: var(--veritai-color-fase-error);
+}
+
+/* El anillo discontinuo dice "no se pudo" sin depender del color. */
+.veritai-bolita--fase-error .veritai-bolita__disco {
+  border-color: var(--veritai-color-fase-error);
+  border-style: dashed;
+}
+
+/* --- Veredicto: anillo grueso; un canal por eje --- */
+
+.veritai-bolita--veredicto .veritai-bolita__disco {
+  border-width: var(--veritai-bolita-anillo-ancho-veredicto);
+}
+
+/* context -> simbolo */
+
+.veritai-bolita--context-divergence_detected {
+  color: var(--veritai-color-context-divergence_detected);
+}
+
+.veritai-bolita--context-no_divergence_detected {
+  color: var(--veritai-color-context-no_divergence_detected);
+}
+
+.veritai-bolita--context-undetermined {
+  color: var(--veritai-color-context-undetermined);
+}
+
+.veritai-bolita--context-not_applicable {
+  color: var(--veritai-color-context-not_applicable);
+}
+
+.veritai-bolita--context-desconocido {
+  color: var(--veritai-color-context-desconocido);
+}
+
+/* truth -> anillo */
+
+.veritai-bolita--truth-supported .veritai-bolita__disco {
+  border-color: var(--veritai-color-truth-supported);
+}
+
+.veritai-bolita--truth-contradicted .veritai-bolita__disco {
+  border-color: var(--veritai-color-truth-contradicted);
+}
+
+.veritai-bolita--truth-mixed .veritai-bolita__disco {
+  border-color: var(--veritai-color-truth-mixed);
+}
+
+.veritai-bolita--truth-insufficient_evidence .veritai-bolita__disco {
+  border-color: var(--veritai-color-truth-insufficient_evidence);
+}
+
+.veritai-bolita--truth-not_applicable .veritai-bolita__disco {
+  border-color: var(--veritai-color-truth-not_applicable);
+}
+
+.veritai-bolita--truth-desconocido .veritai-bolita__disco {
+  border-color: var(--veritai-color-truth-desconocido);
+}
+
+/* --- Mientras analiza: un pulso suave --- */
+
+.veritai-bolita--fase-analizando .veritai-bolita__pulso {
+  animation-name: veritai-bolita-pulso;
+  animation-duration: var(--veritai-duracion-pulso);
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes veritai-bolita-pulso {
+  from {
+    transform: scale(1);
+    opacity: var(--veritai-bolita-pulso-opacidad);
+  }
+
+  to {
+    transform: scale(var(--veritai-bolita-pulso-escala));
+    opacity: 0;
+  }
+}
+
+/* --- Interaccion --- */
+
+/* Solo donde hay un puntero que pueda "pasar por encima": en tactil el :hover se queda pegado. */
+@media (hover: hover) {
+  .veritai-bolita:hover .veritai-bolita__disco {
+    transform: scale(var(--veritai-bolita-escala-encima));
+    box-shadow:
+      var(--veritai-sombra-flotante),
+      0 0 0 var(--veritai-bolita-halo-ancho)
+        color-mix(in srgb, currentColor var(--veritai-bolita-halo-mezcla), transparent);
+  }
+
+  .veritai-bolita:hover .veritai-bolita__etiqueta {
+    display: block;
+  }
+}
+
+.veritai-bolita:active .veritai-bolita__disco {
+  transform: scale(var(--veritai-bolita-escala-pulsada));
+}
+
+.veritai-bolita:focus-visible {
+  outline-style: solid;
+  outline-width: var(--veritai-foco-ancho);
+  outline-color: var(--veritai-color-foco);
+  outline-offset: var(--veritai-foco-separacion);
+}
+
+.veritai-bolita:focus-visible .veritai-bolita__etiqueta {
+  display: block;
+}
+
+/*
+ * --- Movimiento reducido ---
+ * Va al final para ganar a todo lo de arriba. Nada crece, nada encoge, nada
+ * late. El halo sigue iluminandose al pasar por encima (cambia de color, no se
+ * mueve) y "analizando" conserva un halo fijo: el estado no puede depender de
+ * una animacion que el usuario ha pedido no ver.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .veritai-bolita__disco {
+    transition-property: none;
+  }
+
+  .veritai-bolita:hover .veritai-bolita__disco,
+  .veritai-bolita:active .veritai-bolita__disco {
+    transform: none;
+  }
+
+  .veritai-bolita--fase-analizando .veritai-bolita__pulso {
+    animation-name: none;
+    transform: scale(var(--veritai-bolita-pulso-escala-quieta));
+    opacity: var(--veritai-bolita-pulso-opacidad);
+  }
+}

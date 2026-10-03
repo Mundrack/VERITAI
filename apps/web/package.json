@@ -12,7 +12,8 @@
     "test": "vitest run",
     "test:ver": "vitest",
     "test:cobertura": "vitest run --coverage",
-    "iconos": "node scripts/generar-iconos.mjs"
+    "iconos": "node scripts/generar-iconos.mjs",
+    "vitrina": "vite --host 127.0.0.1 --port 5174 --open /vitrina/"
   },
   "devDependencies": {
     "@resvg/resvg-js": "^2.6.2",

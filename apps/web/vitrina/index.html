@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VERITAI · vitrina de la bolita</title>
+    <!--
+      Esta pagina hace de "pagina de un tercero": NO enlaza tokens.css ni
+      ninguna hoja de src/. Todo lo que la bolita necesita tiene que llegarle
+      por su shadow root. La hoja de abajo es solo de la vitrina.
+    -->
+    <link rel="stylesheet" href="./vitrina.css" />
+  </head>
+  <body>
+    <main id="vitrina"></main>
+    <script type="module" src="./vitrina.ts"></script>
+  </body>
+</html>

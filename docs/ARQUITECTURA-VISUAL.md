@@ -71,7 +71,7 @@ una tiene un trabajo y una lista cerrada de a quién puede importar.
 
 | Capa | Carpeta | Qué hace | Qué no hace |
 |---|---|---|---|
-| **Contrato** | `contrato/` | Tipos TypeScript del veredicto, del claim y de las respuestas de la API, con sus enums cerrados; validadores que comprueban en tiempo de ejecución que un JSON recibido tiene esa forma | No toca el DOM, ni la red, ni traduce |
+| **Contrato** | `contrato/` | Tipos TypeScript del veredicto, del claim y de las respuestas de la API, con sus enums cerrados; validadores que comprueban en tiempo de ejecución que un JSON recibido tiene esa forma. Y el único enum cerrado propio de la interfaz: las fases de la consulta (`fase-consulta.ts`, §1.3) | No toca el DOM, ni la red, ni traduce |
 | **Cliente** | `cliente/` | Habla con la API: `fetch` con tiempo máximo, URL base de configuración, errores tipados. Devuelve objetos del contrato ya validados | No pinta nada; no decide nada sobre lo que recibe |
 | **Formato** | `formato/` | Presenta valores sin cambiarlos: separadores de miles y decimales por idioma (`Intl.NumberFormat`), fechas por idioma. Funciones puras | **No calcula**: ni porcentajes, ni diferencias, ni redondeos distintos de los del `raw_value_span` |
 | **i18n** | `i18n/` | Catálogos `es`/`en` y `t()`. Funciones puras sobre los catálogos | No toca el DOM (hoy sí lo toca: §9) |
@@ -137,7 +137,13 @@ que una prueba puede comprobar:
    `context`, `clase_primaria` y `abstain_reasons` se mapean a estilos en
    `presentacion/estados.ts`; un valor que no esté en el enum produce el
    estado `desconocido` y una entrada en el registro. La interfaz nunca
-   deduce un estado a partir de números.
+   deduce un estado a partir de números. Tampoco resume los dos ejes en un
+   estado único: `truth` y `context` se pintan por separado (§2.2), porque
+   resumirlos sería decidir un veredicto. La única excepción a "los enums de
+   la API" es `FaseConsulta` (`en_espera`, `analizando`, `error`): el enum
+   cerrado propio de la interfaz para cuando todavía no hay veredicto, o no
+   llegó a haberlo. Aprobado por Mateo el 2026-10-03; añadirle un valor es
+   decisión suya.
 3. **Todo número que se pinta sale de `numeros_usados` o del claim** que el
    usuario envió, con el valor literal del `raw_value_span` y, como mucho,
    los separadores del idioma. Es la versión visual del test de trazabilidad
@@ -180,15 +186,17 @@ apps/web/
 ├─ package.json               ✓  Scripts y dependencias. Entra: vite, typescript, vitest, happy-dom, coverage. No entra: ningún framework de UI, ningún cliente HTTP.
 ├─ tsconfig.json              ✓  TypeScript estricto. No se relaja ninguna opción para que compile un fichero.
 ├─ vite.config.ts             ✓  Servidor de desarrollo y build. Las constantes del contenedor (host, puerto, polling) viven aquí y solo aquí.
-├─ vitest.config.ts           ✓  Runner de pruebas, entorno happy-dom, umbrales de cobertura (§5.3).
+├─ vitest.config.ts           ✓  Runner de pruebas, entorno happy-dom, umbrales de cobertura (§5.3); css: true para que las hojas importadas con ?inline lleguen a las pruebas (§5.1).
 ├─ arquitectura.json          ✓  La matriz de §1.2 como datos. La lee la prueba de dependencias.
 ├─ scripts/
 │  └─ generar-iconos.mjs      ✓  `npm run iconos`: los PNG de la extensión desde los SVG de la marca (§2.1).
+├─ vitrina/                   ✓  `npm run vitrina`: página local para ver los componentes en un navegador de verdad, con su autocomprobación (§5.4). Fuera de src/: no entra en el build ni en la extensión.
 ├─ Dockerfile                 ✓  Etapas deps / dev / build. No se sirve nada desde aquí; la extensión no corre en un contenedor.
 ├─ src/
 │  ├─ main.ts                 ✓  Arranque del panel suelto. Entra: montar aplicacion en #app. No entra: fetch, HTML, estilos, lógica.
-│  ├─ contrato/               ✓  Tipos y validadores de lo que devuelve la API (hoy: salud.ts, el contrato de GET /health). Entra: enums, Veredicto, NumeroUsado, EvidenciaEdicion, RespuestaAnalisis, RespuestaSalud. No entra: DOM, red, texto de interfaz.
-│  │  ├─ enums.ts             —  Truth, Context, Clase, AbstainReason: los mismos valores que domain/enums.py, comprobados por una prueba (§5.2).
+│  ├─ contrato/               ✓  Tipos y validadores de lo que devuelve la API (hoy: salud.ts, el contrato de GET /health; enums.ts y fase-consulta.ts). Entra: enums, Veredicto, NumeroUsado, EvidenciaEdicion, RespuestaAnalisis, RespuestaSalud. No entra: DOM, red, texto de interfaz.
+│  │  ├─ enums.ts             ✓  Truth y Context, los dos ejes que pinta la bolita: los mismos valores que domain/enums.py, comprobados por una prueba (§5.2). Clase y AbstainReason llegan con el panel.
+│  │  ├─ fase-consulta.ts     ✓  FaseConsulta: en_espera, analizando, error. El único enum propio de la interfaz; no existe en la API (§1.3).
 │  │  ├─ veredicto.ts         —  Tipos del veredicto y de la evidencia.
 │  │  └─ validar.ts           —  validarVeredicto(json): Veredicto | ErrorContrato. Rechaza lo que no tiene la forma esperada; nunca "arregla" un JSON.
 │  ├─ cliente/                ✓  Acceso a la API. Entra: fetch con tiempo máximo, URL base, errores tipados (sin respuesta, tiempo agotado, HTTP n, contrato inválido). No entra: nada visual, nada de página de terceros.
@@ -196,9 +204,10 @@ apps/web/
 │  │  └─ config.ts            ✓  URL base y tiempo máximo leídos de import.meta.env, con nombre y comentario.
 │  ├─ formato/                ✓  Presentación de valores sin alterarlos (hoy: fechas.ts). Entra: formatearNumero(valor, span, locale), formatearFecha. No entra: aritmética.
 │  ├─ i18n/                   ✓  Catálogos y t(). Entra: es.json, en.json, index.ts. No entra: DOM (fijarLocale deja de tocar document.documentElement: §9), ni textos de dominio generados por la API.
-│  ├─ presentacion/           ✓  Lo que se ve (parcial: estado-servicio, tokens.css, base.css).
-│  │  ├─ estados.ts           —  Mapa cerrado enum → estado visual (clase modificadora, icono, clave i18n). Un valor fuera del enum → "desconocido".
-│  │  ├─ componentes/         —  Un subdirectorio por componente, con su .ts y su .css. Entra: construir DOM a partir del contrato y de t(). No entra: fetch, selectores de la página, números literales, colores.
+│  ├─ presentacion/           ✓  Lo que se ve (parcial: estado-servicio, bolita, estados.ts, montar.ts y las hojas de estilos/).
+│  │  ├─ estados.ts           ✓  Mapa cerrado enum → estado visual (modificador de clase y de token, clave i18n). Un valor fuera del enum → "desconocido".
+│  │  ├─ componentes/         ✓  (parcial) Un subdirectorio por componente, con su .ts y su .css. Entra: construir DOM a partir del contrato y de t(). No entra: fetch, selectores de la página, números literales, colores.
+│  │  │  ├─ bolita/           ✓  El botón circular sobre la esquina de una publicación (§2.2): la fase de la consulta o los dos ejes del veredicto, en color y en palabras.
 │  │  │  ├─ panel-veredicto/  —  El veredicto completo: dos ejes, clase, motivos, números con su origen, evidencia al publicar y vigente.
 │  │  │  ├─ marca-eje/        —  Una etiqueta de estado para truth o para context.
 │  │  │  ├─ numero-trazado/   —  Un número con su raw_value_span desplegable. Es la unidad que hace visible la trazabilidad.
@@ -206,10 +215,10 @@ apps/web/
 │  │  │  └─ estado-servicio/  ✓  Lo que pintaba main.ts: API y base de datos vivas o no.
 │  │  ├─ marca/               ✓  Los dos SVG del símbolo (§2.1): con órbita a partir de 48 px, mínimo por debajo.
 │  │  ├─ estilos/
-│  │  │  ├─ tokens.css        ✓  Las variables --veritai-* (color, espacio, radio, tipografía, sombra, capa) para tema claro y oscuro. Es el ÚNICO fichero con valores literales de color y tamaño.
+│  │  │  ├─ tokens.css        ✓  Las variables --veritai-* (color, espacio, radio, tipografía, sombra, capa) para tema claro y oscuro. Es el ÚNICO fichero con valores literales de color y tamaño. Se declaran en :root y en .veritai-raiz, la raíz de dentro del shadow root.
 │  │  │  ├─ base.css          ✓  Estilos del panel suelto (index.html): body, tipografía base. NUNCA se inyecta en una página de terceros.
-│  │  │  └─ raiz.css          —  Lo que se aplica dentro del shadow root inyectado: :host y reinicio mínimo. Sin selectores de elemento sueltos.
-│  │  └─ montar.ts            —  Crea el shadow root (en páginas de terceros) o usa #app (panel suelto), adjunta tokens.css + raiz.css + los .css de los componentes, y devuelve el punto de montaje.
+│  │  │  └─ raiz.css          ✓  Lo que se aplica dentro del shadow root inyectado: corta la herencia de la página en :host y en .veritai-raiz (all: initial, más direction, que all no cubre). Sin selectores de elemento.
+│  │  └─ montar.ts            ✓  crearRaizAislada(): el anfitrión <veritai-raiz> con shadow root cerrado, las hojas adoptadas (tokens + raiz + la de cada componente) y el punto de montaje. No inserta nada en la página: lo coloca aplicacion.
 │  ├─ localizacion/           —  El motor que aplica las estrategias de sitios/. Entra: localizar(), tipos de estrategia (enum cerrado), comprobaciones, registro de fallos. No entra: ningún selector literal, nada de veredictos.
 │  │  ├─ localizador.ts       —  localizar(raiz, sitio, elemento) → { nodo, estrategia } | null.
 │  │  ├─ estrategias.ts       —  Cómo se ejecuta cada tipo de estrategia y en qué orden es admisible.
@@ -227,7 +236,7 @@ apps/web/
 │     ├─ fondo.ts             —  Service worker: solo lo que MV3 obliga a hacer ahí.
 │     └─ popup/
 └─ tests/                     ✓  Espejo de src/ (parcial) más arquitectura/ y fixtures/. Sin pruebas no hay componente (§5).
-   ├─ arquitectura/           ✓  dependencias y DOM inseguro; faltan prefijos CSS, literales, selectores y paridad de enums con la API.
+   ├─ arquitectura/           ✓  dependencias, DOM inseguro y paridad de enums con la API; faltan las generales de prefijos CSS, literales y selectores (las de la bolita van en su propia prueba).
    ├─ contrato/  cliente/  formato/  i18n/  presentacion/  localizacion/  aplicacion/
    └─ fixtures/
       ├─ api/                 —  Respuestas JSON reales de POST /analisis y GET /health, con fecha.
@@ -250,6 +259,36 @@ Dos aclaraciones sobre el árbol:
   un `iframe` (no se puede anclar al elemento de la publicación, choca con la
   CSP del anfitrión y pesa más). El panel suelto de desarrollo monta los
   mismos componentes en `#app`, sin shadow root, con `base.css`.
+
+**Cómo se monta la raíz aislada** (`presentacion/montar.ts`, desde el
+2026-10-03). Cuatro decisiones; cada una cierra una vía de fuga:
+
+1. **El anfitrión es un elemento con nombre propio**, `<veritai-raiz>`, sin
+   clase, `id` ni `style`: los selectores de elemento de la página (`div`,
+   `span`, `button`) no lo alcanzan. No se registra como *custom element*:
+   solo se usa el nombre.
+2. **El shadow root es cerrado.** El JavaScript de la página no entra por
+   `anfitrion.shadowRoot`.
+3. **Los estilos entran como hojas adoptadas** (`adoptedStyleSheets`), no como
+   `<style>`: no se añade ningún nodo de estilo ni al documento ni al árbol, y
+   todas las raíces comparten las mismas hojas.
+4. **Dentro hay un único elemento raíz, `.veritai-raiz`.** Ahí se declaran los
+   tokens, y no en `:host`: una regla de la página puede alcanzar al
+   anfitrión (`* { ... }`) y ganarle a `:host`, pero nunca a un elemento de
+   dentro. Así la página no puede cambiar un token.
+
+**Lo que el shadow root no corta por sí solo**, y cómo se corta:
+
+| Qué cruza la frontera | Cómo se corta | Quién lo comprueba |
+|---|---|---|
+| La **herencia**: color, fuente, interlineado, `text-transform`... llegan desde el padre del anfitrión | `all: initial` en `:host` y, otra vez, en `.veritai-raiz` (`estilos/raiz.css`) | `montar.test.ts` por estructura; la vitrina, midiendo (§5.4) |
+| **`direction`**: `all` no la reinicia (la especificación la excluye, con `unicode-bidi`), y se hereda. Una página de derecha a izquierda nos la pasaba | `direction: ltr` a mano en los dos sitios. La dirección de lo nuestro es la de nuestro idioma de interfaz. **Lo encontró la autocomprobación de la vitrina en Chrome**; happy-dom no podía verlo | `montar.test.ts` y la vitrina |
+| **`rem`** y las unidades de ventana: dentro de la página de un tercero, `rem` es el `font-size` del `<html>` de esa página | Lo que se inyecta solo usa tokens en px o sin unidad (§4) | `montar.test.ts`; la vitrina tiene el `<html>` a 22 px a propósito |
+| Las **custom properties** de la página: `all` tampoco las toca | Todos los tokens que usa una hoja inyectada están declarados en `.veritai-raiz` | `montar.test.ts` (página hostil que redefine nuestros tokens) |
+
+**Lo que no puede evitar.** El anfitrión es un elemento del DOM de la página:
+la página puede moverlo, ocultarlo o recortarlo. Lo que se garantiza es lo de
+dentro.
 
 
 ### 2.1 La marca: dónde vive el símbolo y cómo se usa
@@ -338,6 +377,128 @@ llegaron a la raíz del repositorio, `icono-16.png` es negro puro (48 píxeles
 opacos, todos `#000000`): es el símbolo mínimo exportado sin color de
 contexto. Es el fallo que el script evita.
 
+### 2.2 La bolita
+
+El botón circular que VERITAI pone sobre la esquina de una publicación, en la
+página de un tercero. Vive en `presentacion/componentes/bolita/`. Construida
+el 2026-10-03, **sola**: no está conectada a ninguna página ni a la API, y no
+hay panel.
+
+```ts
+crearBolita(estado, { alPulsar }): HTMLButtonElement
+fijarEstadoBolita(bolita, estado): void   // cambia el estado sobre el MISMO nodo: el foco no se pierde
+
+type EstadoBolita = { fase: FaseConsulta } | { truth: string; context: string }
+```
+
+```
+<button class="veritai-bolita ..." aria-label="...">     la caja fija que se pulsa y se enfoca
+  <span class="veritai-bolita__disco">                   lo que se ve: fondo, anillo, sombra. Es lo que crece y encoge
+    <span class="veritai-bolita__pulso">                 el halo que late mientras analiza
+    <span class="veritai-bolita__simbolo">               el símbolo mínimo, como máscara, con el color del estado
+  <span class="veritai-bolita__etiqueta">                el estado en palabras. Fuera del disco: no se escala con él
+```
+
+**Dos ejes, dos canales (decisión de Mateo, 2026-10-03).** El veredicto no es
+un enum: son dos ejes independientes, `truth` y `context` (DEC-016), y la
+bolita no los resume.
+
+| Canal | Eje | Propiedad | Token |
+|---|---|---|---|
+| el símbolo | `context` | `color` | `--veritai-color-context-<valor>` |
+| el anillo | `truth` | `border-color` del disco | `--veritai-color-truth-<valor>` |
+
+Por qué no un solo color. Ningún eje sirve solo: pintando solo `context`, una
+afirmación `contradicted` sin divergencia se leería como "sin divergencia
+detectada"; pintando solo `truth`, `supported` + `divergence_detected`, que es
+el caso que la tesis existe para señalar, se leería como "respaldado". Y un
+estado resumen de los dos tendría que decidirlo alguien: si lo decide la
+interfaz, calcula un veredicto (§1.3); si lo decide el dominio, hace falta un
+enum nuevo en la API con su DEC (los títulos de `SALIDA` en `plantilla.py` son
+esa tabla, pero como texto). Alternativa descartada por ahora, no cerrada.
+
+Mientras no hay veredicto, la bolita pinta la **fase de la consulta**
+(`FaseConsulta`, §1.3): símbolo y anillo del mismo color y anillo fino. Con
+veredicto, el anillo es grueso, porque lleva `truth` y tiene que verse. `error`
+lleva además el anillo discontinuo: dice "no se pudo" sin depender del color.
+Un valor de `truth` o de `context` que no esté en su enum se pinta como
+`desconocido`; el valor que llegó no se escribe en el DOM.
+
+**El estado, en palabras.** El color nunca es la única señal. El estado es el
+nombre accesible del botón (`aria-label`) y una etiqueta visible que aparece
+al pasar por encima y al enfocar con el teclado, compuestos los dos desde la
+misma plantilla i18n: `"VeritAI. Contexto: divergencia detectada. Dato:
+respaldado por la fuente."`. Los 33 estados posibles (3 fases, y 6 × 5
+combinaciones contando `desconocido`) tienen 33 etiquetas distintas en cada
+idioma. Los textos respetan `GLOSARIO.md` §Términos que NO se usan, y una
+prueba lo vigila.
+
+**Colores de estado** (valores a 2026-10-03; la fuente de verdad es
+`tokens.css`). Entre paréntesis, el contraste contra el disco de la bolita.
+
+| Estado | Tema claro (disco `#ffffff`) | Tema oscuro (disco `#14161a`) |
+|---|---|---|
+| `fase.en_espera` | el acento de la marca, `#98242c` (8,0) | `#ea959a` (8,0) |
+| `fase.analizando` | `#e0575f` (3,7) | `#e5384a` (4,3) |
+| `fase.error` | `#475569` (7,6) | `#8aa0cc` (6,9) |
+| `truth.supported` | `#1d4ed8` (6,7) | `#7aa2ff` (7,3) |
+| `truth.contradicted` | `#b3261e` (6,5) | `#f2695a` (6,0) |
+| `truth.mixed` | `#b8860b` (3,3) | `#f7d154` (12,3) |
+| `truth.insufficient_evidence` | `#4b5360` (7,8) | `#9aa3b0` (7,1) |
+| `truth.not_applicable` | `#8b929c` (3,1) | `#5f6672` (3,1) |
+| `context.divergence_detected` | `#c2410c` (5,2) | `#ffa14a` (9,0) |
+| `context.no_divergence_detected` | `#1d4ed8` (6,7) | `#7aa2ff` (7,3) |
+| `context.undetermined` | `#4b5360` (7,8) | `#9aa3b0` (7,1) |
+| `context.not_applicable` | `#8b929c` (3,1) | `#5f6672` (3,1) |
+| `desconocido` (los dos ejes) | el color de texto, `#14161a` (18,1) | `#eef1f5` (16,0) |
+
+Las reglas que cumple la paleta, y que comprueba
+`tests/presentacion/accesibilidad.test.ts` leyendo `tokens.css`:
+
+1. **Cada color da al menos 3:1 contra el disco.** Son gráficos, no texto: el
+   criterio es WCAG 1.4.11, no el 4,5:1 del texto.
+2. **No hay ningún verde.** "Respaldado" y "sin divergencia detectada" son
+   azules, por dos razones: junto al rojo de "contradicho", un verde es el par
+   que no distingue quien no ve el rojo-verde; y "sin divergencia detectada"
+   no es dar por bueno (DEC-016), que es lo que un verde diría.
+3. **Dentro de un mismo eje, dos estados se separan siempre por claridad
+   (≥ 15 en L\*) o por azul-amarillo (≥ 30 en b\*)**, sin contar el eje
+   rojo-verde. Por eso "parcial" es un ámbar claro frente al rojo oscuro de
+   "contradicho".
+4. **`error` es gris pizarra, no rojo.** Un fallo de la API no dice nada de la
+   afirmación y no puede leerse como "contradicho".
+
+Honestidad sobre la regla 3: es una **aproximación**, no una simulación de
+daltonismo, y los umbrales 15 y 30 son márgenes del proyecto, no de ninguna
+norma. Un primer criterio más laxo (distancia ≥ 20 en el plano L\*–b\*) dejaba
+pasar un verde junto al rojo, y se descubrió rompiendo la paleta a propósito;
+el actual lo rechaza. La simulación de verdad queda pendiente (§9, punto 25).
+
+**Tamaño.** 54 px con ratón y 44 px con dedo, los dos como tokens
+(`--veritai-bolita-tamano-escritorio`, `-movil`). "Móvil" es **puntero grueso**
+(`pointer: coarse`), no ancho de ventana: una ventana estrecha en un escritorio
+sigue teniendo ratón, y lo que pide 44 px es el dedo (WCAG 2.5.5).
+
+**Movimiento.** Al pasar por encima (solo donde hay puntero que pueda hacerlo,
+`hover: hover`), el disco crece un poco y se ilumina con un halo del color del
+estado; al pulsar, encoge; mientras analiza, un halo late. Con
+`prefers-reduced-motion: reduce` nada crece, nada encoge y nada late: el halo
+de "analizando" se queda fijo y visible, porque el estado no puede depender de
+una animación que el usuario ha pedido no ver. La etiqueta va fuera del disco
+a propósito: en una primera versión colgaba del elemento que se escalaba, y el
+texto crecía al pasar por encima y encogía al pulsar; se vio en la vitrina.
+
+**Teclado y foco.** Es un `<button>` nativo: el navegador lo pone en el orden
+de tabulación y convierte Enter y Espacio en `click`; no hay manejadores de
+teclado propios. El foco se ve con un anillo (`:focus-visible`) de un solo
+color para los dos temas, `--veritai-color-foco`: se dibuja fuera de la
+bolita, sobre la página de un tercero cuyo fondo no se conoce, así que se
+eligió uno que da 4,5:1 contra blanco y 4,7:1 contra negro.
+
+**Lo que no hace todavía** está en §9, puntos 19 a 26: no está colocada en
+ninguna página, sus eventos no se cortan hacia la página, su tema sigue al
+sistema y no a la página, y `desconocido` no se anota en ningún registro.
+
 ---
 
 ## 3. Convenciones de nombres
@@ -354,11 +515,11 @@ lo completa para la interfaz.
 | Función que crea un componente | `crear` + nombre en PascalCase; recibe datos del contrato y el `locale`; devuelve `HTMLElement` | `crearPanelVeredicto(veredicto, locale)` | `renderPanel()`, `PanelVeredicto()`, `pintar()` que escribe en `document` |
 | Tipos | PascalCase, sin prefijo `I` ni sufijo `Type` | `Veredicto`, `NumeroUsado`, `EstrategiaLocalizacion` | `IVeredicto`, `VeredictoType`, `verdict` |
 | Enums del contrato | el **valor** es el de la API, tal cual; el nombre del miembro en PascalCase | `Truth.Supported = "supported"`, `Context.DivergenceDetected = "divergence_detected"` | `Truth.OK`, `"verdadero"`, traducir el valor |
-| Clases CSS | prefijo `veritai-`, bloque y elemento separados por `__`, modificador por `--`; el modificador de estado es el valor del enum | `.veritai-panel`, `.veritai-panel__titulo`, `.veritai-marca-eje--contradicted` | `.panel`, `.ok`, `.titulo-rojo`, `.veritai-panel-titulo` |
-| Variables CSS (tokens) | prefijo `--veritai-`, grupo y nombre semántico, nunca el valor en el nombre | `--veritai-color-texto`, `--veritai-color-estado-contradicted`, `--veritai-espacio-3`, `--veritai-radio-2` | `--fondo`, `--ok`, `--rojo`, `--veritai-14px` |
+| Clases CSS | prefijo `veritai-`, bloque y elemento separados por `__`, modificador por `--`; el modificador de estado es el valor del enum, con el eje delante cuando el componente pinta más de uno | `.veritai-panel`, `.veritai-panel__titulo`, `.veritai-marca-eje--contradicted`, `.veritai-bolita--truth-contradicted` | `.panel`, `.ok`, `.titulo-rojo`, `.veritai-panel-titulo` |
+| Variables CSS (tokens) | prefijo `--veritai-`, grupo y nombre semántico, nunca el valor en el nombre | `--veritai-color-texto`, `--veritai-color-truth-contradicted`, `--veritai-espacio-3`, `--veritai-radio-2` | `--fondo`, `--ok`, `--rojo`, `--veritai-14px` |
 | Ganchos del DOM propio | atributo `data-veritai="<nombre>"` para lo que las pruebas o `aplicacion` necesiten localizar en **nuestro** DOM; nunca una clase | `data-veritai="recomprobar"` | `#recomprobar`, `.boton-recomprobar` usado desde código |
 | Claves i18n | `seccion.nombre_en_snake`, minúsculas; mismo conjunto de claves y mismos marcadores `{x}` en `es.json` y `en.json` | `veredicto.titulo`, `motivo.PREVIOUS_EDITION_NOT_FOUND` | `VeredictoTitulo`, `titulo2`, una clave que solo existe en `es` |
-| Claves i18n de enums | `<eje>.<valor del enum>` tal cual, para que el mapa sea trivial y la prueba de paridad lo compruebe | `truth.supported`, `context.undetermined`, `motivo.EXTRACTION_FAILED` | `truth.ok`, `contexto.sin_divergencia` |
+| Claves i18n de enums | `<eje>.<valor del enum>` tal cual, para que el mapa sea trivial y la prueba de paridad lo compruebe | `truth.supported`, `context.undetermined`, `fase.analizando`, `motivo.EXTRACTION_FAILED` | `truth.ok`, `contexto.sin_divergencia` |
 | Ficheros de sitio | `sitios/<sitio>.json`, nombre del sitio en minúsculas sin dominio | `sitios/x.json`, `sitios/instagram.json` | `sitios/x.com.json`, `sitios/X.json`, `sitios/twitter.ts` |
 | Fixtures de página | `tests/fixtures/sitios/<sitio>/AAAA-MM-DD-<que-es>.html` | `tests/fixtures/sitios/x/2026-10-03-publicacion-con-cifra.html` | `tweet.html`, `test1.html` |
 | Ficheros de prueba | `tests/<capa>/<nombre>.test.ts`, mismo nombre que el módulo probado | `tests/presentacion/panel-veredicto.test.ts` | `panel.spec.js`, `tests/misc.test.ts` |
@@ -375,8 +536,9 @@ prueba todavía se marca.
 
 | Prohibido | Por qué | Quién lo comprueba |
 |---|---|---|
-| Un color, tamaño, radio, sombra, duración o `z-index` escrito dentro de un componente, en su `.css` o en su `.ts` | Un valor suelto no se puede cambiar de tema ni auditar. Todo valor vive en `tokens.css` y se usa con `var(--veritai-...)` | `tests/arquitectura/literales-css.test.ts`: cualquier `#hex`, `rgb(`, `hsl(`, número con `px`/`rem`/`em`/`ms`/`s` fuera de `tokens.css` falla. Literales permitidos: `0`, `1` (line-height), `100%`, `auto`, `inherit`, `none`, `transparent`, `currentColor` |
-| Un selector CSS sin prefijo `veritai-` en cualquier hoja que se inyecte en una página de terceros, incluidos los selectores de elemento (`h1`, `table`, `button`) | Se inyecta en el DOM de otro. Aunque el shadow root lo aísle, la regla es doble: ni fuga hacia fuera ni dependencia de que el aislamiento exista | `tests/arquitectura/prefijos-css.test.ts`: en `componentes/**/*.css` y `raiz.css` todo selector empieza por `.veritai-`, `:host` o `[data-veritai` |
+| Un color, tamaño, radio, sombra, duración o `z-index` escrito dentro de un componente, en su `.css` o en su `.ts` | Un valor suelto no se puede cambiar de tema ni auditar. Todo valor vive en `tokens.css` y se usa con `var(--veritai-...)` | `tests/arquitectura/literales-css.test.ts`: cualquier `#hex`, `rgb(`, `hsl(`, número con `px`/`rem`/`em`/`ms`/`s` fuera de `tokens.css` falla. Literales permitidos: `0`, `1` (line-height), `100%`, `auto`, `inherit`, `none`, `transparent`, `currentColor`. Pendiente como prueba general; para `bolita.css` lo comprueba ya `tests/presentacion/bolita.test.ts` |
+| Un selector CSS sin prefijo `veritai-` en cualquier hoja que se inyecte en una página de terceros, incluidos los selectores de elemento (`h1`, `table`, `button`) | Se inyecta en el DOM de otro. Aunque el shadow root lo aísle, la regla es doble: ni fuga hacia fuera ni dependencia de que el aislamiento exista | `tests/arquitectura/prefijos-css.test.ts`: en `componentes/**/*.css` y `raiz.css` todo selector empieza por `.veritai-`, `:host` o `[data-veritai`. Pendiente como prueba general; para `raiz.css` y `bolita.css` lo comprueba ya `tests/presentacion/montar.test.ts` |
+| `rem`, `vw`, `vh` y cualquier unidad que dependa de la página, en una hoja que se inyecta o en un token que esa hoja use | Dentro de la página de un tercero, `rem` es el `font-size` del `<html>` de esa página: lo nuestro cambiaría de tamaño según dónde se monte | `tests/presentacion/montar.test.ts` |
 | Lógica de negocio en la capa visual: calcular una tasa, comparar dos valores, decidir un estado a partir de números, redondear | La interfaz no calcula veredictos (§1.3) | `tests/arquitectura/aritmetica.test.ts`: operadores `+ - * / %` sobre identificadores que vengan del contrato en `presentacion/`, `formato/`; y la prueba de trazabilidad visual de cada componente |
 | Cualquier número mágico: tiempos de espera, reintentos, tamaños, límites, índices, el `2` de "2 servicios" | Un número sin nombre no se puede defender ni cambiar con seguridad | `tests/arquitectura/literales-ts.test.ts`: literales numéricos distintos de `0`, `1`, `-1` fuera de `config.ts`, `tokens.css` y los ficheros de prueba fallan |
 | Un selector de la página de terceros escrito en código (`document.querySelector("article")`, `[data-testid=tweet]`) en cualquier capa que no sea `localizacion/`, y en `localizacion/` solo si viene de `sitios/*.json` | §7. El HTML de X cambia sin avisar; el selector tiene que estar donde se cambia sin tocar código | `tests/arquitectura/selectores.test.ts`: `querySelector`, `querySelectorAll`, `getElementsBy*`, `closest(` fuera de `localizacion/localizador.ts` y de las pruebas fallan; en `localizador.ts` el argumento tiene que ser una variable, nunca una cadena literal |
@@ -414,6 +576,23 @@ tenga Vitest. Las pruebas que solo leen ficheros llevan
 `// @vitest-environment node` en la primera línea: bajo happy-dom,
 `import.meta.url` no es una URL `file:`.
 
+`vitest.config.ts` lleva `css: true`: sin eso Vitest sustituye por una cadena
+vacía las hojas importadas con `?inline`, y `montar.ts` montaría raíces sin
+estilos.
+
+**Lo que happy-dom mide y lo que no** (comprobado el 2026-10-03, versión
+20.14). Mide bien: el shadow root cerrado, las hojas adoptadas, que los
+selectores de la página no entran y los nuestros no salen, las custom
+properties con `var()`, y las media queries `prefers-color-scheme`,
+`prefers-reduced-motion`, `pointer` y `hover` (`tests/_entorno.ts`; las
+preferencias se fijan **antes** de montar, porque guarda los estilos ya
+calculados). No mide: `all`, las reglas `:host`, `:hover` y `:focus-visible`,
+los pseudo-elementos, las propiedades abreviadas (`animation`, `transition`:
+por eso las hojas usan las desglosadas), la maquetación, ni la conversión de
+Enter y Espacio en `click` de un `<button>`. Lo que no mide se comprueba por
+estructura (la regla está y dice lo que debe) y en un navegador de verdad
+(§5.4).
+
 ### 5.2 Tipos de prueba y qué cubre cada uno
 
 | Tipo | Qué cubre | Dónde | Ejemplo |
@@ -449,6 +628,35 @@ solo si:
 
 Lo que no tiene prueba no está hecho; está empezado.
 
+### 5.4 La vitrina y lo que solo mide un navegador de verdad
+
+`npm run vitrina` sirve `apps/web/vitrina/` en `http://127.0.0.1:5174/vitrina/`
+y la abre. Es una página local de desarrollo, como `scripts/` y `tests/`: vive
+fuera de `src/`, no entra en el build ni en la extensión, y no está conectada
+a ninguna página real ni a la API. Solo usa lo que usará `aplicacion`:
+`crearRaizAislada` y `crearBolita`.
+
+La página **hace de página de un tercero**: no carga ninguna hoja de VERITAI,
+tiene el `<html>` a 22 px para que un `rem` nuestro se note, y tiene una
+**zona hostil** que aplica con `!important` reglas de elemento, reglas con
+nuestras mismas clases, propiedades heredables y hasta nuestros propios
+tokens. Al final lleva una **autocomprobación**: una tabla con lo que el
+navegador mide en ese momento (`getComputedStyle`, `getBoundingClientRect`)
+frente a lo esperado. Es el sitio donde se comprueba lo que happy-dom no
+modela.
+
+El 2026-10-03 se ejecutó en Chrome 154 sin ventana, con un perfil desechable:
+las 14 comprobaciones bien, en tema claro, en oscuro y forzando movimiento
+reducido. Manejando ese Chrome por su protocolo de depuración se comprobó
+además que Tab entra en la bolita y muestra el foco y la etiqueta, que Enter y
+Espacio la activan, que el foco no se pierde cuando llega el veredicto y que
+con puntero táctil mide 44 × 44 px. Esa comprobación fue **manual y de una
+vez**: no hay prueba de humo automatizada en el repositorio (§9, punto 26).
+
+Dos defectos salieron de ahí y no de las pruebas: `direction` se heredaba de la
+página (§2) y la etiqueta se escalaba con el disco (§2.2). Los dos tienen ya
+su prueba.
+
 ---
 
 ## 6. Cómo se añade algo nuevo
@@ -466,11 +674,14 @@ API. La interfaz no inventa estados.
 3. `src/presentacion/estados.ts`: una entrada en el mapa, con su clase
    modificadora (`--<valor>`), su icono si lo lleva y su clave i18n.
 4. `src/i18n/es.json` y `en.json`: la clave `<eje>.<valor>`, en los dos.
-5. `src/presentacion/estilos/tokens.css`: si el estado necesita un color
-   propio, un token `--veritai-color-estado-<valor>` en tema claro y oscuro.
-   Si puede reutilizar uno existente, no se crea.
+5. `src/presentacion/estilos/tokens.css`: el token
+   `--veritai-color-<eje>-<valor>` (`--veritai-color-truth-<valor>`,
+   `--veritai-color-context-<valor>`), en tema claro y oscuro. Tiene que
+   pasar `tests/presentacion/accesibilidad.test.ts`: 3:1 contra el disco, no
+   ser verde, y separarse de los demás estados de su eje por claridad o por
+   azul-amarillo (§2.2).
 6. El `.css` del componente que lo pinta: la regla
-   `.veritai-<bloque>--<valor> { color: var(--veritai-color-estado-<valor>); }`.
+   `.veritai-<bloque>--<eje>-<valor> { color: var(--veritai-color-<eje>-<valor>); }`.
 7. Pruebas: `tests/presentacion/estados.test.ts` (el mapa cubre el enum
    entero); un caso nuevo en la prueba del componente, con un fixture de API
    que tenga ese valor; la de i18n y la de contraste pasan solas o avisan.
@@ -768,17 +979,25 @@ que mover antes del primer componente.
 | 5 | ~~Ganchos del DOM propio por `id` y clases~~ **Hecho:** `data-veritai="recomprobar"` y `data-veritai="idioma"`; el `<label for>` conserva un `id` con prefijo (`veritai-idioma`) porque la asociación accesible lo exige | `estado-servicio.ts` | §3 |
 | 6 | ~~Variables CSS sin prefijo~~ **Hecho:** `tokens.css` con `--veritai-color-*`, `--veritai-espacio-*`, `--veritai-radio-*`, tipografía, pesos y medidas, en tema claro y oscuro | `presentacion/estilos/tokens.css` | §3 |
 | 7 | ~~Clases sin prefijo~~ **Hecho:** bloque `.veritai-estado-servicio` con `__elemento` y `--estado`; `.veritai-pagina` y `.veritai-panel` en `base.css` | `estado-servicio.css`, `base.css`, `index.html` | §3, §4 |
-| 8 | ~~Selectores de elemento globales~~ **Hecho:** ninguno; el `<body>` del panel suelto lleva `class="veritai-pagina"` y `base.css` solo se carga en `index.html`. `raiz.css` no existe todavía porque nada se inyecta en terceros | `base.css`, `estado-servicio.css` | §4 |
+| 8 | ~~Selectores de elemento globales~~ **Hecho:** ninguno; el `<body>` del panel suelto lleva `class="veritai-pagina"` y `base.css` solo se carga en `index.html`. `raiz.css` existe desde la bolita y tampoco tiene ninguno | `base.css`, `estado-servicio.css`, `raiz.css`, `bolita.css` | §4 |
 | 9 | ~~Tamaños y radios literales fuera de tokens~~ **Hecho:** todos en `tokens.css`; comprobado declaración a declaración que las 57 declaraciones y los 16 colores (claro y oscuro) resuelven a los mismos valores que antes. La prueba automática de literales sigue pendiente | `tokens.css` | §4 |
-| 10 | ~~Un fichero de estilos para todo~~ **Hecho:** `tokens.css`, `base.css` y `estado-servicio.css`; `raiz.css` y `montar.ts` llegarán con la primera inyección en terceros | `presentacion/estilos/`, `componentes/estado-servicio/` | §2 |
+| 10 | ~~Un fichero de estilos para todo~~ **Hecho:** `tokens.css`, `base.css` y `estado-servicio.css`; `raiz.css` y `montar.ts` llegaron con la bolita (2026-10-03) | `presentacion/estilos/`, `componentes/estado-servicio/` | §2 |
 | 11 | La capa i18n toca el DOM: `fijarLocale` escribe `document.documentElement.lang` | `src/i18n/index.ts` línea 55 | §1.2 (`i18n` no importa nada ni toca el DOM); eso va a `presentacion/montar.ts` |
 | 12 | `t()` cae en silencio al catálogo español si la clave falta en inglés; sin prueba de paridad, una traducción que falta pasa desapercibida | `i18n/index.ts` línea 70 | §5.2 prueba de i18n |
-| 13 | ~~Ninguna prueba de la interfaz; no hay runner ni `npm test`~~ **Desde el 2026-10-03:** Vitest 5 con happy-dom; `npm test` y `npm run test:cobertura`; dos pruebas de arquitectura (dependencias, DOM inseguro) y una de componente (`estado-servicio`, siete casos: orden, textos en `es` y `en`, marcas, pie, acciones, escapado), **todas en verde**; `build` exige `npm test`. Siguen pendientes las demás pruebas de §5.2: prefijos y literales CSS, selectores, paridad de enums, i18n, contrato, sitios, accesibilidad | `package.json`, `vitest.config.ts`, `tests/` | §5 |
+| 13 | ~~Ninguna prueba de la interfaz; no hay runner ni `npm test`~~ **Desde el 2026-10-03:** Vitest 5 con happy-dom; `npm test` y `npm run test:cobertura`; ocho ficheros y 86 pruebas: tres de arquitectura (dependencias, DOM inseguro, paridad de enums con la API) y cinco de presentación (`estado-servicio`, `estados`, `bolita`, `montar`, `accesibilidad`), **todas en verde**; `build` exige `npm test`. **`npm run test:cobertura` sigue en rojo, y ya lo estaba**: los ficheros nuevos están al 100 %, pero `contrato/salud.ts` (40 % de líneas), `i18n/index.ts` (87,5 %), `cliente/`, `aplicacion/` y `main.ts` no tienen prueba, y las ramas quedan en el 66 % frente al 80 % exigido. Siguen pendientes de §5.2: las pruebas generales de prefijos y literales CSS, la de selectores, la de i18n (paridad de catálogos), contrato, sitios, y la de contraste para todos los pares de `tokens.css` (hoy solo los que usa la bolita) | `package.json`, `vitest.config.ts`, `tests/` | §5 |
 | 14 | Ni lint ni formateador para TypeScript, cuando la API tiene `ruff` y `ruff format` | `apps/web/` | §5.3 punto 3 exige al menos `typecheck`; un lint es deuda declarada |
 | 15 | ~~No existe `arquitectura.json` ni prueba de dependencias~~ **Desde el 2026-10-03** existen `arquitectura.json` y `tests/arquitectura/dependencias.test.ts`, en verde tras la reestructuración. La prueba equivalente del lado Python sigue siendo deuda (`ARQUITECTURA.md` §3) | `apps/web/`, `ARQUITECTURA.md` §3 | §1.4 |
 | 16 | `index.html` no declara CSP; el panel suelto la necesitará y la extensión la exige | `index.html` | §8 |
 | 17 | La explicación del veredicto se genera solo en español en el dominio (`plantilla.py`, `SALIDA`, `MOTIVOS`); la interfaz en inglés no puede mostrarla sin incumplir §10, y hoy no tiene plantillas propias para recomponerla | `apps/api/veritai/domain/plantilla.py` | §1.3 punto 4; es trabajo de interfaz, no de dominio |
 | 18 | `sitios/`, `localizacion/`, fixtures y extensión no existen. No es un incumplimiento: es lo que este documento ordena antes de escribirlos | — | §7 |
+| 19 | La bolita no está colocada en ninguna página. Falta decidir cómo se ancla el anfitrión a la esquina de la publicación sin tocar el CSS de la página, y de qué lado sale la etiqueta (hoy, siempre a la izquierda) | `aplicacion/`, `montar.ts` | §2.2; es el paso de integración, no el del componente |
+| 20 | Los eventos de la bolita salen del shadow root hacia la página: un clic o un Enter sobre ella puede disparar los manejadores de la página (en X, abrir la publicación). Hay que cortarlos en la raíz aislada al integrar | `montar.ts` | §2 |
+| 21 | El tema de lo inyectado sigue al sistema (`prefers-color-scheme`), no al tema que tenga la página: en una página oscura con el sistema en claro, la bolita sale clara | `tokens.css` | §2.2 |
+| 22 | El símbolo de la bolita se carga por URL (`mask-image`). En la extensión esa URL tiene que ser un recurso accesible desde la página, o ir incrustada, y puede chocar con la CSP de la página | `bolita.css`, `extension/` | §8 |
+| 23 | `desconocido` se pinta pero no se anota en ningún registro: `registro.ts` no existe. Anotarlo es trabajo de `aplicacion` | `aplicacion/` | §1.3 punto 2 |
+| 24 | El cambio de estado no se anuncia a un lector de pantalla si el foco no está en la bolita: no hay región `aria-live` | `bolita.ts` | §2.2; se decide con el panel |
+| 25 | La comprobación de daltonismo es una aproximación (CIELAB sin el eje rojo-verde), no una simulación, y sus umbrales son del proyecto. La fuente que se quiso consultar para las matrices de simulación no se pudo abrir: el `robots.txt` de `www.inf.ufrgs.br` devolvió 403 y no se insistió (DEC-021). Sin fuente verificada no se usan constantes de memoria. `NEEDS_REVIEW`: la referencia (recordada como Machado, Oliveira y Fernandes, 2009) está sin comprobar | `tests/presentacion/_color.ts` | §2.2 |
+| 26 | Lo que solo mide un navegador de verdad (teclado, foco, hover, herencia) se comprobó a mano con Chrome y la vitrina; no hay humo e2e automatizado. Y dentro del contenedor `web` no se montan ni `vitrina/` ni `apps/api/veritai/domain/enums.py`: ahí la vitrina no se sirve y la prueba de paridad de enums se omite, a la vista | `vitrina/`, `docker-compose.override.yml` | §5.2, §5.4 |
 
 Lo que **sí** cumple ya: tema claro y oscuro con variables (la idea de los
 tokens está, falta el prefijo y la separación); `escapar()` con `textContent`;
@@ -791,5 +1010,8 @@ Orden que se siguió el 2026-10-03, decidido por Mateo: primero el runner y
 las pruebas de arquitectura (§5.1), en rojo contra el código de entonces;
 después `main.ts` a las capas (§2) con `tokens.css` y prefijos, sin cambiar lo
 que se ve, y `estado-servicio` como primer módulo de presentación. **Quedan
-abiertos los puntos 11, 12, 14, 16 y 17, y las pruebas que faltan del 13.**
-Los componentes del veredicto y de la extensión (§2) son el paso siguiente.
+abiertos los puntos 11, 12, 14, 16 y 17, las pruebas que faltan del 13 (con
+la cobertura en rojo), y los puntos 19 a 26, que nacen con la bolita.** El
+2026-10-03 se construyó la bolita (§2.2), el primer componente pensado para
+inyectarse; no está conectada a ninguna página. El panel del veredicto es el
+paso siguiente.
