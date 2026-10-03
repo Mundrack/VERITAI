@@ -1598,3 +1598,89 @@ búsqueda y solo se comprobó el registro, sin red.
 - P1' sobre `CTH0926` (23-10). Jornada 5 abierta (`P3-PAUSA8`); el
   cronómetro no se ha tocado. Taxonomía sin decidir; tercer eje no tocado.
   `feat/interfaz`, sin tocar.
+
+---
+
+## 2026-10-03 (20:25Z) — Evidencia byte a byte para 17 ficheros comprobados uno por uno; las tres copias de P1 que faltan las guarda una persona
+
+### Qué pidió Mateo
+
+Tres cosas, tras la entrada anterior. (1) Las tres copias que faltan las
+guarda él a mano desde el navegador: dejar escrito en la adenda que las
+guardó una persona y no un agente, y por qué; la abstención del agente fue
+correcta. (2) Antes de tocar ningún sha256, comprobar fichero por fichero que
+su copia de trabajo coincide con lo anotado; si alguno no coincide, parar y
+decírselo sin reescribir su checksum; para los que coincidan, aplicar la
+regla de `.gitattributes` y corregir. (3) Del hallazgo de Europa Press
+Galicia, solo los datos, sin conclusión ni recomendación: lo decide él.
+
+### Qué se hizo
+
+- **Comprobación de los 18, antes de cambiar nada.** Para cada uno: sha256 y
+  tamaño de la copia de trabajo, frente al sha256 (y al tamaño, donde consta)
+  anotado al descargarlo. **17 coinciden. El número 18,
+  `J5_portal_20254_index.htm`, no tiene sha256 ni tamaño anotados en ningún
+  fichero del repositorio, ni se le nombra en ningún sitio: no hay con qué
+  compararlo y no se tocó.**
+
+| Fichero | sha256 anotado | Dónde consta | Copia de trabajo | En git antes |
+|---|---|---|---|---|
+| `D2B_CTH0725.htm` | `b42d0d6061d24da7` | su `D2B_<código>.json` | coincide | `3564ae83040d9006` |
+| `D2B_CTH0825.htm` | `5af7c2f693a8848f` | su `D2B_<código>.json` | coincide | `cfae123cd2c240c3` |
+| `D2B_EOAT0825.htm` | `0b4f824323053da7` | su `D2B_<código>.json` | coincide | `dbb9d66905f1368c` |
+| `D2B_EOAT0826.htm` | `c89b0d7f2444bd9b` | su `D2B_<código>.json` | coincide | `f487e912944e63f4` |
+| `D2B_ETDP0725.htm` | `52edcb3ac65ab76d` | su `D2B_<código>.json` | coincide | `4c992b98a6bbc865` |
+| `D2B_ETDP0726.htm` | `7e842d9678c190b7` | su `D2B_<código>.json` | coincide | `f58ba0c3e51ea749` |
+| `D2B_H0625.htm` | `60f96b026ba7fc86` | su `D2B_<código>.json` | coincide | `97e19fd0ab76ddd2` |
+| `D2B_H0726.htm` | `6b6ded8f1f01c7da` | su `D2B_<código>.json` | coincide | `4e3bc5160c9d6a7a` |
+| `D2B_SM0725.htm` | `6cf366602d173d4e` | su `D2B_<código>.json` | coincide | `aec5f70f13b8f147` |
+| `D2B_SM0726.htm` | `076cfe9316faa634` | su `D2B_<código>.json` | coincide | `08bd403b8d21c7c4` |
+| `J5_bde_2026t2.htm` | `c69644c7e451b9bb` | `lote_evaluacion.py` | coincide | `ab0e00fb8c44c92b` |
+| `J5_bde_julio26.htm` | `f8c07585ae51958c` | `lote_evaluacion.py` | coincide | `af518f54d1c32082` |
+| `J5_bde_mayo26.htm` | `e3c6a62bec192349` | `lote_evaluacion.py` | coincide | `1de195058957518b` |
+| `J5_portal_4T2025_1509010.csv` | `92a6d23332de66cc` | `lote_evaluacion.py` | coincide | `45cda56314cff282` |
+| `METODOLOGIA_IME_EOAC_240.htm` | `f1f3b2a026ce1d24` | `METODOLOGIA-REVISION-INE.md` | coincide | `11239cd788449865` |
+| `METODOLOGIA_IME_EOAP_239.htm` | `c92bbace93f5e4bc` | `METODOLOGIA-REVISION-INE.md` | coincide | `e01f51b78faa6d13` |
+| `METODOLOGIA_IME_EOH_238.htm` | `23a530af438628f6` | `METODOLOGIA-REVISION-INE.md` | coincide | `3f08505145173556` |
+
+- **Corrección de los 17**: regla `-text` en `.gitattributes` para ellos y
+  solo para ellos, y vuelta a añadir desde la copia de trabajo. No se
+  reescribió ningún sha256 anotado: lo que cambia es lo que guarda git, que
+  ahora es el fichero tal como se descargó.
+- **Las tres copias de P1** (piezas 1, 2 y 6): en la adenda de §4h queda la
+  decisión de Mateo, el motivo y los tres nombres de fichero.
+  `copiar_piezas_p1.py` reconoce una copia dejada a mano en
+  `research/evidencia/`, la anota como guardada por una persona con su sha256
+  y comprueba sus cifras, sin hacer ninguna petición.
+- **Europa Press Galicia**: datos entregados a Mateo en la conversación; aquí
+  no se anota conclusión alguna.
+
+### Qué se verificó
+
+- En el índice de git, los 17 dan el sha256 anotado, uno por uno. Ningún otro
+  fichero de `research/evidencia/` cambia.
+- Los 23 ficheros con CRLF generados en esta máquina (extractos y resúmenes
+  JSON) no tienen ningún sha256 anotado: no están afectados.
+- El flujo de la copia a mano, en una carpeta de prueba fuera del repositorio
+  y con la red desactivada: la copia se anota con su sha256 y sus cifras; las
+  que faltan dicen quién las guarda y con qué nombre; si el fichero cambia
+  después de anotado, el script se para.
+- El resumen `J5_P1_EOAT0826_piezas.json` se regeneró sin ninguna petición.
+
+### Qué no salió, y se anota
+
+- **Las tres copias todavía no existen.** La adenda lo dice en presente ("las
+  guarda una persona") y deja pendiente su fecha y su sha256: no se escribe
+  que están guardadas hasta que estén.
+- `J5_portal_20254_index.htm` sigue con los finales de línea normalizados en
+  git. Es una página intermedia del Portal Estadístico de Criminalidad,
+  descargada el 2026-09-30, sin ninguna anotación.
+
+### Qué quedó pendiente
+
+- **Mateo:** guardar las tres copias en `research/evidencia/` con los nombres
+  de §4h; decidir qué se hace con `J5_portal_20254_index.htm`; decidir el
+  hallazgo de Europa Press Galicia.
+- Cuando estén las copias: anotar en la adenda su fecha y su sha256.
+- P1' sobre `CTH0926` (23-10). Jornada 5 abierta; cronómetro sin tocar.
+  Veredicto de P1, taxonomía, tercer eje y `feat/interfaz`, sin tocar.

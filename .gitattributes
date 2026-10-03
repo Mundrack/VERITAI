@@ -16,3 +16,11 @@
 # linea y el sha256 anotado dejaria de coincidir con lo que hay en el repositorio.
 research/evidencia/J5_P1_*  -text
 research/evidencia/J5_E078_elnuevodigitalmurcia.htm  -text
+# Lo mismo para 17 ficheros descargados antes, comprobados uno por uno el
+# 2026-10-03: la copia de trabajo de cada uno daba el sha256 anotado al
+# descargarlo. J5_portal_20254_index.htm queda fuera a proposito: no tiene
+# sha256 anotado en ningun sitio y no hay con que comprobarlo.
+research/evidencia/D2B_*.htm  -text
+research/evidencia/J5_bde_*.htm  -text
+research/evidencia/J5_portal_4T2025_1509010.csv  -text
+research/evidencia/METODOLOGIA_IME_*.htm  -text

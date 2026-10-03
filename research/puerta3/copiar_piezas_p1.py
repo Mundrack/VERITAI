@@ -23,7 +23,13 @@ QUE NO HACE:
   - No guarda copia si el robots.txt veta la ruta a nuestro agente. Tampoco si
     se la veta, con un grupo propio, a los agentes de Anthropic: este script lo
     ejecuta un agente de ese proveedor, y presentarse con el nombre del proyecto
-    no cambia a quien no quiere leer el sitio. Se anota, y decide Mateo.
+    no cambia a quien no quiere leer el sitio. Mateo confirmo ese criterio el
+    2026-10-03: esas copias las guarda una persona, a mano, desde su navegador.
+
+COPIAS A MANO. Si una persona deja en research/evidencia/ el fichero que este
+script espera para una pieza que el agente no puede pedir, el script la anota
+en el resumen como guardada por una persona, con su sha256, y comprueba las
+cifras. No hace ninguna peticion para eso.
 
 La pieza 4 (El Nuevo Digital Murcia, caso E078) ya tiene copia del 2026-10-02
 (J5_E078_elnuevodigitalmurcia.htm): no se vuelve a pedir.
@@ -68,6 +74,8 @@ CRAWL_DELAY_MAXIMO_S = 120.0  # por encima no se espera: se anota y no se copia
 REDIRECCIONES_MAXIMAS = 2
 RECHAZOS = {401, 403, 406, 418, 429}  # DEC-021
 SENALES_DE_DESAFIO = ("just a moment", "attention required", "captcha", "access denied", "are you a robot")
+POR_EL_AGENTE = "el agente identificado"
+POR_UNA_PERSONA = "una persona, a mano, desde su navegador (decision de Mateo del 2026-10-03); el agente no pide la pagina"
 
 AQUI = Path(__file__).resolve().parent
 EVIDENCIA = AQUI.parent / "evidencia"
@@ -399,7 +407,8 @@ def decidir(robots: dict, url: str) -> dict:
         decision.update({"permitido": False, "motivo": "las dos lecturas del robots.txt no coinciden: no se asume permiso"})
     elif vetos:
         nombres = ", ".join(v["agente"] for v in vetos)
-        decision.update({"permitido": False, "motivo": f"el robots.txt veta la ruta a agentes de Anthropic ({nombres}); decide Mateo"})
+        motivo = f"el robots.txt veta la ruta a agentes de Anthropic ({nombres}): el agente no la pide"
+        decision.update({"permitido": False, "motivo": motivo, "veto_a_anthropic": True})
     elif crawl_delay is not None and crawl_delay > CRAWL_DELAY_MAXIMO_S:
         decision.update({"permitido": False, "motivo": f"Crawl-delay de {crawl_delay} s, por encima del maximo que se espera"})
     else:
@@ -466,6 +475,7 @@ def copiar(pieza: dict, decision: dict) -> dict:
         copia.update(
             {
                 "copiada": True,
+                "por": POR_EL_AGENTE,
                 "bytes": r["bytes"],
                 "sha256": r["sha256"],
                 "content_type": r["content_type"],
@@ -474,6 +484,23 @@ def copiar(pieza: dict, decision: dict) -> dict:
             }
         )
     return copia
+
+
+def copia_a_mano(pieza: dict, decision: dict) -> dict:
+    """Una copia que dejo una persona en la carpeta de evidencia: se anota, sin pedir nada a la red."""
+    destino = EVIDENCIA / pieza["fichero"]
+    crudo = destino.read_bytes()
+    return {
+        "copiada": True,
+        "por": POR_UNA_PERSONA,
+        "por_que_no_el_agente": decision["motivo"],
+        "fichero_guardado_utc": datetime.fromtimestamp(destino.stat().st_mtime, UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "anotada_utc": ahora(),
+        "bytes": len(crudo),
+        "sha256": hashlib.sha256(crudo).hexdigest(),
+        "guardado_en": f"research/evidencia/{pieza['fichero']}",
+        "cifras_de_4h_en_el_texto": comprobar_cifras(crudo, pieza["cifras"]),
+    }
 
 
 def main() -> int:
@@ -495,6 +522,7 @@ def main() -> int:
             crudo = (EVIDENCIA / pieza["fichero"]).read_bytes()
             entrada["copia"] = {
                 "copiada": True,
+                "por": POR_EL_AGENTE,
                 "cuando_utc": pieza["copia_previa"]["descargada_utc"],
                 "nota": pieza["copia_previa"]["nota"],
                 "bytes": len(crudo),
@@ -517,18 +545,26 @@ def main() -> int:
         )
 
         ya = previas.get(pieza["n"], {}).get("copia")
-        if ya and ya.get("copiada") and (EVIDENCIA / pieza["fichero"]).exists():
-            # Ya se copio en una pasada anterior: no se pide otra vez. La comprobacion de
-            # cifras si se repite, sobre el fichero guardado.
+        destino = EVIDENCIA / pieza["fichero"]
+        if ya and ya.get("copiada") and destino.exists():
+            # Ya esta anotada de una pasada anterior: no se pide otra vez. La comprobacion
+            # de cifras si se repite, sobre el fichero guardado.
             entrada["copia"] = ya
-            crudo = (EVIDENCIA / pieza["fichero"]).read_bytes()
+            entrada["copia"].setdefault("por", POR_EL_AGENTE)
+            crudo = destino.read_bytes()
             if hashlib.sha256(crudo).hexdigest() != ya["sha256"]:
-                raise RuntimeError(f"{pieza['fichero']} ha cambiado desde que se guardo")
+                raise RuntimeError(f"{pieza['fichero']} ha cambiado desde que se anoto")
             entrada["copia"]["cifras_de_4h_en_el_texto"] = comprobar_cifras(crudo, pieza["cifras"])
-        elif args.solo_robots:
-            entrada["copia"] = {"copiada": False, "motivo": "pasada de solo robots: todavia no se ha pedido la pagina"}
+        elif not decision["permitido"] and decision.get("veto_a_anthropic") and destino.exists():
+            entrada["copia"] = copia_a_mano(pieza, decision)
+            print(f"   copia a mano, de una persona: {entrada['copia']['bytes']} bytes, sha256 {entrada['copia']['sha256'][:16]}")
         elif not decision["permitido"]:
             entrada["copia"] = {"copiada": False, "motivo": decision["motivo"]}
+            if decision.get("veto_a_anthropic"):
+                entrada["copia"]["quien_la_guarda"] = POR_UNA_PERSONA
+                entrada["copia"]["fichero_esperado"] = f"research/evidencia/{pieza['fichero']}"
+        elif args.solo_robots:
+            entrada["copia"] = {"copiada": False, "motivo": "pasada de solo robots: todavia no se ha pedido la pagina"}
         else:
             entrada["copia"] = copiar(pieza, decision)
             c = entrada["copia"]
@@ -544,7 +580,7 @@ def main() -> int:
         "piezas": salida,
     }
     RESUMEN.write_text(json.dumps(resumen, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
-    print(f"resumen: {RESUMEN.relative_to(AQUI.parent.parent).as_posix()}")
+    print(f"resumen: research/evidencia/{RESUMEN.name}")
     return 0
 
 

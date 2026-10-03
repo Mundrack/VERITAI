@@ -1,6 +1,6 @@
 {
   "que_es": "Direcciones, fechas de consulta y copias locales de las siete piezas contadas en P1 sobre EOAT0826 (diseno 4h)",
-  "generado_utc": "2026-10-03T20:00:16Z",
+  "generado_utc": "2026-10-03T20:20:43Z",
   "agente": "VERITAI-prototipo/0.1 (tesis UDLA; agente identificado, DEC-018)",
   "convencion": "robots.txt una vez por dominio antes de cualquier otra peticion; Crawl-delay del sitio o, si no declara, 3.0 s de cortesia; un rechazo cierra la copia (DEC-018, DEC-021)",
   "piezas": [
@@ -40,12 +40,15 @@
             }
           ],
           "permitido": false,
-          "motivo": "el robots.txt veta la ruta a agentes de Anthropic (claudebot, anthropic-ai); decide Mateo"
+          "motivo": "el robots.txt veta la ruta a agentes de Anthropic (claudebot, anthropic-ai): el agente no la pide",
+          "veto_a_anthropic": true
         }
       },
       "copia": {
         "copiada": false,
-        "motivo": "el robots.txt veta la ruta a agentes de Anthropic (claudebot, anthropic-ai); decide Mateo"
+        "motivo": "el robots.txt veta la ruta a agentes de Anthropic (claudebot, anthropic-ai): el agente no la pide",
+        "quien_la_guarda": "una persona, a mano, desde su navegador (decision de Mateo del 2026-10-03); el agente no pide la pagina",
+        "fichero_esperado": "research/evidencia/J5_P1_1_europapress_andalucia_ultimahora.htm"
       }
     },
     {
@@ -84,12 +87,15 @@
             }
           ],
           "permitido": false,
-          "motivo": "el robots.txt veta la ruta a agentes de Anthropic (claudebot, anthropic-ai); decide Mateo"
+          "motivo": "el robots.txt veta la ruta a agentes de Anthropic (claudebot, anthropic-ai): el agente no la pide",
+          "veto_a_anthropic": true
         }
       },
       "copia": {
         "copiada": false,
-        "motivo": "el robots.txt veta la ruta a agentes de Anthropic (claudebot, anthropic-ai); decide Mateo"
+        "motivo": "el robots.txt veta la ruta a agentes de Anthropic (claudebot, anthropic-ai): el agente no la pide",
+        "quien_la_guarda": "una persona, a mano, desde su navegador (decision de Mateo del 2026-10-03); el agente no pide la pagina",
+        "fichero_esperado": "research/evidencia/J5_P1_2_elconciso.htm"
       }
     },
     {
@@ -145,7 +151,8 @@
             "encontrada": true,
             "contexto": "sto, las mayoría de pernoctaciones extrahoteleras fueron en campings, concretamente 606.447, un 5,4% menos. Tras los campings, el segundo mayor vo"
           }
-        ]
+        ],
+        "por": "el agente identificado"
       }
     },
     {
@@ -158,6 +165,7 @@
       "primera_consulta_como": "herramienta de lectura web del agente (sesion 3 de la jornada 5)",
       "copia": {
         "copiada": true,
+        "por": "el agente identificado",
         "cuando_utc": "2026-10-02T02:28:21Z",
         "nota": "copia de la sesion 3 (caso E078), con robots.txt consultado antes; no se vuelve a pedir",
         "bytes": 67199,
@@ -240,7 +248,8 @@
             "encontrada": true,
             "contexto": "os, hasta 159.789. Las noches realizadas en los campamentos cayeron un 6,6%, mientras que en los albergues bajaron"
           }
-        ]
+        ],
+        "por": "el agente identificado"
       }
     },
     {
@@ -279,12 +288,15 @@
             }
           ],
           "permitido": false,
-          "motivo": "el robots.txt veta la ruta a agentes de Anthropic (claudebot, anthropic-ai); decide Mateo"
+          "motivo": "el robots.txt veta la ruta a agentes de Anthropic (claudebot, anthropic-ai): el agente no la pide",
+          "veto_a_anthropic": true
         }
       },
       "copia": {
         "copiada": false,
-        "motivo": "el robots.txt veta la ruta a agentes de Anthropic (claudebot, anthropic-ai); decide Mateo"
+        "motivo": "el robots.txt veta la ruta a agentes de Anthropic (claudebot, anthropic-ai): el agente no la pide",
+        "quien_la_guarda": "una persona, a mano, desde su navegador (decision de Mateo del 2026-10-03); el agente no pide la pagina",
+        "fichero_esperado": "research/evidencia/J5_P1_6_europapress_baleares_ultimahora.htm"
       }
     },
     {
@@ -345,7 +357,8 @@
             "encontrada": true,
             "contexto": "25) y los apartamentos turísticos, hasta las 1.202.961 (vs. 1.461.194). El turismo rural registró 281.619, un"
           }
-        ]
+        ],
+        "por": "el agente identificado"
       }
     }
   ]

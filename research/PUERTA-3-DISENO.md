@@ -616,12 +616,12 @@ la de Murcia quedó guardada, por ser el caso E078.
 
 | # | Pieza (dónde se leyó) | Primera consulta (UTC) | `robots.txt` del sitio, consultado el 2026-10-03 | Copia local en `research/evidencia/` |
 |---|---|---|---|---|
-| 1 | Europa Press, Andalucía (Última Hora) | 2026-10-02 02:25:50Z | veta por nombre a `ClaudeBot` y `anthropic-ai` | **no se guardó** |
-| 2 | El Conciso (A. Ruiz) | 2026-10-02 02:25:52Z | veta por nombre a `ClaudeBot` y `anthropic-ai` | **no se guardó** |
+| 1 | Europa Press, Andalucía (Última Hora) | 2026-10-02 02:25:50Z | veta por nombre a `ClaudeBot` y `anthropic-ai` | el agente no la pidió; **la guarda una persona, a mano**: `J5_P1_1_europapress_andalucia_ultimahora.htm` |
+| 2 | El Conciso (A. Ruiz) | 2026-10-02 02:25:52Z | veta por nombre a `ClaudeBot` y `anthropic-ai` | el agente no la pidió; **la guarda una persona, a mano**: `J5_P1_2_elconciso.htm` |
 | 3 | ifomo (M. Alonso) | 2026-10-02 02:25:54Z | permite la ruta; sin `Crawl-delay` | `J5_P1_3_ifomo.htm`, 2026-10-03 19:53:48Z, sha256 `d67ed3397e76a0ad` |
 | 4 | El Nuevo Digital Murcia (F. A.) | 2026-10-02 02:25:59Z | consultado el 2026-10-02, antes de la copia | `J5_E078_elnuevodigitalmurcia.htm`, 2026-10-02 02:28:21Z, sha256 `a64aec717be56847` |
 | 5 | Europa Press, Galicia (Galicia Press) | 2026-10-02 02:27:12Z | permite la ruta; sin `Crawl-delay` para el grupo general | `J5_P1_5_europapress_galicia_galiciapress.htm`, 2026-10-03 19:53:50Z, sha256 `eccc207aeb306e8c` |
-| 6 | Europa Press, Illes Balears (Última Hora) | 2026-10-02 02:27:14Z | veta por nombre a `ClaudeBot` y `anthropic-ai` | **no se guardó** |
+| 6 | Europa Press, Illes Balears (Última Hora) | 2026-10-02 02:27:14Z | veta por nombre a `ClaudeBot` y `anthropic-ai` | el agente no la pidió; **la guarda una persona, a mano**: `J5_P1_6_europapress_baleares_ultimahora.htm` |
 | 7 | ACN (Via Empresa) | 2026-10-02 02:27:15Z | permite la ruta; sin `Crawl-delay` | `J5_P1_7_acn_viaempresa.htm`, 2026-10-03 19:53:51Z, sha256 `82ac3c74e491ec67` |
 
 1. <https://www.ultimahora.es/noticias/comunidades/2026/10/01/2720069/pernoctaciones-extrahoteleras-crecen-andalucia-agosto-superan-tres-millones.html>
@@ -656,6 +656,26 @@ una persona puede guardarlas desde su navegador. Para que el criterio se
 pueda juzgar entero: `galiciapress.es` veta a `GPTBot`, `Google-Extended` y
 `CCBot`, pero no nombra a los agentes de Anthropic ni restringe la ruta al
 grupo general, y por eso sí se copió.
+
+**Decisión de Mateo, el mismo 2026-10-03.** La abstención del agente fue
+correcta: el `robots.txt` de esos dos sitios veta por nombre a `ClaudeBot` y
+a `anthropic-ai`, y un agente de ese proveedor no pide esas páginas, se
+presente con el nombre que se presente. **Las copias de las piezas 1, 2 y 6
+las guarda una persona, a mano, desde su navegador; no un agente.** Van en
+`research/evidencia/`, guardadas como "página web, solo HTML", con estos
+nombres:
+
+- pieza 1: `J5_P1_1_europapress_andalucia_ultimahora.htm`
+- pieza 2: `J5_P1_2_elconciso.htm`
+- pieza 6: `J5_P1_6_europapress_baleares_ultimahora.htm`
+
+Al escribir esta nota todavía no están en la carpeta. Cuando estén,
+`copiar_piezas_p1.py` las anota en el resumen como guardadas por una
+persona, con su fecha y su sha256, sin hacer ninguna petición, y comprueba
+que las cifras de arriba están en el texto; la fecha y el sha256 se añaden
+entonces aquí. Una copia guardada desde el navegador puede no ser idéntica
+byte a byte a la que recibiría un agente: lo que respalda es el texto de la
+pieza.
 
 **Límite que esto deja a la vista.** El 1 de octubre las piezas se leyeron
 con la herramienta de lectura web del agente, y antes de esas lecturas el

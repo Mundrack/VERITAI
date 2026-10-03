@@ -507,3 +507,14 @@ cronómetro no se reanuda. La jornada 5 sigue abierta (`P3-PAUSA8`).
 - Pendiente de Mateo: el hallazgo de Europa Press Galicia (signo invertido),
   único candidato a F que queda sin caso; las tres copias; y los 18 ficheros.
 - Pendiente: P1' sobre `CTH0926` (23-10).
+
+Más tarde, el mismo día, con tres decisiones de Mateo:
+
+- **Las tres copias que faltan las guarda una persona, a mano**, desde el
+  navegador; la abstención del agente fue correcta. Nombres de fichero en
+  diseño §4h. Todavía no están en la carpeta.
+- **Evidencia byte a byte:** comprobados uno por uno los 18 ficheros. En 17,
+  la copia de trabajo da el sha256 anotado al descargar; corregidos con la
+  regla de `.gitattributes`. `J5_portal_20254_index.htm` no tiene sha256
+  anotado en ningún sitio: no se tocó. Tabla en la bitácora.
+- **Europa Press Galicia:** datos entregados a Mateo; decide él.
