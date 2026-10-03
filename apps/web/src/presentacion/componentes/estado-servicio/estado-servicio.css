@@ -1,0 +1,80 @@
+/*
+ * estado-servicio: lo que main.ts pintaba el 2026-10-03, con prefijo y tokens.
+ * Bloque .veritai-estado-servicio; elementos con __; estado con --.
+ * Ningun valor literal: todo var(--veritai-...).
+ */
+
+.veritai-estado-servicio__titulo {
+  margin: 0 0 var(--veritai-espacio-1);
+  font-size: var(--veritai-tipografia-tamano-titulo);
+  letter-spacing: var(--veritai-tipografia-espaciado-titulo);
+}
+
+.veritai-estado-servicio__subtitulo {
+  margin: 0 0 var(--veritai-espacio-11);
+  color: var(--veritai-color-tenue);
+}
+
+.veritai-estado-servicio__aviso {
+  background: var(--veritai-color-aviso-fondo);
+  border: var(--veritai-borde-ancho) solid var(--veritai-color-aviso-borde);
+  border-radius: var(--veritai-radio-2);
+  padding: var(--veritai-espacio-6) var(--veritai-espacio-8);
+  margin-bottom: var(--veritai-espacio-12);
+  font-size: var(--veritai-tipografia-tamano-pequeno);
+}
+
+.veritai-estado-servicio__tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--veritai-espacio-10);
+}
+
+.veritai-estado-servicio__cabecera,
+.veritai-estado-servicio__celda {
+  text-align: left;
+  padding: var(--veritai-espacio-4) var(--veritai-espacio-2);
+  border-bottom: var(--veritai-borde-ancho) solid var(--veritai-color-borde);
+}
+
+.veritai-estado-servicio__cabecera {
+  width: var(--veritai-tabla-cabecera-ancho);
+  font-weight: var(--veritai-peso-medio);
+  color: var(--veritai-color-tenue);
+}
+
+.veritai-estado-servicio__marca {
+  font-weight: var(--veritai-peso-seminegrita);
+}
+
+.veritai-estado-servicio__marca--ok {
+  color: var(--veritai-color-ok);
+}
+
+.veritai-estado-servicio__marca--mal {
+  color: var(--veritai-color-mal);
+}
+
+.veritai-estado-servicio__acciones {
+  display: flex;
+  gap: var(--veritai-espacio-5);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.veritai-estado-servicio__boton,
+.veritai-estado-servicio__selector {
+  font: inherit;
+  padding: var(--veritai-espacio-3) var(--veritai-espacio-7);
+  border: var(--veritai-borde-ancho) solid var(--veritai-color-borde);
+  border-radius: var(--veritai-radio-1);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.veritai-estado-servicio__pie {
+  margin-top: var(--veritai-espacio-9);
+  color: var(--veritai-color-tenue);
+  font-size: var(--veritai-tipografia-tamano-pie);
+}

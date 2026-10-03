@@ -24,9 +24,12 @@ anota.
 
 ---
 
-## 0. Lo que hay hoy (foto del 2026-10-03)
+## 0. Lo que había (foto del 2026-10-03, antes de la reestructuración)
 
-Esto es lo que existe en `apps/web/`. El resto del documento parte de aquí.
+Esto es lo que existía en `apps/web/` cuando se escribió el documento. El
+mismo día se movió `main.ts` a las capas de §1 y §2 sin cambiar lo que se ve;
+lo que queda por hacer está en §9. La foto se conserva porque explica de dónde
+vienen las reglas.
 
 | Qué | Cómo está | Dónde |
 |---|---|---|
@@ -177,31 +180,31 @@ apps/web/
 ├─ package.json               ✓  Scripts y dependencias. Entra: vite, typescript, vitest, happy-dom, coverage. No entra: ningún framework de UI, ningún cliente HTTP.
 ├─ tsconfig.json              ✓  TypeScript estricto. No se relaja ninguna opción para que compile un fichero.
 ├─ vite.config.ts             ✓  Servidor de desarrollo y build. Las constantes del contenedor (host, puerto, polling) viven aquí y solo aquí.
-├─ vitest.config.ts           —  Runner de pruebas, entorno happy-dom, umbrales de cobertura (§5.3).
-├─ arquitectura.json          —  La matriz de §1.2 como datos. La lee la prueba de dependencias.
+├─ vitest.config.ts           ✓  Runner de pruebas, entorno happy-dom, umbrales de cobertura (§5.3).
+├─ arquitectura.json          ✓  La matriz de §1.2 como datos. La lee la prueba de dependencias.
 ├─ Dockerfile                 ✓  Etapas deps / dev / build. No se sirve nada desde aquí; la extensión no corre en un contenedor.
 ├─ src/
-│  ├─ main.ts                 ✓  Arranque del panel suelto. Entra: montar aplicacion en #app. No entra: fetch, HTML, estilos, lógica (hoy entra todo: §9).
-│  ├─ contrato/               —  Tipos y validadores de lo que devuelve la API. Entra: enums, Veredicto, NumeroUsado, EvidenciaEdicion, RespuestaAnalisis, RespuestaSalud. No entra: DOM, red, texto de interfaz.
+│  ├─ main.ts                 ✓  Arranque del panel suelto. Entra: montar aplicacion en #app. No entra: fetch, HTML, estilos, lógica.
+│  ├─ contrato/               ✓  Tipos y validadores de lo que devuelve la API (hoy: salud.ts, el contrato de GET /health). Entra: enums, Veredicto, NumeroUsado, EvidenciaEdicion, RespuestaAnalisis, RespuestaSalud. No entra: DOM, red, texto de interfaz.
 │  │  ├─ enums.ts             —  Truth, Context, Clase, AbstainReason: los mismos valores que domain/enums.py, comprobados por una prueba (§5.2).
 │  │  ├─ veredicto.ts         —  Tipos del veredicto y de la evidencia.
 │  │  └─ validar.ts           —  validarVeredicto(json): Veredicto | ErrorContrato. Rechaza lo que no tiene la forma esperada; nunca "arregla" un JSON.
-│  ├─ cliente/                —  Acceso a la API. Entra: fetch con tiempo máximo, URL base, errores tipados (sin respuesta, tiempo agotado, HTTP n, contrato inválido). No entra: nada visual, nada de página de terceros.
-│  │  ├─ api.ts               —  consultarSalud(), analizar(claim).
-│  │  └─ config.ts            —  URL base y tiempo máximo leídos de import.meta.env, con nombre y comentario.
-│  ├─ formato/                —  Presentación de valores sin alterarlos. Entra: formatearNumero(valor, span, locale), formatearFecha. No entra: aritmética.
+│  ├─ cliente/                ✓  Acceso a la API. Entra: fetch con tiempo máximo, URL base, errores tipados (sin respuesta, tiempo agotado, HTTP n, contrato inválido). No entra: nada visual, nada de página de terceros.
+│  │  ├─ api.ts               ✓  consultarSalud(); analizar(claim) todavía no.
+│  │  └─ config.ts            ✓  URL base y tiempo máximo leídos de import.meta.env, con nombre y comentario.
+│  ├─ formato/                ✓  Presentación de valores sin alterarlos (hoy: fechas.ts). Entra: formatearNumero(valor, span, locale), formatearFecha. No entra: aritmética.
 │  ├─ i18n/                   ✓  Catálogos y t(). Entra: es.json, en.json, index.ts. No entra: DOM (fijarLocale deja de tocar document.documentElement: §9), ni textos de dominio generados por la API.
-│  ├─ presentacion/           —  Lo que se ve.
+│  ├─ presentacion/           ✓  Lo que se ve (parcial: estado-servicio, tokens.css, base.css).
 │  │  ├─ estados.ts           —  Mapa cerrado enum → estado visual (clase modificadora, icono, clave i18n). Un valor fuera del enum → "desconocido".
 │  │  ├─ componentes/         —  Un subdirectorio por componente, con su .ts y su .css. Entra: construir DOM a partir del contrato y de t(). No entra: fetch, selectores de la página, números literales, colores.
 │  │  │  ├─ panel-veredicto/  —  El veredicto completo: dos ejes, clase, motivos, números con su origen, evidencia al publicar y vigente.
 │  │  │  ├─ marca-eje/        —  Una etiqueta de estado para truth o para context.
 │  │  │  ├─ numero-trazado/   —  Un número con su raw_value_span desplegable. Es la unidad que hace visible la trazabilidad.
 │  │  │  ├─ motivo-abstencion/—  El motivo de abstención con su texto i18n.
-│  │  │  └─ estado-servicio/  —  Lo que hoy pinta main.ts: API y base de datos vivas o no.
+│  │  │  └─ estado-servicio/  ✓  Lo que pintaba main.ts: API y base de datos vivas o no.
 │  │  ├─ estilos/
-│  │  │  ├─ tokens.css        —  Las variables --veritai-* (color, espacio, radio, tipografía, sombra, capa) para tema claro y oscuro. Es el ÚNICO fichero con valores literales de color y tamaño.
-│  │  │  ├─ base.css          —  Estilos del panel suelto (index.html): body, tipografía base. NUNCA se inyecta en una página de terceros.
+│  │  │  ├─ tokens.css        ✓  Las variables --veritai-* (color, espacio, radio, tipografía, sombra, capa) para tema claro y oscuro. Es el ÚNICO fichero con valores literales de color y tamaño.
+│  │  │  ├─ base.css          ✓  Estilos del panel suelto (index.html): body, tipografía base. NUNCA se inyecta en una página de terceros.
 │  │  │  └─ raiz.css          —  Lo que se aplica dentro del shadow root inyectado: :host y reinicio mínimo. Sin selectores de elemento sueltos.
 │  │  └─ montar.ts            —  Crea el shadow root (en páginas de terceros) o usa #app (panel suelto), adjunta tokens.css + raiz.css + los .css de los componentes, y devuelve el punto de montaje.
 │  ├─ localizacion/           —  El motor que aplica las estrategias de sitios/. Entra: localizar(), tipos de estrategia (enum cerrado), comprobaciones, registro de fallos. No entra: ningún selector literal, nada de veredictos.
@@ -212,15 +215,15 @@ apps/web/
 │  │  ├─ esquema.json         —  JSON Schema que todo fichero de sitio debe cumplir.
 │  │  ├─ x.json               —  X (x.com, twitter.com). El único sitio del alcance de la tesis (Fase 0).
 │  │  └─ <sitio>.json         —  Cualquier otro, con la misma forma. Añadirlo no toca localizacion/.
-│  ├─ aplicacion/             —  Orquestación. Entra: flujo localizar → analizar → montar, y el estado de la sesión. No entra: reglas de negocio, estilos, selectores.
-│  │  └─ flujo.ts
+│  ├─ aplicacion/             ✓  Orquestación. Entra: flujo localizar → analizar → montar, y el estado de la sesión. No entra: reglas de negocio, estilos, selectores.
+│  │  └─ flujo.ts             ✓
 │  └─ extension/              —  Adaptación a MV3. Entra: manifest (generado), content script, service worker, popup. No entra: lógica fuera de aplicacion.
 │     ├─ manifest.base.json   —  Permisos mínimos; host_permissions se generan desde sitios/*.json en el build.
 │     ├─ contenido.ts         —  Content script: llama a aplicacion.
 │     ├─ fondo.ts             —  Service worker: solo lo que MV3 obliga a hacer ahí.
 │     └─ popup/
-└─ tests/                     —  Espejo de src/ más arquitectura/ y fixtures/. Sin pruebas no hay componente (§5).
-   ├─ arquitectura/           —  dependencias, prefijos CSS, literales, paridad de enums con la API.
+└─ tests/                     ✓  Espejo de src/ (parcial) más arquitectura/ y fixtures/. Sin pruebas no hay componente (§5).
+   ├─ arquitectura/           ✓  dependencias y DOM inseguro; faltan prefijos CSS, literales, selectores y paridad de enums con la API.
    ├─ contrato/  cliente/  formato/  i18n/  presentacion/  localizacion/  aplicacion/
    └─ fixtures/
       ├─ api/                 —  Respuestas JSON reales de POST /analisis y GET /health, con fecha.
@@ -308,10 +311,9 @@ para todo (lento, necesita navegador real; queda para humo e2e al final, no
 para el día a día). Son tres dependencias de desarrollo: `vitest`,
 `happy-dom`, `@vitest/coverage-v8`.
 
-`npm test` ejecuta todo; `npm run build` no se da por bueno si `npm test`
-falla (pendiente de conectar en `package.json` cuando las pruebas de
-arquitectura estén en verde, para no romper la etapa `build` del Dockerfile
-mientras `main.ts` siga como está). Las pruebas corren dentro del contenedor
+`npm test` ejecuta todo; `npm run build` ejecuta `tsc`, `vitest run` y
+`vite build`, en ese orden, y falla si falla cualquiera (conectado el
+2026-10-03 al quedar las pruebas en verde). Las pruebas corren dentro del contenedor
 `veritai-web`, como las de la API corren en el suyo: `tests/`,
 `vitest.config.ts` y `arquitectura.json` van montados en solo lectura
 (`docker-compose.override.yml`); hace falta reconstruir la imagen para que
@@ -655,21 +657,21 @@ que mover antes del primer componente.
 
 | # | Incumplimiento | Dónde | Regla |
 |---|---|---|---|
-| 1 | Un solo módulo hace red, orquestación, construcción de HTML y escapado | `src/main.ts` | §1.1, §2: `cliente/`, `aplicacion/`, `presentacion/`, `contrato/` |
-| 2 | El tipo `RespuestaSalud` está definido en el módulo de arranque, no en el contrato | `main.ts` | §2 `contrato/` |
-| 3 | Número mágico: tiempo máximo `4000` en línea; `total: 2` servicios en línea | `main.ts` líneas 29 y 94 | §4 números mágicos; `cliente/config.ts` |
-| 4 | El HTML se construye con plantillas de cadena e `innerHTML` interpolado. Está escapado con `escapar()`, así que no es un fallo de seguridad hoy; incumple la convención de construir con `createElement`/`textContent` y es lo que la prueba de DOM inseguro prohibirá | `main.ts` | §4 DOM inseguro |
-| 5 | Ganchos del DOM propio por `id` (`#recomprobar`, `#idioma`) y clases, no por `data-veritai` | `main.ts`, `index.html` | §3 ganchos |
-| 6 | Variables CSS sin prefijo: `--fondo`, `--texto`, `--tenue`, `--borde`, `--ok`, `--mal`, `--aviso-fondo`, `--aviso-borde` | `src/estilos.css` | §3 tokens `--veritai-*` |
-| 7 | Clases sin prefijo: `.panel`, `.subtitulo`, `.aviso`, `.ok`, `.mal`, `.acciones`, `.pie` | `estilos.css`, `index.html` | §3, §4 prefijos |
-| 8 | Selectores de elemento globales (`body`, `h1`, `table`, `th`, `td`, `button`, `select`) en la única hoja de estilos; en una página de terceros deformarían la página o se deformarían | `estilos.css` | §4; separar `base.css` (solo panel suelto) de `raiz.css` + componentes |
-| 9 | Tamaños y radios literales fuera de tokens: `46rem`, `2.5rem 1.5rem 4rem`, `8px`, `6px`, `1px solid`, `0.9rem`, `0.85rem`, `15px/1.55`, `-0.01em` | `estilos.css` | §4 literales CSS |
-| 10 | Un fichero de estilos para todo; no hay `tokens.css`, `base.css`, `raiz.css` ni hojas por componente | `estilos.css` | §2 |
+| 1 | ~~Un solo módulo hace red, orquestación, construcción de HTML y escapado~~ **Hecho el 2026-10-03:** `cliente/api.ts`, `aplicacion/flujo.ts`, `presentacion/componentes/estado-servicio/`, `contrato/salud.ts`; `main.ts` solo arranca | `src/main.ts` | §1.1, §2 |
+| 2 | ~~El tipo `RespuestaSalud` está definido en el módulo de arranque~~ **Hecho:** `contrato/salud.ts`, con validador `esRespuestaSalud` | `contrato/salud.ts` | §2 |
+| 3 | ~~Número mágico: tiempo máximo `4000` en línea; `total: 2` servicios en línea~~ **Hecho:** `TIEMPO_MAXIMO_API_MS` en `cliente/config.ts`; el total de servicios es la longitud de la lista de servicios vigilados | `cliente/config.ts`, `estado-servicio.ts` | §4 |
+| 4 | ~~El HTML se construye con plantillas de cadena e `innerHTML` interpolado~~ **Hecho:** `createElement` y `textContent`; `escapar()` desaparece; la prueba de DOM inseguro pasa | `estado-servicio.ts` | §4 |
+| 5 | ~~Ganchos del DOM propio por `id` y clases~~ **Hecho:** `data-veritai="recomprobar"` y `data-veritai="idioma"`; el `<label for>` conserva un `id` con prefijo (`veritai-idioma`) porque la asociación accesible lo exige | `estado-servicio.ts` | §3 |
+| 6 | ~~Variables CSS sin prefijo~~ **Hecho:** `tokens.css` con `--veritai-color-*`, `--veritai-espacio-*`, `--veritai-radio-*`, tipografía, pesos y medidas, en tema claro y oscuro | `presentacion/estilos/tokens.css` | §3 |
+| 7 | ~~Clases sin prefijo~~ **Hecho:** bloque `.veritai-estado-servicio` con `__elemento` y `--estado`; `.veritai-pagina` y `.veritai-panel` en `base.css` | `estado-servicio.css`, `base.css`, `index.html` | §3, §4 |
+| 8 | ~~Selectores de elemento globales~~ **Hecho:** ninguno; el `<body>` del panel suelto lleva `class="veritai-pagina"` y `base.css` solo se carga en `index.html`. `raiz.css` no existe todavía porque nada se inyecta en terceros | `base.css`, `estado-servicio.css` | §4 |
+| 9 | ~~Tamaños y radios literales fuera de tokens~~ **Hecho:** todos en `tokens.css`; comprobado declaración a declaración que las 57 declaraciones y los 16 colores (claro y oscuro) resuelven a los mismos valores que antes. La prueba automática de literales sigue pendiente | `tokens.css` | §4 |
+| 10 | ~~Un fichero de estilos para todo~~ **Hecho:** `tokens.css`, `base.css` y `estado-servicio.css`; `raiz.css` y `montar.ts` llegarán con la primera inyección en terceros | `presentacion/estilos/`, `componentes/estado-servicio/` | §2 |
 | 11 | La capa i18n toca el DOM: `fijarLocale` escribe `document.documentElement.lang` | `src/i18n/index.ts` línea 55 | §1.2 (`i18n` no importa nada ni toca el DOM); eso va a `presentacion/montar.ts` |
 | 12 | `t()` cae en silencio al catálogo español si la clave falta en inglés; sin prueba de paridad, una traducción que falta pasa desapercibida | `i18n/index.ts` línea 70 | §5.2 prueba de i18n |
-| 13 | ~~Ninguna prueba de la interfaz; no hay runner ni `npm test`~~ **Desde el 2026-10-03:** Vitest 5 con happy-dom, `npm test`, `npm run test:cobertura`, y las dos primeras pruebas de arquitectura (dependencias y DOM inseguro), **en rojo contra `main.ts` a propósito**. Siguen sin existir las demás pruebas de §5.2, y `build` todavía no exige `npm test` (se conecta cuando las pruebas estén en verde) | `package.json`, `vitest.config.ts`, `tests/arquitectura/` | §5 |
+| 13 | ~~Ninguna prueba de la interfaz; no hay runner ni `npm test`~~ **Desde el 2026-10-03:** Vitest 5 con happy-dom; `npm test` y `npm run test:cobertura`; dos pruebas de arquitectura (dependencias, DOM inseguro) y una de componente (`estado-servicio`, siete casos: orden, textos en `es` y `en`, marcas, pie, acciones, escapado), **todas en verde**; `build` exige `npm test`. Siguen pendientes las demás pruebas de §5.2: prefijos y literales CSS, selectores, paridad de enums, i18n, contrato, sitios, accesibilidad | `package.json`, `vitest.config.ts`, `tests/` | §5 |
 | 14 | Ni lint ni formateador para TypeScript, cuando la API tiene `ruff` y `ruff format` | `apps/web/` | §5.3 punto 3 exige al menos `typecheck`; un lint es deuda declarada |
-| 15 | ~~No existe `arquitectura.json` ni prueba de dependencias~~ **Desde el 2026-10-03** existen `arquitectura.json` y `tests/arquitectura/dependencias.test.ts`, que falla en `main.ts:9` (importa `i18n` en vez de `aplicacion`). La prueba equivalente del lado Python sigue siendo deuda (`ARQUITECTURA.md` §3) | `apps/web/`, `ARQUITECTURA.md` §3 | §1.4 |
+| 15 | ~~No existe `arquitectura.json` ni prueba de dependencias~~ **Desde el 2026-10-03** existen `arquitectura.json` y `tests/arquitectura/dependencias.test.ts`, en verde tras la reestructuración. La prueba equivalente del lado Python sigue siendo deuda (`ARQUITECTURA.md` §3) | `apps/web/`, `ARQUITECTURA.md` §3 | §1.4 |
 | 16 | `index.html` no declara CSP; el panel suelto la necesitará y la extensión la exige | `index.html` | §8 |
 | 17 | La explicación del veredicto se genera solo en español en el dominio (`plantilla.py`, `SALIDA`, `MOTIVOS`); la interfaz en inglés no puede mostrarla sin incumplir §10, y hoy no tiene plantillas propias para recomponerla | `apps/api/veritai/domain/plantilla.py` | §1.3 punto 4; es trabajo de interfaz, no de dominio |
 | 18 | `sitios/`, `localizacion/`, fixtures y extensión no existen. No es un incumplimiento: es lo que este documento ordena antes de escribirlos | — | §7 |
@@ -681,8 +683,9 @@ documentada en el propio fichero; CORS con lista explícita en la API; `src/`
 montado en solo lectura; puerto publicado solo en `127.0.0.1`; TypeScript
 estricto con `noUncheckedIndexedAccess`.
 
-Orden propuesto para ponerse al día, a decidir por Mateo: primero las
-pruebas de arquitectura y el runner (§5.1), que son las que impiden que lo
-nuevo nazca torcido; después mover `main.ts` a las capas (§2) con `tokens.css`
-y prefijos; y solo entonces el primer componente, `estado-servicio`, que es lo
-que `main.ts` ya pinta.
+Orden que se siguió el 2026-10-03, decidido por Mateo: primero el runner y
+las pruebas de arquitectura (§5.1), en rojo contra el código de entonces;
+después `main.ts` a las capas (§2) con `tokens.css` y prefijos, sin cambiar lo
+que se ve, y `estado-servicio` como primer módulo de presentación. **Quedan
+abiertos los puntos 11, 12, 14, 16 y 17, y las pruebas que faltan del 13.**
+Los componentes del veredicto y de la extensión (§2) son el paso siguiente.

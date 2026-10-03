@@ -1574,3 +1574,49 @@ implementación; no toca la Puerta 3; B0/B1/B2 no se diseñan.
   §5.2. Conectar `npm test` al `build` cuando esté en verde. Reconstruir la
   imagen web para tener Vitest dentro del contenedor.
 - Jornada 5: abierta en `feat/puerta-3-recoleccion`, sin tocar.
+
+---
+
+## 2026-10-03 (14:09Z) — `main.ts` a las capas sin cambiar lo que se ve; las pruebas de arquitectura en verde
+
+### Qué se hizo
+
+- `src/main.ts` queda en arrancar `aplicacion/flujo.ts` en `#app`. Red en
+  `cliente/api.ts` (+ `config.ts` con `URL_BASE_API` y
+  `TIEMPO_MAXIMO_API_MS`); contrato de `/health` en `contrato/salud.ts` con
+  validador; hora por idioma en `formato/fechas.ts`; pintado en
+  `presentacion/componentes/estado-servicio/` con `createElement` y
+  `textContent`, ganchos `data-veritai`, y el total de servicios como longitud
+  de la lista. `escapar()` desaparece.
+- Estilos: `tokens.css` (todos los literales, claro y oscuro), `base.css`
+  (`.veritai-pagina`, `.veritai-panel`) y `estado-servicio.css` (bloque con
+  prefijo). `estilos.css` eliminado; `index.html` enlaza las tres hojas y
+  marca `<body>` y `<main>` con clases. Sin selectores de elemento.
+- Prueba de componente `tests/presentacion/estado-servicio.test.ts` (7 casos).
+- `npm run build` exige `tsc`, `vitest run` y `vite build` (§5.1).
+- `ARQUITECTURA-VISUAL.md`: §0 pasa a "lo que había", árbol de §2 y tabla de
+  §9 actualizados; puntos 1–10 tachados; abiertos 11, 12, 14, 16, 17 y las
+  pruebas que faltan del 13.
+
+### Qué se verificó
+
+- `npm run typecheck` en verde; `npm test`: 3 ficheros, 12 pruebas, todas en
+  verde (las dos de arquitectura pasaron de rojo a verde sin tocar la prueba).
+- **No cambia lo que se ve**, por dos comprobaciones temporales no
+  versionadas: (1) las 57 declaraciones CSS y los 16 colores (claro y oscuro)
+  del `estilos.css` antiguo resuelven a los mismos valores en las hojas
+  nuevas con los tokens sustituidos, selector a selector; (2) el `main.ts`
+  antiguo (de git) y el componente nuevo, ejecutados en happy-dom con la API
+  simulada viva, caída y en inglés, producen los mismos 27 nodos con los
+  mismos textos. Única diferencia estructural: un `<div>` envoltorio sin
+  estilos alrededor del contenido, y los `id` `recomprobar`/`idioma` pasan a
+  `data-veritai` (el `<select>` conserva `id="veritai-idioma"` para el
+  `<label for>`).
+- `npm run build` en verde: 15 módulos, una hoja CSS de 3,75 kB.
+
+### Qué quedó pendiente
+
+- §9: 11 (i18n toca el DOM), 12 (paridad de catálogos), 14 (lint TS), 16
+  (CSP), 17 (explicación solo en español), y las pruebas que faltan del 13.
+- Reconstruir la imagen web para tener Vitest dentro del contenedor.
+- Jornada 5 abierta en `feat/puerta-3-recoleccion`, sin tocar.

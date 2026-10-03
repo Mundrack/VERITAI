@@ -1,0 +1,21 @@
+/*
+ * Estilos del panel suelto (index.html). Solo se cargan en esa pagina, que es
+ * nuestra; NUNCA se inyectan en una pagina de terceros
+ * (docs/ARQUITECTURA-VISUAL.md §2). Sin selectores de elemento: la pagina
+ * marca su <body> y su <main> con clases con prefijo.
+ */
+
+.veritai-pagina {
+  margin: 0;
+  background: var(--veritai-color-fondo);
+  color: var(--veritai-color-texto);
+  font-family: var(--veritai-tipografia-familia);
+  font-size: var(--veritai-tipografia-tamano-base);
+  line-height: var(--veritai-tipografia-interlineado);
+}
+
+.veritai-panel {
+  max-width: var(--veritai-panel-ancho-maximo);
+  margin: 0 auto;
+  padding: var(--veritai-espacio-13) var(--veritai-espacio-11) var(--veritai-espacio-14);
+}

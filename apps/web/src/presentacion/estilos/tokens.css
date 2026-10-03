@@ -1,0 +1,73 @@
+/*
+ * Tokens de la interfaz (docs/ARQUITECTURA-VISUAL.md §2, §4, §6.3).
+ *
+ * Es el UNICO fichero con valores literales de color, tamano, radio y peso.
+ * Todo lo demas usa var(--veritai-...). Un token por significado, no por
+ * valor; cada color de texto o fondo existe en tema claro y en tema oscuro.
+ *
+ * Los valores son exactamente los que tenia src/estilos.css el 2026-10-03:
+ * reestructuracion, no redisenio.
+ */
+
+:root {
+  color-scheme: light dark;
+
+  /* Color */
+  --veritai-color-fondo: #ffffff;
+  --veritai-color-texto: #14161a;
+  --veritai-color-tenue: #5c6470;
+  --veritai-color-borde: #e2e5ea;
+  --veritai-color-ok: #1a7f4b;
+  --veritai-color-mal: #b3261e;
+  --veritai-color-aviso-fondo: #fff8e6;
+  --veritai-color-aviso-borde: #e8c96a;
+
+  /* Tipografia */
+  --veritai-tipografia-familia: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --veritai-tipografia-tamano-base: 15px;
+  --veritai-tipografia-interlineado: 1.55;
+  --veritai-tipografia-tamano-titulo: 1.6rem;
+  --veritai-tipografia-tamano-pequeno: 0.9rem;
+  --veritai-tipografia-tamano-pie: 0.85rem;
+  --veritai-tipografia-espaciado-titulo: -0.01em;
+  --veritai-peso-medio: 500;
+  --veritai-peso-seminegrita: 600;
+
+  /* Espacio: la escala son los valores que ya estaban en uso, de menor a mayor */
+  --veritai-espacio-1: 0.15rem;
+  --veritai-espacio-2: 0.2rem;
+  --veritai-espacio-3: 0.4rem;
+  --veritai-espacio-4: 0.55rem;
+  --veritai-espacio-5: 0.6rem;
+  --veritai-espacio-6: 0.7rem;
+  --veritai-espacio-7: 0.8rem;
+  --veritai-espacio-8: 0.9rem;
+  --veritai-espacio-9: 1rem;
+  --veritai-espacio-10: 1.25rem;
+  --veritai-espacio-11: 1.5rem;
+  --veritai-espacio-12: 1.75rem;
+  --veritai-espacio-13: 2.5rem;
+  --veritai-espacio-14: 4rem;
+
+  /* Forma */
+  --veritai-borde-ancho: 1px;
+  --veritai-radio-1: 6px;
+  --veritai-radio-2: 8px;
+
+  /* Medidas */
+  --veritai-panel-ancho-maximo: 46rem;
+  --veritai-tabla-cabecera-ancho: 40%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --veritai-color-fondo: #14161a;
+    --veritai-color-texto: #eef1f5;
+    --veritai-color-tenue: #9aa3b0;
+    --veritai-color-borde: #2a2f38;
+    --veritai-color-ok: #4ecb8d;
+    --veritai-color-mal: #ff6b61;
+    --veritai-color-aviso-fondo: #2a2413;
+    --veritai-color-aviso-borde: #6b5a24;
+  }
+}
