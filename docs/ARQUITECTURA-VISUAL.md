@@ -377,6 +377,12 @@ llegaron a la raíz del repositorio, `icono-16.png` es negro puro (48 píxeles
 opacos, todos `#000000`): es el símbolo mínimo exportado sin color de
 contexto. Es el fallo que el script evita.
 
+**Dónde está el arte conceptual.** Esos PNG, los tableros de marca y el
+mockup "Control Center" no están en este repositorio. Desde el 2026-10-03
+viven en la carpeta hermana `WORK SPACE/VERITAI-marca/`, organizados por
+tipo y con su propio repositorio privado (`Mundrack/VERITAI-marca`). Son
+material de referencia: de ahí no se toma ningún recurso para el producto.
+
 ### 2.2 La bolita
 
 El botón circular que VERITAI pone sobre la esquina de una publicación, en la

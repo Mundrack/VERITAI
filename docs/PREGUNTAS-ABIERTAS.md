@@ -6,7 +6,7 @@ Lo que está sin resolver, quién lo decide, y qué bloquea.
 > con la decisión y la fecha. Saber qué se descartó vale tanto como saber qué se
 > eligió.
 
-**Última actualización:** 2026-09-25
+**Última actualización:** 2026-10-03
 
 ---
 
@@ -327,6 +327,7 @@ No bloquea nada. Evita rehacer.
 | # | Pregunta | Decisión | Fecha |
 |---|---|---|---|
 | P-01 | Remoto de git y pull requests | **En pausa.** Se trabaja en local con ramas. Nada se sube a ningún servidor | 2026-09-24 |
+| P-01 | Remoto de git y pull requests (la pausa se levanta) | **Mateo levanta la pausa.** El repositorio se sube a GitHub: `Mundrack/VERITAI`, **privado**, con las 15 ramas tal como estaban y sin fusionar nada. Es privado y tiene que seguir siéndolo mientras no se compruebe, uno a uno, que los PDF de artículos de `research/literatura/` se pueden redistribuir. Los pull requests pasan a ser posibles; las fusiones las sigue decidiendo Mateo | 2026-10-03 |
 | P-03 | ¿Entran P08 y P09 en el alcance de tesis? | **Salen del corpus.** Se registran como `other_observed` y pasan a trabajo futuro. Ver DEC-013 | 2026-09-24 |
 | P-04 | ¿Quién cronometra `minutes_to_locate`? | **Claude**, declarado como recuperabilidad-por-agente. Mateo cronometra 5 casos a mano como contraste humano. Ver DEC-014 | 2026-09-24 |
 | P-10 | ¿`METRIC_AMBIGUOUS` entra en el enum de abstención? | **Sí.** 1 de cada 5 casos. El enum describe la realidad observada. Ver DEC-015 | 2026-09-25 |

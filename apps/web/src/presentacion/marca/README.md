@@ -15,6 +15,12 @@ en `src/extension/iconos/`. Los de 16 y 32 px llevan el color
 `--veritai-color-icono-extension` (contraste en las dos barras del navegador,
 no el acento de la interfaz: §2.1 del documento).
 
+El arte conceptual de la marca (tableros, recortes de identidad, el mockup y
+los iconos exportados a mano) **no está en este repositorio**: vive en la
+carpeta hermana `WORK SPACE/VERITAI-marca/`, con su propio repositorio
+privado (`Mundrack/VERITAI-marca`). De ahí no se toma ningún recurso para el
+producto.
+
 Los dos ficheros llevan un manifiesto C2PA (`<metadata>`) cuyo hash cubre el
 fichero: **no se editan**, ni para añadir un `id`. Versionados el 2026-10-03:
 `veritai-simbolo.svg` sha256 `ab8c5df2…`, `veritai-simbolo-min.svg` sha256

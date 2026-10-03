@@ -64,6 +64,8 @@ desktop.ini
 ~$*
 
 # Arte conceptual de marca (Mateo, 2026-10-03): no entra en el repositorio.
+# Vive en la carpeta hermana WORK SPACE/VERITAI-marca/, que tiene su propio
+# repositorio. Estas reglas se quedan por si algo vuelve a caer en la raiz.
 # Los recursos de verdad son los SVG de apps/web/src/presentacion/marca/ y los
 # PNG que genera `npm run iconos` en apps/web/src/extension/iconos/.
 /VeritAI_*.zip

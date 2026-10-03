@@ -1823,3 +1823,67 @@ preguntó:
   de la comprobación de daltonismo (15 en claridad, 30 en azul-amarillo), que
   son elección de quien escribió la prueba.
 - Jornada 5 abierta en `feat/puerta-3-recoleccion`, sin tocar.
+
+---
+
+## 2026-10-03 (16:23Z) — El arte conceptual, a su carpeta; el repositorio, a GitHub (P-01 levantada)
+
+### Qué pidió Mateo
+
+Que las imágenes de marca quedaran organizadas donde deben ir, con lo que esa
+reorganización arrastrara, y que el trabajo estuviera en su GitHub (cuenta
+`Mundrack`). Lo segundo contradecía una decisión suya registrada, P-01
+(2026-09-24: "nada se sube a ningún servidor"), así que se le preguntó antes
+de subir nada. **Decidió: sí, privado, todas las ramas; y el arte conceptual,
+en su propio repositorio privado.**
+
+### Qué se hizo
+
+- **Arte conceptual fuera de la raíz.** Lo que estaba suelto (cinco
+  `icono-*.png`, dos ZIP, el HTML del mockup) pasó a la carpeta hermana
+  `WORK SPACE/VERITAI-marca/`, por tipo: `recortes-de-identidad/` (20 recortes
+  y su `README.txt`), `brandboards/` (15 tableros), `mockup-control-center/`,
+  `iconos-a-mano/` y `originales/` (los dos ZIP). No se borró nada: lo suelto se
+  movió y de los ZIP se extrajeron copias, validando antes cada entrada (sin
+  rutas absolutas ni `..`, sin enlaces, solo `.png` y `.txt`, tope de tamaño).
+  Un `LEEME.md` dice qué es cada cosa.
+- **`Mundrack/VERITAI-marca`**, privado: esa carpeta, sin `originales/` (su
+  contenido ya está extraído al lado; los ZIP solo viven en el disco).
+- **`Mundrack/VERITAI`**, privado: este repositorio, con `origin` configurado
+  y las 15 ramas subidas tal como estaban. `main` es la rama por defecto. No
+  se fusionó nada ni se abrió ningún pull request.
+- En el proyecto: P-01 actualizada sin borrar la decisión anterior, la nota de
+  `ESTADO.md`, y dónde vive el arte (`.gitignore`, README de la marca,
+  `ARQUITECTURA-VISUAL.md` §2.1).
+
+### Qué se verificó antes de subir
+
+- **Secretos**: 105 981 líneas añadidas en todo el historial (las 15 ramas),
+  sin una sola clave, token ni URL con credenciales reales; las ocho URL con
+  usuario y contraseña que aparecen son marcadores de `.env.example` y valores
+  de prueba. `.env` nunca estuvo en el historial, y ninguno de sus cuatro
+  valores secretos aparece en él (comparado sin imprimirlos). Límite: la
+  contraseña de Supabase de P-09 no se puede comparar porque no se tiene; no
+  hay ninguna URL, clave ni host de Supabase en el historial.
+- **Tamaños**: el objeto más grande pesa 3,25 MB.
+- El mockup HTML: sin claves, sin recursos externos, sin correos. Los 40 PNG
+  son PNG de verdad (cabecera comprobada).
+
+### Qué se verificó después
+
+- `VERITAI`: 15 ramas locales, 15 en el remoto, las 15 con el mismo commit.
+  Visibilidad `PRIVATE`.
+- `VERITAI-marca`: mismo commit en local y en remoto, 45 ficheros, ninguno de
+  `originales/`. Visibilidad `PRIVATE`. Los ZIP, mismo sha256 antes y después
+  de moverlos.
+
+### Qué quedó pendiente
+
+- **El repositorio no puede hacerse público tal como está**:
+  `research/literatura/` tiene doce PDF de artículos de terceros, y la
+  licencia de cada uno para redistribuirlo no está comprobada. En privado son
+  una copia de trabajo; en público sería redistribuirlos.
+- P-09 sigue abierta (rotar la contraseña de Supabase).
+- `AGENTS.md` sigue sin seguimiento, sin leer y sin subir: lo revisa Mateo.
+- Pull requests: ahora son posibles (`CLAUDE.md` §3). No se ha abierto ninguno.
+- Jornada 5 abierta en `feat/puerta-3-recoleccion`, sin tocar.

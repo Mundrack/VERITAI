@@ -177,9 +177,13 @@ puertas y las reglas de DEC-025 y DEC-029. Un archivo `AGENTS.md` sigue sin
 seguimiento en la raíz: **ni leído, ni aplicado, ni commiteado**, por
 instrucción de Mateo, que lo revisa él.
 
-`ATENCIÓN` No hay remoto configurado y `gh` no está instalado: las ramas
-existen pero **no hay pull requests** (P-01). Nada se ha subido a ningún
-servidor.
+`ATENCIÓN` Desde el 2026-10-03 **hay remoto**: `origin` es
+`github.com/Mundrack/VERITAI`, **privado**, con las 15 ramas tal como estaban
+(P-01, pausa levantada por Mateo). Sigue sin haber pull requests abiertos y
+nada se ha fusionado: las fusiones las decide Mateo. `.env` y `AGENTS.md` no
+están en el remoto. El repositorio no puede hacerse público mientras no
+se compruebe que los PDF de artículos de `research/literatura/` se pueden
+redistribuir.
 
 ---
 
