@@ -289,8 +289,8 @@ descartadas: `sharp`, que trae todo un pipeline de imagen que no hace falta,
 e Inkscape o ImageMagick, que serían dependencias del sistema). Aplica la
 regla de arriba: 16 y 32 desde el mínimo, 48, 128 y 512 desde el de órbita.
 Como un PNG no tiene texto del que heredar, el mínimo se renderiza con un
-color de contexto: el token `--veritai-color-acento` de `tokens.css` cuando
-exista, o `--color=#rrggbb`; sin ninguno de los dos el script se para. Si
+color de contexto: el token `--veritai-color-icono-extension` de
+`tokens.css`, o `--color=#rrggbb`; sin ninguno de los dos el script se para. Si
 el símbolo cambia, se vuelve a ejecutar y los PNG cambian con él; los PNG
 generados se versionan junto al script.
 
@@ -313,20 +313,25 @@ Decisión (Mateo, 2026-10-03), aplicada en `tokens.css`:
 
 - `--veritai-color-acento`: `#98242c` en tema claro y `#ea959a` en tema
   oscuro. Los dos salen del propio símbolo y los dos pasan AA (≥ 4,5:1) como
-  texto sobre su fondo. Hoy solo lo usa el script de iconos para dar color al
-  símbolo mínimo; ningún componente lo aplica a texto todavía, así que no hay
-  ningún contraste que haya bajado de AA al aplicarlo.
+  texto sobre su fondo. Ningún componente lo aplica a texto todavía, así que
+  no hay ningún contraste que haya bajado de AA al aplicarlo; los iconos de
+  la extensión no lo usan (abajo).
 - `--veritai-color-mal` se queda como está: es el color de "fallo", no el de
   la marca; un servicio caído no puede leerse igual que el logotipo.
 - El rojo del mockup (`#e63946`) no pasa AA como texto sobre blanco (4,17:1)
   y no sale del símbolo: no se adopta.
 
-**Límite conocido de los iconos pequeños.** Manifest V3 admite un solo
-juego de iconos, sin variante por tema. El 16 y el 32 llevan el acento
-claro (`#98242c`): 8,0:1 sobre una barra clara, pero 2,0:1 sobre la barra
-oscura de Chrome (`#202124`). El tono intermedio del propio anillo,
-`#D9444C`, daría 4,3:1 y 3,7:1 en las dos. No se cambia sin decisión de
-Mateo; se deja medido.
+**Color de los iconos de la extensión: decisión de contraste, no de marca
+(Mateo, 2026-10-03).** Manifest V3 admite un solo juego de iconos, sin
+variante por tema del navegador. El acento claro (`#98242c`) da 8,0:1 sobre
+una barra clara pero 2,0:1 sobre la barra oscura de Chrome (`#202124`): el
+símbolo desaparecería en la mitad de los navegadores. Por eso el 16 y el 32
+llevan `--veritai-color-icono-extension: #d9444c`, el tono intermedio del
+propio anillo del símbolo, que se ve en las dos barras (4,3:1 sobre blanco,
+3,7:1 sobre `#202124`). El token vive en `tokens.css` con la razón al lado y
+solo lo lee `scripts/generar-iconos.mjs`; la interfaz, que sí tiene dos
+temas, sigue usando el acento. Los de 48, 128 y 512 no cambian: llevan el
+símbolo con órbita y sus propios colores.
 
 **Hallazgo que justifica el script.** De los cinco PNG hechos a mano que
 llegaron a la raíz del repositorio, `icono-16.png` es negro puro (48 píxeles

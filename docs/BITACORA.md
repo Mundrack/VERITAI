@@ -1709,3 +1709,31 @@ implementación; no toca la Puerta 3; B0/B1/B2 no se diseñan.
   `WORK SPACE/VERITAI-marca/`), y decidir si los iconos de 16 y 32 pasan al
   tono intermedio `#D9444C` por la barra oscura.
 - Jornada 5 abierta en `feat/puerta-3-recoleccion`, sin tocar.
+
+---
+
+## 2026-10-03 (14:50Z) — Iconos de la extensión en `#d9444c`: decisión de contraste, no de marca
+
+### Qué se hizo
+
+- `tokens.css`: `--veritai-color-icono-extension: #d9444c`, con la razón en
+  el comentario: Manifest V3 admite un solo juego de iconos y el acento
+  `#98242c` desaparece sobre la barra oscura de Chrome (2,0:1); el tono
+  intermedio del anillo da 4,3:1 sobre blanco y 3,7:1 sobre `#202124`. El
+  acento de la interfaz sigue en `#98242c` / `#ea959a`.
+- `scripts/generar-iconos.mjs` lee ese token, no el acento; cabecera con la
+  razón. `npm run iconos` regenerado: 16 y 32 nuevos; 48, 128 y 512 byte a
+  byte iguales a los anteriores (mismos sha256), lo que confirma que la
+  generación es determinista.
+- `ARQUITECTURA-VISUAL.md` §2.1 y README de la marca al día.
+- Arte conceptual: Mateo crea `WORK SPACE/VERITAI-marca/` y mueve los
+  ficheros; en el repo quedan ignorados.
+
+### Qué se verificó
+
+- Centro de los iconos 16 y 32: `#d9444c`; sin píxeles negros. `npm test` en
+  verde (3 ficheros, 13 pruebas).
+
+### Qué quedó pendiente
+
+- Jornada 5 abierta en `feat/puerta-3-recoleccion`, sin tocar.

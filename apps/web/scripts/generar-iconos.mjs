@@ -11,13 +11,20 @@
  *
  * Como el PNG de un icono no tiene "texto" del que heredar, el simbolo minimo
  * se renderiza con un color de contexto explicito. Ese color sale del token
- * --veritai-color-acento de tokens.css si existe; si no, de --color=#rrggbb;
- * si tampoco, el script se para. Un icono negro por falta de contexto es
- * justo lo que paso con el icono-16.png hecho a mano.
+ * --veritai-color-icono-extension de tokens.css si existe; si no, de
+ * --color=#rrggbb; si tampoco, el script se para. Un icono negro por falta
+ * de contexto es justo lo que paso con el icono-16.png hecho a mano.
+ *
+ * Por que ese token y no el acento de la interfaz (Mateo, 2026-10-03): es una
+ * decision de contraste, no de marca. Manifest V3 admite un solo juego de
+ * iconos para la barra clara y la oscura del navegador; el acento #98242c
+ * desaparece sobre la barra oscura de Chrome (2,0:1), y el tono intermedio
+ * del anillo del simbolo, #d9444c, se ve en las dos (4,3:1 y 3,7:1). La
+ * interfaz, que si tiene dos temas, sigue usando --veritai-color-acento.
  *
  * Uso:
  *   node scripts/generar-iconos.mjs
- *   node scripts/generar-iconos.mjs --color=#98242c
+ *   node scripts/generar-iconos.mjs --color=#d9444c
  *   node scripts/generar-iconos.mjs --simbolo=ruta.svg --minimo=ruta.svg --salida=dir   (pruebas)
  */
 
@@ -34,8 +41,8 @@ const RAIZ_WEB = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const TAMANOS_PX = [16, 32, 48, 128, 512];
 /** A partir de este tamano se usa el simbolo con orbita. */
 const UMBRAL_ORBITA_PX = 48;
-/** Token que da color al simbolo minimo cuando no hay texto del que heredar. */
-const TOKEN_ACENTO = "--veritai-color-acento";
+/** Token que da color al simbolo minimo en los iconos (decision de contraste, no el acento de la interfaz). */
+const TOKEN_COLOR_ICONO = "--veritai-color-icono-extension";
 
 const RUTAS = {
   simbolo: resolve(RAIZ_WEB, "src/presentacion/marca/veritai-simbolo.svg"),
@@ -93,9 +100,9 @@ function main() {
   for (const [nombre, ruta] of [["simbolo con orbita", rutaSimbolo], ["simbolo minimo", rutaMinimo]]) {
     if (!existsSync(ruta)) parar(`falta el ${nombre}: ${ruta}. No se genera nada sin el SVG de la marca.`);
   }
-  const color = args.color ?? tokenDeTokensCss(RUTAS.tokens, TOKEN_ACENTO);
+  const color = args.color ?? tokenDeTokensCss(RUTAS.tokens, TOKEN_COLOR_ICONO);
   if (!color) {
-    parar(`no hay color de contexto para el simbolo minimo: ni ${TOKEN_ACENTO} en tokens.css ni --color=#rrggbb`);
+    parar(`no hay color de contexto para el simbolo minimo: ni ${TOKEN_COLOR_ICONO} en tokens.css ni --color=#rrggbb`);
   }
   if (!/^#[0-9a-fA-F]{6}$/.test(color)) parar(`color no valido: ${color} (se espera #rrggbb)`);
 

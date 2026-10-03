@@ -28,6 +28,13 @@
 
   /* Marca */
   --veritai-marca-tamano-cabecera: 48px; /* a partir de 48 px se usa el simbolo con orbita (§2.1) */
+  /* Color del simbolo minimo en los iconos de la extension (Mateo, 2026-10-03).
+     Decision de CONTRASTE, no de marca: Manifest V3 admite un solo juego de
+     iconos para la barra clara y la oscura, y el acento (#98242c) desaparece
+     sobre la barra oscura de Chrome (2,0:1). Este tono intermedio del propio
+     anillo da 4,3:1 sobre blanco y 3,7:1 sobre #202124. Solo lo lee
+     scripts/generar-iconos.mjs; la interfaz sigue usando el acento. */
+  --veritai-color-icono-extension: #d9444c;
 
   /* Tipografia */
   --veritai-tipografia-familia: system-ui, -apple-system, "Segoe UI", sans-serif;
