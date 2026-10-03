@@ -10,3 +10,9 @@
 *.xlsx  binary
 *.png   binary
 *.pdf   binary
+
+# Copias de evidencia cuyo sha256 consta en el registro (diseno de la Puerta 3,
+# 4h): se guardan byte a byte. Con text=auto git normalizaria sus finales de
+# linea y el sha256 anotado dejaria de coincidir con lo que hay en el repositorio.
+research/evidencia/J5_P1_*  -text
+research/evidencia/J5_E078_elnuevodigitalmurcia.htm  -text

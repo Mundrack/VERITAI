@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /_call*
+Disallow: /ca/events/*
+Disallow: /cerca.html*
+
+
+User-agent: SemrushBot
+Disallow: /

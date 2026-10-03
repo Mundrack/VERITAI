@@ -1,0 +1,12 @@
+{
+  "host": "www.galiciapress.es",
+  "url": "https://www.galiciapress.es/robots.txt",
+  "cuando_utc": "2026-10-03T19:52:49Z",
+  "http": 200,
+  "redirecciones": [],
+  "bytes": 4504,
+  "sha256": "eb8bb76eedee1dd449855acca9471f83213cd439d4f676af06b8dc910b41e2b0",
+  "content_type": "text/plain;charset=UTF-8",
+  "estado": "leido",
+  "guardado_en": "research/evidencia/J5_P1_robots_www.galiciapress.es.txt"
+}

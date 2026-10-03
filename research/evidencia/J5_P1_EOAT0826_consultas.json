@@ -1,0 +1,304 @@
+{
+  "que_es": "Consultas y lecturas de la sesion 3 de la jornada 5: la evaluacion de P1 sobre EOAT0826 (diseno 4h)",
+  "fuente": "registro local de la conversacion del agente en aquella sesion (2026-10-02 UTC, 2026-10-01 por la noche en hora local)",
+  "extraido_el": "2026-10-03",
+  "aviso": "No se repitio ninguna consulta ni se anadio ninguna pieza al extraer este registro: el conteo y el veredicto de P1 no cambian.",
+  "como_se_leyo": "Con la herramienta de busqueda y de lectura web del agente. Antes de esas lecturas el agente identificado no consulto el robots.txt de los dominios de prensa; solo lo hizo para la copia de la pieza de Murcia (caso E078).",
+  "consultas": [
+    {
+      "n": 1,
+      "cuando_utc": "2026-10-02T02:25:14Z",
+      "clase": "nacional",
+      "texto": "pernoctaciones extrahoteleras agosto 2026 INE apartamentos campings comunidad \"agosto\" noticia 1 octubre 2026"
+    },
+    {
+      "n": 2,
+      "cuando_utc": "2026-10-02T02:25:14Z",
+      "clase": "por_grupos_de_comunidades",
+      "texto": "alojamientos extrahoteleros agosto Andalucía pernoctaciones apartamentos turísticos campings INE octubre 2026"
+    },
+    {
+      "n": 3,
+      "cuando_utc": "2026-10-02T02:25:15Z",
+      "clase": "por_grupos_de_comunidades",
+      "texto": "extrahoteleros agosto Galicia OR Asturias OR Cantabria pernoctaciones apartamentos campings turismo rural INE \"1 de octubre\" 2026"
+    },
+    {
+      "n": 4,
+      "cuando_utc": "2026-10-02T02:25:15Z",
+      "clase": "por_grupos_de_comunidades",
+      "texto": "extrahoteleros agosto Región de Murcia OR \"Comunitat Valenciana\" pernoctaciones apartamentos campings INE octubre 2026 cae OR sube"
+    },
+    {
+      "n": 5,
+      "cuando_utc": "2026-10-02T02:25:16Z",
+      "clase": "por_grupos_de_comunidades",
+      "texto": "extrahoteleros agosto Castilla y León OR \"Castilla-La Mancha\" OR Extremadura pernoctaciones campings apartamentos turismo rural INE octubre 2026"
+    },
+    {
+      "n": 6,
+      "cuando_utc": "2026-10-02T02:25:17Z",
+      "clase": "por_grupos_de_comunidades",
+      "texto": "extrahoteleros agosto Aragón OR Navarra OR \"La Rioja\" OR Euskadi pernoctaciones campings apartamentos INE octubre 2026"
+    },
+    {
+      "n": 7,
+      "cuando_utc": "2026-10-02T02:25:17Z",
+      "clase": "por_grupos_de_comunidades",
+      "texto": "extrahoteleros agosto Baleares OR Canarias OR Cataluña OR Madrid pernoctaciones apartamentos turísticos campings INE octubre 2026"
+    },
+    {
+      "n": 8,
+      "cuando_utc": "2026-10-02T02:26:03Z",
+      "clase": "segunda_tanda_por_comunidades",
+      "texto": "extrahoteleros agosto 2026 Navarra pernoctaciones campings apartamentos \"agosto\" crecen OR caen INE"
+    },
+    {
+      "n": 9,
+      "cuando_utc": "2026-10-02T02:26:04Z",
+      "clase": "segunda_tanda_por_comunidades",
+      "texto": "extrahoteleros agosto 2026 Aragón OR \"La Rioja\" pernoctaciones campings apartamentos turismo rural \"1 oct\" OR \"octubre 2026\""
+    },
+    {
+      "n": 10,
+      "cuando_utc": "2026-10-02T02:26:04Z",
+      "clase": "segunda_tanda_por_comunidades",
+      "texto": "pernoctaciones extrahoteleras agosto Comunitat Valenciana OR Baleares OR Canarias apartamentos turísticos campings \"respecto a agosto\" 2025 noticia octubre 2026"
+    },
+    {
+      "n": 11,
+      "cuando_utc": "2026-10-02T02:26:05Z",
+      "clase": "segunda_tanda_por_comunidades",
+      "texto": "pernoctaciones extrahoteleras agosto Galicia OR Asturias OR Euskadi OR Madrid OR Cataluña apartamentos campings \"%\" noticia \"1 de octubre de 2026\" OR \"octubre 2026\""
+    },
+    {
+      "n": 12,
+      "cuando_utc": "2026-10-02T02:26:43Z",
+      "clase": "por_cifras_del_anexo",
+      "texto": "\"57.178\" OR \"235.107\" OR \"138.698\" OR \"570.381\" Galicia apartamentos campings agosto viajeros pernoctaciones"
+    },
+    {
+      "n": 13,
+      "cuando_utc": "2026-10-02T02:26:44Z",
+      "clase": "por_cifras_del_anexo",
+      "texto": "\"92.429\" OR \"275.304\" OR \"52.277\" OR \"213.509\" Madrid apartamentos turísticos campings agosto pernoctaciones viajeros"
+    },
+    {
+      "n": 14,
+      "cuando_utc": "2026-10-02T02:26:45Z",
+      "clase": "por_cifras_del_anexo",
+      "texto": "\"377.204\" OR \"2.363.914\" OR \"227.889\" OR \"1.415.544\" Comunitat Valenciana apartamentos campings agosto pernoctaciones"
+    },
+    {
+      "n": 15,
+      "cuando_utc": "2026-10-02T02:26:45Z",
+      "clase": "por_cifras_del_anexo",
+      "texto": "\"25.771\" OR \"77.797\" OR \"53.266\" OR \"208.058\" Navarra apartamentos campings agosto pernoctaciones extrahoteleros"
+    },
+    {
+      "n": 16,
+      "cuando_utc": "2026-10-02T02:26:46Z",
+      "clase": "por_cifras_del_anexo",
+      "texto": "\"35.653\" OR \"124.930\" OR \"141.797\" OR \"458.075\" Aragón apartamentos campings agosto pernoctaciones viajeros"
+    },
+    {
+      "n": 17,
+      "cuando_utc": "2026-10-02T02:26:47Z",
+      "clase": "por_cifras_del_anexo",
+      "texto": "\"28.359\" OR \"121.764\" OR \"103.251\" OR \"469.002\" Asturias apartamentos campings agosto pernoctaciones viajeros"
+    },
+    {
+      "n": 18,
+      "cuando_utc": "2026-10-02T02:26:47Z",
+      "clase": "por_cifras_del_anexo",
+      "texto": "\"336.258\" OR \"1.612.526\" OR \"370.411\" OR \"2.694.782\" apartamentos turísticos agosto Baleares OR Canarias viajeros pernoctaciones"
+    },
+    {
+      "n": 19,
+      "cuando_utc": "2026-10-02T02:26:48Z",
+      "clase": "por_cifras_del_anexo",
+      "texto": "\"209.202\" OR \"1.202.961\" OR \"909.079\" OR \"5.399.002\" Cataluña apartamentos campings agosto pernoctaciones"
+    },
+    {
+      "n": 20,
+      "cuando_utc": "2026-10-02T02:26:49Z",
+      "clase": "por_cifras_del_anexo",
+      "texto": "\"48.604\" OR \"142.905\" OR \"73.338\" OR \"17.668\" OR \"40.134\" OR \"98.338\" apartamentos campings agosto Euskadi OR \"País Vasco\" OR \"La Rioja\" pernoctaciones"
+    },
+    {
+      "n": 21,
+      "cuando_utc": "2026-10-02T02:26:50Z",
+      "clase": "por_cifras_del_anexo",
+      "texto": "\"61.858\" OR \"145.298\" OR \"86.610\" OR \"274.733\" OR \"49.593\" OR \"96.972\" OR \"20.675\" apartamentos campings agosto Castilla y León OR Extremadura"
+    },
+    {
+      "n": 22,
+      "cuando_utc": "2026-10-02T02:26:50Z",
+      "clase": "por_cifras_del_anexo",
+      "texto": "\"21.365\" OR \"124.748\" OR \"108.832\" OR \"16.191\" Murcia apartamentos campings agosto viajeros pernoctaciones"
+    },
+    {
+      "n": 23,
+      "cuando_utc": "2026-10-02T02:26:51Z",
+      "clase": "por_cifras_del_anexo",
+      "texto": "\"19.974\" OR \"48.686\" OR \"22.783\" OR \"93.408\" Castilla-La Mancha apartamentos campings agosto \"%\" más OR menos"
+    },
+    {
+      "n": 24,
+      "cuando_utc": "2026-10-02T02:27:21Z",
+      "clase": "refuerzo",
+      "texto": "Navarra pernoctaciones extrahoteleras agosto 2026 \"respecto al mismo mes de 2025\" campings apartamentos turismo rural Nastat"
+    },
+    {
+      "n": 25,
+      "cuando_utc": "2026-10-02T02:27:22Z",
+      "clase": "refuerzo",
+      "texto": "Europa Press pernoctaciones extrahoteleras agosto 2026 Aragón OR Asturias OR Madrid OR \"Comunitat Valenciana\" OR Euskadi OR \"La Rioja\" \"en agosto\" apartamentos campings \"%\""
+    },
+    {
+      "n": 26,
+      "cuando_utc": "2026-10-02T02:27:23Z",
+      "clase": "criba",
+      "texto": "site:maldita.es OR site:newtral.es OR site:verificat.cat OR site:efeverifica.com apartamentos turísticos campings agosto 2026 Región de Murcia viajeros pernoctaciones extrahoteleros"
+    },
+    {
+      "n": 27,
+      "cuando_utc": "2026-10-02T02:27:23Z",
+      "clase": "criba",
+      "texto": "Murcia apartamentos campings agosto 2026 viajeros \"17% menos\" OR \"30%\" extrahoteleros verificación OR bulo OR \"fact-check\" OR desmentido"
+    }
+  ],
+  "recuento": {
+    "nacional": 1,
+    "por_grupos_de_comunidades": 6,
+    "segunda_tanda_por_comunidades": 4,
+    "por_cifras_del_anexo": 12,
+    "refuerzo": 2,
+    "criba": 2,
+    "total": 27
+  },
+  "descrito_en_4h_el_2026-10-01": {
+    "nacional": 1,
+    "por_grupos_de_comunidades": 7,
+    "por_cifras_del_anexo": 12,
+    "refuerzo": 2,
+    "criba": 2,
+    "total": 24,
+    "diferencia": "Las consultas por comunidades fueron diez y no siete: seis en la primera tanda, que cubre las 17, y cuatro en una segunda tanda (consultas 8 a 11) por las once comunidades de las que aun no se habia leido ninguna pieza. La descripcion omitio tres de esas cuatro."
+  },
+  "paginas_leidas": [
+    {
+      "cuando_utc": "2026-10-02T02:25:50Z",
+      "url": "https://www.ultimahora.es/noticias/comunidades/2026/10/01/2720069/pernoctaciones-extrahoteleras-crecen-andalucia-agosto-superan-tres-millones.html",
+      "pieza": 1,
+      "pedido_a_la_herramienta": "Copia literalmente el titular, la fecha, la firma/agencia y TODAS las frases con cifras: viajeros y pernoctaciones en apartamentos turísticos, campings, turismo rural y albergues, con sus porcentajes de variación interanual exactos (con decimales tal como aparecen) y con qué periodo comparan.",
+      "extracto_devuelto": "**Titular:** Las pernoctaciones extrahoteleras crecen en Andalucía un 6,6% en agosto y superan los tres millones\n\n**Fecha:** 01/10/26\n\n**Firma/Agencia:** Europa Press\n\n**Cifras de viajeros y pernoctaciones con variaciones interanuales:**\n\n- **Apartamentos turísticos:** 463.930 viajeros (+20,3% respecto agosto 2025); 1.858.127 pernoctaciones (+11,7%)\n\n- **Campings:** 271.489 viajeros (+2,04% respecto agosto 2025); 1.273.468 pernoctaciones (+2,9%)\n\n- **Turismo rural:** 55.244 viajeros (-2,69% respecto agosto 2025); 262.783 pernoctaciones (+3,3%)\n\n- **Albergues:** 32.513 viajeros (-23,1% respecto agosto 2025); 82.754 pernoctaciones (-20,78%)"
+    },
+    {
+      "cuando_utc": "2026-10-02T02:25:52Z",
+      "url": "https://www.elconciso.es/coyuntura/andalucia-viajeros-pernoctaciones-extrahoteleros-agosto_0_2008120049.html",
+      "pieza": 2,
+      "pedido_a_la_herramienta": "Copia literalmente el titular, la fecha, la firma y TODAS las frases con cifras: viajeros y pernoctaciones en apartamentos turísticos, campings, turismo rural y albergues, con sus porcentajes de variación interanual exactos (con decimales tal como aparecen) y con qué periodo comparan.",
+      "extracto_devuelto": "# Andalucía firma su agosto con más viajeros en alojamientos extrahoteleros\n\n**Titular:** \"Andalucía firma su agosto con más viajeros en alojamientos extrahoteleros\"\n\n**Fecha:** Sevilla, 01 de octubre 2026 - 10:47\n\n**Firma:** Angélico Ruiz\n\n**Frases con cifras:**\n\n- \"Los apartamentos turísticos (+20,3%) y el turismo extranjero (+19,6) impulsan el crecimiento, mientras las pernoctaciones avanzan un 6,7%\"\n\n- \"Los apartamentos turísticos, campings, alojamientos de turismo rural y albergues de la comunidad recibieron en conjunto a 823.176 personas, un 9,6% más\" (comparado con agosto 2025: 750.737)\n\n- \"Las pernoctaciones alcanzaron las 3.477.132, un 6,7% más\" (comparado con agosto 2025)\n\n- \"Esta modalidad alojó en agosto a 463.930 viajeros, un 20,3% más\" en apartamentos turísticos (comparado con año anterior)\n\n- \"Los campings, segunda modalidad con mayor volumen, recibieron a 271.489 viajeros, un 2% más\"\n\n- \"El turismo rural mostró una evolución distinta: perdió un 2,7% de viajeros, hasta 55.244\"\n\n- \"Los albergues fueron la única modalidad con caídas tanto en clientes como en pernoctaciones. Recibieron a 32.513 viajeros, un 23,2% menos\"\n\n- \"Andalucía recibió a 296.228 viajeros internacionales en este tipo de alojamientos, un 19,6% más\" (comparado con agosto año anterior)"
+    },
+    {
+      "cuando_utc": "2026-10-02T02:25:54Z",
+      "url": "https://www.ifomo.es/articulo/cantabria/cantabria-pernoctaciones-extrahoteleras-cantabria-bajan-54-agosto-viajeros-crecen-84/20261001103627360120.html",
+      "pieza": 3,
+      "pedido_a_la_herramienta": "Copia literalmente el titular, la fecha, la firma/agencia y TODAS las frases con cifras: viajeros y pernoctaciones en apartamentos turísticos, campings, turismo rural y albergues, con sus porcentajes de variación interanual exactos (con decimales tal como aparecen) y con qué periodo comparan.",
+      "extracto_devuelto": "**Titular:** Las pernoctaciones extrahoteleras en Cantabria bajan un 5,4% en agosto y los viajeros crecen un 8,4%\n\n**Fecha:** 01/oct/26\n\n**Firma:** Marta Alonso\n\n**Frases con cifras:**\n\n- \"Cantabria registró en agosto un total de 940.316 pernoctaciones en alojamientos turísticos extrahoteleros\"\n- \"lo que representa un descenso del 5,4 por ciento en comparación con el mismo mes de 2025\"\n- \"los viajeros que se hospedaron en este tipo de alojamientos aumentaron en Cantabria un 8,4% en el octavo mes del año, hasta los 222.530\"\n- \"727.747 fueron realizadas por residentes en España, un 14,4% menos, y 212.566 por extranjeros, que se dispararon un 48%\"\n- \"163.941 eran residentes en el país, un 0,7% más, y los 58.590 restantes procedían del extranjero (+37,6%)\"\n- \"132.191 pernoctaciones en apartamentos, un 8% menos\"\n- \"8.413 en albergues, el único incremento, de un 5,4%\"\n- \"606.447 en campings, un 5,4% menos\"\n- \"193.265 pernoctaciones en establecimientos de turismo rural, con un retroceso 4%\""
+    },
+    {
+      "cuando_utc": "2026-10-02T02:25:55Z",
+      "url": "https://www.cantabriaeconomica.com/noticias/las-pernoctaciones-extrahoteleras-descienden-un-54-en-agosto-pese-al-aumento-de-viajeros-del-84/",
+      "reimpresion_de": 3,
+      "pedido_a_la_herramienta": "Copia literalmente el titular, la fecha, la firma y TODAS las frases con cifras: viajeros y pernoctaciones en apartamentos turísticos, campings, turismo rural y albergues, con sus porcentajes de variación interanual exactos (con decimales tal como aparecen) y con qué periodo comparan.",
+      "extracto_devuelto": "# Artículo: Pernoctaciones Extrahoteleras en Cantabria\n\n**Titular:** \"Las pernoctaciones extrahoteleras cayeron un 5,4% en agosto pese al aumento de viajeros del 8,4%\"\n\n**Fecha:** 1 de octubre, 2026\n\n**Firma:** No aparece firma de autor identificado en el artículo\n\n## Frases con Cifras\n\n**Pernoctaciones totales:**\n- \"Cantabria registró en agosto un total de 940.316 pernoctaciones en alojamientos turísticos extrahoteleros\"\n- \"lo que representa un descenso del 5,4 por ciento en comparación con el mismo mes de 2025\"\n\n**Viajeros:**\n- \"los viajeros que se hospedaron en este tipo de alojamientos aumentaron en Cantabria un 8,4% en el octavo mes del año, hasta los 222.530\"\n\n**Campings:**\n- \"En agosto, las mayoría de pernoctaciones extrahoteleras fueron en campings, concretamente 606.447, un 5,4% menos\"\n\n**Turismo rural:**\n- \"se registraron 193.265 pernoctaciones en alojamientos de turismo rural, con un retroceso 4%\"\n\n**Apartamentos:**\n- \"132.191 pernoctaciones en apartamentos, un 8% menos\"\n\n**Albergues:**\n- \"8.413 en albergues, el único incremento, de un 5,4%\""
+    },
+    {
+      "cuando_utc": "2026-10-02T02:25:57Z",
+      "url": "https://www.lanzadigital.com/castilla-la-mancha/c-lm-registro-343-158-pernoctaciones-en-alojamientos-turisticos-extrahoteleros-en-el-mes-de-agosto/",
+      "no_contada": "Castilla-La Mancha: solo niveles",
+      "pedido_a_la_herramienta": "Copia literalmente el titular, la fecha, la firma/agencia y TODAS las frases con cifras: viajeros y pernoctaciones en apartamentos turísticos, campings, turismo rural y albergues, con sus porcentajes de variación interanual exactos (con decimales tal como aparecen) y con qué periodo comparan.",
+      "extracto_devuelto": "# Resumen del Artículo sobre Pernoctaciones Turísticas\n\n**Titular:** \"C-LM registró 343.158 pernoctaciones en alojamientos turísticos extrahoteleros en el mes de agosto\"\n\n**Fecha:** 01 de octubre de 2026\n\n**Firma/Agencia:** Lanza / MADRID/TOLEDO\n\n## Datos Regionales (Castilla-La Mancha - Agosto)\n\n**Apartamentos turísticos:** \"48.686 pernoctaciones de 19.974 viajeros, con una estancia media de 2,44. La ocupación fue del 28,81%\"\n\n**Campings:** \"93.408 pernoctaciones de 22.783 viajeros, con una estancia media de 4,1 noches. La ocupación alcanzó el 45,63%\"\n\n**Turismo rural:** \"174.752 pernoctaciones de 58.745 viajeros, lo que arroja una estancia media de 2,97 noches. La ocupación de estos establecimientos fue del 28,34%\"\n\n**Albergues:** \"26.312 pernoctaciones con una ocupación del 25,01%\"\n\n## Datos Nacionales (Variaciones Interanuales respecto a Agosto 2025)\n\n- Pernoctaciones extrahoteleras: retroceso del 1,2%\n- Albergues: descenso del 14,3%\n- Apartamentos turísticos: retroceso del 1,7%\n- Campings: retroceso del 0,4%\n- Turismo rural: incremento del 2,7%"
+    },
+    {
+      "cuando_utc": "2026-10-02T02:25:59Z",
+      "url": "https://elnuevodigitalmurcia.es/art/9286/apartamentos-camping-y-casas-rurales-perdieron-en-agosto-un-30-de-viajeros-y-un-23-de-pernoctaciones",
+      "pieza": 4,
+      "pedido_a_la_herramienta": "Copia literalmente el titular, la fecha, la firma y TODAS las frases con cifras: viajeros y pernoctaciones en apartamentos turísticos, campings, turismo rural y albergues, con sus porcentajes de variación interanual exactos (con decimales tal como aparecen) y con qué periodo comparan.",
+      "extracto_devuelto": "# Información Extraída del Artículo\n\n**Titular:** \"Apartamentos, camping y casas rurales perdieron en agosto un 30% de viajeros y un 23% de pernoctaciones\"\n\n**Fecha:** Jueves, 01 de Octubre de 2026\n\n**Firma:** F. A.\n\n**Frases con Cifras:**\n\n- \"Los alojamientos extrahoteleros de la Región perdieron en agosto un 30% de viajeros\" y \"un 23% de pernoctaciones\" (comparación con agosto 2025)\n\n- \"Los 21.362 viajeros que optaron por un apartamento fueron un 17% menos que en agosto de 2025\"\n\n- \"los 16.191 campistas registrados fueron casi la mitad (-44%) que un año antes\"\n\n- \"en los alojamientos rurales hubo 5.918 viajeros, un 21% menos\"\n\n- \"2.792 usuarios de los albergues\" (sin comparación disponible)\n\n- Ocupación en la Región: \"apartamentos fue de un 51%\", \"camping se ocuparon el 49% de las parcelas\" y \"casas rurales la ocupación en la Región fue de un 30%\""
+    },
+    {
+      "cuando_utc": "2026-10-02T02:26:00Z",
+      "url": "https://www.regiondigital.com/noticias/extremadura/436174-las-pernoctaciones-extrahoteleras-suben-en-agosto-un-73-en-extremadura.html",
+      "no_contada": "Extremadura: solo el agregado de las cuatro encuestas",
+      "pedido_a_la_herramienta": "Copia literalmente el titular, la fecha, la firma/agencia y TODAS las frases con cifras: viajeros y pernoctaciones en apartamentos turísticos, campings, turismo rural y albergues, con sus porcentajes de variación interanual exactos (con decimales tal como aparecen) y con qué periodo comparan.",
+      "extracto_devuelto": "# Artículo: Las pernoctaciones extrahoteleras suben en agosto un 7,3% en Extremadura\n\n**Titular:** \"Las pernoctaciones extrahoteleras suben en agosto un 7,3% en Extremadura\"\n\n**Fecha:** 01 octubre 2026\n\n**Firma/Agencia:** Ep.\n\n---\n\n## Frases con cifras:\n\n- \"El número de pernoctaciones registradas en agosto en establecimientos turísticos extrahoteleros de Extremadura alcanzó las 278.679, lo que supone un 7,3 por ciento más que en el mismo mes del año anterior.\"\n\n- \"En agosto, se alojaron 110.267 viajeros en establecimientos turísticos extrahoteleros de Extremadura, lo que supone un incremento del 18,9 por ciento más que en el mismo mes de 2025.\"\n\n- En apartamentos turísticos: \"retrocedieron un 1,7%\"\n\n- En campings: \"las estancias retrocedieron un 0,4% interanual\"\n\n- En turismo rural: \"registrar un incremento del 2,7% en las pernoctaciones durante agosto\"\n\n- En albergues: \"experimentaron la mayor contracción interanual con un descenso del 14,3%\"\n\n- Índice de Precios de Apartamentos Turísticos: \"se encareció un 5,8%\"\n\n- Índice de Precios de Campings: \"subió un 5,1%\"\n\n- Índice de Alojamientos de Turismo Rural: \"registró un repunte del 3,2%\""
+    },
+    {
+      "cuando_utc": "2026-10-02T02:26:02Z",
+      "url": "https://www.elespanol.com/castilla-y-leon/vivir/turismo/20261001/castilla-leon-vuelve-primer-puesto-podio-turismo-rural-cerrar-agosto-pernoctaciones/1003744404404_0.html",
+      "no_contada": "Castilla y León: niveles; tasa solo de turismo rural",
+      "pedido_a_la_herramienta": "Copia literalmente el titular, la fecha, la firma y TODAS las frases con cifras: viajeros y pernoctaciones en apartamentos turísticos, campings, turismo rural y albergues, con sus porcentajes de variación interanual exactos (con decimales tal como aparecen) y con qué periodo comparan.",
+      "extracto_devuelto": "# Titular\n\n\"Castilla y León vuelve al primer puesto del podio del turismo rural tras cerrar agosto con más de 314.000 pernoctaciones\"\n\n# Fecha\n\n1 octubre 2026 10:51h\n\n# Firma\n\nÁngel Pisano\n\n# Cifras de viajeros y pernoctaciones\n\n**Pernoctaciones totales en Castilla y León (agosto 2026):**\n- \"más de 314.000 pernoctaciones\" con \"un 2,3% más\" respecto a agosto 2025\n\n**Viajeros en Castilla y León:**\n- \"11.959 viajeros\" representando \"un 11,68% más\" que en 2025\n\n**Pernoctaciones por tipo de visitante:**\n- Residentes en España: 268.768 pernoctaciones\n- No residentes (extranjero): \"45.726\" (14,5% del total)\n\n**Variación nacional (España):**\n- Incremento general: \"un 2,7% a nivel nacional\"\n- Pernoctaciones de residentes: \"bajaron un 0,9%\"\n- Pernoctaciones de no residentes: \"se incrementaron un 12,1%\"\n\n**Ocupación:**\n- General: \"el 43% de las plazas\" con \"un 1,7% más\" que 2025\n- Fines de semana: \"48,9%\" con \"un aumento anual del 7,9%\""
+    },
+    {
+      "cuando_utc": "2026-10-02T02:27:12Z",
+      "url": "https://www.galiciapress.es/articulo/ultima-hora/2026-10-01/6035271-viajeros-alojados-casas-rurales-gallegas-aumentan-16-agosto",
+      "pieza": 5,
+      "pedido_a_la_herramienta": "Copia literalmente el titular, la fecha, la firma/agencia y TODAS las frases con cifras: viajeros y pernoctaciones en apartamentos turísticos, campings, turismo rural y albergues, con sus porcentajes de variación interanual exactos (con decimales tal como aparecen).",
+      "extracto_devuelto": "# Artículo: Turismo Rural en Galicia\n\n**Titular:** \"Los viajeros alojados en casas rurales gallegas aumentan un 16% en agosto\"\n\n**Fecha:** jueves, 1 de octubre de 2026, 11:04\n\n**Firma/Agencia:** Europa Press\n\n## Frases con Cifras:\n\n**Turismo Rural:**\n- \"en agosto se alojaron en los establecimientos gallegos de turismo rural 41.286 viajeros, 5.802 más que hace un año\"\n- \"De ellos, 28.045 eran nacionales y 13.242 extranjeros\"\n- \"En este tipo de establecimientos se realizaron 108.855 pernoctaciones, un 18% más que hace un año\"\n\n**Apartamentos Turísticos:**\n- \"los apartamentos turísticos también registraron más viajeros alojados en agosto, concretamente un 4,3% más que hace un año, hasta los 57.178\"\n- \"de los que 46.369 eran de origen nacional\"\n- \"Las pernoctaciones en este tipo de establecimientos se situaron en las 235.107, un 11,5% más\"\n\n**Campings:**\n- \"los campings tuvieron un 4,4% menos de clientes, hasta 138.698\"\n- \"Las noches realizadas en los campamentos cayeron un 6,6%\"\n\n**Albergues:**\n- \"los albergues un 16% menos, hasta 159.789\"\n- \"en los albergues bajaron un 13%\""
+    },
+    {
+      "cuando_utc": "2026-10-02T02:27:14Z",
+      "url": "https://www.ultimahora.es/noticias/local/2026/10/01/2719959/pernoctaciones-apartamentos-turisticos-bajan-agosto-baleares-viajeros-suben.html",
+      "pieza": 6,
+      "pedido_a_la_herramienta": "Copia literalmente el titular, la fecha, la firma/agencia y TODAS las frases con cifras: viajeros y pernoctaciones en apartamentos turísticos y campings en Baleares, con sus porcentajes de variación interanual exactos (con decimales tal como aparecen) y cifras del año anterior si aparecen.",
+      "extracto_devuelto": "# Tourist Accommodation Statistics for Balearic Islands - August 2026\n\n**Headline:** Las pernoctaciones en apartamentos turísticos bajan un 3,59% en agosto en Baleares y los viajeros suben un 9%\n\n**Date:** 01/10/26\n\n**Source/Agency:** Europa Press\n\n## Key Figures with Year-over-Year Changes:\n\n**Tourist Apartments:**\n- Overnight stays: 1.61 million (-3.59% vs. August 2025)\n- Travelers: 336,258 (+9% vs. August 2025)\n  - Foreign travelers: 276,174\n  - Domestic travelers: 60,084\n- Average stay: 4.80 days\n- Open apartments: 20,786\n- Occupancy rate: 86.74% (86.66% weekends)\n\n**Rural Tourism Accommodations:**\n- Travelers: 82,146\n  - Foreign: 68,498\n  - Domestic: 13,648\n- Overnight stays: 291,846\n- Average stay: 3.55 days"
+    },
+    {
+      "cuando_utc": "2026-10-02T02:27:15Z",
+      "url": "https://www.viaempresa.cat/es/economia/catalunya-record-turistas-extrahoteleros-agosto-mas-121-millones_2241311_102.html",
+      "pieza": 7,
+      "pedido_a_la_herramienta": "Copia literalmente el titular, la fecha, la firma/agencia y TODAS las frases con cifras: viajeros y pernoctaciones en apartamentos turísticos, campings, turismo rural y albergues en Cataluña, con sus porcentajes de variación interanual exactos (con decimales tal como aparecen).",
+      "extracto_devuelto": "# Información del Artículo\n\n**Titular:** \"Catalunya registra un récord de turistas extrahoteleros en agosto, con más de 1,21 millones\"\n\n**Fecha:** 01 de Octubre de 2026 - 11:58 (Actualizado: 01 de Octubre de 2026 - 16:44)\n\n**Firma/Agencia:** Redacción VIA Empresa | ACN\n\n---\n\n## Frases con Cifras\n\n- \"El agregado de campings, albergues, turismo rural y apartamentos turísticos recibió 1.215.165 viajeros en el octavo mes del año, un 3,06% más que en 2025.\"\n\n- \"Del total de viajeros, 719.033 fueron residentes en el Estado (59,2% del total) y 496.132 extranjeros (40,8%).\"\n\n- \"Las pernoctaciones, sin embargo, disminuyeron un 4,09% interanual, hasta las 6.970.124.\"\n\n- \"Los campings se mantuvieron como los de mayor afluencia con 909.079 turistas, un 5,92% más que el año pasado.\"\n\n- \"La estancia media en los establecimientos turísticos extrahoteleros fue de 5,74 días, por debajo del año anterior (6,16).\"\n\n- \"Entre los residentes en el Estado fue de 4,79 días, mientras que entre los extranjeros se elevó hasta los 7,11 días.\"\n\n- \"Los campings registraron 5.399.002 pernoctaciones, ligeramente por debajo de agosto del año pasado (5.440.058).\"\n\n- \"Los albergues bajaron hasta las 86.542 (93.238 en 2025) y los apartamentos turísticos, hasta las 1.202.961 (vs. 1.461.194).\"\n\n- \"El turismo rural registró 281.619, un 3,2% interanual más.\"\n\n- \"Las Terres de l'Ebre presentaron el mayor grado de ocupación, un 84,3%.\""
+    },
+    {
+      "cuando_utc": "2026-10-02T02:27:17Z",
+      "url": "https://murcia.empresas.de/los-campings-de-la-region-alcanzan-en-agosto-la-mayor-estancia-media-de-espana-con-672-dias/",
+      "no_contada": "Región de Murcia: solo niveles",
+      "pedido_a_la_herramienta": "Copia literalmente el titular, la fecha, la firma/agencia y TODAS las frases con cifras: viajeros y pernoctaciones en apartamentos turísticos, campings, turismo rural y albergues en la Región de Murcia, con sus porcentajes de variación interanual exactos si aparecen.",
+      "extracto_devuelto": "# Article Summary\n\n**Headline:** Los campings de la Región alcanzan en agosto la mayor estancia media de España con 6,72 días\n\n**Date:** 1 de octubre de 2026\n\n**Source:** EmpresasdeMurcia.com\n\n## Key Figures\n\n**Campings:**\n- \"estancia media de 6,72 días\" (highest in Spain)\n- 16,191 total travelers (2,039 foreign, 14,152 Spanish)\n- 108,832 overnight stays\n- 46.1% occupancy rate on weekends (below 62.12% national average)\n- 17 open facilities with 9,249 places\n\n**Apartments:**\n- Third-highest stay duration nationwide at \"5,84 días\" (above 5.03 national average)\n- 21,365 travelers (3,812 foreign)\n- 124,158 overnight stays\n- 52.26% weekend occupancy\n\n**Rural Tourism:**\n- \"estancia media de 4,47 días\" (third-highest nationally)\n- 5,918 travelers (914 foreign)\n- 26,441 overnight stays\n- 37.39% weekend occupancy\n\n**Rural Houses:**\n- 4.47-day average stay\n- 5,004 Spanish travelers, 914 foreign\n- 26,441 total overnight stays\n\n**Hostels:**\n- 2,792 travelers (609 foreign)\n- 7,967 overnight stays\n- 2.85-day average (above 1.94 national average)"
+    },
+    {
+      "cuando_utc": "2026-10-02T02:27:18Z",
+      "url": "https://www.eldiario.es/canariasahora/turismo/canarias-lidero-pernoctaciones-apartamentos-turisticos-agosto_1_13552880.html",
+      "no_contada": "Canarias: repite la tasa que imprime el INE",
+      "pedido_a_la_herramienta": "Copia literalmente el titular, la fecha, la firma/agencia y TODAS las frases con cifras: viajeros y pernoctaciones en apartamentos turísticos y campings en Canarias, con sus porcentajes de variación interanual exactos (con decimales tal como aparecen).",
+      "extracto_devuelto": "# Información del Artículo\n\n**Titular:** Canarias lideró las pernoctaciones en apartamentos turísticos en agosto\n\n**Fecha:** 1 de octubre de 2026 10:29 h (Hora canaria)\n\n**Firma/Agencia:** Europa Press\n\n---\n\n## Frases con Cifras\n\n**Apartamentos turísticos en Canarias:**\n- \"Canarias lideró las pernoctaciones en apartamentos turísticos en agosto con un total de 3,6 millones\"\n- Caída: \"3,9% con respecto al mismo mes del año anterior\"\n- \"Algo más de dos millones correspondieron a turistas extranjeros mientras que el resto, 642.726, fueron residentes en España\"\n- \"La estancia media se situó en 7,28 días y la ocupación alcanzó el 80,11%\"\n\n**Ámbito nacional:**\n- \"las pernoctaciones en alojamientos turísticos extrahoteleros retrocedieron un 1,2% en agosto respecto al mismo mes de 2025, hasta superar los 26,2 millones\"\n\n**Campings:**\n- \"En los campings, las estancias retrocedieron un 0,4% interanual\"\n- \"Durante agosto se ocuparon el 62,1% de las parcelas ofertadas\""
+    },
+    {
+      "cuando_utc": "2026-10-02T02:27:20Z",
+      "url": "https://www.valladolidplural.com/castilla-y-leon/castilla-leon-vuelve-ser-gran-destino-rural-espana-agosto-113000-viajeros-314000-pernoctaciones/20261001183518073156.html",
+      "no_contada": "Castilla y León: solo niveles",
+      "pedido_a_la_herramienta": "Copia literalmente el titular, la fecha, la firma/agencia y TODAS las frases con cifras sobre apartamentos turísticos y campings en Castilla y León (viajeros, pernoctaciones) con sus porcentajes de variación interanual exactos si aparecen.",
+      "extracto_devuelto": "**Titular:** Castilla y León vuelve a ser el gran destino rural de España en agosto con 113.000 viajeros y 314.000 pernoctaciones\n\n**Fecha:** 01/10/26 | 18:35\n\n**Firma/Agencia:** Agencias\n\n**Cifras sobre apartamentos turísticos y campings:**\n\nApartamentos turísticos: \"Castilla y León registró en agosto 61.858 viajeros y 145.298 pernoctaciones en apartamentos turísticos\"\n\nCampings: \"86.610 y 274.733 en campings\"\n\nNota: El artículo no incluye porcentajes de variación interanual específicos para apartamentos turísticos ni campings. Estos datos se presentan únicamente como cifras absolutas de agosto 2026."
+    },
+    {
+      "cuando_utc": "2026-10-02T02:28:22Z",
+      "url": "https://www.eldebate.com/espana/galicia/20261001/casas-rurales-ganan-terreno-galicia-16-viajeros-mientras-caen-campings-albergues_464915.html",
+      "reimpresion_de": 5,
+      "pedido_a_la_herramienta": "Copia literalmente el titular, la fecha, la firma/agencia y, palabra por palabra, las frases sobre campings y apartamentos turísticos en Galicia: viajeros, pernoctaciones (\"noches\") y sus porcentajes, indicando si dice que suben o que caen.",
+      "extracto_devuelto": "# Datos solicitados del artículo\n\n**Titular:** \"Las casas rurales ganan terreno en Galicia con un 16 % más de viajeros mientras caen campings y albergues\"\n\n**Fecha:** 01 oct. 2026 - 14:56\n\n**Firma/Agencia:** Redacción El Debate\n\n---\n\n## Sobre campings:\n\n- **Viajeros:** \"los campings tuvieron un 4,4 % menos de clientes, hasta 138.698\"\n- **Pernoctaciones:** \"Las noches realizadas en los campamentos cayeron un 6,6 %\"\n\n## Sobre apartamentos turísticos:\n\n- **Viajeros:** \"los apartamentos turísticos también registraron más viajeros alojados en agosto, concretamente un 4,3 % más que hace un año, hasta los 57.178\"\n- **Pernoctaciones:** \"Las pernoctaciones en este tipo de establecimientos se situaron en las 235.107, un 11,5 % más\""
+    },
+    {
+      "cuando_utc": "2026-10-02T02:28:24Z",
+      "url": "https://esradio.libertaddigital.com/galicia/2026-10-01/los-viajeros-alojados-en-casas-rurales-gallegas-aumentan-un-16-por-ciento-en-agosto-7468660/",
+      "reimpresion_de": 5,
+      "pedido_a_la_herramienta": "Copia literalmente, palabra por palabra, las frases sobre campings y apartamentos turísticos en Galicia: viajeros, pernoctaciones (\"noches\") y sus porcentajes, indicando si dice que suben o que caen. Copia también la agencia que firma.",
+      "extracto_devuelto": "# Campings y Apartamentos Turísticos en Galicia\n\n**Campings:**\n\"los campings tuvieron un 4,4% menos de clientes, hasta 138.698\" (caen)\n\"Las noches realizadas en los campamentos cayeron un 6,6%\" (caen)\n\n**Apartamentos turísticos:**\n\"un 4,3% más que hace un año, hasta los 57.178\" viajeros (suben)\n\"Las pernoctaciones en este tipo de establecimientos se situaron en las 235.107, un 11,5% más\" (suben)\n\n**Agencia:** esRadio Galicia / Agencias"
+    }
+  ],
+  "sobre_los_extractos": "Cada pagina lleva el texto que devolvio la herramienta de lectura el 2026-10-02 UTC. Es un extracto hecho por la herramienta, no una copia literal de la pagina: conserva las cifras, pero puede parafrasear una frase. Para las piezas 1, 2 y 6 es el unico respaldo que hay de lo que se leyo; para las piezas 3, 4, 5 y 7 hay ademas copia local de la pagina."
+}

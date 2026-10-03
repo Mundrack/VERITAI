@@ -1,0 +1,12 @@
+{
+  "host": "www.viaempresa.cat",
+  "url": "https://www.viaempresa.cat/robots.txt",
+  "cuando_utc": "2026-10-03T19:52:50Z",
+  "http": 200,
+  "redirecciones": [],
+  "bytes": 115,
+  "sha256": "489649388d02a5d1f5e16ac12c9ddaf56da925a06df70a03340fce74ac8558bc",
+  "content_type": "text/plain; charset=utf-8",
+  "estado": "leido",
+  "guardado_en": "research/evidencia/J5_P1_robots_www.viaempresa.cat.txt"
+}

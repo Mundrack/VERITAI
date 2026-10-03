@@ -476,3 +476,34 @@ señal de horizonte como B (DEC-029).
 - Hallazgos sin caso: EP Galicia (signo invertido en noches de campings) y
   EP Baleares (−3,59 % frente a −3,50 %), candidatos a F; decide Mateo.
 - Pendiente: P1' sobre `CTH0926` (23-10). La jornada 5 sigue abierta.
+
+### 2026-10-03: el registro de P1 sobre EOAT0826, completado y corregido (sin recolección)
+
+No es una sesión de recolección: no se buscó, no se añadió ningún caso y el
+cronómetro no se reanuda. La jornada 5 sigue abierta (`P3-PAUSA8`).
+
+- **Direcciones de las siete piezas**, con su fecha de consulta, en diseño
+  §4h (adenda). Copia local de cuatro: la de Murcia (ya estaba) y tres nuevas
+  (ifomo, Galicia Press, Via Empresa), con `robots.txt` consultado una vez
+  por dominio, pausa de 3 s y sha256. Script:
+  `copiar_piezas_p1.py`; resumen: `evidencia/J5_P1_EOAT0826_piezas.json`.
+- **Tres piezas sin copia** (Europa Press Andalucía y Baleares, leídas en
+  Última Hora; El Conciso): esos dos sitios vetan por nombre a `ClaudeBot` y
+  `anthropic-ai`. No se pidieron las páginas. **Decide Mateo.**
+- **Corrección:** Europa Press Baleares no es candidato a F. −3,59 % frente a
+  −3,501 % son 0,089 puntos, dentro de la tolerancia del sistema (0,15). La
+  anotación anterior se conserva, con la corrección al lado (§4h).
+- **Consultas de la sesión 3:** fueron 27, no 24. Las tres omitidas son de
+  la segunda tanda por comunidades. Registro completo:
+  `evidencia/J5_P1_EOAT0826_consultas.json`.
+- **Observación §4n:** siete piezas de cinco cabeceras (Europa Press firma
+  tres), y el único 2b es de la misma cabecera que E066.
+- Sin cambios: veredicto de P1 (confirmada para esta edición), criterio,
+  conteo, casos, cubetas. Validador: A 40 / B 8 / C 2 / D 10 / E 11 / F 4 /
+  O 1 = 77.
+- Las cuatro copias se guardan byte a byte (`.gitattributes`). Otros 18
+  ficheros descargados de `evidencia/` tienen en git un sha256 distinto del
+  anotado, por la normalización de finales de línea; no se han tocado.
+- Pendiente de Mateo: el hallazgo de Europa Press Galicia (signo invertido),
+  único candidato a F que queda sin caso; las tres copias; y los 18 ficheros.
+- Pendiente: P1' sobre `CTH0926` (23-10).

@@ -603,6 +603,126 @@ y el de Baleares da −3,59 % en pernoctaciones de apartamentos donde la
 vigente da −3,50 %: 0,09 puntos de diferencia, por encima de la tolerancia,
 también candidato a F. Ninguno es 2b.
 
+**Adenda del 2026-10-03 al resultado de P1 sobre `EOAT0826` (encargo de
+Mateo). No cambia el veredicto, el criterio ni el conteo; lo de arriba se
+conserva tal como se escribió el 1 de octubre.** El 3 de octubre no se
+volvió a buscar ni se añadió ninguna pieza.
+
+*1. Direcciones de las siete piezas, fecha de consulta y copia local.* Las
+siete se leyeron el **1 de octubre de 2026 por la noche** (hora local;
+02:25–02:28Z del 2 de octubre), con la herramienta de lectura web del
+agente. El resultado de arriba las listaba por redacción, sin dirección: solo
+la de Murcia quedó guardada, por ser el caso E078.
+
+| # | Pieza (dónde se leyó) | Primera consulta (UTC) | `robots.txt` del sitio, consultado el 2026-10-03 | Copia local en `research/evidencia/` |
+|---|---|---|---|---|
+| 1 | Europa Press, Andalucía (Última Hora) | 2026-10-02 02:25:50Z | veta por nombre a `ClaudeBot` y `anthropic-ai` | **no se guardó** |
+| 2 | El Conciso (A. Ruiz) | 2026-10-02 02:25:52Z | veta por nombre a `ClaudeBot` y `anthropic-ai` | **no se guardó** |
+| 3 | ifomo (M. Alonso) | 2026-10-02 02:25:54Z | permite la ruta; sin `Crawl-delay` | `J5_P1_3_ifomo.htm`, 2026-10-03 19:53:48Z, sha256 `d67ed3397e76a0ad` |
+| 4 | El Nuevo Digital Murcia (F. A.) | 2026-10-02 02:25:59Z | consultado el 2026-10-02, antes de la copia | `J5_E078_elnuevodigitalmurcia.htm`, 2026-10-02 02:28:21Z, sha256 `a64aec717be56847` |
+| 5 | Europa Press, Galicia (Galicia Press) | 2026-10-02 02:27:12Z | permite la ruta; sin `Crawl-delay` para el grupo general | `J5_P1_5_europapress_galicia_galiciapress.htm`, 2026-10-03 19:53:50Z, sha256 `eccc207aeb306e8c` |
+| 6 | Europa Press, Illes Balears (Última Hora) | 2026-10-02 02:27:14Z | veta por nombre a `ClaudeBot` y `anthropic-ai` | **no se guardó** |
+| 7 | ACN (Via Empresa) | 2026-10-02 02:27:15Z | permite la ruta; sin `Crawl-delay` | `J5_P1_7_acn_viaempresa.htm`, 2026-10-03 19:53:51Z, sha256 `82ac3c74e491ec67` |
+
+1. <https://www.ultimahora.es/noticias/comunidades/2026/10/01/2720069/pernoctaciones-extrahoteleras-crecen-andalucia-agosto-superan-tres-millones.html>
+2. <https://www.elconciso.es/coyuntura/andalucia-viajeros-pernoctaciones-extrahoteleros-agosto_0_2008120049.html>
+3. <https://www.ifomo.es/articulo/cantabria/cantabria-pernoctaciones-extrahoteleras-cantabria-bajan-54-agosto-viajeros-crecen-84/20261001103627360120.html>
+4. <https://elnuevodigitalmurcia.es/art/9286/apartamentos-camping-y-casas-rurales-perdieron-en-agosto-un-30-de-viajeros-y-un-23-de-pernoctaciones>
+5. <https://www.galiciapress.es/articulo/ultima-hora/2026-10-01/6035271-viajeros-alojados-casas-rurales-gallegas-aumentan-16-agosto>
+6. <https://www.ultimahora.es/noticias/local/2026/10/01/2719959/pernoctaciones-apartamentos-turisticos-bajan-agosto-baleares-viajeros-suben.html>
+7. <https://www.viaempresa.cat/es/economia/catalunya-record-turistas-extrahoteleros-agosto-mas-121-millones_2241311_102.html>
+
+Cómo se hicieron las copias (`research/puerta3/copiar_piezas_p1.py`): el
+`robots.txt` de cada dominio se pidió **una sola vez**, con el agente
+identificado, antes de cualquier otra petición, y queda guardado tal como
+llegó (`J5_P1_robots_<dominio>.txt`). Ninguno de los cinco declara
+`Crawl-delay` para el grupo que nos aplica; se usó la pausa de cortesía de 3
+s. Tres dominios permiten la ruta y sus tres páginas respondieron 200. En las
+cuatro copias que hay, las cifras anotadas arriba aparecen en el texto
+guardado (resumen con estados, tamaños y sha256:
+`J5_P1_EOAT0826_piezas.json`). Las cuatro se guardan **byte a byte**
+(`.gitattributes`): sin esa regla git normaliza los finales de línea y el
+sha256 anotado deja de coincidir con lo que hay en el repositorio, que es lo
+que le pasaba hasta hoy a la copia de Murcia.
+
+**Por qué faltan tres copias.** `ultimahora.es` y `elconciso.es` permiten la
+ruta al grupo general, pero vetan con grupo propio a `ClaudeBot` y
+`anthropic-ai`. Este trabajo lo ejecuta un agente de ese proveedor. Se
+aplicó el criterio prudente: presentarse con el nombre del proyecto no cambia
+a quién no quiere leer el sitio, y pedir la página igualmente sería rodear
+ese veto (DEC-018). No se pidió ninguna de las tres páginas. **Decide Mateo**
+si ese criterio es el que quiere y si esas copias se guardan de otro modo;
+una persona puede guardarlas desde su navegador. Para que el criterio se
+pueda juzgar entero: `galiciapress.es` veta a `GPTBot`, `Google-Extended` y
+`CCBot`, pero no nombra a los agentes de Anthropic ni restringe la ruta al
+grupo general, y por eso sí se copió.
+
+**Límite que esto deja a la vista.** El 1 de octubre las piezas se leyeron
+con la herramienta de lectura web del agente, y antes de esas lecturas el
+agente identificado no consultó el `robots.txt` de los dominios de prensa;
+solo lo hizo para la copia de Murcia. Consultados ahora, dos de los cinco
+dominios vetan a los agentes de Anthropic. Las cifras de las piezas 1, 2 y 6
+constan por tanto en el extracto que devolvió aquella lectura, guardado en
+`J5_P1_EOAT0826_consultas.json` junto al de las otras páginas, y no en una
+copia local. Ese extracto lo hace la herramienta: conserva las cifras, pero
+no es una copia literal (en la pieza de ifomo, que sí tiene copia, una frase
+venía parafraseada y las cifras coincidían). No cambia el conteo, pero tres
+de las siete piezas tienen peor respaldo que las otras cuatro.
+
+*2. Corrección de la nota sobre Europa Press Baleares.* Arriba se anotó que
+el teletipo de Baleares "da −3,59 % en pernoctaciones de apartamentos donde
+la vigente da −3,50 %: 0,09 puntos de diferencia, por encima de la
+tolerancia, también candidato a F", y en la tabla, fila 6, que esa cifra "no
+sale exacta con ninguna". **Esa anotación era incorrecta y queda corregida
+aquí; no se borra.** Con la tolerancia del sistema, la cifra cuadra con la
+base vigente:
+
+| | |
+|---|---|
+| Pernoctaciones en apartamentos, Illes Balears, agosto de 2026 | 1.612.526 |
+| Agosto de 2025, edición vigente (API) | 1.671.032 |
+| Tasa con la base vigente | −3,501 % |
+| Tasa que imprime la pieza | −3,59 % |
+| Diferencia | 0,089 puntos |
+| Tolerancia del sistema | 0,15 puntos |
+
+La tolerancia es el mayor de tres valores: media unidad del último decimal
+que imprime la pieza (0,005), el 0,5 % de la tasa (0,018) y el mínimo de 0,15
+puntos fijado antes de medir (§4l; `domain/verdad.py` y
+`domain/tests/base_revisada.py`). Los 0,089 puntos superan la media unidad,
+pero no el mínimo. Pasada por el caso de uso del sistema con los valores
+guardados de la API, la afirmación sale `supported` y
+`no_divergence_detected`. Con la base provisional (1.645.755) la tasa sería
+−2,019 %, a 1,57 puntos: la pieza usa la vigente. **Europa Press Baleares no
+es candidato a claim falso.** Es coherente con E075, que sí quedó como F: allí
+la diferencia fue de 0,17 puntos, por encima de 0,15.
+
+Queda **un solo** hallazgo del cotejo sin caso abierto, el de Europa Press
+Galicia (noches en campings con el signo invertido), que el sistema da como
+`contradicted`. Sigue pendiente de Mateo.
+
+*3. Cuántas consultas se hicieron.* El párrafo *Búsqueda* de arriba describe
+24: una nacional, siete por grupos de comunidades, doce por cifras del anexo,
+dos de refuerzo y las dos de la criba. **Se hicieron 27**, según el registro
+de aquella sesión:
+
+| Tanda (UTC del 2026-10-02) | Consultas | Qué buscaban |
+|---|---|---|
+| 02:25:14 | 1 | nacional |
+| 02:25:14–02:25:17 | 6 | grupos de comunidades que cubren las 17 |
+| 02:26:03–02:26:05 | 4 | segunda tanda, por las once comunidades de las que aún no se había leído ninguna pieza: Navarra; Aragón y La Rioja; Comunitat Valenciana, Baleares y Canarias; Galicia, Asturias, Euskadi, Madrid y Cataluña |
+| 02:26:43–02:26:51 | 12 | cifras exactas del anexo |
+| 02:27:21–02:27:22 | 2 | refuerzo: Navarra y teletipos de Europa Press |
+| 02:27:23 | 2 | criba (a) y (b) del candidato |
+
+Las tres que faltaban en la descripción son de la **segunda tanda**: donde
+el texto dice "siete por grupos" fueron diez por comunidades, seis en la
+primera tanda y cuatro en la segunda. Se leyeron 16 páginas: las siete
+contadas, tres reimpresiones y seis sin tasa propia. La lista completa, con
+el texto de cada consulta y cada dirección, está en
+`research/evidencia/J5_P1_EOAT0826_consultas.json`. Ninguna de las tres
+consultas omitidas añade ni quita piezas: el conteo sigue en siete.
+
 ### 4i. La jornada 5 completa A hasta 40, sin INE
 
 H3 necesita 40 controles y hay 31. En la misma jornada se recolectan **al
@@ -706,3 +826,32 @@ estructura (base revisada entre la publicación y hoy), resultado contrario
 (la redacción usa la vigente). Sirve para decir en la tesis que 2b no es
 automático cuando hay revisión, y que depende de dónde toma la base el
 redactor (§4d). No se busca más de esto a propósito (§4j).
+
+### 4n. Observación: dos limitaciones de la confirmación de P1 sobre `EOAT0826` (no cambian el veredicto ni el criterio)
+
+Anotada el 2026-10-03 a petición de Mateo, al revisar el registro de P1
+(§4h). El veredicto sigue siendo el de la tabla de lectura fijada el
+2026-09-27: siete piezas con tasa propia, un 2b, **P1 confirmada para esta
+edición**. Lo que sigue dice sobre qué descansa esa confirmación.
+
+- **Siete piezas, cinco cabeceras.** Europa Press firma tres de las siete
+  (Andalucía, Galicia e Illes Balears); las otras cuatro son de El Conciso,
+  ifomo, El Nuevo Digital Murcia y ACN. El criterio está escrito en
+  **piezas** ("piezas localizadas con tasa propia") y no se mueve después de
+  ver el resultado: los tres teletipos son textos distintos, de comunidades
+  distintas, y cada uno trae sus propias tasas. Pero la confirmación
+  descansa en cinco cabeceras, es decir, en cinco emisores de piezas. Contada
+  por cabeceras, la muestra sería de cinco, por debajo de las seis que la
+  tabla de lectura pide para leer el resultado; esa no es la unidad que se
+  escribió, y se deja dicho para que nadie lea "siete" como siete fuentes
+  independientes.
+- **El único 2b procede de la misma cabecera que E066.** El Nuevo Digital
+  Murcia ya había mostrado el mecanismo en `EOAT0526`. La pieza se localizó
+  con la consulta genérica por comunidad, no rastreando la cabecera (§4j),
+  pero la predicción se cumple gracias a una redacción que ya lo había hecho
+  antes: es evidencia de que el mecanismo **persiste** ahí, no de que esté
+  extendido. Seis de las siete piezas calcularon con la base vigente.
+
+Ninguna de las dos es una clase, una cubeta ni un criterio nuevo. Las dos se
+leen junto con P1' sobre `CTH0926` (23 de octubre), que sigue siendo
+necesaria (§4h).

@@ -1,0 +1,12 @@
+{
+  "host": "www.ifomo.es",
+  "url": "https://www.ifomo.es/robots.txt",
+  "cuando_utc": "2026-10-03T19:52:48Z",
+  "http": 200,
+  "redirecciones": [],
+  "bytes": 284,
+  "sha256": "0427fda5aa6815539e3ade05cef42c66eba7eb4c04fe47f417a8caf5bc4a8890",
+  "content_type": "text/plain; charset=UTF-8",
+  "estado": "leido",
+  "guardado_en": "research/evidencia/J5_P1_robots_www.ifomo.es.txt"
+}

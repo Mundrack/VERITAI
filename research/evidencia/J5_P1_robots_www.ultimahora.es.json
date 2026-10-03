@@ -1,0 +1,12 @@
+{
+  "host": "www.ultimahora.es",
+  "url": "https://www.ultimahora.es/robots.txt",
+  "cuando_utc": "2026-10-03T19:52:47Z",
+  "http": 200,
+  "redirecciones": [],
+  "bytes": 3342,
+  "sha256": "f2b00bd34245db687869e9c73ba2092fbf54b38ac215d81178fe36b1d5bceed9",
+  "content_type": "text/plain",
+  "estado": "leido",
+  "guardado_en": "research/evidencia/J5_P1_robots_www.ultimahora.es.txt"
+}

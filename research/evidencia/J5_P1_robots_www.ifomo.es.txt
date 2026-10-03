@@ -1,0 +1,13 @@
+User-Agent: *
+Disallow: /harming/humans
+Disallow: /ignoring/human/orders
+Disallow: /harm/to/self
+Disallow: /api
+Disallow: /content/stats
+Disallow: /comments
+Disallow: /ads/
+Disallow: /admin
+
+
+Sitemap: https://www.ifomo.es/sitemap.news.xml.gz
+Sitemap: https://www.ifomo.es/sitemap.xml

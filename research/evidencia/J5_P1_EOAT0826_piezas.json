@@ -1,0 +1,352 @@
+{
+  "que_es": "Direcciones, fechas de consulta y copias locales de las siete piezas contadas en P1 sobre EOAT0826 (diseno 4h)",
+  "generado_utc": "2026-10-03T20:00:16Z",
+  "agente": "VERITAI-prototipo/0.1 (tesis UDLA; agente identificado, DEC-018)",
+  "convencion": "robots.txt una vez por dominio antes de cualquier otra peticion; Crawl-delay del sitio o, si no declara, 3.0 s de cortesia; un rechazo cierra la copia (DEC-018, DEC-021)",
+  "piezas": [
+    {
+      "n": 1,
+      "pieza": "Europa Press, Andalucia",
+      "leida_en": "Ultima Hora",
+      "comunidad": "Andalucía",
+      "url": "https://www.ultimahora.es/noticias/comunidades/2026/10/01/2720069/pernoctaciones-extrahoteleras-crecen-andalucia-agosto-superan-tres-millones.html",
+      "primera_consulta_utc": "2026-10-02T02:25:50Z",
+      "primera_consulta_como": "herramienta de lectura web del agente (sesion 3 de la jornada 5)",
+      "robots": {
+        "host": "www.ultimahora.es",
+        "url": "https://www.ultimahora.es/robots.txt",
+        "cuando_utc": "2026-10-03T19:52:47Z",
+        "http": 200,
+        "redirecciones": [],
+        "bytes": 3342,
+        "sha256": "f2b00bd34245db687869e9c73ba2092fbf54b38ac215d81178fe36b1d5bceed9",
+        "content_type": "text/plain",
+        "estado": "leido",
+        "guardado_en": "research/evidencia/J5_P1_robots_www.ultimahora.es.txt",
+        "reutilizado": true,
+        "decision": {
+          "grupo": "*",
+          "regla": "ninguna regla casa",
+          "segun_urllib_robotparser": true,
+          "crawl_delay_s": null,
+          "vetos_a_agentes_de_anthropic": [
+            {
+              "agente": "claudebot",
+              "regla": "disallow: /"
+            },
+            {
+              "agente": "anthropic-ai",
+              "regla": "disallow: /"
+            }
+          ],
+          "permitido": false,
+          "motivo": "el robots.txt veta la ruta a agentes de Anthropic (claudebot, anthropic-ai); decide Mateo"
+        }
+      },
+      "copia": {
+        "copiada": false,
+        "motivo": "el robots.txt veta la ruta a agentes de Anthropic (claudebot, anthropic-ai); decide Mateo"
+      }
+    },
+    {
+      "n": 2,
+      "pieza": "El Conciso (A. Ruiz)",
+      "leida_en": "El Conciso",
+      "comunidad": "Andalucía",
+      "url": "https://www.elconciso.es/coyuntura/andalucia-viajeros-pernoctaciones-extrahoteleros-agosto_0_2008120049.html",
+      "primera_consulta_utc": "2026-10-02T02:25:52Z",
+      "primera_consulta_como": "herramienta de lectura web del agente (sesion 3 de la jornada 5)",
+      "robots": {
+        "host": "www.elconciso.es",
+        "url": "https://www.elconciso.es/robots.txt",
+        "cuando_utc": "2026-10-03T19:52:48Z",
+        "http": 200,
+        "redirecciones": [],
+        "bytes": 1333,
+        "sha256": "7c4e584d9981c12403222e35db2e8dddc6881b111f8fd0d754ea5b5d614aacea",
+        "content_type": "text/plain; charset=UTF-8",
+        "estado": "leido",
+        "guardado_en": "research/evidencia/J5_P1_robots_www.elconciso.es.txt",
+        "reutilizado": true,
+        "decision": {
+          "grupo": "*",
+          "regla": "ninguna regla casa",
+          "segun_urllib_robotparser": true,
+          "crawl_delay_s": null,
+          "vetos_a_agentes_de_anthropic": [
+            {
+              "agente": "claudebot",
+              "regla": "disallow: /"
+            },
+            {
+              "agente": "anthropic-ai",
+              "regla": "disallow: /"
+            }
+          ],
+          "permitido": false,
+          "motivo": "el robots.txt veta la ruta a agentes de Anthropic (claudebot, anthropic-ai); decide Mateo"
+        }
+      },
+      "copia": {
+        "copiada": false,
+        "motivo": "el robots.txt veta la ruta a agentes de Anthropic (claudebot, anthropic-ai); decide Mateo"
+      }
+    },
+    {
+      "n": 3,
+      "pieza": "ifomo (M. Alonso)",
+      "leida_en": "ifomo",
+      "comunidad": "Cantabria",
+      "url": "https://www.ifomo.es/articulo/cantabria/cantabria-pernoctaciones-extrahoteleras-cantabria-bajan-54-agosto-viajeros-crecen-84/20261001103627360120.html",
+      "primera_consulta_utc": "2026-10-02T02:25:54Z",
+      "primera_consulta_como": "herramienta de lectura web del agente (sesion 3 de la jornada 5)",
+      "robots": {
+        "host": "www.ifomo.es",
+        "url": "https://www.ifomo.es/robots.txt",
+        "cuando_utc": "2026-10-03T19:52:48Z",
+        "http": 200,
+        "redirecciones": [],
+        "bytes": 284,
+        "sha256": "0427fda5aa6815539e3ade05cef42c66eba7eb4c04fe47f417a8caf5bc4a8890",
+        "content_type": "text/plain; charset=UTF-8",
+        "estado": "leido",
+        "guardado_en": "research/evidencia/J5_P1_robots_www.ifomo.es.txt",
+        "reutilizado": true,
+        "decision": {
+          "grupo": "*",
+          "regla": "ninguna regla casa",
+          "segun_urllib_robotparser": true,
+          "crawl_delay_s": null,
+          "vetos_a_agentes_de_anthropic": [],
+          "permitido": true,
+          "motivo": "permitido",
+          "pausa_s": 3.0
+        }
+      },
+      "copia": {
+        "cuando_utc": "2026-10-03T19:53:48Z",
+        "http": 200,
+        "espera_previa_s": 0.0,
+        "redirecciones": [],
+        "url_final": "https://www.ifomo.es/articulo/cantabria/cantabria-pernoctaciones-extrahoteleras-cantabria-bajan-54-agosto-viajeros-crecen-84/20261001103627360120.html",
+        "copiada": true,
+        "bytes": 514487,
+        "sha256": "d67ed3397e76a0ad994d04cd06cbd9e2ef501e16c2c89b986501990ac837ec56",
+        "content_type": "text/html; charset=UTF-8",
+        "guardado_en": "research/evidencia/J5_P1_3_ifomo.htm",
+        "cifras_de_4h_en_el_texto": [
+          {
+            "patron": "apartamentos, un 8\\s?(%|por ciento) menos",
+            "encontrada": true,
+            "contexto": "descenso. Además, se registraron 132.191 pernoctaciones en apartamentos, un 8% menos que en el mismo mes de 2025, y 8.413 en"
+          },
+          {
+            "patron": "campings, concretamente 606\\.447, un 5,4\\s?(%|por ciento) menos",
+            "encontrada": true,
+            "contexto": "sto, las mayoría de pernoctaciones extrahoteleras fueron en campings, concretamente 606.447, un 5,4% menos. Tras los campings, el segundo mayor vo"
+          }
+        ]
+      }
+    },
+    {
+      "n": 4,
+      "pieza": "El Nuevo Digital Murcia (F. A.)",
+      "leida_en": "El Nuevo Digital Murcia",
+      "comunidad": "Región de Murcia",
+      "url": "https://elnuevodigitalmurcia.es/art/9286/apartamentos-camping-y-casas-rurales-perdieron-en-agosto-un-30-de-viajeros-y-un-23-de-pernoctaciones",
+      "primera_consulta_utc": "2026-10-02T02:25:59Z",
+      "primera_consulta_como": "herramienta de lectura web del agente (sesion 3 de la jornada 5)",
+      "copia": {
+        "copiada": true,
+        "cuando_utc": "2026-10-02T02:28:21Z",
+        "nota": "copia de la sesion 3 (caso E078), con robots.txt consultado antes; no se vuelve a pedir",
+        "bytes": 67199,
+        "sha256": "a64aec717be56847a1957983ca46feeaf605ad93bf41e217373ddaa24b759be0",
+        "guardado_en": "research/evidencia/J5_E078_elnuevodigitalmurcia.htm",
+        "cifras_de_4h_en_el_texto": [
+          {
+            "patron": "un 17\\s?(%|por ciento) menos",
+            "encontrada": true,
+            "contexto": ". Los 21.362 viajeros que optaron por un apartamento fueron un 17% menos que en agosto de 2025; los 16.191 campi"
+          },
+          {
+            "patron": "\\(-44\\s?%\\)",
+            "encontrada": true,
+            "contexto": "2025; los 16.191 campistas registrados fueron casi la mitad (-44%) que un año antes; y en los alojamientos"
+          }
+        ]
+      }
+    },
+    {
+      "n": 5,
+      "pieza": "Europa Press, Galicia",
+      "leida_en": "Galicia Press",
+      "comunidad": "Galicia",
+      "url": "https://www.galiciapress.es/articulo/ultima-hora/2026-10-01/6035271-viajeros-alojados-casas-rurales-gallegas-aumentan-16-agosto",
+      "primera_consulta_utc": "2026-10-02T02:27:12Z",
+      "primera_consulta_como": "herramienta de lectura web del agente (sesion 3 de la jornada 5)",
+      "robots": {
+        "host": "www.galiciapress.es",
+        "url": "https://www.galiciapress.es/robots.txt",
+        "cuando_utc": "2026-10-03T19:52:49Z",
+        "http": 200,
+        "redirecciones": [],
+        "bytes": 4504,
+        "sha256": "eb8bb76eedee1dd449855acca9471f83213cd439d4f676af06b8dc910b41e2b0",
+        "content_type": "text/plain;charset=UTF-8",
+        "estado": "leido",
+        "guardado_en": "research/evidencia/J5_P1_robots_www.galiciapress.es.txt",
+        "reutilizado": true,
+        "decision": {
+          "grupo": "*",
+          "regla": "allow: /",
+          "segun_urllib_robotparser": true,
+          "crawl_delay_s": null,
+          "vetos_a_agentes_de_anthropic": [],
+          "permitido": true,
+          "motivo": "permitido",
+          "pausa_s": 3.0
+        }
+      },
+      "copia": {
+        "cuando_utc": "2026-10-03T19:53:50Z",
+        "http": 200,
+        "espera_previa_s": 0.0,
+        "redirecciones": [],
+        "url_final": "https://www.galiciapress.es/articulo/ultima-hora/2026-10-01/6035271-viajeros-alojados-casas-rurales-gallegas-aumentan-16-agosto",
+        "copiada": true,
+        "bytes": 98970,
+        "sha256": "eccc207aeb306e8c948f95cbe242e4c549ea854b11eed7da9578e16a4380dbb7",
+        "content_type": "text/html; charset=UTF-8",
+        "guardado_en": "research/evidencia/J5_P1_5_europapress_galicia_galiciapress.htm",
+        "cifras_de_4h_en_el_texto": [
+          {
+            "patron": "4,3\\s?(%|por ciento) más",
+            "encontrada": true,
+            "contexto": "gistraron más viajeros alojados en agosto, concretamente un 4,3% más que hace un año, hasta los 57.178, de l"
+          },
+          {
+            "patron": "11,5\\s?(%|por ciento) más",
+            "encontrada": true,
+            "contexto": "ste tipo de establecimientos se situaron en las 235.107, un 11,5% más. En el lado contrario, tanto campings c"
+          },
+          {
+            "patron": "4,4\\s?(%|por ciento) menos",
+            "encontrada": true,
+            "contexto": "l octavo mes del año. En concreto, los campings tuvieron un 4,4% menos de clientes, hasta 138.698; y los alber"
+          },
+          {
+            "patron": "cayeron un 6,6\\s?(%|por ciento)",
+            "encontrada": true,
+            "contexto": "os, hasta 159.789. Las noches realizadas en los campamentos cayeron un 6,6%, mientras que en los albergues bajaron"
+          }
+        ]
+      }
+    },
+    {
+      "n": 6,
+      "pieza": "Europa Press, Illes Balears",
+      "leida_en": "Ultima Hora",
+      "comunidad": "Illes Balears",
+      "url": "https://www.ultimahora.es/noticias/local/2026/10/01/2719959/pernoctaciones-apartamentos-turisticos-bajan-agosto-baleares-viajeros-suben.html",
+      "primera_consulta_utc": "2026-10-02T02:27:14Z",
+      "primera_consulta_como": "herramienta de lectura web del agente (sesion 3 de la jornada 5)",
+      "robots": {
+        "host": "www.ultimahora.es",
+        "url": "https://www.ultimahora.es/robots.txt",
+        "cuando_utc": "2026-10-03T19:52:47Z",
+        "http": 200,
+        "redirecciones": [],
+        "bytes": 3342,
+        "sha256": "f2b00bd34245db687869e9c73ba2092fbf54b38ac215d81178fe36b1d5bceed9",
+        "content_type": "text/plain",
+        "estado": "leido",
+        "guardado_en": "research/evidencia/J5_P1_robots_www.ultimahora.es.txt",
+        "reutilizado": true,
+        "decision": {
+          "grupo": "*",
+          "regla": "ninguna regla casa",
+          "segun_urllib_robotparser": true,
+          "crawl_delay_s": null,
+          "vetos_a_agentes_de_anthropic": [
+            {
+              "agente": "claudebot",
+              "regla": "disallow: /"
+            },
+            {
+              "agente": "anthropic-ai",
+              "regla": "disallow: /"
+            }
+          ],
+          "permitido": false,
+          "motivo": "el robots.txt veta la ruta a agentes de Anthropic (claudebot, anthropic-ai); decide Mateo"
+        }
+      },
+      "copia": {
+        "copiada": false,
+        "motivo": "el robots.txt veta la ruta a agentes de Anthropic (claudebot, anthropic-ai); decide Mateo"
+      }
+    },
+    {
+      "n": 7,
+      "pieza": "ACN",
+      "leida_en": "Via Empresa",
+      "comunidad": "Cataluña",
+      "url": "https://www.viaempresa.cat/es/economia/catalunya-record-turistas-extrahoteleros-agosto-mas-121-millones_2241311_102.html",
+      "primera_consulta_utc": "2026-10-02T02:27:15Z",
+      "primera_consulta_como": "herramienta de lectura web del agente (sesion 3 de la jornada 5)",
+      "robots": {
+        "host": "www.viaempresa.cat",
+        "url": "https://www.viaempresa.cat/robots.txt",
+        "cuando_utc": "2026-10-03T19:52:50Z",
+        "http": 200,
+        "redirecciones": [],
+        "bytes": 115,
+        "sha256": "489649388d02a5d1f5e16ac12c9ddaf56da925a06df70a03340fce74ac8558bc",
+        "content_type": "text/plain; charset=utf-8",
+        "estado": "leido",
+        "guardado_en": "research/evidencia/J5_P1_robots_www.viaempresa.cat.txt",
+        "reutilizado": true,
+        "decision": {
+          "grupo": "*",
+          "regla": "ninguna regla casa",
+          "segun_urllib_robotparser": true,
+          "crawl_delay_s": null,
+          "vetos_a_agentes_de_anthropic": [],
+          "permitido": true,
+          "motivo": "permitido",
+          "pausa_s": 3.0
+        }
+      },
+      "copia": {
+        "cuando_utc": "2026-10-03T19:53:51Z",
+        "http": 200,
+        "espera_previa_s": 0.0,
+        "redirecciones": [],
+        "url_final": "https://www.viaempresa.cat/es/economia/catalunya-record-turistas-extrahoteleros-agosto-mas-121-millones_2241311_102.html",
+        "copiada": true,
+        "bytes": 201141,
+        "sha256": "82ac3c74e491ec6710c685b7d32e7f222c2aaabe3301c7b30d1b7fb560050960",
+        "content_type": "text/html; charset=UTF-8",
+        "guardado_en": "research/evidencia/J5_P1_7_acn_viaempresa.htm",
+        "cifras_de_4h_en_el_texto": [
+          {
+            "patron": "5,92\\s?(%|por ciento)",
+            "encontrada": true,
+            "contexto": "vieron como los de mayor afluencia con 909.079 turistas, un 5,92% más que el año pasado. La cifra supone"
+          },
+          {
+            "patron": "5\\.440\\.058",
+            "encontrada": true,
+            "contexto": "5.399.002, ligeramente por debajo de agosto del año pasado (5.440.058). También bajaron los albergues, hasta"
+          },
+          {
+            "patron": "1\\.461\\.194",
+            "encontrada": true,
+            "contexto": "25) y los apartamentos turísticos, hasta las 1.202.961 (vs. 1.461.194). El turismo rural registró 281.619, un"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "host": "www.elconciso.es",
+  "url": "https://www.elconciso.es/robots.txt",
+  "cuando_utc": "2026-10-03T19:52:48Z",
+  "http": 200,
+  "redirecciones": [],
+  "bytes": 1333,
+  "sha256": "7c4e584d9981c12403222e35db2e8dddc6881b111f8fd0d754ea5b5d614aacea",
+  "content_type": "text/plain; charset=UTF-8",
+  "estado": "leido",
+  "guardado_en": "research/evidencia/J5_P1_robots_www.elconciso.es.txt"
+}

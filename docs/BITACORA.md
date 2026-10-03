@@ -1501,3 +1501,100 @@ implementación; no toca la Puerta 3; B0/B1/B2 no se diseñan.
   signo invertido; EP Baleares, −3,59 % frente a −3,50 %), sin caso abierto.
 - P1' sobre `CTH0926`. Jornada 5 abierta. Taxonomía sin decidir; tercer eje
   no tocado.
+
+---
+
+## 2026-10-03 (20:00Z) — P1 sobre EOAT0826: direcciones y copias de las piezas, corrección de la nota de Baleares, recuento de consultas y dos limitaciones (§4n)
+
+### Qué pidió Mateo
+
+Cuatro cosas sobre el registro de P1, **sin cambiar el veredicto**: (1)
+incorporar las direcciones de las siete piezas con su fecha de consulta y
+guardar copia local de cada una si el `robots.txt` lo permite, aplicando su
+`Crawl-delay`; (2) corregir la nota de Europa Press Baleares dejando
+constancia y sin borrar la anterior; (3) resolver la diferencia entre las 24
+consultas descritas y las 27 hechas; (4) añadir una observación con dos
+limitaciones de P1. Antes había pedido evaluar P1 otra vez: ya estaba
+evaluada desde el 1 de octubre (entrada anterior), así que no se repitió la
+búsqueda y solo se comprobó el registro, sin red.
+
+### Qué se hizo
+
+- **Direcciones y fechas** en diseño §4h, como adenda fechada debajo del
+  resultado del 1 de octubre, que no se toca. Salen del registro de la
+  sesión 3; no se volvió a buscar.
+- **Copias** (`research/puerta3/copiar_piezas_p1.py`, nuevo): `robots.txt`
+  una vez por dominio y antes de cualquier otra petición, con el agente
+  identificado; pausa de 3 s porque ninguno declara `Crawl-delay` para
+  nuestro grupo; página con tiempo máximo, tope de bytes y sin redirecciones
+  a otro host; sha256. Guardadas tres (ifomo, Galicia Press, Via Empresa),
+  más la de Murcia, que ya estaba. Los cinco `robots.txt` quedan en
+  `research/evidencia/` tal como llegaron. Las cuatro copias se guardan byte
+  a byte, con una regla nueva en `.gitattributes`.
+- **Corrección de Baleares** en la misma adenda: −3,59 % frente a −3,501 %
+  son 0,089 puntos, dentro de la tolerancia del sistema (0,15). No es
+  candidato a F.
+- **Recuento de consultas**: 27. El desglose y el texto de cada una, y las 16
+  páginas leídas, en `research/evidencia/J5_P1_EOAT0826_consultas.json`.
+- **§4n**, nueva: siete piezas de cinco cabeceras (Europa Press firma tres)
+  y el único 2b es de la misma cabecera que E066.
+- `PROGRESO.md` con la sección del día.
+
+### Qué se verificó
+
+- **Sin red, antes de tocar nada:** la tabla provisional/vigente recalculada
+  desde los anexos `EOAT0825` y `EOAT0826` y las respuestas guardadas de la
+  API da 72 celdas, 64 revisadas y ninguna diferencia con la guardada; las
+  cifras de las siete piezas, con la tolerancia del sistema, dan seis con la
+  vigente y una con la provisional; E078 por el caso de uso sale `mixed`,
+  `divergence_detected`, `2b_base_revisada`, subtipo magnitud, igual que lo
+  anotado.
+- **La lógica del `robots.txt`**, con ficheros inventados y sin red, antes
+  de la primera petición: grupo propio frente a `*`, comodines, regla más
+  larga, `Crawl-delay`, vetos por nombre, respuesta que no es un
+  `robots.txt`, y que `http:` y `file:` se rechazan sin pedir nada.
+- **Las cuatro copias** contienen literalmente las cifras anotadas en §4h.
+  Una segunda ejecución del script no hace ninguna petición: reutiliza lo
+  guardado.
+- **Baleares**, pasada por el caso de uso con los valores de la API: sale
+  `supported`, `no_divergence_detected`. Galicia sale `contradicted`.
+- El validador sigue en OK con los mismos números: 77 casos, B 8.
+
+### Qué no salió, y se anota
+
+- **Tres piezas sin copia.** `ultimahora.es` (Europa Press Andalucía y
+  Baleares) y `elconciso.es` permiten la ruta al grupo general pero vetan por
+  nombre a `ClaudeBot` y `anthropic-ai`. Quien ejecuta la descarga es un
+  agente de ese proveedor; se aplicó el criterio prudente y no se pidió
+  ninguna de las tres páginas (DEC-018).
+- **Límite del procedimiento del 1 de octubre.** Las piezas se leyeron con la
+  herramienta de lectura web del agente, sin que el agente identificado
+  consultara antes el `robots.txt` de esos dominios; solo se hizo para la
+  copia de Murcia. Las cifras de las piezas 1, 2 y 6 constan en el extracto
+  que devolvió aquella lectura, guardado ahora en evidencia, no en una copia
+  local de la página.
+- **La nota de Baleares estaba mal** y la descripción de la búsqueda contaba
+  tres consultas de menos. Las dos cosas están corregidas con su constancia;
+  ninguna afecta al conteo ni al veredicto.
+- **La evidencia descargada como texto no se guardaba byte a byte.**
+  `.gitattributes` normaliza los finales de línea, y 19 ficheros descargados
+  (notas HTML del INE y del BdE, tres de metodología, un CSV y la pieza de
+  Murcia) tienen en el repositorio un sha256 distinto del anotado al
+  descargarlos; por ejemplo `D2B_EOAT0826.htm`, anotado `c89b0d7f2444bd9b`
+  y en git `f487e912944e63f4`. Los originales siguen intactos en esta copia
+  de trabajo. Hoy se corrige solo la pieza de Murcia, que es una de las
+  siete, y se protegen las copias nuevas; **los otros 18 no se han tocado**.
+- Las copias de prensa son material de terceros: mismo límite que los PDF de
+  `research/literatura/` si el repositorio se hiciera público.
+
+### Qué quedó pendiente
+
+- **Decide Mateo:** (1) si el criterio prudente sobre los vetos a los
+  agentes de Anthropic es el que quiere, y cómo se guardan las tres copias
+  que faltan; (2) el hallazgo de Europa Press Galicia (signo invertido),
+  único candidato a F que queda sin caso; (3) guardar byte a byte los otros
+  18 ficheros de evidencia: una regla en `.gitattributes` y volver a
+  añadirlos desde esta copia de trabajo, que es donde quedan los originales.
+- P1' sobre `CTH0926` (23-10). Jornada 5 abierta (`P3-PAUSA8`); el
+  cronómetro no se ha tocado. Taxonomía sin decidir; tercer eje no tocado.
+  `feat/interfaz`, sin tocar.
