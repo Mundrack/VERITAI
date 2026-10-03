@@ -18,6 +18,7 @@ Esto es otra cosa: el sitio donde no se pierde lo que ya se sabe.
 | [`BITACORA.md`](BITACORA.md) | Qué se hizo cada día, con sus verificaciones | Se **añade** una entrada por sesión. Nunca se borra nada |
 | [`DECISIONES.md`](DECISIONES.md) | Cada decisión técnica, con la alternativa que se descartó y por qué | Se **añade** una entrada por decisión. Nunca se edita una pasada |
 | [`ARQUITECTURA.md`](ARQUITECTURA.md) | Qué existe hoy y cómo encaja | Cuando cambia la estructura real, no cuando se planea |
+| [`ARQUITECTURA-VISUAL.md`](ARQUITECTURA-VISUAL.md) | Reglas de la interfaz (panel web y extensión): capas y dependencias permitidas, carpetas, nombres, prohibiciones, pruebas, cómo se añade algo, resistencia al cambio del HTML de terceros. Gobierna todo el código visual; propuesto el 2026-10-03 | Por decisión de Mateo; su §9 (lo que hoy no cumple) se actualiza cuando se arregla algo |
 | [`GLOSARIO.md`](GLOSARIO.md) | Vocabulario del proyecto y **enums cerrados** | Cuando aparece un término nuevo o se cierra un enum |
 | [`PREGUNTAS-ABIERTAS.md`](PREGUNTAS-ABIERTAS.md) | Lo que está sin resolver y quién lo decide | Al abrir o cerrar una pregunta |
 | [`SEGURIDAD.md`](SEGURIDAD.md) | Controles de seguridad **ya implementados**, no los planeados | Cuando se implementa o se rompe un control |

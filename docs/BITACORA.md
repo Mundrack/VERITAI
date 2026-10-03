@@ -1501,3 +1501,35 @@ implementación; no toca la Puerta 3; B0/B1/B2 no se diseñan.
   signo invertido; EP Baleares, −3,59 % frente a −3,50 %), sin caso abierto.
 - P1' sobre `CTH0926`. Jornada 5 abierta. Taxonomía sin decidir; tercer eje
   no tocado.
+
+---
+
+## 2026-10-03 (13:44Z) — Reglas de arquitectura visual, antes del primer componente
+
+### Qué se hizo
+
+- `docs/ARQUITECTURA-VISUAL.md`, a petición de Mateo: capas y matriz de
+  dependencias permitidas (comprobable por prueba), estructura de carpetas con
+  una frase por carpeta, convenciones de nombres con ejemplos, prohibiciones
+  con la prueba que las hace cumplir, tipos de prueba y cobertura mínima,
+  pasos para añadir un estado visual, un componente, un token y un sitio, y la
+  regla de resistencia al cambio del HTML de terceros (configuración por sitio
+  en JSON, estrategias ordenadas de más estable a más frágil, nada se muestra
+  cuando todo falla, fixtures de HTML real y el procedimiento cuando X cambia).
+- §0 describe lo que existe: TypeScript sin framework con Vite, un `main.ts`
+  que pinta `/health`, un CSS con variables, i18n `es`/`en`, sin pruebas, sin
+  extensión, sin lectura del DOM de terceros. §9 lista 18 puntos en que lo
+  actual no cumple las reglas, sin arreglarlos.
+- Fila nueva en `docs/README.md`.
+
+### Qué se verificó
+
+- Cada cita del código (líneas de `main.ts` e `i18n/index.ts`, conteos de
+  líneas y de claves, enums y forma del veredicto en la API, CORS, montajes
+  de Docker) contra los ficheros reales.
+
+### Qué quedó pendiente
+
+- Aprobación de Mateo del documento; orden propuesto en §9 para ponerse al
+  día. No se escribió ningún componente ni se tocó la lógica de verificación,
+  la tesis ni la jornada 5 (abierta, `P3-PAUSA8`).
