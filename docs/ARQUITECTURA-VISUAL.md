@@ -182,6 +182,8 @@ apps/web/
 ├─ vite.config.ts             ✓  Servidor de desarrollo y build. Las constantes del contenedor (host, puerto, polling) viven aquí y solo aquí.
 ├─ vitest.config.ts           ✓  Runner de pruebas, entorno happy-dom, umbrales de cobertura (§5.3).
 ├─ arquitectura.json          ✓  La matriz de §1.2 como datos. La lee la prueba de dependencias.
+├─ scripts/
+│  └─ generar-iconos.mjs      ✓  `npm run iconos`: los PNG de la extensión desde los SVG de la marca (§2.1).
 ├─ Dockerfile                 ✓  Etapas deps / dev / build. No se sirve nada desde aquí; la extensión no corre en un contenedor.
 ├─ src/
 │  ├─ main.ts                 ✓  Arranque del panel suelto. Entra: montar aplicacion en #app. No entra: fetch, HTML, estilos, lógica.
@@ -202,6 +204,7 @@ apps/web/
 │  │  │  ├─ numero-trazado/   —  Un número con su raw_value_span desplegable. Es la unidad que hace visible la trazabilidad.
 │  │  │  ├─ motivo-abstencion/—  El motivo de abstención con su texto i18n.
 │  │  │  └─ estado-servicio/  ✓  Lo que pintaba main.ts: API y base de datos vivas o no.
+│  │  ├─ marca/               ✓  Los dos SVG del símbolo (§2.1): con órbita a partir de 48 px, mínimo por debajo. Carpeta preparada; los SVG aún no están.
 │  │  ├─ estilos/
 │  │  │  ├─ tokens.css        ✓  Las variables --veritai-* (color, espacio, radio, tipografía, sombra, capa) para tema claro y oscuro. Es el ÚNICO fichero con valores literales de color y tamaño.
 │  │  │  ├─ base.css          ✓  Estilos del panel suelto (index.html): body, tipografía base. NUNCA se inyecta en una página de terceros.
@@ -219,6 +222,7 @@ apps/web/
 │  │  └─ flujo.ts             ✓
 │  └─ extension/              —  Adaptación a MV3. Entra: manifest (generado), content script, service worker, popup. No entra: lógica fuera de aplicacion.
 │     ├─ manifest.base.json   —  Permisos mínimos; host_permissions se generan desde sitios/*.json en el build.
+│     ├─ iconos/              —  PNG generados por scripts/generar-iconos.mjs desde src/presentacion/marca/. Nunca a mano.
 │     ├─ contenido.ts         —  Content script: llama a aplicacion.
 │     ├─ fondo.ts             —  Service worker: solo lo que MV3 obliga a hacer ahí.
 │     └─ popup/
@@ -237,6 +241,8 @@ Dos aclaraciones sobre el árbol:
   el DOM: `crearPanelVeredicto(veredicto, locale): HTMLElement`. Devuelven un
   elemento suelto; quien lo monta es `aplicacion`. Eso es lo que permite
   probarlos sin navegador real.
+- **Los recursos gráficos tienen una sola carpeta,** `src/presentacion/marca/`
+  (§2.1).
 - **Dentro de una página de terceros todo va en un *shadow root*.** Es la
   única manera de que el CSS de X no deforme el panel y de que el nuestro no
   toque la página. Alternativas descartadas: prefijar clases y confiar
@@ -244,6 +250,76 @@ Dos aclaraciones sobre el árbol:
   un `iframe` (no se puede anclar al elemento de la publicación, choca con la
   CSP del anfitrión y pesa más). El panel suelto de desarrollo monta los
   mismos componentes en `#app`, sin shadow root, con `base.css`.
+
+
+### 2.1 La marca: dónde vive el símbolo y cómo se usa
+
+Los recursos gráficos de la interfaz son dos ficheros SVG y viven en
+**`src/presentacion/marca/`**, porque son presentación: los consumen los
+componentes y los gobiernan los tokens. No van en `src/marca/` (todo lo que
+hay en `src/` pertenece a una capa declarada, §1.4) ni en `public/`.
+
+| Fichero | Qué es | Regla de uso (Mateo, 2026-10-03) |
+|---|---|---|
+| `veritai-simbolo.svg` | el símbolo con órbita, con su color propio | **a partir de 48 px** |
+| `veritai-simbolo-min.svg` | solo la estrella, `fill="currentColor"` | **por debajo de 48 px**; hereda el color del texto que lo rodea, así que **no lleva color propio** y no se le pone ninguno desde CSS |
+
+Los dos tienen `viewBox` cuadrado, para que los iconos salgan cuadrados.
+
+**Cómo los usa un componente.** El símbolo con órbita se pinta con
+`<img src=... alt=...>`: tiene color propio y el texto alternativo va en
+`alt`, por `t()`. El mínimo se pinta en línea, con `<svg role="img"
+aria-label=...><use href="...#simbolo"/></svg>`, porque `currentColor` solo
+se hereda cuando el SVG está en el DOM; el fichero expone un `<symbol
+id="simbolo">`. Ninguno de los dos se mete por `innerHTML` (§4).
+
+**Iconos de la extensión.** Los PNG que pide Manifest V3 (16, 32, 48 y 128
+px) y el de la ficha de la tienda (512) **no se dibujan a mano**:
+`npm run iconos` ejecuta `scripts/generar-iconos.mjs`, que los genera desde
+los dos SVG en `src/extension/iconos/` con `@resvg/resvg-js` (renderizador
+SVG con binario precompilado y sin dependencias del sistema; alternativas
+descartadas: `sharp`, que trae todo un pipeline de imagen que no hace falta,
+e Inkscape o ImageMagick, que serían dependencias del sistema). Aplica la
+regla de arriba: 16 y 32 desde el mínimo, 48, 128 y 512 desde el de órbita.
+Como un PNG no tiene texto del que heredar, el mínimo se renderiza con un
+color de contexto: el token `--veritai-color-acento` de `tokens.css` cuando
+exista, o `--color=#rrggbb`; sin ninguno de los dos el script se para. Si
+el símbolo cambia, se vuelve a ejecutar y los PNG cambian con él; los PNG
+generados se versionan junto al script.
+
+**Tokens de acento: medido, propuesto, sin aplicar.** El 2026-10-03 los
+SVG no estaban en el repositorio; los colores se midieron sobre
+`icono-512.png`, un render vectorial del símbolo con órbita hecho a mano. El
+anillo es un rojo sólido `#98242c` (el color sólido más frecuente del
+render) y la estrella lleva un degradado de `#922328` a `#ea959a`, con
+brillo `#fbe7e8`. Ninguno coincide con los dos únicos rojos de
+`tokens.css`, que son de estado, no de marca:
+
+| Color | Tono | Contraste sobre `#ffffff` | Contraste sobre `#14161a` |
+|---|---|---|---|
+| anillo del símbolo `#98242c` | 356°, carmesí | 8,00:1 | 2,26:1 |
+| extremo claro del símbolo `#ea959a` | 355° | 2,27:1 | 7,99:1 |
+| `--veritai-color-mal` claro `#b3261e` | 3°, más cálido | 6,54:1 | 2,77:1 |
+| `--veritai-color-mal` oscuro `#ff6b61` | 4° | 2,79:1 | 6,49:1 |
+| mockup "Control Center" `--red` `#e63946` | 356° | 4,17:1 | 4,35:1 |
+
+Propuesta, a decidir por Mateo (no se ha tocado `tokens.css`):
+
+- `--veritai-color-acento`: `#98242c` en tema claro y `#ea959a` en tema
+  oscuro. Los dos salen del propio símbolo y los dos pasan AA (≥ 4,5:1) como
+  texto sobre su fondo.
+- `--veritai-color-mal` se queda como está: es el color de "fallo", no el de
+  la marca, y conviene que no sean el mismo rojo para que un servicio caído
+  no se lea como el logotipo. Si Mateo prefiere que la familia sea una sola,
+  `mal` se re-deriva del carmesí del símbolo y se vuelve a pasar la
+  comprobación de contraste.
+- El rojo del mockup (`#e63946`) no pasa AA como texto sobre blanco (4,17:1)
+  y no sale del símbolo: no se adopta.
+
+**Hallazgo que justifica el script.** De los cinco PNG hechos a mano que
+llegaron a la raíz del repositorio, `icono-16.png` es negro puro (48 píxeles
+opacos, todos `#000000`): es el símbolo mínimo exportado sin color de
+contexto. Es el fallo que el script evita.
 
 ---
 
@@ -435,7 +511,18 @@ bitácora. Ninguno más.
 Hoy el único sitio del alcance es **X** (Fase 0, `03-2`). Instagram o
 cualquier otro entra por este camino, sin excepciones.
 
-### 6.5 Una clave de texto nueva
+### 6.5 Un recurso gráfico nuevo o un cambio del símbolo
+
+1. El SVG va a `src/presentacion/marca/`, con `viewBox` cuadrado; si es la
+   versión mínima, `fill="currentColor"` y sin ningún color literal.
+2. Si cambia el símbolo, `npm run iconos` regenera `src/extension/iconos/`;
+   los PNG se versionan con el cambio.
+3. Un color nuevo del símbolo que la interfaz necesite como acento entra
+   como token (§6.3), nunca como literal en un componente.
+4. La prueba de componente del que lo usa comprueba el `alt` o el
+   `aria-label` y que el nodo es `<img>` o `<svg><use>`, no `innerHTML`.
+
+### 6.6 Una clave de texto nueva
 
 `es.json` y `en.json` a la vez, mismo nombre, mismos marcadores. La prueba de
 paridad falla si falta una. El texto respeta `GLOSARIO.md` §Términos que NO

@@ -1620,3 +1620,49 @@ implementación; no toca la Puerta 3; B0/B1/B2 no se diseñan.
   (CSP), 17 (explicación solo en español), y las pruebas que faltan del 13.
 - Reconstruir la imagen web para tener Vitest dentro del contenedor.
 - Jornada 5 abierta en `feat/puerta-3-recoleccion`, sin tocar.
+
+---
+
+## 2026-10-03 (14:31Z) — Marca: carpeta, regla de uso, medición de rojos y script de iconos; los SVG no llegaron
+
+### Qué se hizo
+
+- Mateo pidió integrar `veritai-simbolo.svg` y `veritai-simbolo-min.svg`.
+  **No hay ningún SVG en el material**: lo que llegó a la raíz del
+  repositorio son dos ZIP de marca (solo PNG: brandboards, mascota, logos,
+  recortes conceptuales), el HTML de un mockup y cinco PNG de icono hechos a
+  mano (16, 32, 48, 128, 512). Nada de eso se ha versionado ni movido.
+- Carpeta de recursos gráficos fijada en `src/presentacion/marca/`
+  (`README.md` con la regla), no en `src/marca/`: §2.1 nuevo en
+  `ARQUITECTURA-VISUAL.md` con la regla de uso (órbita ≥ 48 px, mínimo por
+  debajo, hereda `currentColor`), cómo se incrusta cada variante y §6.5 para
+  añadir o cambiar un recurso.
+- `scripts/generar-iconos.mjs` + `npm run iconos` (`@resvg/resvg-js` 2.6.2):
+  16 y 32 desde el mínimo con color de contexto, 48, 128 y 512 desde el de
+  órbita; se para si faltan los SVG o el color. Probado con dos SVG de
+  prueba en el scratchpad, no versionados.
+- Rojos medidos sobre `icono-512.png` (render del símbolo): anillo `#98242c`,
+  degradado `#922328`→`#ea959a`. No coinciden con `--veritai-color-mal`
+  (`#b3261e` / `#ff6b61`) ni con el mockup (`#e63946`). Propuesta de
+  `--veritai-color-acento` (`#98242c` claro, `#ea959a` oscuro) con
+  contrastes calculados, **sin tocar `tokens.css`**.
+
+### Qué se verificó
+
+- `icono-16.png` hecho a mano es negro puro (48 píxeles opacos `#000000`):
+  el símbolo mínimo exportado sin color de contexto. El script lo evita.
+- Script: se para sin SVG (salida 1), se para sin color (salida 1), genera
+  los cinco tamaños con los SVG de prueba y el centro de cada PNG tiene el
+  color esperado (`#98242c` en 16 y 32; `#d5767c` del de órbita en 48, 128
+  y 512).
+- `npm run typecheck` y `npm test` en verde (3 ficheros, 12 pruebas): nada
+  de `src/` cambia salvo el `README.md` de la carpeta.
+
+### Qué quedó pendiente
+
+- **Mateo:** dejar los dos SVG en `apps/web/src/presentacion/marca/`;
+  decidir los tokens de acento; decidir qué se hace con los ZIP, el HTML y
+  los PNG de la raíz (no versionados).
+- Con los SVG: cabecera del panel en `estado-servicio` con `alt`, y
+  `npm run iconos` para generar y versionar `src/extension/iconos/`.
+- Jornada 5 abierta en `feat/puerta-3-recoleccion`, sin tocar.
