@@ -1,0 +1,263 @@
+{
+  "0_mayoria": {
+    "accuracy": 0.7023,
+    "f1_macro": 0.4125,
+    "precision_hateful": 0.7023,
+    "recall_hateful": 1.0,
+    "f1_hateful": 0.8251,
+    "matriz_confusion": {
+      "clases": [
+        "hateful",
+        "non-hateful"
+      ],
+      "valores": [
+        [
+          526,
+          0
+        ],
+        [
+          223,
+          0
+        ]
+      ]
+    },
+    "informe": "              precision    recall  f1-score   support\n\n     hateful       0.70      1.00      0.83       526\n non-hateful       0.00      0.00      0.00       223\n\n    accuracy                           0.70       749\n   macro avg       0.35      0.50      0.41       749\nweighted avg       0.49      0.70      0.58       749\n"
+  },
+  "A_tfidf_palabras_lr": {
+    "accuracy": 0.976,
+    "f1_macro": 0.9707,
+    "precision_hateful": 0.9704,
+    "recall_hateful": 0.9962,
+    "f1_hateful": 0.9831,
+    "matriz_confusion": {
+      "clases": [
+        "hateful",
+        "non-hateful"
+      ],
+      "valores": [
+        [
+          524,
+          2
+        ],
+        [
+          16,
+          207
+        ]
+      ]
+    },
+    "informe": "              precision    recall  f1-score   support\n\n     hateful       0.97      1.00      0.98       526\n non-hateful       0.99      0.93      0.96       223\n\n    accuracy                           0.98       749\n   macro avg       0.98      0.96      0.97       749\nweighted avg       0.98      0.98      0.98       749\n"
+  },
+  "B_tfidf_caracteres_lr": {
+    "accuracy": 0.9853,
+    "f1_macro": 0.9823,
+    "precision_hateful": 0.9849,
+    "recall_hateful": 0.9943,
+    "f1_hateful": 0.9896,
+    "matriz_confusion": {
+      "clases": [
+        "hateful",
+        "non-hateful"
+      ],
+      "valores": [
+        [
+          523,
+          3
+        ],
+        [
+          8,
+          215
+        ]
+      ]
+    },
+    "informe": "              precision    recall  f1-score   support\n\n     hateful       0.98      0.99      0.99       526\n non-hateful       0.99      0.96      0.98       223\n\n    accuracy                           0.99       749\n   macro avg       0.99      0.98      0.98       749\nweighted avg       0.99      0.99      0.99       749\n"
+  },
+  "rasgos_modelo_A": {
+    "clase_del_coeficiente_positivo": "non-hateful",
+    "hacia_esa_clase": [
+      [
+        "adoro",
+        3.766
+      ],
+      [
+        "puedes",
+        3.656
+      ],
+      [
+        "vale muchísimo",
+        3.58
+      ],
+      [
+        "él",
+        3.462
+      ],
+      [
+        "son héroes",
+        3.385
+      ],
+      [
+        "héroes",
+        3.385
+      ],
+      [
+        "muy",
+        3.349
+      ],
+      [
+        "te",
+        3.29
+      ],
+      [
+        "cosas",
+        3.216
+      ],
+      [
+        "hermosos",
+        3.192
+      ],
+      [
+        "son hermosos",
+        3.192
+      ],
+      [
+        "soy",
+        3.177
+      ],
+      [
+        "son geniales",
+        3.117
+      ],
+      [
+        "geniales",
+        3.117
+      ],
+      [
+        "es un",
+        3.081
+      ]
+    ],
+    "hacia_la_otra": [
+      [
+        "trans",
+        -4.942
+      ],
+      [
+        "indígenas",
+        -4.734
+      ],
+      [
+        "discapacitados",
+        -4.515
+      ],
+      [
+        "negros",
+        -4.501
+      ],
+      [
+        "judíos",
+        -4.475
+      ],
+      [
+        "gays",
+        -4.438
+      ],
+      [
+        "mujeres",
+        -4.104
+      ],
+      [
+        "de un",
+        -3.352
+      ],
+      [
+        "los discapacitados",
+        -3.289
+      ],
+      [
+        "los indígenas",
+        -3.166
+      ],
+      [
+        "típico de",
+        -3.15
+      ],
+      [
+        "típico",
+        -3.15
+      ],
+      [
+        "ustedes",
+        -3.111
+      ],
+      [
+        "mí",
+        -3.056
+      ],
+      [
+        "como tú",
+        -2.986
+      ]
+    ]
+  },
+  "errores_modelo_A": 18,
+  "errores_por_funcionalidad_A": {
+    "target_group_nh": 7,
+    "target_obj_nh": 7,
+    "spell_char_del_h": 1,
+    "ident_pos_nh": 1,
+    "profanity_nh": 1,
+    "ref_subs_clause_h": 1
+  },
+  "particion_por_plantilla": {
+    "entrenamiento": 3026,
+    "prueba": 719,
+    "plantillas_prueba": 151,
+    "0_mayoria": {
+      "accuracy": 0.6982,
+      "f1_macro": 0.4111,
+      "precision_hateful": 0.6982,
+      "recall_hateful": 1.0,
+      "matriz_confusion": [
+        [
+          502,
+          0
+        ],
+        [
+          217,
+          0
+        ]
+      ]
+    },
+    "A_tfidf_palabras_lr": {
+      "accuracy": 0.7469,
+      "f1_macro": 0.6877,
+      "precision_hateful": 0.8019,
+      "recall_hateful": 0.8466,
+      "matriz_confusion": [
+        [
+          425,
+          77
+        ],
+        [
+          105,
+          112
+        ]
+      ]
+    },
+    "B_tfidf_caracteres_lr": {
+      "accuracy": 0.7385,
+      "f1_macro": 0.6839,
+      "precision_hateful": 0.8043,
+      "recall_hateful": 0.8267,
+      "matriz_confusion": [
+        [
+          415,
+          87
+        ],
+        [
+          101,
+          116
+        ]
+      ]
+    }
+  }
+}

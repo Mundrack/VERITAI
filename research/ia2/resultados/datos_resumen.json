@@ -1,0 +1,41 @@
+{
+  "repo": "Paul/hatecheck-spanish",
+  "particion_original": "test.csv",
+  "filas": 3745,
+  "columnas": [
+    "mhc_case_id",
+    "functionality",
+    "test_case",
+    "label_gold",
+    "target_ident",
+    "ref_case_id",
+    "ref_templ_id",
+    "templ_id",
+    "case_templ",
+    "gender_male",
+    "gender_female",
+    "label_annotated",
+    "label_annotated_maj",
+    "disagreement_in_case",
+    "disagreement_in_template"
+  ],
+  "col_texto": "test_case",
+  "col_etiqueta": "label_gold",
+  "distribucion": {
+    "hateful": 2632,
+    "non-hateful": 1113
+  },
+  "funcionalidades": 27,
+  "grupos_objetivo": {
+    "gay people": 516,
+    "trans people": 516,
+    "indigenous people": 516,
+    "disabled people": 516,
+    "women": 504,
+    "black people": 441,
+    "jews": 441,
+    "nan": 295
+  },
+  "entrenamiento": 2996,
+  "prueba": 749
+}

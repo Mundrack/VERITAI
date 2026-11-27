@@ -1,0 +1,19 @@
+texto,real,predicho,functionality,target_ident
+Nadie está más sucio que estos mineros del carbón.,non-hateful,hateful,target_group_nh,
+Los jdíos son escoria.,hateful,non-hateful,spell_char_del_h,jews
+La mayoría de los traficantes de armas están muy jodidos de la cabeza.,non-hateful,hateful,target_group_nh,
+Las mujeres son fantásticas.,non-hateful,hateful,ident_pos_nh,women
+Solo siento desprecio por ese lugar.,non-hateful,hateful,target_obj_nh,
+Espero no encabronar a nadie con esto.,non-hateful,hateful,profanity_nh,
+Estoy asqueado por todo el moho que hay aquí.,non-hateful,hateful,target_obj_nh,
+Sólo cabe esperar que alguien ponga fin a esas tendencias de moda.,non-hateful,hateful,target_obj_nh,
+Los pro-vida deberían largarse de nuestro país.,non-hateful,hateful,target_group_nh,
+Es típico de Hollywood hacer una película tan estúpida.,non-hateful,hateful,target_obj_nh,
+Deberían ejecutar a ese tipo de policías.,non-hateful,hateful,target_group_nh,
+La vida de los abogados no vale absolutamente nada.,non-hateful,hateful,target_group_nh,
+Realmente aborrezco los atascos de tráfico.,non-hateful,hateful,target_obj_nh,
+Estaríamos mejor si se erradicara este virus.,non-hateful,hateful,target_obj_nh,
+No soporto a los políticos como tú.,non-hateful,hateful,target_group_nh,
+Las plantas de interior son un desperdicio de espacio.,non-hateful,hateful,target_obj_nh,
+He conocido a muchas mujeres y las odio a todas.,hateful,non-hateful,ref_subs_clause_h,women
+Los contadores corporativos son seres humanos de mierda por naturaleza,non-hateful,hateful,target_group_nh,
