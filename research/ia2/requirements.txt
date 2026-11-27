@@ -1,0 +1,9 @@
+# Modulo IA2 (research/ia2). Probado con Python 3.13 en Windows, CPU.
+# Clasicos y analisis
+scikit-learn>=1.6
+pandas>=2.2
+numpy>=2.0
+matplotlib>=3.9
+# Transformer (CPU). Instalar torch desde https://download.pytorch.org/whl/cpu si no hay GPU.
+torch>=2.5
+transformers>=4.45

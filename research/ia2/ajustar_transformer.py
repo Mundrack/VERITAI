@@ -9,8 +9,9 @@ Modelo: DistilBERT en espanol (dccuchile/distilbert-base-spanish-uncased), con l
 pesos descargados a research/ia2/modelos/ (sin huggingface_hub). Corre en CPU.
 
 Uso:
-    python ajustar_transformer.py --salida resultados --epocas 2
-Salida: resultados/transformer.json
+    python ajustar_transformer.py --salida resultados --epocas 3 --semilla 42 --nombre transformer_s42_e3
+    python ajustar_transformer.py --salida resultados --epocas 3 --max-len 64 --datos haternet --nombre transformer_haternet_s42_e3
+Salida: resultados/<nombre>.json y resultados/pred_<nombre>_<particion>.csv
 """
 from __future__ import annotations
 
@@ -51,7 +52,7 @@ def metricas(y_real, y_pred, clases, positiva):
     }
 
 
-def entrenar_y_evaluar(X_tr, y_tr, X_te, y_te, clases, epocas, lote, lr, max_len, registro, semilla=SEMILLA):
+def entrenar_y_evaluar(X_tr, y_tr, X_te, y_te, clases, epocas, lote, lr, max_len, registro, semilla=SEMILLA, guardar=None):
     torch.manual_seed(semilla)
     np.random.seed(semilla)
     idx = {c: i for i, c in enumerate(clases)}
@@ -85,6 +86,10 @@ def entrenar_y_evaluar(X_tr, y_tr, X_te, y_te, clases, epocas, lote, lr, max_len
                          "segundos": round(time.time() - t0, 1)})
         print("epoca", ep + 1, registro[-1], flush=True)
     modelo.eval()
+    if guardar is not None:  # para explicar.py; la carpeta modelos/ no se versiona
+        Path(guardar).mkdir(parents=True, exist_ok=True)
+        modelo.save_pretrained(str(guardar))
+        tok.save_pretrained(str(guardar))
     pred = []
     with torch.no_grad():
         for i in range(0, len(X_te), 64):
@@ -106,6 +111,7 @@ def main() -> int:
     ap.add_argument("--semilla", type=int, default=SEMILLA, help="semilla del modelo; las particiones usan siempre 42")
     ap.add_argument("--nombre", default="transformer", help="nombre base de los archivos de salida")
     ap.add_argument("--datos", choices=["hatecheck", "haternet"], default="hatecheck")
+    ap.add_argument("--guardar-modelo", default=None, help="carpeta donde guardar el modelo ajustado en la particion por caso")
     args = ap.parse_args()
     torch.set_num_threads(max(1, os.cpu_count() or 1))
     salida = Path(args.salida)
@@ -132,7 +138,8 @@ def main() -> int:
     if args.solo in ("caso", "ambas"):
         X_tr, X_te, y_tr, y_te = train_test_split(X, y, test_size=0.2, random_state=SEMILLA, stratify=y)
         registro = []
-        pred, seg = entrenar_y_evaluar(X_tr, y_tr, X_te, y_te, clases, args.epocas, args.lote, args.lr, args.max_len, registro, args.semilla)
+        pred, seg = entrenar_y_evaluar(X_tr, y_tr, X_te, y_te, clases, args.epocas, args.lote, args.lr, args.max_len, registro, args.semilla,
+                                       guardar=args.guardar_modelo)
         guardar_pred("por_caso", X_te, y_te, pred)
         resultado["particiones"]["por_caso"] = {"entrenamiento": int(len(X_tr)), "prueba": int(len(X_te)),
                                                  "segundos": seg, "curva": registro, **metricas(y_te, pred, clases, positiva)}

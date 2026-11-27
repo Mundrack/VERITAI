@@ -10,6 +10,8 @@ Escribe en resultados/:
     fig_semillas.png                 F1 macro por modelo y particion, con la dispersion entre semillas
     fig_sesgo_grupos.png             tasa de falsos positivos sobre frases NO hostiles, por grupo objetivo
     fig_curvas.png                   perdida de entrenamiento por epoca del transformer
+    fig_conjuntos.png                F1 macro de los cuatro modelos en los tres escenarios (si hay HaterNet)
+    fig_matrices_haternet.png        matrices de confusion en HaterNet, A frente a C
 No usa red ni modelos: solo lee lo ya medido.
 """
 from __future__ import annotations
@@ -93,6 +95,71 @@ def main() -> int:
         ax.spines[s].set_visible(False)
     fig.tight_layout()
     fig.savefig(CARPETA / "fig_semillas.png")
+
+    # ---- 1b. HaterNet (tuits reales): clasicos + transformer, y figura de los tres escenarios ----
+    rh = CARPETA / "resultados_haternet.json"
+    trh = [json.loads(p.read_text(encoding="utf-8")) for p in sorted(CARPETA.glob("transformer_haternet_s*_e*.json"))]
+    trh = [t for t in trh if "por_caso" in t["particiones"]]
+    if rh.exists():
+        r2 = json.loads(rh.read_text(encoding="utf-8"))
+        hn = {"transformer_completas": len(trh),
+              "f1_macro": {k: r2[k]["f1_macro"] for k in ("0_mayoria", "A_tfidf_palabras_lr", "B_tfidf_caracteres_lr")}}
+        if trh:
+            for m in ("f1_macro", "accuracy", "precision_hateful", "recall_hateful"):
+                hn["transformer_" + m] = media_sd([t["particiones"]["por_caso"][m] for t in trh])
+            hn["transformer_semillas"] = [t.get("semilla_modelo") for t in trh]
+            hn["transformer_segundos"] = media_sd([t["particiones"]["por_caso"]["segundos"] for t in trh])
+        salida["haternet"] = hn
+
+        # figura: F1 macro de los cuatro modelos en los tres escenarios
+        escenarios = ["HateCheck\npor caso", "HateCheck\npor plantilla", "HaterNet\ntuits reales"]
+        series = {
+            "Mayoría": ([clasicos["0_mayoria"][1], clasicos["0_mayoria"][2], hn["f1_macro"]["0_mayoria"]], "#c9ced6"),
+            "A · TF-IDF palabras": ([clasicos["A_tfidf_palabras_lr"][1], clasicos["A_tfidf_palabras_lr"][2], hn["f1_macro"]["A_tfidf_palabras_lr"]], "#9aa3b0"),
+            "B · TF-IDF caracteres": ([clasicos["B_tfidf_caracteres_lr"][1], clasicos["B_tfidf_caracteres_lr"][2], hn["f1_macro"]["B_tfidf_caracteres_lr"]], "#6b7480"),
+        }
+        errores = {k: [0, 0, 0] for k in series}
+        if tr and trh:
+            series["C · DistilBERT es"] = ([salida["f1_macro"]["C_transformer"]["por_caso"]["media"], salida["f1_macro"]["C_transformer"]["por_plantilla"]["media"], hn["transformer_f1_macro"]["media"]], "#98242c")
+            errores["C · DistilBERT es"] = [salida["f1_macro"]["C_transformer"]["por_caso"]["sd"], salida["f1_macro"]["C_transformer"]["por_plantilla"]["sd"], hn["transformer_f1_macro"]["sd"]]
+        fig, ax = plt.subplots(figsize=(9.2, 4.6), dpi=150)
+        nser = len(series)
+        ancho = 0.8 / nser
+        for i, (nombre, (vals, color)) in enumerate(series.items()):
+            pos = np.arange(3) + (i - (nser - 1) / 2) * ancho
+            bb = ax.bar(pos, vals, ancho * 0.95, yerr=errores[nombre], capsize=3, label=nombre, color=color)
+            for b in bb:
+                ax.text(b.get_x() + b.get_width() / 2, b.get_height() + 0.03, f"{b.get_height():.2f}".replace(".", ","), ha="center", fontsize=8)
+        ax.set_xticks(np.arange(3), escenarios, fontsize=9.5)
+        ax.set_ylim(0, 1.12)
+        ax.set_ylabel("F1 macro en prueba")
+        ax.set_title("F1 macro de los cuatro modelos en los tres escenarios" + (f" (transformer: media de {len(tr)} semillas)" if tr and trh else ""), fontsize=10)
+        ax.legend(frameon=False, ncol=2, loc="upper right", fontsize=8.5)
+        for sp in ("top", "right"):
+            ax.spines[sp].set_visible(False)
+        fig.tight_layout()
+        fig.savefig(CARPETA / "fig_conjuntos.png")
+
+        # figura: matrices de confusion en HaterNet, A frente a C (semilla 42 si existe)
+        mats = [("A · TF-IDF palabras + RL", r2["A_tfidf_palabras_lr"]["matriz_confusion"]["valores"])]
+        c42 = [t for t in trh if t.get("semilla_modelo") == 42] or trh
+        if c42:
+            mats.append((f"C · DistilBERT es (semilla {c42[0].get('semilla_modelo')})", c42[0]["particiones"]["por_caso"]["matriz_confusion"]["valores"]))
+        fig, axs = plt.subplots(1, len(mats), figsize=(4.6 * len(mats), 4.2), dpi=150)
+        axs = np.atleast_1d(axs)
+        for ax, (titulo, m) in zip(axs, mats):
+            m = np.array(m)
+            ax.imshow(m, cmap="Reds", vmin=0, vmax=m.max())
+            for (i, j), v in np.ndenumerate(m):
+                ax.text(j, i, f"{v:,}".replace(",", " "), ha="center", va="center", fontsize=13, color="white" if v > m.max() * 0.6 else "#222")
+            ax.set_xticks([0, 1], ["odio", "no odio"])
+            ax.set_yticks([0, 1], ["odio", "no odio"])
+            ax.set_xlabel("Predicho")
+            ax.set_ylabel("Real")
+            ax.set_title(titulo, fontsize=10)
+        fig.suptitle("HaterNet, 1 200 tuits de prueba", fontsize=10)
+        fig.tight_layout()
+        fig.savefig(CARPETA / "fig_matrices_haternet.png")
 
     # ---- 2. sesgo por grupo objetivo: tasa de falsos positivos sobre frases no hostiles ----
     def fpr_por_grupo(ruta):
