@@ -141,6 +141,11 @@ def main() -> int:
     pred_A = predicciones["A_tfidf_palabras_lr"]
     err = pd.DataFrame({"texto": X_te, "real": y_te, "predicho": pred_A})
     extra = [c for c in ("functionality", "target_ident") if c in df.columns]
+    # predicciones por ejemplo de los modelos clasicos (particion por caso), para el analisis por grupo
+    _extra = df[[col_texto] + extra].drop_duplicates(col_texto).set_index(col_texto)
+    for _n in ("A_tfidf_palabras_lr", "B_tfidf_caracteres_lr"):
+        pd.DataFrame({"texto": X_te, "real": y_te, "predicho": predicciones[_n]}).join(_extra, on="texto").to_csv(
+            salida / f"pred_{_n}_por_caso.csv", index=False, encoding="utf-8")
     if extra:
         df_te = df.loc[df[col_texto].astype(str).isin(set(X_te)), [col_texto] + extra].drop_duplicates(col_texto)
         err = err.merge(df_te, left_on="texto", right_on=col_texto, how="left").drop(columns=[col_texto])
@@ -164,6 +169,9 @@ def main() -> int:
             from sklearn.base import clone
             m = clone(modelos[nombre]).fit(X[i_tr], y[i_tr])
             pr = m.predict(X[i_te])
+            if nombre != "0_mayoria":
+                pd.DataFrame({"texto": X[i_te], "real": y[i_te], "predicho": pr}).join(_extra, on="texto").to_csv(
+                    salida / f"pred_{nombre}_por_plantilla.csv", index=False, encoding="utf-8")
             por_plantilla[nombre] = {
                 "accuracy": round(float(accuracy_score(y[i_te], pr)), 4),
                 "f1_macro": round(float(f1_score(y[i_te], pr, average="macro")), 4),

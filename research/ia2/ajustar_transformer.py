@@ -51,9 +51,9 @@ def metricas(y_real, y_pred, clases, positiva):
     }
 
 
-def entrenar_y_evaluar(X_tr, y_tr, X_te, y_te, clases, epocas, lote, lr, max_len, registro):
-    torch.manual_seed(SEMILLA)
-    np.random.seed(SEMILLA)
+def entrenar_y_evaluar(X_tr, y_tr, X_te, y_te, clases, epocas, lote, lr, max_len, registro, semilla=SEMILLA):
+    torch.manual_seed(semilla)
+    np.random.seed(semilla)
     idx = {c: i for i, c in enumerate(clases)}
     tok = AutoTokenizer.from_pretrained(str(MODELO))
     modelo = AutoModelForSequenceClassification.from_pretrained(str(MODELO), num_labels=len(clases))
@@ -103,6 +103,8 @@ def main() -> int:
     ap.add_argument("--lr", type=float, default=3e-5)
     ap.add_argument("--max-len", type=int, default=48)
     ap.add_argument("--solo", choices=["caso", "plantilla", "ambas"], default="ambas")
+    ap.add_argument("--semilla", type=int, default=SEMILLA, help="semilla del modelo; las particiones usan siempre 42")
+    ap.add_argument("--nombre", default="transformer", help="nombre base de los archivos de salida")
     args = ap.parse_args()
     torch.set_num_threads(max(1, os.cpu_count() or 1))
     salida = Path(args.salida)
@@ -114,29 +116,37 @@ def main() -> int:
     clases = sorted(set(y))
     positiva = "hateful"
     resultado = {"modelo": MODELO.name, "epocas": args.epocas, "lote": args.lote, "lr": args.lr, "max_len": args.max_len,
-                 "hilos_cpu": torch.get_num_threads(), "particiones": {}}
+                 "semilla_modelo": args.semilla, "hilos_cpu": torch.get_num_threads(), "particiones": {}}
+    extra = df[["test_case", "functionality", "target_ident"]].drop_duplicates("test_case").set_index("test_case")
+
+    def guardar_pred(nombre_part, X_te, y_te, pred):
+        d = pd.DataFrame({"texto": X_te, "real": y_te, "predicho": pred})
+        d = d.join(extra, on="texto")
+        d.to_csv(salida / f"pred_{args.nombre}_{nombre_part}.csv", index=False, encoding="utf-8")
 
     if args.solo in ("caso", "ambas"):
         X_tr, X_te, y_tr, y_te = train_test_split(X, y, test_size=0.2, random_state=SEMILLA, stratify=y)
         registro = []
-        pred, seg = entrenar_y_evaluar(X_tr, y_tr, X_te, y_te, clases, args.epocas, args.lote, args.lr, args.max_len, registro)
+        pred, seg = entrenar_y_evaluar(X_tr, y_tr, X_te, y_te, clases, args.epocas, args.lote, args.lr, args.max_len, registro, args.semilla)
+        guardar_pred("por_caso", X_te, y_te, pred)
         resultado["particiones"]["por_caso"] = {"entrenamiento": int(len(X_tr)), "prueba": int(len(X_te)),
                                                  "segundos": seg, "curva": registro, **metricas(y_te, pred, clases, positiva)}
         print("por_caso", json.dumps(resultado["particiones"]["por_caso"], ensure_ascii=False), flush=True)
-        (salida / "transformer.json").write_text(json.dumps(resultado, ensure_ascii=False, indent=2), encoding="utf-8")
+        (salida / f"{args.nombre}.json").write_text(json.dumps(resultado, ensure_ascii=False, indent=2), encoding="utf-8")
 
     if args.solo in ("plantilla", "ambas"):
         grupos = df["templ_id"].fillna(-1).astype(int).to_numpy()
         gss = GroupShuffleSplit(n_splits=1, test_size=0.2, random_state=SEMILLA)
         i_tr, i_te = next(gss.split(X, y, groups=grupos))
         registro = []
-        pred, seg = entrenar_y_evaluar(X[i_tr], y[i_tr], X[i_te], y[i_te], clases, args.epocas, args.lote, args.lr, args.max_len, registro)
+        pred, seg = entrenar_y_evaluar(X[i_tr], y[i_tr], X[i_te], y[i_te], clases, args.epocas, args.lote, args.lr, args.max_len, registro, args.semilla)
+        guardar_pred("por_plantilla", X[i_te], y[i_te], pred)
         resultado["particiones"]["por_plantilla"] = {"entrenamiento": int(len(i_tr)), "prueba": int(len(i_te)),
                                                       "plantillas_prueba": int(len(set(grupos[i_te]))),
                                                       "segundos": seg, "curva": registro, **metricas(y[i_te], pred, clases, positiva)}
         print("por_plantilla", json.dumps(resultado["particiones"]["por_plantilla"], ensure_ascii=False), flush=True)
 
-    (salida / "transformer.json").write_text(json.dumps(resultado, ensure_ascii=False, indent=2), encoding="utf-8")
+    (salida / f"{args.nombre}.json").write_text(json.dumps(resultado, ensure_ascii=False, indent=2), encoding="utf-8")
     return 0
 
 
