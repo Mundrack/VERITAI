@@ -1,0 +1,423 @@
+{
+  "transformer_corridas": [
+    "transformer_s123_e3.json",
+    "transformer_s42_e3.json",
+    "transformer_s7_e3.json"
+  ],
+  "transformer_completas": 3,
+  "f1_macro": {
+    "0_mayoria": {
+      "por_caso": 0.4125,
+      "por_plantilla": 0.4111
+    },
+    "A_tfidf_palabras_lr": {
+      "por_caso": 0.9707,
+      "por_plantilla": 0.6877
+    },
+    "B_tfidf_caracteres_lr": {
+      "por_caso": 0.9823,
+      "por_plantilla": 0.6839
+    },
+    "C_transformer": {
+      "por_caso": {
+        "media": 0.9876,
+        "sd": 0.0047,
+        "n": 3,
+        "valores": [
+          0.9903,
+          0.9822,
+          0.9903
+        ]
+      },
+      "por_plantilla": {
+        "media": 0.7949,
+        "sd": 0.0311,
+        "n": 3,
+        "valores": [
+          0.8118,
+          0.7591,
+          0.8139
+        ]
+      }
+    }
+  },
+  "transformer_accuracy": {
+    "por_caso": {
+      "media": 0.9898,
+      "sd": 0.0039,
+      "n": 3,
+      "valores": [
+        0.992,
+        0.9853,
+        0.992
+      ]
+    },
+    "por_plantilla": {
+      "media": 0.8164,
+      "sd": 0.0302,
+      "n": 3,
+      "valores": [
+        0.8317,
+        0.7816,
+        0.8359
+      ]
+    }
+  },
+  "transformer_precision_hateful": {
+    "por_caso": {
+      "media": 0.9856,
+      "sd": 0.0053,
+      "n": 3,
+      "valores": [
+        0.9887,
+        0.9795,
+        0.9887
+      ]
+    },
+    "por_plantilla": {
+      "media": 0.9103,
+      "sd": 0.0142,
+      "n": 3,
+      "valores": [
+        0.9224,
+        0.8947,
+        0.9138
+      ]
+    }
+  },
+  "transformer_recall_hateful": {
+    "por_caso": {
+      "media": 1.0,
+      "sd": 0.0,
+      "n": 3,
+      "valores": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "por_plantilla": {
+      "media": 0.8174,
+      "sd": 0.0343,
+      "n": 3,
+      "valores": [
+        0.8287,
+        0.7789,
+        0.8446
+      ]
+    }
+  },
+  "transformer_config": {
+    "modelo": "distilbert-base-spanish-uncased",
+    "epocas": 3,
+    "lote": 16,
+    "lr": 3e-05,
+    "max_len": 48
+  },
+  "transformer_semillas": [
+    123,
+    42,
+    7
+  ],
+  "transformer_segundos": {
+    "por_caso": {
+      "media": 560.7,
+      "sd": 31.0269,
+      "n": 3,
+      "valores": [
+        544.0,
+        596.5,
+        541.6
+      ]
+    },
+    "por_plantilla": {
+      "media": 602.1667,
+      "sd": 78.558,
+      "n": 3,
+      "valores": [
+        553.6,
+        692.8,
+        560.1
+      ]
+    }
+  },
+  "haternet": {
+    "transformer_completas": 0,
+    "f1_macro": {
+      "0_mayoria": 0.425,
+      "A_tfidf_palabras_lr": 0.7387,
+      "B_tfidf_caracteres_lr": 0.7361
+    }
+  },
+  "sesgo_por_grupo_particion_por_plantilla": {
+    "A_tfidf_palabras_lr": {
+      "fpr_no_hostiles_por_grupo": {
+        "personas negras": {
+          "n": 22,
+          "fp": 11,
+          "fpr": 0.5
+        },
+        "personas con discapacidad": {
+          "n": 22,
+          "fp": 11,
+          "fpr": 0.5
+        },
+        "personas gais": {
+          "n": 22,
+          "fp": 11,
+          "fpr": 0.5
+        },
+        "pueblos indígenas": {
+          "n": 22,
+          "fp": 11,
+          "fpr": 0.5
+        },
+        "personas judías": {
+          "n": 22,
+          "fp": 11,
+          "fpr": 0.5
+        },
+        "sin grupo": {
+          "n": 63,
+          "fp": 29,
+          "fpr": 0.4603
+        },
+        "personas trans": {
+          "n": 22,
+          "fp": 11,
+          "fpr": 0.5
+        },
+        "mujeres": {
+          "n": 22,
+          "fp": 10,
+          "fpr": 0.4545
+        }
+      },
+      "recall_hostiles_por_grupo": {
+        "personas negras": {
+          "n": 61,
+          "recall": 0.8197
+        },
+        "personas con discapacidad": {
+          "n": 76,
+          "recall": 0.8553
+        },
+        "personas gais": {
+          "n": 76,
+          "recall": 0.8553
+        },
+        "pueblos indígenas": {
+          "n": 76,
+          "recall": 0.8553
+        },
+        "personas judías": {
+          "n": 61,
+          "recall": 0.8197
+        },
+        "personas trans": {
+          "n": 76,
+          "recall": 0.8947
+        },
+        "mujeres": {
+          "n": 76,
+          "recall": 0.8158
+        }
+      }
+    },
+    "B_tfidf_caracteres_lr": {
+      "fpr_no_hostiles_por_grupo": {
+        "personas negras": {
+          "n": 22,
+          "fp": 13,
+          "fpr": 0.5909
+        },
+        "personas con discapacidad": {
+          "n": 22,
+          "fp": 13,
+          "fpr": 0.5909
+        },
+        "personas gais": {
+          "n": 22,
+          "fp": 11,
+          "fpr": 0.5
+        },
+        "pueblos indígenas": {
+          "n": 22,
+          "fp": 13,
+          "fpr": 0.5909
+        },
+        "personas judías": {
+          "n": 22,
+          "fp": 13,
+          "fpr": 0.5909
+        },
+        "sin grupo": {
+          "n": 63,
+          "fp": 15,
+          "fpr": 0.2381
+        },
+        "personas trans": {
+          "n": 22,
+          "fp": 11,
+          "fpr": 0.5
+        },
+        "mujeres": {
+          "n": 22,
+          "fp": 12,
+          "fpr": 0.5455
+        }
+      },
+      "recall_hostiles_por_grupo": {
+        "personas negras": {
+          "n": 61,
+          "recall": 0.7705
+        },
+        "personas con discapacidad": {
+          "n": 76,
+          "recall": 0.8553
+        },
+        "personas gais": {
+          "n": 76,
+          "recall": 0.8158
+        },
+        "pueblos indígenas": {
+          "n": 76,
+          "recall": 0.8553
+        },
+        "personas judías": {
+          "n": 61,
+          "recall": 0.7869
+        },
+        "personas trans": {
+          "n": 76,
+          "recall": 0.8421
+        },
+        "mujeres": {
+          "n": 76,
+          "recall": 0.8421
+        }
+      }
+    },
+    "C_transformer": {
+      "fpr_no_hostiles_por_grupo": {
+        "personas negras": {
+          "n": 22,
+          "fp": 4,
+          "fpr": 0.1818
+        },
+        "personas con discapacidad": {
+          "n": 22,
+          "fp": 4,
+          "fpr": 0.1818
+        },
+        "personas gais": {
+          "n": 22,
+          "fp": 4,
+          "fpr": 0.1818
+        },
+        "pueblos indígenas": {
+          "n": 22,
+          "fp": 3,
+          "fpr": 0.1364
+        },
+        "personas judías": {
+          "n": 22,
+          "fp": 3,
+          "fpr": 0.1364
+        },
+        "sin grupo": {
+          "n": 63,
+          "fp": 9,
+          "fpr": 0.1429
+        },
+        "personas trans": {
+          "n": 22,
+          "fp": 4,
+          "fpr": 0.1818
+        },
+        "mujeres": {
+          "n": 22,
+          "fp": 4,
+          "fpr": 0.1818
+        }
+      },
+      "recall_hostiles_por_grupo": {
+        "personas negras": {
+          "n": 61,
+          "recall": 0.8033
+        },
+        "personas con discapacidad": {
+          "n": 76,
+          "recall": 0.8421
+        },
+        "personas gais": {
+          "n": 76,
+          "recall": 0.8289
+        },
+        "pueblos indígenas": {
+          "n": 76,
+          "recall": 0.8421
+        },
+        "personas judías": {
+          "n": 61,
+          "recall": 0.7705
+        },
+        "personas trans": {
+          "n": 76,
+          "recall": 0.8421
+        },
+        "mujeres": {
+          "n": 76,
+          "recall": 0.8553
+        }
+      }
+    }
+  },
+  "errores_por_funcionalidad_particion_por_plantilla": {
+    "A_tfidf_palabras_lr": {
+      "total": 182,
+      "por_funcionalidad": {
+        "ident_pos_nh": 28,
+        "derog_impl_h": 27,
+        "threat_dir_h": 26,
+        "ident_neutral_nh": 21,
+        "ref_subs_clause_h": 15,
+        "target_group_nh": 14,
+        "negate_neg_nh": 13,
+        "target_obj_nh": 8,
+        "derog_neg_attrib_h": 7,
+        "counter_quote_nh": 7
+      }
+    },
+    "B_tfidf_caracteres_lr": {
+      "total": 188,
+      "por_funcionalidad": {
+        "ident_pos_nh": 41,
+        "derog_impl_h": 32,
+        "threat_dir_h": 21,
+        "ident_neutral_nh": 19,
+        "negate_neg_nh": 14,
+        "counter_ref_nh": 12,
+        "derog_neg_attrib_h": 7,
+        "ref_subs_clause_h": 7,
+        "ref_subs_sent_h": 7,
+        "phrase_question_h": 7
+      }
+    },
+    "C_transformer": {
+      "total": 121,
+      "por_funcionalidad": {
+        "threat_dir_h": 14,
+        "ident_pos_nh": 14,
+        "threat_norm_h": 13,
+        "counter_ref_nh": 12,
+        "negate_pos_h": 11,
+        "derog_impl_h": 10,
+        "ref_subs_clause_h": 8,
+        "derog_neg_emote_h": 7,
+        "derog_neg_attrib_h": 7,
+        "ref_subs_sent_h": 7
+      }
+    }
+  }
+}

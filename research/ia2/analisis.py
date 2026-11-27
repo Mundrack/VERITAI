@@ -222,6 +222,7 @@ def main() -> int:
                 c = t["particiones"][part]["curva"]
                 ax.plot([e["epoca"] for e in c], [e["perdida_media"] for e in c], estilo, marker="o",
                         label=f"{part.replace('_', ' ')} · semilla {t.get('semilla_modelo')}")
+        ax.set_xticks(sorted({e["epoca"] for t in tr for part in ("por_caso", "por_plantilla") for e in t["particiones"][part]["curva"]}))
         ax.set_xlabel("Época")
         ax.set_ylabel("Pérdida media de entrenamiento")
         ax.set_title("Curvas de entrenamiento del transformer", fontsize=10)

@@ -1,0 +1,420 @@
+{
+  "hatecheck": {
+    "particion": "por_plantilla",
+    "entrenamiento": 3026,
+    "prueba": 719,
+    "metodo_A": "contribucion exacta: tfidf x coeficiente por n-grama presente",
+    "metodo_C": "ocultacion: cambio de P(hostil) al quitar cada palabra; modelo reentrenado con semilla 42",
+    "ejemplos": [
+      {
+        "grupo": "acierto_ambos_hostil",
+        "texto": "Las mujeres son un virus.",
+        "real": "hateful",
+        "pred_A": "hateful",
+        "pred_C": "hateful",
+        "A": {
+          "p_hostil": 0.584,
+          "hacia_hostil": [
+            [
+              "mujeres",
+              0.962
+            ],
+            [
+              "son un",
+              0.675
+            ],
+            [
+              "las mujeres",
+              0.299
+            ]
+          ],
+          "hacia_no_hostil": [
+            [
+              "virus",
+              -0.969
+            ],
+            [
+              "son",
+              -0.24
+            ],
+            [
+              "mujeres son",
+              -0.212
+            ]
+          ],
+          "sesgo": -0.579,
+          "n_rasgos_activos": 8
+        }
+      },
+      {
+        "grupo": "acierto_ambos_hostil",
+        "texto": "Los judíos son una plaga.",
+        "real": "hateful",
+        "pred_A": "hateful",
+        "pred_C": "hateful",
+        "A": {
+          "p_hostil": 0.809,
+          "hacia_hostil": [
+            [
+              "judíos",
+              1.157
+            ],
+            [
+              "los judíos",
+              0.79
+            ],
+            [
+              "judíos son",
+              0.43
+            ]
+          ],
+          "hacia_no_hostil": [
+            [
+              "son",
+              -0.238
+            ],
+            [
+              "una plaga",
+              -0.196
+            ],
+            [
+              "plaga",
+              -0.196
+            ]
+          ],
+          "sesgo": -0.579,
+          "n_rasgos_activos": 9
+        }
+      },
+      {
+        "grupo": "A_falla_C_acierta",
+        "texto": "No conozco a muchos judíos.",
+        "real": "non-hateful",
+        "pred_A": "hateful",
+        "pred_C": "non-hateful",
+        "A": {
+          "p_hostil": 0.549,
+          "hacia_hostil": [
+            [
+              "judíos",
+              1.954
+            ],
+            [
+              "no",
+              0.475
+            ]
+          ],
+          "hacia_no_hostil": [
+            [
+              "muchos",
+              -1.654
+            ]
+          ],
+          "sesgo": -0.579,
+          "n_rasgos_activos": 3
+        }
+      },
+      {
+        "grupo": "A_falla_C_acierta",
+        "texto": "Vivo con dos discapacitados.",
+        "real": "non-hateful",
+        "pred_A": "hateful",
+        "pred_C": "non-hateful",
+        "A": {
+          "p_hostil": 0.713,
+          "hacia_hostil": [
+            [
+              "discapacitados",
+              2.75
+            ]
+          ],
+          "hacia_no_hostil": [
+            [
+              "con",
+              -1.258
+            ]
+          ],
+          "sesgo": -0.579,
+          "n_rasgos_activos": 2
+        }
+      },
+      {
+        "grupo": "C_falla_A_acierta",
+        "texto": "Muerte a todos los trans.",
+        "real": "hateful",
+        "pred_A": "hateful",
+        "pred_C": "non-hateful",
+        "A": {
+          "p_hostil": 0.711,
+          "hacia_hostil": [
+            [
+              "trans",
+              1.286
+            ],
+            [
+              "los trans",
+              0.883
+            ],
+            [
+              "todos",
+              0.679
+            ]
+          ],
+          "hacia_no_hostil": [
+            [
+              "muerte todos",
+              -1.17
+            ],
+            [
+              "muerte",
+              -0.756
+            ],
+            [
+              "los",
+              -0.088
+            ]
+          ],
+          "sesgo": -0.579,
+          "n_rasgos_activos": 7
+        }
+      },
+      {
+        "grupo": "C_falla_A_acierta",
+        "texto": "0dio a los discapacitados.",
+        "real": "hateful",
+        "pred_A": "hateful",
+        "pred_C": "non-hateful",
+        "A": {
+          "p_hostil": 0.982,
+          "hacia_hostil": [
+            [
+              "discapacitados",
+              2.818
+            ],
+            [
+              "los discapacitados",
+              1.925
+            ]
+          ],
+          "hacia_no_hostil": [
+            [
+              "los",
+              -0.191
+            ]
+          ],
+          "sesgo": -0.579,
+          "n_rasgos_activos": 3
+        }
+      },
+      {
+        "grupo": "fallan_ambos",
+        "texto": "No conozco a muchos gays.",
+        "real": "non-hateful",
+        "pred_A": "hateful",
+        "pred_C": "hateful",
+        "A": {
+          "p_hostil": 0.549,
+          "hacia_hostil": [
+            [
+              "gays",
+              1.954
+            ],
+            [
+              "no",
+              0.475
+            ]
+          ],
+          "hacia_no_hostil": [
+            [
+              "muchos",
+              -1.654
+            ]
+          ],
+          "sesgo": -0.579,
+          "n_rasgos_activos": 3
+        }
+      },
+      {
+        "grupo": "fallan_ambos",
+        "texto": "No conozco a muchos trans.",
+        "real": "non-hateful",
+        "pred_A": "hateful",
+        "pred_C": "hateful",
+        "A": {
+          "p_hostil": 0.548,
+          "hacia_hostil": [
+            [
+              "trans",
+              1.966
+            ],
+            [
+              "no",
+              0.481
+            ]
+          ],
+          "hacia_no_hostil": [
+            [
+              "muchos",
+              -1.673
+            ]
+          ],
+          "sesgo": -0.579,
+          "n_rasgos_activos": 3
+        }
+      }
+    ]
+  },
+  "haternet": {
+    "particion": "por_caso",
+    "entrenamiento": 4800,
+    "prueba": 1200,
+    "metodo_A": "contribucion exacta: tfidf x coeficiente por n-grama presente",
+    "metodo_C": "ocultacion: cambio de P(hostil) al quitar cada palabra; modelo reentrenado con semilla 42",
+    "ejemplos": [
+      {
+        "grupo": "acierto_ambos_hostil",
+        "texto": "Será Dalas un puto subnormal",
+        "real": "hateful",
+        "pred_A": "hateful",
+        "pred_C": null,
+        "A": {
+          "p_hostil": 0.962,
+          "hacia_hostil": [
+            [
+              "subnormal",
+              1.766
+            ],
+            [
+              "puto",
+              1.617
+            ],
+            [
+              "puto subnormal",
+              0.649
+            ]
+          ],
+          "hacia_no_hostil": [
+            [
+              "será",
+              -0.601
+            ],
+            [
+              "dalas",
+              -0.084
+            ]
+          ],
+          "sesgo": -0.566,
+          "n_rasgos_activos": 7
+        }
+      },
+      {
+        "grupo": "acierto_ambos_hostil",
+        "texto": "@adrian_marte pa' puta tú loca",
+        "real": "hateful",
+        "pred_A": "hateful",
+        "pred_C": null,
+        "A": {
+          "p_hostil": 0.723,
+          "hacia_hostil": [
+            [
+              "puta",
+              1.712
+            ],
+            [
+              "tú",
+              0.615
+            ],
+            [
+              "pa",
+              0.338
+            ]
+          ],
+          "hacia_no_hostil": [
+            [
+              "loca",
+              -1.14
+            ]
+          ],
+          "sesgo": -0.566,
+          "n_rasgos_activos": 4
+        }
+      },
+      {
+        "grupo": "A_falla_C_acierta",
+        "texto": "Que vergüenza da la puta afición",
+        "real": "non-hateful",
+        "pred_A": "hateful",
+        "pred_C": null,
+        "A": {
+          "p_hostil": 0.727,
+          "hacia_hostil": [
+            [
+              "puta",
+              1.095
+            ],
+            [
+              "la puta",
+              0.564
+            ],
+            [
+              "vergüenza",
+              0.494
+            ]
+          ],
+          "hacia_no_hostil": [
+            [
+              "afición",
+              -0.772
+            ],
+            [
+              "la",
+              -0.276
+            ],
+            [
+              "que vergüenza",
+              -0.119
+            ]
+          ],
+          "sesgo": -0.566,
+          "n_rasgos_activos": 9
+        }
+      },
+      {
+        "grupo": "A_falla_C_acierta",
+        "texto": "Culiao como extraño ir al colegio",
+        "real": "non-hateful",
+        "pred_A": "hateful",
+        "pred_C": null,
+        "A": {
+          "p_hostil": 0.551,
+          "hacia_hostil": [
+            [
+              "culiao",
+              0.684
+            ],
+            [
+              "ir al",
+              0.188
+            ],
+            [
+              "como",
+              0.063
+            ]
+          ],
+          "hacia_no_hostil": [
+            [
+              "ir",
+              -0.132
+            ],
+            [
+              "al",
+              -0.048
+            ]
+          ],
+          "sesgo": -0.566,
+          "n_rasgos_activos": 6
+        }
+      }
+    ]
+  }
+}
