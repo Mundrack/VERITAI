@@ -1,0 +1,202 @@
+{
+  "0_mayoria": {
+    "accuracy": 0.7392,
+    "f1_macro": 0.425,
+    "precision_hateful": 0.0,
+    "recall_hateful": 0.0,
+    "f1_hateful": 0.0,
+    "matriz_confusion": {
+      "clases": [
+        "hateful",
+        "non-hateful"
+      ],
+      "valores": [
+        [
+          0,
+          313
+        ],
+        [
+          0,
+          887
+        ]
+      ]
+    },
+    "informe": "              precision    recall  f1-score   support\n\n     hateful       0.00      0.00      0.00       313\n non-hateful       0.74      1.00      0.85       887\n\n    accuracy                           0.74      1200\n   macro avg       0.37      0.50      0.43      1200\nweighted avg       0.55      0.74      0.63      1200\n"
+  },
+  "A_tfidf_palabras_lr": {
+    "accuracy": 0.7958,
+    "f1_macro": 0.7387,
+    "precision_hateful": 0.6043,
+    "recall_hateful": 0.6294,
+    "f1_hateful": 0.6166,
+    "matriz_confusion": {
+      "clases": [
+        "hateful",
+        "non-hateful"
+      ],
+      "valores": [
+        [
+          197,
+          116
+        ],
+        [
+          129,
+          758
+        ]
+      ]
+    },
+    "informe": "              precision    recall  f1-score   support\n\n     hateful       0.60      0.63      0.62       313\n non-hateful       0.87      0.85      0.86       887\n\n    accuracy                           0.80      1200\n   macro avg       0.74      0.74      0.74      1200\nweighted avg       0.80      0.80      0.80      1200\n"
+  },
+  "B_tfidf_caracteres_lr": {
+    "accuracy": 0.7958,
+    "f1_macro": 0.7361,
+    "precision_hateful": 0.6076,
+    "recall_hateful": 0.6134,
+    "f1_hateful": 0.6105,
+    "matriz_confusion": {
+      "clases": [
+        "hateful",
+        "non-hateful"
+      ],
+      "valores": [
+        [
+          192,
+          121
+        ],
+        [
+          124,
+          763
+        ]
+      ]
+    },
+    "informe": "              precision    recall  f1-score   support\n\n     hateful       0.61      0.61      0.61       313\n non-hateful       0.86      0.86      0.86       887\n\n    accuracy                           0.80      1200\n   macro avg       0.74      0.74      0.74      1200\nweighted avg       0.80      0.80      0.80      1200\n"
+  },
+  "rasgos_modelo_A": {
+    "clase_del_coeficiente_positivo": "non-hateful",
+    "hacia_esa_clase": [
+      [
+        "independentista",
+        6.27
+      ],
+      [
+        "soy",
+        4.832
+      ],
+      [
+        "género",
+        3.442
+      ],
+      [
+        "soy subnormal",
+        3.398
+      ],
+      [
+        "somos",
+        3.192
+      ],
+      [
+        "rojo",
+        2.628
+      ],
+      [
+        "negra",
+        2.619
+      ],
+      [
+        "refugiados",
+        2.576
+      ],
+      [
+        "ultraderecha",
+        2.555
+      ],
+      [
+        "afición",
+        2.494
+      ],
+      [
+        "mi",
+        2.491
+      ],
+      [
+        "los que",
+        2.476
+      ],
+      [
+        "son",
+        2.475
+      ],
+      [
+        "feminismo",
+        2.379
+      ],
+      [
+        "loca",
+        2.372
+      ]
+    ],
+    "hacia_la_otra": [
+      [
+        "subnormal",
+        -7.532
+      ],
+      [
+        "mierda",
+        -5.348
+      ],
+      [
+        "puto",
+        -4.766
+      ],
+      [
+        "de mierda",
+        -4.536
+      ],
+      [
+        "asco",
+        -4.178
+      ],
+      [
+        "puta",
+        -3.94
+      ],
+      [
+        "maldito",
+        -3.778
+      ],
+      [
+        "as_tomasroncero",
+        -3.749
+      ],
+      [
+        "retrasado",
+        -3.746
+      ],
+      [
+        "escoria",
+        -3.668
+      ],
+      [
+        "furcia",
+        -3.576
+      ],
+      [
+        "gilipollas",
+        -3.532
+      ],
+      [
+        "mongolo",
+        -3.515
+      ],
+      [
+        "fachas",
+        -3.49
+      ],
+      [
+        "mental",
+        -3.464
+      ]
+    ]
+  },
+  "errores_modelo_A": 245
+}

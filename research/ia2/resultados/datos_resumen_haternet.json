@@ -1,0 +1,12 @@
+{
+  "conjunto": "haternet",
+  "cita": "Quijano-Sánchez, Pereira-Kohatsu, Liberatore y Camacho-Collados (2019), HaterNet, Zenodo DOI 10.5281/zenodo.2592149",
+  "filas": 6000,
+  "distribucion": {
+    "non-hateful": 4433,
+    "hateful": 1567
+  },
+  "longitud_media_caracteres": 113.3,
+  "entrenamiento": 4800,
+  "prueba": 1200
+}

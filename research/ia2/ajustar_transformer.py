@@ -105,17 +105,22 @@ def main() -> int:
     ap.add_argument("--solo", choices=["caso", "plantilla", "ambas"], default="ambas")
     ap.add_argument("--semilla", type=int, default=SEMILLA, help="semilla del modelo; las particiones usan siempre 42")
     ap.add_argument("--nombre", default="transformer", help="nombre base de los archivos de salida")
+    ap.add_argument("--datos", choices=["hatecheck", "haternet"], default="hatecheck")
     args = ap.parse_args()
     torch.set_num_threads(max(1, os.cpu_count() or 1))
     salida = Path(args.salida)
     salida.mkdir(parents=True, exist_ok=True)
 
-    df = pd.read_csv(DATOS)
+    import datos as _datos
+    df = _datos.cargar(args.datos)
+    df = df.rename(columns={"texto": "test_case", "etiqueta": "label_gold", "grupo": "templ_id"})
     X = np.array(df["test_case"].astype(str).tolist(), dtype=object)
     y = np.array(df["label_gold"].astype(str).tolist(), dtype=object)
+    if args.datos != "hatecheck" and args.solo == "ambas":
+        args.solo = "caso"  # sin plantillas no hay particion por plantilla
     clases = sorted(set(y))
     positiva = "hateful"
-    resultado = {"modelo": MODELO.name, "epocas": args.epocas, "lote": args.lote, "lr": args.lr, "max_len": args.max_len,
+    resultado = {"modelo": MODELO.name, "datos": args.datos, "epocas": args.epocas, "lote": args.lote, "lr": args.lr, "max_len": args.max_len,
                  "semilla_modelo": args.semilla, "hilos_cpu": torch.get_num_threads(), "particiones": {}}
     extra = df[["test_case", "functionality", "target_ident"]].drop_duplicates("test_case").set_index("test_case")
 

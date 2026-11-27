@@ -80,11 +80,19 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--salida", default="resultados")
     ap.add_argument("--test", type=float, default=0.2)
+    ap.add_argument("--datos", choices=["hatecheck", "haternet"], default="hatecheck")
     args = ap.parse_args()
     salida = Path(args.salida)
     salida.mkdir(parents=True, exist_ok=True)
 
-    df, col_texto, col_etiqueta, info = cargar_datos()
+    if args.datos == "hatecheck":
+        df, col_texto, col_etiqueta, info = cargar_datos()
+    else:
+        import datos as _datos
+        df = _datos.cargar(args.datos)
+        col_texto, col_etiqueta = "texto", "etiqueta"
+        info = _datos.resumen(args.datos, df)
+    sufijo = "" if args.datos == "hatecheck" else f"_{args.datos}"
     X = np.array(df[col_texto].astype(str).tolist(), dtype=object)
     y = np.array(df[col_etiqueta].astype(str).tolist(), dtype=object)
     clases = sorted(set(y))
@@ -95,7 +103,7 @@ def main() -> int:
     )
     info["entrenamiento"] = int(len(X_tr))
     info["prueba"] = int(len(X_te))
-    (salida / "datos_resumen.json").write_text(json.dumps(info, ensure_ascii=False, indent=2), encoding="utf-8")
+    (salida / f"datos_resumen{sufijo}.json").write_text(json.dumps(info, ensure_ascii=False, indent=2), encoding="utf-8")
 
     modelos = {
         "0_mayoria": DummyClassifier(strategy="most_frequent"),
@@ -140,24 +148,24 @@ def main() -> int:
     # errores del modelo A para analisis cualitativo
     pred_A = predicciones["A_tfidf_palabras_lr"]
     err = pd.DataFrame({"texto": X_te, "real": y_te, "predicho": pred_A})
-    extra = [c for c in ("functionality", "target_ident") if c in df.columns]
+    extra = [c for c in ("functionality", "target_ident") if c in df.columns and df[c].notna().any()]
     # predicciones por ejemplo de los modelos clasicos (particion por caso), para el analisis por grupo
     _extra = df[[col_texto] + extra].drop_duplicates(col_texto).set_index(col_texto)
     for _n in ("A_tfidf_palabras_lr", "B_tfidf_caracteres_lr"):
         pd.DataFrame({"texto": X_te, "real": y_te, "predicho": predicciones[_n]}).join(_extra, on="texto").to_csv(
-            salida / f"pred_{_n}_por_caso.csv", index=False, encoding="utf-8")
+            salida / f"pred_{_n}{sufijo}_por_caso.csv", index=False, encoding="utf-8")
     if extra:
         df_te = df.loc[df[col_texto].astype(str).isin(set(X_te)), [col_texto] + extra].drop_duplicates(col_texto)
         err = err.merge(df_te, left_on="texto", right_on=col_texto, how="left").drop(columns=[col_texto])
     err = err[err["real"] != err["predicho"]]
-    err.to_csv(salida / "errores.csv", index=False, encoding="utf-8")
+    err.to_csv(salida / f"errores{sufijo}.csv", index=False, encoding="utf-8")
     resultados["errores_modelo_A"] = int(len(err))
     if "functionality" in err.columns:
         resultados["errores_por_funcionalidad_A"] = {str(k): int(v) for k, v in err["functionality"].value_counts().head(12).items()}
 
     # Particion mas exigente: por PLANTILLA (templ_id), para que ninguna plantilla
     # vista en entrenamiento aparezca en prueba. Mide generalizacion real, no memoria.
-    if "templ_id" in df.columns:
+    if "templ_id" in df.columns and args.datos == "hatecheck":
         from sklearn.model_selection import GroupShuffleSplit
 
         grupos = df["templ_id"].fillna(-1).astype(int).to_numpy()
@@ -181,7 +189,7 @@ def main() -> int:
             }
         resultados["particion_por_plantilla"] = por_plantilla
 
-    (salida / "resultados.json").write_text(json.dumps(resultados, ensure_ascii=False, indent=2), encoding="utf-8")
+    (salida / f"resultados{sufijo}.json").write_text(json.dumps(resultados, ensure_ascii=False, indent=2), encoding="utf-8")
 
     # graficos
     import matplotlib
@@ -206,7 +214,7 @@ def main() -> int:
     for s in ("top", "right"):
         ax.spines[s].set_visible(False)
     fig.tight_layout()
-    fig.savefig(salida / "metricas.png")
+    fig.savefig(salida / f"metricas{sufijo}.png")
 
     mc = np.array(resultados["A_tfidf_palabras_lr"]["matriz_confusion"]["valores"])
     fig, ax = plt.subplots(figsize=(4.4, 4.0), dpi=150)
@@ -220,7 +228,7 @@ def main() -> int:
     ax.set_ylabel("Real")
     ax.set_title("Matriz de confusión · modelo A", fontsize=10)
     fig.tight_layout()
-    fig.savefig(salida / "matriz_confusion.png")
+    fig.savefig(salida / f"matriz_confusion{sufijo}.png")
 
     print(json.dumps({k: {kk: vv for kk, vv in v.items() if kk != "informe"} if isinstance(v, dict) and "informe" in v else v
                       for k, v in resultados.items()}, ensure_ascii=False, indent=1))
