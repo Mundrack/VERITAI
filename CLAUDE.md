@@ -304,3 +304,17 @@ Y la regla que las resume todas (START-HERE §21):
 
 > No intentes demostrar que VERITAI funciona. Intenta descubrir honestamente
 > dónde funciona y dónde falla. Un fallo temprano es un resultado útil.
+
+## graphify (herramienta del agente, decisión de Mateo del 2026-11-27)
+
+Hay un grafo del código en `graphify-out/` (generado, no versionado; se
+reconstruye con `graphify extract . --code-only`, sin modelo ni red). Reglas:
+
+- Para preguntas sobre el código, consulta primero el grafo (`graphify query`,
+  `graphify path`, `graphify explain`) y lee los archivos solo donde el grafo
+  o una lectura previa localizaron la respuesta. Si el grafo no responde, se
+  busca a mano y se dice.
+- Tras modificar código, `graphify update .`.
+- **Sin ganchos:** no se instalan hooks que intercepten Read, Grep, Glob o
+  Bash (prueba del 2026-09-30, `research/PRUEBA-GRAPHIFY.md`). La skill vive en
+  `.claude/skills/graphify/`.

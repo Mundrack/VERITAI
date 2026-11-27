@@ -61,3 +61,6 @@ desktop.ini
 .vscode/*
 !.vscode/extensions.json
 ~$*
+
+# grafo de graphify: generado, se reconstruye con `graphify extract . --code-only`
+graphify-out/
