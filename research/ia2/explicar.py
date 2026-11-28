@@ -163,6 +163,7 @@ def main() -> int:
     ap.add_argument("--conjunto", choices=["hatecheck", "haternet", "ambos"], default="ambos")
     ap.add_argument("--epocas", type=int, default=3)
     ap.add_argument("--n", type=int, default=2, help="ejemplos por grupo de seleccion")
+    ap.add_argument("--reseleccionar", action="store_true", help="volver a elegir los ejemplos aunque ya existan (descarta explicaciones previas)")
     args = ap.parse_args()
     salida = Path(args.salida)
     ruta = salida / "explicaciones.json"
@@ -176,7 +177,7 @@ def main() -> int:
         bloque.update({"particion": nombre_part, "entrenamiento": int(len(X_tr)), "prueba": int(len(X_te)),
                        "metodo_A": "contribucion exacta: tfidf x coeficiente por n-grama presente",
                        "metodo_C": "ocultacion: cambio de P(hostil) al quitar cada palabra; modelo reentrenado con semilla 42"})
-        if "ejemplos" not in bloque or args.parte in ("a", "ambas"):
+        if "ejemplos" not in bloque or args.reseleccionar:
             bloque["ejemplos"] = seleccionar(conjunto, salida, X_te, y_te, args.n)
         if args.parte in ("a", "ambas"):
             m = modelo_a(X_tr, y_tr)
