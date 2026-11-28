@@ -1,0 +1,54 @@
+{
+  "modelo": "distilbert-base-spanish-uncased",
+  "datos": "haternet",
+  "epocas": 3,
+  "lote": 16,
+  "lr": 3e-05,
+  "max_len": 64,
+  "semilla_modelo": 7,
+  "hilos_cpu": 20,
+  "particiones": {
+    "por_caso": {
+      "entrenamiento": 4800,
+      "prueba": 1200,
+      "segundos": 2004.7,
+      "curva": [
+        {
+          "epoca": 1,
+          "perdida_media": 0.4704,
+          "segundos": 653.9
+        },
+        {
+          "epoca": 2,
+          "perdida_media": 0.3232,
+          "segundos": 1316.6
+        },
+        {
+          "epoca": 3,
+          "perdida_media": 0.2134,
+          "segundos": 1972.5
+        }
+      ],
+      "accuracy": 0.8258,
+      "f1_macro": 0.7627,
+      "precision_hateful": 0.694,
+      "recall_hateful": 0.5942,
+      "matriz_confusion": {
+        "clases": [
+          "hateful",
+          "non-hateful"
+        ],
+        "valores": [
+          [
+            186,
+            127
+          ],
+          [
+            82,
+            805
+          ]
+        ]
+      }
+    }
+  }
+}

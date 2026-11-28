@@ -142,11 +142,66 @@
     }
   },
   "haternet": {
-    "transformer_completas": 0,
+    "transformer_completas": 3,
     "f1_macro": {
       "0_mayoria": 0.425,
       "A_tfidf_palabras_lr": 0.7387,
       "B_tfidf_caracteres_lr": 0.7361
+    },
+    "transformer_f1_macro": {
+      "media": 0.7612,
+      "sd": 0.0025,
+      "n": 3,
+      "valores": [
+        0.7627,
+        0.7583,
+        0.7627
+      ]
+    },
+    "transformer_accuracy": {
+      "media": 0.8197,
+      "sd": 0.0073,
+      "n": 3,
+      "valores": [
+        0.8217,
+        0.8117,
+        0.8258
+      ]
+    },
+    "transformer_precision_hateful": {
+      "media": 0.6667,
+      "sd": 0.0299,
+      "n": 3,
+      "valores": [
+        0.6713,
+        0.6347,
+        0.694
+      ]
+    },
+    "transformer_recall_hateful": {
+      "media": 0.623,
+      "sd": 0.0305,
+      "n": 3,
+      "valores": [
+        0.6198,
+        0.655,
+        0.5942
+      ]
+    },
+    "transformer_semillas": [
+      123,
+      42,
+      7
+    ],
+    "transformer_segundos": {
+      "media": 2071.1,
+      "sd": 267.0643,
+      "n": 3,
+      "valores": [
+        1843.5,
+        2365.1,
+        2004.7
+      ]
     }
   },
   "sesgo_por_grupo_particion_por_plantilla": {

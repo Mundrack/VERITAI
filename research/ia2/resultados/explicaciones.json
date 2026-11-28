@@ -44,6 +44,46 @@
           ],
           "sesgo": -0.579,
           "n_rasgos_activos": 8
+        },
+        "C": {
+          "p_hostil": 0.999,
+          "sostienen_hostil": [
+            [
+              "virus.",
+              0.091
+            ],
+            [
+              "mujeres",
+              0.032
+            ],
+            [
+              "un",
+              0.001
+            ]
+          ],
+          "sostienen_no_hostil": [],
+          "efecto_por_palabra": [
+            [
+              "Las",
+              0.0
+            ],
+            [
+              "mujeres",
+              0.032
+            ],
+            [
+              "son",
+              0.0
+            ],
+            [
+              "un",
+              0.001
+            ],
+            [
+              "virus.",
+              0.091
+            ]
+          ]
         }
       },
       {
@@ -84,6 +124,46 @@
           ],
           "sesgo": -0.579,
           "n_rasgos_activos": 9
+        },
+        "C": {
+          "p_hostil": 0.999,
+          "sostienen_hostil": [
+            [
+              "plaga.",
+              0.021
+            ],
+            [
+              "Los",
+              0.005
+            ],
+            [
+              "judíos",
+              0.002
+            ]
+          ],
+          "sostienen_no_hostil": [],
+          "efecto_por_palabra": [
+            [
+              "Los",
+              0.005
+            ],
+            [
+              "judíos",
+              0.002
+            ],
+            [
+              "son",
+              0.001
+            ],
+            [
+              "una",
+              0.0
+            ],
+            [
+              "plaga.",
+              0.021
+            ]
+          ]
         }
       },
       {
@@ -112,6 +192,55 @@
           ],
           "sesgo": -0.579,
           "n_rasgos_activos": 3
+        },
+        "C": {
+          "p_hostil": 0.083,
+          "sostienen_hostil": [
+            [
+              "No",
+              0.081
+            ],
+            [
+              "judíos.",
+              0.081
+            ],
+            [
+              "a",
+              0.079
+            ]
+          ],
+          "sostienen_no_hostil": [
+            [
+              "conozco",
+              0.91
+            ],
+            [
+              "muchos",
+              0.018
+            ]
+          ],
+          "efecto_por_palabra": [
+            [
+              "No",
+              0.081
+            ],
+            [
+              "conozco",
+              -0.91
+            ],
+            [
+              "a",
+              0.079
+            ],
+            [
+              "muchos",
+              -0.018
+            ],
+            [
+              "judíos.",
+              0.081
+            ]
+          ]
         }
       },
       {
@@ -136,6 +265,47 @@
           ],
           "sesgo": -0.579,
           "n_rasgos_activos": 2
+        },
+        "C": {
+          "p_hostil": 0.001,
+          "sostienen_hostil": [
+            [
+              "dos",
+              0.0
+            ]
+          ],
+          "sostienen_no_hostil": [
+            [
+              "Vivo",
+              0.001
+            ],
+            [
+              "discapacitados.",
+              0.001
+            ],
+            [
+              "con",
+              0.0
+            ]
+          ],
+          "efecto_por_palabra": [
+            [
+              "Vivo",
+              -0.001
+            ],
+            [
+              "con",
+              -0.0
+            ],
+            [
+              "dos",
+              0.0
+            ],
+            [
+              "discapacitados.",
+              -0.001
+            ]
+          ]
         }
       },
       {
@@ -176,6 +346,51 @@
           ],
           "sesgo": -0.579,
           "n_rasgos_activos": 7
+        },
+        "C": {
+          "p_hostil": 0.005,
+          "sostienen_hostil": [
+            [
+              "todos",
+              0.003
+            ]
+          ],
+          "sostienen_no_hostil": [
+            [
+              "Muerte",
+              0.993
+            ],
+            [
+              "a",
+              0.989
+            ],
+            [
+              "trans.",
+              0.036
+            ]
+          ],
+          "efecto_por_palabra": [
+            [
+              "Muerte",
+              -0.993
+            ],
+            [
+              "a",
+              -0.989
+            ],
+            [
+              "todos",
+              0.003
+            ],
+            [
+              "los",
+              -0.003
+            ],
+            [
+              "trans.",
+              -0.036
+            ]
+          ]
         }
       },
       {
@@ -204,6 +419,47 @@
           ],
           "sesgo": -0.579,
           "n_rasgos_activos": 3
+        },
+        "C": {
+          "p_hostil": 0.006,
+          "sostienen_hostil": [
+            [
+              "los",
+              0.001
+            ]
+          ],
+          "sostienen_no_hostil": [
+            [
+              "a",
+              0.992
+            ],
+            [
+              "0dio",
+              0.967
+            ],
+            [
+              "discapacitados.",
+              0.126
+            ]
+          ],
+          "efecto_por_palabra": [
+            [
+              "0dio",
+              -0.967
+            ],
+            [
+              "a",
+              -0.992
+            ],
+            [
+              "los",
+              0.001
+            ],
+            [
+              "discapacitados.",
+              -0.126
+            ]
+          ]
         }
       },
       {
@@ -232,6 +488,55 @@
           ],
           "sesgo": -0.579,
           "n_rasgos_activos": 3
+        },
+        "C": {
+          "p_hostil": 0.997,
+          "sostienen_hostil": [
+            [
+              "gays.",
+              0.994
+            ],
+            [
+              "No",
+              0.893
+            ],
+            [
+              "a",
+              0.008
+            ]
+          ],
+          "sostienen_no_hostil": [
+            [
+              "conozco",
+              0.001
+            ],
+            [
+              "muchos",
+              0.0
+            ]
+          ],
+          "efecto_por_palabra": [
+            [
+              "No",
+              0.893
+            ],
+            [
+              "conozco",
+              -0.001
+            ],
+            [
+              "a",
+              0.008
+            ],
+            [
+              "muchos",
+              -0.0
+            ],
+            [
+              "gays.",
+              0.994
+            ]
+          ]
         }
       },
       {
@@ -260,9 +565,55 @@
           ],
           "sesgo": -0.579,
           "n_rasgos_activos": 3
+        },
+        "C": {
+          "p_hostil": 0.996,
+          "sostienen_hostil": [
+            [
+              "trans.",
+              0.994
+            ],
+            [
+              "No",
+              0.422
+            ],
+            [
+              "muchos",
+              0.039
+            ]
+          ],
+          "sostienen_no_hostil": [
+            [
+              "conozco",
+              0.001
+            ]
+          ],
+          "efecto_por_palabra": [
+            [
+              "No",
+              0.422
+            ],
+            [
+              "conozco",
+              -0.001
+            ],
+            [
+              "a",
+              0.019
+            ],
+            [
+              "muchos",
+              0.039
+            ],
+            [
+              "trans.",
+              0.994
+            ]
+          ]
         }
       }
-    ]
+    ],
+    "modelo_C_guardado_en": "modelos\\ajustado_hatecheck_e3_s42"
   },
   "haternet": {
     "particion": "por_caso",
@@ -276,7 +627,7 @@
         "texto": "Será Dalas un puto subnormal",
         "real": "hateful",
         "pred_A": "hateful",
-        "pred_C": null,
+        "pred_C": "hateful",
         "A": {
           "p_hostil": 0.962,
           "hacia_hostil": [
@@ -305,14 +656,318 @@
           ],
           "sesgo": -0.566,
           "n_rasgos_activos": 7
+        },
+        "C": {
+          "p_hostil": 0.978,
+          "sostienen_hostil": [
+            [
+              "subnormal",
+              0.275
+            ],
+            [
+              "puto",
+              0.046
+            ],
+            [
+              "Dalas",
+              0.011
+            ]
+          ],
+          "sostienen_no_hostil": [
+            [
+              "un",
+              0.004
+            ]
+          ],
+          "efecto_por_palabra": [
+            [
+              "Será",
+              0.001
+            ],
+            [
+              "Dalas",
+              0.011
+            ],
+            [
+              "un",
+              -0.004
+            ],
+            [
+              "puto",
+              0.046
+            ],
+            [
+              "subnormal",
+              0.275
+            ]
+          ]
         }
       },
       {
         "grupo": "acierto_ambos_hostil",
+        "texto": "@Errasti13 puto nazi / puto rojo",
+        "real": "hateful",
+        "pred_A": "hateful",
+        "pred_C": "hateful",
+        "A": {
+          "p_hostil": 0.964,
+          "hacia_hostil": [
+            [
+              "puto",
+              2.378
+            ],
+            [
+              "puto rojo",
+              1.172
+            ],
+            [
+              "puto nazi",
+              0.688
+            ]
+          ],
+          "hacia_no_hostil": [
+            [
+              "rojo",
+              -0.864
+            ]
+          ],
+          "sesgo": -0.566,
+          "n_rasgos_activos": 5
+        },
+        "C": {
+          "p_hostil": 0.981,
+          "sostienen_hostil": [
+            [
+              "nazi",
+              0.017
+            ],
+            [
+              "puto",
+              0.002
+            ],
+            [
+              "puto",
+              0.001
+            ]
+          ],
+          "sostienen_no_hostil": [
+            [
+              "/",
+              0.001
+            ]
+          ],
+          "efecto_por_palabra": [
+            [
+              "@Errasti13",
+              0.0
+            ],
+            [
+              "puto",
+              0.002
+            ],
+            [
+              "nazi",
+              0.017
+            ],
+            [
+              "/",
+              -0.001
+            ],
+            [
+              "puto",
+              0.001
+            ],
+            [
+              "rojo",
+              0.0
+            ]
+          ]
+        }
+      },
+      {
+        "grupo": "A_falla_C_acierta",
+        "texto": "Culiao como extraño ir al colegio",
+        "real": "non-hateful",
+        "pred_A": "hateful",
+        "pred_C": "non-hateful",
+        "A": {
+          "p_hostil": 0.551,
+          "hacia_hostil": [
+            [
+              "culiao",
+              0.684
+            ],
+            [
+              "ir al",
+              0.188
+            ],
+            [
+              "como",
+              0.063
+            ]
+          ],
+          "hacia_no_hostil": [
+            [
+              "ir",
+              -0.132
+            ],
+            [
+              "al",
+              -0.048
+            ]
+          ],
+          "sesgo": -0.566,
+          "n_rasgos_activos": 6
+        },
+        "C": {
+          "p_hostil": 0.123,
+          "sostienen_hostil": [
+            [
+              "Culiao",
+              0.079
+            ],
+            [
+              "extraño",
+              0.067
+            ],
+            [
+              "como",
+              0.041
+            ]
+          ],
+          "sostienen_no_hostil": [
+            [
+              "colegio",
+              0.067
+            ],
+            [
+              "al",
+              0.031
+            ]
+          ],
+          "efecto_por_palabra": [
+            [
+              "Culiao",
+              0.079
+            ],
+            [
+              "como",
+              0.041
+            ],
+            [
+              "extraño",
+              0.067
+            ],
+            [
+              "ir",
+              0.006
+            ],
+            [
+              "al",
+              -0.031
+            ],
+            [
+              "colegio",
+              -0.067
+            ]
+          ]
+        }
+      },
+      {
+        "grupo": "A_falla_C_acierta",
+        "texto": "@ArnauBS197 por fin te levantas, mamón",
+        "real": "non-hateful",
+        "pred_A": "hateful",
+        "pred_C": "non-hateful",
+        "A": {
+          "p_hostil": 0.682,
+          "hacia_hostil": [
+            [
+              "te",
+              0.712
+            ],
+            [
+              "fin",
+              0.587
+            ],
+            [
+              "por fin",
+              0.37
+            ]
+          ],
+          "hacia_no_hostil": [
+            [
+              "por",
+              -0.24
+            ],
+            [
+              "mamón",
+              -0.099
+            ]
+          ],
+          "sesgo": -0.566,
+          "n_rasgos_activos": 5
+        },
+        "C": {
+          "p_hostil": 0.195,
+          "sostienen_hostil": [
+            [
+              "mamón",
+              0.154
+            ],
+            [
+              "levantas,",
+              0.147
+            ],
+            [
+              "fin",
+              0.043
+            ]
+          ],
+          "sostienen_no_hostil": [
+            [
+              "por",
+              0.054
+            ],
+            [
+              "@ArnauBS197",
+              0.001
+            ]
+          ],
+          "efecto_por_palabra": [
+            [
+              "@ArnauBS197",
+              -0.001
+            ],
+            [
+              "por",
+              -0.054
+            ],
+            [
+              "fin",
+              0.043
+            ],
+            [
+              "te",
+              0.031
+            ],
+            [
+              "levantas,",
+              0.147
+            ],
+            [
+              "mamón",
+              0.154
+            ]
+          ]
+        }
+      },
+      {
+        "grupo": "C_falla_A_acierta",
         "texto": "@adrian_marte pa' puta tú loca",
         "real": "hateful",
         "pred_A": "hateful",
-        "pred_C": null,
+        "pred_C": "non-hateful",
         "A": {
           "p_hostil": 0.723,
           "hacia_hostil": [
@@ -337,14 +992,144 @@
           ],
           "sesgo": -0.566,
           "n_rasgos_activos": 4
+        },
+        "C": {
+          "p_hostil": 0.075,
+          "sostienen_hostil": [
+            [
+              "puta",
+              0.046
+            ]
+          ],
+          "sostienen_no_hostil": [
+            [
+              "loca",
+              0.102
+            ],
+            [
+              "pa'",
+              0.039
+            ],
+            [
+              "@adrian_marte",
+              0.03
+            ]
+          ],
+          "efecto_por_palabra": [
+            [
+              "@adrian_marte",
+              -0.03
+            ],
+            [
+              "pa'",
+              -0.039
+            ],
+            [
+              "puta",
+              0.046
+            ],
+            [
+              "tú",
+              -0.024
+            ],
+            [
+              "loca",
+              -0.102
+            ]
+          ]
         }
       },
       {
-        "grupo": "A_falla_C_acierta",
+        "grupo": "C_falla_A_acierta",
+        "texto": "ojjjj q monguer la jamba esta loko",
+        "real": "hateful",
+        "pred_A": "hateful",
+        "pred_C": "non-hateful",
+        "A": {
+          "p_hostil": 0.734,
+          "hacia_hostil": [
+            [
+              "esta",
+              1.834
+            ],
+            [
+              "monguer",
+              0.305
+            ]
+          ],
+          "hacia_no_hostil": [
+            [
+              "la",
+              -0.556
+            ]
+          ],
+          "sesgo": -0.566,
+          "n_rasgos_activos": 3
+        },
+        "C": {
+          "p_hostil": 0.037,
+          "sostienen_hostil": [
+            [
+              "monguer",
+              0.006
+            ],
+            [
+              "esta",
+              0.003
+            ]
+          ],
+          "sostienen_no_hostil": [
+            [
+              "loko",
+              0.038
+            ],
+            [
+              "jamba",
+              0.013
+            ],
+            [
+              "ojjjj",
+              0.002
+            ]
+          ],
+          "efecto_por_palabra": [
+            [
+              "ojjjj",
+              -0.002
+            ],
+            [
+              "q",
+              -0.001
+            ],
+            [
+              "monguer",
+              0.006
+            ],
+            [
+              "la",
+              -0.002
+            ],
+            [
+              "jamba",
+              -0.013
+            ],
+            [
+              "esta",
+              0.003
+            ],
+            [
+              "loko",
+              -0.038
+            ]
+          ]
+        }
+      },
+      {
+        "grupo": "fallan_ambos",
         "texto": "Que vergüenza da la puta afición",
         "real": "non-hateful",
         "pred_A": "hateful",
-        "pred_C": null,
+        "pred_C": "hateful",
         "A": {
           "p_hostil": 0.727,
           "hacia_hostil": [
@@ -377,44 +1162,151 @@
           ],
           "sesgo": -0.566,
           "n_rasgos_activos": 9
+        },
+        "C": {
+          "p_hostil": 0.642,
+          "sostienen_hostil": [
+            [
+              "puta",
+              0.592
+            ],
+            [
+              "la",
+              0.41
+            ],
+            [
+              "da",
+              0.256
+            ]
+          ],
+          "sostienen_no_hostil": [
+            [
+              "afición",
+              0.169
+            ],
+            [
+              "vergüenza",
+              0.129
+            ]
+          ],
+          "efecto_por_palabra": [
+            [
+              "Que",
+              0.225
+            ],
+            [
+              "vergüenza",
+              -0.129
+            ],
+            [
+              "da",
+              0.256
+            ],
+            [
+              "la",
+              0.41
+            ],
+            [
+              "puta",
+              0.592
+            ],
+            [
+              "afición",
+              -0.169
+            ]
+          ]
         }
       },
       {
-        "grupo": "A_falla_C_acierta",
-        "texto": "Culiao como extraño ir al colegio",
+        "grupo": "fallan_ambos",
+        "texto": "@Youxo798 puto rojo de mierda qe soy",
         "real": "non-hateful",
         "pred_A": "hateful",
-        "pred_C": null,
+        "pred_C": "hateful",
         "A": {
-          "p_hostil": 0.551,
+          "p_hostil": 0.962,
           "hacia_hostil": [
             [
-              "culiao",
-              0.684
+              "mierda",
+              1.434
             ],
             [
-              "ir al",
-              0.188
+              "de mierda",
+              1.411
             ],
             [
-              "como",
-              0.063
+              "puto",
+              1.386
             ]
           ],
           "hacia_no_hostil": [
             [
-              "ir",
-              -0.132
+              "soy",
+              -1.302
             ],
             [
-              "al",
-              -0.048
+              "rojo",
+              -0.852
             ]
           ],
           "sesgo": -0.566,
-          "n_rasgos_activos": 6
+          "n_rasgos_activos": 8
+        },
+        "C": {
+          "p_hostil": 0.978,
+          "sostienen_hostil": [
+            [
+              "mierda",
+              0.618
+            ],
+            [
+              "de",
+              0.145
+            ],
+            [
+              "puto",
+              0.128
+            ]
+          ],
+          "sostienen_no_hostil": [
+            [
+              "soy",
+              0.005
+            ]
+          ],
+          "efecto_por_palabra": [
+            [
+              "@Youxo798",
+              0.005
+            ],
+            [
+              "puto",
+              0.128
+            ],
+            [
+              "rojo",
+              0.006
+            ],
+            [
+              "de",
+              0.145
+            ],
+            [
+              "mierda",
+              0.618
+            ],
+            [
+              "qe",
+              0.038
+            ],
+            [
+              "soy",
+              -0.005
+            ]
+          ]
         }
       }
-    ]
+    ],
+    "modelo_C_guardado_en": "modelos\\ajustado_haternet_e3_s42"
   }
 }
